@@ -33,12 +33,12 @@
      {
       "name": "listeners",
       "type": "Listeners",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\"]"
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\",\"${p:area2Param}\"]"
      },
      {
       "name": "parameters",
       "type": "ValuesArray",
-      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"]]"
+      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"]]"
      },
      {
       "name": "dataSource",
@@ -1338,12 +1338,12 @@
      {
       "name": "listeners",
       "type": "Listeners",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\"]"
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\",\"${p:area2Param}\"]"
      },
      {
       "name": "parameters",
       "type": "ValuesArray",
-      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"]]"
+      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"]]"
      },
      {
       "name": "dataSource",
@@ -2008,12 +2008,12 @@
      {
       "name": "listeners",
       "type": "Listeners",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\"]"
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\",\"${p:area2Param}\"]"
      },
      {
       "name": "parameters",
       "type": "ValuesArray",
-      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"]]"
+      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"]]"
      },
      {
       "name": "dataSource",
@@ -2678,12 +2678,12 @@
      {
       "name": "listeners",
       "type": "Listeners",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\"]"
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\",\"${p:area2Param}\"]"
      },
      {
       "name": "parameters",
       "type": "ValuesArray",
-      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"]]"
+      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"]]"
      },
      {
       "name": "dataSource",
@@ -4008,12 +4008,12 @@
      {
       "name": "listeners",
       "type": "Listeners",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\"]"
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\",\"${p:area2Param}\"]"
      },
      {
       "name": "parameters",
       "type": "ValuesArray",
-      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"]]"
+      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"]]"
      },
      {
       "name": "dataSource",
@@ -5313,12 +5313,12 @@
      {
       "name": "listeners",
       "type": "Listeners",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\"]"
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\",\"${p:area2Param}\"]"
      },
      {
       "name": "parameters",
       "type": "ValuesArray",
-      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"]]"
+      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"]]"
      },
      {
       "name": "dataSource",
@@ -5983,12 +5983,12 @@
      {
       "name": "listeners",
       "type": "Listeners",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\"]"
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\",\"${p:area2Param}\"]"
      },
      {
       "name": "parameters",
       "type": "ValuesArray",
-      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"]]"
+      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"]]"
      },
      {
       "name": "dataSource",
@@ -7313,12 +7313,12 @@
      {
       "name": "listeners",
       "type": "Listeners",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\"]"
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\",\"${p:area2Param}\"]"
      },
      {
       "name": "parameters",
       "type": "ValuesArray",
-      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"]]"
+      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"]]"
      },
      {
       "name": "dataSource",
@@ -7983,12 +7983,12 @@
      {
       "name": "listeners",
       "type": "Listeners",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\"]"
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\",\"${p:area2Param}\"]"
      },
      {
       "name": "parameters",
       "type": "ValuesArray",
-      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"]]"
+      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"]]"
      },
      {
       "name": "dataSource",
@@ -9278,12 +9278,12 @@
      {
       "name": "listeners",
       "type": "Listeners",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\"]"
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\",\"${p:area2Param}\"]"
      },
      {
       "name": "parameters",
       "type": "ValuesArray",
-      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"]]"
+      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"]]"
      },
      {
       "name": "dataSource",
@@ -10608,12 +10608,12 @@
      {
       "name": "listeners",
       "type": "Listeners",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\"]"
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\",\"${p:area2Param}\"]"
      },
      {
       "name": "parameters",
       "type": "ValuesArray",
-      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"]]"
+      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"]]"
      },
      {
       "name": "dataSource",
@@ -11278,12 +11278,12 @@
      },
      {
       "name": "listeners",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\"]",
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\",\"${p:area2Param}\"]",
       "type": "Listeners"
      },
      {
       "name": "parameters",
-      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"]]",
+      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"]]",
       "type": "ValuesArray"
      },
      {
@@ -12960,6 +12960,40 @@
     "rowName": "Simple Parameter"
    },
    {
+    "id": "8d545ba7-f6d2-d355-d942-1ddd09219858",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "area2Param",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "-1",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "public",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ],
+    "rowName": "Simple Parameter"
+   },
+   {
     "id": "SELECTORS",
     "name": "Selects",
     "type": "Label",
@@ -13323,6 +13357,120 @@
      }
     ],
     "rowName": "Bootstrap Select"
+   },
+   {
+    "id": "8ee41f8e-609b-9591-0806-0a00a9b2e0db",
+    "type": "ComponentsBSSelectBaseComponent",
+    "typeDesc": "Bootstrap Select",
+    "parent": "IVYISBOOTSTRAP",
+    "properties": [
+     {
+      "name": "name",
+      "value": "area2Select",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:area1Param}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[\"${p:area2Param}\"]",
+      "type": "Listeners"
+     },
+     {
+      "name": "parameters",
+      "value": "[[\"area2Param\",\"area2Param\"],[\"area1Param\",\"area1Param\"]]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "valueAsId",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "dataSource",
+      "value": "area2SelectQuery",
+      "type": "Datasource"
+     },
+     {
+      "name": "valuesArray",
+      "value": "[]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "buttonBlock",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "buttonType",
+      "value": "btn-default",
+      "type": "buttonTypeCustom"
+     },
+     {
+      "name": "buttonSize",
+      "value": "btn-xs",
+      "type": "buttonSizeCustom"
+     },
+     {
+      "name": "prependIcon",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "buttonIcon",
+      "value": "glyphicon-th",
+      "type": "buttonIconCustom"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:area2Dom}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postFetch",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     }
+    ],
+    "rowName": "Bootstrap Select"
    }
   ]
  },
@@ -13439,12 +13587,12 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "SELECT \r\n        X.*\r\nFROM\r\n(\r\n    SELECT DISTINCT\r\n    \t\t `Dim_Outlet`.`OutletName`,\r\n\t\t\t sum(`Fact_SumItem`.`ItemSaleAmt`) AS Amount\r\n\tFROM\r\n\t\t\t`Fact_SumItem` INNER JOIN `Dim_BIDate` ON `Fact_SumItem`.`BIDateId` = `Dim_BIDate`.`BIDateId`\r\n\t\t\tINNER JOIN `Dim_Outlet` ON `Fact_SumItem`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`\r\n            INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n            INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\n    WHERE \r\n            `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n            AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n            AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n\tGROUP BY\r\n\t\t\t`Dim_Outlet`.`OutletName`\r\n\tORDER BY\r\n\t\t\tsum(`Fact_SumItem`.`ItemSaleAmt`) DESC\r\n) AS X\r\n"
+      "value": "SELECT \r\n        X.*\r\nFROM\r\n(\r\n    SELECT DISTINCT\r\n    \t\t `Dim_Outlet`.`OutletName`,\r\n\t\t\t sum(`Fact_SumItem`.`ItemSaleAmt`) AS Amount\r\n\tFROM\r\n\t\t\t`Fact_SumItem` INNER JOIN `Dim_BIDate` ON `Fact_SumItem`.`BIDateId` = `Dim_BIDate`.`BIDateId`\r\n\t\t\tINNER JOIN `Dim_Outlet` ON `Fact_SumItem`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`\r\n            INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n            INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\n    WHERE \r\n            `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n            AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n            AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n            AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n\tGROUP BY\r\n\t\t\t`Dim_Outlet`.`OutletName`\r\n\tORDER BY\r\n\t\t\tsum(`Fact_SumItem`.`ItemSaleAmt`) DESC\r\n) AS X\r\n"
      },
      {
       "name": "parameters",
       "type": "CdaParameters",
-      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"]]"
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"]]"
      },
      {
       "name": "cdacalculatedcolumns",
@@ -13511,12 +13659,12 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "SELECT\r\n    `dim_periodtype`.`PeriodTypeName`,\r\n    sum(`fact_sumcheck`.`SaleAmt`)\r\nFROM\r\n    `fact_sumcheck` INNER JOIN `dim_periodtype` ON `fact_sumcheck`.`PeriodTypeId` = `dim_periodtype`.`PeriodTypeId`\r\n    INNER JOIN `Dim_BIDate` ON`fact_sumcheck`.`BIDateId` = `Dim_BIDate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_sumcheck.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\nGROUP BY\r\n    `dim_periodtype`.`PeriodTypeName`"
+      "value": "SELECT\r\n    `dim_periodtype`.`PeriodTypeName`,\r\n    sum(`fact_sumcheck`.`SaleAmt`)\r\nFROM\r\n    `fact_sumcheck` INNER JOIN `dim_periodtype` ON `fact_sumcheck`.`PeriodTypeId` = `dim_periodtype`.`PeriodTypeId`\r\n    INNER JOIN `Dim_BIDate` ON`fact_sumcheck`.`BIDateId` = `Dim_BIDate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_sumcheck.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\nGROUP BY\r\n    `dim_periodtype`.`PeriodTypeName`"
      },
      {
       "name": "parameters",
       "type": "CdaParameters",
-      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"]]"
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"]]"
      },
      {
       "name": "cdacalculatedcolumns",
@@ -13583,12 +13731,12 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "SELECT\r\n    `dim_channel`.DeliveryType,\r\n    sum(`fact_sumcheck`.`SaleAmt`)\r\nFROM\r\n    `fact_sumcheck` INNER JOIN `dim_channel` ON `fact_sumcheck`.`ChannelId` = `dim_channel`.`ChannelId`\r\n    INNER JOIN `Dim_BIDate` ON`fact_sumcheck`.`BIDateId` = `Dim_BIDate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_sumcheck.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\nGROUP BY\r\n    `dim_channel`.DeliveryType\r\n"
+      "value": "SELECT\r\n    `dim_channel`.DeliveryType,\r\n    sum(`fact_sumcheck`.`SaleAmt`)\r\nFROM\r\n    `fact_sumcheck` INNER JOIN `dim_channel` ON `fact_sumcheck`.`ChannelId` = `dim_channel`.`ChannelId`\r\n    INNER JOIN `Dim_BIDate` ON`fact_sumcheck`.`BIDateId` = `Dim_BIDate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_sumcheck.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\nGROUP BY\r\n    `dim_channel`.DeliveryType\r\n"
      },
      {
       "name": "parameters",
       "type": "CdaParameters",
-      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"]]"
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"]]"
      },
      {
       "name": "cdacalculatedcolumns",
@@ -13655,12 +13803,12 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "SELECT\r\n    `dim_bidate`.`BIDate`,\r\n    sum(`fact_sumitem`.`ItemSaleAmt`) AS Turnover,\r\n    sum(`fact_sumitem`.`SaleCostAmt`) AS Cost\r\nFROM\r\n    `fact_sumitem` INNER JOIN `dim_bidate` ON `fact_sumitem`.`BusinessDate` = `dim_bidate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_sumitem.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\nGROUP BY\r\n    `dim_bidate`.`BIDateId`,\r\n    `dim_bidate`.`YearMonth`\r\nORDER BY\r\n    `dim_bidate`.`BIDateId` ASC"
+      "value": "SELECT\r\n    `dim_bidate`.`BIDate`,\r\n    sum(`fact_sumitem`.`ItemSaleAmt`) AS Turnover,\r\n    sum(`fact_sumitem`.`SaleCostAmt`) AS Cost\r\nFROM\r\n    `fact_sumitem` INNER JOIN `dim_bidate` ON `fact_sumitem`.`BusinessDate` = `dim_bidate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_sumitem.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\nGROUP BY\r\n    `dim_bidate`.`BIDateId`,\r\n    `dim_bidate`.`YearMonth`\r\nORDER BY\r\n    `dim_bidate`.`BIDateId` ASC"
      },
      {
       "name": "parameters",
       "type": "CdaParameters",
-      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"]]"
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"]]"
      },
      {
       "name": "cdacalculatedcolumns",
@@ -13727,12 +13875,12 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "SELECT\r\n    `dim_paytype`.`PayTypeId`,\r\n    `dim_paytype`.`PayTypeName`,\r\n    sum(`fact_sumpay`.`PayAmt`) AS PayAmt,\r\n    COUNT(*) AS Qty\r\nFROM\r\n    `fact_sumpay` INNER JOIN `dim_paytype` ON `fact_sumpay`.`PayTypeId` = `dim_paytype`.`PayTypeId`\r\n    INNER JOIN `Dim_BIDate` ON`fact_sumpay`.`BIDateId` = `Dim_BIDate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_sumpay.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\nGROUP BY\r\n    `dim_paytype`.`PayTypeName`,\r\n    `dim_paytype`.`PayTypeId`\r\nORDER BY\r\n    `dim_paytype`.`PayTypeId` ASC"
+      "value": "SELECT\r\n    `dim_paytype`.`PayTypeId`,\r\n    `dim_paytype`.`PayTypeName`,\r\n    sum(`fact_sumpay`.`PayAmt`) AS PayAmt,\r\n    COUNT(*) AS Qty\r\nFROM\r\n    `fact_sumpay` INNER JOIN `dim_paytype` ON `fact_sumpay`.`PayTypeId` = `dim_paytype`.`PayTypeId`\r\n    INNER JOIN `Dim_BIDate` ON`fact_sumpay`.`BIDateId` = `Dim_BIDate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_sumpay.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\nGROUP BY\r\n    `dim_paytype`.`PayTypeName`,\r\n    `dim_paytype`.`PayTypeId`\r\nORDER BY\r\n    `dim_paytype`.`PayTypeId` ASC"
      },
      {
       "name": "parameters",
       "type": "CdaParameters",
-      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"]]"
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"]]"
      },
      {
       "name": "cdacalculatedcolumns",
@@ -13799,12 +13947,12 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "SELECT DISTINCT\r\n    CASE WHEN `Dim_PayType`.`PayTypeClassName` IS NULL \r\n        THEN \"其他\"\r\n    ELSE `Dim_PayType`.`PayTypeClassName` END,\r\n     sum(`Fact_CheckPay`.`PayAmt`)\r\nFROM\r\n    `Fact_CheckPay` INNER JOIN `Dim_Outlet` ON `Fact_CheckPay`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`\r\n    INNER JOIN `Dim_BIDate` ON `Fact_CheckPay`.`BIDateId` = `Dim_BIDate`.`BIDateId`\r\n    INNER JOIN `Dim_PayType` ON `Fact_CheckPay`.`PayTypeId` = `Dim_PayType`.`PayTypeId`\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\nGROUP BY\r\n     `Dim_PayType`.`PayTypeClassId`, `Dim_PayType`.`PayTypeClassName`\r\nORDER BY\r\n     sum(`Fact_CheckPay`.`PayAmt`) DESC"
+      "value": "SELECT DISTINCT\r\n    CASE WHEN `Dim_PayType`.`PayTypeClassName` IS NULL \r\n        THEN \"其他\"\r\n    ELSE `Dim_PayType`.`PayTypeClassName` END,\r\n     sum(`Fact_CheckPay`.`PayAmt`)\r\nFROM\r\n    `Fact_CheckPay` INNER JOIN `Dim_Outlet` ON `Fact_CheckPay`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`\r\n    INNER JOIN `Dim_BIDate` ON `Fact_CheckPay`.`BIDateId` = `Dim_BIDate`.`BIDateId`\r\n    INNER JOIN `Dim_PayType` ON `Fact_CheckPay`.`PayTypeId` = `Dim_PayType`.`PayTypeId`\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\nGROUP BY\r\n     `Dim_PayType`.`PayTypeClassId`, `Dim_PayType`.`PayTypeClassName`\r\nORDER BY\r\n     sum(`Fact_CheckPay`.`PayAmt`) DESC"
      },
      {
       "name": "parameters",
       "type": "CdaParameters",
-      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"]]"
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"]]"
      },
      {
       "name": "cdacalculatedcolumns",
@@ -13871,12 +14019,12 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "SELECT \r\n    tbl.bidate,\r\n    tbl.PayTypeClassName,\r\n    CASE WHEN tbl.PayAmtAll IS NULL \r\n        THEN 0\r\n    ELSE tbl.PayAmt / tbl.PayAmtAll END AS Proportion\r\nFROM\r\n(\r\n    SELECT\r\n        `dim_bidate`.`bidate`,\r\n    \t`dim_paytype`.`PayTypeClassName`,\r\n    \tsum(`fact_checkpay`.`PayAmt`) AS PayAmt,\r\n    \ttemp.PayAmtAll\r\n    FROM\r\n    \t`fact_checkpay` \r\n    \tINNER JOIN `dim_bidate` ON `fact_checkpay`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n        INNER JOIN `dim_paytype` ON `fact_checkpay`.`PayTypeId` = `dim_paytype`.`PayTypeId`\r\n        INNER JOIN `Dim_Outlet` ON `Fact_CheckPay`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`\r\n    \tINNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n        INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\n        INNER JOIN \r\n    \t(\r\n    \tSELECT\r\n    \t\t\t `dim_bidate`.`BIDateId`,\r\n    \t\t\t sum(`fact_checkpay`.`PayAmt`) AS PayAmtAll\r\n    \tFROM\r\n    \t\t\t`fact_checkpay` INNER JOIN `dim_bidate` ON `fact_checkpay`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n    \t\t\tINNER JOIN `dim_paytype` ON `fact_checkpay`.`PayTypeId` = `dim_paytype`.`PayTypeId`\r\n                INNER JOIN `Dim_Outlet` ON `Fact_CheckPay`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`\r\n                INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n                INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\n    \tWHERE \r\n            `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay} \r\n            AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n            AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n        GROUP BY\r\n    \t\t\t `dim_bidate`.`BIDateId`\r\n    \tORDER BY\r\n    \t\t\t `dim_bidate`.`BIDateId` ASC\r\n    \t) AS temp ON `fact_checkpay`.`BIDateId` = temp.BIDateId\r\n    WHERE \r\n        `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n        AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n        AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n    GROUP BY \r\n        `dim_bidate`.`bidate`, `dim_paytype`.`PayTypeClassName`, temp.PayAmtAll\r\n) AS tbl"
+      "value": "SELECT \r\n    tbl.bidate,\r\n    tbl.PayTypeClassName,\r\n    CASE WHEN tbl.PayAmtAll IS NULL \r\n        THEN 0\r\n    ELSE tbl.PayAmt / tbl.PayAmtAll END AS Proportion\r\nFROM\r\n(\r\n    SELECT\r\n        `dim_bidate`.`bidate`,\r\n    \t`dim_paytype`.`PayTypeClassName`,\r\n    \tsum(`fact_checkpay`.`PayAmt`) AS PayAmt,\r\n    \ttemp.PayAmtAll\r\n    FROM\r\n    \t`fact_checkpay` \r\n    \tINNER JOIN `dim_bidate` ON `fact_checkpay`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n        INNER JOIN `dim_paytype` ON `fact_checkpay`.`PayTypeId` = `dim_paytype`.`PayTypeId`\r\n        INNER JOIN `Dim_Outlet` ON `Fact_CheckPay`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`\r\n    \tINNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n        INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\n        INNER JOIN \r\n    \t(\r\n    \tSELECT\r\n    \t\t\t `dim_bidate`.`BIDateId`,\r\n    \t\t\t sum(`fact_checkpay`.`PayAmt`) AS PayAmtAll\r\n    \tFROM\r\n    \t\t\t`fact_checkpay` INNER JOIN `dim_bidate` ON `fact_checkpay`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n    \t\t\tINNER JOIN `dim_paytype` ON `fact_checkpay`.`PayTypeId` = `dim_paytype`.`PayTypeId`\r\n                INNER JOIN `Dim_Outlet` ON `Fact_CheckPay`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`\r\n                INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n                INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\n    \tWHERE \r\n            `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay} \r\n            AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n            AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n            AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n        GROUP BY\r\n    \t\t\t `dim_bidate`.`BIDateId`\r\n    \tORDER BY\r\n    \t\t\t `dim_bidate`.`BIDateId` ASC\r\n    \t) AS temp ON `fact_checkpay`.`BIDateId` = temp.BIDateId\r\n    WHERE \r\n        `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n        AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n        AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n        AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n    GROUP BY \r\n        `dim_bidate`.`bidate`, `dim_paytype`.`PayTypeClassName`, temp.PayAmtAll\r\n) AS tbl"
      },
      {
       "name": "parameters",
       "type": "CdaParameters",
-      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"]]"
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"]]"
      },
      {
       "name": "cdacalculatedcolumns",
@@ -13943,12 +14091,12 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "SELECT\r\n    `dim_channel`.`ChannelName`,\r\n     sum(`fact_sumcheck`.`SaleAmt`)\r\nFROM\r\n     `fact_sumcheck` INNER JOIN `dim_channel` ON `fact_sumcheck`.`ChannelId` = `dim_channel`.`ChannelId`\r\n    INNER JOIN `Dim_BIDate` ON`fact_sumcheck`.`BIDateId` = `Dim_BIDate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_sumcheck.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\nGROUP BY\r\n     `dim_channel`.ChannelName\r\n"
+      "value": "SELECT\r\n    `dim_channel`.`ChannelName`,\r\n     sum(`fact_sumcheck`.`SaleAmt`)\r\nFROM\r\n     `fact_sumcheck` INNER JOIN `dim_channel` ON `fact_sumcheck`.`ChannelId` = `dim_channel`.`ChannelId`\r\n    INNER JOIN `Dim_BIDate` ON`fact_sumcheck`.`BIDateId` = `Dim_BIDate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_sumcheck.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\nGROUP BY\r\n     `dim_channel`.ChannelName\r\n"
      },
      {
       "name": "parameters",
       "type": "CdaParameters",
-      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"]]"
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"]]"
      },
      {
       "name": "cdacalculatedcolumns",
@@ -14015,12 +14163,12 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "SELECT\r\n     `dim_bidate`.`BIDateId`,\r\n     `dim_bidate`.`BIDate`,\r\n     `dim_channel`.`ChannelName`,\r\n     sum(`fact_sumcheck`.`SaleAmt`) AS SaleAmt\r\nFROM\r\n    `fact_sumcheck` INNER JOIN `dim_channel` ON `fact_sumcheck`.`ChannelId` = `dim_channel`.`ChannelId`\r\n    INNER JOIN `dim_bidate` ON `fact_sumcheck`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_sumcheck.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay} \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\nGROUP BY\r\n     `dim_bidate`.`BIDateId`,\r\n     `dim_bidate`.`YearMonth`,\r\n     `dim_channel`.`ChannelName`\r\nORDER BY\r\n     `dim_bidate`.`BIDateId` ASC,\r\n     `dim_bidate`.`YearMonth` ASC"
+      "value": "SELECT\r\n     `dim_bidate`.`BIDateId`,\r\n     `dim_bidate`.`BIDate`,\r\n     `dim_channel`.`ChannelName`,\r\n     sum(`fact_sumcheck`.`SaleAmt`) AS SaleAmt\r\nFROM\r\n    `fact_sumcheck` INNER JOIN `dim_channel` ON `fact_sumcheck`.`ChannelId` = `dim_channel`.`ChannelId`\r\n    INNER JOIN `dim_bidate` ON `fact_sumcheck`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_sumcheck.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay} \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\nGROUP BY\r\n     `dim_bidate`.`BIDateId`,\r\n     `dim_bidate`.`YearMonth`,\r\n     `dim_channel`.`ChannelName`\r\nORDER BY\r\n     `dim_bidate`.`BIDateId` ASC,\r\n     `dim_bidate`.`YearMonth` ASC"
      },
      {
       "name": "parameters",
       "type": "CdaParameters",
-      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"]]"
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"]]"
      },
      {
       "name": "cdacalculatedcolumns",
@@ -14087,12 +14235,12 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "SELECT\r\n    `dim_bidate`.`BIDateId`,\r\n    `dim_bidate`.`BIDate`,\r\n\tcase when sum(`fact_sumday`.`CheckQty`) = 0 then 0.00\r\n        when sum(`fact_sumday`.`CheckQty`) = null then 0.00\r\n\telse sum(`fact_sumday`.`SaleAmt`)/sum(`fact_sumday`.`CheckQty`) end as ATV\r\nFROM\r\n     `fact_sumday` INNER JOIN `dim_bidate` ON `fact_sumday`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_sumday.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\nGROUP BY\r\n     `dim_bidate`.`BIDateId`,`dim_bidate`.`YearMonth`\r\nORDER BY\r\n     `dim_bidate`.`BIDateId` ASC"
+      "value": "SELECT\r\n    `dim_bidate`.`BIDateId`,\r\n    `dim_bidate`.`BIDate`,\r\n\tcase when sum(`fact_sumday`.`CheckQty`) = 0 then 0.00\r\n        when sum(`fact_sumday`.`CheckQty`) = null then 0.00\r\n\telse sum(`fact_sumday`.`SaleAmt`)/sum(`fact_sumday`.`CheckQty`) end as ATV\r\nFROM\r\n     `fact_sumday` INNER JOIN `dim_bidate` ON `fact_sumday`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_sumday.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\nGROUP BY\r\n     `dim_bidate`.`BIDateId`,`dim_bidate`.`YearMonth`\r\nORDER BY\r\n     `dim_bidate`.`BIDateId` ASC"
      },
      {
       "name": "parameters",
       "type": "CdaParameters",
-      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"]]"
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"]]"
      },
      {
       "name": "cdacalculatedcolumns",
@@ -14159,12 +14307,12 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "SELECT\r\n    `dim_voidresontype`.`VoidReasonName`,\r\n     COUNT(*)\r\nFROM\r\n    `fact_checkitemdel` INNER JOIN `dim_voidresontype` ON `fact_checkitemdel`.`VoidReasonId` = `dim_voidresontype`.`VoidReasonId`\r\n    INNER JOIN `dim_bidate` ON `fact_checkitemdel`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_checkitemdel.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\nGROUP BY \r\n    `dim_voidresontype`.`VoidReasonName`"
+      "value": "SELECT\r\n    `dim_voidresontype`.`VoidReasonName`,\r\n     COUNT(*)\r\nFROM\r\n    `fact_checkitemdel` INNER JOIN `dim_voidresontype` ON `fact_checkitemdel`.`VoidReasonId` = `dim_voidresontype`.`VoidReasonId`\r\n    INNER JOIN `dim_bidate` ON `fact_checkitemdel`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_checkitemdel.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\nGROUP BY \r\n    `dim_voidresontype`.`VoidReasonName`"
      },
      {
       "name": "parameters",
       "type": "CdaParameters",
-      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"]]"
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"]]"
      },
      {
       "name": "cdacalculatedcolumns",
@@ -14231,12 +14379,12 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "SELECT\r\n     `dim_voidresontype`.`VoidReasonName`,\r\n     COUNT(*) AS Qty,\r\n     sum(`fact_checkitemdel`.`ItemSaleAmt`) AS ItemSaleAmt\r\nFROM\r\n     `fact_checkitemdel` INNER JOIN `dim_voidresontype` ON `fact_checkitemdel`.`VoidReasonId` = `dim_voidresontype`.`VoidReasonId`\r\n    INNER JOIN `dim_bidate` ON `fact_checkitemdel`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_checkitemdel.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\nGROUP BY\r\n     `dim_voidresontype`.`VoidReasonName`"
+      "value": "SELECT\r\n     `dim_voidresontype`.`VoidReasonName`,\r\n     COUNT(*) AS Qty,\r\n     sum(`fact_checkitemdel`.`ItemSaleAmt`) AS ItemSaleAmt\r\nFROM\r\n     `fact_checkitemdel` INNER JOIN `dim_voidresontype` ON `fact_checkitemdel`.`VoidReasonId` = `dim_voidresontype`.`VoidReasonId`\r\n    INNER JOIN `dim_bidate` ON `fact_checkitemdel`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_checkitemdel.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\nGROUP BY\r\n     `dim_voidresontype`.`VoidReasonName`"
      },
      {
       "name": "parameters",
       "type": "CdaParameters",
-      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"]]"
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"]]"
      },
      {
       "name": "cdacalculatedcolumns",
@@ -14805,12 +14953,12 @@
      },
      {
       "name": "query",
-      "value": "SELECT -1,\"所有\"\r\nUNION ALL\r\nSELECT DISTINCT\r\n     `Dim_Area`.`AreaId_level2`,\r\n     `Dim_Area`.`AreaName_level2`\r\nFROM\r\n     `Dim_Outlet` INNER JOIN `Dim_Area` ON `Dim_Outlet`.`AreaId` = `Dim_Area`.`AreaId`\r\nWHERE\r\n     `Dim_Outlet`.`EndDate` = \"2200-01-01\"\r\n     AND `Dim_Area`.`Status` = 0\r\n     AND `Dim_Outlet`.`Status` = 0\r\n",
+      "value": "SELECT -1,\"所有\"\r\nUNION ALL\r\nSELECT DISTINCT\r\n     `Dim_Area`.`AreaId_level2`,\r\n     `Dim_Area`.`AreaName_level2`\r\nFROM\r\n     `Dim_Outlet` INNER JOIN `Dim_Area` ON `Dim_Outlet`.`AreaId` = `Dim_Area`.`AreaId`\r\nWHERE\r\n     `Dim_Outlet`.`EndDate` = \"2200-01-01\"\r\n     AND `Dim_Area`.`Status` = 0\r\n     AND `Dim_Outlet`.`Status` = 0\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n",
       "type": "SqlQuery"
      },
      {
       "name": "parameters",
-      "value": "[]",
+      "value": "[[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"]]",
       "type": "CdaParameters"
      },
      {

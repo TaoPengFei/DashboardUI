@@ -92,6 +92,7 @@
          <Parameter default="endDay" name="endDay" type="String"/>
          <Parameter default="brandParam" name="brandParam" type="String"/>
          <Parameter default="area1Param" name="area1Param" type="String"/>
+         <Parameter default="area2Param" name="area2Param" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT 
         X.*
@@ -109,6 +110,7 @@ FROM
             `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
             AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
             AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)
+            AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)
 	GROUP BY
 			`Dim_Outlet`.`OutletName`
 	ORDER BY
@@ -124,6 +126,7 @@ FROM
          <Parameter default="endDay" name="endDay" type="String"/>
          <Parameter default="brandParam" name="brandParam" type="String"/>
          <Parameter default="area1Param" name="area1Param" type="String"/>
+         <Parameter default="area2Param" name="area2Param" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT
     `dim_periodtype`.`PeriodTypeName`,
@@ -138,6 +141,7 @@ WHERE
      `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
      AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
      AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)
+     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)
 GROUP BY
     `dim_periodtype`.`PeriodTypeName`]]></Query>
    </DataAccess>
@@ -151,6 +155,7 @@ GROUP BY
          <Parameter default="endDay" name="endDay" type="String"/>
          <Parameter default="brandParam" name="brandParam" type="String"/>
          <Parameter default="area1Param" name="area1Param" type="String"/>
+         <Parameter default="area2Param" name="area2Param" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT
     `dim_channel`.DeliveryType,
@@ -165,6 +170,7 @@ WHERE
      `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
      AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
      AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)
+     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)
 GROUP BY
     `dim_channel`.DeliveryType]]></Query>
    </DataAccess>
@@ -177,6 +183,7 @@ GROUP BY
          <Parameter default="endDay" name="endDay" type="String"/>
          <Parameter default="brandParam" name="brandParam" type="String"/>
          <Parameter default="area1Param" name="area1Param" type="String"/>
+         <Parameter default="area2Param" name="area2Param" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT
     `dim_bidate`.`BIDate`,
@@ -191,6 +198,7 @@ WHERE
      `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
      AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
      AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)
+     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)
 GROUP BY
     `dim_bidate`.`BIDateId`,
     `dim_bidate`.`YearMonth`
@@ -217,6 +225,7 @@ ORDER BY
          <Parameter default="endDay" name="endDay" type="String"/>
          <Parameter default="brandParam" name="brandParam" type="String"/>
          <Parameter default="area1Param" name="area1Param" type="String"/>
+         <Parameter default="area2Param" name="area2Param" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT
     `dim_paytype`.`PayTypeId`,
@@ -233,6 +242,7 @@ WHERE
      `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
      AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
      AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)
+     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)
 GROUP BY
     `dim_paytype`.`PayTypeName`,
     `dim_paytype`.`PayTypeId`
@@ -249,6 +259,7 @@ ORDER BY
          <Parameter default="endDay" name="endDay" type="String"/>
          <Parameter default="brandParam" name="brandParam" type="String"/>
          <Parameter default="area1Param" name="area1Param" type="String"/>
+         <Parameter default="area2Param" name="area2Param" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT DISTINCT
     CASE WHEN `Dim_PayType`.`PayTypeClassName` IS NULL 
@@ -265,6 +276,7 @@ WHERE
      `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
      AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
      AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)
+     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)
 GROUP BY
      `Dim_PayType`.`PayTypeClassId`, `Dim_PayType`.`PayTypeClassName`
 ORDER BY
@@ -280,6 +292,7 @@ ORDER BY
          <Parameter default="endDay" name="endDay" type="String"/>
          <Parameter default="brandParam" name="brandParam" type="String"/>
          <Parameter default="area1Param" name="area1Param" type="String"/>
+         <Parameter default="area2Param" name="area2Param" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT 
     tbl.bidate,
@@ -316,6 +329,7 @@ FROM
             `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay} 
             AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
             AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)
+            AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)
         GROUP BY
     			 `dim_bidate`.`BIDateId`
     	ORDER BY
@@ -325,6 +339,7 @@ FROM
         `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
         AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
         AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)
+        AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)
     GROUP BY 
         `dim_bidate`.`bidate`, `dim_paytype`.`PayTypeClassName`, temp.PayAmtAll
 ) AS tbl]]></Query>
@@ -338,6 +353,7 @@ FROM
          <Parameter default="endDay" name="endDay" type="String"/>
          <Parameter default="brandParam" name="brandParam" type="String"/>
          <Parameter default="area1Param" name="area1Param" type="String"/>
+         <Parameter default="area2Param" name="area2Param" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT
     `dim_channel`.`ChannelName`,
@@ -352,6 +368,7 @@ WHERE
      `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
      AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
      AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)
+     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)
 GROUP BY
      `dim_channel`.ChannelName]]></Query>
    </DataAccess>
@@ -375,6 +392,7 @@ GROUP BY
          <Parameter default="endDay" name="endDay" type="String"/>
          <Parameter default="brandParam" name="brandParam" type="String"/>
          <Parameter default="area1Param" name="area1Param" type="String"/>
+         <Parameter default="area2Param" name="area2Param" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT
      `dim_bidate`.`BIDateId`,
@@ -391,6 +409,7 @@ WHERE
      `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay} 
      AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
      AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)
+     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)
 GROUP BY
      `dim_bidate`.`BIDateId`,
      `dim_bidate`.`YearMonth`,
@@ -416,6 +435,7 @@ ORDER BY
          <Parameter default="endDay" name="endDay" type="String"/>
          <Parameter default="brandParam" name="brandParam" type="String"/>
          <Parameter default="area1Param" name="area1Param" type="String"/>
+         <Parameter default="area2Param" name="area2Param" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT
     `dim_bidate`.`BIDateId`,
@@ -432,6 +452,7 @@ WHERE
      `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
      AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
      AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)
+     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)
 GROUP BY
      `dim_bidate`.`BIDateId`,`dim_bidate`.`YearMonth`
 ORDER BY
@@ -446,6 +467,7 @@ ORDER BY
          <Parameter default="endDay" name="endDay" type="String"/>
          <Parameter default="brandParam" name="brandParam" type="String"/>
          <Parameter default="area1Param" name="area1Param" type="String"/>
+         <Parameter default="area2Param" name="area2Param" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT
     `dim_voidresontype`.`VoidReasonName`,
@@ -460,6 +482,7 @@ WHERE
      `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
      AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
      AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)
+     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)
 GROUP BY 
     `dim_voidresontype`.`VoidReasonName`]]></Query>
    </DataAccess>
@@ -472,6 +495,7 @@ GROUP BY
          <Parameter default="endDay" name="endDay" type="String"/>
          <Parameter default="brandParam" name="brandParam" type="String"/>
          <Parameter default="area1Param" name="area1Param" type="String"/>
+         <Parameter default="area2Param" name="area2Param" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT
      `dim_voidresontype`.`VoidReasonName`,
@@ -487,6 +511,7 @@ WHERE
      `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
      AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
      AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)
+     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)
 GROUP BY
      `dim_voidresontype`.`VoidReasonName`]]></Query>
    </DataAccess>
@@ -576,7 +601,9 @@ WHERE
       <Name>area2SelectQuery</Name>
       <Cache duration="3600" enabled="true"/>
       <Columns/>
-      <Parameters/>
+      <Parameters>
+         <Parameter default="area1Param" name="area1Param" type="String"/>
+      </Parameters>
       <Query><![CDATA[SELECT -1,"所有"
 UNION ALL
 SELECT DISTINCT
@@ -587,7 +614,8 @@ FROM
 WHERE
      `Dim_Outlet`.`EndDate` = "2200-01-01"
      AND `Dim_Area`.`Status` = 0
-     AND `Dim_Outlet`.`Status` = 0]]></Query>
+     AND `Dim_Outlet`.`Status` = 0
+     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)]]></Query>
    </DataAccess>
    <DataAccess access="public" connection="area3SelectQuery" id="area3SelectQuery" type="sql">
       <Name>area3SelectQuery</Name>
