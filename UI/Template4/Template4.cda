@@ -90,6 +90,7 @@
       <Parameters>
          <Parameter default="startDay" name="startDay" type="String"/>
          <Parameter default="endDay" name="endDay" type="String"/>
+         <Parameter default="brandParam" name="brandParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT 
         X.*
@@ -104,7 +105,8 @@ FROM
             INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`
             INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId
     WHERE 
-            `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}    
+            `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
+            AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
 	GROUP BY
 			`Dim_Outlet`.`OutletName`
 	ORDER BY
@@ -118,6 +120,7 @@ FROM
       <Parameters>
          <Parameter default="startDay" name="startDay" type="String"/>
          <Parameter default="endDay" name="endDay" type="String"/>
+         <Parameter default="brandParam" name="brandParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT
     `dim_periodtype`.`PeriodTypeName`,
@@ -130,6 +133,7 @@ FROM
     INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId
 WHERE 
      `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
+     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
 GROUP BY
     `dim_periodtype`.`PeriodTypeName`]]></Query>
    </DataAccess>
@@ -141,6 +145,7 @@ GROUP BY
       <Parameters>
          <Parameter default="startDay" name="startDay" type="String"/>
          <Parameter default="endDay" name="endDay" type="String"/>
+         <Parameter default="brandParam" name="brandParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT
     `dim_channel`.DeliveryType,
@@ -153,6 +158,7 @@ FROM
     INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId
 WHERE 
      `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
+     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
 GROUP BY
     `dim_channel`.DeliveryType]]></Query>
    </DataAccess>
@@ -163,6 +169,7 @@ GROUP BY
       <Parameters>
          <Parameter default="startDay" name="startDay" type="String"/>
          <Parameter default="endDay" name="endDay" type="String"/>
+         <Parameter default="brandParam" name="brandParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT
     `dim_bidate`.`BIDate`,
@@ -175,6 +182,7 @@ FROM
     INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId
 WHERE 
      `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
+     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
 GROUP BY
     `dim_bidate`.`BIDateId`,
     `dim_bidate`.`YearMonth`
@@ -199,6 +207,7 @@ ORDER BY
       <Parameters>
          <Parameter default="startDay" name="startDay" type="String"/>
          <Parameter default="endDay" name="endDay" type="String"/>
+         <Parameter default="brandParam" name="brandParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT
     `dim_paytype`.`PayTypeId`,
@@ -213,6 +222,7 @@ FROM
     INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId
 WHERE 
      `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
+     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
 GROUP BY
     `dim_paytype`.`PayTypeName`,
     `dim_paytype`.`PayTypeId`
@@ -227,6 +237,7 @@ ORDER BY
       <Parameters>
          <Parameter default="startDay" name="startDay" type="String"/>
          <Parameter default="endDay" name="endDay" type="String"/>
+         <Parameter default="brandParam" name="brandParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT DISTINCT
     CASE WHEN `Dim_PayType`.`PayTypeClassName` IS NULL 
@@ -241,6 +252,7 @@ FROM
     INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId
 WHERE 
      `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
+     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
 GROUP BY
      `Dim_PayType`.`PayTypeClassId`, `Dim_PayType`.`PayTypeClassName`
 ORDER BY
@@ -254,6 +266,7 @@ ORDER BY
       <Parameters>
          <Parameter default="startDay" name="startDay" type="String"/>
          <Parameter default="endDay" name="endDay" type="String"/>
+         <Parameter default="brandParam" name="brandParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT 
     tbl.bidate,
@@ -287,7 +300,8 @@ FROM
                 INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`
                 INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId
     	WHERE 
-            `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}   
+            `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay} 
+            AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
         GROUP BY
     			 `dim_bidate`.`BIDateId`
     	ORDER BY
@@ -295,6 +309,7 @@ FROM
     	) AS temp ON `fact_checkpay`.`BIDateId` = temp.BIDateId
     WHERE 
         `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
+        AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
     GROUP BY 
         `dim_bidate`.`bidate`, `dim_paytype`.`PayTypeClassName`, temp.PayAmtAll
 ) AS tbl]]></Query>
@@ -306,6 +321,7 @@ FROM
       <Parameters>
          <Parameter default="startDay" name="startDay" type="String"/>
          <Parameter default="endDay" name="endDay" type="String"/>
+         <Parameter default="brandParam" name="brandParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT
     `dim_channel`.`ChannelName`,
@@ -318,6 +334,7 @@ FROM
     INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId
 WHERE 
      `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
+     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
 GROUP BY
      `dim_channel`.ChannelName]]></Query>
    </DataAccess>
@@ -339,6 +356,7 @@ GROUP BY
       <Parameters>
          <Parameter default="startDay" name="startDay" type="String"/>
          <Parameter default="endDay" name="endDay" type="String"/>
+         <Parameter default="brandParam" name="brandParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT
      `dim_bidate`.`BIDateId`,
@@ -352,7 +370,8 @@ FROM
     INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`
     INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId
 WHERE 
-     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
+     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay} 
+     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
 GROUP BY
      `dim_bidate`.`BIDateId`,
      `dim_bidate`.`YearMonth`,
@@ -376,6 +395,7 @@ ORDER BY
       <Parameters>
          <Parameter default="startDay" name="startDay" type="String"/>
          <Parameter default="endDay" name="endDay" type="String"/>
+         <Parameter default="brandParam" name="brandParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT
     `dim_bidate`.`BIDateId`,
@@ -390,6 +410,7 @@ FROM
     INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId
 WHERE 
      `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
+     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
 GROUP BY
      `dim_bidate`.`BIDateId`,`dim_bidate`.`YearMonth`
 ORDER BY
@@ -402,6 +423,7 @@ ORDER BY
       <Parameters>
          <Parameter default="startDay" name="startDay" type="String"/>
          <Parameter default="endDay" name="endDay" type="String"/>
+         <Parameter default="brandParam" name="brandParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT
     `dim_voidresontype`.`VoidReasonName`,
@@ -414,6 +436,7 @@ FROM
     INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId
 WHERE 
      `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
+     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
 GROUP BY 
     `dim_voidresontype`.`VoidReasonName`]]></Query>
    </DataAccess>
@@ -424,6 +447,7 @@ GROUP BY
       <Parameters>
          <Parameter default="startDay" name="startDay" type="String"/>
          <Parameter default="endDay" name="endDay" type="String"/>
+         <Parameter default="brandParam" name="brandParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT
      `dim_voidresontype`.`VoidReasonName`,
@@ -437,6 +461,7 @@ FROM
     INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId
 WHERE 
      `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
+     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
 GROUP BY
      `dim_voidresontype`.`VoidReasonName`]]></Query>
    </DataAccess>
