@@ -1,0 +1,5391 @@
+{
+ "components": {
+  "rows": [
+   {
+    "id": "SCRIPT",
+    "name": "Scripts",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "type": "Label",
+      "value": "Scripts"
+     }
+    ],
+    "type": "Label",
+    "typeDesc": "<i>Group</i>"
+   },
+   {
+    "id": "d835c397-91b9-6f18-5609-684033cca18b",
+    "parent": "SCRIPT",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "js"
+     },
+     {
+      "name": "javaScript",
+      "type": "JavaScript",
+      "value": "/**\r\n *  原生的判断是否存在class\r\n */\r\nfunction hasClass( elements,cName ){ \r\n    // ( \\\\s|^ ) 判断前面是否有空格 \r\n    //（\\\\s | $ ）判断后面是否有空格 两个感叹号为转换为布尔值 以方便做判断 \r\n    return !!elements.className.match( new RegExp( \"(\\\\s|^)\" + cName + \"(\\\\s|$)\") ); \r\n}\r\n/**\r\n *  原生的移除class\r\n */\r\nfunction removeClass( elements,cName ){ \r\n    if( hasClass( elements,cName ) ){ \r\n        elements.className = elements.className.replace( new RegExp( \"(\\\\s|^)\" + cName + \"(\\\\s|$)\" ),\" \" ); \r\n    }\r\n}\r\n/**\r\n *  原生的添加class\r\n */\r\nfunction addClass( elements,cName ){ \r\n    if( !hasClass( elements,cName ) ){ \r\n        elements.className += \" \" + cName; \r\n    }\r\n}\r\nsc = {\r\n    init : function(){\r\n        var dashboardWidth = document.getElementsByTagName('body')[0].offsetWidth;\r\n        var row1_col1 = document.getElementById(\"row1_col1\"); \r\n        var row2_col1 = document.getElementById(\"row2_col1\"); \r\n        if( dashboardWidth >= 1200 ){\r\n            removeClass(row1_col1,\"row1_col1-xs\");\r\n            removeClass(row2_col1,\"row2_col1-xs\");\r\n        }else{\r\n            addClass(row1_col1,\"row1_col1-xs\");\r\n            addClass(row2_col1,\"row2_col1-xs\");\r\n        }\r\n    }\r\n};\r\nwindow.onload = function(){ sc.init(); };\r\nwindow.onresize = function(){ sc.init(); }; "
+     }
+    ],
+    "rowName": "Function",
+    "type": "ComponentsFunction",
+    "typeDesc": "JavaScript function"
+   }
+  ]
+ },
+ "datasources": {
+  "rows": []
+ },
+ "filename": "/public/UI/Template3/Template3.cdfde",
+ "layout": {
+  "rows": [
+   {
+    "id": "cd7ffa06-6a87-3381-533d-59c002027350",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "css"
+     },
+     {
+      "name": "resourceCode",
+      "type": "Resource",
+      "value": "html {\r\n    /*\r\n    overflow-y: scroll;  hidden\r\n    height: 100%;\r\n    overflow-y: scroll;\r\n    overflow-x: hidden;\r\n    */\r\n    \r\n}\r\nbody{\r\n    background-color:#ECF0F5;\r\n}\r\n.container {\r\n    width:100%;\r\n    height: 100%;\r\n    overflow: auto;\r\n    position: absolute; \r\n    padding-top: 10px;\r\n    padding-right: 0px;\r\n    padding-left: 10px;\r\n    padding-bottom: 10px;\r\n    margin-right: auto;\r\n    margin-left: auto;\r\n    /*\r\n    width : 98% !important;\r\n    \r\n    \r\n    position: absolute; \r\n    position: relative;\r\n    overflow-y:scroll; \r\n    overflow-x:scroll;\r\n    */\r\n    \r\n}\r\n\r\n/*   #   */\r\n.panel-default {\r\n    border: none;\r\n    border-radius: 0px;\r\n    margin-bottom: 0px;\r\n    box-shadow: none;\r\n    -webkit-box-shadow: none;\r\n}\r\n.panel-default > .panel-heading {\r\n    color: #777;\r\n    background-color: #fff;\r\n    border-color: #e6e6e6;\r\n    padding: 10px 10px;\r\n}\r\n.panel-default > .panel-body {\r\n    padding: 10px;\r\n    padding-bottom: 0px;\r\n}\r\n.panel-default > .panel-body ul {\r\n    overflow: hidden;\r\n    padding: 0;\r\n    margin: 0px;\r\n    margin-top: -5px;\r\n}\r\n.panel-default > .panel-body ul li {\r\n    line-height: 27px;\r\n    list-style-type: none;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n}\r\n.panel-default > .panel-body ul li .time {\r\n    color: #a1a1a1;\r\n    float: right;\r\n    padding-right: 5px;\r\n} \r\n\r\n\r\n .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, \r\n .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, \r\n .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, \r\n .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, \r\n .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, \r\n .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, \r\n .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, \r\n .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, \r\n .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, \r\n .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, \r\n .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, \r\n .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {\r\n    position: relative;\r\n    min-height: 1px;\r\n    padding-right: 10px;\r\n    padding-left: 0px;\r\n} \r\n.row {\r\n    margin-right: 0px;\r\n    margin-left: 0px;\r\n} \r\nhr {\r\n    margin-top: 10px; \r\n    margin-bottom: 0px; \r\n    border: 0;\r\n    border-top: 0px solid #eee; \r\n} \r\n#row3{\r\n    padding-right: 10px;\r\n} \r\n#row4, #row5, #row6, #row7, #row8, #row9, #row10, .row2_col1-xs, .row1_col1-xs{\r\n    margin-right:10px;\r\n} \r\n#row3_col1{\r\n    margin-right:-10px;\r\n} "
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Css"
+     }
+    ],
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource"
+   },
+   {
+    "id": "d10be186-e3ce-9d03-8771-18a5d2e88049",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutSpace",
+    "typeDesc": "Space"
+   },
+   {
+    "id": "6d53688b-f4ba-a90d-ffdc-cfdb60488077",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row1"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutRow",
+    "typeDesc": "Row"
+   },
+   {
+    "id": "7870a045-f3cb-6db9-78e0-29d7807980fa",
+    "parent": "6d53688b-f4ba-a90d-ffdc-cfdb60488077",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row1_col1"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "row1_col1-xs"
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "98001f1f-ab7b-14ca-9848-893ffa97b995",
+    "parent": "7870a045-f3cb-6db9-78e0-29d7807980fa",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row1_col1_panel"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": "390"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "type": "bootstrapPanelStyleCustom",
+      "value": "panel-default"
+     }
+    ],
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel"
+   },
+   {
+    "id": "3f448443-b9f4-2340-e89f-937687bc35bb",
+    "parent": "98001f1f-ab7b-14ca-9848-893ffa97b995",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body"
+   },
+   {
+    "id": "433015e7-c448-dbee-b286-6e2d9831b2d7",
+    "parent": "3f448443-b9f4-2340-e89f-937687bc35bb",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "营业额 "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "2a9f09bb-62aa-c557-b870-b7ecc1e27725",
+    "parent": "7870a045-f3cb-6db9-78e0-29d7807980fa",
+    "properties": [
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutSpace",
+    "typeDesc": "Space"
+   },
+   {
+    "id": "2047b07c-da00-97bd-2fbf-7029de3b67f6",
+    "parent": "6d53688b-f4ba-a90d-ffdc-cfdb60488077",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row1_col2"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "f9cc499c-51ff-f7ce-c6da-21ec90962110",
+    "parent": "2047b07c-da00-97bd-2fbf-7029de3b67f6",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row1_col2_row1"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutRow",
+    "typeDesc": "Row"
+   },
+   {
+    "id": "65f7e27d-a20f-b49c-fc44-e21c62cdb79e",
+    "parent": "f9cc499c-51ff-f7ce-c6da-21ec90962110",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row1_col2_row1_col1"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "be98fe72-bda1-dfb6-5190-e0ed766b5f2c",
+    "parent": "65f7e27d-a20f-b49c-fc44-e21c62cdb79e",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row1_col2_row1_col1_panel"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": "190"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "type": "bootstrapPanelStyleCustom",
+      "value": "panel-default"
+     }
+    ],
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel"
+   },
+   {
+    "id": "a61178a7-17a7-db03-0f11-a8203dab0746",
+    "parent": "be98fe72-bda1-dfb6-5190-e0ed766b5f2c",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row1_col2_row1_col1_panel_body"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body"
+   },
+   {
+    "id": "f0bc991c-4c10-69ae-bff6-46200eb99609",
+    "parent": "a61178a7-17a7-db03-0f11-a8203dab0746",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row1_col2_row1_col1_panel_body_html"
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "净利率 "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "ba97f56a-b9fb-75b0-57b7-dadf2671cc90",
+    "type": "LayoutSpace",
+    "typeDesc": "Space",
+    "parent": "65f7e27d-a20f-b49c-fc44-e21c62cdb79e",
+    "properties": [
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "hidden-lg hidden-sm hidden-md",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "250010de-550f-fe78-5e12-fce61f4e9642",
+    "parent": "f9cc499c-51ff-f7ce-c6da-21ec90962110",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row1_col2_row1_col2"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "537e27eb-f1bd-9d5b-5736-2c4f6ec32978",
+    "parent": "250010de-550f-fe78-5e12-fce61f4e9642",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row1_col2_row1_col2_panel"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": "190"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "type": "bootstrapPanelStyleCustom",
+      "value": "panel-default"
+     }
+    ],
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel"
+   },
+   {
+    "id": "b8137a1e-e092-b675-2589-ae3cf397b202",
+    "parent": "537e27eb-f1bd-9d5b-5736-2c4f6ec32978",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row1_col2_row1_col2_panel_body"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body"
+   },
+   {
+    "id": "6edf50b1-3654-22c8-65c2-4d9f0a3197e2",
+    "parent": "b8137a1e-e092-b675-2589-ae3cf397b202",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "毛利率 "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "d1bf4c01-8774-14ac-1ecf-96df86aabf58",
+    "parent": "2047b07c-da00-97bd-2fbf-7029de3b67f6",
+    "properties": [
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutSpace",
+    "typeDesc": "Space"
+   },
+   {
+    "id": "b64a8c90-9329-fba5-9acc-e6a13adf7e4c",
+    "parent": "2047b07c-da00-97bd-2fbf-7029de3b67f6",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row1_col2_row2"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutRow",
+    "typeDesc": "Row"
+   },
+   {
+    "id": "0de3ea27-40d5-eea5-5b7a-b81c1f844c8c",
+    "parent": "b64a8c90-9329-fba5-9acc-e6a13adf7e4c",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row1_col2_row2_col1"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "301d94b6-a18e-c17b-b2ca-e08551b48c88",
+    "parent": "0de3ea27-40d5-eea5-5b7a-b81c1f844c8c",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row1_col2_row2_col1_panel"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": "190"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "type": "bootstrapPanelStyleCustom",
+      "value": "panel-default"
+     }
+    ],
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel"
+   },
+   {
+    "id": "2fe05671-75b2-51ba-2ef8-03e0c5ff83de",
+    "parent": "301d94b6-a18e-c17b-b2ca-e08551b48c88",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row1_col2_row2_col1_panel_body"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body"
+   },
+   {
+    "id": "cd5d76da-1ede-a4ef-46a1-2c2566afa1ef",
+    "parent": "2fe05671-75b2-51ba-2ef8-03e0c5ff83de",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row1_col2_row2_col1_panel_body_html"
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "人均消费 "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "2341b03d-8190-93a8-ee77-f165fcb8093e",
+    "type": "LayoutSpace",
+    "typeDesc": "Space",
+    "parent": "0de3ea27-40d5-eea5-5b7a-b81c1f844c8c",
+    "properties": [
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "hidden-lg hidden-sm hidden-md",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "6bdd9d8a-a059-677c-55bb-3a04ec4a09c0",
+    "parent": "b64a8c90-9329-fba5-9acc-e6a13adf7e4c",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row1_col2_row2_col2"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "1a4e6bea-8f5d-089c-c33b-0345e3f31f64",
+    "parent": "6bdd9d8a-a059-677c-55bb-3a04ec4a09c0",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row1_col2_row2_col2_panel"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": "190"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "type": "bootstrapPanelStyleCustom",
+      "value": "panel-default"
+     }
+    ],
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel"
+   },
+   {
+    "id": "2e5957a9-57a0-5d1e-f3db-e980e336c9d1",
+    "parent": "1a4e6bea-8f5d-089c-c33b-0345e3f31f64",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row1_col2_row2_col2_panel_body"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body"
+   },
+   {
+    "id": "969844ce-bd30-288c-9dd7-c56272a38499",
+    "parent": "2e5957a9-57a0-5d1e-f3db-e980e336c9d1",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row1_col2_row2_col2_panel_body_html"
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "费用金额 "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "33d1ffcf-b6a1-ee73-11be-3c1c8935f3d5",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "hidden-lg"
+     }
+    ],
+    "type": "LayoutSpace",
+    "typeDesc": "Space"
+   },
+   {
+    "id": "3cd2bba1-67a3-a08c-5cb2-5d8840e26e61",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row2"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutRow",
+    "typeDesc": "Row"
+   },
+   {
+    "id": "4b995dc1-d0fd-e3d8-e6a9-c46a13caf91d",
+    "parent": "3cd2bba1-67a3-a08c-5cb2-5d8840e26e61",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row2_col1"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": "8"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "row2_col1-xs"
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "2964424c-78f1-d503-ef28-4897245b2f0a",
+    "parent": "4b995dc1-d0fd-e3d8-e6a9-c46a13caf91d",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row2_col1_panel"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": "390"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "type": "bootstrapPanelStyleCustom",
+      "value": "panel-default"
+     }
+    ],
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel"
+   },
+   {
+    "id": "895bb448-98a0-66b9-e370-fabf74fbd07c",
+    "parent": "2964424c-78f1-d503-ef28-4897245b2f0a",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row2_col1_panel_body"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body"
+   },
+   {
+    "id": "f6b39e9f-6a02-3ec3-3f26-210fae00d69e",
+    "parent": "895bb448-98a0-66b9-e370-fabf74fbd07c",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row2_col1_panel_body_html"
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "门店运营情况对比 "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "1f47926d-f0b6-d8df-3d79-191c0a70ef5d",
+    "parent": "4b995dc1-d0fd-e3d8-e6a9-c46a13caf91d",
+    "properties": [
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutSpace",
+    "typeDesc": "Space"
+   },
+   {
+    "id": "85c3d781-5786-f4e6-7284-73bfd0d1068d",
+    "parent": "3cd2bba1-67a3-a08c-5cb2-5d8840e26e61",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row2_col2"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": "4"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "506bbafc-3905-84d9-4971-b3bce7116c81",
+    "parent": "85c3d781-5786-f4e6-7284-73bfd0d1068d",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row2_col2_row1"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutRow",
+    "typeDesc": "Row"
+   },
+   {
+    "id": "6b98cd7f-67b4-d44d-c2a5-db99b26dc6d5",
+    "parent": "506bbafc-3905-84d9-4971-b3bce7116c81",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row2_col2_row1_col1"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "6155fbb0-2b89-1032-f9c9-62868d3027de",
+    "parent": "6b98cd7f-67b4-d44d-c2a5-db99b26dc6d5",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row2_col2_row1_col1_panel"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": "190"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "type": "bootstrapPanelStyleCustom",
+      "value": "panel-default"
+     }
+    ],
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel"
+   },
+   {
+    "id": "34789809-5c61-bf9c-a0a8-43735dca9947",
+    "parent": "6155fbb0-2b89-1032-f9c9-62868d3027de",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row2_col2_row1_col1_panel_body"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body"
+   },
+   {
+    "id": "63918ef3-d6a5-b842-c0fb-178d6533bb71",
+    "parent": "34789809-5c61-bf9c-a0a8-43735dca9947",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row2_col2_row1_col1_panel_body_html"
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "销售目标完成率 "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "35dc2383-2c55-bea0-5008-5c774e73be16",
+    "type": "LayoutSpace",
+    "typeDesc": "Space",
+    "parent": "6b98cd7f-67b4-d44d-c2a5-db99b26dc6d5",
+    "properties": [
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "hidden-lg  hidden-md hidden-sm",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "0c059422-4e3b-9e69-5622-481ce0033ed6",
+    "parent": "506bbafc-3905-84d9-4971-b3bce7116c81",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row2_col2_row1_col2"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "8aa0301b-1cde-11d9-644c-231088bc0320",
+    "parent": "0c059422-4e3b-9e69-5622-481ce0033ed6",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row2_col2_row1_col2_panel"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": "190"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "type": "bootstrapPanelStyleCustom",
+      "value": "panel-default"
+     }
+    ],
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel"
+   },
+   {
+    "id": "e67f4d35-1521-689e-dd1e-52ac551f3f48",
+    "parent": "8aa0301b-1cde-11d9-644c-231088bc0320",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row2_col2_row1_col2_panel_body"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body"
+   },
+   {
+    "id": "6b19ed41-02c3-f4b7-d22c-0b8865dea3e0",
+    "parent": "e67f4d35-1521-689e-dd1e-52ac551f3f48",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row2_col2_row1_col2_panel_body_html"
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "客流量 "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "92654a78-9b22-d2ac-0fcb-b5ad872f4c65",
+    "parent": "85c3d781-5786-f4e6-7284-73bfd0d1068d",
+    "properties": [
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutSpace",
+    "typeDesc": "Space"
+   },
+   {
+    "id": "de1b5304-fc66-b1dd-f035-4a4d287d354d",
+    "parent": "85c3d781-5786-f4e6-7284-73bfd0d1068d",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row2_col2_row2"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutRow",
+    "typeDesc": "Row"
+   },
+   {
+    "id": "fadb464c-e75e-2ef1-c442-e15c911f3047",
+    "parent": "de1b5304-fc66-b1dd-f035-4a4d287d354d",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row2_col2_row2_col1"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "3b6b7313-1704-a96e-9e8a-8a3c6e07e849",
+    "parent": "fadb464c-e75e-2ef1-c442-e15c911f3047",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": "190"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "type": "bootstrapPanelStyleCustom",
+      "value": "panel-default"
+     }
+    ],
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel"
+   },
+   {
+    "id": "8ac7d362-f445-8451-dace-ba02bffa597d",
+    "parent": "3b6b7313-1704-a96e-9e8a-8a3c6e07e849",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body"
+   },
+   {
+    "id": "2c624803-39e7-6570-fc2a-6fd639279b9e",
+    "parent": "8ac7d362-f445-8451-dace-ba02bffa597d",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "折扣单数占比 "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "ede26c26-d435-8e65-16b7-a68092170f0b",
+    "type": "LayoutSpace",
+    "typeDesc": "Space",
+    "parent": "fadb464c-e75e-2ef1-c442-e15c911f3047",
+    "properties": [
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "hidden-lg  hidden-md hidden-sm",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "92daab0a-5b4d-7784-71b2-49e5cbd43762",
+    "parent": "de1b5304-fc66-b1dd-f035-4a4d287d354d",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row2_col2_row2_col2"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "13b3e5e6-3c4c-f795-8559-e333053a4662",
+    "parent": "92daab0a-5b4d-7784-71b2-49e5cbd43762",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": "190"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "type": "bootstrapPanelStyleCustom",
+      "value": "panel-default"
+     }
+    ],
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel"
+   },
+   {
+    "id": "488ed4d0-3832-6625-380a-236fee000436",
+    "parent": "13b3e5e6-3c4c-f795-8559-e333053a4662",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body"
+   },
+   {
+    "id": "6a849a40-9574-c43e-b1f7-defc843367be",
+    "parent": "488ed4d0-3832-6625-380a-236fee000436",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "翻台率 "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "8aba2692-a056-d4bf-89ba-217d3db23e59",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "hidden-lg"
+     }
+    ],
+    "type": "LayoutSpace",
+    "typeDesc": "Space"
+   },
+   {
+    "id": "112acc94-5e16-3f7c-6bc8-fb5c0dfe9ef4",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row3",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "9665c4ff-aa4f-511e-91c6-d8443129afb4",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "112acc94-5e16-3f7c-6bc8-fb5c0dfe9ef4",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row3_col1",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "4",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "4",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "3",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "345a76d0-eea9-898a-84e6-a784f317019f",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "9665c4ff-aa4f-511e-91c6-d8443129afb4",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row3_col1_row1",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "be3b60da-09a0-0d07-eb6d-265e151ca69f",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "345a76d0-eea9-898a-84e6-a784f317019f",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row3_col1_row1_col1",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "fdede21f-3f8a-4209-d4de-184b38505df4",
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel",
+    "parent": "be3b60da-09a0-0d07-eb6d-265e151ca69f",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row3_col1_row1_col1_panel",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "190",
+      "type": "Integer"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "value": "panel-default",
+      "type": "bootstrapPanelStyleCustom"
+     }
+    ]
+   },
+   {
+    "id": "bbe138d6-d0b4-46d6-2f04-0703fb4ab0a9",
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body",
+    "parent": "fdede21f-3f8a-4209-d4de-184b38505df4",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row3_col1_row1_col1_panel_body",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "29cfec6b-15bb-7677-7680-79dbbad31ed0",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "bbe138d6-d0b4-46d6-2f04-0703fb4ab0a9",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row3_col1_row1_col1_panel_body_html",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "投资金额 ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "4d0e52d2-7b9e-233e-3ee3-672d014d33bc",
+    "type": "LayoutSpace",
+    "typeDesc": "Space",
+    "parent": "9665c4ff-aa4f-511e-91c6-d8443129afb4",
+    "properties": [
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "32cc6774-ca31-5835-e48f-5f6189502598",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "9665c4ff-aa4f-511e-91c6-d8443129afb4",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row3_col1_row2",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "3f0c6f96-51e8-9fc1-a4b9-a0bea4bc0fa4",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "32cc6774-ca31-5835-e48f-5f6189502598",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row3_col1_row2_col2",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "96b60c5a-9cb5-8745-8f2a-d26bbaad425e",
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel",
+    "parent": "3f0c6f96-51e8-9fc1-a4b9-a0bea4bc0fa4",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row3_col1_row2_col2_panel",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "190",
+      "type": "Integer"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "value": "panel-default",
+      "type": "bootstrapPanelStyleCustom"
+     }
+    ]
+   },
+   {
+    "id": "593524f9-6178-f042-9457-363b09bab544",
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body",
+    "parent": "96b60c5a-9cb5-8745-8f2a-d26bbaad425e",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row3_col1_row2_col2_panel_body",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "3b2a8c05-be17-23e8-98cb-6879c6454ff7",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "593524f9-6178-f042-9457-363b09bab544",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row3_col1_row2_col2_panel_body_html",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "投资回收所需时间 ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "b092d629-58b2-5ec0-f89d-9ee14b36f26f",
+    "type": "LayoutSpace",
+    "typeDesc": "Space",
+    "parent": "9665c4ff-aa4f-511e-91c6-d8443129afb4",
+    "properties": [
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "54e2d351-2dda-6c2a-7b8c-08a7c66ad530",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "112acc94-5e16-3f7c-6bc8-fb5c0dfe9ef4",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row3_col2",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "8",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "8",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "9",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "b4be1ca0-1fdc-151a-461c-9aea62239e3c",
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel",
+    "parent": "54e2d351-2dda-6c2a-7b8c-08a7c66ad530",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row3_col2_panel",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "390",
+      "type": "Integer"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "value": "panel-default",
+      "type": "bootstrapPanelStyleCustom"
+     }
+    ]
+   },
+   {
+    "id": "01e0cfc7-177f-ebcd-46db-a640fc765748",
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body",
+    "parent": "b4be1ca0-1fdc-151a-461c-9aea62239e3c",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row3_col2_panel_body",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "2bf86067-c646-7893-00ee-a765615b3d1a",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "01e0cfc7-177f-ebcd-46db-a640fc765748",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row3_col2_panel_body_html",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "门店投资回报盈利趋势 ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "3a281abe-6f6a-d704-fcc2-8413745a87f7",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "hidden-lg hidden-md hidden-sm"
+     }
+    ],
+    "type": "LayoutSpace",
+    "typeDesc": "Space"
+   },
+   {
+    "id": "8fb1b2f5-513b-b892-31eb-c54b24a706a5",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row4"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutRow",
+    "typeDesc": "Row"
+   },
+   {
+    "id": "ef0a5141-f586-c4a0-643d-81a8070e2897",
+    "parent": "8fb1b2f5-513b-b892-31eb-c54b24a706a5",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row4_col1"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": "4"
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": "4"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "e20ab296-2089-41d2-c4d0-e9f9903e11f5",
+    "parent": "ef0a5141-f586-c4a0-643d-81a8070e2897",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row4_col1_panel"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": "390"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "type": "bootstrapPanelStyleCustom",
+      "value": "panel-default"
+     }
+    ],
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel"
+   },
+   {
+    "id": "3106cd83-14ac-1e95-3f49-e7ada19ba129",
+    "parent": "e20ab296-2089-41d2-c4d0-e9f9903e11f5",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row4_col1_panel_body"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body"
+   },
+   {
+    "id": "e4d1a7b5-477c-1fca-4336-23ae2bdd8172",
+    "parent": "3106cd83-14ac-1e95-3f49-e7ada19ba129",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row4_col1_panel_body_html"
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "营业额成本利润分布 "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "89b023b6-638a-127b-2c2e-9ba7a8e8c038",
+    "parent": "ef0a5141-f586-c4a0-643d-81a8070e2897",
+    "properties": [
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutSpace",
+    "typeDesc": "Space"
+   },
+   {
+    "id": "bc8404ad-90f7-adb5-ec1a-45d3a621de37",
+    "parent": "8fb1b2f5-513b-b892-31eb-c54b24a706a5",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row4_col2"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": "4"
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": "4"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "73ad01ec-56a3-b746-2aa5-fb0dc819ad49",
+    "parent": "bc8404ad-90f7-adb5-ec1a-45d3a621de37",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row4_col2_panel"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": "390"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "type": "bootstrapPanelStyleCustom",
+      "value": "panel-default"
+     }
+    ],
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel"
+   },
+   {
+    "id": "4d2a8681-60d5-0e6a-3645-3041d16a605f",
+    "parent": "73ad01ec-56a3-b746-2aa5-fb0dc819ad49",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row4_col2_panel_body"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body"
+   },
+   {
+    "id": "ee1039a0-0603-bc97-7772-27120dd63f3f",
+    "parent": "4d2a8681-60d5-0e6a-3645-3041d16a605f",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row4_col2_panel_body_html"
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "费用分布占比情况 "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "f7bdcba0-3817-ca43-0e48-53bab0b15dd1",
+    "parent": "bc8404ad-90f7-adb5-ec1a-45d3a621de37",
+    "properties": [
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutSpace",
+    "typeDesc": "Space"
+   },
+   {
+    "id": "5e60f933-e208-ba77-04d8-7607ffd3eff3",
+    "parent": "8fb1b2f5-513b-b892-31eb-c54b24a706a5",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row4_col3"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": "4"
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": "4"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "66792853-927a-2b40-d6e4-7ca7163ad6b6",
+    "parent": "5e60f933-e208-ba77-04d8-7607ffd3eff3",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row4_col3_panel"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": "390"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "type": "bootstrapPanelStyleCustom",
+      "value": "panel-default"
+     }
+    ],
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel"
+   },
+   {
+    "id": "5e5c218e-32ca-895a-56b3-87ac8d6456d7",
+    "parent": "66792853-927a-2b40-d6e4-7ca7163ad6b6",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row4_col3_panel_body"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body"
+   },
+   {
+    "id": "449aa619-6460-9bb4-313d-8cc8b4ad8e84",
+    "parent": "5e5c218e-32ca-895a-56b3-87ac8d6456d7",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row4_col3_panel_body_html"
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "营业时段营业额占比 "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "a3504335-aae1-be01-a48e-d9745c3fddba",
+    "parent": "5e60f933-e208-ba77-04d8-7607ffd3eff3",
+    "properties": [
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutSpace",
+    "typeDesc": "Space"
+   },
+   {
+    "id": "37402536-5a87-7b7f-e4b1-110e2c7e7061",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "hidden-lg hidden-md hidden-sm hidden-xs"
+     }
+    ],
+    "type": "LayoutSpace",
+    "typeDesc": "Space"
+   },
+   {
+    "id": "113e77cf-b789-be17-cd51-c1816f7c5125",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row5",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "0bb349fe-3533-1e5d-2459-ae55c7bf2980",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "113e77cf-b789-be17-cd51-c1816f7c5125",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row5_col1",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "a56b8402-eb98-dd3e-1be9-5a722071556e",
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel",
+    "parent": "0bb349fe-3533-1e5d-2459-ae55c7bf2980",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row5_col1_panel",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "390",
+      "type": "Integer"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "value": "panel-default",
+      "type": "bootstrapPanelStyleCustom"
+     }
+    ]
+   },
+   {
+    "id": "f87399d8-127f-40ee-cd5e-22a75a926076",
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body",
+    "parent": "a56b8402-eb98-dd3e-1be9-5a722071556e",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row5_col1_panel_body",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "12a9c2db-c87e-5e8a-f149-0e4a46be322b",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "f87399d8-127f-40ee-cd5e-22a75a926076",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row5_col1_panel_body_html",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "营业利润走势 ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "ad07e9c4-2a9d-4efc-ce9c-294c04237344",
+    "type": "LayoutSpace",
+    "typeDesc": "Space",
+    "parent": "0bb349fe-3533-1e5d-2459-ae55c7bf2980",
+    "properties": [
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "30820da9-f6bf-1039-2692-210efa3d1f12",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "113e77cf-b789-be17-cd51-c1816f7c5125",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row5_col2",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "2c2dc9c9-5232-0ced-db1f-afad7f1beafa",
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel",
+    "parent": "30820da9-f6bf-1039-2692-210efa3d1f12",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row5_col2_panel",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "390",
+      "type": "Integer"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "value": "panel-default",
+      "type": "bootstrapPanelStyleCustom"
+     }
+    ]
+   },
+   {
+    "id": "f8dd50e1-3b20-3cb3-c190-8f43891e3cd2",
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body",
+    "parent": "2c2dc9c9-5232-0ced-db1f-afad7f1beafa",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row5_col2_panel_body",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "f539f245-dd35-e099-dbc7-f2fd839418b1",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "f8dd50e1-3b20-3cb3-c190-8f43891e3cd2",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row5_col2_panel_body_html",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "菜品定价贡献能力对比 ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "910d557d-40be-54e2-de91-5d5cd2a72304",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "hidden-lg hidden-md"
+     }
+    ],
+    "type": "LayoutSpace",
+    "typeDesc": "Space"
+   },
+   {
+    "id": "c8179d48-528f-2473-3cf7-9e3c4c8076f8",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row6",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "300a051e-90e7-2bb8-98a0-455b4126a380",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "c8179d48-528f-2473-3cf7-9e3c4c8076f8",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row6_col1",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "fe787ffa-41f0-5173-7e50-7546e5316e61",
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel",
+    "parent": "300a051e-90e7-2bb8-98a0-455b4126a380",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row6_col1_panel",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "390",
+      "type": "Integer"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "value": "panel-default",
+      "type": "bootstrapPanelStyleCustom"
+     }
+    ]
+   },
+   {
+    "id": "9eb8c6f0-82b4-89c9-bb46-6523fc947208",
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body",
+    "parent": "fe787ffa-41f0-5173-7e50-7546e5316e61",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row6_col1_panel_body",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "dbeb1f6d-d953-6845-ba9d-ec6da452eb80",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "9eb8c6f0-82b4-89c9-bb46-6523fc947208",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row6_col1_panel_body_html",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "贡献同环比图 ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "4b97297c-ad8f-5fa9-a21d-22528792b260",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutSpace",
+    "typeDesc": "Space"
+   },
+   {
+    "id": "c0444c30-ee67-6a52-5c58-7f4871b722bc",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row7",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "62de44a8-7b90-04eb-18b6-4e3152abeccb",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "c0444c30-ee67-6a52-5c58-7f4871b722bc",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row7_col1",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "7872e96f-6899-e8b7-a395-e5b26c46192d",
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel",
+    "parent": "62de44a8-7b90-04eb-18b6-4e3152abeccb",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row7_col1_panel",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "390",
+      "type": "Integer"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "value": "panel-default",
+      "type": "bootstrapPanelStyleCustom"
+     }
+    ]
+   },
+   {
+    "id": "9c24ec84-8f54-3200-b0a1-6cf2bebf77c2",
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body",
+    "parent": "7872e96f-6899-e8b7-a395-e5b26c46192d",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row7_col1_panel_body",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "0750c42d-56a9-28ec-706e-895a03ea0d91",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "9c24ec84-8f54-3200-b0a1-6cf2bebf77c2",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row7_col1_panel_body_html",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "各地营业额完成情况 ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "fbc21821-1e37-e540-c707-f484c5fd602b",
+    "type": "LayoutSpace",
+    "typeDesc": "Space",
+    "parent": "62de44a8-7b90-04eb-18b6-4e3152abeccb",
+    "properties": [
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "0b2c2a38-5450-9a79-906d-7a92630e6865",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "c0444c30-ee67-6a52-5c58-7f4871b722bc",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row7_col2",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "2424b191-3c78-1d7a-ea09-c4fac2f15d91",
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel",
+    "parent": "0b2c2a38-5450-9a79-906d-7a92630e6865",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row7_col2_panel",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "390",
+      "type": "Integer"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "value": "panel-default",
+      "type": "bootstrapPanelStyleCustom"
+     }
+    ]
+   },
+   {
+    "id": "1a97f2aa-12fa-601c-8b9f-1b896eaad199",
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body",
+    "parent": "2424b191-3c78-1d7a-ea09-c4fac2f15d91",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row7_col2_panel_body",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "ba2d8e30-7e6b-3434-dbfa-17febfeb8548",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "1a97f2aa-12fa-601c-8b9f-1b896eaad199",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row7_col2_panel_body_html",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "新老客贡献情况 ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "07351811-2791-74f9-d93f-3cf3029886f2",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "hidden-lg hidden-md"
+     }
+    ],
+    "type": "LayoutSpace",
+    "typeDesc": "Space"
+   },
+   {
+    "id": "37177be2-8924-3349-a95c-921496d68449",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row8",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "ae4822b6-08fe-b457-8dd0-d141510f6540",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "37177be2-8924-3349-a95c-921496d68449",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row8_col1",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "0295bfa3-c43c-f172-9cb9-bc60609eca88",
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel",
+    "parent": "ae4822b6-08fe-b457-8dd0-d141510f6540",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row8_col1_panel",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "390",
+      "type": "Integer"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "value": "panel-default",
+      "type": "bootstrapPanelStyleCustom"
+     }
+    ]
+   },
+   {
+    "id": "fb179937-81d7-8569-9cfb-a390fe30f1ee",
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body",
+    "parent": "0295bfa3-c43c-f172-9cb9-bc60609eca88",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row8_col1_panel_body",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "0a423ecf-e2fa-092a-bfbe-c55c6cb596ec",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "fb179937-81d7-8569-9cfb-a390fe30f1ee",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row8_col1_panel_body_html",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "菜品类别营业额 ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "e95cf172-2671-f9f0-70ff-f3e4d119117b",
+    "type": "LayoutSpace",
+    "typeDesc": "Space",
+    "parent": "ae4822b6-08fe-b457-8dd0-d141510f6540",
+    "properties": [
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "f74ad61f-dccb-e2dc-1a40-85255fed6372",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "37177be2-8924-3349-a95c-921496d68449",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row8_col2",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "e65e050e-0f9b-3b9c-11f5-d55e1e5a9264",
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel",
+    "parent": "f74ad61f-dccb-e2dc-1a40-85255fed6372",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row8_col2_panel",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "390",
+      "type": "Integer"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "value": "panel-default",
+      "type": "bootstrapPanelStyleCustom"
+     }
+    ]
+   },
+   {
+    "id": "1777c386-1d9b-c8fc-004e-8ed5b30b2704",
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body",
+    "parent": "e65e050e-0f9b-3b9c-11f5-d55e1e5a9264",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row8_col2_panel_body",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "34b810d3-fa45-1993-5bf3-432fd161196b",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "1777c386-1d9b-c8fc-004e-8ed5b30b2704",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row8_col2_panel_body_html",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "门店总人效坪效对比图 ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "e1e21b13-80b7-b72a-2ddc-6daa3c024a27",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "hidden-lg hidden-md"
+     }
+    ],
+    "type": "LayoutSpace",
+    "typeDesc": "Space"
+   },
+   {
+    "id": "8af3ceb6-0108-cb5f-5eb4-5c72db74e50b",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row9",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "0d4a0000-992a-10ef-8def-7ebcb21d63cb",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "8af3ceb6-0108-cb5f-5eb4-5c72db74e50b",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "7685816f-d1c7-b0dd-df88-312aa427a807",
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel",
+    "parent": "0d4a0000-992a-10ef-8def-7ebcb21d63cb",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "390",
+      "type": "Integer"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "value": "panel-default",
+      "type": "bootstrapPanelStyleCustom"
+     }
+    ]
+   },
+   {
+    "id": "87da0d56-6ef6-2c52-a86a-b47c03ad2ed8",
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body",
+    "parent": "7685816f-d1c7-b0dd-df88-312aa427a807",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "323c0761-63f7-ac85-32c4-bbf7deab51f9",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "87da0d56-6ef6-2c52-a86a-b47c03ad2ed8",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "门店总人效坪效概览 ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "e3bcaf73-1aa6-8f05-2a12-b3e822ea1d07",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutSpace",
+    "typeDesc": "Space"
+   },
+   {
+    "id": "7a9e0a32-6339-7e73-668f-3902cb1293cc",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row10",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "3f55e722-461c-0ec5-66a8-a689d3a44d70",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "7a9e0a32-6339-7e73-668f-3902cb1293cc",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "6677ab4e-0ca2-ad6b-5c95-4db6fcbd0bb3",
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel",
+    "parent": "3f55e722-461c-0ec5-66a8-a689d3a44d70",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "390",
+      "type": "Integer"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "value": "panel-default",
+      "type": "bootstrapPanelStyleCustom"
+     }
+    ]
+   },
+   {
+    "id": "b5a68625-deed-447b-7e79-4083b42a015b",
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body",
+    "parent": "6677ab4e-0ca2-ad6b-5c95-4db6fcbd0bb3",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "90dd3a63-b70a-fab4-aa39-30dcd10a7c04",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "b5a68625-deed-447b-7e79-4083b42a015b",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "营业额自由分析 ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   }
+  ],
+  "title": "Two x One Template"
+ }
+}

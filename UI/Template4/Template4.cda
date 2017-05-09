@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="outletQuery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="discountTypeQuery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="discountType2Query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="ATVQuery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="delItemQuery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="periodTypeQuery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="deliveryTypeQuery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="saleCostQuery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="payTypeQtyQuery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="channelQuery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="channel2Query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="saleAmtQuery_KPI" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="ATVQuery_KPI" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="saleAmtActualQuery_KPI" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" connection="outletQuery" id="outletQuery" type="sql">
+      <Name>outletQuery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT 
+        X.*
+FROM
+(
+    SELECT DISTINCT
+			 `Dim_Outlet`.`OutletName`,
+			 sum(`Fact_SumItem`.`ItemSaleAmt`) AS Amount
+	FROM
+			 `Fact_SumItem` INNER JOIN `Dim_BIDate` ON `Fact_SumItem`.`BIDateId` = `Dim_BIDate`.`BIDateId`
+			 INNER JOIN `Dim_Outlet` ON `Fact_SumItem`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`
+	GROUP BY
+			 `Dim_Outlet`.`OutletName`
+	ORDER BY
+			 sum(`Fact_SumItem`.`ItemSaleAmt`) DESC LIMIT 10
+) AS X
+UNION 
+SELECT 
+		Y.*
+FROM
+(
+	SELECT DISTINCT
+			 `Dim_Outlet`.`OutletName`,
+			 sum(`Fact_SumItem`.`ItemSaleAmt`)	AS Amount
+	FROM
+			 `Fact_SumItem` INNER JOIN `Dim_BIDate` ON `Fact_SumItem`.`BIDateId` = `Dim_BIDate`.`BIDateId`
+			 INNER JOIN `Dim_Outlet` ON `Fact_SumItem`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`
+	GROUP BY
+			 `Dim_Outlet`.`OutletName`
+	ORDER BY
+			 sum(`Fact_SumItem`.`ItemSaleAmt`) LIMIT 10
+) AS Y	ORDER BY Amount DESC;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="discountTypeQuery" id="discountTypeQuery"
+               type="sql">
+      <Name>discountTypeQuery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT DISTINCT
+    CASE WHEN `Dim_PayType`.`PayTypeClassName` IS NULL 
+        THEN "其他"
+    ELSE `Dim_PayType`.`PayTypeClassName` END,
+     sum(`Fact_CheckPay`.`PayAmt`)
+FROM
+     `Fact_CheckPay` INNER JOIN `Dim_Outlet` ON `Fact_CheckPay`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`
+     INNER JOIN `Dim_BIDate` ON `Fact_CheckPay`.`BIDateId` = `Dim_BIDate`.`BIDateId`
+     INNER JOIN `Dim_PayType` ON `Fact_CheckPay`.`PayTypeId` = `Dim_PayType`.`PayTypeId`
+GROUP BY
+     `Dim_PayType`.`PayTypeClassId`, `Dim_PayType`.`PayTypeClassName`
+ORDER BY
+     sum(`Fact_CheckPay`.`PayAmt`) DESC]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="discountType2Query" id="discountType2Query"
+               type="sql">
+      <Name>discountType2Query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT
+     `dim_bidate`.`YearMonth`,
+     `dim_paytype`.`PayTypeClassName`,
+     sum(`fact_checkpay`.`PayAmt`) AS PayAmt
+FROM
+     `fact_checkpay` INNER JOIN `dim_bidate` ON `fact_checkpay`.`BIDateId` = `dim_bidate`.`BIDateId`
+     INNER JOIN `dim_paytype` ON `fact_checkpay`.`PayTypeId` = `dim_paytype`.`PayTypeId`
+GROUP BY
+     `dim_bidate`.`YearMonth`,
+     `dim_paytype`.`PayTypeClassName`,
+     `dim_bidate`.`BIDateId`
+ORDER BY
+     `dim_bidate`.`BIDateId` ASC]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="ATVQuery" id="ATVQuery" type="sql">
+      <Name>ATVQuery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns>
+         <Column idx="1">
+            <Name>YearMonth</Name>
+         </Column>
+         <Column idx="2">
+            <Name>ATV</Name>
+         </Column>
+      </Columns>
+      <Output indexes="1,2" mode="include"/>
+      <Parameters/>
+      <Query><![CDATA[SELECT
+    `dim_bidate`.`BIDateId`,
+	`dim_bidate`.`YearMonth`,
+	case when sum(`fact_sumday`.`CheckQty`) = 0 then 0.00
+        when sum(`fact_sumday`.`CheckQty`) = null then 0.00
+	else sum(`fact_sumday`.`SaleAmt`)/sum(`fact_sumday`.`CheckQty`) end as ATV
+FROM
+     `fact_sumday` INNER JOIN `dim_bidate` ON `fact_sumday`.`BIDateId` = `dim_bidate`.`BIDateId`
+GROUP BY
+     `dim_bidate`.`BIDateId`,`dim_bidate`.`YearMonth`
+ORDER BY
+     `dim_bidate`.`BIDateId` ASC]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="delItemQuery" id="delItemQuery" type="sql">
+      <Name>delItemQuery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT
+     `dim_voidresontype`.`VoidReasonName`,
+     COUNT(*)
+FROM
+     `fact_checkitemdel` INNER JOIN `dim_voidresontype` ON `fact_checkitemdel`.`VoidReasonId` = `dim_voidresontype`.`VoidReasonId`
+GROUP BY `dim_voidresontype`.`VoidReasonName`]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="periodTypeQuery" id="periodTypeQuery" type="sql">
+      <Name>periodTypeQuery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT
+     `dim_periodtype`.`PeriodTypeName`,
+     sum(`fact_sumcheck`.`SaleAmt`)
+FROM
+     `fact_sumcheck` INNER JOIN `dim_periodtype` ON `fact_sumcheck`.`PeriodTypeId` = `dim_periodtype`.`PeriodTypeId`
+GROUP BY
+     `dim_periodtype`.`PeriodTypeName`]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="deliveryTypeQuery" id="deliveryTypeQuery"
+               type="sql">
+      <Name>deliveryTypeQuery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT
+    `dim_channel`.DeliveryType,
+     sum(`fact_sumcheck`.`SaleAmt`)
+FROM
+     `fact_sumcheck` INNER JOIN `dim_channel` ON `fact_sumcheck`.`ChannelId` = `dim_channel`.`ChannelId`
+GROUP BY
+     `dim_channel`.DeliveryType]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="saleCostQuery" id="saleCostQuery" type="sql">
+      <Name>saleCostQuery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns>
+         <Column idx="1">
+            <Name>YearMonth</Name>
+         </Column>
+         <Column idx="2">
+            <Name>Turnover</Name>
+         </Column>
+         <Column idx="3">
+            <Name>Cost</Name>
+         </Column>
+      </Columns>
+      <Output indexes="1,2,3" mode="include"/>
+      <Parameters/>
+      <Query><![CDATA[SELECT
+     `dim_bidate`.`BIDateId`,
+     `dim_bidate`.`YearMonth`,
+     sum(`fact_sumitem`.`ItemSaleAmt`) AS Turnover,
+     sum(`fact_sumitem`.`SaleCostAmt`) AS Cost
+FROM
+     `fact_sumitem` INNER JOIN `dim_bidate` ON `fact_sumitem`.`BusinessDate` = `dim_bidate`.`BIDateId`
+GROUP BY
+     `dim_bidate`.`BIDateId`,
+     `dim_bidate`.`YearMonth`
+ORDER BY
+     `dim_bidate`.`BIDateId` ASC]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="payTypeQtyQuery" id="payTypeQtyQuery" type="sql">
+      <Name>payTypeQtyQuery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns>
+         <Column idx="1">
+            <Name>PayTypeName</Name>
+         </Column>
+         <Column idx="2">
+            <Name>PayAmt</Name>
+         </Column>
+         <Column idx="3">
+            <Name>Qty</Name>
+         </Column>
+      </Columns>
+      <Output indexes="1,2,3" mode="include"/>
+      <Parameters/>
+      <Query><![CDATA[SELECT
+    `dim_paytype`.`PayTypeId`,
+    `dim_paytype`.`PayTypeName`,
+    sum(`fact_sumpay`.`PayAmt`) AS PayAmt,
+    COUNT(*) AS Qty
+FROM
+    `fact_sumpay` INNER JOIN `dim_paytype` ON `fact_sumpay`.`PayTypeId` = `dim_paytype`.`PayTypeId`
+GROUP BY
+    `dim_paytype`.`PayTypeName`,
+    `dim_paytype`.`PayTypeId`
+ORDER BY
+    `dim_paytype`.`PayTypeId` ASC]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="channelQuery" id="channelQuery" type="sql">
+      <Name>channelQuery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT
+    `dim_channel`.`ChannelName`,
+     sum(`fact_sumcheck`.`SaleAmt`)
+FROM
+     `fact_sumcheck` INNER JOIN `dim_channel` ON `fact_sumcheck`.`ChannelId` = `dim_channel`.`ChannelId`
+GROUP BY
+     `dim_channel`.ChannelName]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="channel2Query" id="channel2Query" type="sql">
+      <Name>channel2Query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns>
+         <Column idx="1">
+            <Name>YearMonth</Name>
+         </Column>
+         <Column idx="2">
+            <Name>ChannelName</Name>
+         </Column>
+         <Column idx="3">
+            <Name>SaleAmt</Name>
+         </Column>
+      </Columns>
+      <Output indexes="1,2,3" mode="include"/>
+      <Parameters/>
+      <Query><![CDATA[SELECT
+     `dim_bidate`.`BIDateId`,
+     `dim_bidate`.`YearMonth`,
+     `dim_channel`.`ChannelName`,
+     sum(`fact_sumcheck`.`SaleAmt`) AS SaleAmt
+FROM
+     `fact_sumcheck` INNER JOIN `dim_channel` ON `fact_sumcheck`.`ChannelId` = `dim_channel`.`ChannelId`
+     INNER JOIN `dim_bidate` ON `fact_sumcheck`.`BIDateId` = `dim_bidate`.`BIDateId`
+GROUP BY
+     `dim_bidate`.`BIDateId`,
+     `dim_bidate`.`YearMonth`,
+     `dim_channel`.`ChannelName`
+ORDER BY
+     `dim_bidate`.`BIDateId` ASC,
+     `dim_bidate`.`YearMonth` ASC]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="saleAmtQuery_KPI" id="saleAmtQuery_KPI" type="sql">
+      <Name>saleAmtQuery_KPI</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT
+    format(sum(`fact_sumday`.`SaleAmt`),2) AS SaleAmt
+FROM
+     `fact_sumday` INNER JOIN `dim_bidate` ON `fact_sumday`.`BIDateId` = `dim_bidate`.`BIDateId`]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="ATVQuery_KPI" id="ATVQuery_KPI" type="sql">
+      <Name>ATVQuery_KPI</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT
+	case when sum(`fact_sumday`.`CheckQty`) = 0 then 0.00
+        when sum(`fact_sumday`.`CheckQty`) = null then 0.00
+	else sum(`fact_sumday`.`SaleAmt`)/sum(`fact_sumday`.`CheckQty`) end as ATV
+FROM
+     `fact_sumday` INNER JOIN `dim_bidate` ON `fact_sumday`.`BIDateId` = `dim_bidate`.`BIDateId`]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="saleAmtActualQuery_KPI" id="saleAmtActualQuery_KPI"
+               type="sql">
+      <Name>saleAmtActualQuery_KPI</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query/>
+   </DataAccess>
+</CDADescriptor>

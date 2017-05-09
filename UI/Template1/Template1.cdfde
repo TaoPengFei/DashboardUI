@@ -1,0 +1,989 @@
+{
+ "components": {
+  "rows": []
+ },
+ "datasources": {
+  "rows": []
+ },
+ "filename": "/public/UI/Template1/Template1.cdfde",
+ "layout": {
+  "rows": [
+   {
+    "id": "aeb567d6-cd50-6e5a-bc87-5056e6cd5ab3",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "css"
+     },
+     {
+      "name": "resourceCode",
+      "type": "Resource",
+      "value": "body{\r\n background-color:#ECF0F5;\r\n}\r\n/*   #   */\r\n.dashboard-stats {\r\n    float: left;\r\n    width: 25%;\r\n}\r\n.dashboard-stats-item {\r\n    position: relative;\r\n    overflow: hidden;\r\n    color: #fff;\r\n    cursor: pointer;\r\n    height: 105px;\r\n    margin-right: 10px;\r\n    margin-bottom: 10px;\r\n    padding-left: 15px;\r\n    padding-top: 20px;\r\n    background-color: #fff;\r\n}\r\n.dashboard-stats-item .m-top-none {\r\n    margin-top: 5px;\r\n}\r\n.dashboard-stats-item h2 {\r\n    font-size: 28px;\r\n    font-family: inherit;\r\n    line-height: 1.1;\r\n    font-weight: 500;\r\n    padding-left: 70px;\r\n}\r\n.dashboard-stats-item h2 span {\r\n    font-size: 12px;\r\n    padding-left: 5px;\r\n}\r\n.dashboard-stats-item h5 {\r\n    font-size: 12px;\r\n    font-family: inherit;\r\n    margin-top: 1px;\r\n    line-height: 1.1;\r\n    padding-left: 70px;\r\n}\r\n.dashboard-stats-item .stat-icon {\r\n    position: absolute;\r\n    top: 18px;\r\n    font-size: 50px;\r\n    opacity: .3;\r\n}\r\n.dashboard-stats i.fa.stats-icon {\r\n    width: 50px;\r\n    padding: 20px;\r\n    font-size: 50px;\r\n    text-align: center;\r\n    \r\n    color: #fff;\r\n    \r\n    height: 50px;\r\n    border-radius: 10px;\r\n} \r\n/*   #   */\r\n.panel-default {\r\n    border: none;\r\n    border-radius: 0px;\r\n    margin-bottom: 0px;\r\n    box-shadow: none;\r\n    -webkit-box-shadow: none;\r\n}\r\n.panel-default > .panel-heading {\r\n    color: #777;\r\n    background-color: #fff;\r\n    border-color: #e6e6e6;\r\n    padding: 10px 10px;\r\n}\r\n.panel-default > .panel-body {\r\n    padding: 10px;\r\n    padding-bottom: 0px;\r\n}\r\n.panel-default > .panel-body ul {\r\n    overflow: hidden;\r\n    padding: 0;\r\n    margin: 0px;\r\n    margin-top: -5px;\r\n}\r\n.panel-default > .panel-body ul li {\r\n    line-height: 27px;\r\n    list-style-type: none;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n}\r\n.panel-default > .panel-body ul li .time {\r\n    color: #a1a1a1;\r\n    float: right;\r\n    padding-right: 5px;\r\n} "
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Css"
+     }
+    ],
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource"
+   },
+   {
+    "id": "abd48cd3-1901-6b27-70e6-038e6bb2cf82",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row1_new"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutRow",
+    "typeDesc": "Row"
+   },
+   {
+    "id": "d9054cd1-3ae5-ffc5-bdf9-20f8ff2fec00",
+    "parent": "abd48cd3-1901-6b27-70e6-038e6bb2cf82",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "col1_new"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "01b927cd-7250-f253-b230-2075047455ce",
+    "parent": "d9054cd1-3ae5-ffc5-bdf9-20f8ff2fec00",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "Template1_new"
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "<div id=\"areascontent\">\n    <div class=\"rows\" style=\"margin-bottom: 0.8%; overflow: hidden;\">\n        <!-- #1&1 start-->\n        <div style=\"float: left; width: 69.2%;\">\n            <div style=\"height: 100%; border: 1px solid #e6e6e6; overflow: hidden;\">\n                <!-- 磁贴1 -->\n                <div class=\"dashboard-stats\">\n                    <div class=\"dashboard-stats-item\" >\n                        <div class=\"stat-icon\">\n                            <i class=\"fa fa-send (alias)\"></i>\n                        </div>\n                        <h2 class=\"m-top-none\" >\n                            <font color=\"black\">17</font> \n                            <span>\n                                <font color=\"black\">个</font> \n                            </span>\n                        </h2>\n                        <h5>\n                            <font color=\"black\">待办未处理</font> \n                        </h5>\n                    </div>\n                </div>\n                <!-- 磁贴2 -->\n                <div class=\"dashboard-stats\">\n                    <div class=\"dashboard-stats-item\" style=\"background-color: #e35b5a;\">\n                        <h2 class=\"m-top-none\">12<span>条</span></h2>\n                        <h5>预警信息未读</h5>\n                        <div class=\"stat-icon\">\n                            <i class=\"fa fa-bell\"></i>\n                        </div>\n                    </div>\n                </div>\n                <!-- 磁贴3 -->\n                <div class=\"dashboard-stats\">\n                    <div class=\"dashboard-stats-item\" style=\"background-color: #44b6ae;\">\n                        <h2 class=\"m-top-none\">20<span>封</span></h2>\n                        <h5>邮件未读</h5>\n                        <div class=\"stat-icon\">\n                            <i class=\"fa fa-envelope-o\"></i>\n                        </div>\n                    </div>\n                </div>\n                <!-- 磁贴4 -->\n                <div class=\"dashboard-stats\">\n                    <div class=\"dashboard-stats-item\" style=\"background-color: #8775a7; margin-right: 0px;\">\n                        <h2 class=\"m-top-none\">6</h2>\n                        <h5>对公待签收任务</h5>\n                        <div class=\"stat-icon\">\n                            <i class=\"fa fa-gavel\"></i>\n                        </div>\n                    </div>\n                </div>\n                <!-- 磁贴5 -->\n                <div class=\"dashboard-stats\">\n                    <div class=\"dashboard-stats-item\" style=\"background-color: #4f5c65; margin-bottom: 0px;\">\n                        <h2 class=\"m-top-none\">324<span>件</span></h2>\n                        <h5>今日订单数</h5>\n                        <div class=\"stat-icon\">\n                            <i class=\"fa fa-shopping-cart\"></i>\n                        </div>\n                    </div>\n                </div>\n                <!-- 磁贴6 -->\n                <div class=\"dashboard-stats\">\n                    <div class=\"dashboard-stats-item\" style=\"background-color: #14aae4; margin-bottom: 0px;\">\n                        <h2 class=\"m-top-none\">525<span>件</span></h2>\n                        <h5>昨日订单数</h5>\n                        <div class=\"stat-icon\">\n                            <i class=\"fa fa-file-text-o\"></i>\n                        </div>\n                    </div>\n                </div>\n                <!-- 磁贴7 -->\n                <div class=\"dashboard-stats\">\n                    <div class=\"dashboard-stats-item\" style=\"background-color: #949FB1; margin-bottom: 0px;\">\n                        <h2 class=\"m-top-none\">355<span>件</span></h2>\n                        <h5>回退订单数</h5>\n                        <div class=\"stat-icon\">\n                            <i class=\"fa fa-coffee\"></i>\n                        </div>\n                    </div>\n                </div>\n                <!-- 磁贴8 -->\n                <div class=\"dashboard-stats\">\n                    <div class=\"dashboard-stats-item\" style=\"background-color: #f29503; margin-right: 0px; margin-bottom: 0px;\">\n                        <h2 class=\"m-top-none\">3335<span>元</span></h2>\n                        <h5>昨日成交金额</h5>\n                        <div class=\"stat-icon\">\n                            <i class=\"fa fa-rmb\" style=\"padding-left: 10px;\"></i>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>  <!-- #1&1 end-->\n        <!-- #1&2 start-->\n        <div style=\"float: right; width: 30%;\">\n            <div style=\"height: 221px; border: 1px solid #e6e6e6; background-color: #fff;\">\n                <div class=\"panel panel-default\">\n                    <div class=\"panel-heading\">\n                        <i class=\"fa fa-area-chart fa-lg\" style=\"padding-right: 5px;\"></i>折线图\n                    </div>\n                    <div class=\"panel-body\">\n                        <canvas id=\"Canvas2\" style=\"height: 165px; width: 100%;\"></canvas>\n                    </div>\n                </div>\n            </div>\n        </div>   <!-- #1&2 end-->\n    </div>\n    \n    <div class=\"rows\" style=\"margin-bottom: 0.8%; overflow: hidden;\">\n        <div style=\"float: left; width: 69.2%;\">\n            <div style=\"height: 290px; border: 1px solid #e6e6e6; background-color: #fff;\">\n                <div class=\"panel panel-default\">\n                    <div class=\"panel-heading\"><i class=\"fa fa-bar-chart fa-lg\" style=\"padding-right: 5px;\"></i>柱状图</div>\n                    <div class=\"panel-body\">\n                        <canvas id=\"Canvas3\" style=\"height: 230px; width: 100%;\"></canvas>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div style=\"float: right; width: 30%;\">\n            <div style=\"height: 290px; border: 1px solid #e6e6e6; background-color: #fff;\">\n                <div class=\"panel panel-default\">\n                    <div class=\"panel-heading\"><i class=\"fa fa-pie-chart fa-lg\" style=\"padding-right: 5px;\"></i>饼状图</div>\n                    <div class=\"panel-body\">\n                        <canvas id=\"Canvas1\" style=\"height: 180px; width: 100%; margin-top: 10px;\"></canvas>\n                        <div style=\"text-align: center; padding-top: 15px;\">\n                            <span><i class=\"fa fa-square\" style=\"color: #F7464A; font-size: 20px; padding-right: 5px; vertical-align: middle; margin-top: -3px;\"></i>事假</span>\n                            <span style=\"margin-left: 10px;\"><i class=\"fa fa-square\" style=\"color: #46BFBD; font-size: 20px; padding-right: 5px; vertical-align: middle; margin-top: -3px;\"></i>病假</span>\n                            <span style=\"margin-left: 10px;\"><i class=\"fa fa-square\" style=\"color: #FDB45C; font-size: 20px; padding-right: 5px; vertical-align: middle; margin-top: -3px;\"></i>公休假</span>\n                            <span style=\"margin-left: 10px;\"><i class=\"fa fa-square\" style=\"color: #949FB1; font-size: 20px; padding-right: 5px; vertical-align: middle; margin-top: -3px;\"></i>调休假</span>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div> "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "5880eb83-6df3-375b-4776-571bebee3d9f",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row1"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutRow",
+    "typeDesc": "Row"
+   },
+   {
+    "id": "7bd71a4e-466e-9325-5f95-24bf8857d42d",
+    "parent": "5880eb83-6df3-375b-4776-571bebee3d9f",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "col1"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "4ec23705-c9b4-ff7a-f9b3-9fb6978d1ea9",
+    "parent": "7bd71a4e-466e-9325-5f95-24bf8857d42d",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "Template1"
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "<div id=\"areascontent\">\n    <div class=\"rows\" style=\"margin-bottom: 0.8%; overflow: hidden;\">\n        <!-- #1&1 start-->\n        <div style=\"float: left; width: 69.2%;\">\n            <div style=\"height: 100%; border: 1px solid #e6e6e6; overflow: hidden;\">\n                <!-- 磁贴1 -->\n                <div class=\"dashboard-stats\">\n                    <div class=\"dashboard-stats-item\" style=\"background-color: #578ebe;\">\n                        <div class=\"stat-icon\">\n                            <i class=\"fa fa-clock-o\"></i>\n                        </div>\n                        <h2 class=\"m-top-none\">17<span>个</span></h2>\n                        <h5>待办未处理</h5>\n                    </div>\n                </div>\n                <!-- 磁贴2 -->\n                <div class=\"dashboard-stats\">\n                    <div class=\"dashboard-stats-item\" style=\"background-color: #e35b5a;\">\n                        <h2 class=\"m-top-none\">12<span>条</span></h2>\n                        <h5>预警信息未读</h5>\n                        <div class=\"stat-icon\">\n                            <i class=\"fa fa-bell\"></i>\n                        </div>\n                    </div>\n                </div>\n                <!-- 磁贴3 -->\n                <div class=\"dashboard-stats\">\n                    <div class=\"dashboard-stats-item\" style=\"background-color: #44b6ae;\">\n                        <h2 class=\"m-top-none\">20<span>封</span></h2>\n                        <h5>邮件未读</h5>\n                        <div class=\"stat-icon\">\n                            <i class=\"fa fa-envelope-o\"></i>\n                        </div>\n                    </div>\n                </div>\n                <!-- 磁贴4 -->\n                <div class=\"dashboard-stats\">\n                    <div class=\"dashboard-stats-item\" style=\"background-color: #8775a7; margin-right: 0px;\">\n                        <h2 class=\"m-top-none\">6</h2>\n                        <h5>对公待签收任务</h5>\n                        <div class=\"stat-icon\">\n                            <i class=\"fa fa-gavel\"></i>\n                        </div>\n                    </div>\n                </div>\n                <!-- 磁贴5 -->\n                <div class=\"dashboard-stats\">\n                    <div class=\"dashboard-stats-item\" style=\"background-color: #4f5c65; margin-bottom: 0px;\">\n                        <h2 class=\"m-top-none\">324<span>件</span></h2>\n                        <h5>今日订单数</h5>\n                        <div class=\"stat-icon\">\n                            <i class=\"fa fa-shopping-cart\"></i>\n                        </div>\n                    </div>\n                </div>\n                <!-- 磁贴6 -->\n                <div class=\"dashboard-stats\">\n                    <div class=\"dashboard-stats-item\" style=\"background-color: #14aae4; margin-bottom: 0px;\">\n                        <h2 class=\"m-top-none\">525<span>件</span></h2>\n                        <h5>昨日订单数</h5>\n                        <div class=\"stat-icon\">\n                            <i class=\"fa fa-file-text-o\"></i>\n                        </div>\n                    </div>\n                </div>\n                <!-- 磁贴7 -->\n                <div class=\"dashboard-stats\">\n                    <div class=\"dashboard-stats-item\" style=\"background-color: #949FB1; margin-bottom: 0px;\">\n                        <h2 class=\"m-top-none\">355<span>件</span></h2>\n                        <h5>回退订单数</h5>\n                        <div class=\"stat-icon\">\n                            <i class=\"fa fa-coffee\"></i>\n                        </div>\n                    </div>\n                </div>\n                <!-- 磁贴8 -->\n                <div class=\"dashboard-stats\">\n                    <div class=\"dashboard-stats-item\" style=\"background-color: #f29503; margin-right: 0px; margin-bottom: 0px;\">\n                        <h2 class=\"m-top-none\">3335<span>元</span></h2>\n                        <h5>昨日成交金额</h5>\n                        <div class=\"stat-icon\">\n                            <i class=\"fa fa-rmb\" style=\"padding-left: 10px;\"></i>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>  <!-- #1&1 end-->\n        <!-- #1&2 start-->\n        <div style=\"float: right; width: 30%;\">\n            <div style=\"height: 221px; border: 1px solid #e6e6e6; background-color: #fff;\">\n                <div class=\"panel panel-default\">\n                    <div class=\"panel-heading\">\n                        <i class=\"fa fa-area-chart fa-lg\" style=\"padding-right: 5px;\"></i>折线图\n                    </div>\n                    <div class=\"panel-body\">\n                        <canvas id=\"Canvas2\" style=\"height: 165px; width: 100%;\"></canvas>\n                    </div>\n                </div>\n            </div>\n        </div>   <!-- #1&2 end-->\n    </div>\n    \n    <div class=\"rows\" style=\"margin-bottom: 0.8%; overflow: hidden;\">\n        <div style=\"float: left; width: 69.2%;\">\n            <div style=\"height: 290px; border: 1px solid #e6e6e6; background-color: #fff;\">\n                <div class=\"panel panel-default\">\n                    <div class=\"panel-heading\"><i class=\"fa fa-bar-chart fa-lg\" style=\"padding-right: 5px;\"></i>柱状图</div>\n                    <div class=\"panel-body\">\n                        <canvas id=\"Canvas3\" style=\"height: 230px; width: 100%;\"></canvas>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div style=\"float: right; width: 30%;\">\n            <div style=\"height: 290px; border: 1px solid #e6e6e6; background-color: #fff;\">\n                <div class=\"panel panel-default\">\n                    <div class=\"panel-heading\"><i class=\"fa fa-pie-chart fa-lg\" style=\"padding-right: 5px;\"></i>饼状图</div>\n                    <div class=\"panel-body\">\n                        <canvas id=\"Canvas1\" style=\"height: 180px; width: 100%; margin-top: 10px;\"></canvas>\n                        <div style=\"text-align: center; padding-top: 15px;\">\n                            <span><i class=\"fa fa-square\" style=\"color: #F7464A; font-size: 20px; padding-right: 5px; vertical-align: middle; margin-top: -3px;\"></i>事假</span>\n                            <span style=\"margin-left: 10px;\"><i class=\"fa fa-square\" style=\"color: #46BFBD; font-size: 20px; padding-right: 5px; vertical-align: middle; margin-top: -3px;\"></i>病假</span>\n                            <span style=\"margin-left: 10px;\"><i class=\"fa fa-square\" style=\"color: #FDB45C; font-size: 20px; padding-right: 5px; vertical-align: middle; margin-top: -3px;\"></i>公休假</span>\n                            <span style=\"margin-left: 10px;\"><i class=\"fa fa-square\" style=\"color: #949FB1; font-size: 20px; padding-right: 5px; vertical-align: middle; margin-top: -3px;\"></i>调休假</span>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div> "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "bd9c3cef-c641-8a61-028f-8fc04184646d",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "bb7ba01c-8f46-93c8-f8fb-599297b37608",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "bd9c3cef-c641-8a61-028f-8fc04184646d",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "c2707de5-1993-574c-b28c-46509540e2b0",
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel",
+    "parent": "bb7ba01c-8f46-93c8-f8fb-599297b37608",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "300",
+      "type": "Integer"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "value": "panel-default",
+      "type": "bootstrapPanelStyleCustom"
+     }
+    ]
+   },
+   {
+    "id": "52f6c7e7-888e-dace-0b6f-76c65920aa2f",
+    "type": "BootstrapPanelHeader",
+    "typeDesc": "Panel Header",
+    "parent": "c2707de5-1993-574c-b28c-46509540e2b0",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "a50bdb35-06eb-1c82-2047-91b6c3fc57f4",
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body",
+    "parent": "c2707de5-1993-574c-b28c-46509540e2b0",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "473661c3-af4e-ee02-aaea-f201df71f9d3",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "bd9c3cef-c641-8a61-028f-8fc04184646d",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "e757a2de-1dfc-586d-8d25-3546ce68f3ae",
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel",
+    "parent": "473661c3-af4e-ee02-aaea-f201df71f9d3",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "300",
+      "type": "Integer"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "value": "panel-default",
+      "type": "bootstrapPanelStyleCustom"
+     }
+    ]
+   },
+   {
+    "id": "5d6414a8-5d88-34a0-e2fa-51e455571463",
+    "type": "BootstrapPanelHeader",
+    "typeDesc": "Panel Header",
+    "parent": "e757a2de-1dfc-586d-8d25-3546ce68f3ae",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "afaa079d-eca8-172b-325c-9701ae68d09b",
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body",
+    "parent": "e757a2de-1dfc-586d-8d25-3546ce68f3ae",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "54292344-2f9c-0848-d50d-149f5f039bbc",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "c4fc7fa9-cae2-34c8-8ed5-c524df4f5102",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "54292344-2f9c-0848-d50d-149f5f039bbc",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "a96dfc77-1fd3-3935-80f0-eb3d89b4019d",
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel",
+    "parent": "c4fc7fa9-cae2-34c8-8ed5-c524df4f5102",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "300",
+      "type": "Integer"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "value": "panel-default",
+      "type": "bootstrapPanelStyleCustom"
+     }
+    ]
+   },
+   {
+    "id": "a9d3553b-996e-cd68-1963-2a1d6025cffb",
+    "type": "BootstrapPanelHeader",
+    "typeDesc": "Panel Header",
+    "parent": "a96dfc77-1fd3-3935-80f0-eb3d89b4019d",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "f8508730-9b13-9566-a4f7-54410cc0c765",
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body",
+    "parent": "a96dfc77-1fd3-3935-80f0-eb3d89b4019d",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "6209562f-4372-1e0f-7566-f97ffe5d66f1",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "54292344-2f9c-0848-d50d-149f5f039bbc",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "d5b1a23f-4c74-4de7-7da9-cd58ff814758",
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel",
+    "parent": "6209562f-4372-1e0f-7566-f97ffe5d66f1",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "300",
+      "type": "Integer"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "value": "panel-default",
+      "type": "bootstrapPanelStyleCustom"
+     }
+    ]
+   },
+   {
+    "id": "57c97164-51c2-6829-9d17-0836006d7e22",
+    "type": "BootstrapPanelHeader",
+    "typeDesc": "Panel Header",
+    "parent": "d5b1a23f-4c74-4de7-7da9-cd58ff814758",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "798413b3-ba58-8754-773d-93b731ce1577",
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body",
+    "parent": "d5b1a23f-4c74-4de7-7da9-cd58ff814758",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   }
+  ],
+  "title": "CDF - Sample structure"
+ }
+}

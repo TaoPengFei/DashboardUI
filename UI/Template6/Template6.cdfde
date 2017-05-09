@@ -1,0 +1,3618 @@
+{
+ "components": {
+  "rows": []
+ },
+ "datasources": {
+  "rows": []
+ },
+ "filename": "/public/UI/Template6/Template6.cdfde",
+ "layout": {
+  "rows": [
+   {
+    "id": "36dfcae7-7b23-82df-a031-67bdfe105c1a",
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "css",
+      "type": "Id"
+     },
+     {
+      "name": "resourceCode",
+      "value": "body{\r\n    background-color:#ECF0F5;\r\n}\r\n.container {\r\n    width:100%;\r\n    height: 100%;\r\n    overflow: auto;\r\n    position: absolute; \r\n    padding-top: 10px;\r\n    padding-right: 0px;\r\n    padding-left: 10px;\r\n    padding-bottom: 10px;\r\n    margin-right: auto;\r\n    margin-left: auto;\r\n}\r\n/*   #   */\r\n.panel-default {\r\n    border: none;\r\n    border-radius: 0px;\r\n    margin-bottom: 0px;\r\n    box-shadow: none;\r\n    -webkit-box-shadow: none;\r\n}\r\n.panel-default > .panel-heading {\r\n    color: #777;\r\n    background-color: #fff;\r\n    border-color: #e6e6e6;\r\n    padding: 10px 10px;\r\n}\r\n.panel-default > .panel-body {\r\n    padding: 10px;\r\n    padding-bottom: 0px;\r\n}\r\n.panel-default > .panel-body ul {\r\n    overflow: hidden;\r\n    padding: 0;\r\n    margin: 0px;\r\n    margin-top: -5px;\r\n}\r\n.panel-default > .panel-body ul li {\r\n    line-height: 27px;\r\n    list-style-type: none;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n}\r\n.panel-default > .panel-body ul li .time {\r\n    color: #a1a1a1;\r\n    float: right;\r\n    padding-right: 5px;\r\n} \r\n .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, \r\n .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, \r\n .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, \r\n .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, \r\n .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, \r\n .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, \r\n .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, \r\n .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, \r\n .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, \r\n .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, \r\n .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, \r\n .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {\r\n    position: relative;\r\n    min-height: 1px;\r\n    padding-right: 10px;\r\n    padding-left: 0px;\r\n} \r\n.row {\r\n    margin-right: 0px;\r\n    margin-left: 0px;\r\n} \r\nhr {\r\n    margin-top: 10px; \r\n    margin-bottom: 0px; \r\n    border: 0;\r\n    border-top: 0px solid #eee; \r\n} \r\n#row1_col1, #row1_col2{\r\n    margin-right:-10px;\r\n} ",
+      "type": "Resource"
+     },
+     {
+      "name": "resourceType",
+      "value": "Css",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "d28ca55a-aa10-f5d6-2b78-a43f65246c06",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "fbbd2a74-dca0-cf8c-8eff-4815140d0c60",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "d28ca55a-aa10-f5d6-2b78-a43f65246c06",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col1",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "458582cd-0e29-54fa-4ce2-6e3fc56f2694",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "fbbd2a74-dca0-cf8c-8eff-4815140d0c60",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col1_row1",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "5ff52449-71f3-739c-a012-cc8afbdd1407",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "458582cd-0e29-54fa-4ce2-6e3fc56f2694",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col1_row1_col1",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "2ab297ad-8397-e942-487c-8087f05c6427",
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel",
+    "parent": "5ff52449-71f3-739c-a012-cc8afbdd1407",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col1_row1_col1_panel",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "190",
+      "type": "Integer"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "value": "panel-default",
+      "type": "bootstrapPanelStyleCustom"
+     }
+    ]
+   },
+   {
+    "id": "d9b5bbd8-fde6-f857-af48-964461c47b3f",
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body",
+    "parent": "2ab297ad-8397-e942-487c-8087f05c6427",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col1_row1_col1_panel_body",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "a97dd5b4-d124-58c9-b43a-3853ad429272",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "d9b5bbd8-fde6-f857-af48-964461c47b3f",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col1_row1_col1_panel_body_html",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-paperclip\" style=\"padding-right: 5px;\"></i> 营业额 \r\n</div> \r\n<div class=\"row\">\r\n    <div class=\"col text-center\" style=\"font-size:40px\">\r\n        <span>1,231,313.12</span>\r\n    </div>\r\n</div> ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "c0601c14-8264-663d-708b-db31199f4cac",
+    "type": "LayoutSpace",
+    "typeDesc": "Space",
+    "parent": "5ff52449-71f3-739c-a012-cc8afbdd1407",
+    "properties": [
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "38c3a0de-3c8e-5de1-fc1a-56c4c59e69ba",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "458582cd-0e29-54fa-4ce2-6e3fc56f2694",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col1_row1_col2",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "ab8e834e-0e76-8b51-91ef-079ba35e0b91",
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel",
+    "parent": "38c3a0de-3c8e-5de1-fc1a-56c4c59e69ba",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col1_row1_col2_panel",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "190",
+      "type": "Integer"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "value": "panel-default",
+      "type": "bootstrapPanelStyleCustom"
+     }
+    ]
+   },
+   {
+    "id": "f15da750-6e05-ccc7-d96b-7cfe2175c016",
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body",
+    "parent": "ab8e834e-0e76-8b51-91ef-079ba35e0b91",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col1_row1_col2_panel_body",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "70accee4-cd65-5f31-5248-ae6a28349692",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "f15da750-6e05-ccc7-d96b-7cfe2175c016",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col1_row1_col2_panel_body_html",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<!-- \r\n<div class=\"panel-heading \">\r\n    <i class=\"fa fa-paperclip\" style=\"padding-right: 5px;\"></i> 费用金额 \r\n</div> \r\n-->\r\n<!--\r\n<div class=\"col-md-3 col-sm-6 col-xs-12\">\r\n    <div class=\"info-box\">\r\n         \r\n        <span class=\"info-box-icon bg-red\">\r\n            <i class=\"fa fa-google-plus\"></i>\r\n        </span>\r\n        \r\n        <div class=\"info-box-content\">\r\n            <span class=\"info-box-text\">\r\n                <i class=\"fa fa-paperclip\" style=\"padding-right: 1px;\"></i>费用金额 \r\n            </span>\r\n            <span class=\"info-box-number\" style=\"font-size:40px\">41,410.00</span>\r\n        </div>\r\n    </div> \r\n</div> \r\n-->\r\n<div class=\"row\">\r\n    <div class=\"col-md-3 col-sm-6 col-xs-12\">\r\n        <div class=\"info-box\">\r\n            <span class=\"info-box-icon bg-aqua\"><i class=\"ion ion-ios-gear-outline\"></i></span>\r\n\r\n            <div class=\"info-box-content\">\r\n              <span class=\"info-box-text\">CPU Traffic</span>\r\n              <span class=\"info-box-number\">90<small>%</small></span>\r\n            </div>\r\n            <!-- /.info-box-content -->\r\n        </div>\r\n          <!-- /.info-box -->\r\n    </div>\r\n </div> ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "82c0f952-413a-3a50-59b8-d8d6c877a0f7",
+    "type": "LayoutSpace",
+    "typeDesc": "Space",
+    "parent": "fbbd2a74-dca0-cf8c-8eff-4815140d0c60",
+    "properties": [
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "hidden-lg hidden-md hidden-sm",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "757c0f18-f9ef-d665-5c70-9c7fa43630cc",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "fbbd2a74-dca0-cf8c-8eff-4815140d0c60",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col1_row2",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "b0b8480c-f738-9038-b05c-c33eac0c8472",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "757c0f18-f9ef-d665-5c70-9c7fa43630cc",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col1_row2_col1",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "17bd96d3-fdb1-46a0-df64-727c642560eb",
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel",
+    "parent": "b0b8480c-f738-9038-b05c-c33eac0c8472",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col1_row2_col1_panel",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "190",
+      "type": "Integer"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "value": "panel-default",
+      "type": "bootstrapPanelStyleCustom"
+     }
+    ]
+   },
+   {
+    "id": "59b98828-7757-2065-70f4-c02b849c22d5",
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body",
+    "parent": "17bd96d3-fdb1-46a0-df64-727c642560eb",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col1_row2_col1_panel_body",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "a43505a2-953a-383b-4ef6-a0042bfcc483",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "59b98828-7757-2065-70f4-c02b849c22d5",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col1_row2_col1_panel_body_html",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-paperclip\" style=\"padding-right: 5px;\"></i> 银行存款\r\n</div> ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "9aafc736-3a18-6bee-8535-d4a16f0f0510",
+    "type": "LayoutSpace",
+    "typeDesc": "Space",
+    "parent": "b0b8480c-f738-9038-b05c-c33eac0c8472",
+    "properties": [
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "b1e73f5d-39d5-d662-d645-f0c42a33a794",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "757c0f18-f9ef-d665-5c70-9c7fa43630cc",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col1_row2_col2",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "48bea6b7-306b-5944-51e0-da2617f2a712",
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel",
+    "parent": "b1e73f5d-39d5-d662-d645-f0c42a33a794",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col1_row2_col2_panel",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "190",
+      "type": "Integer"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "value": "panel-default",
+      "type": "bootstrapPanelStyleCustom"
+     }
+    ]
+   },
+   {
+    "id": "623c74d4-0ac2-bea8-dff7-6c35d8f1f874",
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body",
+    "parent": "48bea6b7-306b-5944-51e0-da2617f2a712",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col1_row2_col2_panel_body",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "1e41d264-a72d-b0a4-15d9-5d2ea861cdfb",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "623c74d4-0ac2-bea8-dff7-6c35d8f1f874",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col1_row2_col2_panel_body_html",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-paperclip\" style=\"padding-right: 5px;\"></i> 库存现金\r\n</div> ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "30fc6441-bf37-3a1a-ca59-c5ca4b4eb4d6",
+    "type": "LayoutSpace",
+    "typeDesc": "Space",
+    "parent": "fbbd2a74-dca0-cf8c-8eff-4815140d0c60",
+    "properties": [
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "hidden-sm hidden-lg hidden-md",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "9e2a9574-4aa3-0502-d6ca-f84e971b219e",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "d28ca55a-aa10-f5d6-2b78-a43f65246c06",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col2",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "25ad6d88-6f51-c157-0b8c-4279cfd28a81",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "9e2a9574-4aa3-0502-d6ca-f84e971b219e",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col2_row1",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "b907eddc-0529-aecf-117e-26084aef664c",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "25ad6d88-6f51-c157-0b8c-4279cfd28a81",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col2_row1_col1",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "34a559f7-6e5b-f5a1-44b2-b0ebddbd0754",
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel",
+    "parent": "b907eddc-0529-aecf-117e-26084aef664c",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col2_row1_col1_panel",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "190",
+      "type": "Integer"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "value": "panel-default",
+      "type": "bootstrapPanelStyleCustom"
+     }
+    ]
+   },
+   {
+    "id": "3f5330ad-5ca4-e27a-49e5-ffb176766d41",
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body",
+    "parent": "34a559f7-6e5b-f5a1-44b2-b0ebddbd0754",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col2_row1_col1_panel_body",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "0029ced5-70d6-3095-a342-7e93155f446e",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "3f5330ad-5ca4-e27a-49e5-ffb176766d41",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col2_row1_col1_panel_body_html",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-paperclip\" style=\"padding-right: 5px;\"></i> 毛利率 \r\n</div> ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "9ecbc662-a121-0fc9-8bd2-82fd43a0b34e",
+    "type": "LayoutSpace",
+    "typeDesc": "Space",
+    "parent": "b907eddc-0529-aecf-117e-26084aef664c",
+    "properties": [
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "7fa496e8-3d14-5107-b35b-bd8bfcf7db7e",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "25ad6d88-6f51-c157-0b8c-4279cfd28a81",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col2_row1_col2",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "0f90b461-6451-910e-c83d-c7de54618ad3",
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel",
+    "parent": "7fa496e8-3d14-5107-b35b-bd8bfcf7db7e",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col2_row1_col2_panel",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "190",
+      "type": "Integer"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "value": "panel-default",
+      "type": "bootstrapPanelStyleCustom"
+     }
+    ]
+   },
+   {
+    "id": "51840205-b047-d9f9-7ded-4f3279fbc770",
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body",
+    "parent": "0f90b461-6451-910e-c83d-c7de54618ad3",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col2_row1_col2_panel_body",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "e44d3978-b7c1-e23a-aea8-eef2dd1b7315",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "51840205-b047-d9f9-7ded-4f3279fbc770",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col2_row1_col2_panel_body_html",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-paperclip\" style=\"padding-right: 5px;\"></i> 净利率 \r\n</div> ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "e9bdaeb3-b0d5-18a9-e07a-70dcd4c57f28",
+    "type": "LayoutSpace",
+    "typeDesc": "Space",
+    "parent": "9e2a9574-4aa3-0502-d6ca-f84e971b219e",
+    "properties": [
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "hidden-lg hidden-md hidden-sm",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "999427a9-0ffe-49b9-4ddd-e89960462f23",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "9e2a9574-4aa3-0502-d6ca-f84e971b219e",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col2_row2",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "bf50e23e-8f43-f52d-cdbf-f4c5ae08767a",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "999427a9-0ffe-49b9-4ddd-e89960462f23",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col2_row2_col1",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "f4f3eab5-e930-7310-c15e-7633c05ef14a",
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel",
+    "parent": "bf50e23e-8f43-f52d-cdbf-f4c5ae08767a",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col2_row2_col1_panel",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "190",
+      "type": "Integer"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "value": "panel-default",
+      "type": "bootstrapPanelStyleCustom"
+     }
+    ]
+   },
+   {
+    "id": "0b4f9be2-a889-32c0-c2ee-ef75b895c7b5",
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body",
+    "parent": "f4f3eab5-e930-7310-c15e-7633c05ef14a",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col2_row2_col1_panel_body",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "ff530b9e-9967-3db4-f61c-7799e332acc8",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "0b4f9be2-a889-32c0-c2ee-ef75b895c7b5",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col2_row2_col1_panel_body_html",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-paperclip\" style=\"padding-right: 5px;\"></i> 应收账款 \r\n</div> ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "50ab9bd6-60f7-fd3b-f5ff-a9e5c0537b46",
+    "type": "LayoutSpace",
+    "typeDesc": "Space",
+    "parent": "bf50e23e-8f43-f52d-cdbf-f4c5ae08767a",
+    "properties": [
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "d1960ddd-ccb5-7bcb-79b3-03ad6c0f2206",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "999427a9-0ffe-49b9-4ddd-e89960462f23",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col2_row2_col2",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "6e13bc9f-bb47-adea-c10c-7aa3e2c8799c",
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel",
+    "parent": "d1960ddd-ccb5-7bcb-79b3-03ad6c0f2206",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col2_row2_col2_panel",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "190",
+      "type": "Integer"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "value": "panel-default",
+      "type": "bootstrapPanelStyleCustom"
+     }
+    ]
+   },
+   {
+    "id": "629f7ef4-f3db-5b58-6f2b-61e8d7aa7008",
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body",
+    "parent": "6e13bc9f-bb47-adea-c10c-7aa3e2c8799c",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col2_row2_col2_panel_body",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "ceea1542-1293-688d-d6cb-16516cfca4c5",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "629f7ef4-f3db-5b58-6f2b-61e8d7aa7008",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row1_col2_row2_col2_panel_body_html",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-paperclip\" style=\"padding-right: 5px;\"></i> 应付账款\r\n</div> ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "55affa21-00f2-48a1-a83f-7f06514dad9f",
+    "type": "LayoutSpace",
+    "typeDesc": "Space",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "hidden-lg hidden-md hidden-sm",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "02531f4a-b65d-85ad-09f1-43a2325ac3a2",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row2",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "f2ae8463-f1c4-ef9f-5a3b-ec4d2102157f",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "02531f4a-b65d-85ad-09f1-43a2325ac3a2",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row2_col1",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "5",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "4",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "9d8a2693-9aa8-8f29-92f1-61acff1e837b",
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel",
+    "parent": "f2ae8463-f1c4-ef9f-5a3b-ec4d2102157f",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row2_col1_panel",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "390",
+      "type": "Integer"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "value": "panel-default",
+      "type": "bootstrapPanelStyleCustom"
+     }
+    ]
+   },
+   {
+    "id": "67f486fe-7587-6ca7-d291-60bf77cfa073",
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body",
+    "parent": "9d8a2693-9aa8-8f29-92f1-61acff1e837b",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row2_col1_panel_body",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "1779d5d8-0340-81a7-062b-ae34002935b0",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "67f486fe-7587-6ca7-d291-60bf77cfa073",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row2_col1_panel_body_html",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-pie-chart\" style=\"padding-right: 5px;\"></i> 营业额成本利润分布 \r\n</div> ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "acee9baf-80c8-87ac-ff82-056b852dc08f",
+    "type": "LayoutSpace",
+    "typeDesc": "Space",
+    "parent": "f2ae8463-f1c4-ef9f-5a3b-ec4d2102157f",
+    "properties": [
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "20c8f239-14b5-fddd-d597-c83f44659681",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "02531f4a-b65d-85ad-09f1-43a2325ac3a2",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row2_col2",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "7",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "8",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "4f5125ef-e567-d7d7-c537-869fdb504382",
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel",
+    "parent": "20c8f239-14b5-fddd-d597-c83f44659681",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row2_col2_panel",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "390",
+      "type": "Integer"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "value": "panel-default",
+      "type": "bootstrapPanelStyleCustom"
+     }
+    ]
+   },
+   {
+    "id": "6457eb60-4ebe-aaf2-9bba-aa9d0586e599",
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body",
+    "parent": "4f5125ef-e567-d7d7-c537-869fdb504382",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row2_col2_panel_body",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "18b4758d-9654-5e44-82fc-29d6b96ac9ea",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "6457eb60-4ebe-aaf2-9bba-aa9d0586e599",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row2_col2_panel_body_html",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-bar-chart\" style=\"padding-right: 5px;\"></i> 营业额成本占比趋势图\r\n</div> ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "4c49f91e-5c88-e9e9-de8a-f27e00cd8a15",
+    "type": "LayoutSpace",
+    "typeDesc": "Space",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "hidden-lg hidden-md hidden-sm",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "78369291-8f19-133d-8268-a1d420d0d515",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row3",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "a891485f-ee4a-20be-b72a-57025d42c5f7",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "78369291-8f19-133d-8268-a1d420d0d515",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row3_col1",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "5",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "4",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "9f55d127-5e59-7d4b-38cd-58f27f80d68e",
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel",
+    "parent": "a891485f-ee4a-20be-b72a-57025d42c5f7",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row3_col1_panel",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "390",
+      "type": "Integer"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "value": "panel-default",
+      "type": "bootstrapPanelStyleCustom"
+     }
+    ]
+   },
+   {
+    "id": "dd52d95a-c96c-8b40-0ab0-d0dc17303220",
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body",
+    "parent": "9f55d127-5e59-7d4b-38cd-58f27f80d68e",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row3_col1_panel_body",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "059a8c65-4fd1-4641-fb13-5874d2024078",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "dd52d95a-c96c-8b40-0ab0-d0dc17303220",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row3_col1_panel_body_html",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-pie-chart\" style=\"padding-right: 5px;\"></i> 费用分布占比情况 \r\n</div> ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "1a409d5e-549d-85d9-34f2-027f0655b6f4",
+    "type": "LayoutSpace",
+    "typeDesc": "Space",
+    "parent": "a891485f-ee4a-20be-b72a-57025d42c5f7",
+    "properties": [
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "532b36d2-1a28-47e2-1467-d560dc3cca26",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "78369291-8f19-133d-8268-a1d420d0d515",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row3_col2",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "7",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "8",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "7d2aa4a3-5da8-9e53-281a-026c8e976363",
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel",
+    "parent": "532b36d2-1a28-47e2-1467-d560dc3cca26",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row3_col2_panel",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "390",
+      "type": "Integer"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "value": "panel-default",
+      "type": "bootstrapPanelStyleCustom"
+     }
+    ]
+   },
+   {
+    "id": "f2f78c77-7db2-796e-620b-df6700d6d03b",
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body",
+    "parent": "7d2aa4a3-5da8-9e53-281a-026c8e976363",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row3_col2_panel_body",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "3aa980ba-86f5-2e8e-b869-f070ffe8aae9",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "f2f78c77-7db2-796e-620b-df6700d6d03b",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row3_col2_panel_body_html",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-bar-chart\" style=\"padding-right: 5px;\"></i> 费用占比走势情况\r\n</div> ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "62415b4f-f289-d35d-20a5-216d2e018cf3",
+    "type": "LayoutSpace",
+    "typeDesc": "Space",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "hidden-lg hidden-md hidden-sm",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "f7bdd737-773d-e9d7-c79c-de970a55f493",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row4",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "fa26cb8e-ebf2-5431-506b-13b1962295fa",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "f7bdd737-773d-e9d7-c79c-de970a55f493",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row4_col1",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "0a2c5e9a-1c73-d5a4-ea0a-53950221bcd1",
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel",
+    "parent": "fa26cb8e-ebf2-5431-506b-13b1962295fa",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row4_col1_panel",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "390",
+      "type": "Integer"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "value": "panel-default",
+      "type": "bootstrapPanelStyleCustom"
+     }
+    ]
+   },
+   {
+    "id": "4ef0b85d-f699-788f-e38e-8c870820a583",
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body",
+    "parent": "0a2c5e9a-1c73-d5a4-ea0a-53950221bcd1",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row4_col1_panel_body",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "d9db898d-3df3-a2ad-acb6-d11ae3fa047f",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "4ef0b85d-f699-788f-e38e-8c870820a583",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row4_col1_panel_body_html",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-bar-chart\" style=\"padding-right: 5px;\"></i> 现金银行存款结余-发生趋势图 \r\n</div> ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "42489458-5bba-a52c-8cbe-24d0cd0c1c4e",
+    "type": "LayoutSpace",
+    "typeDesc": "Space",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "2e13acc2-b789-973d-9a67-ea993326c793",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row5",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "a0809f8b-6bbe-31e2-4e05-28f8a7dcaf6f",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "2e13acc2-b789-973d-9a67-ea993326c793",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row5_col1",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "a36f2ec0-7fd7-a364-1847-eda332dd0a08",
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel",
+    "parent": "a0809f8b-6bbe-31e2-4e05-28f8a7dcaf6f",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row5_col1_panel",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "390",
+      "type": "Integer"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "value": "panel-default",
+      "type": "bootstrapPanelStyleCustom"
+     }
+    ]
+   },
+   {
+    "id": "8d7648b0-bad2-2f19-0832-13ff78238d72",
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body",
+    "parent": "a36f2ec0-7fd7-a364-1847-eda332dd0a08",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row5_col1_panel_body",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "0a78ad3a-94e4-cac5-70ab-c7a3758f5ed3",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "8d7648b0-bad2-2f19-0832-13ff78238d72",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row5_col1_panel_body_html",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "1f2409df-8d49-dd8c-d787-110fdb31c19e",
+    "type": "LayoutSpace",
+    "typeDesc": "Space",
+    "parent": "a0809f8b-6bbe-31e2-4e05-28f8a7dcaf6f",
+    "properties": [
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "78ca4195-1995-a694-81da-50c71b66d976",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "2e13acc2-b789-973d-9a67-ea993326c793",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row5_col2",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "6",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "f1b45c91-daba-b0a3-bac0-a3de00c39c47",
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel",
+    "parent": "78ca4195-1995-a694-81da-50c71b66d976",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row5_col2_panel",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "390",
+      "type": "Integer"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "value": "panel-default",
+      "type": "bootstrapPanelStyleCustom"
+     }
+    ]
+   },
+   {
+    "id": "445dfdf3-ada5-94f7-baa6-9f22390a4859",
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body",
+    "parent": "f1b45c91-daba-b0a3-bac0-a3de00c39c47",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row5_col2_panel_body",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "6e0618e5-4d4c-0a43-3b33-360fb10baa96",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "445dfdf3-ada5-94f7-baa6-9f22390a4859",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row5_col2_panel_body_html",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "5ed6cf6e-6193-b6a7-e25e-1ed858258ecc",
+    "type": "LayoutSpace",
+    "typeDesc": "Space",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "hidden-lg hidden-md ",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "f2c4a240-0449-e960-24e3-3f25b24c24a4",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row6",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "c46bdda7-754c-98f9-b9e4-009b7e73949e",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "f2c4a240-0449-e960-24e3-3f25b24c24a4",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row6_col1",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "2e0e4461-fb34-892d-2cc8-7691e65a7bfe",
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel",
+    "parent": "c46bdda7-754c-98f9-b9e4-009b7e73949e",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row6_col1_panel",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "390",
+      "type": "Integer"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "value": "panel-default",
+      "type": "bootstrapPanelStyleCustom"
+     }
+    ]
+   },
+   {
+    "id": "728576fe-3057-40c9-ace3-ffaf06385d44",
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body",
+    "parent": "2e0e4461-fb34-892d-2cc8-7691e65a7bfe",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row6_col1_panel_body",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "e9289437-f435-3bed-8241-43aa3d02f3f0",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "728576fe-3057-40c9-ace3-ffaf06385d44",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row6_col1_panel_body_html",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-table\" style=\"padding-right: 5px;\"></i> 应付余额结构明细表 \r\n</div> ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "8449c7ea-4e07-731c-2e1c-81feef7b3350",
+    "type": "LayoutSpace",
+    "typeDesc": "Space",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "7b4b3228-ef52-17bf-8dd0-1953cdd69dab",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row7",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "68596c5d-ca7d-3e79-43e4-71a1508593f2",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "7b4b3228-ef52-17bf-8dd0-1953cdd69dab",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row7_col1",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "8f1eef65-9e92-fc41-9959-94f3fe15631b",
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel",
+    "parent": "68596c5d-ca7d-3e79-43e4-71a1508593f2",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row7_col1_panel",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "390",
+      "type": "Integer"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "value": "panel-default",
+      "type": "bootstrapPanelStyleCustom"
+     }
+    ]
+   },
+   {
+    "id": "c379c089-1c49-74cb-4798-7c3207bfd9f7",
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body",
+    "parent": "8f1eef65-9e92-fc41-9959-94f3fe15631b",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row7_col1_panel_body",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "6d88ee86-3ccb-5a0b-7723-a0745f1f7f3c",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "c379c089-1c49-74cb-4798-7c3207bfd9f7",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row7_col1_panel_body_html",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-bar-chart\" style=\"padding-right: 5px;\"></i> 门店收款变动情况 \r\n</div> ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   }
+  ],
+  "title": "CDF - Sample structure"
+ }
+}
