@@ -13352,7 +13352,7 @@
      {
       "name": "dataSource",
       "type": "Datasource",
-      "value": "area1Query"
+      "value": "area1SelectQuery"
      },
      {
       "name": "valuesArray",
@@ -13466,7 +13466,7 @@
      {
       "name": "dataSource",
       "type": "Datasource",
-      "value": "area2Query"
+      "value": "area2SelectQuery"
      },
      {
       "name": "valuesArray",
@@ -13580,7 +13580,7 @@
      {
       "name": "dataSource",
       "type": "Datasource",
-      "value": "area3Query"
+      "value": "area3SelectQuery"
      },
      {
       "name": "valuesArray",
@@ -15671,7 +15671,7 @@
    }
   ]
  },
- "filename": "/public/UI/Template4/Template4.cdfde",
+ "filename": "/public/UI/Template4_error/Template4.cdfde",
  "layout": {
   "rows": [
    {
