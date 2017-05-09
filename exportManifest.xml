@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:ExportManifest xmlns:ns2="http://www.pentaho.com/schema/">
-    <ExportManifestInformation exportDate="09-05-2017 06:23:00 CST" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
+    <ExportManifestInformation exportDate="09-05-2017 11:15:46 CST" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
     <ExportManifestEntity path="UI">
         <ExportManifestProperty>
             <EntityMetaData name="UI" createdDate="2017-05-04T16:22:05.302+08:00" isFolder="true" path="UI" isHidden="false" locale="zh_CN" title="UI"/>
@@ -171,7 +171,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template4">
         <ExportManifestProperty>
-            <EntityMetaData name="Template4" createdDate="2017-05-06T06:37:39.651+08:00" isFolder="true" path="UI/Template4" isHidden="false" locale="zh_CN" title="Template4"/>
+            <EntityMetaData name="Template4" createdDate="2017-05-09T22:22:03.906+08:00" isFolder="true" path="UI/Template4" isHidden="false" locale="zh_CN" title="Template4"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -183,7 +183,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template4/Template4.cda">
         <ExportManifestProperty>
-            <EntityMetaData name="Template4.cda" createdDate="2017-05-06T21:53:48.676+08:00" isFolder="false" path="UI/Template4/Template4.cda" isHidden="false" locale="zh_CN" title="Template4.cda"/>
+            <EntityMetaData name="Template4.cda" createdDate="2017-05-09T22:22:24.162+08:00" isFolder="false" path="UI/Template4/Template4.cda" isHidden="false" locale="zh_CN" title="Template4"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -195,7 +195,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template4/Template4.cdfde">
         <ExportManifestProperty>
-            <EntityMetaData name="Template4.cdfde" createdDate="2017-05-06T06:40:42.940+08:00" isFolder="false" path="UI/Template4/Template4.cdfde" isHidden="false" locale="zh_CN" title="Template4.cdfde"/>
+            <EntityMetaData name="Template4.cdfde" createdDate="2017-05-09T22:22:24.452+08:00" isFolder="false" path="UI/Template4/Template4.cdfde" isHidden="false" locale="zh_CN" title="Template4"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -207,7 +207,79 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template4/Template4.wcdf">
         <ExportManifestProperty>
-            <EntityMetaData name="Template4.wcdf" createdDate="2017-05-06T06:40:42.869+08:00" isFolder="false" path="UI/Template4/Template4.wcdf" isHidden="false" locale="zh_CN" description="Template4" title="运营总监"/>
+            <EntityMetaData name="Template4.wcdf" createdDate="2017-05-09T22:22:24.807+08:00" isFolder="false" path="UI/Template4/Template4.wcdf" isHidden="false" locale="zh_CN" title="Template4"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/Template4_error">
+        <ExportManifestProperty>
+            <EntityMetaData name="Template4_error" createdDate="2017-05-06T06:37:39.651+08:00" isFolder="true" path="UI/Template4_error" isHidden="false" locale="zh_CN" title="Template4_error"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/Template4_error/Template4-Copy.cdfde">
+        <ExportManifestProperty>
+            <EntityMetaData name="Template4-Copy.cdfde" createdDate="2017-05-09T22:45:28.786+08:00" isFolder="false" path="UI/Template4_error/Template4-Copy.cdfde" isHidden="false" locale="zh_CN" title="Template4-Copy.cdfde"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/Template4_error/Template4-Copy.wcdf">
+        <ExportManifestProperty>
+            <EntityMetaData name="Template4-Copy.wcdf" createdDate="2017-05-09T22:45:01.054+08:00" isFolder="false" path="UI/Template4_error/Template4-Copy.wcdf" isHidden="false" locale="zh_CN" title="运营总监-Copy"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/Template4_error/Template4.cda">
+        <ExportManifestProperty>
+            <EntityMetaData name="Template4.cda" createdDate="2017-05-06T21:53:48.676+08:00" isFolder="false" path="UI/Template4_error/Template4.cda" isHidden="false" locale="zh_CN" title="Template4.cda"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/Template4_error/Template4.cdfde">
+        <ExportManifestProperty>
+            <EntityMetaData name="Template4.cdfde" createdDate="2017-05-06T06:40:42.940+08:00" isFolder="false" path="UI/Template4_error/Template4.cdfde" isHidden="false" locale="zh_CN" title="Template4.cdfde"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/Template4_error/Template4.wcdf">
+        <ExportManifestProperty>
+            <EntityMetaData name="Template4.wcdf" createdDate="2017-05-06T06:40:42.869+08:00" isFolder="false" path="UI/Template4_error/Template4.wcdf" isHidden="false" locale="zh_CN" description="Template4" title="运营总监"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
