@@ -58,6 +58,9 @@
       <Connection id="brandSelectQuery" type="sql.jndi">
          <Jndi>jdbc_bi</Jndi>
       </Connection>
+      <Connection id="placeSelectQuery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
       <Connection id="area1SelectQuery" type="sql.jndi">
          <Jndi>jdbc_bi</Jndi>
       </Connection>
@@ -96,6 +99,7 @@
          <Parameter default="area3Param" name="area3Param" type="String"/>
          <Parameter default="shopParam" name="shopParam" type="String"/>
          <Parameter default="outletParam" name="outletParam" type="String"/>
+         <Parameter default="placeParam" name="placeParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT 
         X.*
@@ -109,6 +113,7 @@ FROM
 			INNER JOIN `Dim_Outlet` ON `Fact_SumItem`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`
             INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`
             INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId
+            INNER JOIN `Dim_Place` ON `Dim_Outlet`.`PlaceId` = `Dim_Place`.`PlaceId`
     WHERE 
             `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
             AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
@@ -117,6 +122,7 @@ FROM
             AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)
             AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)
             AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)
+            AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)
 	GROUP BY
 			`Dim_Outlet`.`OutletName`
 	ORDER BY
@@ -136,6 +142,7 @@ FROM
          <Parameter default="area3Param" name="area3Param" type="String"/>
          <Parameter default="shopParam" name="shopParam" type="String"/>
          <Parameter default="outletParam" name="outletParam" type="String"/>
+         <Parameter default="placeParam" name="placeParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT
     `dim_periodtype`.`PeriodTypeName`,
@@ -146,6 +153,7 @@ FROM
     INNER JOIN Dim_Outlet ON fact_sumcheck.OutletId_t = Dim_Outlet.OutletId_t
     INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`
     INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId
+    INNER JOIN `Dim_Place` ON `Dim_Outlet`.`PlaceId` = `Dim_Place`.`PlaceId`
 WHERE 
      `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
      AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
@@ -154,6 +162,7 @@ WHERE
      AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)
      AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)
      AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)
+     AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)
 GROUP BY
     `dim_periodtype`.`PeriodTypeName`]]></Query>
    </DataAccess>
@@ -171,6 +180,7 @@ GROUP BY
          <Parameter default="area3Param" name="area3Param" type="String"/>
          <Parameter default="shopParam" name="shopParam" type="String"/>
          <Parameter default="outletParam" name="outletParam" type="String"/>
+         <Parameter default="placeParam" name="placeParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT
     `dim_channel`.DeliveryType,
@@ -181,6 +191,7 @@ FROM
     INNER JOIN Dim_Outlet ON fact_sumcheck.OutletId_t = Dim_Outlet.OutletId_t
     INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`
     INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId
+    INNER JOIN `Dim_Place` ON `Dim_Outlet`.`PlaceId` = `Dim_Place`.`PlaceId`
 WHERE 
      `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
      AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
@@ -189,6 +200,7 @@ WHERE
      AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)
      AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)
      AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)
+     AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)
      
 GROUP BY
     `dim_channel`.DeliveryType]]></Query>
@@ -206,6 +218,7 @@ GROUP BY
          <Parameter default="area3Param" name="area3Param" type="String"/>
          <Parameter default="shopParam" name="shopParam" type="String"/>
          <Parameter default="outletParam" name="outletParam" type="String"/>
+         <Parameter default="placeParam" name="placeParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT
     `dim_bidate`.`BIDate`,
@@ -216,6 +229,7 @@ FROM
     INNER JOIN Dim_Outlet ON fact_sumitem.OutletId_t = Dim_Outlet.OutletId_t
     INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`
     INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId
+    INNER JOIN `Dim_Place` ON `Dim_Outlet`.`PlaceId` = `Dim_Place`.`PlaceId`
 WHERE 
      `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
      AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
@@ -224,6 +238,7 @@ WHERE
      AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)
      AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)
      AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)
+     AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)
 GROUP BY
     `dim_bidate`.`BIDateId`,
     `dim_bidate`.`YearMonth`
@@ -254,6 +269,7 @@ ORDER BY
          <Parameter default="area3Param" name="area3Param" type="String"/>
          <Parameter default="shopParam" name="shopParam" type="String"/>
          <Parameter default="outletParam" name="outletParam" type="String"/>
+         <Parameter default="placeParam" name="placeParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT
     `dim_paytype`.`PayTypeId`,
@@ -266,6 +282,7 @@ FROM
     INNER JOIN Dim_Outlet ON fact_sumpay.OutletId_t = Dim_Outlet.OutletId_t
     INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`
     INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId
+    INNER JOIN `Dim_Place` ON `Dim_Outlet`.`PlaceId` = `Dim_Place`.`PlaceId`
 WHERE 
      `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
      AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
@@ -274,6 +291,7 @@ WHERE
      AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)
      AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)
      AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)
+     AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)
 GROUP BY
     `dim_paytype`.`PayTypeName`,
     `dim_paytype`.`PayTypeId`
@@ -294,6 +312,7 @@ ORDER BY
          <Parameter default="area3Param" name="area3Param" type="String"/>
          <Parameter default="shopParam" name="shopParam" type="String"/>
          <Parameter default="outletParam" name="outletParam" type="String"/>
+         <Parameter default="placeParam" name="placeParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT DISTINCT
     CASE WHEN `Dim_PayType`.`PayTypeClassName` IS NULL 
@@ -306,6 +325,7 @@ FROM
     INNER JOIN `Dim_PayType` ON `Fact_CheckPay`.`PayTypeId` = `Dim_PayType`.`PayTypeId`
     INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`
     INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId
+    INNER JOIN `Dim_Place` ON `Dim_Outlet`.`PlaceId` = `Dim_Place`.`PlaceId`
 WHERE 
      `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
      AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
@@ -314,6 +334,7 @@ WHERE
      AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)
      AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)
      AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)
+     AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)
 GROUP BY
      `Dim_PayType`.`PayTypeClassId`, `Dim_PayType`.`PayTypeClassName`
 ORDER BY
@@ -333,6 +354,7 @@ ORDER BY
          <Parameter default="area3Param" name="area3Param" type="String"/>
          <Parameter default="shopParam" name="shopParam" type="String"/>
          <Parameter default="outletParam" name="outletParam" type="String"/>
+         <Parameter default="placeParam" name="placeParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT 
     tbl.bidate,
@@ -354,6 +376,7 @@ FROM
         INNER JOIN `Dim_Outlet` ON `Fact_CheckPay`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`
     	INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`
         INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId
+        INNER JOIN `Dim_Place` ON `Dim_Outlet`.`PlaceId` = `Dim_Place`.`PlaceId`
         INNER JOIN 
     	(
     	SELECT
@@ -365,6 +388,7 @@ FROM
                 INNER JOIN `Dim_Outlet` ON `Fact_CheckPay`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`
                 INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`
                 INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId
+                INNER JOIN `Dim_Place` ON `Dim_Outlet`.`PlaceId` = `Dim_Place`.`PlaceId`
     	WHERE 
             `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay} 
             AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
@@ -373,6 +397,7 @@ FROM
             AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)
             AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)
             AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)
+            AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)
         GROUP BY
     			 `dim_bidate`.`BIDateId`
     	ORDER BY
@@ -386,6 +411,7 @@ FROM
         AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)
         AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)
         AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)
+        AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)
     GROUP BY 
         `dim_bidate`.`bidate`, `dim_paytype`.`PayTypeClassName`, temp.PayAmtAll
 ) AS tbl]]></Query>
@@ -403,6 +429,7 @@ FROM
          <Parameter default="area3Param" name="area3Param" type="String"/>
          <Parameter default="shopParam" name="shopParam" type="String"/>
          <Parameter default="outletParam" name="outletParam" type="String"/>
+         <Parameter default="placeParam" name="placeParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT
     `dim_channel`.`ChannelName`,
@@ -413,6 +440,7 @@ FROM
     INNER JOIN Dim_Outlet ON fact_sumcheck.OutletId_t = Dim_Outlet.OutletId_t
     INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`
     INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId
+    INNER JOIN `Dim_Place` ON `Dim_Outlet`.`PlaceId` = `Dim_Place`.`PlaceId`
 WHERE 
      `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
      AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
@@ -421,6 +449,7 @@ WHERE
      AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)
      AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)
      AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)
+     AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)
 GROUP BY
      `dim_channel`.ChannelName]]></Query>
    </DataAccess>
@@ -448,6 +477,7 @@ GROUP BY
          <Parameter default="area3Param" name="area3Param" type="String"/>
          <Parameter default="shopParam" name="shopParam" type="String"/>
          <Parameter default="outletParam" name="outletParam" type="String"/>
+         <Parameter default="placeParam" name="placeParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT
      `dim_bidate`.`BIDateId`,
@@ -460,6 +490,7 @@ FROM
     INNER JOIN Dim_Outlet ON fact_sumcheck.OutletId_t = Dim_Outlet.OutletId_t
     INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`
     INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId
+    INNER JOIN `Dim_Place` ON `Dim_Outlet`.`PlaceId` = `Dim_Place`.`PlaceId`
 WHERE 
      `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay} 
      AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
@@ -468,6 +499,7 @@ WHERE
      AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)
      AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)
      AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)
+     AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)
 GROUP BY
      `dim_bidate`.`BIDateId`,
      `dim_bidate`.`YearMonth`,
@@ -497,6 +529,7 @@ ORDER BY
          <Parameter default="area3Param" name="area3Param" type="String"/>
          <Parameter default="shopParam" name="shopParam" type="String"/>
          <Parameter default="outletParam" name="outletParam" type="String"/>
+         <Parameter default="placeParam" name="placeParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT
     `dim_bidate`.`BIDateId`,
@@ -509,6 +542,7 @@ FROM
     INNER JOIN Dim_Outlet ON fact_sumday.OutletId_t = Dim_Outlet.OutletId_t
     INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`
     INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId
+    INNER JOIN `Dim_Place` ON `Dim_Outlet`.`PlaceId` = `Dim_Place`.`PlaceId`
 WHERE 
      `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
      AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
@@ -517,6 +551,7 @@ WHERE
      AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)
      AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)
      AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)
+     AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)
 GROUP BY
      `dim_bidate`.`BIDateId`,`dim_bidate`.`YearMonth`
 ORDER BY
@@ -535,6 +570,7 @@ ORDER BY
          <Parameter default="area3Param" name="area3Param" type="String"/>
          <Parameter default="shopParam" name="shopParam" type="String"/>
          <Parameter default="outletParam" name="outletParam" type="String"/>
+         <Parameter default="placeParam" name="placeParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT
     `dim_voidresontype`.`VoidReasonName`,
@@ -545,6 +581,8 @@ FROM
     INNER JOIN Dim_Outlet ON fact_checkitemdel.OutletId_t = Dim_Outlet.OutletId_t
     INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`
     INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId
+    INNER JOIN `Dim_Place` ON `Dim_Outlet`.`PlaceId` = `Dim_Place`.`PlaceId`
+    
 WHERE 
      `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
      AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
@@ -553,6 +591,7 @@ WHERE
      AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)
      AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)
      AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)
+     AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)
 GROUP BY 
     `dim_voidresontype`.`VoidReasonName`]]></Query>
    </DataAccess>
@@ -569,6 +608,7 @@ GROUP BY
          <Parameter default="area3Param" name="area3Param" type="String"/>
          <Parameter default="shopParam" name="shopParam" type="String"/>
          <Parameter default="outletParam" name="outletParam" type="String"/>
+         <Parameter default="placeParam" name="placeParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT
      `dim_voidresontype`.`VoidReasonName`,
@@ -580,6 +620,7 @@ FROM
     INNER JOIN Dim_Outlet ON fact_checkitemdel.OutletId_t = Dim_Outlet.OutletId_t
     INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`
     INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId
+    INNER JOIN `Dim_Place` ON `Dim_Outlet`.`PlaceId` = `Dim_Place`.`PlaceId`
 WHERE 
      `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
      AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
@@ -588,6 +629,7 @@ WHERE
      AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)
      AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)
      AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)
+     AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)
 GROUP BY
      `dim_voidresontype`.`VoidReasonName`]]></Query>
    </DataAccess>
@@ -655,6 +697,22 @@ FROM
     `Dim_Brand`
 WHERE
     `Dim_Brand`.`Status` = 0]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="placeSelectQuery" id="placeSelectQuery" type="sql">
+      <Name>placeSelectQuery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT -1,
+        "所有"
+UNION ALL
+SELECT DISTINCT
+     `Dim_Place`.`PlaceId`,
+     `Dim_Place`.`PlaceName`
+FROM
+     `Dim_Place`
+WHERE
+     `Dim_Place`.`Status` = 0]]></Query>
    </DataAccess>
    <DataAccess access="public" connection="area1SelectQuery" id="area1SelectQuery" type="sql">
       <Name>area1SelectQuery</Name>
