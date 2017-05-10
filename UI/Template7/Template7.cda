@@ -85,6 +85,12 @@
       <Connection id="row11_col_query" type="sql.jndi">
          <Jndi>jdbc_bi</Jndi>
       </Connection>
+      <Connection id="row14_col_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="row15_col_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
    </DataSources>
    <DataAccess access="public" connection="row2_col1_query" id="row2_col1_query" type="sql">
       <Name>row2_col1_query</Name>
@@ -170,10 +176,14 @@ group by b.DiscountTypeName]]></Query>
       <Parameters/>
       <Query><![CDATA[select 
      b.UserName as username,
-     sum(a.SaleAmt) as saleamt
-from fact_check a 
-inner join dim_user b on a.OpenUserId = b.UserId
-group by b.UserName]]></Query>
+     c.ItemName as itemname,
+     sum(a.ItemSaleAmt) as itemsaleamt
+from fact_checkitem a 
+inner join dim_user b on a.OrderUserId = b.UserId
+inner join dim_item c on a.ItemId_t = c.ItemId_t
+group by b.UserName,c.ItemName
+
+limit 20]]></Query>
    </DataAccess>
    <DataAccess access="public" connection="row10_col2_query" id="row10_col2_query" type="sql">
       <Name>row10_col2_query</Name>
@@ -267,7 +277,7 @@ group by b.BIDateId,b.YearMonth]]></Query>
       <Columns/>
       <Parameters/>
       <Query><![CDATA[select 
-      b.BIDateId as bidateid, 
+      b.BIDateId as bidateid,
       b.YearMonth as yearmonth,
       case when sum(a.CheckQty) = 0 then '0.00'
       when sum(a.CheckQty) = null then '0.00'
@@ -596,5 +606,58 @@ inner join dim_bitime c on a.CheckOpenTimeId = c.BITimeId
 group by  c.HourNo
 
 limit 20]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="row14_col_query" id="row14_col_query" type="sql">
+      <Name>row14_col_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select 
+      c.DiscountTypeName as discounttypename,
+      a.CheckNo as checkno,
+      a.Begtime as begtime,
+      d.UserName as username,
+      sum(a.GuestQty) as guestqty,
+      e.ItemDeptName_level1 as itemdeptname1,
+      sum(b.DiscountAmt) as discountamt
+from fact_check a 
+inner join fact_checkdiscount b on a.BIDateId = b.BIDateId
+                                and a.OutletId_t = b.OutletId_t
+                                and a.CheckId = b.CheckId
+inner join fact_checkitem f on  a.BIDateId = f.BIDateId
+                                and a.OutletId_t = f.OutletId_t
+                                and a.CheckId = f.CheckId
+inner join dim_discounttype c on b.DiscountTypeId = c.DiscountTypeId
+inner join dim_user d on a.OpenUserId = d.UserId
+inner join dim_itemdeptment e on f.ItemDeptId = e.ItemDeptId
+
+group by c.DiscountTypeName,a.CheckNo,a.Begtime,d.UserName,e.ItemDeptName_level1
+
+limit 20]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="row15_col_query" id="row15_col_query" type="sql">
+      <Name>row15_col_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select 
+     c.BIDate as bidate,
+     d.UserName as username,
+     e.PayTypeClassName as paytypeclassname,
+     sum(a.PayAmt) as payamt,
+     sum(a.TipAmt) as tipamt,
+     0 as it,
+     0 as it1,
+     sum(a.SaleAmt) as saleamt
+     
+from fact_check a 
+inner join fact_checkpay b on a.BIDateId = b.BIDateId
+                           and a.OutletId_t = b.OutletId_t
+                           and a.CheckId = b.CheckId
+inner join dim_bidate c on a.BIDateId = c.BIDateId
+inner join dim_user d on a.OpenUserId = d.UserId
+inner join dim_paytype e on b.PayTypeId = e.PayTypeId
+
+group by c.BIDate,d.UserName,e.PayTypeClassName]]></Query>
    </DataAccess>
 </CDADescriptor>
