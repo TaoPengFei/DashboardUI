@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="row2_col1_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="row2_col2_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="row3_col1_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="row3_col2_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="row9_col1_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="row9_col2_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="row10_col1_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="row10_col2_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="row12_col1_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="row12_col2_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="row13_col1_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="row13_col2_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="row17_col1_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="row17_col2_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="row16_col_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="saleamt_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="checkqty_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="salevalue_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="guestqty_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="salecheck_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="saleguest_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="disamtpercent_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="disamt_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="row6_col_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="row5_col_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="row7_col_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" connection="row2_col1_query" id="row2_col1_query" type="sql">
+      <Name>row2_col1_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select
+      b.ItemDeptName_level1 as itemdeptname_level1,
+      sum(a.ItemSaleAmt) as itemsaleamt
+from fact_checkitem a 
+inner join  dim_itemdeptment b on a.ItemDeptId = b.ItemDeptId
+group by b.ItemDeptName_level1]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="row2_col2_query" id="row2_col2_query" type="sql">
+      <Name>row2_col2_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select 
+      b.PayTypeName as paytypename,
+      sum(a.PayAmt) as payamt
+from fact_checkpay a 
+inner join dim_paytype b on a.PayTypeId = b.PayTypeId
+group by b.PayTypeName]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="row3_col1_query" id="row3_col1_query" type="sql">
+      <Name>row3_col1_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select
+      b.ItemCatName_level1 as itemcatname_level1,
+      sum(a.ItemSaleAmt) as itemsaleamt
+from fact_checkitem a 
+inner join  dim_itemcategory b on a.ItemCatId = b.ItemCatId
+group by b.ItemCatName_level1]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="row3_col2_query" id="row3_col2_query" type="sql">
+      <Name>row3_col2_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select
+      b.ItemCatName_level1 as itemcatname_level1,
+      
+      sum(a.ItemSaleAmt) as itemsaleamt,
+      sum(a.ItemSaleQty) as itemsaleqty
+from fact_checkitem a 
+inner join  dim_itemcategory b on a.ItemCatId = b.ItemCatId
+group by b.ItemCatName_level1]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="row9_col1_query" id="row9_col1_query" type="sql">
+      <Name>row9_col1_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select
+   
+      b.PeriodTypeName as periodtypename,
+      sum(a.ItemSaleAmt) as itemsaleamt
+from fact_check a 
+
+inner join  dim_periodtype b on a.PeriodTypeId = b.PeriodTypeId
+group by  b.PeriodTypeName]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="row9_col2_query" id="row9_col2_query" type="sql">
+      <Name>row9_col2_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select 
+     b.DiscountTypeName as discounttypename,
+     sum(a.DiscountAmt) as discountamt
+from fact_checkdiscount a 
+inner join dim_discounttype b on a.DiscountTypeId = b.DiscountTypeId
+group by b.DiscountTypeName]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="row10_col1_query" id="row10_col1_query" type="sql">
+      <Name>row10_col1_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select 
+     b.UserName as username,
+     sum(a.SaleAmt) as saleamt
+from fact_check a 
+inner join dim_user b on a.OpenUserId = b.UserId
+group by b.UserName]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="row10_col2_query" id="row10_col2_query" type="sql">
+      <Name>row10_col2_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select 
+      b.HourNo as hourno,
+      sum(a.SaleAmt) saleamt
+from fact_check a 
+inner join dim_bitime b on a.CheckOpenTimeId = b.BITimeId
+group by b.HourNo]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="row12_col1_query" id="row12_col1_query" type="sql">
+      <Name>row12_col1_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select
+      b.ItemCatName_level1 as itemcatname_level1,
+      sum(a.ItemSaleQty) as  '数量',
+      sum(a.ItemSaleAmt) as  '销售额'
+from fact_checkitem a 
+inner join  dim_itemcategory b on a.ItemCatId = b.ItemCatId
+group by b.ItemCatName_level1
+order by sum(a.ItemSaleQty) desc]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="row12_col2_query" id="row12_col2_query" type="sql">
+      <Name>row12_col2_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select
+      b.ItemCatName_level1 as itemcatname_level1,
+      sum(a.ItemSaleAmt) as itemsaleamt,
+      sum(a.ItemSaleQty) as itemsaleqty
+from fact_checkitem a 
+inner join  dim_itemcategory b on a.ItemCatId = b.ItemCatId
+group by b.ItemCatName_level1 
+order by itemsaleamt desc
+limit 20]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="row13_col1_query" id="row13_col1_query" type="sql">
+      <Name>row13_col1_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select
+      b.ItemCatName_level1 as itemcatname_level1,
+      sum(a.ItemSaleAmt) as itemsaleamt,
+      sum(a.ItemSaleQty) as itemsaleqty
+from fact_checkitem a 
+inner join  dim_itemcategory b on a.ItemCatId = b.ItemCatId
+group by b.ItemCatName_level1
+order by itemsaleqty desc]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="row13_col2_query" id="row13_col2_query" type="sql">
+      <Name>row13_col2_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select
+      b.ItemCatName_level1 as itemcatname_level1,
+      sum(a.ItemSaleAmt) as itemsaleamt,
+      sum(a.ItemSaleQty) as itemsaleqty
+from fact_checkitem a 
+inner join  dim_itemcategory b on a.ItemCatId = b.ItemCatId
+group by b.ItemCatName_level1
+order by itemsaleamt 
+limit 20]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="row17_col1_query" id="row17_col1_query" type="sql">
+      <Name>row17_col1_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select 
+      b.BIDateId as bidateid,
+      b.YearMonth as yearmonth,
+      sum(a.SaleAmt) as '营业额',
+      sum(a.GuestQty) as '人数'
+      
+from fact_sumday a 
+inner join dim_bidate b on a.BIDateId = b.BIDateId
+group by b.BIDateId,b.YearMonth]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="row17_col2_query" id="row17_col2_query" type="sql">
+      <Name>row17_col2_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select 
+      b.BIDateId as bidateid, 
+      b.YearMonth as yearmonth,
+      case when sum(a.CheckQty) = 0 then '0.00'
+      when sum(a.CheckQty) = null then '0.00'
+      else  round((sum(a.SaleAmt)/sum(a.CheckQty)),2) end '平均每单',
+      case when sum(a.GuestQty) = 0 then '0.00'
+      when sum(a.GuestQty) = null then '0.00'
+      else  round((sum(a.SaleAmt)/sum(a.GuestQty)),2) end '平均每人'
+     
+from fact_sumday a 
+inner join dim_bidate b on a.BIDateId = b.BIDateId
+group by b.BIDateId,b.YearMonth]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="row16_col_query" id="row16_col_query" type="sql">
+      <Name>row16_col_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select 
+     
+      c.BIDate as bidate,
+      a.CheckNo as checkno,
+      d.PayTypeClassName as paytypeclassname,
+      d.PayTypeName as paytypename,
+      e.UserName as username,
+      f.StationName as stationname,
+      g.OutletName as outletname,
+      h.PeriodTypeName as periodtypename,
+      sum(b.PayAmt) as payamt
+from fact_check a 
+inner join fact_checkpay b on a.BIDateId = b.BIDateId
+                           and a.CheckId = b.CheckId
+                           and a.OutletId_t = b.OutletId_t
+inner join dim_bidate c on a.BIDateId = c.BIDateId
+inner join dim_paytype d on b.PayTypeId = d.PayTypeId
+inner join dim_user e on a.OpenUserId = e.UserId
+inner join dim_workstation f on b.StationId = f.StationId
+inner join dim_outlet g on a.OutletId_t = g.OutletId_t
+inner join dim_periodtype h on a.PeriodTypeId = h.PeriodTypeId
+      
+group by bidate,checkno,paytypeclassname,paytypename,username,stationname,
+         outletname,periodtypename
+         
+         limit 20]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="saleamt_query" id="saleamt_query" type="sql">
+      <Name>saleamt_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select 
+     format(sum(a.SaleAmt),2) as saleamt
+from fact_sumday a
+inner join dim_bidate b on a.BIDateId = b.BIDateId]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="checkqty_query" id="checkqty_query" type="sql">
+      <Name>checkqty_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select 
+     sum(a.CheckQty) as checkqty
+from fact_sumday a
+inner join dim_bidate b on a.BIDateId = b.BIDateId]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="salevalue_query" id="salevalue_query" type="sql">
+      <Name>salevalue_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select 
+     format((sum(a.SaleAmt)-sum(a.DisAmt)),2) as salevalue
+from fact_sumday a
+inner join dim_bidate b on a.BIDateId = b.BIDateId]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="guestqty_query" id="guestqty_query" type="sql">
+      <Name>guestqty_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select 
+     sum(a.GuestQty) as guestqty
+from fact_sumday a
+inner join dim_bidate b on a.BIDateId = b.BIDateId]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="salecheck_query" id="salecheck_query" type="sql">
+      <Name>salecheck_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select 
+     case when sum(a.CheckQty) = 0 then '0.00'
+     when sum(a.CheckQty) = null then '0.00'
+     else format((sum(a.SaleAmt)/sum(a.CheckQty)),2) end as salecheck
+from fact_sumday a 
+inner join dim_bidate b on a.BIDateId = b.BIDateId]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="saleguest_query" id="saleguest_query" type="sql">
+      <Name>saleguest_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select 
+     case when sum(a.GuestQty) = 0 then '0.00'
+     when sum(a.GuestQty) = null then '0.00'
+     else format((sum(a.SaleAmt)/sum(a.GuestQty)),2) end as saleguest
+from fact_sumday a 
+inner join dim_bidate b on a.BIDateId = b.BIDateId]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="disamtpercent_query" id="disamtpercent_query"
+               type="sql">
+      <Name>disamtpercent_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select 
+      case when sum(a.SaleAmt) = 0 then '0.00'
+      when sum(a.SaleAmt) = null then '0.00'
+      else concat(format((abs(sum(a.DisAmt))/sum(a.SaleAmt))*100,2),'%') end as disamtpercent
+from fact_sumday a 
+inner join dim_bidate b on a.BIDateId = b.BIDateId]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="disamt_query" id="disamt_query" type="sql">
+      <Name>disamt_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select 
+      format(abs(sum(a.DisAmt)),2) as disamt
+from fact_sumday a
+inner join dim_bidate b on a.BIDateId = b.BIDateId]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="row6_col_query" id="row6_col_query" type="sql">
+      <Name>row6_col_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select 
+      b.BIDate as bidate,
+      c.OutletName as outletname,
+      d.StationName as stationname,
+      e.PeriodTypeName as periodtypename,
+      sum(a.CheckQty) as checkqty,
+      sum(a.GuestQty) as guestqty,
+      sum(a.SaleAmt) as saleamt,
+      sum(a.CheckDiscountAmt) as checkdiscountamt,
+      sum(a.SCAmt) as scamt,
+      sum(a.TaxAmt) as taxamt,
+      sum(a.RoundAmt) as roundamt,
+      (sum(a.SaleAmt)+sum(a.CheckDiscountAmt)-sum(a.SCAmt)+sum(a.RoundAmt)) as salevalue,
+      sum(a.PayAmt) as payamt,
+      
+      case when sum(a.CheckQty) = 0 then '0.00'
+      when sum(a.CheckQty) = null then '0.00'
+      else format((sum(a.SaleAmt)/sum(a.CheckQty)),2) end as salecheck,    
+
+
+      case when sum(a.GuestQty) = 0 then '0.00'
+      when sum(a.GuestQty) = null then '0.00'
+      else format((sum(a.SaleAmt)/sum(a.GuestQty)),2) end as saleguest
+from fact_sumcheck a 
+inner join dim_bidate b on a.BIDateId = b.BIDateId
+inner join dim_outlet c on a.OutletId_t = c.OutletId_t
+inner join dim_workstation d on a.CheckOpenStationId = d.StationId
+inner join dim_periodtype e on a.PeriodTypeId = e.PeriodTypeId
+group by b.BIDate,c.OutletName,d.StationName,e.PeriodTypeName  
+
+limit 20]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="row5_col_query" id="row5_col_query" type="sql">
+      <Name>row5_col_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select 
+      b.BIDate as bidate,
+      c.OutletName as outletname,
+      
+      e.PeriodTypeName as periodtypename,
+      sum(a.CheckQty) as checkqty,
+      sum(a.GuestQty) as guestqty,
+
+      sum(c.TableQty) as tableqty,
+      case when sum(c.TableQty) = 0 then '0.00'
+    	       when sum(c.TableQty) = null then '0.00'
+		  else concat(round(sum(a.CheckQty)/sum(c.TableQty)* 100,1),'%') end as 'shangzuolv',
+
+      sum(a.SaleAmt) as saleamt,
+      sum(a.CheckDiscountAmt) as checkdiscountamt,
+      sum(a.SCAmt) as scamt,
+      sum(a.TaxAmt) as taxamt,
+      sum(a.RoundAmt) as roundamt,
+      (sum(a.SaleAmt)+sum(a.CheckDiscountAmt)-sum(a.SCAmt)+sum(a.RoundAmt)) as salevalue,
+      sum(a.PayAmt) as payamt,
+      
+      case when sum(a.CheckQty) = 0 then '0.00'
+      when sum(a.CheckQty) = null then '0.00'
+      else format((sum(a.SaleAmt)/sum(a.CheckQty)),2) end as salecheck,    
+
+
+      case when sum(a.GuestQty) = 0 then '0.00'
+      when sum(a.GuestQty) = null then '0.00'
+      else format((sum(a.SaleAmt)/sum(a.GuestQty)),2) end as saleguest
+from fact_sumcheck a 
+inner join dim_bidate b on a.BIDateId = b.BIDateId
+inner join dim_outlet c on a.OutletId_t = c.OutletId_t
+
+inner join dim_periodtype e on a.PeriodTypeId = e.PeriodTypeId
+group by b.BIDate,c.OutletName,e.PeriodTypeName  
+
+limit 20]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="row7_col_query" id="row7_col_query" type="sql">
+      <Name>row7_col_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select 
+     
+      c.OutletName as outletname,
+      
+      e.PeriodTypeName as periodtypename,
+      sum(a.CheckQty) as checkqty,
+      sum(a.GuestQty) as guestqty,
+
+      sum(c.TableQty) as tableqty,
+      case when sum(c.TableQty) = 0 then '0.00'
+    	       when sum(c.TableQty) = null then '0.00'
+		  else concat(round(sum(a.CheckQty)/sum(c.TableQty)* 100,1),'%') end as 'shangzuolv',
+
+      sum(a.SaleAmt) as saleamt,
+      sum(a.CheckDiscountAmt) as checkdiscountamt,
+      sum(a.SCAmt) as scamt,
+      sum(a.TaxAmt) as taxamt,
+      sum(a.RoundAmt) as roundamt,
+      (sum(a.SaleAmt)+sum(a.CheckDiscountAmt)-sum(a.SCAmt)+sum(a.RoundAmt)) as salevalue,
+      sum(a.PayAmt) as payamt,
+      
+      case when sum(a.CheckQty) = 0 then '0.00'
+      when sum(a.CheckQty) = null then '0.00'
+      else format((sum(a.SaleAmt)/sum(a.CheckQty)),2) end as salecheck,    
+
+
+      case when sum(a.GuestQty) = 0 then '0.00'
+      when sum(a.GuestQty) = null then '0.00'
+      else format((sum(a.SaleAmt)/sum(a.GuestQty)),2) end as saleguest
+from fact_sumcheck a 
+
+inner join dim_outlet c on a.OutletId_t = c.OutletId_t
+
+inner join dim_periodtype e on a.PeriodTypeId = e.PeriodTypeId
+group by c.OutletName,e.PeriodTypeName  
+
+limit 20]]></Query>
+   </DataAccess>
+</CDADescriptor>
