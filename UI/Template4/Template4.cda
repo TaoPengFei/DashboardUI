@@ -94,6 +94,8 @@
          <Parameter default="area1Param" name="area1Param" type="String"/>
          <Parameter default="area2Param" name="area2Param" type="String"/>
          <Parameter default="area3Param" name="area3Param" type="String"/>
+         <Parameter default="shopParam" name="shopParam" type="String"/>
+         <Parameter default="outletParam" name="outletParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT 
         X.*
@@ -113,6 +115,8 @@ FROM
             AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)
             AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)
             AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)
+            AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)
+            AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)
 	GROUP BY
 			`Dim_Outlet`.`OutletName`
 	ORDER BY
@@ -130,6 +134,8 @@ FROM
          <Parameter default="area1Param" name="area1Param" type="String"/>
          <Parameter default="area2Param" name="area2Param" type="String"/>
          <Parameter default="area3Param" name="area3Param" type="String"/>
+         <Parameter default="shopParam" name="shopParam" type="String"/>
+         <Parameter default="outletParam" name="outletParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT
     `dim_periodtype`.`PeriodTypeName`,
@@ -146,6 +152,8 @@ WHERE
      AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)
      AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)
      AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)
+     AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)
+     AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)
 GROUP BY
     `dim_periodtype`.`PeriodTypeName`]]></Query>
    </DataAccess>
@@ -161,6 +169,8 @@ GROUP BY
          <Parameter default="area1Param" name="area1Param" type="String"/>
          <Parameter default="area2Param" name="area2Param" type="String"/>
          <Parameter default="area3Param" name="area3Param" type="String"/>
+         <Parameter default="shopParam" name="shopParam" type="String"/>
+         <Parameter default="outletParam" name="outletParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT
     `dim_channel`.DeliveryType,
@@ -177,6 +187,9 @@ WHERE
      AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)
      AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)
      AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)
+     AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)
+     AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)
+     
 GROUP BY
     `dim_channel`.DeliveryType]]></Query>
    </DataAccess>
@@ -191,6 +204,8 @@ GROUP BY
          <Parameter default="area1Param" name="area1Param" type="String"/>
          <Parameter default="area2Param" name="area2Param" type="String"/>
          <Parameter default="area3Param" name="area3Param" type="String"/>
+         <Parameter default="shopParam" name="shopParam" type="String"/>
+         <Parameter default="outletParam" name="outletParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT
     `dim_bidate`.`BIDate`,
@@ -207,6 +222,8 @@ WHERE
      AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)
      AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)
      AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)
+     AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)
+     AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)
 GROUP BY
     `dim_bidate`.`BIDateId`,
     `dim_bidate`.`YearMonth`
@@ -235,6 +252,8 @@ ORDER BY
          <Parameter default="area1Param" name="area1Param" type="String"/>
          <Parameter default="area2Param" name="area2Param" type="String"/>
          <Parameter default="area3Param" name="area3Param" type="String"/>
+         <Parameter default="shopParam" name="shopParam" type="String"/>
+         <Parameter default="outletParam" name="outletParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT
     `dim_paytype`.`PayTypeId`,
@@ -253,6 +272,8 @@ WHERE
      AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)
      AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)
      AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)
+     AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)
+     AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)
 GROUP BY
     `dim_paytype`.`PayTypeName`,
     `dim_paytype`.`PayTypeId`
@@ -271,6 +292,8 @@ ORDER BY
          <Parameter default="area1Param" name="area1Param" type="String"/>
          <Parameter default="area2Param" name="area2Param" type="String"/>
          <Parameter default="area3Param" name="area3Param" type="String"/>
+         <Parameter default="shopParam" name="shopParam" type="String"/>
+         <Parameter default="outletParam" name="outletParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT DISTINCT
     CASE WHEN `Dim_PayType`.`PayTypeClassName` IS NULL 
@@ -289,6 +312,8 @@ WHERE
      AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)
      AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)
      AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)
+     AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)
+     AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)
 GROUP BY
      `Dim_PayType`.`PayTypeClassId`, `Dim_PayType`.`PayTypeClassName`
 ORDER BY
@@ -306,6 +331,8 @@ ORDER BY
          <Parameter default="area1Param" name="area1Param" type="String"/>
          <Parameter default="area2Param" name="area2Param" type="String"/>
          <Parameter default="area3Param" name="area3Param" type="String"/>
+         <Parameter default="shopParam" name="shopParam" type="String"/>
+         <Parameter default="outletParam" name="outletParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT 
     tbl.bidate,
@@ -344,6 +371,8 @@ FROM
             AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)
             AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)
             AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)
+            AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)
+            AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)
         GROUP BY
     			 `dim_bidate`.`BIDateId`
     	ORDER BY
@@ -355,6 +384,8 @@ FROM
         AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)
         AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)
         AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)
+        AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)
+        AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)
     GROUP BY 
         `dim_bidate`.`bidate`, `dim_paytype`.`PayTypeClassName`, temp.PayAmtAll
 ) AS tbl]]></Query>
@@ -370,6 +401,8 @@ FROM
          <Parameter default="area1Param" name="area1Param" type="String"/>
          <Parameter default="area2Param" name="area2Param" type="String"/>
          <Parameter default="area3Param" name="area3Param" type="String"/>
+         <Parameter default="shopParam" name="shopParam" type="String"/>
+         <Parameter default="outletParam" name="outletParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT
     `dim_channel`.`ChannelName`,
@@ -386,6 +419,8 @@ WHERE
      AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)
      AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)
      AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)
+     AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)
+     AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)
 GROUP BY
      `dim_channel`.ChannelName]]></Query>
    </DataAccess>
@@ -411,6 +446,8 @@ GROUP BY
          <Parameter default="area1Param" name="area1Param" type="String"/>
          <Parameter default="area2Param" name="area2Param" type="String"/>
          <Parameter default="area3Param" name="area3Param" type="String"/>
+         <Parameter default="shopParam" name="shopParam" type="String"/>
+         <Parameter default="outletParam" name="outletParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT
      `dim_bidate`.`BIDateId`,
@@ -429,6 +466,8 @@ WHERE
      AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)
      AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)
      AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)
+     AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)
+     AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)
 GROUP BY
      `dim_bidate`.`BIDateId`,
      `dim_bidate`.`YearMonth`,
@@ -456,6 +495,8 @@ ORDER BY
          <Parameter default="area1Param" name="area1Param" type="String"/>
          <Parameter default="area2Param" name="area2Param" type="String"/>
          <Parameter default="area3Param" name="area3Param" type="String"/>
+         <Parameter default="shopParam" name="shopParam" type="String"/>
+         <Parameter default="outletParam" name="outletParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT
     `dim_bidate`.`BIDateId`,
@@ -474,6 +515,8 @@ WHERE
      AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)
      AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)
      AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)
+     AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)
+     AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)
 GROUP BY
      `dim_bidate`.`BIDateId`,`dim_bidate`.`YearMonth`
 ORDER BY
@@ -490,6 +533,8 @@ ORDER BY
          <Parameter default="area1Param" name="area1Param" type="String"/>
          <Parameter default="area2Param" name="area2Param" type="String"/>
          <Parameter default="area3Param" name="area3Param" type="String"/>
+         <Parameter default="shopParam" name="shopParam" type="String"/>
+         <Parameter default="outletParam" name="outletParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT
     `dim_voidresontype`.`VoidReasonName`,
@@ -506,6 +551,8 @@ WHERE
      AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)
      AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)
      AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)
+     AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)
+     AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)
 GROUP BY 
     `dim_voidresontype`.`VoidReasonName`]]></Query>
    </DataAccess>
@@ -520,6 +567,8 @@ GROUP BY
          <Parameter default="area1Param" name="area1Param" type="String"/>
          <Parameter default="area2Param" name="area2Param" type="String"/>
          <Parameter default="area3Param" name="area3Param" type="String"/>
+         <Parameter default="shopParam" name="shopParam" type="String"/>
+         <Parameter default="outletParam" name="outletParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT
      `dim_voidresontype`.`VoidReasonName`,
@@ -537,6 +586,8 @@ WHERE
      AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)
      AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)
      AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)
+     AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)
+     AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)
 GROUP BY
      `dim_voidresontype`.`VoidReasonName`]]></Query>
    </DataAccess>

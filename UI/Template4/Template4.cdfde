@@ -33,12 +33,12 @@
      {
       "name": "listeners",
       "type": "Listeners",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\"]"
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\",\"${p:shopParam}\",\"${p:outletParam}\"]"
      },
      {
       "name": "parameters",
       "type": "ValuesArray",
-      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"]]"
+      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"],[\"shopParam\",\"shopParam\"],[\"outletParam\",\"outletParam\"]]"
      },
      {
       "name": "dataSource",
@@ -1338,12 +1338,12 @@
      {
       "name": "listeners",
       "type": "Listeners",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\"]"
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\",\"${p:shopParam}\",\"${p:outletParam}\"]"
      },
      {
       "name": "parameters",
       "type": "ValuesArray",
-      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"]]"
+      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"],[\"shopParam\",\"shopParam\"],[\"outletParam\",\"outletParam\"]]"
      },
      {
       "name": "dataSource",
@@ -2008,12 +2008,12 @@
      {
       "name": "listeners",
       "type": "Listeners",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\"]"
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\",\"${p:shopParam}\",\"${p:outletParam}\"]"
      },
      {
       "name": "parameters",
       "type": "ValuesArray",
-      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"]]"
+      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"],[\"shopParam\",\"shopParam\"],[\"outletParam\",\"outletParam\"]]"
      },
      {
       "name": "dataSource",
@@ -2678,12 +2678,12 @@
      {
       "name": "listeners",
       "type": "Listeners",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\"]"
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\",\"${p:shopParam}\",\"${p:outletParam}\"]"
      },
      {
       "name": "parameters",
       "type": "ValuesArray",
-      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"]]"
+      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"],[\"shopParam\",\"shopParam\"],[\"outletParam\",\"outletParam\"]]"
      },
      {
       "name": "dataSource",
@@ -4008,12 +4008,12 @@
      {
       "name": "listeners",
       "type": "Listeners",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\"]"
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\",\"${p:shopParam}\",\"${p:outletParam}\"]"
      },
      {
       "name": "parameters",
       "type": "ValuesArray",
-      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"]]"
+      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"],[\"shopParam\",\"shopParam\"],[\"outletParam\",\"outletParam\"]]"
      },
      {
       "name": "dataSource",
@@ -5313,12 +5313,12 @@
      {
       "name": "listeners",
       "type": "Listeners",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\"]"
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\",\"${p:shopParam}\",\"${p:outletParam}\"]"
      },
      {
       "name": "parameters",
       "type": "ValuesArray",
-      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"]]"
+      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"],[\"shopParam\",\"shopParam\"],[\"outletParam\",\"outletParam\"]]"
      },
      {
       "name": "dataSource",
@@ -5983,12 +5983,12 @@
      {
       "name": "listeners",
       "type": "Listeners",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\"]"
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\",\"${p:shopParam}\",\"${p:outletParam}\"]"
      },
      {
       "name": "parameters",
       "type": "ValuesArray",
-      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"]]"
+      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"],[\"shopParam\",\"shopParam\"],[\"outletParam\",\"outletParam\"]]"
      },
      {
       "name": "dataSource",
@@ -7313,12 +7313,12 @@
      {
       "name": "listeners",
       "type": "Listeners",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\"]"
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\",\"${p:shopParam}\",\"${p:outletParam}\"]"
      },
      {
       "name": "parameters",
       "type": "ValuesArray",
-      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"]]"
+      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"],[\"shopParam\",\"shopParam\"],[\"outletParam\",\"outletParam\"]]"
      },
      {
       "name": "dataSource",
@@ -7983,12 +7983,12 @@
      {
       "name": "listeners",
       "type": "Listeners",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\"]"
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\",\"${p:shopParam}\",\"${p:outletParam}\"]"
      },
      {
       "name": "parameters",
       "type": "ValuesArray",
-      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"]]"
+      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"],[\"shopParam\",\"shopParam\"],[\"outletParam\",\"outletParam\"]]"
      },
      {
       "name": "dataSource",
@@ -9278,12 +9278,12 @@
      {
       "name": "listeners",
       "type": "Listeners",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\"]"
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\",\"${p:shopParam}\",\"${p:outletParam}\"]"
      },
      {
       "name": "parameters",
       "type": "ValuesArray",
-      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"]]"
+      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"],[\"shopParam\",\"shopParam\"],[\"outletParam\",\"outletParam\"]]"
      },
      {
       "name": "dataSource",
@@ -10608,12 +10608,12 @@
      {
       "name": "listeners",
       "type": "Listeners",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\"]"
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\",\"${p:shopParam}\",\"${p:outletParam}\"]"
      },
      {
       "name": "parameters",
       "type": "ValuesArray",
-      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"]]"
+      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"],[\"shopParam\",\"shopParam\"],[\"outletParam\",\"outletParam\"]]"
      },
      {
       "name": "dataSource",
@@ -11262,1308 +11262,1308 @@
    },
    {
     "id": "280ff839-9871-11df-744b-266771a7ffa8",
-    "type": "ComponentscccBarChart",
-    "typeDesc": "CCC Bar Chart",
+    "meta_cdwSupport": "true",
     "parent": "CHARTS",
     "properties": [
      {
       "name": "name",
-      "value": "backItemBar",
-      "type": "Id"
+      "type": "Id",
+      "value": "backItemBar"
      },
      {
       "name": "title",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "listeners",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\"]",
-      "type": "Listeners"
+      "type": "Listeners",
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\",\"${p:shopParam}\",\"${p:outletParam}\"]"
      },
      {
       "name": "parameters",
-      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"]]",
-      "type": "ValuesArray"
+      "type": "ValuesArray",
+      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"],[\"shopParam\",\"shopParam\"],[\"outletParam\",\"outletParam\"]]"
      },
      {
       "name": "dataSource",
-      "value": "delItem2Query",
-      "type": "Datasource"
+      "type": "Datasource",
+      "value": "delItem2Query"
      },
      {
       "name": "height",
-      "value": "320",
-      "type": "Integer"
+      "type": "Integer",
+      "value": "320"
      },
      {
       "name": "priority",
-      "value": 5,
-      "type": "Integer"
+      "type": "Integer",
+      "value": 5
      },
      {
       "name": "refreshPeriod",
-      "value": "",
-      "type": "Integer"
+      "type": "Integer",
+      "value": ""
      },
      {
       "name": "width",
-      "value": "",
-      "type": "Integer"
+      "type": "Integer",
+      "value": ""
      },
      {
       "name": "colors",
-      "value": "[]",
-      "type": "Array"
+      "type": "Array",
+      "value": "[]"
      },
      {
       "name": "htmlObject",
-      "value": "${h:delItem2Dom}",
-      "type": "HtmlObject"
+      "type": "HtmlObject",
+      "value": "${h:delItem2Dom}"
      },
      {
       "name": "executeAtStart",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      },
      {
       "name": "preExecution",
-      "value": "function f(){\r\n    resizeGraphical(this);\r\n} ",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": "function f(){\r\n    resizeGraphical(this);\r\n} "
      },
      {
       "name": "postExecution",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "postFetch",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "preChange",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "postChange",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "extensionPoints",
-      "value": "[]",
-      "type": "EditorValuesArray"
+      "type": "EditorValuesArray",
+      "value": "[]"
      },
      {
       "name": "tooltip",
-      "value": "",
-      "type": "Html"
+      "type": "Html",
+      "value": ""
      },
      {
       "name": "animate",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "barOrthoSizeMin",
-      "value": 1.5,
-      "type": "Float"
+      "type": "Float",
+      "value": 1.5
      },
      {
       "name": "barSizeMax",
-      "value": 2000,
-      "type": "Float"
+      "type": "Float",
+      "value": 2000
      },
      {
       "name": "barSizeRatio",
-      "value": 0.9,
-      "type": "Float"
+      "type": "Float",
+      "value": 0.9
      },
      {
       "name": "barStackedMargin",
-      "value": 0,
-      "type": "Float"
+      "type": "Float",
+      "value": 0
      },
      {
       "name": "baseAxisBandSize",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "baseAxisBandSizeMax",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "baseAxisBandSizeMin",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "baseAxisBandSpacing",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "baseAxisBandSpacingMax",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "baseAxisBandSpacingMin",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "baseAxisClickAction",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "baseAxisDoubleClickAction",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "baseAxisFont",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "baseAxisGrid",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "baseAxisLabelSpacingMin",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "baseAxisOffset",
-      "value": 0,
-      "type": "Float"
+      "type": "Float",
+      "value": 0
      },
      {
       "name": "baseAxisOverlappedLabelsMode",
-      "value": "hide",
-      "type": "cccBaseAxisOverlappedLabelsModeCustom"
+      "type": "cccBaseAxisOverlappedLabelsModeCustom",
+      "value": "hide"
      },
      {
       "name": "baseAxisPosition",
-      "value": "",
-      "type": "cccBaseAxisPositionCustom"
+      "type": "cccBaseAxisPositionCustom",
+      "value": ""
      },
      {
       "name": "baseAxisSize",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "baseAxisSizeMax",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "baseAxisTickFormatter",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "baseAxisTicks",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "baseAxisTitle",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "baseAxisTitleAlign",
-      "value": "",
-      "type": "cccBaseAxisTitleAlignCustom"
+      "type": "cccBaseAxisTitleAlignCustom",
+      "value": ""
      },
      {
       "name": "baseAxisTitleFont",
-      "value": "12px sans-serif",
-      "type": "String"
+      "type": "String",
+      "value": "12px sans-serif"
      },
      {
       "name": "baseAxisTitleMargins",
-      "value": "0",
-      "type": "String"
+      "type": "String",
+      "value": "0"
      },
      {
       "name": "baseAxisTitleSize",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "baseAxisTitleSizeMax",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "baseAxisTooltipAutoContent",
-      "value": "value",
-      "type": "cccBaseAxisTooltipAutoContentCustom"
+      "type": "cccBaseAxisTooltipAutoContentCustom",
+      "value": "value"
      },
      {
       "name": "baseAxisTooltipEnabled",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "baseAxisTooltipFormat",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "baseAxisVisible",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "categoryRole",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "clearSelectionMode",
-      "value": "emptySpaceClick",
-      "type": "cccClearSelectionModeCustom"
+      "type": "cccClearSelectionModeCustom",
+      "value": "emptySpaceClick"
      },
      {
       "name": "clickable",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "clickAction",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "color2AxisColors",
-      "value": "[]",
-      "type": "Array"
+      "type": "Array",
+      "value": "[]"
      },
      {
       "name": "color2AxisLegendClickMode",
-      "value": "toggleVisible",
-      "type": "cccColor2AxisLegendClickModeCustom"
+      "type": "cccColor2AxisLegendClickModeCustom",
+      "value": "toggleVisible"
      },
      {
       "name": "color2AxisLegendDrawLine",
-      "value": "",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": ""
      },
      {
       "name": "color2AxisLegendDrawMarker",
-      "value": "",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": ""
      },
      {
       "name": "color2AxisLegendShape",
-      "value": "",
-      "type": "cccColor2AxisLegendShapeCustom"
+      "type": "cccColor2AxisLegendShapeCustom",
+      "value": ""
      },
      {
       "name": "color2AxisLegendVisible",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "color2AxisTransform",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "color2AxisUnbound",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "colorRole",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "colorTransform",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "colorUnbound",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "compatVersion",
-      "value": 2,
-      "type": "Float"
+      "type": "Float",
+      "value": 2
      },
      {
       "name": "contentMargins",
-      "value": "0",
-      "type": "String"
+      "type": "String",
+      "value": "0"
      },
      {
       "name": "contentPaddings",
-      "value": "0",
-      "type": "String"
+      "type": "String",
+      "value": "0"
      },
      {
       "name": "crosstabMode",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "ctrlSelectMode",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "dataCategoriesCount",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "dataIgnoreMetadataLabels",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "dataMeasuresInColumns",
-      "value": "",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": ""
      },
      {
       "name": "dataPartRole",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "dataSeparator",
-      "value": "~",
-      "type": "String"
+      "type": "String",
+      "value": "~"
      },
      {
       "name": "dataWhere",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "doubleClickAction",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "groupedLabelSep",
-      "value": " ~ ",
-      "type": "String"
+      "type": "String",
+      "value": " ~ "
      },
      {
       "name": "hoverable",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "ignoreNulls",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "interactive",
-      "value": "",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": ""
      },
      {
       "name": "isMultiValued",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "leafContentOverflow",
-      "value": "auto",
-      "type": "cccLeafContentOverflowCustom"
+      "type": "cccLeafContentOverflowCustom",
+      "value": "auto"
      },
      {
       "name": "legend",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "legendAlign",
-      "value": "",
-      "type": "cccLegendAlignCustom"
+      "type": "cccLegendAlignCustom",
+      "value": ""
      },
      {
       "name": "legendClickMode",
-      "value": "toggleVisible",
-      "type": "cccLegendClickModeCustom"
+      "type": "cccLegendClickModeCustom",
+      "value": "toggleVisible"
      },
      {
       "name": "legendDrawLine",
-      "value": "",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": ""
      },
      {
       "name": "legendDrawMarker",
-      "value": "",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": ""
      },
      {
       "name": "legendFont",
-      "value": "10px sans-serif",
-      "type": "String"
+      "type": "String",
+      "value": "10px sans-serif"
      },
      {
       "name": "legendItemPadding",
-      "value": "2.5",
-      "type": "String"
+      "type": "String",
+      "value": "2.5"
      },
      {
       "name": "legendItemSize",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "legendMargins",
-      "value": "0",
-      "type": "String"
+      "type": "String",
+      "value": "0"
      },
      {
       "name": "legendMarkerSize",
-      "value": 15,
-      "type": "Float"
+      "type": "Float",
+      "value": 15
      },
      {
       "name": "legendPaddings",
-      "value": "5",
-      "type": "String"
+      "type": "String",
+      "value": "5"
      },
      {
       "name": "legendPosition",
-      "value": "bottom",
-      "type": "cccLegendPositionCustom"
+      "type": "cccLegendPositionCustom",
+      "value": "bottom"
      },
      {
       "name": "legendShape",
-      "value": "",
-      "type": "cccLegendShapeCustom"
+      "type": "cccLegendShapeCustom",
+      "value": ""
      },
      {
       "name": "legendSize",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "legendSizeMax",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "legendTextMargin",
-      "value": 6,
-      "type": "Float"
+      "type": "Float",
+      "value": 6
      },
      {
       "name": "legendVisible",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "margins",
-      "value": "3",
-      "type": "String"
+      "type": "String",
+      "value": "3"
      },
      {
       "name": "measuresIndexes",
-      "value": "[]",
-      "type": "Array"
+      "type": "Array",
+      "value": "[]"
      },
      {
       "name": "multiChartColumnsMax",
-      "value": 3,
-      "type": "Float"
+      "type": "Float",
+      "value": 3
      },
      {
       "name": "multiChartIndexes",
-      "value": "[]",
-      "type": "Array"
+      "type": "Array",
+      "value": "[]"
      },
      {
       "name": "multiChartMax",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "multiChartOverflow",
-      "value": "grow",
-      "type": "cccMultiChartOverflowCustom"
+      "type": "cccMultiChartOverflowCustom",
+      "value": "grow"
      },
      {
       "name": "multiChartRole",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "multiChartSingleColFillsHeight",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "multiChartSingleRowFillsHeight",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "nullInterpolationMode",
-      "value": "none",
-      "type": "cccNullInterpolationModeCustom"
+      "type": "cccNullInterpolationModeCustom",
+      "value": "none"
      },
      {
       "name": "orientation",
-      "value": "vertical",
-      "type": "cccOrientationCustom"
+      "type": "cccOrientationCustom",
+      "value": "vertical"
      },
      {
       "name": "ortho2AxisDesiredTickCount",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "ortho2AxisDomainRoundMode",
-      "value": "tick",
-      "type": "cccOrtho2AxisDomainRoundModeCustom"
+      "type": "cccOrtho2AxisDomainRoundModeCustom",
+      "value": "tick"
      },
      {
       "name": "ortho2AxisDomainScope",
-      "value": "global",
-      "type": "cccOrtho2AxisDomainScopeCustom"
+      "type": "cccOrtho2AxisDomainScopeCustom",
+      "value": "global"
      },
      {
       "name": "ortho2AxisFixedMax",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "ortho2AxisFixedMin",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "ortho2AxisFont",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "ortho2AxisGrid",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "ortho2AxisLabelSpacingMin",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "ortho2AxisMinorTicks",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "ortho2AxisOffset",
-      "value": 0,
-      "type": "Float"
+      "type": "Float",
+      "value": 0
      },
      {
       "name": "ortho2AxisOriginIsZero",
-      "value": "",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": ""
      },
      {
       "name": "ortho2AxisOverlappedLabelsMode",
-      "value": "hide",
-      "type": "cccOrtho2AxisOverlappedLabelsModeCustom"
+      "type": "cccOrtho2AxisOverlappedLabelsModeCustom",
+      "value": "hide"
      },
      {
       "name": "ortho2AxisPosition",
-      "value": "",
-      "type": "cccOrtho2AxisPositionCustom"
+      "type": "cccOrtho2AxisPositionCustom",
+      "value": ""
      },
      {
       "name": "ortho2AxisSize",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "ortho2AxisSizeMax",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "ortho2AxisTickExponentMax",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "ortho2AxisTickExponentMin",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "ortho2AxisTickFormatter",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "ortho2AxisTicks",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "ortho2AxisTickUnit",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "ortho2AxisTickUnitMax",
-      "value": "Infinity",
-      "type": "String"
+      "type": "String",
+      "value": "Infinity"
      },
      {
       "name": "ortho2AxisTickUnitMin",
-      "value": "0",
-      "type": "String"
+      "type": "String",
+      "value": "0"
      },
      {
       "name": "ortho2AxisTitle",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "ortho2AxisTitleAlign",
-      "value": "",
-      "type": "cccOrtho2AxisTitleAlignCustom"
+      "type": "cccOrtho2AxisTitleAlignCustom",
+      "value": ""
      },
      {
       "name": "ortho2AxisTitleFont",
-      "value": "12px sans-serif",
-      "type": "String"
+      "type": "String",
+      "value": "12px sans-serif"
      },
      {
       "name": "ortho2AxisTitleMargins",
-      "value": "0",
-      "type": "String"
+      "type": "String",
+      "value": "0"
      },
      {
       "name": "ortho2AxisTitleSize",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "ortho2AxisTitleSizeMax",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "ortho2AxisVisible",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "ortho2AxisZeroLine",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "orthoAxisDesiredTickCount",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "orthoAxisDomainRoundMode",
-      "value": "tick",
-      "type": "cccOrthoAxisDomainRoundModeCustom"
+      "type": "cccOrthoAxisDomainRoundModeCustom",
+      "value": "tick"
      },
      {
       "name": "orthoAxisDomainScope",
-      "value": "global",
-      "type": "cccOrthoAxisDomainScopeCustom"
+      "type": "cccOrthoAxisDomainScopeCustom",
+      "value": "global"
      },
      {
       "name": "orthoAxisFixedMax",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "orthoAxisFixedMin",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "orthoAxisFont",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "orthoAxisGrid",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "orthoAxisLabelSpacingMin",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "orthoAxisMinorTicks",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "orthoAxisOffset",
-      "value": 0,
-      "type": "Float"
+      "type": "Float",
+      "value": 0
      },
      {
       "name": "orthoAxisOriginIsZero",
-      "value": "",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": ""
      },
      {
       "name": "orthoAxisOverlappedLabelsMode",
-      "value": "hide",
-      "type": "cccOrthoAxisOverlappedLabelsModeCustom"
+      "type": "cccOrthoAxisOverlappedLabelsModeCustom",
+      "value": "hide"
      },
      {
       "name": "orthoAxisPosition",
-      "value": "",
-      "type": "cccOrthoAxisPositionCustom"
+      "type": "cccOrthoAxisPositionCustom",
+      "value": ""
      },
      {
       "name": "orthoAxisSize",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "orthoAxisSizeMax",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "orthoAxisTickExponentMax",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "orthoAxisTickExponentMin",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "orthoAxisTickFormatter",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "orthoAxisTicks",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "orthoAxisTickUnit",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "orthoAxisTickUnitMax",
-      "value": "Infinity",
-      "type": "String"
+      "type": "String",
+      "value": "Infinity"
      },
      {
       "name": "orthoAxisTickUnitMin",
-      "value": "0",
-      "type": "String"
+      "type": "String",
+      "value": "0"
      },
      {
       "name": "orthoAxisTitle",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "orthoAxisTitleAlign",
-      "value": "",
-      "type": "cccOrthoAxisTitleAlignCustom"
+      "type": "cccOrthoAxisTitleAlignCustom",
+      "value": ""
      },
      {
       "name": "orthoAxisTitleFont",
-      "value": "12px sans-serif",
-      "type": "String"
+      "type": "String",
+      "value": "12px sans-serif"
      },
      {
       "name": "orthoAxisTitleMargins",
-      "value": "0",
-      "type": "String"
+      "type": "String",
+      "value": "0"
      },
      {
       "name": "orthoAxisTitleSize",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "orthoAxisTitleSizeMax",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "orthoAxisVisible",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "orthoAxisZeroLine",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "overflowMarkersVisible",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "paddings",
-      "value": "0",
-      "type": "String"
+      "type": "String",
+      "value": "0"
      },
      {
       "name": "panelSizeRatio",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "percentValueFormat",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "plot2",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      },
      {
       "name": "plot2AreasVisible",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "plot2ColorAxis",
-      "value": 2,
-      "type": "Float"
+      "type": "Float",
+      "value": 2
      },
      {
       "name": "plot2DotsVisible",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "plot2LinesVisible",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "plot2NullInterpolationMode",
-      "value": "none",
-      "type": "cccPlot2NullInterpolationModeCustom"
+      "type": "cccPlot2NullInterpolationModeCustom",
+      "value": "none"
      },
      {
       "name": "plot2OrthoAxis",
-      "value": "2",
-      "type": "Float"
+      "type": "Float",
+      "value": "2"
      },
      {
       "name": "plot2Series",
-      "value": "[]",
-      "type": "Array"
+      "type": "Array",
+      "value": "[]"
      },
      {
       "name": "plot2SeriesIndexes",
-      "value": -1,
-      "type": "Array"
+      "type": "Array",
+      "value": -1
      },
      {
       "name": "plot2Stacked",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "plot2TrendLabel",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "plot2TrendType",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "plot2ValuesAnchor",
-      "value": "",
-      "type": "cccPlot2ValuesAnchorCustom"
+      "type": "cccPlot2ValuesAnchorCustom",
+      "value": ""
      },
      {
       "name": "plot2ValuesFont",
-      "value": "10px sans-serif",
-      "type": "String"
+      "type": "String",
+      "value": "10px sans-serif"
      },
      {
       "name": "plot2ValuesMask",
-      "value": "{value}",
-      "type": "String"
+      "type": "String",
+      "value": "{value}"
      },
      {
       "name": "plot2ValuesVisible",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "plotFrameVisible",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "pointingMode",
-      "value": "near",
-      "type": "cccPointingModeCustom"
+      "type": "cccPointingModeCustom",
+      "value": "near"
      },
      {
       "name": "readers",
-      "value": "[]",
-      "type": "Array"
+      "type": "Array",
+      "value": "[]"
      },
      {
       "name": "renderCallback",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "renderedCallback",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "selectable",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "selectionChangedAction",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "seriesInRows",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "seriesRole",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "smallAspectRatio",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "smallContentMargins",
-      "value": "0",
-      "type": "String"
+      "type": "String",
+      "value": "0"
      },
      {
       "name": "smallContentPaddings",
-      "value": "0",
-      "type": "String"
+      "type": "String",
+      "value": "0"
      },
      {
       "name": "smallHeight",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "smallMargins",
-      "value": "2%",
-      "type": "String"
+      "type": "String",
+      "value": "2%"
      },
      {
       "name": "smallPaddings",
-      "value": "0",
-      "type": "String"
+      "type": "String",
+      "value": "0"
      },
      {
       "name": "smallTitleAlign",
-      "value": "",
-      "type": "cccSmallTitleAlignCustom"
+      "type": "cccSmallTitleAlignCustom",
+      "value": ""
      },
      {
       "name": "smallTitleFont",
-      "value": "14px sans-serif",
-      "type": "String"
+      "type": "String",
+      "value": "14px sans-serif"
      },
      {
       "name": "smallTitleMargins",
-      "value": "0",
-      "type": "String"
+      "type": "String",
+      "value": "0"
      },
      {
       "name": "smallTitlePaddings",
-      "value": "0",
-      "type": "String"
+      "type": "String",
+      "value": "0"
      },
      {
       "name": "smallTitlePosition",
-      "value": "top",
-      "type": "cccSmallTitlePositionCustom"
+      "type": "cccSmallTitlePositionCustom",
+      "value": "top"
      },
      {
       "name": "smallTitleSize",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "smallTitleSizeMax",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "smallWidth",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "stacked",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "timeSeries",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "timeSeriesFormat",
-      "value": "%Y-%m-%d",
-      "type": "String"
+      "type": "String",
+      "value": "%Y-%m-%d"
      },
      {
       "name": "titleAlign",
-      "value": "",
-      "type": "cccTitleAlignCustom"
+      "type": "cccTitleAlignCustom",
+      "value": ""
      },
      {
       "name": "titleFont",
-      "value": "14px sans-serif",
-      "type": "String"
+      "type": "String",
+      "value": "14px sans-serif"
      },
      {
       "name": "titleMargins",
-      "value": "0",
-      "type": "String"
+      "type": "String",
+      "value": "0"
      },
      {
       "name": "titlePaddings",
-      "value": "0",
-      "type": "String"
+      "type": "String",
+      "value": "0"
      },
      {
       "name": "titlePosition",
-      "value": "top",
-      "type": "cccTitlePositionCustom"
+      "type": "cccTitlePositionCustom",
+      "value": "top"
      },
      {
       "name": "titleSize",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "titleSizeMax",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "tooltipArrowVisible",
-      "value": "",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": ""
      },
      {
       "name": "tooltipClassName",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "tooltipEnabled",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "tooltipFade",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "tooltipFollowMouse",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "tooltipFormat",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "tooltipGravity",
-      "value": "",
-      "type": "cccTooltipGravityCustom"
+      "type": "cccTooltipGravityCustom",
+      "value": ""
      },
      {
       "name": "tooltipHtml",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "tooltipOffset",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "tooltipOpacity",
-      "value": 0.9,
-      "type": "Float"
+      "type": "Float",
+      "value": 0.9
      },
      {
       "name": "tooltipUseCorners",
-      "value": "",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": ""
      },
      {
       "name": "trendAreasVisible",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "trendColorAxis",
-      "value": 2,
-      "type": "Float"
+      "type": "Float",
+      "value": 2
      },
      {
       "name": "trendDotsVisible",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "trendLabel",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "trendLinesVisible",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "trendOrthoAxis",
-      "value": 1,
-      "type": "Float"
+      "type": "Float",
+      "value": 1
      },
      {
       "name": "trendStacked",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "trendType",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "trendValuesAnchor",
-      "value": "right",
-      "type": "cccTrendValuesAnchorCustom"
+      "type": "cccTrendValuesAnchorCustom",
+      "value": "right"
      },
      {
       "name": "trendValuesFont",
-      "value": "10px sans-serif",
-      "type": "String"
+      "type": "String",
+      "value": "10px sans-serif"
      },
      {
       "name": "trendValuesMask",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "trendValuesVisible",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "userSelectionAction",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "valueFormat",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "valueRole",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "valuesAnchor",
-      "value": "",
-      "type": "cccValuesAnchorCustom"
+      "type": "cccValuesAnchorCustom",
+      "value": ""
      },
      {
       "name": "valuesFont",
-      "value": "10px sans-serif",
-      "type": "String"
+      "type": "String",
+      "value": "10px sans-serif"
      },
      {
       "name": "valuesMask",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "valuesNormalized",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "valuesOptimizeLegibility",
-      "value": "",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": ""
      },
      {
       "name": "valuesOverflow",
-      "value": "hide",
-      "type": "cccValuesOverflowCustom"
+      "type": "cccValuesOverflowCustom",
+      "value": "hide"
      },
      {
       "name": "valuesVisible",
-      "value": "",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": ""
      }
     ],
-    "meta_cdwSupport": "true",
-    "rowName": "CCC Bar Chart"
+    "rowName": "CCC Bar Chart",
+    "type": "ComponentscccBarChart",
+    "typeDesc": "CCC Bar Chart"
    },
    {
     "id": "OTHERCOMPONENTS",
@@ -12793,743 +12793,1039 @@
    {
     "id": "GENERIC",
     "name": "Generic",
-    "type": "Label",
-    "typeDesc": "<i>Group</i>",
     "parent": "UnIqEiD",
     "properties": [
      {
       "name": "Group",
-      "value": "Generic",
-      "type": "Label"
+      "type": "Label",
+      "value": "Generic"
      }
-    ]
+    ],
+    "type": "Label",
+    "typeDesc": "<i>Group</i>"
    },
    {
     "id": "eaa7b03d-f5c4-c0b2-544b-fefcb8bbb973",
-    "type": "ComponentsDateParameter",
-    "typeDesc": "Date Parameter",
     "parent": "GENERIC",
     "properties": [
      {
       "name": "name",
-      "value": "",
-      "type": "Id"
+      "type": "Id",
+      "value": ""
      },
      {
       "name": "propertyDateValue",
-      "value": "",
-      "type": "Date"
+      "type": "Date",
+      "value": ""
      },
      {
       "name": "bookmarkable",
-      "value": "false",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "false"
      },
      {
       "name": "public",
-      "value": "false",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "false"
      }
     ],
-    "rowName": "Date Parameter"
+    "rowName": "Date Parameter",
+    "type": "ComponentsDateParameter",
+    "typeDesc": "Date Parameter"
    },
    {
     "id": "bf86308b-4f84-50e7-d217-236c3603687f",
-    "type": "ComponentsDateParameter",
-    "typeDesc": "Date Parameter",
     "parent": "GENERIC",
     "properties": [
      {
       "name": "name",
-      "value": "startDay",
-      "type": "Id"
+      "type": "Id",
+      "value": "startDay"
      },
      {
       "name": "propertyDateValue",
-      "value": "lastMonth",
-      "type": "Date"
+      "type": "Date",
+      "value": "lastMonth"
      },
      {
       "name": "bookmarkable",
-      "value": "false",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "false"
      },
      {
       "name": "public",
-      "value": "false",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "false"
      }
     ],
-    "rowName": "Date Parameter"
+    "rowName": "Date Parameter",
+    "type": "ComponentsDateParameter",
+    "typeDesc": "Date Parameter"
    },
    {
     "id": "e4e18138-494b-cdd9-dd96-6b8f1f62ebf1",
-    "type": "ComponentsDateParameter",
-    "typeDesc": "Date Parameter",
     "parent": "GENERIC",
     "properties": [
      {
       "name": "name",
-      "value": "endDay",
-      "type": "Id"
+      "type": "Id",
+      "value": "endDay"
      },
      {
       "name": "propertyDateValue",
-      "value": "today",
-      "type": "Date"
+      "type": "Date",
+      "value": "today"
      },
      {
       "name": "bookmarkable",
-      "value": "false",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "false"
      },
      {
       "name": "public",
-      "value": "false",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "false"
      }
     ],
-    "rowName": "Date Parameter"
+    "rowName": "Date Parameter",
+    "type": "ComponentsDateParameter",
+    "typeDesc": "Date Parameter"
    },
    {
     "id": "083adb19-0891-4b7b-709b-04cc09d53059",
-    "type": "ComponentsParameter",
-    "typeDesc": "Simple parameter",
     "parent": "GENERIC",
     "properties": [
      {
       "name": "name",
-      "value": "brandParam",
-      "type": "Id"
+      "type": "Id",
+      "value": "brandParam"
      },
      {
       "name": "propertyValue",
-      "value": "-1",
-      "type": "String"
+      "type": "String",
+      "value": "-1"
      },
      {
       "name": "parameterViewRole",
-      "value": "unused",
-      "type": "parameterViewRoleCustom"
+      "type": "parameterViewRoleCustom",
+      "value": "unused"
      },
      {
       "name": "bookmarkable",
-      "value": "false",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "false"
      },
      {
       "name": "public",
-      "value": "false",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "false"
      }
     ],
-    "rowName": "Simple Parameter"
+    "rowName": "Simple Parameter",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter"
    },
    {
     "id": "1db2930f-b7cd-747c-da50-2188d44206a8",
-    "type": "ComponentsParameter",
-    "typeDesc": "Simple parameter",
     "parent": "GENERIC",
     "properties": [
      {
       "name": "name",
-      "value": "area1Param",
-      "type": "Id"
+      "type": "Id",
+      "value": "area1Param"
      },
      {
       "name": "propertyValue",
-      "value": "-1",
-      "type": "String"
+      "type": "String",
+      "value": "-1"
      },
      {
       "name": "parameterViewRole",
-      "value": "unused",
-      "type": "parameterViewRoleCustom"
+      "type": "parameterViewRoleCustom",
+      "value": "unused"
      },
      {
       "name": "bookmarkable",
-      "value": "false",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "false"
      },
      {
       "name": "public",
-      "value": "false",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "false"
      }
     ],
-    "rowName": "Simple Parameter"
+    "rowName": "Simple Parameter",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter"
    },
    {
     "id": "8d545ba7-f6d2-d355-d942-1ddd09219858",
-    "type": "ComponentsParameter",
-    "typeDesc": "Simple parameter",
     "parent": "GENERIC",
     "properties": [
      {
       "name": "name",
-      "value": "area2Param",
-      "type": "Id"
+      "type": "Id",
+      "value": "area2Param"
      },
      {
       "name": "propertyValue",
-      "value": "-1",
-      "type": "String"
+      "type": "String",
+      "value": "-1"
      },
      {
       "name": "parameterViewRole",
-      "value": "unused",
-      "type": "parameterViewRoleCustom"
+      "type": "parameterViewRoleCustom",
+      "value": "unused"
      },
      {
       "name": "bookmarkable",
-      "value": "false",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "false"
      },
      {
       "name": "public",
-      "value": "false",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "false"
      }
     ],
-    "rowName": "Simple Parameter"
+    "rowName": "Simple Parameter",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter"
    },
    {
     "id": "60108fb0-f38d-48ff-bec9-22d01a736d18",
-    "type": "ComponentsParameter",
-    "typeDesc": "Simple parameter",
     "parent": "GENERIC",
     "properties": [
      {
       "name": "name",
-      "value": "area3Param",
-      "type": "Id"
+      "type": "Id",
+      "value": "area3Param"
      },
      {
       "name": "propertyValue",
-      "value": "-1",
-      "type": "String"
+      "type": "String",
+      "value": "-1"
      },
      {
       "name": "parameterViewRole",
-      "value": "unused",
-      "type": "parameterViewRoleCustom"
+      "type": "parameterViewRoleCustom",
+      "value": "unused"
      },
      {
       "name": "bookmarkable",
-      "value": "false",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "false"
      },
      {
       "name": "public",
-      "value": "false",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "false"
      }
     ],
-    "rowName": "Simple Parameter"
+    "rowName": "Simple Parameter",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter"
+   },
+   {
+    "id": "e9d7ae1d-a8b8-facc-373d-553a94aba49a",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "shopParam"
+     },
+     {
+      "name": "propertyValue",
+      "type": "String",
+      "value": "-1"
+     },
+     {
+      "name": "parameterViewRole",
+      "type": "parameterViewRoleCustom",
+      "value": "unused"
+     },
+     {
+      "name": "bookmarkable",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "public",
+      "type": "Boolean",
+      "value": "false"
+     }
+    ],
+    "rowName": "Simple Parameter",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter"
+   },
+   {
+    "id": "8f3b7f39-9aa6-a90c-1758-431164769250",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "outletParam"
+     },
+     {
+      "name": "propertyValue",
+      "type": "String",
+      "value": "-1"
+     },
+     {
+      "name": "parameterViewRole",
+      "type": "parameterViewRoleCustom",
+      "value": "unused"
+     },
+     {
+      "name": "bookmarkable",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "public",
+      "type": "Boolean",
+      "value": "false"
+     }
+    ],
+    "rowName": "Simple Parameter",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter"
    },
    {
     "id": "SELECTORS",
     "name": "Selects",
-    "type": "Label",
-    "typeDesc": "<i>Group</i>",
     "parent": "UnIqEiD",
     "properties": [
      {
       "name": "Group",
-      "value": "Selects",
-      "type": "Label"
+      "type": "Label",
+      "value": "Selects"
      }
-    ]
+    ],
+    "type": "Label",
+    "typeDesc": "<i>Group</i>"
    },
    {
     "id": "d95ef249-2de1-0f69-c231-f2e7585d29b1",
-    "type": "ComponentsDateRangeInput",
-    "typeDesc": "Date range input Component",
     "parent": "SELECTORS",
     "properties": [
      {
       "name": "name",
-      "value": "dateRangePicker",
-      "type": "Id"
+      "type": "Id",
+      "value": "dateRangePicker"
      },
      {
       "name": "listeners",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\"]",
-      "type": "Listeners"
+      "type": "Listeners",
+      "value": "[\"${p:startDay}\",\"${p:endDay}\"]"
      },
      {
       "name": "earliestDate",
-      "value": "-1years",
-      "type": "String"
+      "type": "String",
+      "value": "-1years"
      },
      {
       "name": "latestDate",
-      "value": "+1years",
-      "type": "String"
+      "type": "String",
+      "value": "+1years"
      },
      {
       "name": "leftOffset",
-      "value": 0,
-      "type": "Integer"
+      "type": "Integer",
+      "value": 0
      },
      {
       "name": "topOffset",
-      "value": 15,
-      "type": "Integer"
+      "type": "Integer",
+      "value": 15
      },
      {
       "name": "parameter",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\"]",
-      "type": "ArrayParameter"
+      "type": "ArrayParameter",
+      "value": "[\"${p:startDay}\",\"${p:endDay}\"]"
      },
      {
       "name": "singleInput",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      },
      {
       "name": "inputSeparator",
-      "value": "~",
-      "type": "String"
+      "type": "String",
+      "value": "~"
      },
      {
       "name": "canClickOutsidePopup",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "priority",
-      "value": 5,
-      "type": "Integer"
+      "type": "Integer",
+      "value": 5
      },
      {
       "name": "htmlObject",
-      "value": "${h:dateRangePickerDom}",
-      "type": "HtmlObject"
+      "type": "HtmlObject",
+      "value": "${h:dateRangePickerDom}"
      },
      {
       "name": "onCloseEvent",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "onOpenEvent",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "executeAtStart",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      },
      {
       "name": "preExecution",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "postExecution",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "preChange",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "postChange",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "tooltip",
-      "value": "",
-      "type": "Html"
+      "type": "Html",
+      "value": ""
      }
     ],
-    "rowName": "Date range input Component"
+    "rowName": "Date range input Component",
+    "type": "ComponentsDateRangeInput",
+    "typeDesc": "Date range input Component"
    },
    {
     "id": "IVYISBOOTSTRAP",
     "name": "Ivy IS Bootstrap",
-    "type": "Label",
-    "typeDesc": "<i>Group</i>",
     "parent": "UnIqEiD",
     "properties": [
      {
       "name": "Group",
-      "value": "Ivy IS Bootstrap",
-      "type": "Label"
+      "type": "Label",
+      "value": "Ivy IS Bootstrap"
      }
-    ]
+    ],
+    "type": "Label",
+    "typeDesc": "<i>Group</i>"
    },
    {
     "id": "433b28a6-4e0b-27d0-8c14-68bab0237674",
-    "type": "ComponentsBSSelectBaseComponent",
-    "typeDesc": "Bootstrap Select",
     "parent": "IVYISBOOTSTRAP",
     "properties": [
      {
       "name": "name",
-      "value": "brandSelect",
-      "type": "Id"
+      "type": "Id",
+      "value": "brandSelect"
      },
      {
       "name": "parameter",
-      "value": "${p:brandParam}",
-      "type": "Parameter"
+      "type": "Parameter",
+      "value": "${p:brandParam}"
      },
      {
       "name": "listeners",
-      "value": "[\"${p:brandParam}\"]",
-      "type": "Listeners"
+      "type": "Listeners",
+      "value": "[\"${p:brandParam}\"]"
      },
      {
       "name": "parameters",
-      "value": "[[\"brandParam\",\"brandParam\"]]",
-      "type": "ValuesArray"
+      "type": "ValuesArray",
+      "value": "[[\"brandParam\",\"brandParam\"]]"
      },
      {
       "name": "valueAsId",
-      "value": "false",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "false"
      },
      {
       "name": "dataSource",
-      "value": "brandSelectQuery",
-      "type": "Datasource"
+      "type": "Datasource",
+      "value": "brandSelectQuery"
      },
      {
       "name": "valuesArray",
-      "value": "[]",
-      "type": "ValuesArray"
+      "type": "ValuesArray",
+      "value": "[]"
      },
      {
       "name": "priority",
-      "value": 5,
-      "type": "Integer"
+      "type": "Integer",
+      "value": 5
      },
      {
       "name": "refreshPeriod",
-      "value": "",
-      "type": "Integer"
+      "type": "Integer",
+      "value": ""
      },
      {
       "name": "buttonBlock",
-      "value": "false",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "false"
      },
      {
       "name": "buttonType",
-      "value": "btn-default",
-      "type": "buttonTypeCustom"
+      "type": "buttonTypeCustom",
+      "value": "btn-default"
      },
      {
       "name": "buttonSize",
-      "value": "btn-xs",
-      "type": "buttonSizeCustom"
+      "type": "buttonSizeCustom",
+      "value": "btn-xs"
      },
      {
       "name": "prependIcon",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      },
      {
       "name": "buttonIcon",
-      "value": "glyphicon-th",
-      "type": "buttonIconCustom"
+      "type": "buttonIconCustom",
+      "value": "glyphicon-th"
      },
      {
       "name": "htmlObject",
-      "value": "${h:brandDom}",
-      "type": "HtmlObject"
+      "type": "HtmlObject",
+      "value": "${h:brandDom}"
      },
      {
       "name": "executeAtStart",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      },
      {
       "name": "preExecution",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "postExecution",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "postFetch",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "preChange",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "postChange",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      }
     ],
-    "rowName": "Bootstrap Select"
+    "rowName": "Bootstrap Select",
+    "type": "ComponentsBSSelectBaseComponent",
+    "typeDesc": "Bootstrap Select"
    },
    {
     "id": "3f4a53e3-7d42-41fc-ec42-1f2840e316f2",
-    "type": "ComponentsBSSelectBaseComponent",
-    "typeDesc": "Bootstrap Select",
     "parent": "IVYISBOOTSTRAP",
     "properties": [
      {
       "name": "name",
-      "value": "area1Select",
-      "type": "Id"
+      "type": "Id",
+      "value": "area1Select"
      },
      {
       "name": "parameter",
-      "value": "${p:area1Param}",
-      "type": "Parameter"
+      "type": "Parameter",
+      "value": "${p:area1Param}"
      },
      {
       "name": "listeners",
-      "value": "[\"${p:area1Param}\"]",
-      "type": "Listeners"
+      "type": "Listeners",
+      "value": "[\"${p:area1Param}\"]"
      },
      {
       "name": "parameters",
-      "value": "[[\"area1Param\",\"area1Param\"]]",
-      "type": "ValuesArray"
+      "type": "ValuesArray",
+      "value": "[[\"area1Param\",\"area1Param\"]]"
      },
      {
       "name": "valueAsId",
-      "value": "false",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "false"
      },
      {
       "name": "dataSource",
-      "value": "area1SelectQuery",
-      "type": "Datasource"
+      "type": "Datasource",
+      "value": "area1SelectQuery"
      },
      {
       "name": "valuesArray",
-      "value": "[]",
-      "type": "ValuesArray"
+      "type": "ValuesArray",
+      "value": "[]"
      },
      {
       "name": "priority",
-      "value": 5,
-      "type": "Integer"
+      "type": "Integer",
+      "value": 5
      },
      {
       "name": "refreshPeriod",
-      "value": "",
-      "type": "Integer"
+      "type": "Integer",
+      "value": ""
      },
      {
       "name": "buttonBlock",
-      "value": "false",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "false"
      },
      {
       "name": "buttonType",
-      "value": "btn-default",
-      "type": "buttonTypeCustom"
+      "type": "buttonTypeCustom",
+      "value": "btn-default"
      },
      {
       "name": "buttonSize",
-      "value": "btn-xs",
-      "type": "buttonSizeCustom"
+      "type": "buttonSizeCustom",
+      "value": "btn-xs"
      },
      {
       "name": "prependIcon",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      },
      {
       "name": "buttonIcon",
-      "value": "glyphicon-th",
-      "type": "buttonIconCustom"
+      "type": "buttonIconCustom",
+      "value": "glyphicon-th"
      },
      {
       "name": "htmlObject",
-      "value": "${h:area1Dom}",
-      "type": "HtmlObject"
+      "type": "HtmlObject",
+      "value": "${h:area1Dom}"
      },
      {
       "name": "executeAtStart",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      },
      {
       "name": "preExecution",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "postExecution",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "postFetch",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "preChange",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "postChange",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      }
     ],
-    "rowName": "Bootstrap Select"
+    "rowName": "Bootstrap Select",
+    "type": "ComponentsBSSelectBaseComponent",
+    "typeDesc": "Bootstrap Select"
    },
    {
     "id": "8ee41f8e-609b-9591-0806-0a00a9b2e0db",
-    "type": "ComponentsBSSelectBaseComponent",
-    "typeDesc": "Bootstrap Select",
     "parent": "IVYISBOOTSTRAP",
     "properties": [
      {
       "name": "name",
-      "value": "area2Select",
-      "type": "Id"
+      "type": "Id",
+      "value": "area2Select"
      },
      {
       "name": "parameter",
-      "value": "${p:area2Param}",
-      "type": "Parameter"
+      "type": "Parameter",
+      "value": "${p:area2Param}"
      },
      {
       "name": "listeners",
-      "value": "[\"${p:area2Param}\"]",
-      "type": "Listeners"
+      "type": "Listeners",
+      "value": "[\"${p:area2Param}\"]"
      },
      {
       "name": "parameters",
-      "value": "[[\"area2Param\",\"area2Param\"],[\"area1Param\",\"area1Param\"]]",
-      "type": "ValuesArray"
+      "type": "ValuesArray",
+      "value": "[[\"area2Param\",\"area2Param\"],[\"area1Param\",\"area1Param\"]]"
      },
      {
       "name": "valueAsId",
-      "value": "false",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "false"
      },
      {
       "name": "dataSource",
-      "value": "area2SelectQuery",
-      "type": "Datasource"
+      "type": "Datasource",
+      "value": "area2SelectQuery"
      },
      {
       "name": "valuesArray",
-      "value": "[]",
-      "type": "ValuesArray"
+      "type": "ValuesArray",
+      "value": "[]"
      },
      {
       "name": "priority",
-      "value": 5,
-      "type": "Integer"
+      "type": "Integer",
+      "value": 5
      },
      {
       "name": "refreshPeriod",
-      "value": "",
-      "type": "Integer"
+      "type": "Integer",
+      "value": ""
      },
      {
       "name": "buttonBlock",
-      "value": "false",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "false"
      },
      {
       "name": "buttonType",
-      "value": "btn-default",
-      "type": "buttonTypeCustom"
+      "type": "buttonTypeCustom",
+      "value": "btn-default"
      },
      {
       "name": "buttonSize",
-      "value": "btn-xs",
-      "type": "buttonSizeCustom"
+      "type": "buttonSizeCustom",
+      "value": "btn-xs"
      },
      {
       "name": "prependIcon",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      },
      {
       "name": "buttonIcon",
-      "value": "glyphicon-th",
-      "type": "buttonIconCustom"
+      "type": "buttonIconCustom",
+      "value": "glyphicon-th"
      },
      {
       "name": "htmlObject",
-      "value": "${h:area2Dom}",
-      "type": "HtmlObject"
+      "type": "HtmlObject",
+      "value": "${h:area2Dom}"
      },
      {
       "name": "executeAtStart",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      },
      {
       "name": "preExecution",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "postExecution",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "postFetch",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "preChange",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "postChange",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      }
     ],
-    "rowName": "Bootstrap Select"
+    "rowName": "Bootstrap Select",
+    "type": "ComponentsBSSelectBaseComponent",
+    "typeDesc": "Bootstrap Select"
    },
    {
     "id": "465e7b16-04df-a4cd-7985-d54506cef31c",
+    "parent": "IVYISBOOTSTRAP",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "area3Select"
+     },
+     {
+      "name": "parameter",
+      "type": "Parameter",
+      "value": "${p:area3Param}"
+     },
+     {
+      "name": "listeners",
+      "type": "Listeners",
+      "value": "[\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\"]"
+     },
+     {
+      "name": "parameters",
+      "type": "ValuesArray",
+      "value": "[[\"area2Param\",\"area2Param\"],[\"area1Param\",\"area1Param\"],[\"area3Param\",\"area3Param\"]]"
+     },
+     {
+      "name": "valueAsId",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "dataSource",
+      "type": "Datasource",
+      "value": "area3SelectQuery"
+     },
+     {
+      "name": "valuesArray",
+      "type": "ValuesArray",
+      "value": "[]"
+     },
+     {
+      "name": "priority",
+      "type": "Integer",
+      "value": 5
+     },
+     {
+      "name": "refreshPeriod",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "buttonBlock",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "buttonType",
+      "type": "buttonTypeCustom",
+      "value": "btn-default"
+     },
+     {
+      "name": "buttonSize",
+      "type": "buttonSizeCustom",
+      "value": "btn-xs"
+     },
+     {
+      "name": "prependIcon",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "buttonIcon",
+      "type": "buttonIconCustom",
+      "value": "glyphicon-th"
+     },
+     {
+      "name": "htmlObject",
+      "type": "HtmlObject",
+      "value": "${h:area3Dom}"
+     },
+     {
+      "name": "executeAtStart",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "preExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postFetch",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "preChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postChange",
+      "type": "JavaScript",
+      "value": ""
+     }
+    ],
+    "rowName": "Bootstrap Select",
+    "type": "ComponentsBSSelectBaseComponent",
+    "typeDesc": "Bootstrap Select"
+   },
+   {
+    "id": "1f3d9a88-f8fc-299c-3869-5bcc4955721c",
+    "parent": "IVYISBOOTSTRAP",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "shopSelect"
+     },
+     {
+      "name": "parameter",
+      "type": "Parameter",
+      "value": "${p:shopParam}"
+     },
+     {
+      "name": "listeners",
+      "type": "Listeners",
+      "value": "[\"${p:shopParam}\"]"
+     },
+     {
+      "name": "parameters",
+      "type": "ValuesArray",
+      "value": "[[\"shopParam\",\"shopParam\"]]"
+     },
+     {
+      "name": "valueAsId",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "dataSource",
+      "type": "Datasource",
+      "value": "shopSelectQuery"
+     },
+     {
+      "name": "valuesArray",
+      "type": "ValuesArray",
+      "value": "[]"
+     },
+     {
+      "name": "priority",
+      "type": "Integer",
+      "value": 5
+     },
+     {
+      "name": "refreshPeriod",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "buttonBlock",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "buttonType",
+      "type": "buttonTypeCustom",
+      "value": "btn-default"
+     },
+     {
+      "name": "buttonSize",
+      "type": "buttonSizeCustom",
+      "value": "btn-xs"
+     },
+     {
+      "name": "prependIcon",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "buttonIcon",
+      "type": "buttonIconCustom",
+      "value": "glyphicon-th"
+     },
+     {
+      "name": "htmlObject",
+      "type": "HtmlObject",
+      "value": "${h:shopSelectDom}"
+     },
+     {
+      "name": "executeAtStart",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "preExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postFetch",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "preChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postChange",
+      "type": "JavaScript",
+      "value": ""
+     }
+    ],
+    "rowName": "Bootstrap Select",
+    "type": "ComponentsBSSelectBaseComponent",
+    "typeDesc": "Bootstrap Select"
+   },
+   {
+    "id": "29c78e81-cb54-1710-ecbb-6d986526894d",
     "type": "ComponentsBSSelectBaseComponent",
     "typeDesc": "Bootstrap Select",
     "parent": "IVYISBOOTSTRAP",
     "properties": [
      {
       "name": "name",
-      "value": "area3Select",
+      "value": "outletSelect",
       "type": "Id"
      },
      {
       "name": "parameter",
-      "value": "${p:area3Param}",
+      "value": "${p:outletParam}",
       "type": "Parameter"
      },
      {
       "name": "listeners",
-      "value": "[\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\"]",
+      "value": "[\"${p:outletParam}\"]",
       "type": "Listeners"
      },
      {
       "name": "parameters",
-      "value": "[[\"area2Param\",\"area2Param\"],[\"area1Param\",\"area1Param\"],[\"area3Param\",\"area3Param\"]]",
+      "value": "[[\"outletParam\",\"outletParam\"]]",
       "type": "ValuesArray"
      },
      {
@@ -13539,7 +13835,7 @@
      },
      {
       "name": "dataSource",
-      "value": "area3SelectQuery",
+      "value": "outletSelectQuery",
       "type": "Datasource"
      },
      {
@@ -13584,7 +13880,7 @@
      },
      {
       "name": "htmlObject",
-      "value": "${h:area3Dom}",
+      "value": "${h:outletSelectDom}",
       "type": "HtmlObject"
      },
      {
@@ -13619,90 +13915,6 @@
      }
     ],
     "rowName": "Bootstrap Select"
-   },
-   {
-    "id": "10a3d0c1-2029-2e0b-4533-c9d0cc414866",
-    "type": "ComponentsBSButtonComponent",
-    "typeDesc": "Bootstrap Button",
-    "parent": "IVYISBOOTSTRAP",
-    "properties": [
-     {
-      "name": "name",
-      "value": "buttonSelect",
-      "type": "Id"
-     },
-     {
-      "name": "label",
-      "value": "",
-      "type": "String"
-     },
-     {
-      "name": "listeners",
-      "value": "[]",
-      "type": "Listeners"
-     },
-     {
-      "name": "expression",
-      "value": "function f(){\n    Dashboards.fireChange('brandParam', -11)\n} ",
-      "type": "JavaScript"
-     },
-     {
-      "name": "priority",
-      "value": 5,
-      "type": "Integer"
-     },
-     {
-      "name": "refreshPeriod",
-      "value": "",
-      "type": "Integer"
-     },
-     {
-      "name": "buttonType",
-      "value": "btn-default",
-      "type": "buttonTypeCustom"
-     },
-     {
-      "name": "buttonBlock",
-      "value": "false",
-      "type": "Boolean"
-     },
-     {
-      "name": "buttonSize",
-      "value": "",
-      "type": "buttonSizeCustom"
-     },
-     {
-      "name": "prependIcon",
-      "value": "False",
-      "type": "Boolean"
-     },
-     {
-      "name": "buttonIcon",
-      "value": "none",
-      "type": "buttonIconCustom"
-     },
-     {
-      "name": "htmlObject",
-      "value": "${h:buttonSelectDom}",
-      "type": "HtmlObject"
-     },
-     {
-      "name": "executeAtStart",
-      "value": "true",
-      "type": "Boolean"
-     },
-     {
-      "name": "preExecution",
-      "value": "",
-      "type": "JavaScript"
-     },
-     {
-      "name": "postExecution",
-      "value": "",
-      "type": "JavaScript"
-     }
-    ],
-    "rowName": "Bootstrap Button"
    }
   ]
  },
@@ -13724,75 +13936,75 @@
    },
    {
     "id": "e003fc3e-1fda-4663-87d2-9eae52c06a45",
-    "type": "Componentssql_sqlJndi",
-    "typeDesc": "sql over sqlJndi",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
     "parent": "SQL",
     "properties": [
      {
       "name": "name",
-      "value": "_________________Charts____________________",
-      "type": "Id"
+      "type": "Id",
+      "value": "_________________Charts____________________"
      },
      {
       "name": "access",
-      "value": "public",
-      "type": "Access"
+      "type": "Access",
+      "value": "public"
      },
      {
       "name": "jndi",
-      "value": "",
-      "type": "Jndi"
+      "type": "Jndi",
+      "value": ""
      },
      {
       "name": "query",
-      "value": "",
-      "type": "SqlQuery"
+      "type": "SqlQuery",
+      "value": ""
      },
      {
       "name": "parameters",
-      "value": "[]",
-      "type": "CdaParameters"
+      "type": "CdaParameters",
+      "value": "[]"
      },
      {
       "name": "cdacalculatedcolumns",
-      "value": "[]",
-      "type": "CdaCalculatedColumnsArray"
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
      },
      {
       "name": "cdacolumns",
-      "value": "[]",
-      "type": "CdaColumnsArray"
+      "type": "CdaColumnsArray",
+      "value": "[]"
      },
      {
       "name": "output",
-      "value": "[]",
-      "type": "IndexArray"
+      "type": "IndexArray",
+      "value": "[]"
      },
      {
       "name": "outputMode",
-      "value": "include",
-      "type": "OutputMode"
+      "type": "OutputMode",
+      "value": "include"
      },
      {
       "name": "cacheKeys",
-      "value": "[]",
-      "type": "CacheKeysValues"
+      "type": "CacheKeysValues",
+      "value": "[]"
      },
      {
       "name": "cacheDuration",
-      "value": 3600,
-      "type": "Integer"
+      "type": "Integer",
+      "value": 3600
      },
      {
       "name": "cache",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      }
     ],
-    "meta": "CDA",
-    "meta_conntype": "sql.jndi",
-    "meta_datype": "sql",
-    "rowName": "sql over sqlJndi"
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
    },
    {
     "id": "615f432e-0dfc-7620-bfb2-1435e9b368b0",
@@ -13819,12 +14031,12 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "SELECT \r\n        X.*\r\nFROM\r\n(\r\n    SELECT DISTINCT\r\n    \t\t `Dim_Outlet`.`OutletName`,\r\n\t\t\t sum(`Fact_SumItem`.`ItemSaleAmt`) AS Amount\r\n\tFROM\r\n\t\t\t`Fact_SumItem` INNER JOIN `Dim_BIDate` ON `Fact_SumItem`.`BIDateId` = `Dim_BIDate`.`BIDateId`\r\n\t\t\tINNER JOIN `Dim_Outlet` ON `Fact_SumItem`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`\r\n            INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n            INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\n    WHERE \r\n            `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n            AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n            AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n            AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n            AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\n\tGROUP BY\r\n\t\t\t`Dim_Outlet`.`OutletName`\r\n\tORDER BY\r\n\t\t\tsum(`Fact_SumItem`.`ItemSaleAmt`) DESC\r\n) AS X\r\n"
+      "value": "SELECT \r\n        X.*\r\nFROM\r\n(\r\n    SELECT DISTINCT\r\n    \t\t `Dim_Outlet`.`OutletName`,\r\n\t\t\t sum(`Fact_SumItem`.`ItemSaleAmt`) AS Amount\r\n\tFROM\r\n\t\t\t`Fact_SumItem` INNER JOIN `Dim_BIDate` ON `Fact_SumItem`.`BIDateId` = `Dim_BIDate`.`BIDateId`\r\n\t\t\tINNER JOIN `Dim_Outlet` ON `Fact_SumItem`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`\r\n            INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n            INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\n    WHERE \r\n            `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n            AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n            AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n            AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n            AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\n            AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)\r\n            AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)\r\n\tGROUP BY\r\n\t\t\t`Dim_Outlet`.`OutletName`\r\n\tORDER BY\r\n\t\t\tsum(`Fact_SumItem`.`ItemSaleAmt`) DESC\r\n) AS X\r\n"
      },
      {
       "name": "parameters",
       "type": "CdaParameters",
-      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"]]"
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"],[\"shopParam\",\"shopParam\",\"String\",\"\",\"\"],[\"outletParam\",\"outletParam\",\"String\",\"\",\"\"]]"
      },
      {
       "name": "cdacalculatedcolumns",
@@ -13891,12 +14103,12 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "SELECT\r\n    `dim_periodtype`.`PeriodTypeName`,\r\n    sum(`fact_sumcheck`.`SaleAmt`)\r\nFROM\r\n    `fact_sumcheck` INNER JOIN `dim_periodtype` ON `fact_sumcheck`.`PeriodTypeId` = `dim_periodtype`.`PeriodTypeId`\r\n    INNER JOIN `Dim_BIDate` ON`fact_sumcheck`.`BIDateId` = `Dim_BIDate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_sumcheck.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\nGROUP BY\r\n    `dim_periodtype`.`PeriodTypeName`"
+      "value": "SELECT\r\n    `dim_periodtype`.`PeriodTypeName`,\r\n    sum(`fact_sumcheck`.`SaleAmt`)\r\nFROM\r\n    `fact_sumcheck` INNER JOIN `dim_periodtype` ON `fact_sumcheck`.`PeriodTypeId` = `dim_periodtype`.`PeriodTypeId`\r\n    INNER JOIN `Dim_BIDate` ON`fact_sumcheck`.`BIDateId` = `Dim_BIDate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_sumcheck.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\n     AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)\r\n     AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)\r\nGROUP BY\r\n    `dim_periodtype`.`PeriodTypeName`"
      },
      {
       "name": "parameters",
       "type": "CdaParameters",
-      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"]]"
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"],[\"shopParam\",\"shopParam\",\"String\",\"\",\"\"],[\"outletParam\",\"outletParam\",\"String\",\"\",\"\"]]"
      },
      {
       "name": "cdacalculatedcolumns",
@@ -13963,12 +14175,12 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "SELECT\r\n    `dim_channel`.DeliveryType,\r\n    sum(`fact_sumcheck`.`SaleAmt`)\r\nFROM\r\n    `fact_sumcheck` INNER JOIN `dim_channel` ON `fact_sumcheck`.`ChannelId` = `dim_channel`.`ChannelId`\r\n    INNER JOIN `Dim_BIDate` ON`fact_sumcheck`.`BIDateId` = `Dim_BIDate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_sumcheck.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\nGROUP BY\r\n    `dim_channel`.DeliveryType\r\n"
+      "value": "SELECT\r\n    `dim_channel`.DeliveryType,\r\n    sum(`fact_sumcheck`.`SaleAmt`)\r\nFROM\r\n    `fact_sumcheck` INNER JOIN `dim_channel` ON `fact_sumcheck`.`ChannelId` = `dim_channel`.`ChannelId`\r\n    INNER JOIN `Dim_BIDate` ON`fact_sumcheck`.`BIDateId` = `Dim_BIDate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_sumcheck.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\n     AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)\r\n     AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)\r\n     \r\nGROUP BY\r\n    `dim_channel`.DeliveryType\r\n"
      },
      {
       "name": "parameters",
       "type": "CdaParameters",
-      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"]]"
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"],[\"shopParam\",\"shopParam\",\"String\",\"\",\"\"],[\"outletParam\",\"outletParam\",\"String\",\"\",\"\"]]"
      },
      {
       "name": "cdacalculatedcolumns",
@@ -14035,12 +14247,12 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "SELECT\r\n    `dim_bidate`.`BIDate`,\r\n    sum(`fact_sumitem`.`ItemSaleAmt`) AS Turnover,\r\n    sum(`fact_sumitem`.`SaleCostAmt`) AS Cost\r\nFROM\r\n    `fact_sumitem` INNER JOIN `dim_bidate` ON `fact_sumitem`.`BusinessDate` = `dim_bidate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_sumitem.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\nGROUP BY\r\n    `dim_bidate`.`BIDateId`,\r\n    `dim_bidate`.`YearMonth`\r\nORDER BY\r\n    `dim_bidate`.`BIDateId` ASC"
+      "value": "SELECT\r\n    `dim_bidate`.`BIDate`,\r\n    sum(`fact_sumitem`.`ItemSaleAmt`) AS Turnover,\r\n    sum(`fact_sumitem`.`SaleCostAmt`) AS Cost\r\nFROM\r\n    `fact_sumitem` INNER JOIN `dim_bidate` ON `fact_sumitem`.`BusinessDate` = `dim_bidate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_sumitem.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\n     AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)\r\n     AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)\r\nGROUP BY\r\n    `dim_bidate`.`BIDateId`,\r\n    `dim_bidate`.`YearMonth`\r\nORDER BY\r\n    `dim_bidate`.`BIDateId` ASC"
      },
      {
       "name": "parameters",
       "type": "CdaParameters",
-      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"]]"
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"],[\"shopParam\",\"shopParam\",\"String\",\"\",\"\"],[\"outletParam\",\"outletParam\",\"String\",\"\",\"\"]]"
      },
      {
       "name": "cdacalculatedcolumns",
@@ -14107,12 +14319,12 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "SELECT\r\n    `dim_paytype`.`PayTypeId`,\r\n    `dim_paytype`.`PayTypeName`,\r\n    sum(`fact_sumpay`.`PayAmt`) AS PayAmt,\r\n    COUNT(*) AS Qty\r\nFROM\r\n    `fact_sumpay` INNER JOIN `dim_paytype` ON `fact_sumpay`.`PayTypeId` = `dim_paytype`.`PayTypeId`\r\n    INNER JOIN `Dim_BIDate` ON`fact_sumpay`.`BIDateId` = `Dim_BIDate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_sumpay.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\nGROUP BY\r\n    `dim_paytype`.`PayTypeName`,\r\n    `dim_paytype`.`PayTypeId`\r\nORDER BY\r\n    `dim_paytype`.`PayTypeId` ASC"
+      "value": "SELECT\r\n    `dim_paytype`.`PayTypeId`,\r\n    `dim_paytype`.`PayTypeName`,\r\n    sum(`fact_sumpay`.`PayAmt`) AS PayAmt,\r\n    COUNT(*) AS Qty\r\nFROM\r\n    `fact_sumpay` INNER JOIN `dim_paytype` ON `fact_sumpay`.`PayTypeId` = `dim_paytype`.`PayTypeId`\r\n    INNER JOIN `Dim_BIDate` ON`fact_sumpay`.`BIDateId` = `Dim_BIDate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_sumpay.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\n     AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)\r\n     AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)\r\nGROUP BY\r\n    `dim_paytype`.`PayTypeName`,\r\n    `dim_paytype`.`PayTypeId`\r\nORDER BY\r\n    `dim_paytype`.`PayTypeId` ASC"
      },
      {
       "name": "parameters",
       "type": "CdaParameters",
-      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"]]"
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"],[\"shopParam\",\"shopParam\",\"String\",\"\",\"\"],[\"outletParam\",\"outletParam\",\"String\",\"\",\"\"]]"
      },
      {
       "name": "cdacalculatedcolumns",
@@ -14179,12 +14391,12 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "SELECT DISTINCT\r\n    CASE WHEN `Dim_PayType`.`PayTypeClassName` IS NULL \r\n        THEN \"其他\"\r\n    ELSE `Dim_PayType`.`PayTypeClassName` END,\r\n     sum(`Fact_CheckPay`.`PayAmt`)\r\nFROM\r\n    `Fact_CheckPay` INNER JOIN `Dim_Outlet` ON `Fact_CheckPay`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`\r\n    INNER JOIN `Dim_BIDate` ON `Fact_CheckPay`.`BIDateId` = `Dim_BIDate`.`BIDateId`\r\n    INNER JOIN `Dim_PayType` ON `Fact_CheckPay`.`PayTypeId` = `Dim_PayType`.`PayTypeId`\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\nGROUP BY\r\n     `Dim_PayType`.`PayTypeClassId`, `Dim_PayType`.`PayTypeClassName`\r\nORDER BY\r\n     sum(`Fact_CheckPay`.`PayAmt`) DESC"
+      "value": "SELECT DISTINCT\r\n    CASE WHEN `Dim_PayType`.`PayTypeClassName` IS NULL \r\n        THEN \"其他\"\r\n    ELSE `Dim_PayType`.`PayTypeClassName` END,\r\n     sum(`Fact_CheckPay`.`PayAmt`)\r\nFROM\r\n    `Fact_CheckPay` INNER JOIN `Dim_Outlet` ON `Fact_CheckPay`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`\r\n    INNER JOIN `Dim_BIDate` ON `Fact_CheckPay`.`BIDateId` = `Dim_BIDate`.`BIDateId`\r\n    INNER JOIN `Dim_PayType` ON `Fact_CheckPay`.`PayTypeId` = `Dim_PayType`.`PayTypeId`\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\n     AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)\r\n     AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)\r\nGROUP BY\r\n     `Dim_PayType`.`PayTypeClassId`, `Dim_PayType`.`PayTypeClassName`\r\nORDER BY\r\n     sum(`Fact_CheckPay`.`PayAmt`) DESC"
      },
      {
       "name": "parameters",
       "type": "CdaParameters",
-      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"]]"
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"],[\"shopParam\",\"shopParam\",\"String\",\"\",\"\"],[\"outletParam\",\"outletParam\",\"String\",\"\",\"\"]]"
      },
      {
       "name": "cdacalculatedcolumns",
@@ -14251,12 +14463,12 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "SELECT \r\n    tbl.bidate,\r\n    tbl.PayTypeClassName,\r\n    CASE WHEN tbl.PayAmtAll IS NULL \r\n        THEN 0\r\n    ELSE tbl.PayAmt / tbl.PayAmtAll END AS Proportion\r\nFROM\r\n(\r\n    SELECT\r\n        `dim_bidate`.`bidate`,\r\n    \t`dim_paytype`.`PayTypeClassName`,\r\n    \tsum(`fact_checkpay`.`PayAmt`) AS PayAmt,\r\n    \ttemp.PayAmtAll\r\n    FROM\r\n    \t`fact_checkpay` \r\n    \tINNER JOIN `dim_bidate` ON `fact_checkpay`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n        INNER JOIN `dim_paytype` ON `fact_checkpay`.`PayTypeId` = `dim_paytype`.`PayTypeId`\r\n        INNER JOIN `Dim_Outlet` ON `Fact_CheckPay`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`\r\n    \tINNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n        INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\n        INNER JOIN \r\n    \t(\r\n    \tSELECT\r\n    \t\t\t `dim_bidate`.`BIDateId`,\r\n    \t\t\t sum(`fact_checkpay`.`PayAmt`) AS PayAmtAll\r\n    \tFROM\r\n    \t\t\t`fact_checkpay` INNER JOIN `dim_bidate` ON `fact_checkpay`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n    \t\t\tINNER JOIN `dim_paytype` ON `fact_checkpay`.`PayTypeId` = `dim_paytype`.`PayTypeId`\r\n                INNER JOIN `Dim_Outlet` ON `Fact_CheckPay`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`\r\n                INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n                INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\n    \tWHERE \r\n            `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay} \r\n            AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n            AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n            AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n            AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\n        GROUP BY\r\n    \t\t\t `dim_bidate`.`BIDateId`\r\n    \tORDER BY\r\n    \t\t\t `dim_bidate`.`BIDateId` ASC\r\n    \t) AS temp ON `fact_checkpay`.`BIDateId` = temp.BIDateId\r\n    WHERE \r\n        `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n        AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n        AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n        AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n        AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\n    GROUP BY \r\n        `dim_bidate`.`bidate`, `dim_paytype`.`PayTypeClassName`, temp.PayAmtAll\r\n) AS tbl"
+      "value": "SELECT \r\n    tbl.bidate,\r\n    tbl.PayTypeClassName,\r\n    CASE WHEN tbl.PayAmtAll IS NULL \r\n        THEN 0\r\n    ELSE tbl.PayAmt / tbl.PayAmtAll END AS Proportion\r\nFROM\r\n(\r\n    SELECT\r\n        `dim_bidate`.`bidate`,\r\n    \t`dim_paytype`.`PayTypeClassName`,\r\n    \tsum(`fact_checkpay`.`PayAmt`) AS PayAmt,\r\n    \ttemp.PayAmtAll\r\n    FROM\r\n    \t`fact_checkpay` \r\n    \tINNER JOIN `dim_bidate` ON `fact_checkpay`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n        INNER JOIN `dim_paytype` ON `fact_checkpay`.`PayTypeId` = `dim_paytype`.`PayTypeId`\r\n        INNER JOIN `Dim_Outlet` ON `Fact_CheckPay`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`\r\n    \tINNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n        INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\n        INNER JOIN \r\n    \t(\r\n    \tSELECT\r\n    \t\t\t `dim_bidate`.`BIDateId`,\r\n    \t\t\t sum(`fact_checkpay`.`PayAmt`) AS PayAmtAll\r\n    \tFROM\r\n    \t\t\t`fact_checkpay` INNER JOIN `dim_bidate` ON `fact_checkpay`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n    \t\t\tINNER JOIN `dim_paytype` ON `fact_checkpay`.`PayTypeId` = `dim_paytype`.`PayTypeId`\r\n                INNER JOIN `Dim_Outlet` ON `Fact_CheckPay`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`\r\n                INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n                INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\n    \tWHERE \r\n            `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay} \r\n            AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n            AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n            AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n            AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\n            AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)\r\n            AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)\r\n        GROUP BY\r\n    \t\t\t `dim_bidate`.`BIDateId`\r\n    \tORDER BY\r\n    \t\t\t `dim_bidate`.`BIDateId` ASC\r\n    \t) AS temp ON `fact_checkpay`.`BIDateId` = temp.BIDateId\r\n    WHERE \r\n        `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n        AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n        AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n        AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n        AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\n        AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)\r\n        AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)\r\n    GROUP BY \r\n        `dim_bidate`.`bidate`, `dim_paytype`.`PayTypeClassName`, temp.PayAmtAll\r\n) AS tbl"
      },
      {
       "name": "parameters",
       "type": "CdaParameters",
-      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"]]"
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"],[\"shopParam\",\"shopParam\",\"String\",\"\",\"\"],[\"outletParam\",\"outletParam\",\"String\",\"\",\"\"]]"
      },
      {
       "name": "cdacalculatedcolumns",
@@ -14323,12 +14535,12 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "SELECT\r\n    `dim_channel`.`ChannelName`,\r\n     sum(`fact_sumcheck`.`SaleAmt`)\r\nFROM\r\n     `fact_sumcheck` INNER JOIN `dim_channel` ON `fact_sumcheck`.`ChannelId` = `dim_channel`.`ChannelId`\r\n    INNER JOIN `Dim_BIDate` ON`fact_sumcheck`.`BIDateId` = `Dim_BIDate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_sumcheck.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\nGROUP BY\r\n     `dim_channel`.ChannelName\r\n"
+      "value": "SELECT\r\n    `dim_channel`.`ChannelName`,\r\n     sum(`fact_sumcheck`.`SaleAmt`)\r\nFROM\r\n     `fact_sumcheck` INNER JOIN `dim_channel` ON `fact_sumcheck`.`ChannelId` = `dim_channel`.`ChannelId`\r\n    INNER JOIN `Dim_BIDate` ON`fact_sumcheck`.`BIDateId` = `Dim_BIDate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_sumcheck.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\n     AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)\r\n     AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)\r\nGROUP BY\r\n     `dim_channel`.ChannelName\r\n"
      },
      {
       "name": "parameters",
       "type": "CdaParameters",
-      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"]]"
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"],[\"shopParam\",\"shopParam\",\"String\",\"\",\"\"],[\"outletParam\",\"outletParam\",\"String\",\"\",\"\"]]"
      },
      {
       "name": "cdacalculatedcolumns",
@@ -14395,12 +14607,12 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "SELECT\r\n     `dim_bidate`.`BIDateId`,\r\n     `dim_bidate`.`BIDate`,\r\n     `dim_channel`.`ChannelName`,\r\n     sum(`fact_sumcheck`.`SaleAmt`) AS SaleAmt\r\nFROM\r\n    `fact_sumcheck` INNER JOIN `dim_channel` ON `fact_sumcheck`.`ChannelId` = `dim_channel`.`ChannelId`\r\n    INNER JOIN `dim_bidate` ON `fact_sumcheck`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_sumcheck.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay} \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\nGROUP BY\r\n     `dim_bidate`.`BIDateId`,\r\n     `dim_bidate`.`YearMonth`,\r\n     `dim_channel`.`ChannelName`\r\nORDER BY\r\n     `dim_bidate`.`BIDateId` ASC,\r\n     `dim_bidate`.`YearMonth` ASC"
+      "value": "SELECT\r\n     `dim_bidate`.`BIDateId`,\r\n     `dim_bidate`.`BIDate`,\r\n     `dim_channel`.`ChannelName`,\r\n     sum(`fact_sumcheck`.`SaleAmt`) AS SaleAmt\r\nFROM\r\n    `fact_sumcheck` INNER JOIN `dim_channel` ON `fact_sumcheck`.`ChannelId` = `dim_channel`.`ChannelId`\r\n    INNER JOIN `dim_bidate` ON `fact_sumcheck`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_sumcheck.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay} \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\n     AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)\r\n     AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)\r\nGROUP BY\r\n     `dim_bidate`.`BIDateId`,\r\n     `dim_bidate`.`YearMonth`,\r\n     `dim_channel`.`ChannelName`\r\nORDER BY\r\n     `dim_bidate`.`BIDateId` ASC,\r\n     `dim_bidate`.`YearMonth` ASC"
      },
      {
       "name": "parameters",
       "type": "CdaParameters",
-      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"]]"
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"],[\"shopParam\",\"shopParam\",\"String\",\"\",\"\"],[\"outletParam\",\"outletParam\",\"String\",\"\",\"\"]]"
      },
      {
       "name": "cdacalculatedcolumns",
@@ -14467,12 +14679,12 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "SELECT\r\n    `dim_bidate`.`BIDateId`,\r\n    `dim_bidate`.`BIDate`,\r\n\tcase when sum(`fact_sumday`.`CheckQty`) = 0 then 0.00\r\n        when sum(`fact_sumday`.`CheckQty`) = null then 0.00\r\n\telse sum(`fact_sumday`.`SaleAmt`)/sum(`fact_sumday`.`CheckQty`) end as ATV\r\nFROM\r\n     `fact_sumday` INNER JOIN `dim_bidate` ON `fact_sumday`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_sumday.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\nGROUP BY\r\n     `dim_bidate`.`BIDateId`,`dim_bidate`.`YearMonth`\r\nORDER BY\r\n     `dim_bidate`.`BIDateId` ASC"
+      "value": "SELECT\r\n    `dim_bidate`.`BIDateId`,\r\n    `dim_bidate`.`BIDate`,\r\n\tcase when sum(`fact_sumday`.`CheckQty`) = 0 then 0.00\r\n        when sum(`fact_sumday`.`CheckQty`) = null then 0.00\r\n\telse sum(`fact_sumday`.`SaleAmt`)/sum(`fact_sumday`.`CheckQty`) end as ATV\r\nFROM\r\n     `fact_sumday` INNER JOIN `dim_bidate` ON `fact_sumday`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_sumday.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\n     AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)\r\n     AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)\r\nGROUP BY\r\n     `dim_bidate`.`BIDateId`,`dim_bidate`.`YearMonth`\r\nORDER BY\r\n     `dim_bidate`.`BIDateId` ASC"
      },
      {
       "name": "parameters",
       "type": "CdaParameters",
-      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"]]"
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"],[\"shopParam\",\"shopParam\",\"String\",\"\",\"\"],[\"outletParam\",\"outletParam\",\"String\",\"\",\"\"]]"
      },
      {
       "name": "cdacalculatedcolumns",
@@ -14539,12 +14751,12 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "SELECT\r\n    `dim_voidresontype`.`VoidReasonName`,\r\n     COUNT(*)\r\nFROM\r\n    `fact_checkitemdel` INNER JOIN `dim_voidresontype` ON `fact_checkitemdel`.`VoidReasonId` = `dim_voidresontype`.`VoidReasonId`\r\n    INNER JOIN `dim_bidate` ON `fact_checkitemdel`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_checkitemdel.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\nGROUP BY \r\n    `dim_voidresontype`.`VoidReasonName`"
+      "value": "SELECT\r\n    `dim_voidresontype`.`VoidReasonName`,\r\n     COUNT(*)\r\nFROM\r\n    `fact_checkitemdel` INNER JOIN `dim_voidresontype` ON `fact_checkitemdel`.`VoidReasonId` = `dim_voidresontype`.`VoidReasonId`\r\n    INNER JOIN `dim_bidate` ON `fact_checkitemdel`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_checkitemdel.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\n     AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)\r\n     AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)\r\nGROUP BY \r\n    `dim_voidresontype`.`VoidReasonName`"
      },
      {
       "name": "parameters",
       "type": "CdaParameters",
-      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"]]"
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"],[\"shopParam\",\"shopParam\",\"String\",\"\",\"\"],[\"outletParam\",\"outletParam\",\"String\",\"\",\"\"]]"
      },
      {
       "name": "cdacalculatedcolumns",
@@ -14611,12 +14823,12 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "SELECT\r\n     `dim_voidresontype`.`VoidReasonName`,\r\n     COUNT(*) AS Qty,\r\n     sum(`fact_checkitemdel`.`ItemSaleAmt`) AS ItemSaleAmt\r\nFROM\r\n     `fact_checkitemdel` INNER JOIN `dim_voidresontype` ON `fact_checkitemdel`.`VoidReasonId` = `dim_voidresontype`.`VoidReasonId`\r\n    INNER JOIN `dim_bidate` ON `fact_checkitemdel`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_checkitemdel.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\nGROUP BY\r\n     `dim_voidresontype`.`VoidReasonName`"
+      "value": "SELECT\r\n     `dim_voidresontype`.`VoidReasonName`,\r\n     COUNT(*) AS Qty,\r\n     sum(`fact_checkitemdel`.`ItemSaleAmt`) AS ItemSaleAmt\r\nFROM\r\n     `fact_checkitemdel` INNER JOIN `dim_voidresontype` ON `fact_checkitemdel`.`VoidReasonId` = `dim_voidresontype`.`VoidReasonId`\r\n    INNER JOIN `dim_bidate` ON `fact_checkitemdel`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_checkitemdel.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\n     AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)\r\n     AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)\r\nGROUP BY\r\n     `dim_voidresontype`.`VoidReasonName`"
      },
      {
       "name": "parameters",
       "type": "CdaParameters",
-      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"]]"
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"],[\"shopParam\",\"shopParam\",\"String\",\"\",\"\"],[\"outletParam\",\"outletParam\",\"String\",\"\",\"\"]]"
      },
      {
       "name": "cdacalculatedcolumns",
@@ -14660,75 +14872,75 @@
    },
    {
     "id": "7bb8cae4-cf9f-38e6-6f74-7438e68f373d",
-    "type": "Componentssql_sqlJndi",
-    "typeDesc": "sql over sqlJndi",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
     "parent": "SQL",
     "properties": [
      {
       "name": "name",
-      "value": "_________________KPI_____________________",
-      "type": "Id"
+      "type": "Id",
+      "value": "_________________KPI_____________________"
      },
      {
       "name": "access",
-      "value": "public",
-      "type": "Access"
+      "type": "Access",
+      "value": "public"
      },
      {
       "name": "jndi",
-      "value": "",
-      "type": "Jndi"
+      "type": "Jndi",
+      "value": ""
      },
      {
       "name": "query",
-      "value": "",
-      "type": "SqlQuery"
+      "type": "SqlQuery",
+      "value": ""
      },
      {
       "name": "parameters",
-      "value": "[]",
-      "type": "CdaParameters"
+      "type": "CdaParameters",
+      "value": "[]"
      },
      {
       "name": "cdacalculatedcolumns",
-      "value": "[]",
-      "type": "CdaCalculatedColumnsArray"
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
      },
      {
       "name": "cdacolumns",
-      "value": "[]",
-      "type": "CdaColumnsArray"
+      "type": "CdaColumnsArray",
+      "value": "[]"
      },
      {
       "name": "output",
-      "value": "[]",
-      "type": "IndexArray"
+      "type": "IndexArray",
+      "value": "[]"
      },
      {
       "name": "outputMode",
-      "value": "include",
-      "type": "OutputMode"
+      "type": "OutputMode",
+      "value": "include"
      },
      {
       "name": "cacheKeys",
-      "value": "[]",
-      "type": "CacheKeysValues"
+      "type": "CacheKeysValues",
+      "value": "[]"
      },
      {
       "name": "cacheDuration",
-      "value": 3600,
-      "type": "Integer"
+      "type": "Integer",
+      "value": 3600
      },
      {
       "name": "cache",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      }
     ],
-    "meta": "CDA",
-    "meta_conntype": "sql.jndi",
-    "meta_datype": "sql",
-    "rowName": "sql over sqlJndi"
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
    },
    {
     "id": "b968a634-6c7b-7005-abd9-fe56c637ab78",
@@ -14948,507 +15160,507 @@
    },
    {
     "id": "11e857cf-6a97-8968-d6f7-0a52c4dcf375",
-    "type": "Componentssql_sqlJndi",
-    "typeDesc": "sql over sqlJndi",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
     "parent": "SQL",
     "properties": [
      {
       "name": "name",
-      "value": "_________________Select________________",
-      "type": "Id"
+      "type": "Id",
+      "value": "_________________Select________________"
      },
      {
       "name": "access",
-      "value": "public",
-      "type": "Access"
+      "type": "Access",
+      "value": "public"
      },
      {
       "name": "jndi",
-      "value": "",
-      "type": "Jndi"
+      "type": "Jndi",
+      "value": ""
      },
      {
       "name": "query",
-      "value": "",
-      "type": "SqlQuery"
+      "type": "SqlQuery",
+      "value": ""
      },
      {
       "name": "parameters",
-      "value": "[]",
-      "type": "CdaParameters"
+      "type": "CdaParameters",
+      "value": "[]"
      },
      {
       "name": "cdacalculatedcolumns",
-      "value": "[]",
-      "type": "CdaCalculatedColumnsArray"
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
      },
      {
       "name": "cdacolumns",
-      "value": "[]",
-      "type": "CdaColumnsArray"
+      "type": "CdaColumnsArray",
+      "value": "[]"
      },
      {
       "name": "output",
-      "value": "[]",
-      "type": "IndexArray"
+      "type": "IndexArray",
+      "value": "[]"
      },
      {
       "name": "outputMode",
-      "value": "include",
-      "type": "OutputMode"
+      "type": "OutputMode",
+      "value": "include"
      },
      {
       "name": "cacheKeys",
-      "value": "[]",
-      "type": "CacheKeysValues"
+      "type": "CacheKeysValues",
+      "value": "[]"
      },
      {
       "name": "cacheDuration",
-      "value": 3600,
-      "type": "Integer"
+      "type": "Integer",
+      "value": 3600
      },
      {
       "name": "cache",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      }
     ],
-    "meta": "CDA",
-    "meta_conntype": "sql.jndi",
-    "meta_datype": "sql",
-    "rowName": "sql over sqlJndi"
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
    },
    {
     "id": "0179e6fd-58d6-c4a3-7f6e-9fb1d0fdfce0",
-    "type": "Componentssql_sqlJndi",
-    "typeDesc": "sql over sqlJndi",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
     "parent": "SQL",
     "properties": [
      {
       "name": "name",
-      "value": "brandSelectQuery",
-      "type": "Id"
+      "type": "Id",
+      "value": "brandSelectQuery"
      },
      {
       "name": "access",
-      "value": "public",
-      "type": "Access"
+      "type": "Access",
+      "value": "public"
      },
      {
       "name": "jndi",
-      "value": "jdbc_bi",
-      "type": "Jndi"
+      "type": "Jndi",
+      "value": "jdbc_bi"
      },
      {
       "name": "query",
-      "value": "SELECT \r\n    -1,\r\n    \"所有\"\r\nUNION ALL\r\nSELECT DISTINCT\r\n    `Dim_Brand`.`BrandId_level1`,\r\n    `Dim_Brand`.`BrandName_level1`\r\nFROM\r\n    `Dim_Brand`\r\nWHERE\r\n    `Dim_Brand`.`Status` = 0",
-      "type": "SqlQuery"
+      "type": "SqlQuery",
+      "value": "SELECT \r\n    -1,\r\n    \"所有\"\r\nUNION ALL\r\nSELECT DISTINCT\r\n    `Dim_Brand`.`BrandId_level1`,\r\n    `Dim_Brand`.`BrandName_level1`\r\nFROM\r\n    `Dim_Brand`\r\nWHERE\r\n    `Dim_Brand`.`Status` = 0"
      },
      {
       "name": "parameters",
-      "value": "[]",
-      "type": "CdaParameters"
+      "type": "CdaParameters",
+      "value": "[]"
      },
      {
       "name": "cdacalculatedcolumns",
-      "value": "[]",
-      "type": "CdaCalculatedColumnsArray"
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
      },
      {
       "name": "cdacolumns",
-      "value": "[]",
-      "type": "CdaColumnsArray"
+      "type": "CdaColumnsArray",
+      "value": "[]"
      },
      {
       "name": "output",
-      "value": "[]",
-      "type": "IndexArray"
+      "type": "IndexArray",
+      "value": "[]"
      },
      {
       "name": "outputMode",
-      "value": "include",
-      "type": "OutputMode"
+      "type": "OutputMode",
+      "value": "include"
      },
      {
       "name": "cacheKeys",
-      "value": "[]",
-      "type": "CacheKeysValues"
+      "type": "CacheKeysValues",
+      "value": "[]"
      },
      {
       "name": "cacheDuration",
-      "value": 3600,
-      "type": "Integer"
+      "type": "Integer",
+      "value": 3600
      },
      {
       "name": "cache",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      }
     ],
-    "meta": "CDA",
-    "meta_conntype": "sql.jndi",
-    "meta_datype": "sql",
-    "rowName": "sql over sqlJndi"
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
    },
    {
     "id": "35b1654b-46b0-99c8-e59d-a4e0aabb336a",
-    "type": "Componentssql_sqlJndi",
-    "typeDesc": "sql over sqlJndi",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
     "parent": "SQL",
     "properties": [
      {
       "name": "name",
-      "value": "area1SelectQuery",
-      "type": "Id"
+      "type": "Id",
+      "value": "area1SelectQuery"
      },
      {
       "name": "access",
-      "value": "public",
-      "type": "Access"
+      "type": "Access",
+      "value": "public"
      },
      {
       "name": "jndi",
-      "value": "jdbc_bi",
-      "type": "Jndi"
+      "type": "Jndi",
+      "value": "jdbc_bi"
      },
      {
       "name": "query",
-      "value": "SELECT -1,\"所有\"\r\nUNION ALL\r\nSELECT DISTINCT\r\n     `Dim_Area`.`AreaId_level1`,\r\n     `Dim_Area`.`AreaName_level1`\r\nFROM\r\n     `Dim_Outlet` INNER JOIN `Dim_Area` ON `Dim_Outlet`.`AreaId` = `Dim_Area`.`AreaId`\r\nWHERE\r\n     `Dim_Outlet`.`EndDate` = \"2200-01-01\"\r\n     AND `Dim_Area`.`Status` = 0\r\n     AND `Dim_Outlet`.`Status` = 0\r\n",
-      "type": "SqlQuery"
+      "type": "SqlQuery",
+      "value": "SELECT -1,\"所有\"\r\nUNION ALL\r\nSELECT DISTINCT\r\n     `Dim_Area`.`AreaId_level1`,\r\n     `Dim_Area`.`AreaName_level1`\r\nFROM\r\n     `Dim_Outlet` INNER JOIN `Dim_Area` ON `Dim_Outlet`.`AreaId` = `Dim_Area`.`AreaId`\r\nWHERE\r\n     `Dim_Outlet`.`EndDate` = \"2200-01-01\"\r\n     AND `Dim_Area`.`Status` = 0\r\n     AND `Dim_Outlet`.`Status` = 0\r\n"
      },
      {
       "name": "parameters",
-      "value": "[]",
-      "type": "CdaParameters"
+      "type": "CdaParameters",
+      "value": "[]"
      },
      {
       "name": "cdacalculatedcolumns",
-      "value": "[]",
-      "type": "CdaCalculatedColumnsArray"
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
      },
      {
       "name": "cdacolumns",
-      "value": "[]",
-      "type": "CdaColumnsArray"
+      "type": "CdaColumnsArray",
+      "value": "[]"
      },
      {
       "name": "output",
-      "value": "[]",
-      "type": "IndexArray"
+      "type": "IndexArray",
+      "value": "[]"
      },
      {
       "name": "outputMode",
-      "value": "include",
-      "type": "OutputMode"
+      "type": "OutputMode",
+      "value": "include"
      },
      {
       "name": "cacheKeys",
-      "value": "[]",
-      "type": "CacheKeysValues"
+      "type": "CacheKeysValues",
+      "value": "[]"
      },
      {
       "name": "cacheDuration",
-      "value": 3600,
-      "type": "Integer"
+      "type": "Integer",
+      "value": 3600
      },
      {
       "name": "cache",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      }
     ],
-    "meta": "CDA",
-    "meta_conntype": "sql.jndi",
-    "meta_datype": "sql",
-    "rowName": "sql over sqlJndi"
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
    },
    {
     "id": "176d10be-313e-1f4f-e819-8ff49654ba02",
-    "type": "Componentssql_sqlJndi",
-    "typeDesc": "sql over sqlJndi",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
     "parent": "SQL",
     "properties": [
      {
       "name": "name",
-      "value": "area2SelectQuery",
-      "type": "Id"
+      "type": "Id",
+      "value": "area2SelectQuery"
      },
      {
       "name": "access",
-      "value": "public",
-      "type": "Access"
+      "type": "Access",
+      "value": "public"
      },
      {
       "name": "jndi",
-      "value": "jdbc_bi",
-      "type": "Jndi"
+      "type": "Jndi",
+      "value": "jdbc_bi"
      },
      {
       "name": "query",
-      "value": "SELECT -1,\"所有\"\r\nUNION ALL\r\nSELECT DISTINCT\r\n     `Dim_Area`.`AreaId_level2`,\r\n     `Dim_Area`.`AreaName_level2`\r\nFROM\r\n     `Dim_Outlet` INNER JOIN `Dim_Area` ON `Dim_Outlet`.`AreaId` = `Dim_Area`.`AreaId`\r\nWHERE\r\n     `Dim_Outlet`.`EndDate` = \"2200-01-01\"\r\n     AND `Dim_Area`.`Status` = 0\r\n     AND `Dim_Outlet`.`Status` = 0\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n",
-      "type": "SqlQuery"
+      "type": "SqlQuery",
+      "value": "SELECT -1,\"所有\"\r\nUNION ALL\r\nSELECT DISTINCT\r\n     `Dim_Area`.`AreaId_level2`,\r\n     `Dim_Area`.`AreaName_level2`\r\nFROM\r\n     `Dim_Outlet` INNER JOIN `Dim_Area` ON `Dim_Outlet`.`AreaId` = `Dim_Area`.`AreaId`\r\nWHERE\r\n     `Dim_Outlet`.`EndDate` = \"2200-01-01\"\r\n     AND `Dim_Area`.`Status` = 0\r\n     AND `Dim_Outlet`.`Status` = 0\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n"
      },
      {
       "name": "parameters",
-      "value": "[[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"]]",
-      "type": "CdaParameters"
+      "type": "CdaParameters",
+      "value": "[[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"]]"
      },
      {
       "name": "cdacalculatedcolumns",
-      "value": "[]",
-      "type": "CdaCalculatedColumnsArray"
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
      },
      {
       "name": "cdacolumns",
-      "value": "[]",
-      "type": "CdaColumnsArray"
+      "type": "CdaColumnsArray",
+      "value": "[]"
      },
      {
       "name": "output",
-      "value": "[]",
-      "type": "IndexArray"
+      "type": "IndexArray",
+      "value": "[]"
      },
      {
       "name": "outputMode",
-      "value": "include",
-      "type": "OutputMode"
+      "type": "OutputMode",
+      "value": "include"
      },
      {
       "name": "cacheKeys",
-      "value": "[]",
-      "type": "CacheKeysValues"
+      "type": "CacheKeysValues",
+      "value": "[]"
      },
      {
       "name": "cacheDuration",
-      "value": 3600,
-      "type": "Integer"
+      "type": "Integer",
+      "value": 3600
      },
      {
       "name": "cache",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      }
     ],
-    "meta": "CDA",
-    "meta_conntype": "sql.jndi",
-    "meta_datype": "sql",
-    "rowName": "sql over sqlJndi"
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
    },
    {
     "id": "0b5dbe0c-d321-f9c7-610a-309140c4537c",
-    "type": "Componentssql_sqlJndi",
-    "typeDesc": "sql over sqlJndi",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
     "parent": "SQL",
     "properties": [
      {
       "name": "name",
-      "value": "area3SelectQuery",
-      "type": "Id"
+      "type": "Id",
+      "value": "area3SelectQuery"
      },
      {
       "name": "access",
-      "value": "public",
-      "type": "Access"
+      "type": "Access",
+      "value": "public"
      },
      {
       "name": "jndi",
-      "value": "jdbc_bi",
-      "type": "Jndi"
+      "type": "Jndi",
+      "value": "jdbc_bi"
      },
      {
       "name": "query",
-      "value": "SELECT -1,\"所有\"\r\nUNION ALL\r\nSELECT DISTINCT\r\n     `Dim_Area`.`AreaId_level3`,\r\n     `Dim_Area`.`AreaName_level3`\r\nFROM\r\n     `Dim_Outlet` INNER JOIN `Dim_Area` ON `Dim_Outlet`.`AreaId` = `Dim_Area`.`AreaId`\r\nWHERE\r\n     `Dim_Outlet`.`EndDate` = \"2200-01-01\"\r\n     AND `Dim_Area`.`Status` = 0\r\n     AND `Dim_Outlet`.`Status` = 0\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n    AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n",
-      "type": "SqlQuery"
+      "type": "SqlQuery",
+      "value": "SELECT -1,\"所有\"\r\nUNION ALL\r\nSELECT DISTINCT\r\n     `Dim_Area`.`AreaId_level3`,\r\n     `Dim_Area`.`AreaName_level3`\r\nFROM\r\n     `Dim_Outlet` INNER JOIN `Dim_Area` ON `Dim_Outlet`.`AreaId` = `Dim_Area`.`AreaId`\r\nWHERE\r\n     `Dim_Outlet`.`EndDate` = \"2200-01-01\"\r\n     AND `Dim_Area`.`Status` = 0\r\n     AND `Dim_Outlet`.`Status` = 0\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n    AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n"
      },
      {
       "name": "parameters",
-      "value": "[[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"]]",
-      "type": "CdaParameters"
+      "type": "CdaParameters",
+      "value": "[[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"]]"
      },
      {
       "name": "cdacalculatedcolumns",
-      "value": "[]",
-      "type": "CdaCalculatedColumnsArray"
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
      },
      {
       "name": "cdacolumns",
-      "value": "[]",
-      "type": "CdaColumnsArray"
+      "type": "CdaColumnsArray",
+      "value": "[]"
      },
      {
       "name": "output",
-      "value": "[]",
-      "type": "IndexArray"
+      "type": "IndexArray",
+      "value": "[]"
      },
      {
       "name": "outputMode",
-      "value": "include",
-      "type": "OutputMode"
+      "type": "OutputMode",
+      "value": "include"
      },
      {
       "name": "cacheKeys",
-      "value": "[]",
-      "type": "CacheKeysValues"
+      "type": "CacheKeysValues",
+      "value": "[]"
      },
      {
       "name": "cacheDuration",
-      "value": 3600,
-      "type": "Integer"
+      "type": "Integer",
+      "value": 3600
      },
      {
       "name": "cache",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      }
     ],
-    "meta": "CDA",
-    "meta_conntype": "sql.jndi",
-    "meta_datype": "sql",
-    "rowName": "sql over sqlJndi"
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
    },
    {
     "id": "c53865e4-0212-2e4d-0caf-79384566253b",
-    "type": "Componentssql_sqlJndi",
-    "typeDesc": "sql over sqlJndi",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
     "parent": "SQL",
     "properties": [
      {
       "name": "name",
-      "value": "shopSelectQuery",
-      "type": "Id"
+      "type": "Id",
+      "value": "shopSelectQuery"
      },
      {
       "name": "access",
-      "value": "public",
-      "type": "Access"
+      "type": "Access",
+      "value": "public"
      },
      {
       "name": "jndi",
-      "value": "jdbc_bi",
-      "type": "Jndi"
+      "type": "Jndi",
+      "value": "jdbc_bi"
      },
      {
       "name": "query",
-      "value": "SELECT -1,\"所有\"\r\nUNION ALL\r\nSELECT DISTINCT\r\n    `Dim_Outlet`.`ShopId`,\r\n    `Dim_Outlet`.`ShopName`\r\nFROM\r\n     `Dim_Outlet` INNER JOIN `Dim_Area` ON `Dim_Outlet`.`AreaId` = `Dim_Area`.`AreaId`\r\nWHERE\r\n     `Dim_Outlet`.`EndDate` = \"2200-01-01\"\r\n     AND `Dim_Area`.`Status` = 0\r\n     AND `Dim_Outlet`.`Status` = 0\r\n",
-      "type": "SqlQuery"
+      "type": "SqlQuery",
+      "value": "SELECT -1,\"所有\"\r\nUNION ALL\r\nSELECT DISTINCT\r\n    `Dim_Outlet`.`ShopId`,\r\n    `Dim_Outlet`.`ShopName`\r\nFROM\r\n     `Dim_Outlet` INNER JOIN `Dim_Area` ON `Dim_Outlet`.`AreaId` = `Dim_Area`.`AreaId`\r\nWHERE\r\n     `Dim_Outlet`.`EndDate` = \"2200-01-01\"\r\n     AND `Dim_Area`.`Status` = 0\r\n     AND `Dim_Outlet`.`Status` = 0\r\n"
      },
      {
       "name": "parameters",
-      "value": "[]",
-      "type": "CdaParameters"
+      "type": "CdaParameters",
+      "value": "[]"
      },
      {
       "name": "cdacalculatedcolumns",
-      "value": "[]",
-      "type": "CdaCalculatedColumnsArray"
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
      },
      {
       "name": "cdacolumns",
-      "value": "[]",
-      "type": "CdaColumnsArray"
+      "type": "CdaColumnsArray",
+      "value": "[]"
      },
      {
       "name": "output",
-      "value": "[]",
-      "type": "IndexArray"
+      "type": "IndexArray",
+      "value": "[]"
      },
      {
       "name": "outputMode",
-      "value": "include",
-      "type": "OutputMode"
+      "type": "OutputMode",
+      "value": "include"
      },
      {
       "name": "cacheKeys",
-      "value": "[]",
-      "type": "CacheKeysValues"
+      "type": "CacheKeysValues",
+      "value": "[]"
      },
      {
       "name": "cacheDuration",
-      "value": 3600,
-      "type": "Integer"
+      "type": "Integer",
+      "value": 3600
      },
      {
       "name": "cache",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      }
     ],
-    "meta": "CDA",
-    "meta_conntype": "sql.jndi",
-    "meta_datype": "sql",
-    "rowName": "sql over sqlJndi"
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
    },
    {
     "id": "ebdb26a3-2983-f92d-1ff4-ce1e60a459df",
-    "type": "Componentssql_sqlJndi",
-    "typeDesc": "sql over sqlJndi",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
     "parent": "SQL",
     "properties": [
      {
       "name": "name",
-      "value": "outletSelectQuery",
-      "type": "Id"
+      "type": "Id",
+      "value": "outletSelectQuery"
      },
      {
       "name": "access",
-      "value": "public",
-      "type": "Access"
+      "type": "Access",
+      "value": "public"
      },
      {
       "name": "jndi",
-      "value": "jdbc_bi",
-      "type": "Jndi"
+      "type": "Jndi",
+      "value": "jdbc_bi"
      },
      {
       "name": "query",
-      "value": "SELECT -1,\"所有\"\r\nUNION ALL\r\nSELECT DISTINCT\r\n    `Dim_Outlet`.`OutletId`,\r\n    `Dim_Outlet`.`OutletName`\r\nFROM\r\n     `Dim_Outlet` INNER JOIN `Dim_Area` ON `Dim_Outlet`.`AreaId` = `Dim_Area`.`AreaId`\r\nWHERE\r\n     `Dim_Outlet`.`EndDate` = \"2200-01-01\"\r\n     AND `Dim_Area`.`Status` = 0\r\n     AND `Dim_Outlet`.`Status` = 0\r\n",
-      "type": "SqlQuery"
+      "type": "SqlQuery",
+      "value": "SELECT -1,\"所有\"\r\nUNION ALL\r\nSELECT DISTINCT\r\n    `Dim_Outlet`.`OutletId`,\r\n    `Dim_Outlet`.`OutletName`\r\nFROM\r\n     `Dim_Outlet` INNER JOIN `Dim_Area` ON `Dim_Outlet`.`AreaId` = `Dim_Area`.`AreaId`\r\nWHERE\r\n     `Dim_Outlet`.`EndDate` = \"2200-01-01\"\r\n     AND `Dim_Area`.`Status` = 0\r\n     AND `Dim_Outlet`.`Status` = 0\r\n"
      },
      {
       "name": "parameters",
-      "value": "[]",
-      "type": "CdaParameters"
+      "type": "CdaParameters",
+      "value": "[]"
      },
      {
       "name": "cdacalculatedcolumns",
-      "value": "[]",
-      "type": "CdaCalculatedColumnsArray"
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
      },
      {
       "name": "cdacolumns",
-      "value": "[]",
-      "type": "CdaColumnsArray"
+      "type": "CdaColumnsArray",
+      "value": "[]"
      },
      {
       "name": "output",
-      "value": "[]",
-      "type": "IndexArray"
+      "type": "IndexArray",
+      "value": "[]"
      },
      {
       "name": "outputMode",
-      "value": "include",
-      "type": "OutputMode"
+      "type": "OutputMode",
+      "value": "include"
      },
      {
       "name": "cacheKeys",
-      "value": "[]",
-      "type": "CacheKeysValues"
+      "type": "CacheKeysValues",
+      "value": "[]"
      },
      {
       "name": "cacheDuration",
-      "value": 3600,
-      "type": "Integer"
+      "type": "Integer",
+      "value": 3600
      },
      {
       "name": "cache",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      }
     ],
-    "meta": "CDA",
-    "meta_conntype": "sql.jndi",
-    "meta_datype": "sql",
-    "rowName": "sql over sqlJndi"
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
    }
   ]
  },
@@ -15480,221 +15692,221 @@
    },
    {
     "id": "74c8df10-89a0-2056-0369-b3583448eca1",
-    "type": "LayoutRow",
-    "typeDesc": "Row",
     "parent": "UnIqEiD",
     "properties": [
      {
       "name": "name",
-      "value": "row0",
-      "type": "Id"
+      "type": "Id",
+      "value": "row0"
      },
      {
       "name": "height",
-      "value": "",
-      "type": "Integer"
+      "type": "Integer",
+      "value": ""
      },
      {
       "name": "backgroundColor",
-      "value": "",
-      "type": "Color"
+      "type": "Color",
+      "value": ""
      },
      {
       "name": "roundCorners",
-      "value": "",
-      "type": "RoundCorners"
+      "type": "RoundCorners",
+      "value": ""
      },
      {
       "name": "textAlign",
-      "value": "",
-      "type": "TextAlign"
+      "type": "TextAlign",
+      "value": ""
      },
      {
       "name": "cssClass",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      }
-    ]
+    ],
+    "type": "LayoutRow",
+    "typeDesc": "Row"
    },
    {
     "id": "c0e7a5d3-e672-a657-2cc1-944cb144e37b",
-    "type": "LayoutBootstrapColumn",
-    "typeDesc": "Column",
     "parent": "74c8df10-89a0-2056-0369-b3583448eca1",
     "properties": [
      {
       "name": "name",
-      "value": "row0_col1",
-      "type": "Id"
+      "type": "Id",
+      "value": "row0_col1"
      },
      {
       "name": "bootstrapExtraSmall",
-      "value": "12",
-      "type": "String"
+      "type": "String",
+      "value": "12"
      },
      {
       "name": "bootstrapSmall",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "bootstrapMedium",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "bootstrapLarge",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "bootstrapCssClass",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "height",
-      "value": "",
-      "type": "Integer"
+      "type": "Integer",
+      "value": ""
      },
      {
       "name": "backgroundColor",
-      "value": "",
-      "type": "Color"
+      "type": "Color",
+      "value": ""
      },
      {
       "name": "roundCorners",
-      "value": "",
-      "type": "RoundCorners"
+      "type": "RoundCorners",
+      "value": ""
      },
      {
       "name": "textAlign",
-      "value": "",
-      "type": "TextAlign"
+      "type": "TextAlign",
+      "value": ""
      },
      {
       "name": "cssClass",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      }
-    ]
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
    },
    {
     "id": "828aa698-b4d9-498a-6719-54c00009467c",
-    "type": "BootstrapPanel",
-    "typeDesc": "Bootstrap Panel",
     "parent": "c0e7a5d3-e672-a657-2cc1-944cb144e37b",
     "properties": [
      {
       "name": "name",
-      "value": "row0_col1_panel",
-      "type": "Id"
+      "type": "Id",
+      "value": "row0_col1_panel"
      },
      {
       "name": "height",
-      "value": "22",
-      "type": "Integer"
+      "type": "Integer",
+      "value": "22"
      },
      {
       "name": "roundCorners",
-      "value": "cdfdd-bevel",
-      "type": "RoundCorners"
+      "type": "RoundCorners",
+      "value": "cdfdd-bevel"
      },
      {
       "name": "cssClass",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "bootstrapPanelStyle",
-      "value": "panel-default",
-      "type": "bootstrapPanelStyleCustom"
+      "type": "bootstrapPanelStyleCustom",
+      "value": "panel-default"
      }
-    ]
+    ],
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel"
    },
    {
     "id": "543f2a12-04ed-7958-bcc2-c55f31d31847",
-    "type": "BootstrapPanelHeader",
-    "typeDesc": "Panel Header",
     "parent": "828aa698-b4d9-498a-6719-54c00009467c",
     "properties": [
      {
       "name": "name",
-      "value": "row0_col1_panel_header",
-      "type": "Id"
+      "type": "Id",
+      "value": "row0_col1_panel_header"
      },
      {
       "name": "roundCorners",
-      "value": "",
-      "type": "RoundCorners"
+      "type": "RoundCorners",
+      "value": ""
      },
      {
       "name": "textAlign",
-      "value": "",
-      "type": "TextAlign"
+      "type": "TextAlign",
+      "value": ""
      },
      {
       "name": "cssClass",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      }
-    ]
+    ],
+    "type": "BootstrapPanelHeader",
+    "typeDesc": "Panel Header"
    },
    {
     "id": "8a010a2f-2de6-9d3f-9807-aec75e7a9edf",
-    "type": "LayoutHtml",
-    "typeDesc": "Html",
     "parent": "543f2a12-04ed-7958-bcc2-c55f31d31847",
     "properties": [
      {
       "name": "name",
-      "value": "row0_col1_panel_header_html",
-      "type": "Id"
+      "type": "Id",
+      "value": "row0_col1_panel_header_html"
      },
      {
       "name": "html",
-      "value": "<div class\"row clearfix\">\r\n    <div  class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\" style=\"margin-top:-10px;\">\r\n        <div style=\"float:left\">日期：</div>\r\n        <div id=\"dateRangePickerDom\" style=\"float:left;width:135px\"></div>\r\n        <div style=\"float:left;padding-left:50px;\">品牌：</div>\r\n        <div id=\"brandDom\" style=\"float:left\"></div>\r\n        <div style=\"float:left;padding-left:20px;\">大区：</div>\r\n        <div id=\"area1Dom\" style=\"float:left\"></div>\r\n        <div style=\"float:left;padding-left:20px;\">省市：</div>\r\n        <div id=\"area2Dom\" style=\"float:left\"></div>\r\n        <div style=\"float:left;padding-left:20px;\">市：</div>\r\n        <div id=\"area3Dom\" style=\"float:left\"></div>\r\n        <div style=\"float:left;padding-left:20px;\">酒店：</div>\r\n        <div id=\"shopDom\" style=\"float:left\"></div>\r\n        <div style=\"float:left;padding-left:20px;\">营业区：</div>\r\n        <div id=\"outletSelectDom\" style=\"float:left\"></div>\r\n        <div style=\"float:left;padding-left:20px;\">d点击：</div>\r\n        <div id=\"buttonSelectDom\" style=\"float:left\"></div>\r\n    </div>\r\n    <!-- \r\n    <div  class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\" style=\"margin-top:-10px;\">\r\n        <div style=\"float:left\">日期：</div>\r\n        <div id=\"brandDom\" style=\"float:left;width:135px\"></div>\r\n    </div>\r\n    -->\r\n</div> ",
-      "type": "Html"
+      "type": "Html",
+      "value": "<div class\"row clearfix\">\r\n    <div  class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\" style=\"margin-top:-10px;\">\r\n        <div style=\"float:left\">日期：</div>\r\n        <div id=\"dateRangePickerDom\" style=\"float:left;width:135px\"></div>\r\n        <div style=\"float:left;padding-left:50px;\">品牌：</div>\r\n        <div id=\"brandDom\" style=\"float:left\"></div>\r\n        <div style=\"float:left;padding-left:20px;\">大区：</div>\r\n        <div id=\"area1Dom\" style=\"float:left\"></div>\r\n        <div style=\"float:left;padding-left:20px;\">省市：</div>\r\n        <div id=\"area2Dom\" style=\"float:left\"></div>\r\n        <div style=\"float:left;padding-left:20px;\">市：</div>\r\n        <div id=\"area3Dom\" style=\"float:left\"></div>\r\n        <div style=\"float:left;padding-left:20px;\">酒店：</div>\r\n        <div id=\"shopSelectDom\" style=\"float:left\"></div>\r\n        <div style=\"float:left;padding-left:20px;\">营业区：</div>\r\n        <div id=\"outletSelectDom\" style=\"float:left\"></div>\r\n        \r\n    </div>\r\n    <!-- \r\n    <div  class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\" style=\"margin-top:-10px;\">\r\n        <div style=\"float:left\">日期：</div>\r\n        <div id=\"brandDom\" style=\"float:left;width:135px\"></div>\r\n    </div>\r\n    -->\r\n</div> "
      },
      {
       "name": "fontSize",
-      "value": "",
-      "type": "Integer"
+      "type": "Integer",
+      "value": ""
      },
      {
       "name": "color",
-      "value": "",
-      "type": "Color"
+      "type": "Color",
+      "value": ""
      },
      {
       "name": "cssClass",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      }
-    ]
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
    },
    {
     "id": "a708b31c-f3dc-a784-0b1c-f2c59f2a85e2",
-    "type": "LayoutSpace",
-    "typeDesc": "Space",
     "parent": "UnIqEiD",
     "properties": [
      {
       "name": "height",
-      "value": "",
-      "type": "Integer"
+      "type": "Integer",
+      "value": ""
      },
      {
       "name": "backgroundColor",
-      "value": "",
-      "type": "Color"
+      "type": "Color",
+      "value": ""
      },
      {
       "name": "cssClass",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      }
-    ]
+    ],
+    "type": "LayoutSpace",
+    "typeDesc": "Space"
    },
    {
     "id": "0c36a0b4-1b78-1349-bfc6-eab6bba839f9",
