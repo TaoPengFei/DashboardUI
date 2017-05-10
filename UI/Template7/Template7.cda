@@ -125,6 +125,7 @@ group by b.ItemCatName_level1]]></Query>
       b.ItemCatName_level1 as itemcatname_level1,
       
       sum(a.ItemSaleAmt) as itemsaleamt,
+      0 as it,
       sum(a.ItemSaleQty) as itemsaleqty
 from fact_checkitem a 
 inner join  dim_itemcategory b on a.ItemCatId = b.ItemCatId
@@ -217,7 +218,8 @@ limit 20]]></Query>
       <Query><![CDATA[select
       b.ItemCatName_level1 as itemcatname_level1,
       sum(a.ItemSaleAmt) as itemsaleamt,
-      sum(a.ItemSaleQty) as itemsaleqty
+      sum(a.ItemSaleQty) as itemsaleqty,
+      0 as it
 from fact_checkitem a 
 inner join  dim_itemcategory b on a.ItemCatId = b.ItemCatId
 group by b.ItemCatName_level1
