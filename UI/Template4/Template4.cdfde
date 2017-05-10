@@ -12641,7 +12641,7 @@
      {
       "name": "postExecution",
       "type": "JavaScript",
-      "value": "function f(){\r\n    /**\r\n     *  金额 类的 千分位 格式化\r\n     */\r\n    var formatValue = function(nStr){\r\n        nStr += '';\r\n        x = nStr.split('.');\r\n        x1 = x[0];\r\n        x2 = x.length > 1 ? '.' + x[1] : '';\r\n        var rgx = /(\\d+)(\\d{3})/;\r\n        while (rgx.test(x1)){\r\n            x1 = x1.replace(rgx, '$1' + ',' + '$2');\r\n        }\r\n        x2 = x2.slice(0,3);\r\n        return x1 + x2;\r\n    };\r\n    /**\r\n     *  金额 类的  为0 的 格式化\r\n     */\r\n    var change = function(num){\r\n        num = parseFloat(num);\r\n        if( isNaN(num) ){\r\n            return false;\r\n        }else{\r\n            var newNum = \"\";\r\n            num = num + \"\";\r\n            var temp = num.split(\"\\.\");\r\n            var myLength = 0;\r\n            if( 2 <= temp.length ){\r\n                myLength = temp[1].length;\r\n            }\r\n            switch( myLength ){\r\n                case 0 :\r\n                    newNum = num + \".00\";\r\n                    break;\r\n                case 1 :\r\n                    newNum = num + \"0\";\r\n                    break;\r\n                default :\r\n                    newNum = num;\r\n                     break;\r\n            }\r\n            return newNum;\r\n        }\r\n    };\r\n    \r\n    if(saleAmt === \"\"){\r\n        saleAmt[0][0] = 0;\r\n    }else{\r\n        document.getElementById('saleAmtDom_KPI').innerHTML = formatValue(saleAmt[0][0]);\r\n    }\r\n} "
+      "value": "function f(){\r\n    /**\r\n     *  金额 类的 千分位 格式化\r\n     */\r\n    var formatValue = function(nStr){\r\n        nStr += '';\r\n        x = nStr.split('.');\r\n        x1 = x[0];\r\n        x2 = x.length > 1 ? '.' + x[1] : '';\r\n        var rgx = /(\\d+)(\\d{3})/;\r\n        while (rgx.test(x1)){\r\n            x1 = x1.replace(rgx, '$1' + ',' + '$2');\r\n        }\r\n        x2 = x2.slice(0,3);\r\n        return x1 + x2;\r\n    };\r\n    /**\r\n     *  金额 类的  为0 的 格式化\r\n     */\r\n    var change = function(num){\r\n        num = parseFloat(num);\r\n        if( isNaN(num) ){\r\n            return false;\r\n        }else{\r\n            var newNum = \"\";\r\n            num = num + \"\";\r\n            var temp = num.split(\"\\.\");\r\n            var myLength = 0;\r\n            if( 2 <= temp.length ){\r\n                myLength = temp[1].length;\r\n            }\r\n            switch( myLength ){\r\n                case 0 :\r\n                    newNum = num + \".00\";\r\n                    break;\r\n                case 1 :\r\n                    newNum = num + \"0\";\r\n                    break;\r\n                default :\r\n                    newNum = num;\r\n                     break;\r\n            }\r\n            return newNum;\r\n        }\r\n    };\r\n    if(saleAmt === \"\"){\r\n        saleAmt[0][0] = 0;\r\n    }else{\r\n        document.getElementById('saleAmtDom_KPI').innerHTML = formatValue(saleAmt[0][0]);\r\n    }\r\n} "
      },
      {
       "name": "postFetch",
@@ -13382,117 +13382,117 @@
    },
    {
     "id": "91674842-8e3e-83ea-0375-2ef8c047fee7",
-    "type": "ComponentsBSSelectBaseComponent",
-    "typeDesc": "Bootstrap Select",
     "parent": "IVYISBOOTSTRAP",
     "properties": [
      {
       "name": "name",
-      "value": "placeSelect",
-      "type": "Id"
+      "type": "Id",
+      "value": "placeSelect"
      },
      {
       "name": "parameter",
-      "value": "${p:placeParam}",
-      "type": "Parameter"
+      "type": "Parameter",
+      "value": "${p:placeParam}"
      },
      {
       "name": "listeners",
-      "value": "[\"${p:placeParam}\"]",
-      "type": "Listeners"
+      "type": "Listeners",
+      "value": "[\"${p:placeParam}\"]"
      },
      {
       "name": "parameters",
-      "value": "[[\"placeParam\",\"placeParam\"]]",
-      "type": "ValuesArray"
+      "type": "ValuesArray",
+      "value": "[[\"placeParam\",\"placeParam\"]]"
      },
      {
       "name": "valueAsId",
-      "value": "false",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "false"
      },
      {
       "name": "dataSource",
-      "value": "placeSelectQuery",
-      "type": "Datasource"
+      "type": "Datasource",
+      "value": "placeSelectQuery"
      },
      {
       "name": "valuesArray",
-      "value": "[]",
-      "type": "ValuesArray"
+      "type": "ValuesArray",
+      "value": "[]"
      },
      {
       "name": "priority",
-      "value": 5,
-      "type": "Integer"
+      "type": "Integer",
+      "value": 5
      },
      {
       "name": "refreshPeriod",
-      "value": "",
-      "type": "Integer"
+      "type": "Integer",
+      "value": ""
      },
      {
       "name": "buttonBlock",
-      "value": "false",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "false"
      },
      {
       "name": "buttonType",
-      "value": "btn-default",
-      "type": "buttonTypeCustom"
+      "type": "buttonTypeCustom",
+      "value": "btn-default"
      },
      {
       "name": "buttonSize",
-      "value": "btn-xs",
-      "type": "buttonSizeCustom"
+      "type": "buttonSizeCustom",
+      "value": "btn-xs"
      },
      {
       "name": "prependIcon",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      },
      {
       "name": "buttonIcon",
-      "value": "glyphicon-th",
-      "type": "buttonIconCustom"
+      "type": "buttonIconCustom",
+      "value": "glyphicon-th"
      },
      {
       "name": "htmlObject",
-      "value": "${h:placeSelectDom}",
-      "type": "HtmlObject"
+      "type": "HtmlObject",
+      "value": "${h:placeSelectDom}"
      },
      {
       "name": "executeAtStart",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      },
      {
       "name": "preExecution",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "postExecution",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "postFetch",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "preChange",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "postChange",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      }
     ],
-    "rowName": "Bootstrap Select"
+    "rowName": "Bootstrap Select",
+    "type": "ComponentsBSSelectBaseComponent",
+    "typeDesc": "Bootstrap Select"
    },
    {
     "id": "3f4a53e3-7d42-41fc-ec42-1f2840e316f2",
@@ -13952,117 +13952,117 @@
    },
    {
     "id": "29c78e81-cb54-1710-ecbb-6d986526894d",
-    "type": "ComponentsBSSelectBaseComponent",
-    "typeDesc": "Bootstrap Select",
     "parent": "IVYISBOOTSTRAP",
     "properties": [
      {
       "name": "name",
-      "value": "outletSelect",
-      "type": "Id"
+      "type": "Id",
+      "value": "outletSelect"
      },
      {
       "name": "parameter",
-      "value": "${p:outletParam}",
-      "type": "Parameter"
+      "type": "Parameter",
+      "value": "${p:outletParam}"
      },
      {
       "name": "listeners",
-      "value": "[\"${p:outletParam}\"]",
-      "type": "Listeners"
+      "type": "Listeners",
+      "value": "[\"${p:outletParam}\"]"
      },
      {
       "name": "parameters",
-      "value": "[[\"outletParam\",\"outletParam\"]]",
-      "type": "ValuesArray"
+      "type": "ValuesArray",
+      "value": "[[\"outletParam\",\"outletParam\"]]"
      },
      {
       "name": "valueAsId",
-      "value": "false",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "false"
      },
      {
       "name": "dataSource",
-      "value": "outletSelectQuery",
-      "type": "Datasource"
+      "type": "Datasource",
+      "value": "outletSelectQuery"
      },
      {
       "name": "valuesArray",
-      "value": "[]",
-      "type": "ValuesArray"
+      "type": "ValuesArray",
+      "value": "[]"
      },
      {
       "name": "priority",
-      "value": 5,
-      "type": "Integer"
+      "type": "Integer",
+      "value": 5
      },
      {
       "name": "refreshPeriod",
-      "value": "",
-      "type": "Integer"
+      "type": "Integer",
+      "value": ""
      },
      {
       "name": "buttonBlock",
-      "value": "false",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "false"
      },
      {
       "name": "buttonType",
-      "value": "btn-default",
-      "type": "buttonTypeCustom"
+      "type": "buttonTypeCustom",
+      "value": "btn-default"
      },
      {
       "name": "buttonSize",
-      "value": "btn-xs",
-      "type": "buttonSizeCustom"
+      "type": "buttonSizeCustom",
+      "value": "btn-xs"
      },
      {
       "name": "prependIcon",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      },
      {
       "name": "buttonIcon",
-      "value": "glyphicon-th",
-      "type": "buttonIconCustom"
+      "type": "buttonIconCustom",
+      "value": "glyphicon-th"
      },
      {
       "name": "htmlObject",
-      "value": "${h:outletSelectDom}",
-      "type": "HtmlObject"
+      "type": "HtmlObject",
+      "value": "${h:outletSelectDom}"
      },
      {
       "name": "executeAtStart",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      },
      {
       "name": "preExecution",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "postExecution",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "postFetch",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "preChange",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "postChange",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      }
     ],
-    "rowName": "Bootstrap Select"
+    "rowName": "Bootstrap Select",
+    "type": "ComponentsBSSelectBaseComponent",
+    "typeDesc": "Bootstrap Select"
    }
   ]
  },
@@ -15899,7 +15899,7 @@
      {
       "name": "resourceCode",
       "type": "Resource",
-      "value": "body{\r\n    background-color:#ECF0F5;\r\n}\r\n.container {\r\n    width:100%;\r\n    height: 100%;\r\n    overflow: auto;\r\n    position: absolute; \r\n    padding-top: 10px;\r\n    padding-right: 0px;\r\n    padding-left: 10px;\r\n    padding-bottom: 10px;\r\n    margin-right: auto;\r\n    margin-left: auto;\r\n}\r\n/*   #   */\r\n.panel-default {\r\n    border: none;\r\n    border-radius: 0px;\r\n    margin-bottom: 0px;\r\n    box-shadow: none;\r\n    -webkit-box-shadow: none;\r\n}\r\n.panel-default > .panel-heading {\r\n    color: #777;\r\n    background-color: #fff;\r\n    border-color: #e6e6e6;\r\n    padding: 10px 10px;\r\n}\r\n.panel-default > .panel-body {\r\n    padding: 10px;\r\n    padding-bottom: 0px;\r\n}\r\n.panel-default > .panel-body ul {\r\n    overflow: hidden;\r\n    padding: 0;\r\n    margin: 0px;\r\n    margin-top: -5px;\r\n}\r\n.panel-default > .panel-body ul li {\r\n    line-height: 27px;\r\n    list-style-type: none;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n}\r\n.panel-default > .panel-body ul li .time {\r\n    color: #a1a1a1;\r\n    float: right;\r\n    padding-right: 5px;\r\n} \r\n.panel-heading {\r\n     border-bottom: 0px solid transparent; \r\n}\r\n .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, \r\n .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, \r\n .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, \r\n .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, \r\n .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, \r\n .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, \r\n .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, \r\n .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, \r\n .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, \r\n .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, \r\n .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, \r\n .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {\r\n    position: relative;\r\n    min-height: 1px;\r\n    padding-right: 10px;\r\n    padding-left: 0px;\r\n} \r\n.row {\r\n    margin-right: 0px;\r\n    margin-left: 0px;\r\n} \r\nhr {\r\n    margin-top: 10px; \r\n    margin-bottom: 0px; \r\n    border: 0;\r\n    border-top: 0px solid #eee; \r\n} \r\n#dateRangePickerDom > input {\r\n    height: 22px;\r\n    border-radius:4px;\r\n    cursor:pointer;\r\n    border:1px solid #DBDBDB;\r\n}\r\n#row0{\r\n    padding-top:10px;\r\n}\r\n#row1_col1, #row2_col1{\r\n    margin-right:-10px;\r\n} "
+      "value": "@font-face{\r\n    font-family: TPF_Font_Thin;\r\n    src: url('/pentaho/BI/fonts/Comfortaa_Thin.ttf'),\r\n         url('/pentaho/BI/fonts/Comfortaa_Thin.eot');  /* IE9 */ \r\n    }\r\nbody{\r\n    background-color:#ECF0F5;\r\n}\r\n.container {\r\n    width:100%;\r\n    height: 100%;\r\n    overflow: auto;\r\n    position: absolute; \r\n    padding-top: 10px;\r\n    padding-right: 0px;\r\n    padding-left: 10px;\r\n    padding-bottom: 10px;\r\n    margin-right: auto;\r\n    margin-left: auto;\r\n}\r\n/*   #   */\r\n.panel-default {\r\n    border: none;\r\n    border-radius: 0px;\r\n    margin-bottom: 0px;\r\n    box-shadow: none;\r\n    -webkit-box-shadow: none;\r\n}\r\n.panel-default > .panel-heading {\r\n    color: #777;\r\n    background-color: #fff;\r\n    border-color: #e6e6e6;\r\n    padding: 10px 10px;\r\n}\r\n.panel-default > .panel-body {\r\n    padding: 10px;\r\n    padding-bottom: 0px;\r\n}\r\n.panel-default > .panel-body ul {\r\n    overflow: hidden;\r\n    padding: 0;\r\n    margin: 0px;\r\n    margin-top: -5px;\r\n}\r\n.panel-default > .panel-body ul li {\r\n    line-height: 27px;\r\n    list-style-type: none;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n}\r\n.panel-default > .panel-body ul li .time {\r\n    color: #a1a1a1;\r\n    float: right;\r\n    padding-right: 5px;\r\n} \r\n.panel-heading {\r\n     border-bottom: 0px solid transparent; \r\n}\r\n .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, \r\n .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, \r\n .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, \r\n .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, \r\n .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, \r\n .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, \r\n .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, \r\n .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, \r\n .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, \r\n .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, \r\n .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, \r\n .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {\r\n    position: relative;\r\n    min-height: 1px;\r\n    padding-right: 10px;\r\n    padding-left: 0px;\r\n} \r\n.row {\r\n    margin-right: 0px;\r\n    margin-left: 0px;\r\n} \r\nhr {\r\n    margin-top: 10px; \r\n    margin-bottom: 0px; \r\n    border: 0;\r\n    border-top: 0px solid #eee; \r\n} \r\n#dateRangePickerDom > input {\r\n    height: 22px;\r\n    border-radius:4px;\r\n    cursor:pointer;\r\n    border:1px solid #DBDBDB;\r\n}\r\n#row0{\r\n    padding-top:10px;\r\n}\r\n#row1_col1, #row2_col1{\r\n    margin-right:-10px;\r\n} \r\n#saleAmtDom_KPI, #ATVDom_KPI, #discountDom_KPI, \r\n#overTableVDom_KPI, #backItemDom_KPI, #rushItamDom_KPI {\r\n    color:#666666;\r\n    font-size:40px;\r\n    font-weight:lighter;\r\n    font-family:TPF_Font_Thin;\r\n} "
      },
      {
       "name": "resourceType",
@@ -16403,7 +16403,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\n    <i class=\"fa fa-paperclip\" style=\"padding-right: 5px;\"></i> 营业额 \n</div> \n<div class=\"row\">\n    <div class=\"col text-center\" style=\"font-size:40px\">\n        <span id=\"saleAmtDom_KPI\"></span>\n    </div>\n</div> \n<div class=\"row\">\n    <div class=\"panel-heading\">\n        <div class=\"col text-center\">\n            实际收款金额 &nbsp \n            <span id=\"saleAmtActualDom_KPI\" style=\"color:red\">2141414</span>\n        </div>\n    </div> \n</div> "
+      "value": "<div class=\"panel-heading \">\n     \n    <i class=\"fa fa-paperclip\" style=\"padding-right: 5px;\"></i> 营业额 \n    \n</div> \n<!--\n<div class=\"row\">\n    <div class=\"col text-center\">\n         \n        <i class=\"fa fa-paperclip\" style=\"padding-right: 5px;\"></i> \n        \n        营业额\n    </div>\n</div> \n-->\n<div class=\"row\">\n    <div class=\"col text-center\">\n        <span id=\"saleAmtDom_KPI\" style=\"color:#666666;font-size:40px;font-weight:lighter;font-family:TPF_Font_Thin;\"></span>\n    </div>\n</div> \n<div class=\"row\">\n    <div class=\"panel-heading\">\n        <div class=\"col text-center\">\n            实际收款金额&nbsp\n            <span id=\"saleAmtActualDom_KPI\" style=\"color:red;font-family:TPF_Font_Thin;\">21,414,14.00</span>\n        </div>\n    </div> \n</div> "
      },
      {
       "name": "fontSize",
@@ -16583,7 +16583,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\n    <i class=\"fa fa-paperclip\" style=\"padding-right: 5px;\"></i> 客单价  \n</div> \n<div class=\"row\">\n    <div class=\"col text-center\" style=\"font-size:40px\">\n        <span id=\"ATVDom_KPI\"></span>\n    </div>\n</div> \n<div class=\"row\">\n    <div class=\"panel-heading\">\n        <div class=\"col text-center\">\n            每单平均消费 &nbsp \n            <span id=\"preATVDom_KPI\" style=\"color:red\">214</span>\n        </div>\n    </div> \n</div> "
+      "value": "<div class=\"panel-heading \">\n    <i class=\"fa fa-paperclip\" style=\"padding-right: 5px;\"></i> 客单价  \n</div> \n<div class=\"row\">\n    <div class=\"col text-center\" style=\"font-size:40px\">\n        <div id=\"ATVDom_KPI\" style=\"color:#666666;font-weight:lighter;font-family:TPF_Font_Thin;\"></div>\n    </div>\n</div> \n<div class=\"row\">\n    <div class=\"panel-heading\">\n        <div class=\"col text-center\">\n            每单平均消费&nbsp\n            <span id=\"preATVDom_KPI\" style=\"color:red;font-family:TPF_Font_Thin;\">214</span>\n        </div>\n    </div> \n</div> "
      },
      {
       "name": "fontSize",
@@ -16801,7 +16801,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-paperclip\" style=\"padding-right: 5px;\"></i> 折扣单数占比  \r\n</div>\r\n\r\n<div class=\"row\">\r\n    <div class=\"col text-center\" style=\"font-size:40px\">\r\n        <span id=\"ATVDom_KPI\">54546566</span>\r\n    </div>\r\n</div> \r\n<div class=\"row\">\r\n    <div class=\"panel-heading\">\r\n        <div class=\"col text-center\">\r\n            每单平均消费 &nbsp \r\n            <span id=\"preATVDom_KPI\" style=\"color:red\">214</span>\r\n        </div>\r\n    </div> \r\n</div> \r\n "
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-paperclip\" style=\"padding-right: 5px;\"></i> 折扣单数占比  \r\n</div>\r\n\r\n<div class=\"row\">\r\n    <div class=\"col text-center\" style=\"font-size:40px\">\r\n        <span id=\"discountDom_KPI\">54.54%</span>\r\n    </div>\r\n</div> \r\n<div class=\"row\">\r\n    <div class=\"panel-heading\">\r\n        <div class=\"col text-center\">\r\n            折扣力度&nbsp \r\n            <span id=\"preATVDom_KPI\" style=\"color:red\">44.54%</span>\r\n        </div>\r\n    </div> \r\n</div> \r\n "
      },
      {
       "name": "fontSize",
@@ -16981,7 +16981,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\n    <i class=\"fa fa-paperclip\" style=\"padding-right: 5px;\"></i> 翻台率  \n</div> \n\n<div class=\"row\">\n    <div class=\"col text-center\" style=\"font-size:40px\">\n        <span id=\"ATVDom_KPI\">21313123</span>\n    </div>\n</div> \n<div class=\"row\">\n    <div class=\"panel-heading\">\n        <div class=\"col text-center\">\n            每单平均消费 &nbsp \n            <span id=\"preATVDom_KPI\" style=\"color:red\">214</span>\n        </div>\n    </div> \n</div> \n "
+      "value": "<div class=\"panel-heading \">\n    <i class=\"fa fa-paperclip\" style=\"padding-right: 5px;\"></i> 翻台率  \n</div> \n\n<div class=\"row\">\n    <div class=\"col text-center\" style=\"font-size:40px\">\n        <span id=\"overTableVDom_KPI\">234.19%</span>\n    </div>\n</div> \n\n "
      },
      {
       "name": "fontSize",
@@ -17480,7 +17480,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-paperclip\" style=\"padding-right: 5px;\"></i> 退菜率  \r\n</div> \r\n\r\n<div class=\"row\">\r\n    <div class=\"col text-center\" style=\"font-size:40px\">\r\n        <span id=\"ATVDom_KPI\">21313123</span>\r\n    </div>\r\n</div> \r\n\r\n "
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-paperclip\" style=\"padding-right: 5px;\"></i> 退菜率  \r\n</div> \r\n\r\n<div class=\"row\">\r\n    <div class=\"col text-center\" style=\"font-size:40px\">\r\n        <span id=\"backItemDom_KPI\">1.34%</span>\r\n    </div>\r\n</div> \r\n\r\n "
      },
      {
       "name": "fontSize",
@@ -17698,7 +17698,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-paperclip\" style=\"padding-right: 5px;\"></i> 催菜率  \r\n</div> \r\n \r\n<div class=\"row\">\r\n    <div class=\"col text-center\" style=\"font-size:40px\">\r\n        <span id=\"ATVDom_KPI\">54546566</span>\r\n    </div>\r\n</div> \r\n<div class=\"row\">\r\n    <div class=\"panel-heading\">\r\n        <div class=\"col text-center\">\r\n            平均催菜次数 &nbsp \r\n            <span id=\"preATVDom_KPI\" style=\"color:red\">214</span>\r\n        </div>\r\n    </div> \r\n</div> \r\n "
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-paperclip\" style=\"padding-right: 5px;\"></i> 催菜率  \r\n</div> \r\n \r\n<div class=\"row\">\r\n    <div class=\"col text-center\" style=\"font-size:40px\">\r\n        <span id=\"rushItamDom_KPI\">5.45%</span>\r\n    </div>\r\n</div> \r\n<div class=\"row\">\r\n    <div class=\"panel-heading\">\r\n        <div class=\"col text-center\">\r\n            平均催菜次数&nbsp \r\n            <span id=\"preATVDom_KPI\" style=\"color:red\">1.7</span>\r\n        </div>\r\n    </div> \r\n</div> \r\n "
      },
      {
       "name": "fontSize",

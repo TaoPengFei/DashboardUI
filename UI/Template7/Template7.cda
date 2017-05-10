@@ -79,6 +79,12 @@
       <Connection id="row7_col_query" type="sql.jndi">
          <Jndi>jdbc_bi</Jndi>
       </Connection>
+      <Connection id="row8_col_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="row11_col_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
    </DataSources>
    <DataAccess access="public" connection="row2_col1_query" id="row2_col1_query" type="sql">
       <Name>row2_col1_query</Name>
@@ -513,6 +519,81 @@ inner join dim_outlet c on a.OutletId_t = c.OutletId_t
 
 inner join dim_periodtype e on a.PeriodTypeId = e.PeriodTypeId
 group by c.OutletName,e.PeriodTypeName  
+
+limit 20]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="row8_col_query" id="row8_col_query" type="sql">
+      <Name>row8_col_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select
+      c.BIDate as bidate,
+      d.OutletName as outletname,
+      a.CheckNo as checkno,
+      sum(a.GuestQty) as guestqty,
+      a.BegTime as begtime,
+      j.ItemName as itemname,
+      e.ItemCatName_level1 as itemcatname1,
+      a.TableNo as tableno,
+      f.UserName as username,
+      g.ItemDeptName_level1 as itemdeptname1,
+      h.DiscountTypeName as discounttypename,
+      sum(a.ItemSaleAmt) as itemsaleamt,
+      sum(a.ItemSaleQty) as itemsaleqty
+from fact_check a 
+inner join fact_checkitem b on a.BIDateId = b.BIDateId
+                                and a.OutletId_t = b.OutletId_t
+                                and a.CheckId = b.CheckId
+inner join fact_checkdiscount i on a.BIDateId = i.BIDateId
+                                and a.OutletId_t = i.OutletId_t
+                                and a.CheckId = i.CheckId
+inner join dim_bidate c on a.BIDateId = c.BIDateId
+inner join dim_outlet d on a.OutletId_t = d.OutletId_t
+inner join dim_itemcategory e on b.ItemCatId = e.ItemCatId
+inner join dim_user f on a.OpenUserId = f.UserId
+inner join dim_itemdeptment g on b.ItemDeptId = g.ItemDeptId
+inner join dim_discounttype h on i.DiscountTypeId = h.DiscountTypeId
+inner join dim_item j on b.ItemId_t = j.ItemId_t
+
+group by c.BIDate,d.OutletName,a.CheckNo,a.BegTime,j.ItemName,e.ItemCatName_level1,a.TableNo,f.UserName,g.ItemDeptName_level1,h.DiscountTypeName
+
+limit 20]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="row11_col_query" id="row11_col_query" type="sql">
+      <Name>row11_col_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select 
+     
+      c.HourNo as hourno,
+      
+      
+      sum(a.CheckQty) as checkqty,
+      sum(a.GuestQty) as guestqty,
+      sum(a.SaleAmt) as saleamt,
+      0 as it,
+      sum(a.SCAmt) as scamt,
+      sum(a.TaxAmt) as taxamt,
+      sum(a.RoundAmt) as roundamt,
+      (sum(a.SaleAmt)+sum(a.CheckDiscountAmt)-sum(a.SCAmt)+sum(a.RoundAmt)) as salevalue,
+      sum(a.PayAmt) as payamt,
+      
+      case when sum(a.CheckQty) = 0 then '0.00'
+      when sum(a.CheckQty) = null then '0.00'
+      else format((sum(a.SaleAmt)/sum(a.CheckQty)),2) end as salecheck,    
+
+
+      case when sum(a.GuestQty) = 0 then '0.00'
+      when sum(a.GuestQty) = null then '0.00'
+      else format((sum(a.SaleAmt)/sum(a.GuestQty)),2) end as saleguest
+from fact_sumcheck a 
+
+inner join dim_bitime c on a.CheckOpenTimeId = c.BITimeId
+
+
+group by  c.HourNo
 
 limit 20]]></Query>
    </DataAccess>

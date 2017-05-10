@@ -14464,6 +14464,414 @@
      }
     ],
     "rowName": "Table Component"
+   },
+   {
+    "id": "46418324-450e-b19c-0165-5f364cbfec5d",
+    "type": "ComponentsTable",
+    "typeDesc": "table Component",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row8_col",
+      "type": "Id"
+     },
+     {
+      "name": "expandContainerObject",
+      "value": "",
+      "type": "HtmlTarget"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "oLanguage",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "language",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "colFormats",
+      "value": "[]",
+      "type": "ColFormatsArray"
+     },
+     {
+      "name": "colHeaders",
+      "value": "[\"营业日期\",\"门店名称\",\"系统单号\",\"人数\",\"开台时间\",\"菜品名称（中文）\",\"菜品类别\",\"台号\",\"开台员姓名\",\"菜品部门\",\"折扣名称\",\"菜品金额\",\"菜品数量\"]",
+      "type": "ColHeadersArray"
+     },
+     {
+      "name": "colSortable",
+      "value": "[]",
+      "type": "ColSortableArray"
+     },
+     {
+      "name": "colTypes",
+      "value": "[]",
+      "type": "colTypesCustom"
+     },
+     {
+      "name": "colWidths",
+      "value": "[]",
+      "type": "ColWidthsArray"
+     },
+     {
+      "name": "expandParameters",
+      "value": "[]",
+      "type": "ExpandParameters"
+     },
+     {
+      "name": "parameters",
+      "value": "[]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "displayLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "expandOnClick",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "filter",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "info",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "lengthChange",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "paginate",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "sort",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "colSearchable",
+      "value": "[]",
+      "type": "ColSearchableArray"
+     },
+     {
+      "name": "drawCallback",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "dataSource",
+      "value": "row8_col_query",
+      "type": "Datasource"
+     },
+     {
+      "name": "sDom",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "sortBy",
+      "value": "[]",
+      "type": "SortByArray"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "paginationType",
+      "value": "simple_numbers",
+      "type": "PaginationType"
+     },
+     {
+      "name": "tableStyle",
+      "value": "",
+      "type": "TableStyle"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:row8_col}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "paginateServerside",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postFetch",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "extraOptions",
+      "value": "[]",
+      "type": "ExtraOptionsArray"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     },
+     {
+      "name": "clickAction",
+      "value": "",
+      "type": "JavaScript"
+     }
+    ],
+    "rowName": "Table Component"
+   },
+   {
+    "id": "9ba92a7d-cf17-84bf-c68e-324843a22b37",
+    "type": "ComponentsTable",
+    "typeDesc": "table Component",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row11_col",
+      "type": "Id"
+     },
+     {
+      "name": "expandContainerObject",
+      "value": "",
+      "type": "HtmlTarget"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "oLanguage",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "language",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "colFormats",
+      "value": "[]",
+      "type": "ColFormatsArray"
+     },
+     {
+      "name": "colHeaders",
+      "value": "[\"营业时刻\",\"单数\",\"人数\",\"营业额\",\"营业额占比\",\"总服务费\",\"总税费\",\"凑整金额\",\"单据金额\",\"单据付款金额\",\"平均每单\",\"平均每人\"]",
+      "type": "ColHeadersArray"
+     },
+     {
+      "name": "colSortable",
+      "value": "[]",
+      "type": "ColSortableArray"
+     },
+     {
+      "name": "colTypes",
+      "value": "[]",
+      "type": "colTypesCustom"
+     },
+     {
+      "name": "colWidths",
+      "value": "[]",
+      "type": "ColWidthsArray"
+     },
+     {
+      "name": "expandParameters",
+      "value": "[]",
+      "type": "ExpandParameters"
+     },
+     {
+      "name": "parameters",
+      "value": "[]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "displayLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "expandOnClick",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "filter",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "info",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "lengthChange",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "paginate",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "sort",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "colSearchable",
+      "value": "[]",
+      "type": "ColSearchableArray"
+     },
+     {
+      "name": "drawCallback",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "dataSource",
+      "value": "row11_col_query",
+      "type": "Datasource"
+     },
+     {
+      "name": "sDom",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "sortBy",
+      "value": "[]",
+      "type": "SortByArray"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "paginationType",
+      "value": "simple_numbers",
+      "type": "PaginationType"
+     },
+     {
+      "name": "tableStyle",
+      "value": "",
+      "type": "TableStyle"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:row11_col}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "paginateServerside",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postFetch",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "extraOptions",
+      "value": "[]",
+      "type": "ExtraOptionsArray"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     },
+     {
+      "name": "clickAction",
+      "value": "",
+      "type": "JavaScript"
+     }
+    ],
+    "rowName": "Table Component"
    }
   ]
  },
@@ -16354,6 +16762,150 @@
     "rowName": "sql over sqlJndi",
     "type": "Componentssql_sqlJndi",
     "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "a52a91c5-a824-f403-5a71-098c66cfa950",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row8_col_query",
+      "type": "Id"
+     },
+     {
+      "name": "access",
+      "value": "public",
+      "type": "Access"
+     },
+     {
+      "name": "jndi",
+      "value": "jdbc_bi",
+      "type": "Jndi"
+     },
+     {
+      "name": "query",
+      "value": "select\r\n      c.BIDate as bidate,\r\n      d.OutletName as outletname,\r\n      a.CheckNo as checkno,\r\n      sum(a.GuestQty) as guestqty,\r\n      a.BegTime as begtime,\r\n      j.ItemName as itemname,\r\n      e.ItemCatName_level1 as itemcatname1,\r\n      a.TableNo as tableno,\r\n      f.UserName as username,\r\n      g.ItemDeptName_level1 as itemdeptname1,\r\n      h.DiscountTypeName as discounttypename,\r\n      sum(a.ItemSaleAmt) as itemsaleamt,\r\n      sum(a.ItemSaleQty) as itemsaleqty\r\nfrom fact_check a \r\ninner join fact_checkitem b on a.BIDateId = b.BIDateId\r\n                                and a.OutletId_t = b.OutletId_t\r\n                                and a.CheckId = b.CheckId\r\ninner join fact_checkdiscount i on a.BIDateId = i.BIDateId\r\n                                and a.OutletId_t = i.OutletId_t\r\n                                and a.CheckId = i.CheckId\r\ninner join dim_bidate c on a.BIDateId = c.BIDateId\r\ninner join dim_outlet d on a.OutletId_t = d.OutletId_t\r\ninner join dim_itemcategory e on b.ItemCatId = e.ItemCatId\r\ninner join dim_user f on a.OpenUserId = f.UserId\r\ninner join dim_itemdeptment g on b.ItemDeptId = g.ItemDeptId\r\ninner join dim_discounttype h on i.DiscountTypeId = h.DiscountTypeId\r\ninner join dim_item j on b.ItemId_t = j.ItemId_t\r\n\r\ngroup by c.BIDate,d.OutletName,a.CheckNo,a.BegTime,j.ItemName,e.ItemCatName_level1,a.TableNo,f.UserName,g.ItemDeptName_level1,h.DiscountTypeName\r\n\r\nlimit 20",
+      "type": "SqlQuery"
+     },
+     {
+      "name": "parameters",
+      "value": "[]",
+      "type": "CdaParameters"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "value": "[]",
+      "type": "CdaCalculatedColumnsArray"
+     },
+     {
+      "name": "cdacolumns",
+      "value": "[]",
+      "type": "CdaColumnsArray"
+     },
+     {
+      "name": "output",
+      "value": "[]",
+      "type": "IndexArray"
+     },
+     {
+      "name": "outputMode",
+      "value": "include",
+      "type": "OutputMode"
+     },
+     {
+      "name": "cacheKeys",
+      "value": "[]",
+      "type": "CacheKeysValues"
+     },
+     {
+      "name": "cacheDuration",
+      "value": 3600,
+      "type": "Integer"
+     },
+     {
+      "name": "cache",
+      "value": "true",
+      "type": "Boolean"
+     }
+    ],
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "rowName": "sql over sqlJndi"
+   },
+   {
+    "id": "1ec27d0f-9694-6e83-5523-cf5a9a7ab0f5",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row11_col_query",
+      "type": "Id"
+     },
+     {
+      "name": "access",
+      "value": "public",
+      "type": "Access"
+     },
+     {
+      "name": "jndi",
+      "value": "jdbc_bi",
+      "type": "Jndi"
+     },
+     {
+      "name": "query",
+      "value": "select \r\n     \r\n      c.HourNo as hourno,\r\n      \r\n      \r\n      sum(a.CheckQty) as checkqty,\r\n      sum(a.GuestQty) as guestqty,\r\n      sum(a.SaleAmt) as saleamt,\r\n      0 as it,\r\n      sum(a.SCAmt) as scamt,\r\n      sum(a.TaxAmt) as taxamt,\r\n      sum(a.RoundAmt) as roundamt,\r\n      (sum(a.SaleAmt)+sum(a.CheckDiscountAmt)-sum(a.SCAmt)+sum(a.RoundAmt)) as salevalue,\r\n      sum(a.PayAmt) as payamt,\r\n      \r\n      case when sum(a.CheckQty) = 0 then '0.00'\r\n      when sum(a.CheckQty) = null then '0.00'\r\n      else format((sum(a.SaleAmt)/sum(a.CheckQty)),2) end as salecheck,    \r\n\r\n\r\n      case when sum(a.GuestQty) = 0 then '0.00'\r\n      when sum(a.GuestQty) = null then '0.00'\r\n      else format((sum(a.SaleAmt)/sum(a.GuestQty)),2) end as saleguest\r\nfrom fact_sumcheck a \r\n\r\ninner join dim_bitime c on a.CheckOpenTimeId = c.BITimeId\r\n\r\n\r\ngroup by  c.HourNo\r\n\r\nlimit 20",
+      "type": "SqlQuery"
+     },
+     {
+      "name": "parameters",
+      "value": "[]",
+      "type": "CdaParameters"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "value": "[]",
+      "type": "CdaCalculatedColumnsArray"
+     },
+     {
+      "name": "cdacolumns",
+      "value": "[]",
+      "type": "CdaColumnsArray"
+     },
+     {
+      "name": "output",
+      "value": "[]",
+      "type": "IndexArray"
+     },
+     {
+      "name": "outputMode",
+      "value": "include",
+      "type": "OutputMode"
+     },
+     {
+      "name": "cacheKeys",
+      "value": "[]",
+      "type": "CacheKeysValues"
+     },
+     {
+      "name": "cacheDuration",
+      "value": 3600,
+      "type": "Integer"
+     },
+     {
+      "name": "cache",
+      "value": "true",
+      "type": "Boolean"
+     }
+    ],
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "rowName": "sql over sqlJndi"
    }
   ]
  },
@@ -19620,6 +20172,107 @@
     "typeDesc": "Html"
    },
    {
+    "id": "244e1220-16b9-9321-53bb-68c08230eb04",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "450d05fb-36a9-48d4-4c07-1d2efa3f6038",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "295493bb-a1b6-f240-4d7b-55dfd7b3eae7",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "244e1220-16b9-9321-53bb-68c08230eb04",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row8_col",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "300",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
     "id": "87e3a952-69cd-f0de-5496-aa29b0a9551d",
     "parent": "UnIqEiD",
     "properties": [
@@ -20990,6 +21643,107 @@
     ],
     "type": "LayoutHtml",
     "typeDesc": "Html"
+   },
+   {
+    "id": "587d51bd-58c1-5b1a-635f-a7527ea00680",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "bbe3deca-3901-5015-72eb-d50b97a09733",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "dbd1f444-2b26-2351-cfa6-793ba8d91f20",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "587d51bd-58c1-5b1a-635f-a7527ea00680",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row11_col",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "300",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
    },
    {
     "id": "78108294-1045-d61f-36cf-2796ab081b2e",
