@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:ExportManifest xmlns:ns2="http://www.pentaho.com/schema/">
-    <ExportManifestInformation exportDate="10-05-2017 05:59:50 CST" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
+    <ExportManifestInformation exportDate="11-05-2017 04:19:47 CST" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
     <ExportManifestEntity path="UI">
         <ExportManifestProperty>
             <EntityMetaData name="UI" createdDate="2017-05-04T16:22:05.302+08:00" isFolder="true" path="UI" isHidden="false" locale="zh_CN" title="UI"/>
@@ -328,6 +328,18 @@
     <ExportManifestEntity path="UI/Template5">
         <ExportManifestProperty>
             <EntityMetaData name="Template5" createdDate="2017-05-06T11:42:13.629+08:00" isFolder="true" path="UI/Template5" isHidden="false" locale="zh_CN" title="Template5"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/Template5/Template5.cda">
+        <ExportManifestProperty>
+            <EntityMetaData name="Template5.cda" createdDate="2017-05-11T10:24:16.258+08:00" isFolder="false" path="UI/Template5/Template5.cda" isHidden="false" locale="zh_CN" title="Template5.cda"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
