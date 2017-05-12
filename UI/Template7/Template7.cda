@@ -250,7 +250,7 @@ group by b.ItemCatName_level1]]></Query>
       <Query><![CDATA[select
       b.ItemCatName_level1 as itemcatname_level1,
       
-      sum(a.ItemSaleAmt) as itemsaleamt,
+      format(sum(a.ItemSaleAmt),2) as itemsaleamt,
       0 as it,
       sum(a.ItemSaleQty) as itemsaleqty
 from fact_checkitem a 
@@ -302,13 +302,13 @@ group by b.ItemCatName_level1]]></Query>
                when sum(c.TableQty) = null then '0.00'
 		  else concat(round(sum(a.CheckQty)/sum(c.TableQty)* 100,1),'%') end as 'shangzuolv',
 
-      sum(a.SaleAmt) as saleamt,
-      sum(a.CheckDiscountAmt) as checkdiscountamt,
-      sum(a.SCAmt) as scamt,
-      sum(a.TaxAmt) as taxamt,
-      sum(a.RoundAmt) as roundamt,
-      (sum(a.SaleAmt)+sum(a.CheckDiscountAmt)-sum(a.SCAmt)+sum(a.RoundAmt)) as salevalue,
-      sum(a.PayAmt) as payamt,
+      format(sum(a.SaleAmt),2) as saleamt,
+      format(sum(a.CheckDiscountAmt),2) as checkdiscountamt,
+      format(sum(a.SCAmt),2) as scamt,
+      format(sum(a.TaxAmt),2) as taxamt,
+      format(sum(a.RoundAmt),2) as roundamt,
+      format((sum(a.SaleAmt)+sum(a.CheckDiscountAmt)-sum(a.SCAmt)+sum(a.RoundAmt)),2) as salevalue,
+      format(sum(a.PayAmt),2) as payamt,
       
       case when sum(a.CheckQty) = 0 then '0.00'
       when sum(a.CheckQty) = null then '0.00'
@@ -362,13 +362,13 @@ group by b.BIDate,c.OutletName,e.PeriodTypeName]]></Query>
       e.PeriodTypeName as periodtypename,
       sum(a.CheckQty) as checkqty,
       sum(a.GuestQty) as guestqty,
-      sum(a.SaleAmt) as saleamt,
-      sum(a.CheckDiscountAmt) as checkdiscountamt,
-      sum(a.SCAmt) as scamt,
-      sum(a.TaxAmt) as taxamt,
-      sum(a.RoundAmt) as roundamt,
-      (sum(a.SaleAmt)+sum(a.CheckDiscountAmt)-sum(a.SCAmt)+sum(a.RoundAmt)) as salevalue,
-      sum(a.PayAmt) as payamt,
+      format(sum(a.SaleAmt),2) as saleamt,
+      format(sum(a.CheckDiscountAmt),2) as checkdiscountamt,
+      format(sum(a.SCAmt),2) as scamt,
+      format(sum(a.TaxAmt),2) as taxamt,
+      format(sum(a.RoundAmt),2) as roundamt,
+      format((sum(a.SaleAmt)+sum(a.CheckDiscountAmt)-sum(a.SCAmt)+sum(a.RoundAmt)),2) as salevalue,
+      format(sum(a.PayAmt),2) as payamt,
       
       case when sum(a.CheckQty) = 0 then '0.00'
       when sum(a.CheckQty) = null then '0.00'
@@ -428,13 +428,13 @@ group by b.BIDate,c.OutletName,d.StationName,e.PeriodTypeName]]></Query>
                when sum(c.TableQty) = null then '0.00'
     	  else concat(round(sum(a.CheckQty)/sum(c.TableQty)* 100,1),'%') end as 'shangzuolv',
 
-      sum(a.SaleAmt) as saleamt,
-      sum(a.CheckDiscountAmt) as checkdiscountamt,
-      sum(a.SCAmt) as scamt,
-      sum(a.TaxAmt) as taxamt,
-      sum(a.RoundAmt) as roundamt,
-      (sum(a.SaleAmt)+sum(a.CheckDiscountAmt)-sum(a.SCAmt)+sum(a.RoundAmt)) as salevalue,
-      sum(a.PayAmt) as payamt,
+      format(sum(a.SaleAmt),2) as saleamt,
+      format(sum(a.CheckDiscountAmt),2) as checkdiscountamt,
+      format(sum(a.SCAmt),2) as scamt,
+      format(sum(a.TaxAmt),2) as taxamt,
+      format(sum(a.RoundAmt),2) as roundamt,
+      format((sum(a.SaleAmt)+sum(a.CheckDiscountAmt)-sum(a.SCAmt)+sum(a.RoundAmt)),2) as salevalue,
+      format(sum(a.PayAmt),2) as payamt,
       
       case when sum(a.CheckQty) = 0 then '0.00'
       when sum(a.CheckQty) = null then '0.00'
@@ -493,7 +493,7 @@ group by c.OutletName,b.PeriodTypeName]]></Query>
       f.UserName as username,
       g.ItemDeptName_level1 as itemdeptname1,
       h.DiscountTypeName as discounttypename,
-      sum(a.ItemSaleAmt) as itemsaleamt,
+      format(sum(a.ItemSaleAmt),2) as itemsaleamt,
       sum(a.ItemSaleQty) as itemsaleqty
 from fact_check a 
 inner join fact_checkitem b on a.BIDateId = b.BIDateId
@@ -718,13 +718,13 @@ group by b.HourNo]]></Query>
       
       sum(a.CheckQty) as checkqty,
       sum(a.GuestQty) as guestqty,
-      sum(a.SaleAmt) as saleamt,
+      format(sum(a.SaleAmt),2) as saleamt,
       0 as it,
-      sum(a.SCAmt) as scamt,
-      sum(a.TaxAmt) as taxamt,
-      sum(a.RoundAmt) as roundamt,
-      (sum(a.SaleAmt)+sum(a.CheckDiscountAmt)-sum(a.SCAmt)+sum(a.RoundAmt)) as salevalue,
-      sum(a.PayAmt) as payamt,
+      format(sum(a.SCAmt),2) as scamt,
+      format(sum(a.TaxAmt),2) as taxamt,
+      format(sum(a.RoundAmt),2) as roundamt,
+      format((sum(a.SaleAmt)+sum(a.CheckDiscountAmt)-sum(a.SCAmt)+sum(a.RoundAmt)),2) as salevalue,
+      format(sum(a.PayAmt),2) as payamt,
       
       case when sum(a.CheckQty) = 0 then '0.00'
       when sum(a.CheckQty) = null then '0.00'
@@ -856,7 +856,7 @@ limit 20]]></Query>
       </Parameters>
       <Query><![CDATA[select
       b.ItemName as itemname,
-      sum(a.ItemSaleAmt) as itemsaleamt,
+      format(sum(a.ItemSaleAmt),2) as itemsaleamt,
       sum(a.ItemSaleQty) as itemsaleqty,
       0 as it
 from fact_checkitem a 
@@ -947,7 +947,7 @@ limit 20]]></Query>
       d.UserName as username,
       sum(a.GuestQty) as guestqty,
       e.ItemDeptName_level1 as itemdeptname1,
-      sum(b.DiscountAmt) as discountamt
+      format(sum(b.DiscountAmt),2) as discountamt
 from fact_check a 
 inner join fact_checkdiscount b on a.BIDateId = b.BIDateId
                                 and a.OutletId_t = b.OutletId_t
@@ -998,11 +998,11 @@ group by c.DiscountTypeName,a.CheckNo,a.Begtime,d.UserName,e.ItemDeptName_level1
      c.BIDate as bidate,
      d.UserName as username,
      e.PayTypeClassName as paytypeclassname,
-     sum(a.PayAmt) as payamt,
-     sum(a.TipAmt) as tipamt,
+     format(sum(a.PayAmt),2) as payamt,
+     format(sum(a.TipAmt),2) as tipamt,
      0 as it,
      0 as it1,
-     sum(a.SaleAmt) as saleamt
+     format(sum(a.SaleAmt),2) as saleamt
      
 from fact_check a 
 inner join fact_checkpay b on a.BIDateId = b.BIDateId
@@ -1057,7 +1057,7 @@ group by c.BIDate,d.UserName,e.PayTypeClassName]]></Query>
       f.StationName as stationname,
       g.OutletName as outletname,
       h.PeriodTypeName as periodtypename,
-      sum(b.PayAmt) as payamt
+      format(sum(b.PayAmt),2) as payamt
 from fact_check a 
 inner join fact_checkpay b on a.BIDateId = b.BIDateId
                            and a.CheckId = b.CheckId
@@ -1094,23 +1094,60 @@ group by bidate,checkno,paytypeclassname,paytypename,username,stationname,
       <Name>row17_col1_query</Name>
       <Cache duration="3600" enabled="true"/>
       <Columns/>
-      <Parameters/>
+      <Parameters>
+         <Parameter default="startDay" name="startDay" type="String"/>
+         <Parameter default="endDay" name="endDay" type="String"/>
+         <Parameter default="brandParam" name="brandParam" type="String"/>
+         <Parameter default="placeParam" name="placeParam" type="String"/>
+         <Parameter default="area1Param" name="area1Param" type="String"/>
+         <Parameter default="area2Param" name="area2Param" type="String"/>
+         <Parameter default="area3Param" name="area3Param" type="String"/>
+         <Parameter default="shopParam" name="shopParam" type="String"/>
+         <Parameter default="outletParam" name="outletParam" type="String"/>
+      </Parameters>
       <Query><![CDATA[select 
-      
+      b.BIDateId as bidateid,
       b.YearMonth as yearmonth,
       sum(a.SaleAmt) as '营业额',
       sum(a.GuestQty) as '人数'
       
 from fact_sumday a 
 inner join dim_bidate b on a.BIDateId = b.BIDateId
-group by b.YearMonth]]></Query>
+inner join dim_outlet c on a.OutletId_t = c.OutletId_t
+inner join dim_brand  d on c.BrandId = d.BrandId
+inner join dim_area e on c.AreaId = e.AreaId
+inner join dim_place f on c.PlaceId = f.PlaceId
+
+
+where 
+      b.BIDate between ${startDay} and ${endDay}
+      and (d.BrandId_level1 = ${brandParam} or ${brandParam} = -1)
+      and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)
+      and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)
+      and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)
+      and (c.ShopId = ${shopParam} or ${shopParam} = -1)
+      and (c.OutletId = ${outletParam} or ${outletParam} = -1)
+      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)
+
+group by b.BIDateId,b.YearMonth]]></Query>
    </DataAccess>
    <DataAccess access="public" connection="row17_col2_query" id="row17_col2_query" type="sql">
       <Name>row17_col2_query</Name>
       <Cache duration="3600" enabled="true"/>
       <Columns/>
-      <Parameters/>
+      <Parameters>
+         <Parameter default="startDay" name="startDay" type="String"/>
+         <Parameter default="endDay" name="endDay" type="String"/>
+         <Parameter default="brandParam" name="brandParam" type="String"/>
+         <Parameter default="placeParam" name="placeParam" type="String"/>
+         <Parameter default="area1Param" name="area1Param" type="String"/>
+         <Parameter default="area2Param" name="area2Param" type="String"/>
+         <Parameter default="area3Param" name="area3Param" type="String"/>
+         <Parameter default="shopParam" name="shopParam" type="String"/>
+         <Parameter default="outletParam" name="outletParam" type="String"/>
+      </Parameters>
       <Query><![CDATA[select 
+      b.BIDateId as bidateid,
       b.YearMonth as yearmonth,
       case when sum(a.CheckQty) = 0 then '0.00'
       when sum(a.CheckQty) = null then '0.00'
@@ -1118,10 +1155,26 @@ group by b.YearMonth]]></Query>
       case when sum(a.GuestQty) = 0 then '0.00'
       when sum(a.GuestQty) = null then '0.00'
       else  (sum(a.SaleAmt)/sum(a.GuestQty)) end '平均每人'
-     
+      
 from fact_sumday a 
 inner join dim_bidate b on a.BIDateId = b.BIDateId
-group by b.YearMonth]]></Query>
+inner join dim_outlet c on a.OutletId_t = c.OutletId_t
+inner join dim_brand  d on c.BrandId = d.BrandId
+inner join dim_area e on c.AreaId = e.AreaId
+inner join dim_place f on c.PlaceId = f.PlaceId
+
+
+where 
+      b.BIDate between ${startDay} and ${endDay}
+      and (d.BrandId_level1 = ${brandParam} or ${brandParam} = -1)
+      and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)
+      and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)
+      and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)
+      and (c.ShopId = ${shopParam} or ${shopParam} = -1)
+      and (c.OutletId = ${outletParam} or ${outletParam} = -1)
+      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)
+
+group by b.BIDateId,b.YearMonth]]></Query>
    </DataAccess>
    <DataAccess access="public" connection="saleamt_query" id="saleamt_query" type="sql">
       <Name>saleamt_query</Name>
@@ -1514,7 +1567,11 @@ WHERE
       <Name>shopSelectQuery</Name>
       <Cache duration="3600" enabled="true"/>
       <Columns/>
-      <Parameters/>
+      <Parameters>
+         <Parameter default="area1Param" name="area1Param" type="String"/>
+         <Parameter default="area2Param" name="area2Param" type="String"/>
+         <Parameter default="area3Param" name="area3Param" type="String"/>
+      </Parameters>
       <Query><![CDATA[SELECT -1,"所有"
 UNION ALL
 SELECT DISTINCT
@@ -1525,14 +1582,22 @@ FROM
 WHERE
      `Dim_Outlet`.`EndDate` = "2200-01-01"
      AND `Dim_Area`.`Status` = 0
-     AND `Dim_Outlet`.`Status` = 0]]></Query>
+     AND `Dim_Outlet`.`Status` = 0
+     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)
+     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)
+     AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)]]></Query>
    </DataAccess>
    <DataAccess access="public" connection="outletSelectQuery" id="outletSelectQuery"
                type="sql">
       <Name>outletSelectQuery</Name>
       <Cache duration="3600" enabled="true"/>
       <Columns/>
-      <Parameters/>
+      <Parameters>
+         <Parameter default="area1Param" name="area1Param" type="String"/>
+         <Parameter default="area2Param" name="area2Param" type="String"/>
+         <Parameter default="area3Param" name="area3Param" type="String"/>
+         <Parameter default="shopParam" name="shopParam" type="String"/>
+      </Parameters>
       <Query><![CDATA[SELECT -1,"所有"
 UNION ALL
 SELECT DISTINCT
@@ -1543,6 +1608,10 @@ FROM
 WHERE
      `Dim_Outlet`.`EndDate` = "2200-01-01"
      AND `Dim_Area`.`Status` = 0
-     AND `Dim_Outlet`.`Status` = 0]]></Query>
+     AND `Dim_Outlet`.`Status` = 0
+     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)
+     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)
+     AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)
+     AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)]]></Query>
    </DataAccess>
 </CDADescriptor>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="saleamt_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="salevalue_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="row1_col1_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="row2_col_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="row8_col2_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="row1_col2_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="row3_col_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="row6_col_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" connection="saleamt_query" id="saleamt_query" type="sql">
+      <Name>saleamt_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select 
+     sum(a.SaleAmt) as saleamt
+from fact_sumday a
+inner join dim_bidate b on a.BIDateId = b.BIDateId]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="salevalue_query" id="salevalue_query" type="sql">
+      <Name>salevalue_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select 
+     sum(a.SaleAmt) as saleamt
+from fact_sumday a
+inner join dim_bidate b on a.BIDateId = b.BIDateId]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="row1_col1_query" id="row1_col1_query" type="sql">
+      <Name>row1_col1_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select 
+     d.AreaName_level1 as areaname1,
+     sum(a.SaleAmt) as '结算金额'
+from fact_sumday a
+inner join dim_bidate b on a.BIDateId = b.BIDateId
+inner join dim_outlet c on a.OutletId_t = c.OutletId_t
+inner join dim_area d on c.AreaId = d.AreaId
+group by d.AreaName_level1]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="row2_col_query" id="row2_col_query" type="sql">
+      <Name>row2_col_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select 
+     c.OutletName as outletname,
+     sum(a.SaleAmt) as '结算金额'
+from fact_sumday a
+inner join dim_bidate b on a.BIDateId = b.BIDateId
+inner join dim_outlet c on a.OutletId_t = c.OutletId_t
+
+group by c.OutletName
+order by  sum(a.SaleAmt)   desc]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="row8_col2_query" id="row8_col2_query" type="sql">
+      <Name>row8_col2_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select 
+     c.DeliveryType as deliverytype,
+     sum(a.SaleAmt) as saleamt
+from fact_sumcheck a
+inner join dim_bidate b on a.BIDateId = b.BIDateId
+inner join dim_channel c on a.ChannelId = c.ChannelId
+
+group by c.DeliveryType]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="row1_col2_query" id="row1_col2_query" type="sql">
+      <Name>row1_col2_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select
+     c.AreaName_level2 as areaname2,
+     sum(a.SaleAmt) as '营业额'
+from fact_sumday a
+inner join dim_bidate b on a.BIDateId = b.BIDateId
+inner join dim_area c on a.AreaId = c.AreaId
+group by c.AreaName_level2
+order by sum(a.SaleAmt) desc]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="row3_col_query" id="row3_col_query" type="sql">
+      <Name>row3_col_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select 
+      c.YearMonth as yearmonth,
+      e.AreaName_level1 as areaname1,
+      e.AreaName_level2 as areaname2,
+      d.OutletName as outletname,
+      format(sum(a.SaleAmt),2) as saleamt,
+      format((sum(a.SaleAmt)+sum(b.DiscountAmt)),2) as shishou,
+      0 as it,
+      format(sum(b.DiscountAmt),2) as discountamt
+from fact_check a 
+inner join fact_checkdiscount b on a.BIDateId = b.BIDateId
+                                and a.OutletId_t = b.OutletId_t
+                                and a.CheckId  = b.CheckId
+inner join dim_bidate c on a.BIDateId = c.BIDateId
+inner join dim_outlet d on a.OutletId_t = d.OutletId_t
+inner join dim_area e on d.AreaId = e.AreaId
+
+group by c.YearMonth,e.AreaName_level1,e.AreaName_level2,d.OutletName]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="row6_col_query" id="row6_col_query" type="sql">
+      <Name>row6_col_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select 
+     b.YearMonth as yearmonth,
+     sum(a.SaleAmt) as '结算金额'
+from fact_sumday a 
+inner join dim_bidate b on a.BIDateId = b.BIDateId
+group by b.YearMonth]]></Query>
+   </DataAccess>
+</CDADescriptor>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="saleamt_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="row1_col1_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="row2_col_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" connection="saleamt_query" id="saleamt_query" type="sql">
+      <Name>saleamt_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select 
+     format(sum(a.SaleAmt),2) as saleamt
+from fact_sumday a
+inner join dim_bidate b on a.BIDateId = b.BIDateId]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="row1_col1_query" id="row1_col1_query" type="sql">
+      <Name>row1_col1_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select 
+     d.AreaName_level1 as areaname1,
+     format(sum(a.SaleAmt),2) as saleamt
+from fact_sumday a
+inner join dim_bidate b on a.BIDateId = b.BIDateId
+inner join dim_outlet c on a.OutletId_t = c.OutletId_t
+inner join dim_area d on c.AreaId = d.AreaId
+group by d.AreaName_level1]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="row2_col_query" id="row2_col_query" type="sql">
+      <Name>row2_col_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select 
+     c.OutletName as outletname,
+     format(sum(a.SaleAmt),2) as saleamt
+from fact_sumday a
+inner join dim_bidate b on a.BIDateId = b.BIDateId
+inner join dim_outlet c on a.OutletId_t = c.OutletId_t
+
+group by c.OutletName
+order by saleamt   desc]]></Query>
+   </DataAccess>
+</CDADescriptor>
