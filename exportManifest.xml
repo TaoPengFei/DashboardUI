@@ -1,9 +1,57 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:ExportManifest xmlns:ns2="http://www.pentaho.com/schema/">
-    <ExportManifestInformation exportDate="12-05-2017 03:52:52 CST" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
+    <ExportManifestInformation exportDate="15-05-2017 11:18:20 CST" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
     <ExportManifestEntity path="UI">
         <ExportManifestProperty>
             <EntityMetaData name="UI" createdDate="2017-05-04T16:22:05.302+08:00" isFolder="true" path="UI" isHidden="false" locale="zh_CN" title="UI"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/Ivy Gaugue Component Example">
+        <ExportManifestProperty>
+            <EntityMetaData name="Ivy Gaugue Component Example" createdDate="2017-05-12T16:39:13.447+08:00" isFolder="true" path="UI/Ivy Gaugue Component Example" isHidden="false" locale="zh_CN" title="Ivy Gaugue Component Example"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/Ivy Gaugue Component Example/Ivy Gaugue Example.cda">
+        <ExportManifestProperty>
+            <EntityMetaData name="Ivy Gaugue Example.cda" createdDate="2017-05-12T16:39:13.921+08:00" isFolder="false" path="UI/Ivy Gaugue Component Example/Ivy Gaugue Example.cda" isHidden="false" locale="zh_CN" title="Ivy Gaugue Example"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/Ivy Gaugue Component Example/Ivy Gaugue Example.cdfde">
+        <ExportManifestProperty>
+            <EntityMetaData name="Ivy Gaugue Example.cdfde" createdDate="2017-05-12T16:39:14.260+08:00" isFolder="false" path="UI/Ivy Gaugue Component Example/Ivy Gaugue Example.cdfde" isHidden="false" locale="zh_CN" title="Ivy Gaugue Example"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/Ivy Gaugue Component Example/Ivy Gaugue Example.wcdf">
+        <ExportManifestProperty>
+            <EntityMetaData name="Ivy Gaugue Example.wcdf" createdDate="2017-05-12T16:39:13.592+08:00" isFolder="false" path="UI/Ivy Gaugue Component Example/Ivy Gaugue Example.wcdf" isHidden="false" locale="zh_CN" title="Ivy Gaugue Example"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>

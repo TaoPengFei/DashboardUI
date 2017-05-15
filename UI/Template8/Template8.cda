@@ -10,13 +10,10 @@
       <Connection id="row1_col1_query" type="sql.jndi">
          <Jndi>jdbc_bi</Jndi>
       </Connection>
-      <Connection id="row2_col_query" type="sql.jndi">
-         <Jndi>jdbc_bi</Jndi>
-      </Connection>
-      <Connection id="row8_col2_query" type="sql.jndi">
-         <Jndi>jdbc_bi</Jndi>
-      </Connection>
       <Connection id="row1_col2_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="row2_col_query" type="sql.jndi">
          <Jndi>jdbc_bi</Jndi>
       </Connection>
       <Connection id="row3_col_query" type="sql.jndi">
@@ -25,32 +22,121 @@
       <Connection id="row6_col_query" type="sql.jndi">
          <Jndi>jdbc_bi</Jndi>
       </Connection>
+      <Connection id="row7_col_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="row8_col2_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="_____select_____" type="sql.jndi">
+         <Jndi/>
+      </Connection>
+      <Connection id="brandSelectQuery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="placeSelectQuery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="area1SelectQuery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="area2SelectQuery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="area3SelectQuery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="shopSelectQuery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="outletSelectQuery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
    </DataSources>
    <DataAccess access="public" connection="saleamt_query" id="saleamt_query" type="sql">
       <Name>saleamt_query</Name>
       <Cache duration="3600" enabled="true"/>
       <Columns/>
-      <Parameters/>
+      <Parameters>
+         <Parameter default="startDay" name="startDay" type="String"/>
+         <Parameter default="endDay" name="endDay" type="String"/>
+         <Parameter default="brandParam" name="brandParam" type="String"/>
+         <Parameter default="placeParam" name="placeParam" type="String"/>
+         <Parameter default="area1Param" name="area1Param" type="String"/>
+         <Parameter default="area2Param" name="area2Param" type="String"/>
+         <Parameter default="area3Param" name="area3Param" type="String"/>
+         <Parameter default="shopParam" name="shopParam" type="String"/>
+         <Parameter default="outletParam" name="outletParam" type="String"/>
+      </Parameters>
       <Query><![CDATA[select 
      sum(a.SaleAmt) as saleamt
 from fact_sumday a
-inner join dim_bidate b on a.BIDateId = b.BIDateId]]></Query>
+inner join dim_bidate b on a.BIDateId = b.BIDateId
+inner join dim_outlet c on a.OutletId_t = c.OutletId_t
+inner join dim_brand  d on c.BrandId = d.BrandId
+inner join dim_area e on c.AreaId = e.AreaId
+inner join dim_place f on c.PlaceId = f.PlaceId
+
+where 
+      b.BIDate between ${startDay} and ${endDay}
+      and (d.BrandId_level1 = ${brandParam} or ${brandParam} = -1)
+      and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)
+      and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)
+      and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)
+      and (c.ShopId = ${shopParam} or ${shopParam} = -1)
+      and (c.OutletId = ${outletParam} or ${outletParam} = -1)
+      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)]]></Query>
    </DataAccess>
    <DataAccess access="public" connection="salevalue_query" id="salevalue_query" type="sql">
       <Name>salevalue_query</Name>
       <Cache duration="3600" enabled="true"/>
       <Columns/>
-      <Parameters/>
+      <Parameters>
+         <Parameter default="startDay" name="startDay" type="String"/>
+         <Parameter default="endDay" name="endDay" type="String"/>
+         <Parameter default="brandParam" name="brandParam" type="String"/>
+         <Parameter default="placeParam" name="placeParam" type="String"/>
+         <Parameter default="area1Param" name="area1Param" type="String"/>
+         <Parameter default="area2Param" name="area2Param" type="String"/>
+         <Parameter default="area3Param" name="area3Param" type="String"/>
+         <Parameter default="shopParam" name="shopParam" type="String"/>
+         <Parameter default="outletParam" name="outletParam" type="String"/>
+      </Parameters>
       <Query><![CDATA[select 
      sum(a.SaleAmt) as saleamt
 from fact_sumday a
-inner join dim_bidate b on a.BIDateId = b.BIDateId]]></Query>
+inner join dim_bidate b on a.BIDateId = b.BIDateId
+
+inner join dim_outlet c on a.OutletId_t = c.OutletId_t
+inner join dim_brand  d on c.BrandId = d.BrandId
+inner join dim_area e on c.AreaId = e.AreaId
+inner join dim_place f on c.PlaceId = f.PlaceId
+
+where 
+      b.BIDate between ${startDay} and ${endDay}
+      and (d.BrandId_level1 = ${brandParam} or ${brandParam} = -1)
+      and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)
+      and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)
+      and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)
+      and (c.ShopId = ${shopParam} or ${shopParam} = -1)
+      and (c.OutletId = ${outletParam} or ${outletParam} = -1)
+      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)]]></Query>
    </DataAccess>
    <DataAccess access="public" connection="row1_col1_query" id="row1_col1_query" type="sql">
       <Name>row1_col1_query</Name>
       <Cache duration="3600" enabled="true"/>
       <Columns/>
-      <Parameters/>
+      <Parameters>
+         <Parameter default="startDay" name="startDay" type="String"/>
+         <Parameter default="endDay" name="endDay" type="String"/>
+         <Parameter default="brandParam" name="brandParam" type="String"/>
+         <Parameter default="placeParam" name="placeParam" type="String"/>
+         <Parameter default="area1Param" name="area1Param" type="String"/>
+         <Parameter default="area2Param" name="area2Param" type="String"/>
+         <Parameter default="area3Param" name="area3Param" type="String"/>
+         <Parameter default="shopParam" name="shopParam" type="String"/>
+         <Parameter default="outletParam" name="outletParam" type="String"/>
+      </Parameters>
       <Query><![CDATA[select 
      d.AreaName_level1 as areaname1,
      sum(a.SaleAmt) as '结算金额'
@@ -58,56 +144,111 @@ from fact_sumday a
 inner join dim_bidate b on a.BIDateId = b.BIDateId
 inner join dim_outlet c on a.OutletId_t = c.OutletId_t
 inner join dim_area d on c.AreaId = d.AreaId
+inner join dim_brand  e on c.BrandId = e.BrandId
+inner join dim_place f on c.PlaceId = f.PlaceId
+
+where 
+      b.BIDate between ${startDay} and ${endDay}
+      and (e.BrandId_level1 = ${brandParam} or ${brandParam} = -1)
+      and (d.AreaId_level1 = ${area1Param} or ${area1Param} = -1)
+      and (d.AreaId_level2 = ${area2Param} or ${area2Param} = -1)
+      and (d.AreaId_level3 = ${area3Param} or ${area3Param} = -1)
+      and (c.ShopId = ${shopParam} or ${shopParam} = -1)
+      and (c.OutletId = ${outletParam} or ${outletParam} = -1)
+      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)
 group by d.AreaName_level1]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="row1_col2_query" id="row1_col2_query" type="sql">
+      <Name>row1_col2_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="startDay" name="startDay" type="String"/>
+         <Parameter default="endDay" name="endDay" type="String"/>
+         <Parameter default="brandParam" name="brandParam" type="String"/>
+         <Parameter default="placeParam" name="placeParam" type="String"/>
+         <Parameter default="area1Param" name="area1Param" type="String"/>
+         <Parameter default="area2Param" name="area2Param" type="String"/>
+         <Parameter default="area3Param" name="area3Param" type="String"/>
+         <Parameter default="shopParam" name="shopParam" type="String"/>
+         <Parameter default="outletParam" name="outletParam" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select
+     e.AreaName_level2 as areaname2,
+     sum(a.SaleAmt) as '营业额'
+from fact_sumday a
+inner join dim_bidate b on a.BIDateId = b.BIDateId
+inner join dim_area e on a.AreaId = e.AreaId
+
+inner join dim_outlet c on a.OutletId_t = c.OutletId_t
+inner join dim_brand  d on c.BrandId = d.BrandId
+inner join dim_place f on c.PlaceId = f.PlaceId
+
+where 
+      b.BIDate between ${startDay} and ${endDay}
+      and (d.BrandId_level1 = ${brandParam} or ${brandParam} = -1)
+      and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)
+      and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)
+      and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)
+      and (c.ShopId = ${shopParam} or ${shopParam} = -1)
+      and (c.OutletId = ${outletParam} or ${outletParam} = -1)
+      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)
+group by e.AreaName_level2
+order by sum(a.SaleAmt) desc]]></Query>
    </DataAccess>
    <DataAccess access="public" connection="row2_col_query" id="row2_col_query" type="sql">
       <Name>row2_col_query</Name>
       <Cache duration="3600" enabled="true"/>
       <Columns/>
-      <Parameters/>
+      <Parameters>
+         <Parameter default="startDay" name="startDay" type="String"/>
+         <Parameter default="endDay" name="endDay" type="String"/>
+         <Parameter default="brandParam" name="brandParam" type="String"/>
+         <Parameter default="placeParam" name="placeParam" type="String"/>
+         <Parameter default="area1Param" name="area1Param" type="String"/>
+         <Parameter default="area2Param" name="area2Param" type="String"/>
+         <Parameter default="area3Param" name="area3Param" type="String"/>
+         <Parameter default="shopParam" name="shopParam" type="String"/>
+         <Parameter default="outletParam" name="outletParam" type="String"/>
+      </Parameters>
       <Query><![CDATA[select 
      c.OutletName as outletname,
      sum(a.SaleAmt) as '结算金额'
 from fact_sumday a
 inner join dim_bidate b on a.BIDateId = b.BIDateId
 inner join dim_outlet c on a.OutletId_t = c.OutletId_t
+inner join dim_brand  d on c.BrandId = d.BrandId
+inner join dim_area e on c.AreaId = e.AreaId
+inner join dim_place f on c.PlaceId = f.PlaceId
+
+where 
+      b.BIDate between ${startDay} and ${endDay}
+      and (d.BrandId_level1 = ${brandParam} or ${brandParam} = -1)
+      and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)
+      and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)
+      and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)
+      and (c.ShopId = ${shopParam} or ${shopParam} = -1)
+      and (c.OutletId = ${outletParam} or ${outletParam} = -1)
+      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)
 
 group by c.OutletName
 order by  sum(a.SaleAmt)   desc]]></Query>
-   </DataAccess>
-   <DataAccess access="public" connection="row8_col2_query" id="row8_col2_query" type="sql">
-      <Name>row8_col2_query</Name>
-      <Cache duration="3600" enabled="true"/>
-      <Columns/>
-      <Parameters/>
-      <Query><![CDATA[select 
-     c.DeliveryType as deliverytype,
-     sum(a.SaleAmt) as saleamt
-from fact_sumcheck a
-inner join dim_bidate b on a.BIDateId = b.BIDateId
-inner join dim_channel c on a.ChannelId = c.ChannelId
-
-group by c.DeliveryType]]></Query>
-   </DataAccess>
-   <DataAccess access="public" connection="row1_col2_query" id="row1_col2_query" type="sql">
-      <Name>row1_col2_query</Name>
-      <Cache duration="3600" enabled="true"/>
-      <Columns/>
-      <Parameters/>
-      <Query><![CDATA[select
-     c.AreaName_level2 as areaname2,
-     sum(a.SaleAmt) as '营业额'
-from fact_sumday a
-inner join dim_bidate b on a.BIDateId = b.BIDateId
-inner join dim_area c on a.AreaId = c.AreaId
-group by c.AreaName_level2
-order by sum(a.SaleAmt) desc]]></Query>
    </DataAccess>
    <DataAccess access="public" connection="row3_col_query" id="row3_col_query" type="sql">
       <Name>row3_col_query</Name>
       <Cache duration="3600" enabled="true"/>
       <Columns/>
-      <Parameters/>
+      <Parameters>
+         <Parameter default="startDay" name="startDay" type="String"/>
+         <Parameter default="endDay" name="endDay" type="String"/>
+         <Parameter default="brandParam" name="brandParam" type="String"/>
+         <Parameter default="placeParam" name="placeParam" type="String"/>
+         <Parameter default="area1Param" name="area1Param" type="String"/>
+         <Parameter default="area2Param" name="area2Param" type="String"/>
+         <Parameter default="area3Param" name="area3Param" type="String"/>
+         <Parameter default="shopParam" name="shopParam" type="String"/>
+         <Parameter default="outletParam" name="outletParam" type="String"/>
+      </Parameters>
       <Query><![CDATA[select 
       c.YearMonth as yearmonth,
       e.AreaName_level1 as areaname1,
@@ -124,6 +265,18 @@ inner join fact_checkdiscount b on a.BIDateId = b.BIDateId
 inner join dim_bidate c on a.BIDateId = c.BIDateId
 inner join dim_outlet d on a.OutletId_t = d.OutletId_t
 inner join dim_area e on d.AreaId = e.AreaId
+inner join dim_place f on d.PlaceId = f.PlaceId
+inner join dim_brand  g on d.BrandId = g.BrandId
+
+where 
+      c.BIDate between ${startDay} and ${endDay}
+      and (g.BrandId_level1 = ${brandParam} or ${brandParam} = -1)
+      and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)
+      and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)
+      and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)
+      and (d.ShopId = ${shopParam} or ${shopParam} = -1)
+      and (d.OutletId = ${outletParam} or ${outletParam} = -1)
+      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)
 
 group by c.YearMonth,e.AreaName_level1,e.AreaName_level2,d.OutletName]]></Query>
    </DataAccess>
@@ -131,12 +284,274 @@ group by c.YearMonth,e.AreaName_level1,e.AreaName_level2,d.OutletName]]></Query>
       <Name>row6_col_query</Name>
       <Cache duration="3600" enabled="true"/>
       <Columns/>
-      <Parameters/>
+      <Parameters>
+         <Parameter default="startDay" name="startDay" type="String"/>
+         <Parameter default="endDay" name="endDay" type="String"/>
+         <Parameter default="brandParam" name="brandParam" type="String"/>
+         <Parameter default="placeParam" name="placeParam" type="String"/>
+         <Parameter default="area1Param" name="area1Param" type="String"/>
+         <Parameter default="area2Param" name="area2Param" type="String"/>
+         <Parameter default="area3Param" name="area3Param" type="String"/>
+         <Parameter default="shopParam" name="shopParam" type="String"/>
+         <Parameter default="outletParam" name="outletParam" type="String"/>
+      </Parameters>
       <Query><![CDATA[select 
      b.YearMonth as yearmonth,
      sum(a.SaleAmt) as '结算金额'
 from fact_sumday a 
 inner join dim_bidate b on a.BIDateId = b.BIDateId
+inner join dim_outlet c on a.OutletId_t = c.OutletId_t
+inner join dim_brand  d on c.BrandId = d.BrandId
+inner join dim_area e on c.AreaId = e.AreaId
+inner join dim_place f on c.PlaceId = f.PlaceId
+
+where 
+      b.BIDate between ${startDay} and ${endDay}
+      and (d.BrandId_level1 = ${brandParam} or ${brandParam} = -1)
+      and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)
+      and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)
+      and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)
+      and (c.ShopId = ${shopParam} or ${shopParam} = -1)
+      and (c.OutletId = ${outletParam} or ${outletParam} = -1)
+      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)
 group by b.YearMonth]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="row7_col_query" id="row7_col_query" type="sql">
+      <Name>row7_col_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="startDay" name="startDay" type="String"/>
+         <Parameter default="endDay" name="endDay" type="String"/>
+         <Parameter default="brandParam" name="brandParam" type="String"/>
+         <Parameter default="placeParam" name="placeParam" type="String"/>
+         <Parameter default="area1Param" name="area1Param" type="String"/>
+         <Parameter default="area2Param" name="area2Param" type="String"/>
+         <Parameter default="area3Param" name="area3Param" type="String"/>
+         <Parameter default="shopParam" name="shopParam" type="String"/>
+         <Parameter default="outletParam" name="outletParam" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select 
+      g.YearMonth as yearmonth,
+      format(sum(a.SaleAmt),2) as saleamt,
+      format((sum(a.SaleAmt)+sum(b.DiscountAmt)),2) as yingye,
+      format((sum(a.SaleAmt)+sum(b.DiscountAmt)),2) as shishou,
+      0 as it,
+      0 as it1,
+      case when sum(a.GuestQty) = 0 then '0.00'
+      when sum(a.GuestQty) = null then '0.00'
+      else format((sum(a.SaleAmt)/sum(a.GuestQty)),2)  end as saleguest,
+      0 as it3,
+      format(sum(b.DiscountAmt),2) as discountamt
+from fact_check a
+inner join fact_checkdiscount b on a.BIDateId = b.BIDateId
+                                and a.OutletId_t = b.OutletId_t
+                                and a.CheckId = b.CheckId
+inner join dim_bidate g on a.BIDateId = g.BIDateId
+
+inner join dim_outlet c on a.OutletId_t = c.OutletId_t
+inner join dim_brand  d on c.BrandId = d.BrandId
+inner join dim_area e on c.AreaId = e.AreaId
+inner join dim_place f on c.PlaceId = f.PlaceId
+
+where 
+      g.BIDate between ${startDay} and ${endDay}
+      and (d.BrandId_level1 = ${brandParam} or ${brandParam} = -1)
+      and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)
+      and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)
+      and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)
+      and (c.ShopId = ${shopParam} or ${shopParam} = -1)
+      and (c.OutletId = ${outletParam} or ${outletParam} = -1)
+      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)
+group by g.YearMonth]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="row8_col2_query" id="row8_col2_query" type="sql">
+      <Name>row8_col2_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="startDay" name="startDay" type="String"/>
+         <Parameter default="endDay" name="endDay" type="String"/>
+         <Parameter default="brandParam" name="brandParam" type="String"/>
+         <Parameter default="placeParam" name="placeParam" type="String"/>
+         <Parameter default="area1Param" name="area1Param" type="String"/>
+         <Parameter default="area2Param" name="area2Param" type="String"/>
+         <Parameter default="area3Param" name="area3Param" type="String"/>
+         <Parameter default="shopParam" name="shopParam" type="String"/>
+         <Parameter default="outletParam" name="outletParam" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select 
+     g.DeliveryType as deliverytype,
+     sum(a.SaleAmt) as saleamt
+from fact_sumcheck a
+inner join dim_bidate b on a.BIDateId = b.BIDateId
+inner join dim_channel g on a.ChannelId = g.ChannelId
+
+inner join dim_outlet c on a.OutletId_t = c.OutletId_t
+inner join dim_brand  d on c.BrandId = d.BrandId
+inner join dim_area e on c.AreaId = e.AreaId
+inner join dim_place f on c.PlaceId = f.PlaceId
+
+where 
+      b.BIDate between ${startDay} and ${endDay}
+      and (d.BrandId_level1 = ${brandParam} or ${brandParam} = -1)
+      and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)
+      and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)
+      and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)
+      and (c.ShopId = ${shopParam} or ${shopParam} = -1)
+      and (c.OutletId = ${outletParam} or ${outletParam} = -1)
+      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)
+
+group by g.DeliveryType]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="_____select_____" id="_____select_____" type="sql">
+      <Name>_____select_____</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query/>
+   </DataAccess>
+   <DataAccess access="public" connection="brandSelectQuery" id="brandSelectQuery" type="sql">
+      <Name>brandSelectQuery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT 
+    -1,
+    "所有"
+UNION ALL
+SELECT DISTINCT
+    `Dim_Brand`.`BrandId_level1`,
+    `Dim_Brand`.`BrandName_level1`
+FROM
+    `Dim_Brand`
+WHERE
+    `Dim_Brand`.`Status` = 0]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="placeSelectQuery" id="placeSelectQuery" type="sql">
+      <Name>placeSelectQuery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT -1,
+        "所有"
+UNION ALL
+SELECT DISTINCT
+     `Dim_Place`.`PlaceId`,
+     `Dim_Place`.`PlaceName`
+FROM
+     `Dim_Place`
+WHERE
+     `Dim_Place`.`Status` = 0]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="area1SelectQuery" id="area1SelectQuery" type="sql">
+      <Name>area1SelectQuery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT -1,"所有"
+UNION ALL
+SELECT DISTINCT
+     `Dim_Area`.`AreaId_level1`,
+     `Dim_Area`.`AreaName_level1`
+FROM
+     `Dim_Outlet` INNER JOIN `Dim_Area` ON `Dim_Outlet`.`AreaId` = `Dim_Area`.`AreaId`
+WHERE
+     `Dim_Outlet`.`EndDate` = "2200-01-01"
+     AND `Dim_Area`.`Status` = 0
+     AND `Dim_Outlet`.`Status` = 0]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="area2SelectQuery" id="area2SelectQuery" type="sql">
+      <Name>area2SelectQuery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="area1Param" name="area1Param" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT -1,"所有"
+UNION ALL
+SELECT DISTINCT
+     `Dim_Area`.`AreaId_level2`,
+     `Dim_Area`.`AreaName_level2`
+FROM
+     `Dim_Outlet` INNER JOIN `Dim_Area` ON `Dim_Outlet`.`AreaId` = `Dim_Area`.`AreaId`
+WHERE
+     `Dim_Outlet`.`EndDate` = "2200-01-01"
+     AND `Dim_Area`.`Status` = 0
+     AND `Dim_Outlet`.`Status` = 0
+     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="area3SelectQuery" id="area3SelectQuery" type="sql">
+      <Name>area3SelectQuery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="area1Param" name="area1Param" type="String"/>
+         <Parameter default="area2Param" name="area2Param" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT -1,"所有"
+UNION ALL
+SELECT DISTINCT
+     `Dim_Area`.`AreaId_level3`,
+     `Dim_Area`.`AreaName_level3`
+FROM
+     `Dim_Outlet` INNER JOIN `Dim_Area` ON `Dim_Outlet`.`AreaId` = `Dim_Area`.`AreaId`
+WHERE
+     `Dim_Outlet`.`EndDate` = "2200-01-01"
+     AND `Dim_Area`.`Status` = 0
+     AND `Dim_Outlet`.`Status` = 0
+     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)
+    AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="shopSelectQuery" id="shopSelectQuery" type="sql">
+      <Name>shopSelectQuery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="area1Param" name="area1Param" type="String"/>
+         <Parameter default="area2Param" name="area2Param" type="String"/>
+         <Parameter default="area3Param" name="area3Param" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT -1,"所有"
+UNION ALL
+SELECT DISTINCT
+    `Dim_Outlet`.`ShopId`,
+    `Dim_Outlet`.`ShopName`
+FROM
+     `Dim_Outlet` INNER JOIN `Dim_Area` ON `Dim_Outlet`.`AreaId` = `Dim_Area`.`AreaId`
+WHERE
+     `Dim_Outlet`.`EndDate` = "2200-01-01"
+     AND `Dim_Area`.`Status` = 0
+     AND `Dim_Outlet`.`Status` = 0
+     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)
+     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)
+     AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="outletSelectQuery" id="outletSelectQuery"
+               type="sql">
+      <Name>outletSelectQuery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="area1Param" name="area1Param" type="String"/>
+         <Parameter default="area2Param" name="area2Param" type="String"/>
+         <Parameter default="area3Param" name="area3Param" type="String"/>
+         <Parameter default="shopParam" name="shopParam" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT -1,"所有"
+UNION ALL
+SELECT DISTINCT
+    `Dim_Outlet`.`OutletId`,
+    `Dim_Outlet`.`OutletName`
+FROM
+     `Dim_Outlet` INNER JOIN `Dim_Area` ON `Dim_Outlet`.`AreaId` = `Dim_Area`.`AreaId`
+WHERE
+     `Dim_Outlet`.`EndDate` = "2200-01-01"
+     AND `Dim_Area`.`Status` = 0
+     AND `Dim_Outlet`.`Status` = 0
+     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)
+     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)
+     AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)
+     AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)]]></Query>
    </DataAccess>
 </CDADescriptor>

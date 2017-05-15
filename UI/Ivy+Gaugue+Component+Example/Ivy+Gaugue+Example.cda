@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="query1" type="sql.jdbc">
+         <Driver>org.postgresql.Driver</Driver>
+         <Pass>postgres</Pass>
+         <Url>jdbc:postgresql://localhost:5432/foodmart</Url>
+         <User>postgres</User>
+      </Connection>
+      <Connection id="query2" type="sql.jdbc">
+         <Driver>org.postgresql.Driver</Driver>
+         <Pass>postgres</Pass>
+         <Url>jdbc:postgresql://localhost:5432/foodmart</Url>
+         <User>postgres</User>
+      </Connection>
+      <Connection id="query3" type="sql.jdbc">
+         <Driver>org.postgresql.Driver</Driver>
+         <Pass>postgres</Pass>
+         <Url>jdbc:postgresql://localhost:5432/foodmart</Url>
+         <User>postgres</User>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" cache="true" cacheDuration="3600" connection="query1"
+               id="query1"
+               type="sql">
+      <Columns/>
+      <Parameters>
+         <Parameter default="param1_sales" name="param1_sales" type="String"/>
+      </Parameters>
+      <Query>SELECT 
+'Sales' AS Sales,
+ CASE
+        WHEN ${param1_sales}='Unit Sales' THEN sum(unit_sales)
+        WHEN ${param1_sales}='Store Sales' THEN sum(store_sales)
+        ELSE sum(store_cost)       
+END AS "TotalSales"
+FROM sales_fact_1997</Query>
+   </DataAccess>
+   <DataAccess access="public" cache="true" cacheDuration="3600" connection="query2"
+               id="query2"
+               type="sql">
+      <Columns/>
+      <Parameters/>
+      <Query>select 'Unit Sales' Sales, sum(unit_sales) from sales_fact_1997 
+UNION
+select 'Store Sales' Sales, sum(store_sales) from sales_fact_1997 
+UNION
+select 'Store Cost' Sales, sum(store_cost) from sales_fact_1997</Query>
+   </DataAccess>
+   <DataAccess access="public" cache="true" cacheDuration="3600" connection="query3"
+               id="query3"
+               type="sql">
+      <Columns/>
+      <Parameters/>
+      <Query>select 'Unit Sales' Sales, sum(unit_sales) from sales_fact_1997</Query>
+   </DataAccess>
+</CDADescriptor>
