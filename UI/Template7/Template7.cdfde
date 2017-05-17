@@ -3398,7 +3398,7 @@
      {
       "name": "height",
       "type": "Integer",
-      "value": "300"
+      "value": "400"
      },
      {
       "name": "priority",
@@ -3478,7 +3478,7 @@
      {
       "name": "barSizeMax",
       "type": "Float",
-      "value": 2000
+      "value": "100"
      },
      {
       "name": "barSizeRatio",
@@ -3853,7 +3853,7 @@
      {
       "name": "legendPosition",
       "type": "cccLegendPositionCustom",
-      "value": "bottom"
+      "value": "right"
      },
      {
       "name": "legendShape",
@@ -4273,7 +4273,7 @@
      {
       "name": "plot2DotsVisible",
       "type": "Boolean",
-      "value": true
+      "value": "false"
      },
      {
       "name": "plot2LinesVisible",
@@ -4703,7 +4703,7 @@
      {
       "name": "height",
       "type": "Integer",
-      "value": "300"
+      "value": "400"
      },
      {
       "name": "priority",
@@ -5158,7 +5158,7 @@
      {
       "name": "legendPosition",
       "type": "cccLegendPositionCustom",
-      "value": "bottom"
+      "value": "right"
      },
      {
       "name": "legendShape",
@@ -5578,7 +5578,7 @@
      {
       "name": "plot2DotsVisible",
       "type": "Boolean",
-      "value": true
+      "value": "false"
      },
      {
       "name": "plot2LinesVisible",
@@ -6008,7 +6008,7 @@
      {
       "name": "height",
       "type": "Integer",
-      "value": "300"
+      "value": "400"
      },
      {
       "name": "priority",
@@ -6463,7 +6463,7 @@
      {
       "name": "legendPosition",
       "type": "cccLegendPositionCustom",
-      "value": "bottom"
+      "value": "right"
      },
      {
       "name": "legendShape",
@@ -6883,7 +6883,7 @@
      {
       "name": "plot2DotsVisible",
       "type": "Boolean",
-      "value": true
+      "value": "false"
      },
      {
       "name": "plot2LinesVisible",
@@ -7313,7 +7313,7 @@
      {
       "name": "height",
       "type": "Integer",
-      "value": "300"
+      "value": "400"
      },
      {
       "name": "priority",
@@ -7768,7 +7768,7 @@
      {
       "name": "legendPosition",
       "type": "cccLegendPositionCustom",
-      "value": "bottom"
+      "value": "right"
      },
      {
       "name": "legendShape",
@@ -8188,7 +8188,7 @@
      {
       "name": "plot2DotsVisible",
       "type": "Boolean",
-      "value": true
+      "value": "false"
      },
      {
       "name": "plot2LinesVisible",
@@ -8618,7 +8618,7 @@
      {
       "name": "height",
       "type": "Integer",
-      "value": "300"
+      "value": "380"
      },
      {
       "name": "priority",
@@ -9073,7 +9073,7 @@
      {
       "name": "legendPosition",
       "type": "cccLegendPositionCustom",
-      "value": "bottom"
+      "value": "right"
      },
      {
       "name": "legendShape",
@@ -9493,7 +9493,7 @@
      {
       "name": "plot2DotsVisible",
       "type": "Boolean",
-      "value": true
+      "value": "false"
      },
      {
       "name": "plot2LinesVisible",
@@ -9923,7 +9923,7 @@
      {
       "name": "height",
       "type": "Integer",
-      "value": "300"
+      "value": "400"
      },
      {
       "name": "priority",
@@ -10378,7 +10378,7 @@
      {
       "name": "legendPosition",
       "type": "cccLegendPositionCustom",
-      "value": "bottom"
+      "value": "right"
      },
      {
       "name": "legendShape",
@@ -10798,7 +10798,7 @@
      {
       "name": "plot2DotsVisible",
       "type": "Boolean",
-      "value": true
+      "value": "false"
      },
      {
       "name": "plot2LinesVisible",
@@ -11228,7 +11228,7 @@
      {
       "name": "height",
       "type": "Integer",
-      "value": "300"
+      "value": "400"
      },
      {
       "name": "priority",
@@ -11288,7 +11288,7 @@
      {
       "name": "extensionPoints",
       "type": "EditorValuesArray",
-      "value": "[]"
+      "value": "[[\"xAxisLabel_textAngle\",\"-0.55\"]]"
      },
      {
       "name": "tooltip",
@@ -11683,7 +11683,7 @@
      {
       "name": "legend",
       "type": "Boolean",
-      "value": true
+      "value": "true"
      },
      {
       "name": "legendAlign",
@@ -11738,7 +11738,7 @@
      {
       "name": "legendPosition",
       "type": "cccLegendPositionCustom",
-      "value": "bottom"
+      "value": "right"
      },
      {
       "name": "legendShape",
@@ -12148,7 +12148,7 @@
      {
       "name": "plot2DotsVisible",
       "type": "Boolean",
-      "value": true
+      "value": "false"
      },
      {
       "name": "plot2LinesVisible",
@@ -12213,7 +12213,7 @@
      {
       "name": "plotFrameVisible",
       "type": "Boolean",
-      "value": true
+      "value": "true"
      },
      {
       "name": "pointingMode",
@@ -12438,7 +12438,7 @@
      {
       "name": "trendDotsVisible",
       "type": "Boolean",
-      "value": "true"
+      "value": "false"
      },
      {
       "name": "trendLabel",
@@ -13318,7 +13318,7 @@
      {
       "name": "displayLength",
       "type": "Integer",
-      "value": ""
+      "value": "8"
      },
      {
       "name": "expandOnClick",
@@ -13328,17 +13328,17 @@
      {
       "name": "filter",
       "type": "Boolean",
-      "value": "true"
+      "value": "false"
      },
      {
       "name": "info",
       "type": "Boolean",
-      "value": "true"
+      "value": "false"
      },
      {
       "name": "lengthChange",
       "type": "Boolean",
-      "value": "true"
+      "value": "false"
      },
      {
       "name": "paginate",
@@ -13522,7 +13522,7 @@
      {
       "name": "displayLength",
       "type": "Integer",
-      "value": ""
+      "value": "8"
      },
      {
       "name": "expandOnClick",
@@ -13532,17 +13532,17 @@
      {
       "name": "filter",
       "type": "Boolean",
-      "value": "true"
+      "value": "false"
      },
      {
       "name": "info",
       "type": "Boolean",
-      "value": "true"
+      "value": "false"
      },
      {
       "name": "lengthChange",
       "type": "Boolean",
-      "value": "true"
+      "value": "false"
      },
      {
       "name": "paginate",
@@ -13726,7 +13726,7 @@
      {
       "name": "displayLength",
       "type": "Integer",
-      "value": ""
+      "value": "8"
      },
      {
       "name": "expandOnClick",
@@ -13736,17 +13736,17 @@
      {
       "name": "filter",
       "type": "Boolean",
-      "value": "true"
+      "value": "false"
      },
      {
       "name": "info",
       "type": "Boolean",
-      "value": "true"
+      "value": "false"
      },
      {
       "name": "lengthChange",
       "type": "Boolean",
-      "value": "true"
+      "value": "false"
      },
      {
       "name": "paginate",
@@ -13930,7 +13930,7 @@
      {
       "name": "displayLength",
       "type": "Integer",
-      "value": ""
+      "value": "8"
      },
      {
       "name": "expandOnClick",
@@ -13940,17 +13940,17 @@
      {
       "name": "filter",
       "type": "Boolean",
-      "value": "true"
+      "value": "false"
      },
      {
       "name": "info",
       "type": "Boolean",
-      "value": "true"
+      "value": "false"
      },
      {
       "name": "lengthChange",
       "type": "Boolean",
-      "value": "true"
+      "value": "false"
      },
      {
       "name": "paginate",
@@ -14134,7 +14134,7 @@
      {
       "name": "displayLength",
       "type": "Integer",
-      "value": ""
+      "value": "8"
      },
      {
       "name": "expandOnClick",
@@ -14144,17 +14144,17 @@
      {
       "name": "filter",
       "type": "Boolean",
-      "value": "true"
+      "value": "false"
      },
      {
       "name": "info",
       "type": "Boolean",
-      "value": "true"
+      "value": "false"
      },
      {
       "name": "lengthChange",
       "type": "Boolean",
-      "value": "true"
+      "value": "false"
      },
      {
       "name": "paginate",
@@ -14338,7 +14338,7 @@
      {
       "name": "displayLength",
       "type": "Integer",
-      "value": ""
+      "value": "8"
      },
      {
       "name": "expandOnClick",
@@ -14348,17 +14348,17 @@
      {
       "name": "filter",
       "type": "Boolean",
-      "value": "true"
+      "value": "false"
      },
      {
       "name": "info",
       "type": "Boolean",
-      "value": "true"
+      "value": "false"
      },
      {
       "name": "lengthChange",
       "type": "Boolean",
-      "value": "true"
+      "value": "false"
      },
      {
       "name": "paginate",
@@ -14542,7 +14542,7 @@
      {
       "name": "displayLength",
       "type": "Integer",
-      "value": ""
+      "value": "8"
      },
      {
       "name": "expandOnClick",
@@ -14552,17 +14552,17 @@
      {
       "name": "filter",
       "type": "Boolean",
-      "value": "true"
+      "value": "false"
      },
      {
       "name": "info",
       "type": "Boolean",
-      "value": "true"
+      "value": "false"
      },
      {
       "name": "lengthChange",
       "type": "Boolean",
-      "value": "true"
+      "value": "false"
      },
      {
       "name": "paginate",
@@ -14746,7 +14746,7 @@
      {
       "name": "displayLength",
       "type": "Integer",
-      "value": ""
+      "value": "8"
      },
      {
       "name": "expandOnClick",
@@ -14756,17 +14756,17 @@
      {
       "name": "filter",
       "type": "Boolean",
-      "value": "true"
+      "value": "false"
      },
      {
       "name": "info",
       "type": "Boolean",
-      "value": "true"
+      "value": "false"
      },
      {
       "name": "lengthChange",
       "type": "Boolean",
-      "value": "true"
+      "value": "false"
      },
      {
       "name": "paginate",
@@ -14950,7 +14950,7 @@
      {
       "name": "displayLength",
       "type": "Integer",
-      "value": ""
+      "value": "8"
      },
      {
       "name": "expandOnClick",
@@ -14960,17 +14960,17 @@
      {
       "name": "filter",
       "type": "Boolean",
-      "value": "true"
+      "value": "false"
      },
      {
       "name": "info",
       "type": "Boolean",
-      "value": "true"
+      "value": "false"
      },
      {
       "name": "lengthChange",
       "type": "Boolean",
-      "value": "true"
+      "value": "false"
      },
      {
       "name": "paginate",
@@ -15154,7 +15154,7 @@
      {
       "name": "displayLength",
       "type": "Integer",
-      "value": ""
+      "value": "8"
      },
      {
       "name": "expandOnClick",
@@ -15164,17 +15164,17 @@
      {
       "name": "filter",
       "type": "Boolean",
-      "value": "true"
+      "value": "false"
      },
      {
       "name": "info",
       "type": "Boolean",
-      "value": "true"
+      "value": "false"
      },
      {
       "name": "lengthChange",
       "type": "Boolean",
-      "value": "true"
+      "value": "false"
      },
      {
       "name": "paginate",
@@ -19795,7 +19795,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\n    <i  style=\"padding-right: 5px;\"></i>营业额 \n</div> \n<div class=\"row clearfix\">\n    <div class=\"col text-center\" style=\"font-size:40px\">\n        <span id=\"saleamt\"></span>\n    </div>\n</div>\n<div class=\"row clearfix\">\n    <div class=\"col-xs-12col-sm-12 col-md-12 col-lg-12\">\n        <div id=\"actualAmount_kPI\" class=\"panel-heading\">\n             单数 &nbsp\n            <span id=\"checkqty\" style=\"color:red\"></span>\n        </div>\n    </div>\n</div> "
+      "value": "<div class=\"panel-heading \" style=\"font-weight:bold;font-family:微软雅黑;font-size:20px\">\n    <i  style=\"padding-right: 5px;\"></i>营业额 \n</div> \n<div class=\"row clearfix\">\n    <div class=\"col text-center\" style=\"font-size:40px\">\n        <span id=\"saleamt\"></span>\n    </div>\n</div>\n<div class=\"row clearfix\">\n    <div class=\"col-xs-12col-sm-12 col-md-12 col-lg-12\">\n        <div id=\"actualAmount_kPI\" class=\"panel-heading\" style=\"padding-left: 25px;\">\n             单数 &nbsp\n            <span id=\"checkqty\" style=\"color:red\"></span>\n        </div>\n    </div>\n</div> "
      },
      {
       "name": "fontSize",
@@ -19952,7 +19952,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i style=\"padding-right: 5px;\"></i>单据金额 \r\n</div> \r\n<div class=\"row clearfix\">\r\n    <div class=\"col text-center\" style=\"font-size:40px\">\r\n        <span id=\"salevalue\"></span>\r\n    </div>\r\n</div>\r\n<div class=\"row clearfix\">\r\n    <div class=\"col-xs-12col-sm-12 col-md-12 col-lg-12\">\r\n        <div id=\"actualAmount_kPI\" class=\"panel-heading\">\r\n              人数 &nbsp\r\n            <span id=\"guestqty\" style=\"color:red\"></span>\r\n        </div>\r\n    </div>\r\n</div> "
+      "value": "<div class=\"panel-heading \" style=\"font-weight:bold;font-family:微软雅黑;font-size:20px\">\r\n    <i style=\"padding-right: 5px;\"></i>单据金额 \r\n</div> \r\n<div class=\"row clearfix\">\r\n    <div class=\"col text-center\" style=\"font-size:40px\">\r\n        <span id=\"salevalue\"></span>\r\n    </div>\r\n</div>\r\n<div class=\"row clearfix\">\r\n    <div class=\"col-xs-12col-sm-12 col-md-12 col-lg-12\">\r\n        <div id=\"actualAmount_kPI\" class=\"panel-heading\" style=\"padding-left: 25px;\">\r\n              人数 &nbsp\r\n            <span id=\"guestqty\" style=\"color:red\"></span>\r\n        </div>\r\n    </div>\r\n</div> "
      },
      {
       "name": "fontSize",
@@ -20109,7 +20109,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i style=\"padding-right: 5px;\"></i>平均每单 \r\n</div> \r\n<div class=\"row clearfix\">\r\n    <div class=\"col text-center\" style=\"font-size:40px\">\r\n        <span id=\"salecheck\"></span>\r\n    </div>\r\n</div>\r\n<div class=\"row clearfix\">\r\n    <div class=\"col-xs-12col-sm-12 col-md-12 col-lg-12\">\r\n        <div id=\"actualAmount_kPI\" class=\"panel-heading\">\r\n               平均每人 &nbsp\r\n            <span id=\"saleguest\" style=\"color:red\"></span>\r\n        </div>\r\n    </div>\r\n</div> "
+      "value": "<div class=\"panel-heading \" style=\"font-weight:bold;font-family:微软雅黑;font-size:20px\">\r\n    <i style=\"padding-right: 5px;\"></i>平均每单 \r\n</div> \r\n<div class=\"row clearfix\">\r\n    <div class=\"col text-center\" style=\"font-size:40px\">\r\n        <span id=\"salecheck\"></span>\r\n    </div>\r\n</div>\r\n<div class=\"row clearfix\">\r\n    <div class=\"col-xs-12col-sm-12 col-md-12 col-lg-12\">\r\n        <div id=\"actualAmount_kPI\" class=\"panel-heading\" style=\"padding-left: 25px;\">\r\n               平均每人 &nbsp\r\n            <span id=\"saleguest\" style=\"color:red\"></span>\r\n        </div>\r\n    </div>\r\n</div> "
      },
      {
       "name": "fontSize",
@@ -20266,7 +20266,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i style=\"padding-right: 5px;\"></i>总折扣率\r\n</div> \r\n<div class=\"row clearfix\">\r\n    <div class=\"col text-center\" style=\"font-size:40px\">\r\n        <span id=\"disamtpercent\"></span>\r\n    </div>\r\n</div>\r\n<div class=\"row clearfix\">\r\n    <div class=\"col-xs-12col-sm-12 col-md-12 col-lg-12\">\r\n        <div id=\"actualAmount_kPI\" class=\"panel-heading\">\r\n                折扣额 &nbsp\r\n            <span id=\"disamt\" style=\"color:red\"></span>\r\n        </div>\r\n    </div>\r\n</div> "
+      "value": "<div class=\"panel-heading \" style=\"font-weight:bold;font-family:微软雅黑;font-size:20px\">\r\n    <i style=\"padding-right: 5px;\"></i>总折扣率\r\n</div> \r\n<div class=\"row clearfix\">\r\n    <div class=\"col text-center\" style=\"font-size:40px\">\r\n        <span id=\"disamtpercent\"></span><div style=\"display:inline;\">%</div>\r\n    </div>\r\n</div>\r\n<div class=\"row clearfix\">\r\n    <div class=\"col-xs-12col-sm-12 col-md-12 col-lg-12\">\r\n        <div id=\"actualAmount_kPI\" class=\"panel-heading\" style=\"padding-left: 25px;\">\r\n                折扣额 &nbsp\r\n            <span id=\"disamt\" style=\"color:red\"></span>\r\n        </div>\r\n    </div>\r\n</div> "
      },
      {
       "name": "fontSize",
@@ -20484,7 +20484,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i style=\"padding-right: 5px;\"></i>菜品部门营业额分布 \r\n</div> "
+      "value": "<div class=\"panel-heading \" style=\"font-weight:bold;font-family:微软雅黑;font-size:20px\">\r\n    <i style=\"padding-right: 5px;\"></i>菜品部门营业额分布 \r\n</div> "
      },
      {
       "name": "fontSize",
@@ -20742,7 +20742,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i style=\"padding-right: 5px;\"></i>支付方式金额占比 \r\n</div> "
+      "value": "<div class=\"panel-heading \" style=\"font-weight:bold;font-family:微软雅黑;font-size:20px\">\r\n    <i style=\"padding-right: 5px;\"></i>支付方式金额占比 \r\n</div> "
      },
      {
       "name": "fontSize",
@@ -21061,7 +21061,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i style=\"padding-right: 5px;\"></i>菜品类别营业额分布 \r\n</div> "
+      "value": "<div class=\"panel-heading \" style=\"font-weight:bold;font-family:微软雅黑;font-size:20px\">\r\n    <i style=\"padding-right: 5px;\"></i>菜品类别营业额分布 \r\n</div> "
      },
      {
       "name": "fontSize",
@@ -21319,7 +21319,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i style=\"padding-right: 5px;\"></i>菜品类别营业额概况\r\n</div> "
+      "value": "<div class=\"panel-heading \" style=\"font-weight:bold;font-family:微软雅黑;font-size:20px\">\r\n    <i style=\"padding-right: 5px;\"></i>菜品类别营业额概况\r\n</div> "
      },
      {
       "name": "fontSize",
@@ -21638,7 +21638,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i style=\"padding-right: 5px;\"></i>营业额趋势图 \r\n</div> "
+      "value": "<div class=\"panel-heading \" style=\"font-weight:bold;font-family:微软雅黑;font-size:20px\">\r\n    <i style=\"padding-right: 5px;\"></i>营业额趋势图 \r\n</div> "
      },
      {
       "name": "fontSize",
@@ -21795,7 +21795,7 @@
      {
       "name": "height",
       "type": "Integer",
-      "value": "600"
+      "value": "450"
      },
      {
       "name": "roundCorners",
@@ -21856,7 +21856,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i style=\"padding-right: 5px;\"></i>门店收银报表（门店）\r\n</div> "
+      "value": "<div class=\"panel-heading \" style=\"font-weight:bold;font-family:微软雅黑;font-size:20px\">\r\n    <i style=\"padding-right: 5px;\"></i>门店收银报表（门店）\r\n</div> "
      },
      {
       "name": "fontSize",
@@ -22114,7 +22114,7 @@
      {
       "name": "height",
       "type": "Integer",
-      "value": "600"
+      "value": "450"
      },
      {
       "name": "roundCorners",
@@ -22175,7 +22175,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i style=\"padding-right: 5px;\"></i>门店收银报表（工作站） \r\n</div> "
+      "value": "<div class=\"panel-heading \" style=\"font-weight:bold;font-family:微软雅黑;font-size:20px\">\r\n    <i style=\"padding-right: 5px;\"></i>门店收银报表（工作站） \r\n</div> "
      },
      {
       "name": "fontSize",
@@ -22433,7 +22433,7 @@
      {
       "name": "height",
       "type": "Integer",
-      "value": "550"
+      "value": "450"
      },
      {
       "name": "roundCorners",
@@ -22494,7 +22494,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i style=\"padding-right: 5px;\"></i>门店收银报表（门店对比）\r\n</div> "
+      "value": "<div class=\"panel-heading \" style=\"font-weight:bold;font-family:微软雅黑;font-size:20px\">\r\n    <i style=\"padding-right: 5px;\"></i>门店收银报表（门店对比）\r\n</div> "
      },
      {
       "name": "fontSize",
@@ -22813,7 +22813,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i style=\"padding-right: 5px;\"></i>单据明细情况\r\n</div> "
+      "value": "<div class=\"panel-heading \" style=\"font-weight:bold;font-family:微软雅黑;font-size:20px\">\r\n    <i style=\"padding-right: 5px;\"></i>单据明细情况\r\n</div> "
      },
      {
       "name": "fontSize",
@@ -23132,7 +23132,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i style=\"padding-right: 5px;\"></i>营业时段营业额对比\r\n</div> "
+      "value": "<div class=\"panel-heading \" style=\"font-weight:bold;font-family:微软雅黑;font-size:20px\">\r\n    <i style=\"padding-right: 5px;\"></i>营业时段营业额对比\r\n</div> "
      },
      {
       "name": "fontSize",
@@ -23390,7 +23390,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i style=\"padding-right: 5px;\"></i>折扣类型占比分析\r\n</div> "
+      "value": "<div class=\"panel-heading \" style=\"font-weight:bold;font-family:微软雅黑;font-size:20px\">\r\n    <i style=\"padding-right: 5px;\"></i>折扣类型占比分析\r\n</div> "
      },
      {
       "name": "fontSize",
@@ -23648,7 +23648,7 @@
      {
       "name": "height",
       "type": "Integer",
-      "value": "400"
+      "value": "500"
      },
      {
       "name": "roundCorners",
@@ -23709,7 +23709,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i style=\"padding-right: 5px;\"></i>员工销售统计对比\r\n</div> "
+      "value": "<div class=\"panel-heading \" style=\"font-weight:bold;font-family:微软雅黑;font-size:20px\">\r\n    <i style=\"padding-right: 5px;\"></i>员工销售统计对比\r\n</div> "
      },
      {
       "name": "fontSize",
@@ -23906,7 +23906,7 @@
      {
       "name": "height",
       "type": "Integer",
-      "value": "400"
+      "value": "500"
      },
      {
       "name": "roundCorners",
@@ -23967,7 +23967,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i style=\"padding-right: 5px;\"></i>门店时刻营业情况走势 \r\n</div> "
+      "value": "<div class=\"panel-heading \" style=\"font-weight:bold;font-family:微软雅黑;font-size:20px\">\r\n    <i style=\"padding-right: 5px;\"></i>门店时刻营业情况走势 \r\n</div> "
      },
      {
       "name": "fontSize",
@@ -24225,7 +24225,7 @@
      {
       "name": "height",
       "type": "Integer",
-      "value": "550"
+      "value": "450"
      },
      {
       "name": "roundCorners",
@@ -24286,7 +24286,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i style=\"padding-right: 5px;\"></i>门店收银报表（时刻） \r\n</div> "
+      "value": "<div class=\"panel-heading \" style=\"font-weight:bold;font-family:微软雅黑;font-size:20px\">\r\n    <i style=\"padding-right: 5px;\"></i>门店收银报表（时刻） \r\n</div> "
      },
      {
       "name": "fontSize",
@@ -24544,7 +24544,7 @@
      {
       "name": "height",
       "type": "Integer",
-      "value": "400"
+      "value": "500"
      },
      {
       "name": "roundCorners",
@@ -24605,7 +24605,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i style=\"padding-right: 5px;\"></i>菜品销售数量对比 \r\n</div> "
+      "value": "<div class=\"panel-heading \" style=\"font-weight:bold;font-family:微软雅黑;font-size:20px\">\r\n    <i style=\"padding-right: 5px;\"></i>菜品销售数量对比 \r\n</div> "
      },
      {
       "name": "fontSize",
@@ -24802,7 +24802,7 @@
      {
       "name": "height",
       "type": "Integer",
-      "value": "400"
+      "value": "500"
      },
      {
       "name": "roundCorners",
@@ -24863,7 +24863,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i style=\"padding-right: 5px;\"></i>畅销菜品TOP20 \r\n</div> "
+      "value": "<div class=\"panel-heading \" style=\"font-weight:bold;font-family:微软雅黑;font-size:20px\">\r\n    <i style=\"padding-right: 5px;\"></i>畅销菜品TOP20 \r\n</div> "
      },
      {
       "name": "fontSize",
@@ -25121,7 +25121,7 @@
      {
       "name": "height",
       "type": "Integer",
-      "value": "550"
+      "value": "450"
      },
      {
       "name": "roundCorners",
@@ -25182,7 +25182,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i style=\"padding-right: 5px;\"></i>菜品销售数量对比 \r\n</div> "
+      "value": "<div class=\"panel-heading \" style=\"font-weight:bold;font-family:微软雅黑;font-size:20px\">\r\n    <i style=\"padding-right: 5px;\"></i>菜品销售数量对比 \r\n</div> "
      },
      {
       "name": "fontSize",
@@ -25379,7 +25379,7 @@
      {
       "name": "height",
       "type": "Integer",
-      "value": "550"
+      "value": "450"
      },
      {
       "name": "roundCorners",
@@ -25440,7 +25440,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i style=\"padding-right: 5px;\"></i>滞销菜品TOP20 \r\n</div> "
+      "value": "<div class=\"panel-heading \" style=\"font-weight:bold;font-family:微软雅黑;font-size:20px\">\r\n    <i style=\"padding-right: 5px;\"></i>滞销菜品TOP20 \r\n</div> "
      },
      {
       "name": "fontSize",
@@ -25698,7 +25698,7 @@
      {
       "name": "height",
       "type": "Integer",
-      "value": "550"
+      "value": "450"
      },
      {
       "name": "roundCorners",
@@ -25759,7 +25759,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i style=\"padding-right: 5px;\"></i>折扣报表 \r\n</div> "
+      "value": "<div class=\"panel-heading \" style=\"font-weight:bold;font-family:微软雅黑;font-size:20px\">\r\n    <i style=\"padding-right: 5px;\"></i>折扣报表 \r\n</div> "
      },
      {
       "name": "fontSize",
@@ -26017,7 +26017,7 @@
      {
       "name": "height",
       "type": "Integer",
-      "value": "550"
+      "value": "450"
      },
      {
       "name": "roundCorners",
@@ -26078,7 +26078,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i style=\"padding-right: 5px;\"></i>收银报表（以收银员）\r\n</div> "
+      "value": "<div class=\"panel-heading \" style=\"font-weight:bold;font-family:微软雅黑;font-size:20px\">\r\n    <i style=\"padding-right: 5px;\"></i>收银报表（以收银员）\r\n</div> "
      },
      {
       "name": "fontSize",
@@ -26336,7 +26336,7 @@
      {
       "name": "height",
       "type": "Integer",
-      "value": "550"
+      "value": "450"
      },
      {
       "name": "roundCorners",
@@ -26397,7 +26397,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i style=\"padding-right: 5px;\"></i>支付明细情况\r\n</div> "
+      "value": "<div class=\"panel-heading \" style=\"font-weight:bold;font-family:微软雅黑;font-size:20px\">\r\n    <i style=\"padding-right: 5px;\"></i>支付明细情况\r\n</div> "
      },
      {
       "name": "fontSize",
@@ -26655,7 +26655,7 @@
      {
       "name": "height",
       "type": "Integer",
-      "value": "400"
+      "value": "500"
      },
      {
       "name": "roundCorners",
@@ -26716,7 +26716,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i style=\"padding-right: 5px;\"></i>营业额趋势图\r\n</div> "
+      "value": "<div class=\"panel-heading \" style=\"font-weight:bold;font-family:微软雅黑;font-size:20px\">\r\n    <i style=\"padding-right: 5px;\"></i>营业额趋势图\r\n</div> "
      },
      {
       "name": "fontSize",
@@ -26913,7 +26913,7 @@
      {
       "name": "height",
       "type": "Integer",
-      "value": "400"
+      "value": "500"
      },
      {
       "name": "roundCorners",
@@ -26974,7 +26974,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i style=\"padding-right: 5px;\"></i>客单价趋势图 \r\n</div> "
+      "value": "<div class=\"panel-heading \" style=\"font-weight:bold;font-family:微软雅黑;font-size:20px\">\r\n    <i style=\"padding-right: 5px;\"></i>客单价趋势图 \r\n</div> "
      },
      {
       "name": "fontSize",
@@ -27095,29 +27095,6 @@
     ],
     "type": "LayoutBootstrapColumn",
     "typeDesc": "Column"
-   },
-   {
-    "id": "4b491ae9-262c-9ed4-1272-821d86c36340",
-    "parent": "UnIqEiD",
-    "properties": [
-     {
-      "name": "height",
-      "type": "Integer",
-      "value": ""
-     },
-     {
-      "name": "backgroundColor",
-      "type": "Color",
-      "value": ""
-     },
-     {
-      "name": "cssClass",
-      "type": "String",
-      "value": ""
-     }
-    ],
-    "type": "LayoutSpace",
-    "typeDesc": "Space"
    }
   ],
   "title": "CDF - Sample structure"

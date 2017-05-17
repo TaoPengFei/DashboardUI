@@ -1,0 +1,656 @@
+{
+ "components": {
+  "rows": [
+   {
+    "id": "D3COMPONENTS",
+    "name": "D3 Components",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "type": "Label",
+      "value": "D3 Components"
+     }
+    ],
+    "type": "Label",
+    "typeDesc": "<i>Group</i>"
+   },
+   {
+    "id": "fb8feac5-eb32-8562-2f9f-27f0b966a710",
+    "parent": "D3COMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "BarChart_new"
+     },
+     {
+      "name": "listeners",
+      "type": "Listeners",
+      "value": "[]"
+     },
+     {
+      "name": "customfunction",
+      "type": "JavaScript",
+      "value": "function f(dataset){\n    \n    /* This is the code we got from d3 wiki with small changes */\n     \n    var data = this.cdaResultToD3Array(dataset);\n    \n     \n    var margin = {top: 20, right: 20, bottom: 30, left: 40},\n        width = this.getWidth() - margin.left - margin.right,\n        height = this.getHeight() - margin.top - margin.bottom;\n    \n    var formatPercent = d3.format(\".0%\");\n    \n    var x = d3.scale.ordinal()\n        .rangeRoundBands([0, width], .1, 1);\n    \n    var y = d3.scale.linear()\n        .range([height, 0]);\n    \n    var xAxis = d3.svg.axis()\n        .scale(x)\n        .orient(\"bottom\");\n    \n    var yAxis = d3.svg.axis()\n        .scale(y)\n        .orient(\"left\")\n        .tickFormat(formatPercent);\n   \n   \n    var svg = d3.select(\"#\"+this.htmlObject).append(\"svg\")\n        .attr(\"width\", width + margin.left + margin.right)\n        .attr(\"height\", height + margin.top + margin.bottom)\n      .append(\"g\")\n        .attr(\"transform\", \"translate(\" + margin.left + \",\" + margin.top + \")\");\n        \n        \n  \n    \n    // Commenting this out, we have data already\n    // d3.tsv(\"/pentaho/api/repos/d3ComponentLibrary/static/custom/data/data.tsv\", function(error, data) {\n    \n      data.forEach(\n                    function(d) {\n                    d.frequency = +d.frequency;\n                    }\n      );\n    \n      x.domain(data.map(function(d) { return d.letter; }));\n      y.domain([0, d3.max(data, function(d) { return d.frequency; })]);\n    \n      svg.append(\"g\")\n          .attr(\"class\", \"x axis\")\n          .attr(\"transform\", \"translate(0,\" + height + \")\")\n          .call(xAxis);\n    \n      svg.append(\"g\")\n          .attr(\"class\", \"y axis\")\n          .call(yAxis)\n        .append(\"text\")\n          .attr(\"transform\", \"rotate(-90)\")\n          .attr(\"y\", 6)\n          .attr(\"dy\", \".71em\")\n          .style(\"text-anchor\", \"end\")\n          .text(\"Frequency\");\n    \n      svg.selectAll(\".bar\")\n          .data(data)\n        .enter().append(\"rect\")\n          .attr(\"class\", \"bar\")\n          .attr(\"x\", function(d) { return x(d.letter); })\n          .attr(\"width\", x.rangeBand())\n          .attr(\"y\", function(d) { return y(d.frequency); })\n          .attr(\"height\", function(d) { return height - y(d.frequency); });\n    \n      d3.select(\"input\").on(\"change\", change);\n    \n      var sortTimeout = setTimeout(function() {\n        d3.select(\"input\").property(\"checked\", true).each(change);\n      }, 2000);\n    \n      function change() {\n        clearTimeout(sortTimeout);\n    \n        // Copy-on-write since tweens are evaluated after a delay.\n        var x0 = x.domain(data.sort(this.checked\n            ? function(a, b) { return b.frequency - a.frequency; }\n            : function(a, b) { return d3.ascending(a.letter, b.letter); })\n            .map(function(d) { return d.letter; }))\n            .copy();\n    \n        var transition = svg.transition().duration(750),\n            delay = function(d, i) { return i * 50; };\n    \n        transition.selectAll(\".bar\")\n            .delay(delay)\n            .attr(\"x\", function(d) { return x0(d.letter); }\n            \n\n            );\n            \n            \n    \n        transition.select(\".x.axis\")\n            .call(xAxis)\n          .selectAll(\"g\")\n            .delay(delay);\n      }\n    // });\n    \n} "
+     },
+     {
+      "name": "parameters",
+      "type": "ValuesArray",
+      "value": "[]"
+     },
+     {
+      "name": "dataSource",
+      "type": "Datasource",
+      "value": "query1"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": "400"
+     },
+     {
+      "name": "priority",
+      "type": "Integer",
+      "value": 5
+     },
+     {
+      "name": "refreshPeriod",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "width",
+      "type": "Integer",
+      "value": "1000"
+     },
+     {
+      "name": "htmlObject",
+      "type": "HtmlObject",
+      "value": ""
+     },
+     {
+      "name": "executeAtStart",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "preExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postFetch",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "preChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "tooltip",
+      "type": "Html",
+      "value": ""
+     }
+    ],
+    "type": "Componentsd3",
+    "typeDesc": "D3 Component Component"
+   },
+   {
+    "id": "df9a26e0-93e9-ac34-6020-c9e9d4cbd0b9",
+    "parent": "D3COMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "BarChart"
+     },
+     {
+      "name": "listeners",
+      "type": "Listeners",
+      "value": "[]"
+     },
+     {
+      "name": "customfunction",
+      "type": "JavaScript",
+      "value": "function f(dataset){\r\n    \r\n    /* This is the code we got from d3 wiki with small changes */\r\n     \r\n    var data = this.cdaResultToD3Array(dataset);\r\n    console.log(data);\r\n    console.log(this);\r\n    var margin = {top: 20, right: 20, bottom: 30, left: 40},\r\n        width = this.getWidth() - margin.left - margin.right,\r\n        height = this.getHeight() - margin.top - margin.bottom;\r\n    \r\n    var formatPercent = d3.format(\".0%\");\r\n    \r\n    var x = d3.scale.ordinal()\r\n        .rangeRoundBands([0, width], .1, 1);\r\n    \r\n    var y = d3.scale.linear()\r\n        .range([height, 0]);\r\n    \r\n    var xAxis = d3.svg.axis()\r\n        .scale(x)\r\n        .orient(\"bottom\");\r\n    \r\n    var yAxis = d3.svg.axis()\r\n        .scale(y)\r\n        .orient(\"left\")\r\n        .tickFormat(formatPercent);\r\n    \r\n    var svg = d3.select(\"#\"+this.htmlObject).append(\"svg\")\r\n        .attr(\"width\", width + margin.left + margin.right)\r\n        .attr(\"height\", height + margin.top + margin.bottom)\r\n      .append(\"g\")\r\n        .attr(\"transform\", \"translate(\" + margin.left + \",\" + margin.top + \")\");\r\n    \r\n    // Commenting this out, we have data already\r\n    // d3.tsv(\"/pentaho/api/repos/d3ComponentLibrary/static/custom/data/data.tsv\", function(error, data) {\r\n    \r\n      data.forEach(function(d) {\r\n        d.frequency = +d.frequency;\r\n      });\r\n    \r\n      x.domain(data.map(function(d) { return d.letter; }));\r\n      y.domain([0, d3.max(data, function(d) { return d.frequency; })]);\r\n    \r\n      svg.append(\"g\")\r\n          .attr(\"class\", \"x axis\")\r\n          .attr(\"transform\", \"translate(0,\" + height + \")\")\r\n          .call(xAxis);\r\n    \r\n      svg.append(\"g\")\r\n          .attr(\"class\", \"y axis\")\r\n          .call(yAxis)\r\n        .append(\"text\")\r\n          .attr(\"transform\", \"rotate(-90)\")\r\n          .attr(\"y\", 6)\r\n          .attr(\"dy\", \".71em\")\r\n          .style(\"text-anchor\", \"end\")\r\n          .text(\"Frequency\");\r\n    \r\n      svg.selectAll(\".bar\")\r\n          .data(data)\r\n        .enter().append(\"rect\")\r\n          .attr(\"class\", \"bar\")\r\n          .attr(\"x\", function(d) { return x(d.letter); })\r\n          .attr(\"width\", x.rangeBand())\r\n          .attr(\"y\", function(d) { return y(d.frequency); })\r\n          .attr(\"height\", function(d) { return height - y(d.frequency); });\r\n    \r\n      d3.select(\"input\").on(\"change\", change);\r\n    \r\n      var sortTimeout = setTimeout(function() {\r\n        d3.select(\"input\").property(\"checked\", true).each(change);\r\n      }, 2000);\r\n    \r\n      function change() {\r\n        clearTimeout(sortTimeout);\r\n    \r\n        // Copy-on-write since tweens are evaluated after a delay.\r\n        var x0 = x.domain(data.sort(this.checked\r\n            ? function(a, b) { return b.frequency - a.frequency; }\r\n            : function(a, b) { return d3.ascending(a.letter, b.letter); })\r\n            .map(function(d) { return d.letter; }))\r\n            .copy();\r\n    \r\n        var transition = svg.transition().duration(750),\r\n            delay = function(d, i) { return i * 50; };\r\n    \r\n        transition.selectAll(\".bar\")\r\n            .delay(delay)\r\n            .attr(\"x\", function(d) { return x0(d.letter); });\r\n    \r\n        transition.select(\".x.axis\")\r\n            .call(xAxis)\r\n          .selectAll(\"g\")\r\n            .delay(delay);\r\n      }\r\n    // });\r\n    \r\n    \r\n} "
+     },
+     {
+      "name": "parameters",
+      "type": "ValuesArray",
+      "value": "[]"
+     },
+     {
+      "name": "dataSource",
+      "type": "Datasource",
+      "value": "query1"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": "400"
+     },
+     {
+      "name": "priority",
+      "type": "Integer",
+      "value": 5
+     },
+     {
+      "name": "refreshPeriod",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "width",
+      "type": "Integer",
+      "value": "1000"
+     },
+     {
+      "name": "htmlObject",
+      "type": "HtmlObject",
+      "value": "column1"
+     },
+     {
+      "name": "executeAtStart",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "preExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postFetch",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "preChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "tooltip",
+      "type": "Html",
+      "value": ""
+     }
+    ],
+    "type": "Componentsd3",
+    "typeDesc": "D3 Component Component"
+   }
+  ]
+ },
+ "datasources": {
+  "rows": [
+   {
+    "id": "SQL",
+    "name": "SQL Queries",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "type": "Label",
+      "value": "SQL Queries"
+     }
+    ],
+    "type": "Label",
+    "typeDesc": "<i>Group</i>"
+   },
+   {
+    "id": "f7bae317-1dde-909f-d7b0-3f00b35fd642",
+    "meta": "CDA",
+    "meta_conntype": "sql.jdbc",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "driver",
+      "type": "String",
+      "value": "org.postgresql.Driver"
+     },
+     {
+      "name": "pass",
+      "type": "String",
+      "value": "postgres"
+     },
+     {
+      "name": "user",
+      "type": "String",
+      "value": "postgres"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "url",
+      "type": "String",
+      "value": "jdbc:postgresql://localhost:5432/foodmart"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "select distinct first_name as letter,salary as frequency from employee where salary!=20 limit 20"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "value": "[]",
+      "type": "CacheKeysValues"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "type": "Componentssql_sqlJdbc",
+    "typeDesc": "sql over sqlJdbc"
+   },
+   {
+    "id": "215ef25b-58b1-708c-b1cb-453db147fc42",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "value": "query1",
+      "type": "Id"
+     },
+     {
+      "name": "access",
+      "value": "public",
+      "type": "Access"
+     },
+     {
+      "name": "jndi",
+      "value": "jdbc_bi",
+      "type": "Jndi"
+     },
+     {
+      "name": "query",
+      "value": "select 1 as letter,2 as frequency;",
+      "type": "SqlQuery"
+     },
+     {
+      "name": "parameters",
+      "value": "[]",
+      "type": "CdaParameters"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "value": "[]",
+      "type": "CdaCalculatedColumnsArray"
+     },
+     {
+      "name": "cdacolumns",
+      "value": "[]",
+      "type": "CdaColumnsArray"
+     },
+     {
+      "name": "output",
+      "value": "[]",
+      "type": "IndexArray"
+     },
+     {
+      "name": "outputMode",
+      "value": "include",
+      "type": "OutputMode"
+     },
+     {
+      "name": "cacheKeys",
+      "value": "[]",
+      "type": "CacheKeysValues"
+     },
+     {
+      "name": "cacheDuration",
+      "value": 3600,
+      "type": "Integer"
+     },
+     {
+      "name": "cache",
+      "value": "true",
+      "type": "Boolean"
+     }
+    ],
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "rowName": "sql over sqlJndi"
+   }
+  ]
+ },
+ "filename": "/public/UI/Test2/D3BarChartExplore.cdfde",
+ "layout": {
+  "rows": [
+   {
+    "id": "a11d2057-f559-5dce-97ab-bce38c6f7b7d",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "Styles"
+     },
+     {
+      "name": "resourceCode",
+      "type": "Resource",
+      "value": "\n.bar {\n  fill: steelblue;\n}\n\n.bar:hover {\n  fill: brown;\n}\n\n.axis {\n  font: 10px sans-serif;\n}\n\n.axis path,\n.axis line {\n  fill: none;\n  stroke: #000;\n  shape-rendering: crispEdges;\n}\n\n.x .axis path {\n  display: none;\n}\n "
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Css"
+     }
+    ],
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource"
+   },
+   {
+    "id": "c0aa2fb3-4d8c-a0fd-e7ce-d6c44433def8",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutRow",
+    "typeDesc": "Row"
+   },
+   {
+    "id": "7bba6440-2412-57ee-9054-fa200f00fd3f",
+    "parent": "c0aa2fb3-4d8c-a0fd-e7ce-d6c44433def8",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "column1"
+     },
+     {
+      "name": "columnSpan",
+      "type": "Integer",
+      "value": "24"
+     },
+     {
+      "name": "columnPrepend",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "columnAppend",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "columnPrependTop",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "columnAppendBottom",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "columnBorder",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "columnBigBorder",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "c641d196-ee8d-16ef-4bc7-7f33d65f6b0f",
+    "parent": "7bba6440-2412-57ee-9054-fa200f00fd3f",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "<label><input type=\"checkbox\"> Sort values</label> "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "0223bd94-77bb-ba24-ac24-b677ec0e8f99",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutRow",
+    "typeDesc": "Row"
+   },
+   {
+    "id": "0ce98b24-fed7-7412-d43e-7997bb895f4c",
+    "parent": "0223bd94-77bb-ba24-ac24-b677ec0e8f99",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "column2"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   }
+  ],
+  "title": "CDF - Sample structure"
+ }
+}

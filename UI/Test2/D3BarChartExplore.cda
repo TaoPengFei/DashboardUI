@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="" type="sql.jdbc">
+         <Driver>org.postgresql.Driver</Driver>
+         <Pass>postgres</Pass>
+         <Url>jdbc:postgresql://localhost:5432/foodmart</Url>
+         <User>postgres</User>
+      </Connection>
+      <Connection id="query1" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" id="" type="sql">
+      <Name/>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select distinct first_name as letter,salary as frequency from employee where salary!=20 limit 20]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="query1" id="query1" type="sql">
+      <Name>query1</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select 1 as letter,2 as frequency;]]></Query>
+   </DataAccess>
+</CDADescriptor>

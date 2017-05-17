@@ -3271,550 +3271,550 @@
    {
     "id": "OTHERCOMPONENTS",
     "name": "Others",
-    "type": "Label",
-    "typeDesc": "<i>Group</i>",
     "parent": "UnIqEiD",
     "properties": [
      {
       "name": "Group",
-      "value": "Others",
-      "type": "Label"
+      "type": "Label",
+      "value": "Others"
      }
-    ]
+    ],
+    "type": "Label",
+    "typeDesc": "<i>Group</i>"
    },
    {
     "id": "8ce2ab72-1b8d-fd0c-a250-dd03747a6f65",
-    "type": "ComponentsQuery",
-    "typeDesc": "Query Component",
     "parent": "OTHERCOMPONENTS",
     "properties": [
      {
       "name": "name",
-      "value": "saleAmt",
-      "type": "Id"
+      "type": "Id",
+      "value": "saleAmt"
      },
      {
       "name": "listeners",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:placeParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\",\"${p:shopParam}\",\"${p:outletParam}\"]",
-      "type": "Listeners"
+      "type": "Listeners",
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:placeParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\",\"${p:shopParam}\",\"${p:outletParam}\"]"
      },
      {
       "name": "parameters",
-      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"placeParam\",\"placeParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"],[\"shopParam\",\"shopParam\"],[\"outletParam\",\"outletParam\"]]",
-      "type": "ValuesArray"
+      "type": "ValuesArray",
+      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"placeParam\",\"placeParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"],[\"shopParam\",\"shopParam\"],[\"outletParam\",\"outletParam\"]]"
      },
      {
       "name": "resultvar",
-      "value": "saleAmt",
-      "type": "Result"
+      "type": "Result",
+      "value": "saleAmt"
      },
      {
       "name": "dataSource",
-      "value": "saleAmtQuery_KPI",
-      "type": "Datasource"
+      "type": "Datasource",
+      "value": "saleAmtQuery_KPI"
      },
      {
       "name": "asynchronousMode",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      },
      {
       "name": "priority",
-      "value": 5,
-      "type": "Integer"
+      "type": "Integer",
+      "value": 5
      },
      {
       "name": "refreshPeriod",
-      "value": "",
-      "type": "Integer"
+      "type": "Integer",
+      "value": ""
      },
      {
       "name": "htmlObject",
-      "value": "${h:saleAmtDom_KPI}",
-      "type": "HtmlObject"
+      "type": "HtmlObject",
+      "value": "${h:saleAmtDom_KPI}"
      },
      {
       "name": "executeAtStart",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      },
      {
       "name": "preExecution",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "postExecution",
-      "value": "function f(){\r\n    /**\r\n     *  金额 类的 千分位 格式化\r\n     */\r\n    var formatValue = function(nStr){\r\n        nStr += '';\r\n        x = nStr.split('.');\r\n        x1 = x[0];\r\n        x2 = x.length > 1 ? '.' + x[1] : '';\r\n        var rgx = /(\\d+)(\\d{3})/;\r\n        while (rgx.test(x1)){\r\n            x1 = x1.replace(rgx, '$1' + ',' + '$2');\r\n        }\r\n        x2 = x2.slice(0,3);\r\n        return x1 + x2;\r\n    };\r\n    /**\r\n     *  金额 类的  为0 的 格式化\r\n     */\r\n    var change = function(num){\r\n        num = parseFloat(num);\r\n        if( isNaN(num) ){\r\n            return false;\r\n        }else{\r\n            var newNum = \"\";\r\n            num = num + \"\";\r\n            var temp = num.split(\"\\.\");\r\n            var myLength = 0;\r\n            if( 2 <= temp.length ){\r\n                myLength = temp[1].length;\r\n            }\r\n            switch( myLength ){\r\n                case 0 :\r\n                    newNum = num + \".00\";\r\n                    break;\r\n                case 1 :\r\n                    newNum = num + \"0\";\r\n                    break;\r\n                default :\r\n                    newNum = num;\r\n                     break;\r\n            }\r\n            return newNum;\r\n        }\r\n    };\r\n    if(saleAmt === \"\"){\r\n        saleAmt[0][0] = 0;\r\n        document.getElementById('saleAmtDom_KPI').innerHTML = formatValue(saleAmt[0][0]);\r\n    }else{\r\n        document.getElementById('saleAmtDom_KPI').innerHTML = formatValue(saleAmt[0][0]);\r\n    }\r\n} ",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": "function f(){\r\n    /**\r\n     *  金额 类的 千分位 格式化\r\n     */\r\n    var formatValue = function(nStr){\r\n        nStr += '';\r\n        x = nStr.split('.');\r\n        x1 = x[0];\r\n        x2 = x.length > 1 ? '.' + x[1] : '';\r\n        var rgx = /(\\d+)(\\d{3})/;\r\n        while (rgx.test(x1)){\r\n            x1 = x1.replace(rgx, '$1' + ',' + '$2');\r\n        }\r\n        x2 = x2.slice(0,3);\r\n        return x1 + x2;\r\n    };\r\n    /**\r\n     *  金额 类的  为0 的 格式化\r\n     */\r\n    var change = function(num){\r\n        num = parseFloat(num);\r\n        if( isNaN(num) ){\r\n            return false;\r\n        }else{\r\n            var newNum = \"\";\r\n            num = num + \"\";\r\n            var temp = num.split(\"\\.\");\r\n            var myLength = 0;\r\n            if( 2 <= temp.length ){\r\n                myLength = temp[1].length;\r\n            }\r\n            switch( myLength ){\r\n                case 0 :\r\n                    newNum = num + \".00\";\r\n                    break;\r\n                case 1 :\r\n                    newNum = num + \"0\";\r\n                    break;\r\n                default :\r\n                    newNum = num;\r\n                     break;\r\n            }\r\n            return newNum;\r\n        }\r\n    };\r\n    if(saleAmt === \"\"){\r\n        saleAmt[0][0] = 0;\r\n        document.getElementById('saleAmtDom_KPI').innerHTML = formatValue(saleAmt[0][0]);\r\n    }else{\r\n        document.getElementById('saleAmtDom_KPI').innerHTML = formatValue(saleAmt[0][0]);\r\n    }\r\n} "
      },
      {
       "name": "postFetch",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "preChange",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "postChange",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "tooltip",
-      "value": "",
-      "type": "Html"
+      "type": "Html",
+      "value": ""
      }
     ],
-    "rowName": "Query Component"
+    "rowName": "Query Component",
+    "type": "ComponentsQuery",
+    "typeDesc": "Query Component"
    },
    {
     "id": "0125a4c0-fb60-f880-cf15-a42ed2e8d696",
-    "type": "ComponentsQuery",
-    "typeDesc": "Query Component",
     "parent": "OTHERCOMPONENTS",
     "properties": [
      {
       "name": "name",
-      "value": "costAmt",
-      "type": "Id"
+      "type": "Id",
+      "value": "costAmt"
      },
      {
       "name": "listeners",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:placeParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\",\"${p:shopParam}\",\"${p:outletParam}\"]",
-      "type": "Listeners"
+      "type": "Listeners",
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:placeParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\",\"${p:shopParam}\",\"${p:outletParam}\"]"
      },
      {
       "name": "parameters",
-      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"placeParam\",\"placeParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"],[\"shopParam\",\"shopParam\"],[\"outletParam\",\"outletParam\"]]",
-      "type": "ValuesArray"
+      "type": "ValuesArray",
+      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"placeParam\",\"placeParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"],[\"shopParam\",\"shopParam\"],[\"outletParam\",\"outletParam\"]]"
      },
      {
       "name": "resultvar",
-      "value": "costAmt",
-      "type": "Result"
+      "type": "Result",
+      "value": "costAmt"
      },
      {
       "name": "dataSource",
-      "value": "costQuery_KPI",
-      "type": "Datasource"
+      "type": "Datasource",
+      "value": "costQuery_KPI"
      },
      {
       "name": "asynchronousMode",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      },
      {
       "name": "priority",
-      "value": 5,
-      "type": "Integer"
+      "type": "Integer",
+      "value": 5
      },
      {
       "name": "refreshPeriod",
-      "value": "",
-      "type": "Integer"
+      "type": "Integer",
+      "value": ""
      },
      {
       "name": "htmlObject",
-      "value": "${h:costAmtDom_KPI}",
-      "type": "HtmlObject"
+      "type": "HtmlObject",
+      "value": "${h:costAmtDom_KPI}"
      },
      {
       "name": "executeAtStart",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      },
      {
       "name": "preExecution",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "postExecution",
-      "value": "function f(){\r\n    /**\r\n     *  金额 类的 千分位 格式化\r\n     */\r\n    var formatValue = function(nStr){\r\n        nStr += '';\r\n        x = nStr.split('.');\r\n        x1 = x[0];\r\n        x2 = x.length > 1 ? '.' + x[1] : '';\r\n        var rgx = /(\\d+)(\\d{3})/;\r\n        while (rgx.test(x1)){\r\n            x1 = x1.replace(rgx, '$1' + ',' + '$2');\r\n        }\r\n        x2 = x2.slice(0,3);\r\n        return x1 + x2;\r\n    };\r\n    /**\r\n     *  金额 类的  为0 的 格式化\r\n     */\r\n    var change = function(num){\r\n        num = parseFloat(num);\r\n        if( isNaN(num) ){\r\n            return false;\r\n        }else{\r\n            var newNum = \"\";\r\n            num = num + \"\";\r\n            var temp = num.split(\"\\.\");\r\n            var myLength = 0;\r\n            if( 2 <= temp.length ){\r\n                myLength = temp[1].length;\r\n            }\r\n            switch( myLength ){\r\n                case 0 :\r\n                    newNum = num + \".00\";\r\n                    break;\r\n                case 1 :\r\n                    newNum = num + \"0\";\r\n                    break;\r\n                default :\r\n                    newNum = num;\r\n                     break;\r\n            }\r\n            return newNum;\r\n        }\r\n    };\r\n    if(costAmt === \"\"){\r\n        costAmt[0][0] = 0;\r\n        document.getElementById('costAmtDom_KPI').innerHTML = formatValue(costAmt[0][0]);\r\n    }else{\r\n        document.getElementById('costAmtDom_KPI').innerHTML = formatValue(costAmt[0][0]);\r\n    }\r\n} ",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": "function f(){\r\n    /**\r\n     *  金额 类的 千分位 格式化\r\n     */\r\n    var formatValue = function(nStr){\r\n        nStr += '';\r\n        x = nStr.split('.');\r\n        x1 = x[0];\r\n        x2 = x.length > 1 ? '.' + x[1] : '';\r\n        var rgx = /(\\d+)(\\d{3})/;\r\n        while (rgx.test(x1)){\r\n            x1 = x1.replace(rgx, '$1' + ',' + '$2');\r\n        }\r\n        x2 = x2.slice(0,3);\r\n        return x1 + x2;\r\n    };\r\n    /**\r\n     *  金额 类的  为0 的 格式化\r\n     */\r\n    var change = function(num){\r\n        num = parseFloat(num);\r\n        if( isNaN(num) ){\r\n            return false;\r\n        }else{\r\n            var newNum = \"\";\r\n            num = num + \"\";\r\n            var temp = num.split(\"\\.\");\r\n            var myLength = 0;\r\n            if( 2 <= temp.length ){\r\n                myLength = temp[1].length;\r\n            }\r\n            switch( myLength ){\r\n                case 0 :\r\n                    newNum = num + \".00\";\r\n                    break;\r\n                case 1 :\r\n                    newNum = num + \"0\";\r\n                    break;\r\n                default :\r\n                    newNum = num;\r\n                     break;\r\n            }\r\n            return newNum;\r\n        }\r\n    };\r\n    if(costAmt === \"\"){\r\n        costAmt[0][0] = 0;\r\n        document.getElementById('costAmtDom_KPI').innerHTML = formatValue(costAmt[0][0]);\r\n    }else{\r\n        document.getElementById('costAmtDom_KPI').innerHTML = formatValue(costAmt[0][0]);\r\n    }\r\n} "
      },
      {
       "name": "postFetch",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "preChange",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "postChange",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "tooltip",
-      "value": "",
-      "type": "Html"
+      "type": "Html",
+      "value": ""
      }
     ],
-    "rowName": "Query Component"
+    "rowName": "Query Component",
+    "type": "ComponentsQuery",
+    "typeDesc": "Query Component"
    },
    {
     "id": "c5e104b0-86de-69ec-bdae-1b2daf11f68d",
-    "type": "ComponentsQuery",
-    "typeDesc": "Query Component",
     "parent": "OTHERCOMPONENTS",
     "properties": [
      {
       "name": "name",
-      "value": "grossProfitMargin",
-      "type": "Id"
+      "type": "Id",
+      "value": "grossProfitMargin"
      },
      {
       "name": "listeners",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:placeParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\",\"${p:shopParam}\",\"${p:outletParam}\"]",
-      "type": "Listeners"
+      "type": "Listeners",
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:placeParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\",\"${p:shopParam}\",\"${p:outletParam}\"]"
      },
      {
       "name": "parameters",
-      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"placeParam\",\"placeParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"],[\"shopParam\",\"shopParam\"],[\"outletParam\",\"outletParam\"]]",
-      "type": "ValuesArray"
+      "type": "ValuesArray",
+      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"placeParam\",\"placeParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"],[\"shopParam\",\"shopParam\"],[\"outletParam\",\"outletParam\"]]"
      },
      {
       "name": "resultvar",
-      "value": "grossProfitMargin",
-      "type": "Result"
+      "type": "Result",
+      "value": "grossProfitMargin"
      },
      {
       "name": "dataSource",
-      "value": "grossProfitMarginQuery_KPI",
-      "type": "Datasource"
+      "type": "Datasource",
+      "value": "grossProfitMarginQuery_KPI"
      },
      {
       "name": "asynchronousMode",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      },
      {
       "name": "priority",
-      "value": 5,
-      "type": "Integer"
+      "type": "Integer",
+      "value": 5
      },
      {
       "name": "refreshPeriod",
-      "value": "",
-      "type": "Integer"
+      "type": "Integer",
+      "value": ""
      },
      {
       "name": "htmlObject",
-      "value": "${h:grossProfitMarginDom_KPI}",
-      "type": "HtmlObject"
+      "type": "HtmlObject",
+      "value": "${h:grossProfitMarginDom_KPI}"
      },
      {
       "name": "executeAtStart",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      },
      {
       "name": "preExecution",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "postExecution",
-      "value": "function f(){\r\n    /**\r\n     *  金额 类的 千分位 格式化\r\n     */\r\n    var formatValue = function(nStr){\r\n        nStr += '';\r\n        x = nStr.split('.');\r\n        x1 = x[0];\r\n        x2 = x.length > 1 ? '.' + x[1] : '';\r\n        var rgx = /(\\d+)(\\d{3})/;\r\n        while (rgx.test(x1)){\r\n            x1 = x1.replace(rgx, '$1' + ',' + '$2');\r\n        }\r\n        x2 = x2.slice(0,3);\r\n        return x1 + x2;\r\n    };\r\n    /**\r\n     *  金额 类的  为0 的 格式化\r\n     */\r\n    var change = function(num){\r\n        num = parseFloat(num);\r\n        if( isNaN(num) ){\r\n            return false;\r\n        }else{\r\n            var newNum = \"\";\r\n            num = num + \"\";\r\n            var temp = num.split(\"\\.\");\r\n            var myLength = 0;\r\n            if( 2 <= temp.length ){\r\n                myLength = temp[1].length;\r\n            }\r\n            switch( myLength ){\r\n                case 0 :\r\n                    newNum = num + \".00\";\r\n                    break;\r\n                case 1 :\r\n                    newNum = num + \"0\";\r\n                    break;\r\n                default :\r\n                    newNum = num;\r\n                     break;\r\n            }\r\n            return newNum;\r\n        }\r\n    };\r\n    if(grossProfitMargin === \"\"){\r\n        grossProfitMargin[0][0] = 0;\r\n        document.getElementById('grossProfitMarginDom_KPI').innerHTML = formatValue(grossProfitMargin[0][0]) + '%';\r\n    }else{\r\n        document.getElementById('grossProfitMarginDom_KPI').innerHTML = formatValue(grossProfitMargin[0][0]) + '%';\r\n    }\r\n} ",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": "function f(){\r\n    /**\r\n     *  金额 类的 千分位 格式化\r\n     */\r\n    var formatValue = function(nStr){\r\n        nStr += '';\r\n        x = nStr.split('.');\r\n        x1 = x[0];\r\n        x2 = x.length > 1 ? '.' + x[1] : '';\r\n        var rgx = /(\\d+)(\\d{3})/;\r\n        while (rgx.test(x1)){\r\n            x1 = x1.replace(rgx, '$1' + ',' + '$2');\r\n        }\r\n        x2 = x2.slice(0,3);\r\n        return x1 + x2;\r\n    };\r\n    /**\r\n     *  金额 类的  为0 的 格式化\r\n     */\r\n    var change = function(num){\r\n        num = parseFloat(num);\r\n        if( isNaN(num) ){\r\n            return false;\r\n        }else{\r\n            var newNum = \"\";\r\n            num = num + \"\";\r\n            var temp = num.split(\"\\.\");\r\n            var myLength = 0;\r\n            if( 2 <= temp.length ){\r\n                myLength = temp[1].length;\r\n            }\r\n            switch( myLength ){\r\n                case 0 :\r\n                    newNum = num + \".00\";\r\n                    break;\r\n                case 1 :\r\n                    newNum = num + \"0\";\r\n                    break;\r\n                default :\r\n                    newNum = num;\r\n                     break;\r\n            }\r\n            return newNum;\r\n        }\r\n    };\r\n    if(grossProfitMargin === \"\"){\r\n        grossProfitMargin[0][0] = 0;\r\n        document.getElementById('grossProfitMarginDom_KPI').innerHTML = formatValue(grossProfitMargin[0][0]) + '%';\r\n    }else{\r\n        document.getElementById('grossProfitMarginDom_KPI').innerHTML = formatValue(grossProfitMargin[0][0]) + '%';\r\n    }\r\n} "
      },
      {
       "name": "postFetch",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "preChange",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "postChange",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "tooltip",
-      "value": "",
-      "type": "Html"
+      "type": "Html",
+      "value": ""
      }
     ],
-    "rowName": "Query Component"
+    "rowName": "Query Component",
+    "type": "ComponentsQuery",
+    "typeDesc": "Query Component"
    },
    {
     "id": "ab740dad-d81d-ac36-874d-76d01d44fa01",
-    "type": "ComponentsQuery",
-    "typeDesc": "Query Component",
     "parent": "OTHERCOMPONENTS",
     "properties": [
      {
       "name": "name",
-      "value": "grossProfit",
-      "type": "Id"
+      "type": "Id",
+      "value": "grossProfit"
      },
      {
       "name": "listeners",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:placeParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\",\"${p:shopParam}\",\"${p:outletParam}\"]",
-      "type": "Listeners"
+      "type": "Listeners",
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:placeParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\",\"${p:shopParam}\",\"${p:outletParam}\"]"
      },
      {
       "name": "parameters",
-      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"placeParam\",\"placeParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"],[\"shopParam\",\"shopParam\"],[\"outletParam\",\"outletParam\"]]",
-      "type": "ValuesArray"
+      "type": "ValuesArray",
+      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"placeParam\",\"placeParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"],[\"shopParam\",\"shopParam\"],[\"outletParam\",\"outletParam\"]]"
      },
      {
       "name": "resultvar",
-      "value": "grossProfit",
-      "type": "Result"
+      "type": "Result",
+      "value": "grossProfit"
      },
      {
       "name": "dataSource",
-      "value": "grossProfitQuery_KPI",
-      "type": "Datasource"
+      "type": "Datasource",
+      "value": "grossProfitQuery_KPI"
      },
      {
       "name": "asynchronousMode",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      },
      {
       "name": "priority",
-      "value": 5,
-      "type": "Integer"
+      "type": "Integer",
+      "value": 5
      },
      {
       "name": "refreshPeriod",
-      "value": "",
-      "type": "Integer"
+      "type": "Integer",
+      "value": ""
      },
      {
       "name": "htmlObject",
-      "value": "${h:grossProfitDom_KPI}",
-      "type": "HtmlObject"
+      "type": "HtmlObject",
+      "value": "${h:grossProfitDom_KPI}"
      },
      {
       "name": "executeAtStart",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      },
      {
       "name": "preExecution",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "postExecution",
-      "value": "function f(){\r\n    /**\r\n     *  金额 类的 千分位 格式化\r\n     */\r\n    var formatValue = function(nStr){\r\n        nStr += '';\r\n        x = nStr.split('.');\r\n        x1 = x[0];\r\n        x2 = x.length > 1 ? '.' + x[1] : '';\r\n        var rgx = /(\\d+)(\\d{3})/;\r\n        while (rgx.test(x1)){\r\n            x1 = x1.replace(rgx, '$1' + ',' + '$2');\r\n        }\r\n        x2 = x2.slice(0,3);\r\n        return x1 + x2;\r\n    };\r\n    /**\r\n     *  金额 类的  为0 的 格式化\r\n     */\r\n    var change = function(num){\r\n        num = parseFloat(num);\r\n        if( isNaN(num) ){\r\n            return false;\r\n        }else{\r\n            var newNum = \"\";\r\n            num = num + \"\";\r\n            var temp = num.split(\"\\.\");\r\n            var myLength = 0;\r\n            if( 2 <= temp.length ){\r\n                myLength = temp[1].length;\r\n            }\r\n            switch( myLength ){\r\n                case 0 :\r\n                    newNum = num + \".00\";\r\n                    break;\r\n                case 1 :\r\n                    newNum = num + \"0\";\r\n                    break;\r\n                default :\r\n                    newNum = num;\r\n                     break;\r\n            }\r\n            return newNum;\r\n        }\r\n    };\r\n    if(grossProfit === \"\"){\r\n        grossProfit[0][0] = 0;\r\n        document.getElementById('grossProfitDom_KPI').innerHTML = formatValue(grossProfit[0][0]);\r\n    }else{\r\n        document.getElementById('grossProfitDom_KPI').innerHTML = formatValue(grossProfit[0][0]);\r\n    }\r\n} ",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": "function f(){\r\n    /**\r\n     *  金额 类的 千分位 格式化\r\n     */\r\n    var formatValue = function(nStr){\r\n        nStr += '';\r\n        x = nStr.split('.');\r\n        x1 = x[0];\r\n        x2 = x.length > 1 ? '.' + x[1] : '';\r\n        var rgx = /(\\d+)(\\d{3})/;\r\n        while (rgx.test(x1)){\r\n            x1 = x1.replace(rgx, '$1' + ',' + '$2');\r\n        }\r\n        x2 = x2.slice(0,3);\r\n        return x1 + x2;\r\n    };\r\n    /**\r\n     *  金额 类的  为0 的 格式化\r\n     */\r\n    var change = function(num){\r\n        num = parseFloat(num);\r\n        if( isNaN(num) ){\r\n            return false;\r\n        }else{\r\n            var newNum = \"\";\r\n            num = num + \"\";\r\n            var temp = num.split(\"\\.\");\r\n            var myLength = 0;\r\n            if( 2 <= temp.length ){\r\n                myLength = temp[1].length;\r\n            }\r\n            switch( myLength ){\r\n                case 0 :\r\n                    newNum = num + \".00\";\r\n                    break;\r\n                case 1 :\r\n                    newNum = num + \"0\";\r\n                    break;\r\n                default :\r\n                    newNum = num;\r\n                     break;\r\n            }\r\n            return newNum;\r\n        }\r\n    };\r\n    if(grossProfit === \"\"){\r\n        grossProfit[0][0] = 0;\r\n        document.getElementById('grossProfitDom_KPI').innerHTML = formatValue(grossProfit[0][0]);\r\n    }else{\r\n        document.getElementById('grossProfitDom_KPI').innerHTML = formatValue(grossProfit[0][0]);\r\n    }\r\n} "
      },
      {
       "name": "postFetch",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "preChange",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "postChange",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "tooltip",
-      "value": "",
-      "type": "Html"
+      "type": "Html",
+      "value": ""
      }
     ],
-    "rowName": "Query Component"
+    "rowName": "Query Component",
+    "type": "ComponentsQuery",
+    "typeDesc": "Query Component"
    },
    {
     "id": "26bac856-80e8-57bc-92f4-575d16951304",
-    "type": "ComponentsQuery",
-    "typeDesc": "Query Component",
     "parent": "OTHERCOMPONENTS",
     "properties": [
      {
       "name": "name",
-      "value": "netProfitMargin",
-      "type": "Id"
+      "type": "Id",
+      "value": "netProfitMargin"
      },
      {
       "name": "listeners",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:placeParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\",\"${p:shopParam}\",\"${p:outletParam}\"]",
-      "type": "Listeners"
+      "type": "Listeners",
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:placeParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\",\"${p:shopParam}\",\"${p:outletParam}\"]"
      },
      {
       "name": "parameters",
-      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"placeParam\",\"placeParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"],[\"shopParam\",\"shopParam\"],[\"outletParam\",\"outletParam\"]]",
-      "type": "ValuesArray"
+      "type": "ValuesArray",
+      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"placeParam\",\"placeParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"],[\"shopParam\",\"shopParam\"],[\"outletParam\",\"outletParam\"]]"
      },
      {
       "name": "resultvar",
-      "value": "netProfitMargin",
-      "type": "Result"
+      "type": "Result",
+      "value": "netProfitMargin"
      },
      {
       "name": "dataSource",
-      "value": "netProfitMarginQuery_KPI",
-      "type": "Datasource"
+      "type": "Datasource",
+      "value": "netProfitMarginQuery_KPI"
      },
      {
       "name": "asynchronousMode",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      },
      {
       "name": "priority",
-      "value": 5,
-      "type": "Integer"
+      "type": "Integer",
+      "value": 5
      },
      {
       "name": "refreshPeriod",
-      "value": "",
-      "type": "Integer"
+      "type": "Integer",
+      "value": ""
      },
      {
       "name": "htmlObject",
-      "value": "${h:netInterestRateDom_KPI}",
-      "type": "HtmlObject"
+      "type": "HtmlObject",
+      "value": "${h:netInterestRateDom_KPI}"
      },
      {
       "name": "executeAtStart",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      },
      {
       "name": "preExecution",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "postExecution",
-      "value": "function f(){\r\n    /**\r\n     *  金额 类的 千分位 格式化\r\n     */\r\n    var formatValue = function(nStr){\r\n        nStr += '';\r\n        x = nStr.split('.');\r\n        x1 = x[0];\r\n        x2 = x.length > 1 ? '.' + x[1] : '';\r\n        var rgx = /(\\d+)(\\d{3})/;\r\n        while (rgx.test(x1)){\r\n            x1 = x1.replace(rgx, '$1' + ',' + '$2');\r\n        }\r\n        x2 = x2.slice(0,3);\r\n        return x1 + x2;\r\n    };\r\n    /**\r\n     *  金额 类的  为0 的 格式化\r\n     */\r\n    var change = function(num){\r\n        num = parseFloat(num);\r\n        if( isNaN(num) ){\r\n            return false;\r\n        }else{\r\n            var newNum = \"\";\r\n            num = num + \"\";\r\n            var temp = num.split(\"\\.\");\r\n            var myLength = 0;\r\n            if( 2 <= temp.length ){\r\n                myLength = temp[1].length;\r\n            }\r\n            switch( myLength ){\r\n                case 0 :\r\n                    newNum = num + \".00\";\r\n                    break;\r\n                case 1 :\r\n                    newNum = num + \"0\";\r\n                    break;\r\n                default :\r\n                    newNum = num;\r\n                     break;\r\n            }\r\n            return newNum;\r\n        }\r\n    };\r\n    if(netProfitMargin === \"\"){\r\n        netProfitMargin[0][0] = 0;\r\n        document.getElementById('netInterestRateDom_KPI').innerHTML = formatValue(netProfitMargin[0][0]) + '%';\r\n    }else{\r\n        document.getElementById('netInterestRateDom_KPI').innerHTML = formatValue(netProfitMargin[0][0]) + '%';\r\n    }\r\n} ",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": "function f(){\r\n    /**\r\n     *  金额 类的 千分位 格式化\r\n     */\r\n    var formatValue = function(nStr){\r\n        nStr += '';\r\n        x = nStr.split('.');\r\n        x1 = x[0];\r\n        x2 = x.length > 1 ? '.' + x[1] : '';\r\n        var rgx = /(\\d+)(\\d{3})/;\r\n        while (rgx.test(x1)){\r\n            x1 = x1.replace(rgx, '$1' + ',' + '$2');\r\n        }\r\n        x2 = x2.slice(0,3);\r\n        return x1 + x2;\r\n    };\r\n    /**\r\n     *  金额 类的  为0 的 格式化\r\n     */\r\n    var change = function(num){\r\n        num = parseFloat(num);\r\n        if( isNaN(num) ){\r\n            return false;\r\n        }else{\r\n            var newNum = \"\";\r\n            num = num + \"\";\r\n            var temp = num.split(\"\\.\");\r\n            var myLength = 0;\r\n            if( 2 <= temp.length ){\r\n                myLength = temp[1].length;\r\n            }\r\n            switch( myLength ){\r\n                case 0 :\r\n                    newNum = num + \".00\";\r\n                    break;\r\n                case 1 :\r\n                    newNum = num + \"0\";\r\n                    break;\r\n                default :\r\n                    newNum = num;\r\n                     break;\r\n            }\r\n            return newNum;\r\n        }\r\n    };\r\n    if(netProfitMargin === \"\"){\r\n        netProfitMargin[0][0] = 0;\r\n        document.getElementById('netInterestRateDom_KPI').innerHTML = formatValue(netProfitMargin[0][0]) + '%';\r\n    }else{\r\n        document.getElementById('netInterestRateDom_KPI').innerHTML = formatValue(netProfitMargin[0][0]) + '%';\r\n    }\r\n} "
      },
      {
       "name": "postFetch",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "preChange",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "postChange",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "tooltip",
-      "value": "",
-      "type": "Html"
+      "type": "Html",
+      "value": ""
      }
     ],
-    "rowName": "Query Component"
+    "rowName": "Query Component",
+    "type": "ComponentsQuery",
+    "typeDesc": "Query Component"
    },
    {
     "id": "97ba7a48-7ee7-5633-06f5-023da5ba10ea",
-    "type": "ComponentsQuery",
-    "typeDesc": "Query Component",
     "parent": "OTHERCOMPONENTS",
     "properties": [
      {
       "name": "name",
-      "value": "netProfit",
-      "type": "Id"
+      "type": "Id",
+      "value": "netProfit"
      },
      {
       "name": "listeners",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:placeParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\",\"${p:shopParam}\",\"${p:outletParam}\"]",
-      "type": "Listeners"
+      "type": "Listeners",
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:placeParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\",\"${p:shopParam}\",\"${p:outletParam}\"]"
      },
      {
       "name": "parameters",
-      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"placeParam\",\"placeParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"],[\"shopParam\",\"shopParam\"],[\"outletParam\",\"outletParam\"]]",
-      "type": "ValuesArray"
+      "type": "ValuesArray",
+      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"placeParam\",\"placeParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"],[\"shopParam\",\"shopParam\"],[\"outletParam\",\"outletParam\"]]"
      },
      {
       "name": "resultvar",
-      "value": "netProfit",
-      "type": "Result"
+      "type": "Result",
+      "value": "netProfit"
      },
      {
       "name": "dataSource",
-      "value": "netProfitQuery_KPI",
-      "type": "Datasource"
+      "type": "Datasource",
+      "value": "netProfitQuery_KPI"
      },
      {
       "name": "asynchronousMode",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      },
      {
       "name": "priority",
-      "value": 5,
-      "type": "Integer"
+      "type": "Integer",
+      "value": 5
      },
      {
       "name": "refreshPeriod",
-      "value": "",
-      "type": "Integer"
+      "type": "Integer",
+      "value": ""
      },
      {
       "name": "htmlObject",
-      "value": "${h:netProfitDom_KPI}",
-      "type": "HtmlObject"
+      "type": "HtmlObject",
+      "value": "${h:netProfitDom_KPI}"
      },
      {
       "name": "executeAtStart",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      },
      {
       "name": "preExecution",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "postExecution",
-      "value": "function f(){\r\n    /**\r\n     *  金额 类的 千分位 格式化\r\n     */\r\n    var formatValue = function(nStr){\r\n        nStr += '';\r\n        x = nStr.split('.');\r\n        x1 = x[0];\r\n        x2 = x.length > 1 ? '.' + x[1] : '';\r\n        var rgx = /(\\d+)(\\d{3})/;\r\n        while (rgx.test(x1)){\r\n            x1 = x1.replace(rgx, '$1' + ',' + '$2');\r\n        }\r\n        x2 = x2.slice(0,3);\r\n        return x1 + x2;\r\n    };\r\n    /**\r\n     *  金额 类的  为0 的 格式化\r\n     */\r\n    var change = function(num){\r\n        num = parseFloat(num);\r\n        if( isNaN(num) ){\r\n            return false;\r\n        }else{\r\n            var newNum = \"\";\r\n            num = num + \"\";\r\n            var temp = num.split(\"\\.\");\r\n            var myLength = 0;\r\n            if( 2 <= temp.length ){\r\n                myLength = temp[1].length;\r\n            }\r\n            switch( myLength ){\r\n                case 0 :\r\n                    newNum = num + \".00\";\r\n                    break;\r\n                case 1 :\r\n                    newNum = num + \"0\";\r\n                    break;\r\n                default :\r\n                    newNum = num;\r\n                     break;\r\n            }\r\n            return newNum;\r\n        }\r\n    };\r\n    if(netProfit === \"\"){\r\n        netProfit[0][0] = 0;\r\n        document.getElementById('netProfitDom_KPI').innerHTML = formatValue(netProfit[0][0]);\r\n    }else{\r\n        document.getElementById('netProfitDom_KPI').innerHTML = formatValue(netProfit[0][0]);\r\n    }\r\n} ",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": "function f(){\r\n    /**\r\n     *  金额 类的 千分位 格式化\r\n     */\r\n    var formatValue = function(nStr){\r\n        nStr += '';\r\n        x = nStr.split('.');\r\n        x1 = x[0];\r\n        x2 = x.length > 1 ? '.' + x[1] : '';\r\n        var rgx = /(\\d+)(\\d{3})/;\r\n        while (rgx.test(x1)){\r\n            x1 = x1.replace(rgx, '$1' + ',' + '$2');\r\n        }\r\n        x2 = x2.slice(0,3);\r\n        return x1 + x2;\r\n    };\r\n    /**\r\n     *  金额 类的  为0 的 格式化\r\n     */\r\n    var change = function(num){\r\n        num = parseFloat(num);\r\n        if( isNaN(num) ){\r\n            return false;\r\n        }else{\r\n            var newNum = \"\";\r\n            num = num + \"\";\r\n            var temp = num.split(\"\\.\");\r\n            var myLength = 0;\r\n            if( 2 <= temp.length ){\r\n                myLength = temp[1].length;\r\n            }\r\n            switch( myLength ){\r\n                case 0 :\r\n                    newNum = num + \".00\";\r\n                    break;\r\n                case 1 :\r\n                    newNum = num + \"0\";\r\n                    break;\r\n                default :\r\n                    newNum = num;\r\n                     break;\r\n            }\r\n            return newNum;\r\n        }\r\n    };\r\n    if(netProfit === \"\"){\r\n        netProfit[0][0] = 0;\r\n        document.getElementById('netProfitDom_KPI').innerHTML = formatValue(netProfit[0][0]);\r\n    }else{\r\n        document.getElementById('netProfitDom_KPI').innerHTML = formatValue(netProfit[0][0]);\r\n    }\r\n} "
      },
      {
       "name": "postFetch",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "preChange",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "postChange",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "tooltip",
-      "value": "",
-      "type": "Html"
+      "type": "Html",
+      "value": ""
      }
     ],
-    "rowName": "Query Component"
+    "rowName": "Query Component",
+    "type": "ComponentsQuery",
+    "typeDesc": "Query Component"
    }
   ]
  },
@@ -4628,507 +4628,507 @@
    },
    {
     "id": "f03fd73a-d206-50d2-ee3c-ed97fa9e0b21",
-    "type": "Componentssql_sqlJndi",
-    "typeDesc": "sql over sqlJndi",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
     "parent": "SQL",
     "properties": [
      {
       "name": "name",
-      "value": "_________________KPI_____________________",
-      "type": "Id"
+      "type": "Id",
+      "value": "_________________KPI_____________________"
      },
      {
       "name": "access",
-      "value": "public",
-      "type": "Access"
+      "type": "Access",
+      "value": "public"
      },
      {
       "name": "jndi",
-      "value": "",
-      "type": "Jndi"
+      "type": "Jndi",
+      "value": ""
      },
      {
       "name": "query",
-      "value": "",
-      "type": "SqlQuery"
+      "type": "SqlQuery",
+      "value": ""
      },
      {
       "name": "parameters",
-      "value": "[]",
-      "type": "CdaParameters"
+      "type": "CdaParameters",
+      "value": "[]"
      },
      {
       "name": "cdacalculatedcolumns",
-      "value": "[]",
-      "type": "CdaCalculatedColumnsArray"
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
      },
      {
       "name": "cdacolumns",
-      "value": "[]",
-      "type": "CdaColumnsArray"
+      "type": "CdaColumnsArray",
+      "value": "[]"
      },
      {
       "name": "output",
-      "value": "[]",
-      "type": "IndexArray"
+      "type": "IndexArray",
+      "value": "[]"
      },
      {
       "name": "outputMode",
-      "value": "include",
-      "type": "OutputMode"
+      "type": "OutputMode",
+      "value": "include"
      },
      {
       "name": "cacheKeys",
-      "value": "[]",
-      "type": "CacheKeysValues"
+      "type": "CacheKeysValues",
+      "value": "[]"
      },
      {
       "name": "cacheDuration",
-      "value": 3600,
-      "type": "Integer"
+      "type": "Integer",
+      "value": 3600
      },
      {
       "name": "cache",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      }
     ],
-    "meta": "CDA",
-    "meta_conntype": "sql.jndi",
-    "meta_datype": "sql",
-    "rowName": "sql over sqlJndi"
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
    },
    {
     "id": "833847ef-c2e9-2e9f-09d9-16017c3d3b4c",
-    "type": "Componentssql_sqlJndi",
-    "typeDesc": "sql over sqlJndi",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
     "parent": "SQL",
     "properties": [
      {
       "name": "name",
-      "value": "saleAmtQuery_KPI",
-      "type": "Id"
+      "type": "Id",
+      "value": "saleAmtQuery_KPI"
      },
      {
       "name": "access",
-      "value": "public",
-      "type": "Access"
+      "type": "Access",
+      "value": "public"
      },
      {
       "name": "jndi",
-      "value": "jdbc_bi",
-      "type": "Jndi"
+      "type": "Jndi",
+      "value": "jdbc_bi"
      },
      {
       "name": "query",
-      "value": "SELECT\r\n   CASE WHEN sum(`fact_sumday`.`SaleAmt`) = 0 THEN '0.00'\r\n        WHEN  sum(`fact_sumday`.`SaleAmt`) = NULL THEN '0.00'\r\n    ELSE format(sum(`fact_sumday`.`SaleAmt`),2) END\r\n    \r\n    -- format(sum(`fact_sumday`.`SaleAmt`),2) AS SaleAmt\r\nFROM\r\n     `fact_sumday` \r\n     INNER JOIN `dim_bidate` ON `fact_sumday`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_sumday.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\n    INNER JOIN `Dim_Place` ON `Dim_Outlet`.`PlaceId` = `Dim_Place`.`PlaceId`\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\n     AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)\r\n     AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)\r\n     AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)\r\n     ",
-      "type": "SqlQuery"
+      "type": "SqlQuery",
+      "value": "SELECT\r\n   CASE WHEN sum(`fact_sumday`.`SaleAmt`) = 0 THEN '0.00'\r\n        WHEN  sum(`fact_sumday`.`SaleAmt`) = NULL THEN '0.00'\r\n    ELSE format(sum(`fact_sumday`.`SaleAmt`),2) END\r\n    \r\n    -- format(sum(`fact_sumday`.`SaleAmt`),2) AS SaleAmt\r\nFROM\r\n     `fact_sumday` \r\n     INNER JOIN `dim_bidate` ON `fact_sumday`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_sumday.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\n    INNER JOIN `Dim_Place` ON `Dim_Outlet`.`PlaceId` = `Dim_Place`.`PlaceId`\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\n     AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)\r\n     AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)\r\n     AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)\r\n     "
      },
      {
       "name": "parameters",
-      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"],[\"shopParam\",\"shopParam\",\"String\",\"\",\"\"],[\"outletParam\",\"outletParam\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"placeParam\",\"placeParam\",\"String\",\"\",\"\"]]",
-      "type": "CdaParameters"
+      "type": "CdaParameters",
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"],[\"shopParam\",\"shopParam\",\"String\",\"\",\"\"],[\"outletParam\",\"outletParam\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"placeParam\",\"placeParam\",\"String\",\"\",\"\"]]"
      },
      {
       "name": "cdacalculatedcolumns",
-      "value": "[]",
-      "type": "CdaCalculatedColumnsArray"
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
      },
      {
       "name": "cdacolumns",
-      "value": "[]",
-      "type": "CdaColumnsArray"
+      "type": "CdaColumnsArray",
+      "value": "[]"
      },
      {
       "name": "output",
-      "value": "[]",
-      "type": "IndexArray"
+      "type": "IndexArray",
+      "value": "[]"
      },
      {
       "name": "outputMode",
-      "value": "include",
-      "type": "OutputMode"
+      "type": "OutputMode",
+      "value": "include"
      },
      {
       "name": "cacheKeys",
-      "value": "[]",
-      "type": "CacheKeysValues"
+      "type": "CacheKeysValues",
+      "value": "[]"
      },
      {
       "name": "cacheDuration",
-      "value": 3600,
-      "type": "Integer"
+      "type": "Integer",
+      "value": 3600
      },
      {
       "name": "cache",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      }
     ],
-    "meta": "CDA",
-    "meta_conntype": "sql.jndi",
-    "meta_datype": "sql",
-    "rowName": "sql over sqlJndi"
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
    },
    {
     "id": "584a4d18-4af2-7bc4-3199-e5036b43e170",
-    "type": "Componentssql_sqlJndi",
-    "typeDesc": "sql over sqlJndi",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
     "parent": "SQL",
     "properties": [
      {
       "name": "name",
-      "value": "costQuery_KPI",
-      "type": "Id"
+      "type": "Id",
+      "value": "costQuery_KPI"
      },
      {
       "name": "access",
-      "value": "public",
-      "type": "Access"
+      "type": "Access",
+      "value": "public"
      },
      {
       "name": "jndi",
-      "value": "jdbc_bi",
-      "type": "Jndi"
+      "type": "Jndi",
+      "value": "jdbc_bi"
      },
      {
       "name": "query",
-      "value": "SELECT\r\n     format(sum(`fact_sumday`.`SaleCostAmt`),2) AS SaleAmt\r\nFROM\r\n     `fact_sumday` INNER JOIN `dim_bidate` ON `fact_sumday`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n     INNER JOIN `dim_area` ON `fact_sumday`.`AreaId` = `dim_area`.`AreaId`\r\n     INNER JOIN `dim_brand` ON `fact_sumday`.`BrandId` = `dim_brand`.`BrandId`\r\n     INNER JOIN `dim_outlet` ON `fact_sumday`.`OutletId_t` = `dim_outlet`.`OutletId_t`\r\n     INNER JOIN `dim_place` ON `fact_sumday`.`PlaceId` = `dim_place`.`PlaceId`\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\n     AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)\r\n     AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)\r\n     AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)",
-      "type": "SqlQuery"
+      "type": "SqlQuery",
+      "value": "SELECT\r\n     format(sum(`fact_sumday`.`SaleCostAmt`),2) AS SaleAmt\r\nFROM\r\n     `fact_sumday` INNER JOIN `dim_bidate` ON `fact_sumday`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n     INNER JOIN `dim_area` ON `fact_sumday`.`AreaId` = `dim_area`.`AreaId`\r\n     INNER JOIN `dim_brand` ON `fact_sumday`.`BrandId` = `dim_brand`.`BrandId`\r\n     INNER JOIN `dim_outlet` ON `fact_sumday`.`OutletId_t` = `dim_outlet`.`OutletId_t`\r\n     INNER JOIN `dim_place` ON `fact_sumday`.`PlaceId` = `dim_place`.`PlaceId`\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\n     AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)\r\n     AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)\r\n     AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)"
      },
      {
       "name": "parameters",
-      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"],[\"shopParam\",\"shopParam\",\"String\",\"\",\"\"],[\"outletParam\",\"outletParam\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"placeParam\",\"placeParam\",\"String\",\"\",\"\"]]",
-      "type": "CdaParameters"
+      "type": "CdaParameters",
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"],[\"shopParam\",\"shopParam\",\"String\",\"\",\"\"],[\"outletParam\",\"outletParam\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"placeParam\",\"placeParam\",\"String\",\"\",\"\"]]"
      },
      {
       "name": "cdacalculatedcolumns",
-      "value": "[]",
-      "type": "CdaCalculatedColumnsArray"
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
      },
      {
       "name": "cdacolumns",
-      "value": "[]",
-      "type": "CdaColumnsArray"
+      "type": "CdaColumnsArray",
+      "value": "[]"
      },
      {
       "name": "output",
-      "value": "[]",
-      "type": "IndexArray"
+      "type": "IndexArray",
+      "value": "[]"
      },
      {
       "name": "outputMode",
-      "value": "include",
-      "type": "OutputMode"
+      "type": "OutputMode",
+      "value": "include"
      },
      {
       "name": "cacheKeys",
-      "value": "[]",
-      "type": "CacheKeysValues"
+      "type": "CacheKeysValues",
+      "value": "[]"
      },
      {
       "name": "cacheDuration",
-      "value": 3600,
-      "type": "Integer"
+      "type": "Integer",
+      "value": 3600
      },
      {
       "name": "cache",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      }
     ],
-    "meta": "CDA",
-    "meta_conntype": "sql.jndi",
-    "meta_datype": "sql",
-    "rowName": "sql over sqlJndi"
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
    },
    {
     "id": "3a212488-4790-42e8-3364-5655eecefeb8",
-    "type": "Componentssql_sqlJndi",
-    "typeDesc": "sql over sqlJndi",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
     "parent": "SQL",
     "properties": [
      {
       "name": "name",
-      "value": "grossProfitMarginQuery_KPI",
-      "type": "Id"
+      "type": "Id",
+      "value": "grossProfitMarginQuery_KPI"
      },
      {
       "name": "access",
-      "value": "public",
-      "type": "Access"
+      "type": "Access",
+      "value": "public"
      },
      {
       "name": "jndi",
-      "value": "jdbc_bi",
-      "type": "Jndi"
+      "type": "Jndi",
+      "value": "jdbc_bi"
      },
      {
       "name": "query",
-      "value": "SELECT\r\n     CASE WHEN sum(`fact_sumday`.`SaleAmt`) = 0 THEN '0.0'\r\n        WHEN  sum(`fact_sumday`.`SaleAmt`) = NULL THEN '0.0'\r\n    ELSE ROUND((sum(`fact_sumday`.`SaleAmt`) - sum(`fact_sumday`.`SaleCostAmt`)) / sum(`fact_sumday`.`SaleAmt`),2) * 100 END\r\nFROM\r\n     `fact_sumday` INNER JOIN `dim_bidate` ON `fact_sumday`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n     INNER JOIN `dim_area` ON `fact_sumday`.`AreaId` = `dim_area`.`AreaId`\r\n     INNER JOIN `dim_brand` ON `fact_sumday`.`BrandId` = `dim_brand`.`BrandId`\r\n     INNER JOIN `dim_outlet` ON `fact_sumday`.`OutletId_t` = `dim_outlet`.`OutletId_t`\r\n     INNER JOIN `dim_place` ON `fact_sumday`.`PlaceId` = `dim_place`.`PlaceId`\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\n     AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)\r\n     AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)\r\n     AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)\r\n\r\n\r\n",
-      "type": "SqlQuery"
+      "type": "SqlQuery",
+      "value": "SELECT\r\n     CASE WHEN sum(`fact_sumday`.`SaleAmt`) = 0 THEN '0.0'\r\n        WHEN  sum(`fact_sumday`.`SaleAmt`) = NULL THEN '0.0'\r\n    ELSE ROUND((sum(`fact_sumday`.`SaleAmt`) - sum(`fact_sumday`.`SaleCostAmt`)) / sum(`fact_sumday`.`SaleAmt`),2) * 100 END\r\nFROM\r\n     `fact_sumday` INNER JOIN `dim_bidate` ON `fact_sumday`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n     INNER JOIN `dim_area` ON `fact_sumday`.`AreaId` = `dim_area`.`AreaId`\r\n     INNER JOIN `dim_brand` ON `fact_sumday`.`BrandId` = `dim_brand`.`BrandId`\r\n     INNER JOIN `dim_outlet` ON `fact_sumday`.`OutletId_t` = `dim_outlet`.`OutletId_t`\r\n     INNER JOIN `dim_place` ON `fact_sumday`.`PlaceId` = `dim_place`.`PlaceId`\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\n     AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)\r\n     AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)\r\n     AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)\r\n\r\n\r\n"
      },
      {
       "name": "parameters",
-      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"],[\"shopParam\",\"shopParam\",\"String\",\"\",\"\"],[\"outletParam\",\"outletParam\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"placeParam\",\"placeParam\",\"String\",\"\",\"\"]]",
-      "type": "CdaParameters"
+      "type": "CdaParameters",
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"],[\"shopParam\",\"shopParam\",\"String\",\"\",\"\"],[\"outletParam\",\"outletParam\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"placeParam\",\"placeParam\",\"String\",\"\",\"\"]]"
      },
      {
       "name": "cdacalculatedcolumns",
-      "value": "[]",
-      "type": "CdaCalculatedColumnsArray"
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
      },
      {
       "name": "cdacolumns",
-      "value": "[]",
-      "type": "CdaColumnsArray"
+      "type": "CdaColumnsArray",
+      "value": "[]"
      },
      {
       "name": "output",
-      "value": "[]",
-      "type": "IndexArray"
+      "type": "IndexArray",
+      "value": "[]"
      },
      {
       "name": "outputMode",
-      "value": "include",
-      "type": "OutputMode"
+      "type": "OutputMode",
+      "value": "include"
      },
      {
       "name": "cacheKeys",
-      "value": "[]",
-      "type": "CacheKeysValues"
+      "type": "CacheKeysValues",
+      "value": "[]"
      },
      {
       "name": "cacheDuration",
-      "value": 3600,
-      "type": "Integer"
+      "type": "Integer",
+      "value": 3600
      },
      {
       "name": "cache",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      }
     ],
-    "meta": "CDA",
-    "meta_conntype": "sql.jndi",
-    "meta_datype": "sql",
-    "rowName": "sql over sqlJndi"
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
    },
    {
     "id": "268c662d-989d-ba4f-09f6-6f58f22af81a",
-    "type": "Componentssql_sqlJndi",
-    "typeDesc": "sql over sqlJndi",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
     "parent": "SQL",
     "properties": [
      {
       "name": "name",
-      "value": "grossProfitQuery_KPI",
-      "type": "Id"
+      "type": "Id",
+      "value": "grossProfitQuery_KPI"
      },
      {
       "name": "access",
-      "value": "public",
-      "type": "Access"
+      "type": "Access",
+      "value": "public"
      },
      {
       "name": "jndi",
-      "value": "jdbc_bi",
-      "type": "Jndi"
+      "type": "Jndi",
+      "value": "jdbc_bi"
      },
      {
       "name": "query",
-      "value": "SELECT\r\n    format(sum(`fact_sumday`.`GrossProfitAmt`),2)\r\nFROM\r\n     `fact_sumday` INNER JOIN `dim_bidate` ON `fact_sumday`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n     INNER JOIN `dim_area` ON `fact_sumday`.`AreaId` = `dim_area`.`AreaId`\r\n     INNER JOIN `dim_brand` ON `fact_sumday`.`BrandId` = `dim_brand`.`BrandId`\r\n     INNER JOIN `dim_outlet` ON `fact_sumday`.`OutletId_t` = `dim_outlet`.`OutletId_t`\r\n     INNER JOIN `dim_place` ON `fact_sumday`.`PlaceId` = `dim_place`.`PlaceId`\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\n     AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)\r\n     AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)\r\n     AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)\r\n\r\n\r\n",
-      "type": "SqlQuery"
+      "type": "SqlQuery",
+      "value": "SELECT\r\n    format(sum(`fact_sumday`.`GrossProfitAmt`),2)\r\nFROM\r\n     `fact_sumday` INNER JOIN `dim_bidate` ON `fact_sumday`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n     INNER JOIN `dim_area` ON `fact_sumday`.`AreaId` = `dim_area`.`AreaId`\r\n     INNER JOIN `dim_brand` ON `fact_sumday`.`BrandId` = `dim_brand`.`BrandId`\r\n     INNER JOIN `dim_outlet` ON `fact_sumday`.`OutletId_t` = `dim_outlet`.`OutletId_t`\r\n     INNER JOIN `dim_place` ON `fact_sumday`.`PlaceId` = `dim_place`.`PlaceId`\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\n     AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)\r\n     AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)\r\n     AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)\r\n\r\n\r\n"
      },
      {
       "name": "parameters",
-      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"],[\"shopParam\",\"shopParam\",\"String\",\"\",\"\"],[\"outletParam\",\"outletParam\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"placeParam\",\"placeParam\",\"String\",\"\",\"\"]]",
-      "type": "CdaParameters"
+      "type": "CdaParameters",
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"],[\"shopParam\",\"shopParam\",\"String\",\"\",\"\"],[\"outletParam\",\"outletParam\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"placeParam\",\"placeParam\",\"String\",\"\",\"\"]]"
      },
      {
       "name": "cdacalculatedcolumns",
-      "value": "[]",
-      "type": "CdaCalculatedColumnsArray"
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
      },
      {
       "name": "cdacolumns",
-      "value": "[]",
-      "type": "CdaColumnsArray"
+      "type": "CdaColumnsArray",
+      "value": "[]"
      },
      {
       "name": "output",
-      "value": "[]",
-      "type": "IndexArray"
+      "type": "IndexArray",
+      "value": "[]"
      },
      {
       "name": "outputMode",
-      "value": "include",
-      "type": "OutputMode"
+      "type": "OutputMode",
+      "value": "include"
      },
      {
       "name": "cacheKeys",
-      "value": "[]",
-      "type": "CacheKeysValues"
+      "type": "CacheKeysValues",
+      "value": "[]"
      },
      {
       "name": "cacheDuration",
-      "value": 3600,
-      "type": "Integer"
+      "type": "Integer",
+      "value": 3600
      },
      {
       "name": "cache",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      }
     ],
-    "meta": "CDA",
-    "meta_conntype": "sql.jndi",
-    "meta_datype": "sql",
-    "rowName": "sql over sqlJndi"
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
    },
    {
     "id": "b299e332-4755-3226-1ba4-fc10ec03e7ea",
-    "type": "Componentssql_sqlJndi",
-    "typeDesc": "sql over sqlJndi",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
     "parent": "SQL",
     "properties": [
      {
       "name": "name",
-      "value": "netProfitMarginQuery_KPI",
-      "type": "Id"
+      "type": "Id",
+      "value": "netProfitMarginQuery_KPI"
      },
      {
       "name": "access",
-      "value": "public",
-      "type": "Access"
+      "type": "Access",
+      "value": "public"
      },
      {
       "name": "jndi",
-      "value": "jdbc_bi",
-      "type": "Jndi"
+      "type": "Jndi",
+      "value": "jdbc_bi"
      },
      {
       "name": "query",
-      "value": "SELECT\r\n   CASE WHEN sum(`fact_sumday`.`SaleAmt`) = 0 THEN '0.0'\r\n        WHEN  sum(`fact_sumday`.`SaleAmt`) = NULL THEN '0.0'\r\n   ELSE ROUND(((sum(`fact_sumday`.`SaleAmt`)- sum(`fact_sumday`.`SaleCostAmt`) - sum(`fact_sumday`.`SCAmt`) - sum(`fact_sumday`.`TaxAmt`)) / sum(`fact_sumday`.`SaleAmt`)),2) * 100 END\r\nFROM\r\n     `fact_sumday` INNER JOIN `dim_bidate` ON `fact_sumday`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n     INNER JOIN `dim_area` ON `fact_sumday`.`AreaId` = `dim_area`.`AreaId`\r\n     INNER JOIN `dim_brand` ON `fact_sumday`.`BrandId` = `dim_brand`.`BrandId`\r\n     INNER JOIN `dim_outlet` ON `fact_sumday`.`OutletId_t` = `dim_outlet`.`OutletId_t`\r\n     INNER JOIN `dim_place` ON `fact_sumday`.`PlaceId` = `dim_place`.`PlaceId`\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\n     AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)\r\n     AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)\r\n     AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)\r\n\r\n\r\n",
-      "type": "SqlQuery"
+      "type": "SqlQuery",
+      "value": "SELECT\r\n   CASE WHEN sum(`fact_sumday`.`SaleAmt`) = 0 THEN '0.0'\r\n        WHEN  sum(`fact_sumday`.`SaleAmt`) = NULL THEN '0.0'\r\n   ELSE ROUND(((sum(`fact_sumday`.`SaleAmt`)- sum(`fact_sumday`.`SaleCostAmt`) - sum(`fact_sumday`.`SCAmt`) - sum(`fact_sumday`.`TaxAmt`)) / sum(`fact_sumday`.`SaleAmt`)),2) * 100 END\r\nFROM\r\n     `fact_sumday` INNER JOIN `dim_bidate` ON `fact_sumday`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n     INNER JOIN `dim_area` ON `fact_sumday`.`AreaId` = `dim_area`.`AreaId`\r\n     INNER JOIN `dim_brand` ON `fact_sumday`.`BrandId` = `dim_brand`.`BrandId`\r\n     INNER JOIN `dim_outlet` ON `fact_sumday`.`OutletId_t` = `dim_outlet`.`OutletId_t`\r\n     INNER JOIN `dim_place` ON `fact_sumday`.`PlaceId` = `dim_place`.`PlaceId`\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\n     AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)\r\n     AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)\r\n     AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)\r\n\r\n\r\n"
      },
      {
       "name": "parameters",
-      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"],[\"shopParam\",\"shopParam\",\"String\",\"\",\"\"],[\"outletParam\",\"outletParam\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"placeParam\",\"placeParam\",\"String\",\"\",\"\"]]",
-      "type": "CdaParameters"
+      "type": "CdaParameters",
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"],[\"shopParam\",\"shopParam\",\"String\",\"\",\"\"],[\"outletParam\",\"outletParam\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"placeParam\",\"placeParam\",\"String\",\"\",\"\"]]"
      },
      {
       "name": "cdacalculatedcolumns",
-      "value": "[]",
-      "type": "CdaCalculatedColumnsArray"
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
      },
      {
       "name": "cdacolumns",
-      "value": "[]",
-      "type": "CdaColumnsArray"
+      "type": "CdaColumnsArray",
+      "value": "[]"
      },
      {
       "name": "output",
-      "value": "[]",
-      "type": "IndexArray"
+      "type": "IndexArray",
+      "value": "[]"
      },
      {
       "name": "outputMode",
-      "value": "include",
-      "type": "OutputMode"
+      "type": "OutputMode",
+      "value": "include"
      },
      {
       "name": "cacheKeys",
-      "value": "[]",
-      "type": "CacheKeysValues"
+      "type": "CacheKeysValues",
+      "value": "[]"
      },
      {
       "name": "cacheDuration",
-      "value": 3600,
-      "type": "Integer"
+      "type": "Integer",
+      "value": 3600
      },
      {
       "name": "cache",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      }
     ],
-    "meta": "CDA",
-    "meta_conntype": "sql.jndi",
-    "meta_datype": "sql",
-    "rowName": "sql over sqlJndi"
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
    },
    {
     "id": "9efe233d-d047-caf1-e169-3f501d845acf",
-    "type": "Componentssql_sqlJndi",
-    "typeDesc": "sql over sqlJndi",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
     "parent": "SQL",
     "properties": [
      {
       "name": "name",
-      "value": "netProfitQuery_KPI",
-      "type": "Id"
+      "type": "Id",
+      "value": "netProfitQuery_KPI"
      },
      {
       "name": "access",
-      "value": "public",
-      "type": "Access"
+      "type": "Access",
+      "value": "public"
      },
      {
       "name": "jndi",
-      "value": "jdbc_bi",
-      "type": "Jndi"
+      "type": "Jndi",
+      "value": "jdbc_bi"
      },
      {
       "name": "query",
-      "value": "SELECT\r\n     format( (sum(`fact_sumday`.`SaleAmt`)- sum(`fact_sumday`.`SaleCostAmt`) - sum(`fact_sumday`.`SCAmt`) - sum(`fact_sumday`.`TaxAmt`)), 2)\r\nFROM\r\n     `fact_sumday` INNER JOIN `dim_bidate` ON `fact_sumday`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n     INNER JOIN `dim_area` ON `fact_sumday`.`AreaId` = `dim_area`.`AreaId`\r\n     INNER JOIN `dim_brand` ON `fact_sumday`.`BrandId` = `dim_brand`.`BrandId`\r\n     INNER JOIN `dim_outlet` ON `fact_sumday`.`OutletId_t` = `dim_outlet`.`OutletId_t`\r\n     INNER JOIN `dim_place` ON `fact_sumday`.`PlaceId` = `dim_place`.`PlaceId`\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\n     AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)\r\n     AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)\r\n     AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)\r\n\r\n\r\n",
-      "type": "SqlQuery"
+      "type": "SqlQuery",
+      "value": "SELECT\r\n     format( (sum(`fact_sumday`.`SaleAmt`)- sum(`fact_sumday`.`SaleCostAmt`) - sum(`fact_sumday`.`SCAmt`) - sum(`fact_sumday`.`TaxAmt`)), 2)\r\nFROM\r\n     `fact_sumday` INNER JOIN `dim_bidate` ON `fact_sumday`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n     INNER JOIN `dim_area` ON `fact_sumday`.`AreaId` = `dim_area`.`AreaId`\r\n     INNER JOIN `dim_brand` ON `fact_sumday`.`BrandId` = `dim_brand`.`BrandId`\r\n     INNER JOIN `dim_outlet` ON `fact_sumday`.`OutletId_t` = `dim_outlet`.`OutletId_t`\r\n     INNER JOIN `dim_place` ON `fact_sumday`.`PlaceId` = `dim_place`.`PlaceId`\r\nWHERE \r\n     `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n     AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n     AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\n     AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)\r\n     AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)\r\n     AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)\r\n\r\n\r\n"
      },
      {
       "name": "parameters",
-      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"],[\"shopParam\",\"shopParam\",\"String\",\"\",\"\"],[\"outletParam\",\"outletParam\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"placeParam\",\"placeParam\",\"String\",\"\",\"\"]]",
-      "type": "CdaParameters"
+      "type": "CdaParameters",
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"],[\"shopParam\",\"shopParam\",\"String\",\"\",\"\"],[\"outletParam\",\"outletParam\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"placeParam\",\"placeParam\",\"String\",\"\",\"\"]]"
      },
      {
       "name": "cdacalculatedcolumns",
-      "value": "[]",
-      "type": "CdaCalculatedColumnsArray"
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
      },
      {
       "name": "cdacolumns",
-      "value": "[]",
-      "type": "CdaColumnsArray"
+      "type": "CdaColumnsArray",
+      "value": "[]"
      },
      {
       "name": "output",
-      "value": "[]",
-      "type": "IndexArray"
+      "type": "IndexArray",
+      "value": "[]"
      },
      {
       "name": "outputMode",
-      "value": "include",
-      "type": "OutputMode"
+      "type": "OutputMode",
+      "value": "include"
      },
      {
       "name": "cacheKeys",
-      "value": "[]",
-      "type": "CacheKeysValues"
+      "type": "CacheKeysValues",
+      "value": "[]"
      },
      {
       "name": "cacheDuration",
-      "value": 3600,
-      "type": "Integer"
+      "type": "Integer",
+      "value": 3600
      },
      {
       "name": "cache",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      }
     ],
-    "meta": "CDA",
-    "meta_conntype": "sql.jndi",
-    "meta_datype": "sql",
-    "rowName": "sql over sqlJndi"
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
    }
   ]
  },
@@ -6538,7 +6538,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-paperclip\" style=\"padding-right: 5px;\"></i> 毛利率 \r\n</div> \r\n<div class=\"row\">\r\n    <div class=\"col text-center\" style=\"font-size:40px\"> \r\n        <div id=\"grossProfitMarginDom_KPI\" style=\"color:#666666;font-weight:lighter;font-family:TPF_Font_Thin;\">41,410.00</div>\r\n    </div>\r\n</div> \r\n<div class=\"row\">\r\n    <div class=\"panel-heading\">\r\n        <div class=\"col text-center\">\r\n            毛利  &nbsp\r\n            <span id=\"grossProfitDom_KPI\" style=\"color:red;font-family:TPF_Font_Thin;\"></span>\r\n        </div>\r\n    </div> \r\n</div> "
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-paperclip\" style=\"padding-right: 5px;\"></i> 毛利率 \r\n</div> \r\n<div class=\"row\">\r\n    <div class=\"col text-center\" style=\"font-size:40px\"> \r\n        <div id=\"grossProfitMarginDom_KPI\" style=\"color:#666666;font-weight:lighter;font-family:TPF_Font_Thin;\"></div>\r\n    </div>\r\n</div> \r\n<div class=\"row\">\r\n    <div class=\"panel-heading\">\r\n        <div class=\"col text-center\">\r\n            毛利  &nbsp\r\n            <span id=\"grossProfitDom_KPI\" style=\"color:red;font-family:TPF_Font_Thin;\"></span>\r\n        </div>\r\n    </div> \r\n</div> "
      },
      {
       "name": "fontSize",
