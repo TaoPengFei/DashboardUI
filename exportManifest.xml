@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:ExportManifest xmlns:ns2="http://www.pentaho.com/schema/">
-    <ExportManifestInformation exportDate="26-05-2017 09:26:00 CST" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
+    <ExportManifestInformation exportDate="26-05-2017 09:45:37 CST" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
     <ExportManifestEntity path="UI">
         <ExportManifestProperty>
             <EntityMetaData name="UI" createdDate="2017-05-04T16:22:05.302+08:00" isFolder="true" path="UI" isHidden="false" locale="zh_CN" title="UI"/>
@@ -940,6 +940,78 @@
     <ExportManifestEntity path="UI/js">
         <ExportManifestProperty>
             <EntityMetaData name="js" createdDate="2017-05-17T10:28:19.517+08:00" isFolder="true" path="UI/js" isHidden="false" locale="zh_CN" title="js"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/js/D3.4.9.1">
+        <ExportManifestProperty>
+            <EntityMetaData name="D3.4.9.1" createdDate="2017-05-26T09:39:07.654+08:00" isFolder="true" path="UI/js/D3.4.9.1" isHidden="false" locale="zh_CN" title="D3.4.9.1"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/js/D3.4.9.1/d3.js">
+        <ExportManifestProperty>
+            <EntityMetaData name="d3.js" createdDate="2017-05-26T09:43:20.406+08:00" isFolder="false" path="UI/js/D3.4.9.1/d3.js" isHidden="true" locale="zh_CN" title="d3"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/js/D3.4.9.1/d3.min.js">
+        <ExportManifestProperty>
+            <EntityMetaData name="d3.min.js" createdDate="2017-05-26T09:43:06.231+08:00" isFolder="false" path="UI/js/D3.4.9.1/d3.min.js" isHidden="true" locale="zh_CN" title="d3.min"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/js/Echarts3.6.0">
+        <ExportManifestProperty>
+            <EntityMetaData name="Echarts3.6.0" createdDate="2017-05-26T09:35:44.178+08:00" isFolder="true" path="UI/js/Echarts3.6.0" isHidden="false" locale="zh_CN" title="Echarts3.6.0"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/js/Echarts3.6.0/echarts.js">
+        <ExportManifestProperty>
+            <EntityMetaData name="echarts.js" createdDate="2017-05-26T09:36:26.075+08:00" isFolder="false" path="UI/js/Echarts3.6.0/echarts.js" isHidden="true" locale="zh_CN" title="echarts"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/js/Echarts3.6.0/echarts.min.js">
+        <ExportManifestProperty>
+            <EntityMetaData name="echarts.min.js" createdDate="2017-05-26T09:37:50.234+08:00" isFolder="false" path="UI/js/Echarts3.6.0/echarts.min.js" isHidden="true" locale="zh_CN" title="echarts.min"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
