@@ -3105,7 +3105,7 @@
      {
       "name": "preExecution",
       "type": "JavaScript",
-      "value": ""
+      "value": "function f(){\r\n    onload_echarts();    \r\n} "
      },
      {
       "name": "postExecution",
@@ -3219,7 +3219,7 @@
      {
       "name": "preExecution",
       "type": "JavaScript",
-      "value": ""
+      "value": "function f(){\r\n    onload_echarts();    \r\n} "
      },
      {
       "name": "postExecution",
@@ -3333,7 +3333,7 @@
      {
       "name": "preExecution",
       "type": "JavaScript",
-      "value": ""
+      "value": "function f(){\r\n    onload_echarts();    \r\n} "
      },
      {
       "name": "postExecution",
@@ -3447,7 +3447,7 @@
      {
       "name": "preExecution",
       "type": "JavaScript",
-      "value": ""
+      "value": "function f(){\r\n    onload_echarts();    \r\n} "
      },
      {
       "name": "postExecution",
@@ -3561,7 +3561,7 @@
      {
       "name": "preExecution",
       "type": "JavaScript",
-      "value": ""
+      "value": "function f(){\r\n    onload_echarts();    \r\n} "
      },
      {
       "name": "postExecution",
@@ -3675,7 +3675,7 @@
      {
       "name": "preExecution",
       "type": "JavaScript",
-      "value": ""
+      "value": "function f(){\r\n    onload_echarts();    \r\n} "
      },
      {
       "name": "postExecution",
@@ -3789,7 +3789,7 @@
      {
       "name": "preExecution",
       "type": "JavaScript",
-      "value": ""
+      "value": "function f(){\r\n    onload_echarts();    \r\n} "
      },
      {
       "name": "postExecution",
@@ -3912,7 +3912,7 @@
      {
       "name": "preExecution",
       "type": "JavaScript",
-      "value": ""
+      "value": "function f(){\n    onload_echarts();    \n} "
      },
      {
       "name": "postExecution",
@@ -3966,6 +3966,82 @@
       "name": "javaScript",
       "type": "JavaScript",
       "value": "/**\r\n * 解决CDE图形的自适应\r\n */\r\nfunction resizeGraphical(cdeObj){\r\n    var myself = cdeObj;\r\n    //设置初始宽度 与placeholder()匹配\r\n    myself.chartDefinition.width = myself.placeholder().width();\r\n    //仅在图表组件的第一个执行上附加调整处理程序\r\n    if( !cdeObj.resizeHandlerAttached ){\r\n        //确保渲染只在事件发生后被触发\r\n        var debouncedResize = _.debounce(function(){\r\n            //再次显示 图形\r\n            myself.placeholder().children().css('visibility','visible');\r\n            // 改变 图形 的 宽度\r\n            myself.chartDefinition.width = myself.placeholder().width();\r\n            myself.render( myself.query.lastResults() );\r\n        },200);\r\n        // 高度调整 处理\r\n        $(window).resize(function(){\r\n            //仅当容器已更改宽度时才触发调整大小\r\n            if( myself.chartDefinition.width != myself.placeholder().width() ){\r\n                //暂时隐藏图表，使溢出不会发生\r\n                myself.placeholder().children().css('visibility','hidden');\r\n                //触发与调整\r\n                debouncedResize();\r\n            }\r\n        });\r\n        cdeObj.resizeHandlerAttached = true;\r\n    }\r\n} "
+     }
+    ],
+    "rowName": "Function",
+    "type": "ComponentsFunction",
+    "typeDesc": "JavaScript function"
+   },
+   {
+    "id": "293139cb-5546-56f5-7141-35bc6db849f9",
+    "parent": "SCRIPT",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "EChartRender"
+     },
+     {
+      "name": "javaScript",
+      "type": "JavaScript",
+      "value": "function initCharts(){\r\n    /*********************************************\r\n    *                    雷达图                  *\r\n    *********************************************/  \r\n    //var radarMapUrl = \"/pentaho/plugin/cda/api/doQuery?path=/public/UI/Template6/Template6.cda&dataAccessId=radarMapQuery\";\r\n        //outletUrl += \"&parambutton_event=\" + button_event;     //Pentaho CDA的URL\r\n        \r\n    //var radarMapJSON = readJSONFile(radarMapUrl).resultset;    //获取结果集\r\n    //console.log(radarMapJSON); \r\n    var radarMapChart = echarts.init(document.querySelector(\"#radarMapDom\"));    //获取图形的DOM\r\n    EchartsChartsEncapsulation(\r\n        GetRadarMapOption(),\r\n        radarMapChart\r\n    );\r\n}\r\n "
+     }
+    ],
+    "rowName": "Function",
+    "type": "ComponentsFunction",
+    "typeDesc": "JavaScript function"
+   },
+   {
+    "id": "f70a5c26-82eb-2f5a-d487-d117115cc3fc",
+    "parent": "SCRIPT",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "EChartsChartsEncapsulation"
+     },
+     {
+      "name": "javaScript",
+      "type": "JavaScript",
+      "value": "/**\r\n * Echarts自适应屏幕\r\n * @param chart\r\n */\r\nfunction AdaptionWindows(chart) {\r\n    window.addEventListener('resize',function () {\r\n        chart.resize();\r\n    });\r\n}\r\n/**\r\n * 对 option的整体封装\r\n * @param url         CDA 数据源\r\n * @param option        Echarts绘图属性\r\n * @param chartsObj      图形Dom\r\n */\r\nfunction EchartsChartsEncapsulation(option,chartsObj){\r\n    var myChart = function(){\r\n        chartsObj.setOption(option);\r\n    }();\r\n    //调用屏幕应的方法\r\n    AdaptionWindows(chartsObj);\r\n   // }\r\n}\r\n "
+     }
+    ],
+    "rowName": "Function",
+    "type": "ComponentsFunction",
+    "typeDesc": "JavaScript function"
+   },
+   {
+    "id": "d030a52b-8d83-f5c3-0d72-5fca232304b0",
+    "parent": "SCRIPT",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "EChartsOptions"
+     },
+     {
+      "name": "javaScript",
+      "type": "JavaScript",
+      "value": "    /**\r\n     *  对雷达图的option的简单封装\r\n     */\r\n    var GetRadarMapOption = function(){\r\n         return {\r\n            title: {\r\n                text: '基础雷达图'\r\n            },\r\n            tooltip: {},\r\n                legend: {\r\n                    data: ['预算分配（Allocated Budget）', '实际开销（Actual Spending）']\r\n            },\r\n            radar: {\r\n                shape: 'circle',\r\n                indicator: [\r\n                  \r\n                   { name: '信息技术（Information Techology）', max: 30000},\r\n                   { name: '客服（Customer Support）', max: 38000},\r\n                   { name: '研发（Development）', max: 52000},\r\n                   { name: '市场（Marketing）', max: 25000}\r\n                ]\r\n            },\r\n            series: [{\r\n                name: '预算 vs 开销（Budget vs spending）',\r\n                type: 'radar',\r\n                areaStyle: {normal: {}},\r\n                data : [\r\n                    {\r\n                        value : [28000, 35000, 50000, 19000],\r\n                        name : '预算分配（Allocated Budget）'\r\n                    },\r\n                     {\r\n                        value : [28000, 31000, 42000, 21000],\r\n                        name : '实际开销（Actual Spending）'\r\n                    }\r\n                ]\r\n            }]\r\n        };\r\n    }     \r\n "
+     }
+    ],
+    "rowName": "Function",
+    "type": "ComponentsFunction",
+    "typeDesc": "JavaScript function"
+   },
+   {
+    "id": "d06d7a32-716d-2e79-7c3c-8ee7f1903df6",
+    "parent": "SCRIPT",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "EChartsLoading"
+     },
+     {
+      "name": "javaScript",
+      "type": "JavaScript",
+      "value": "//载入echarts图形  \r\n//window.onload = onload_echarts(0);   \r\n "
      }
     ],
     "rowName": "Function",
@@ -5479,6 +5555,78 @@
     "typeDesc": "sql over sqlJndi"
    },
    {
+    "id": "710245bd-df12-5c20-779e-9fa11a3f5c3c",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "radarMapQuery"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "    SELECT \r\n\t\t\tSY_SaleName.Id AS KPI_Id,\r\n\t\t\tIdName AS KPI_Name,\r\n            \r\n            CASE WHEN CheckQty = 0 OR CheckQty IS NULL\r\n    \t        THEN 0\r\n\t        ELSE CheckQty*2 END AS KPI_Max,\t\r\n            \r\n            CASE WHEN CheckQty = 0 OR CheckQty IS NULL\r\n                THEN 0\r\n\t        ELSE CheckQty*1.5 END AS KPI_Budget,\r\n            \r\n            CASE WHEN CheckQty = 0 OR CheckQty IS NULL\r\n                THEN 0\r\n            ELSE CheckQty END AS KPI_Actual\r\n            \r\n\t\t\t-- CheckQty*2 AS KPI_Max,\r\n\t\t\t-- CheckQty*1.5 AS KPI_Budget,\r\n\t\t\t-- CheckQty AS KPI_Actual\r\n\tFROM\r\n\t\t(\r\n\t\t\tSELECT\r\n\t\t\t\t\t sum(`Fact_SumDay`.`CheckQty`) AS CheckQty\r\n\t\t\tFROM\r\n\t\t\t\t\t `Fact_SumDay` INNER JOIN `Dim_BIDate` ON `Fact_SumDay`.`BIDateId` = `Dim_BIDate`.`BIDateId`\r\n\t\t\t\t\t INNER JOIN `Dim_Outlet` ON `Fact_SumDay`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`\r\n                     INNER JOIN `dim_place` ON `fact_sumday`.`PlaceId` = `dim_place`.`PlaceId`\r\n                     INNER JOIN `dim_area` ON `fact_sumday`.`AreaId` = `dim_area`.`AreaId`\r\n                     INNER JOIN `dim_brand` ON `dim_outlet`.`BrandId` = `dim_brand`.`BrandId`\r\n            WHERE \r\n                `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n                AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n                AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n                AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n                AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\n                AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)\r\n                AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)\r\n                AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)\r\n\t\t)AS tbl JOIN SY_SaleName WHERE SY_SaleName.Id IN (3)\r\n\tUNION ALL\r\n\tSELECT \r\n\t\t\tSY_SaleName.Id AS KPI_Id,\r\n\t\t\tIdName AS KPI_Name,\r\n            \r\n            CASE WHEN GuestQty = 0 OR GuestQty IS NULL\r\n                THEN 0\r\n\t        ELSE GuestQty*2 END AS KPI_Max,\t\r\n            \r\n            CASE WHEN GuestQty = 0 OR GuestQty IS NULL\r\n                THEN 0\r\n            ELSE GuestQty*1.5 END AS KPI_Budget,\t\r\n            \r\n            CASE WHEN GuestQty = 0 OR GuestQty IS NULL\r\n                THEN 0\r\n            ELSE GuestQty END AS KPI_Actual\t\r\n            \r\n\t\t\t-- GuestQty*2 AS KPI_Max,\r\n\t\t\t-- GuestQty*1.5 AS KPI_Budget,\r\n\t\t\t-- GuestQty AS KPI_Actual\r\n\tFROM\r\n\t\t\t(\r\n\t\t\tSELECT\r\n\t\t\t\t\t sum(`Fact_SumDay`.`GuestQty`) AS GuestQty\r\n\t\t\tFROM\r\n    \t\t\t\t `Fact_SumDay` INNER JOIN `Dim_BIDate` ON `Fact_SumDay`.`BIDateId` = `Dim_BIDate`.`BIDateId`\r\n\t\t\t\t\t INNER JOIN `Dim_Outlet` ON `Fact_SumDay`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`\r\n                     INNER JOIN `dim_place` ON `fact_sumday`.`PlaceId` = `dim_place`.`PlaceId`\r\n                     INNER JOIN `dim_area` ON `fact_sumday`.`AreaId` = `dim_area`.`AreaId`\r\n                     INNER JOIN `dim_brand` ON `dim_outlet`.`BrandId` = `dim_brand`.`BrandId`\r\n            WHERE \r\n                `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n                AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n                AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n                AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n                AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\n                AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)\r\n                AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)\r\n                AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)\r\n\t\t\t)AS tbl JOIN SY_SaleName WHERE SY_SaleName.Id IN (4)\r\n\tUNION ALL\r\n\tSELECT \r\n\t\t\tSY_SaleName.Id AS KPI_Id,\r\n\t\t\tIdName AS KPI_Name,\r\n            \r\n            CASE WHEN SaleAmt = 0 OR SaleAmt IS NULL\r\n                THEN 0.00\r\n            ELSE SaleAmt*2 END AS KPI_Max,\t\r\n            \r\n            CASE WHEN SaleAmt = 0 OR SaleAmt IS NULL\r\n                THEN 0.00\r\n            ELSE SaleAmt*1.5 END AS KPI_Budget,    \r\n            \r\n            CASE WHEN SaleAmt = 0 OR SaleAmt IS NULL\r\n                THEN 0.00\r\n            ELSE SaleAmt END AS KPI_Actual\r\n            \r\n\t\t\t-- SaleAmt*2 AS KPI_Max,\r\n\t\t\t-- SaleAmt*1.5 AS KPI_Budget,\r\n\t\t\t-- SaleAmt AS KPI_Actual\r\n\tFROM\r\n\t\t\t(\r\n\t\t\tSELECT\r\n\t\t\t\t\t sum(`Fact_SumDay`.`SaleAmt`) AS SaleAmt\r\n\t\t\tFROM\r\n    \t\t\t\t `Fact_SumDay` INNER JOIN `Dim_BIDate` ON `Fact_SumDay`.`BIDateId` = `Dim_BIDate`.`BIDateId`\r\n\t\t\t\t\t INNER JOIN `Dim_Outlet` ON `Fact_SumDay`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`\r\n                     INNER JOIN `dim_place` ON `fact_sumday`.`PlaceId` = `dim_place`.`PlaceId`\r\n                     INNER JOIN `dim_area` ON `fact_sumday`.`AreaId` = `dim_area`.`AreaId`\r\n                     INNER JOIN `dim_brand` ON `dim_outlet`.`BrandId` = `dim_brand`.`BrandId`\r\n            WHERE \r\n                `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n                AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n                AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n                AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n                AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\n                AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)\r\n                AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)\r\n                AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)\r\n\t\t\t)AS tbl JOIN SY_SaleName WHERE SY_SaleName.Id IN (5)\r\n\tUNION ALL\r\n\tSELECT \r\n\t\t\tSY_SaleName.Id AS KPI_Id,\r\n\t\t\tIdName AS KPI_Name,\r\n            \r\n            CASE WHEN Profit = 0 OR Profit IS NULL\r\n                THEN 0.00\r\n            ELSE Profit*2 END AS KPI_Max,    \r\n            \r\n            CASE WHEN Profit = 0 OR Profit IS NULL\r\n                THEN 0.00\r\n            ELSE Profit*1.5 END AS KPI_Budget,    \r\n            \r\n            CASE WHEN Profit = 0 OR Profit IS NULL\r\n                THEN 0.00\r\n            ELSE Profit END AS KPI_Actual\r\n            \r\n\t\t\t-- Profit*2 AS KPI_Max,\r\n\t\t\t-- Profit*1.5 AS KPI_Budget,\r\n\t\t\t-- Profit AS KPI_Actual\r\n\tFROM\r\n\t\t\t(\r\n\t\t\tSELECT\r\n\t\t\t\t\t sum(`Fact_SumDay`.`SaleAmt`) + sum(`Fact_SumDay`.`DisAmt`)  AS Profit\r\n\t\t\tFROM\r\n    \t\t\t\t `Fact_SumDay` INNER JOIN `Dim_BIDate` ON `Fact_SumDay`.`BIDateId` = `Dim_BIDate`.`BIDateId`\r\n\t\t\t\t\t INNER JOIN `Dim_Outlet` ON `Fact_SumDay`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`\r\n                     INNER JOIN `dim_place` ON `fact_sumday`.`PlaceId` = `dim_place`.`PlaceId`\r\n                     INNER JOIN `dim_area` ON `fact_sumday`.`AreaId` = `dim_area`.`AreaId`\r\n                     INNER JOIN `dim_brand` ON `dim_outlet`.`BrandId` = `dim_brand`.`BrandId`\r\n            WHERE \r\n                `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n                AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n                AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n                AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n                AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\n                AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)\r\n                AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)\r\n                AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)\r\n\t\t\t)AS tbl JOIN SY_SaleName WHERE SY_SaleName.Id IN (6)"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"placeParam\",\"placeParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"],[\"shopParam\",\"shopParam\",\"String\",\"\",\"\"],[\"outletParam\",\"outletParam\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
     "id": "de37704f-28d1-bcdc-79a0-6addd2b1ef8d",
     "meta": "CDA",
     "meta_conntype": "sql.jndi",
@@ -6059,6 +6207,29 @@
  "filename": "/public/UI/Template6/Template6.cdfde",
  "layout": {
   "rows": [
+   {
+    "id": "11c6f912-88b0-9f33-f8a9-21decf7ed038",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "ECharts"
+     },
+     {
+      "name": "resourceFile",
+      "type": "ResourceFile",
+      "value": "${solution:../js/Echarts3.6.0/echarts.min.js}"
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Javascript"
+     }
+    ],
+    "type": "LayoutResourceFile",
+    "typeDesc": "Resource"
+   },
    {
     "id": "36dfcae7-7b23-82df-a031-67bdfe105c1a",
     "parent": "UnIqEiD",
@@ -9272,7 +9443,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": ""
+      "value": "\n<div class=\"panel-heading \">\n    <i class=\"fa fa-line-chart\" style=\"padding-right: 5px;\"></i> 指标比率概况 \n</div> \n<div id='radarMapDom' style='height: 350px' ></div> \n\n\n<!--  -->\n<script type=\"text/javascript\">\nfunction onload_echarts(){\n    \n\n    let readJSONFile = url =>{\n        let jsonData;\n        $.ajax({\n    \t\ttype : 'GET',\n\t\t\turl : url,\n\t\t\tasync : false,\n\t\t\tdataType : 'json',\n\t\t\tdata : null,\n            success : (response)=>{ jsonData = response; }\n\t\t})\n        return jsonData;\n    }\n    let radarMapUrl = \"/pentaho/plugin/cda/api/doQuery?path=/public/UI/Template6/Template6.cda&dataAccessId=radarMapQuery\";\n        radarMapUrl += \"&paramstartDay=\" + startDay + \"&paramendDay=\" + endDay + \"&parambrandParam=\" + brandParam + \"&paramplaceParam=\" + placeParam + \"&paramarea1Param=\" + area1Param + \"&paramarea2Param=\" + area2Param + \"&paramarea3Param=\" + area3Param + \"&paramshopParam=\" + shopParam + \"&paramoutletParam=\" + outletParam;     \n    let radarMapJSON = readJSONFile(radarMapUrl).resultset;    //获取结果集\n    let radarMapChart = echarts.init(document.querySelector(\"#radarMapDom\"));\n    radarMapChart.setOption({\n        legend: {\n            right: 10,\n            data: ['预算', '实际']\n        },\n        tooltip: {},\n        radar: {\n            shape: 'circle',\n            indicator: radarMapJSON.map((value, index, arr)=>{\n                let newArr = [];\n                newArr.push({\n                    name: value[1],\n                    max: value[2]\n                });\n                console.log(newArr[0]);\n                return newArr[0];\n            }),\n            \n            name: {\n                textStyle: {\n                    color: 'rgb(238, 197, 102)'\n                }\n            },\n            \n            splitLine: {\n                lineStyle: {\n                    color: [\n                        'rgba(238, 197, 102, 0.1)', 'rgba(238, 197, 102, 0.2)',\n                        'rgba(238, 197, 102, 0.4)', 'rgba(238, 197, 102, 0.6)',\n                        'rgba(238, 197, 102, 0.8)', 'rgba(238, 197, 102, 1)'\n                    ].reverse()\n                }\n            },\n            \n            splitArea: {\n                show: false\n            },\n            axisLine: {\n                lineStyle: {\n                    color: 'rgba(238, 197, 102, 0.5)'\n                }\n            }\n            \n         },\n        series: [{\n            type: 'radar',\n            //areaStyle: {normal: {}},\n            data : [\n                {\n                    value: radarMapJSON.map((value, index, arr)=>{\n                        console.log(value[3]);\n                        console.log('********************************');\n                        return value[3];\n                    }),\n                   name : '预算'\n                },\n                {\n                    value: radarMapJSON.map((value, index, arr)=>{\n                        console.log(value[4]);\n                        return value[4];\n                    }),\n                    name : '实际'\n                }\n            ]\n        }]\n    }); \n    window.addEventListener('resize',function () {\n        radarMapChart.resize();\n    });\n}\n</script> "
      },
      {
       "name": "fontSize",
