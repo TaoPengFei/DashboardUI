@@ -1,0 +1,565 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		  <title>模板组件</title>
+  <script language="javascript" type="text/javascript" src="webcontext.js?context=cdf&amp;requireJsOnly=true"></script>
+
+	</head>
+	<body>
+		<style>
+			body.fouc-protected {
+			  display: none;
+			}
+		</style>
+		<script type="text/javascript">
+			document.getElementsByTagName("body")[0].className = "fouc-protected";
+		</script>
+		
+    <style>
+<!--
+.single {
+    text-align: center;
+    border: 1px solid #eee;
+    cursor: pointer;
+    padding: 10px 0px;
+} 
+
+.single:hover, .single.selected:hover {
+    border: 1px solid #49AEC0;
+    background-color: rgba(240, 240, 240, 0.8);
+}
+
+.single.selected {
+    background-color: rgba(240, 240, 240, 0.4);
+}
+
+.single .value {
+    font-size: 18px;
+    color: #888;
+    font-weight: 300;
+    margin: 10px;
+}
+
+
+.sparklineContainer {
+    margin: 10px 0px;
+}
+
+.clippedTextContainer {
+    margin: 0px 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: rgba(220,220,220,0.8);
+    font-size: 26px;
+    color: #fff;
+}
+
+.addin .bubble {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #eee;
+    border-radius: 100%;
+}
+
+
+.totalSales .sales {
+    text-align: right;
+}
+
+
+.trendArrowContainer .arrow {
+    font-size: 30px;
+}
+
+.hyperlink {
+    margin: 5px 0px;
+}
+
+.template {
+    margin: 20px 0px;
+}
+
+.clippedText {
+    margin: 10px 0px 5px 0px;
+}
+
+
+
+.addin .clippedText {
+    width: 50%;
+    margin-right: 25%;
+    margin-left: 25%;
+} 
+
+.addin .bubble {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.bubbleContainer {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+} 
+-->
+</style>
+
+    <style>
+<!--
+@font-face{
+    font-family: TPF_Font_Thin;
+    src: url('/pentaho/BI/fonts/Comfortaa_Thin.ttf'),
+         url('/pentaho/BI/fonts/Comfortaa_Thin.eot');  /* IE9 */ 
+}
+body{
+    background-color:#ECF0F5;
+}
+.container {
+    width:100%;
+    height: 100%;
+    overflow: auto;
+    position: absolute; 
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+/*   #   */
+.panel-default {
+    border: none;
+    border-radius: 0px;
+    margin-bottom: 0px;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+.panel-default > .panel-heading {
+    color: #777;
+    background-color: #fff;
+    border-color: #e6e6e6;
+    padding: 10px 10px;
+}
+.panel-default > .panel-body {
+    padding: 10px;
+    padding-bottom: 0px;
+}
+.panel-default > .panel-body ul {
+    overflow: hidden;
+    padding: 0;
+    margin: 0px;
+    margin-top: -5px;
+}
+.panel-default > .panel-body ul li {
+    line-height: 27px;
+    list-style-type: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.panel-default > .panel-body ul li .time {
+    color: #a1a1a1;
+    float: right;
+    padding-right: 5px;
+} 
+
+
+ .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, 
+ .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, 
+ .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, 
+ .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, 
+ .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, 
+ .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, 
+ .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, 
+ .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, 
+ .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, 
+ .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, 
+ .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, 
+ .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 0px;
+} 
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+} 
+#dateRangePickerDom > input {
+    height: 20px;
+    border-radius:4px;
+    cursor:pointer;
+    border:0px solid #DBDBDB;
+    border-right:1px solid #DBDBDB; ;
+}
+hr {
+    margin-top: 10px; 
+    margin-bottom: 0px; 
+    border: 0;
+    border-top: 0px solid #eee; 
+} 
+#saleAmtDom_KPI, #ATVDom_KPI, #discountDom_KPI, 
+#overTableVDom_KPI, #backItemDom_KPI, #rushItamDom_KPI {
+    color:#666666;
+    font-size:40px;
+    font-weight:lighter;
+    font-family:TPF_Font_Thin;
+} 
+#row3{
+    padding-right: 10px;
+} 
+#row4, #row5, #row6, #row7, #row8, #row9, #row10, .row2_col1-xs, .row1_col1-xs{
+    margin-right:10px;
+} 
+#row3_col1{
+    margin-right:-10px;
+} 
+
+
+/*
+#header { margin-top:1em; }
+h2 { font-size:1.4em; padding-top:7px; padding-left:1em; height:1.6em; }
+.topRow1 { font-size:1.2em; font-weight:700; margin-left:1em; }
+.topRow2 { font-size:1em; margin-left:1em; }
+hr.topRowHR { height:2px; width:900px; color:red; }
+#ParamRow { font-size:0.9em; vertical-align:bottom; margin-bottom:2em; }
+#ParamRow select { font-size:0.9em; vertical-align:top; }
+#ParamRow input { font-size:0.9em; vertical-align:top; }
+#nResultTable { margin-top:2em; }
+table tr.even, table tr.odd{ background-color: white; }
+table thead th { border-bottom: 1px solid #CCC; background-color: #fff; }
+table tbody td.number, th.number{ text-align: right; }
+table tbody td.string, th.string{ text-align: left; }
+table tfooter td { background-color: white; }
+.ui-widget-header { background: white; color: white; border-bottom:0px } 
+
+thead td
+*/
+.table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th {
+    background-color: white;
+}
+.table-striped > tbody > tr:nth-child(even) > td, .table-striped > tbody > tr:nth-child(even) > th {
+    background-color: #F7F8F9;
+}
+.table-bordered > thead > tr > th, .table-bordered > thead > tr > td {
+    border-bottom-width: 2px;
+    text-align: center;
+    background-color: #ECEFF1;
+}
+table tbody tr.even{
+    background-color: red;
+}
+table { 
+    text-align:right; 
+} 
+tr td:nth-child(1){
+        text-align:left;
+}/*把第1个td的背景设为黑色*/
+
+
+
+
+/********************************************************/
+        #test .arc2 {
+            stroke-weight:0.1;
+            fill: #3660b0;
+        }
+        #outer {
+            background:#FFFFFF;
+            border-radius: 5px;
+            color: #000;
+        }
+        #div1, #div2, #div3, #div4 {
+            width: 33%;
+            height: 200px;
+            box-sizing: border-box;
+            float: left;
+        }
+        #div2 .arc {
+            stroke-weight: 0.1;
+            fill: #f0a417;
+        }
+        #div2 .arc2 {
+            stroke-weight: 0.1;
+            fill: #b00d08;
+        }
+        #div3 .arc {
+            stroke-weight: 0.1;
+            fill: #1d871b;
+        }
+        .selectedRadial {
+            border-radius: 3px;
+            background: #f4f4f4;
+            color: #000;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+            -moz-box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+            border: 1px solid rgba(200,200,200,0.85);
+        }
+        .radial {
+            border-radius: 3px;
+            background: #FFFFFF;
+            color: #000;
+
+        }
+/********************************************/
+.single {
+    text-align: center;
+    border: 1px solid white;
+} 
+.clippedTextContainer {
+    margin: 0px 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    
+    background-color: white;
+    
+    font-size: 26px;
+    color:#666666;
+    font-weight:lighter;
+    font-family:TPF_Font_Thin;
+    font-size: 20px;
+} 
+-->
+</style>
+
+  <div class='container'><div id='row1'  class='row clearfix ' ><div class='col-xs-12 last'><div id='row1_col1' ><div id='row1_col1_panel'  class='panel panel-default '  style='height:800px;' ><div id='row1_col1_panel_header'  class='panel-heading ' ><div class="panel-heading ">
+    <i class="fa fa-bar-chart" style="padding-right: 5px;"></i> 菜品分类销售额
+</div> </div><div id='row1_col1_panel_body'  class='panel-body ' ><div id='tempDom'></div> </div></div></div></div></div>
+  </div>
+<script language="javascript" type="text/javascript">
+require([
+  'cdf/Dashboard.Bootstrap',
+  'cdf/Logger',
+  'cdf/lib/jquery',
+  'amd!cdf/lib/underscore',
+  'cdf/lib/moment',
+  'cdf/lib/CCC/cdo',
+  'cdf/lib/CCC/def',
+  'cdf/lib/CCC/protovis-compat!',
+  'cdf/lib/CCC/pvc',
+  'cdf/dashboard/Utils',
+  'cdf/components/TemplateComponent',
+  'cde/resources/public/UI/js/clippedText',
+  'cde/resources/public/UI/js/cccChart'],
+function(
+  Dashboard,
+  Logger,
+  $,
+  _,
+  moment,
+  cdo,
+  def,
+  pv,
+  pvc,
+  Utils,
+  TemplateComponent,
+  clippedText,
+  cccChart) {
+// resources were loaded, removing FOUC protection. (Flash of Unstyled Content) 
+$("body").removeClass("fouc-protected");
+
+var dashboard = new Dashboard({
+context: {"serverUTCDate":1495694557687,"serverLocalDate":1495723357687,"roles":["Admin","Administrator","Authenticated"],"locale":"zh_CN","sessionAttributes":{},"path":"/public/UI/Template1/TemplateComponent-Copy.wcdf","queryData":{},"params":{},"user":"admin","sessionTimeout":7200}
+});
+
+  dashboard.getWcdfSettings = function() {
+    return {
+      "author": "",
+      "description": "模板组件",
+      "rendererType": "bootstrap",
+      "require": true,
+      "style": "CleanRequire",
+      "title": "模板组件",
+      "widget": false,
+      "widgetName": "",
+      "widgetParameters": []
+};
+  };
+
+  dashboard.addDataSource("tempQuery_new", {
+    dataAccessId: "tempQuery_new",
+    path: "/public/UI/Template1/TemplateComponent-Copy.cda"
+  });
+
+  dashboard.addDataSource("tempQuery", {
+    dataAccessId: "tempQuery",
+    path: "/public/UI/Template1/TemplateComponent-Copy.cda"
+  });
+
+var render_tempCom = new TemplateComponent({
+  type: "TemplateComponent",
+  name: "render_tempCom",
+  priority: 5,
+  executeAtStart: true,
+  htmlObject: "tempDom",
+  parameters: [],
+  preExecution: function f(){
+    
+    //resizeGraphical(this);
+    var cccChartOpts = { 
+        //type: 'PieChart',
+        type: 'BarChart',
+        /*
+        preExecution: function f(){
+                console.log('cccChart_preExecution')
+                resizeGraphical(this.chartDefinition);
+            },
+        */
+        chartOpts: {
+            //width: 100,
+            height: 160,
+            seriesInRows: false,
+            crossTabMode: false,
+            timeSeries: false,
+            legendVisible: false,
+            plotFrameVisible: false,
+            orthoAxisTicks: false,
+            //xAxisLabel_textAngle:  -0.55,
+            xAxisLabel_font: '4px sans-serif',
+            xAxisLabel_textOffset: '10',
+            axisOffset:   0.02,
+            axisGrid: false,
+            xAxisLabel_textAngle: -1,
+            xAxisLabel_textAlign: 'right',
+            xAxisLabel_textBaseline: 'top',
+            showYScale: false,
+            //plot2: true,
+            //plot2OrthoAxis: 2,
+            orthoAxisTickFormatter: function(value) {
+                return Utils.numberFormat(value, "#A");
+            },
+            valuesLabelStyle: 'inside',
+            valuesOptimizeLegibility: true,
+            valueFormat: function(value) {
+                return Utils.numberFormat(value, "#,#.00");
+            },
+            selectable: true,
+            hoverable:  true,
+            valuesFont: 'normal 9px "Open Sans"',
+            xAxisRule_strokeStyle: '#005CA7',
+            yAxisRule_strokeStyle: '#005CA7',
+            slice_innerRadiusEx: '50%',
+            slice_strokeStyle:   'white',
+            colors: ['#005CA7']
+            /*
+            colors: [
+                '#333333', '#777777', '#FFC20F', '#FFE085',
+                '#00325b', '#005CA7', '#0086F4', '#39A74A',
+                '#63CA73', '#80BCA3', '#655643', '#BF4D28'
+            ]    
+            */
+        }
+    };
+    this.setAddInOptions("templateType","cccChart", cccChartOpts);
+    console.log(this);
+
+} ,
+  listeners: [],
+  template: function() { 
+           
+    var template =  '<div class="row card">' +
+                    '<% _.each(items, function(elem) { %>' +
+                    '  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 single clickable" data-category="<%=elem[0]%>"> '+
+                    '    <div class="category"> <b> <%= addin(elem[0], "clippedText", "YearMonth") %> </b> </div>'+
+                    //'    <div class="value"> <%= formatter(elem[1], "YearMonth") %> </div> '+
+                    '    <div class="addin"> <%= addin(elem[1], "cccChart", "cccChart") %> </div>'+
+                    '  </div>' +
+                    '<% }); %>' +
+                    '</div>'; 
+     
+    return template;
+} ,
+  templateType: "underscore",
+  formatters: [],
+  events: [],
+  rootElement: "items",
+  chartDefinition:  {
+    dataSource: "tempQuery"
+  }
+});
+
+dashboard.postInit = function() {
+    var chartsTypeToUpdate = ['cccChart', 'cccChart'];
+    var chartsToUpdate = _.filter(dashboard.components, function(elem, index) {
+        return (chartsTypeToUpdate.indexOf(elem.type) >= 0);
+    });
+    
+    var resizeChart = function() {
+        _.each(chartsToUpdate, function(elem, index){
+            elem.chart.options.width = elem.placeholder().width();
+            elem.chartDefinition.width = elem.placeholder().width();
+            elem.chart.render(true, true, false);
+        });
+    }; 
+    
+    var throttle = _.throttle(resizeChart, 100, {leading: false});
+    $(document).ready(function() {
+        $(window).resize(throttle);
+    });
+}; 
+
+/**
+ * 解决CDE图形的自适应
+ */
+function resizeGraphical(cdeObj){
+    var myself = cdeObj;
+    //设置初始宽度 与placeholder()匹配
+    myself.chartDefinition.width = myself.placeholder().width();
+    //仅在图表组件的第一个执行上附加调整处理程序
+    if( !cdeObj.resizeHandlerAttached ){
+        //确保渲染只在事件发生后被触发
+        var debouncedResize = _.debounce(function(){
+            //再次显示 图形
+            myself.placeholder().children().css('visibility','visible');
+            // 改变 图形 的 宽度
+            myself.chartDefinition.width = myself.placeholder().width();
+            myself.render( myself.query.lastResults() );
+        },200);
+        // 高度调整 处理
+        $(window).resize(function(){
+            //仅当容器已更改宽度时才触发调整大小
+            if( myself.chartDefinition.width != myself.placeholder().width() ){
+                //暂时隐藏图表，使溢出不会发生
+                myself.placeholder().children().css('visibility','hidden');
+                //触发与调整
+                debouncedResize();
+            }
+        });
+        cdeObj.resizeHandlerAttached = true;
+    }
+} 
+
+window.onresize = function(){
+    console.log('size changed')
+} 
+
+dashboard.addComponents([render_tempCom]);
+
+dashboard.init();
+return dashboard;
+});
+</script>
+
+		
+				<script type="text/javascript">
+			require(['cdf/lib/jquery', 'amd!cdf/lib/jquery.corner'], function($) {
+				$(function() {
+					//$(".round").corner();
+					$(".cdfdd-round").corner();
+					$(".cdfdd-bevel").corner("bevel");
+					$(".cdfdd-notch").corner("notch");
+					$(".cdfdd-bite").corner("bite");
+					$(".cdfdd-bevel_top").corner("bevel top");
+					$(".cdfdd-dog_tr").corner("dog tr");
+				});
+			});
+		</script>
+		
+
+	</body>
+</html>

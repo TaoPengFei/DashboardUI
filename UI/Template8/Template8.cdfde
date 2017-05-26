@@ -683,7 +683,7 @@
      {
       "name": "preExecution",
       "type": "JavaScript",
-      "value": "function f(){\r\n    resizeGraphical(this);\r\n} "
+      "value": ""
      },
      {
       "name": "postExecution",
@@ -788,7 +788,7 @@
      {
       "name": "baseAxisGrid",
       "type": "Boolean",
-      "value": false
+      "value": "false"
      },
      {
       "name": "baseAxisLabelSpacingMin",
@@ -1528,7 +1528,7 @@
      {
       "name": "plot2LinesVisible",
       "type": "Boolean",
-      "value": true
+      "value": "true"
      },
      {
       "name": "plot2NullInterpolationMode",
@@ -1583,12 +1583,12 @@
      {
       "name": "plot2ValuesVisible",
       "type": "Boolean",
-      "value": false
+      "value": "false"
      },
      {
       "name": "plotFrameVisible",
       "type": "Boolean",
-      "value": true
+      "value": "true"
      },
      {
       "name": "pointingMode",
@@ -1863,7 +1863,7 @@
      {
       "name": "trendValuesVisible",
       "type": "Boolean",
-      "value": false
+      "value": "false"
      },
      {
       "name": "userSelectionAction",
@@ -1898,7 +1898,7 @@
      {
       "name": "valuesNormalized",
       "type": "Boolean",
-      "value": false
+      "value": "false"
      },
      {
       "name": "valuesOptimizeLegibility",
@@ -1913,7 +1913,7 @@
      {
       "name": "valuesVisible",
       "type": "Boolean",
-      "value": ""
+      "value": "true"
      }
     ],
     "rowName": "CCC Bar Chart",
@@ -3218,7 +3218,7 @@
      {
       "name": "valuesVisible",
       "type": "Boolean",
-      "value": ""
+      "value": "true"
      }
     ],
     "rowName": "CCC Bar Chart",
@@ -4523,7 +4523,7 @@
      {
       "name": "valuesVisible",
       "type": "Boolean",
-      "value": ""
+      "value": "true"
      }
     ],
     "rowName": "CCC Bar Chart",
@@ -4583,7 +4583,7 @@
      {
       "name": "colors",
       "type": "Array",
-      "value": "[\"#5182E4\"]"
+      "value": "[\"#3fb27e\"]"
      },
      {
       "name": "htmlObject",
@@ -7880,7 +7880,7 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "select \r\n     sum(a.SaleAmt) as saleamt\r\nfrom fact_sumday a\r\ninner join dim_bidate b on a.BIDateId = b.BIDateId\r\ninner join dim_outlet c on a.OutletId_t = c.OutletId_t\r\ninner join dim_brand  d on c.BrandId = d.BrandId\r\ninner join dim_area e on c.AreaId = e.AreaId\r\ninner join dim_place f on c.PlaceId = f.PlaceId\r\n\r\nwhere \r\n      b.BIDate between ${startDay} and ${endDay}\r\n      and (d.BrandId_level1 = ${brandParam} or ${brandParam} = -1)\r\n      and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)\r\n      and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)\r\n      and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)\r\n      and (c.ShopId = ${shopParam} or ${shopParam} = -1)\r\n      and (c.OutletId = ${outletParam} or ${outletParam} = -1)\r\n      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)"
+      "value": "select \r\n     format(sum(a.SaleAmt),2) as saleamt\r\nfrom fact_sumday a\r\ninner join dim_bidate b on a.BIDateId = b.BIDateId\r\ninner join dim_outlet c on a.OutletId_t = c.OutletId_t\r\ninner join dim_brand  d on c.BrandId = d.BrandId\r\ninner join dim_area e on c.AreaId = e.AreaId\r\ninner join dim_place f on c.PlaceId = f.PlaceId\r\n\r\nwhere \r\n      b.BIDate between ${startDay} and ${endDay}\r\n      and (d.BrandId_level1 = ${brandParam} or ${brandParam} = -1)\r\n      and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)\r\n      and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)\r\n      and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)\r\n      and (c.ShopId = ${shopParam} or ${shopParam} = -1)\r\n      and (c.OutletId = ${outletParam} or ${outletParam} = -1)\r\n      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)"
      },
      {
       "name": "parameters",
@@ -7952,7 +7952,7 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "select \r\n     sum(a.SaleAmt) as saleamt\r\nfrom fact_sumday a\r\ninner join dim_bidate b on a.BIDateId = b.BIDateId\r\n\r\ninner join dim_outlet c on a.OutletId_t = c.OutletId_t\r\ninner join dim_brand  d on c.BrandId = d.BrandId\r\ninner join dim_area e on c.AreaId = e.AreaId\r\ninner join dim_place f on c.PlaceId = f.PlaceId\r\n\r\nwhere \r\n      b.BIDate between ${startDay} and ${endDay}\r\n      and (d.BrandId_level1 = ${brandParam} or ${brandParam} = -1)\r\n      and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)\r\n      and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)\r\n      and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)\r\n      and (c.ShopId = ${shopParam} or ${shopParam} = -1)\r\n      and (c.OutletId = ${outletParam} or ${outletParam} = -1)\r\n      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)"
+      "value": "select \r\n     format(sum(a.SaleAmt),2) as saleamt\r\nfrom fact_sumday a\r\ninner join dim_bidate b on a.BIDateId = b.BIDateId\r\n\r\ninner join dim_outlet c on a.OutletId_t = c.OutletId_t\r\ninner join dim_brand  d on c.BrandId = d.BrandId\r\ninner join dim_area e on c.AreaId = e.AreaId\r\ninner join dim_place f on c.PlaceId = f.PlaceId\r\n\r\nwhere \r\n      b.BIDate between ${startDay} and ${endDay}\r\n      and (d.BrandId_level1 = ${brandParam} or ${brandParam} = -1)\r\n      and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)\r\n      and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)\r\n      and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)\r\n      and (c.ShopId = ${shopParam} or ${shopParam} = -1)\r\n      and (c.OutletId = ${outletParam} or ${outletParam} = -1)\r\n      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)"
      },
      {
       "name": "parameters",
@@ -8312,7 +8312,7 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "select \r\n     b.YearMonth as yearmonth,\r\n     sum(a.SaleAmt) as '结算金额'\r\nfrom fact_sumday a \r\ninner join dim_bidate b on a.BIDateId = b.BIDateId\r\ninner join dim_outlet c on a.OutletId_t = c.OutletId_t\r\ninner join dim_brand  d on c.BrandId = d.BrandId\r\ninner join dim_area e on c.AreaId = e.AreaId\r\ninner join dim_place f on c.PlaceId = f.PlaceId\r\n\r\nwhere \r\n      b.BIDate between ${startDay} and ${endDay}\r\n      and (d.BrandId_level1 = ${brandParam} or ${brandParam} = -1)\r\n      and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)\r\n      and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)\r\n      and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)\r\n      and (c.ShopId = ${shopParam} or ${shopParam} = -1)\r\n      and (c.OutletId = ${outletParam} or ${outletParam} = -1)\r\n      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)\r\ngroup by b.YearMonth"
+      "value": "select \r\n     b.BIDate as bidate,\r\n     sum(a.SaleAmt) as '结算金额'\r\nfrom fact_sumday a \r\ninner join dim_bidate b on a.BIDateId = b.BIDateId\r\ninner join dim_outlet c on a.OutletId_t = c.OutletId_t\r\ninner join dim_brand  d on c.BrandId = d.BrandId\r\ninner join dim_area e on c.AreaId = e.AreaId\r\ninner join dim_place f on c.PlaceId = f.PlaceId\r\n\r\nwhere \r\n      b.BIDate between ${startDay} and ${endDay}\r\n      and (d.BrandId_level1 = ${brandParam} or ${brandParam} = -1)\r\n      and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)\r\n      and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)\r\n      and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)\r\n      and (c.ShopId = ${shopParam} or ${shopParam} = -1)\r\n      and (c.OutletId = ${outletParam} or ${outletParam} = -1)\r\n      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)\r\ngroup by b.BIDate"
      },
      {
       "name": "parameters",

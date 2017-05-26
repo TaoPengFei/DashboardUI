@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="tempQuery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" connection="tempQuery" id="tempQuery" type="sql">
+      <Name>tempQuery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="startDay" name="startDay" type="String"/>
+         <Parameter default="endDay" name="endDay" type="String"/>
+         <Parameter default="brandParam" name="brandParam" type="String"/>
+         <Parameter default="placeParam" name="placeParam" type="String"/>
+         <Parameter default="area1Param" name="area1Param" type="String"/>
+         <Parameter default="area2Param" name="area2Param" type="String"/>
+         <Parameter default="area3Param" name="area3Param" type="String"/>
+         <Parameter default="shopParam" name="shopParam" type="String"/>
+         <Parameter default="outletParam" name="outletParam" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT
+    tbl.YearMonth AS YearMonth,
+	CONCAT( "[", GROUP_CONCAT(T1 ORDER BY ItemDeptId), "]"  ) AS cccChart
+FROM
+    (
+		SELECT
+			`dim_bidate`.`YearNo`,
+			`dim_bidate`.`MonthNo`,
+			`dim_bidate`.`YearMonth`,
+			`dim_itemdeptment`.`ItemDeptId_level2` AS ItemDeptId,
+			`dim_itemdeptment`.`ItemDeptName_level2` AS ItemDeptName,
+			sum(`fact_sumitem`.`ItemSaleAmt`) AS ItemSaleAmt,
+			CONCAT( '["',`dim_itemdeptment`.`ItemDeptName_level2`,'","',sum(`fact_sumitem`.`ItemSaleAmt`), '"]') AS T1
+		FROM
+			`fact_sumitem` INNER JOIN `dim_outlet` ON `fact_sumitem`.`OutletId_t` = `dim_outlet`.`OutletId_t`
+			INNER JOIN `dim_bidate` ON `fact_sumitem`.`BIDateId` = `dim_bidate`.`BIDateId`
+			INNER JOIN `dim_itemdeptment` ON `fact_sumitem`.`ItemDeptId` = `dim_itemdeptment`.`ItemDeptId`
+			INNER JOIN `dim_brand` ON `dim_outlet`.`BrandId` = `dim_brand`.`BrandId`
+			INNER JOIN `dim_place` ON `dim_outlet`.`PlaceId` = `dim_place`.`PlaceId`
+		    INNER JOIN `dim_area` ON `dim_outlet`.`AreaId` = `dim_area`.`AreaId`
+        WHERE 
+            `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
+            AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
+            AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)
+            AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)
+            AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)
+            AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)
+            AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)
+            AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)
+        GROUP BY
+			`dim_itemdeptment`.`ItemDeptName_level2`,
+			`dim_bidate`.`YearMonth`,
+			`dim_itemdeptment`.`ItemDeptId_level2`
+		ORDER BY
+			`dim_bidate`.`YearNo` ASC,
+			`dim_bidate`.`MonthNo` ASC,
+			`dim_itemdeptment`.`ItemDeptId_level2` ASC
+    ) AS tbl
+GROUP BY tbl.YearMonth
+ORDER BY
+	tbl.`YearNo` ASC,
+	tbl.`MonthNo` ASC]]></Query>
+   </DataAccess>
+</CDADescriptor>

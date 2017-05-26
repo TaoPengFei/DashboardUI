@@ -69,7 +69,7 @@
          <Parameter default="outletParam" name="outletParam" type="String"/>
       </Parameters>
       <Query><![CDATA[select 
-     sum(a.SaleAmt) as saleamt
+     format(sum(a.SaleAmt),2) as saleamt
 from fact_sumday a
 inner join dim_bidate b on a.BIDateId = b.BIDateId
 inner join dim_outlet c on a.OutletId_t = c.OutletId_t
@@ -103,7 +103,7 @@ where
          <Parameter default="outletParam" name="outletParam" type="String"/>
       </Parameters>
       <Query><![CDATA[select 
-     sum(a.SaleAmt) as saleamt
+     format(sum(a.SaleAmt),2) as saleamt
 from fact_sumday a
 inner join dim_bidate b on a.BIDateId = b.BIDateId
 
@@ -296,7 +296,7 @@ group by c.YearMonth,e.AreaName_level1,e.AreaName_level2,d.OutletName]]></Query>
          <Parameter default="outletParam" name="outletParam" type="String"/>
       </Parameters>
       <Query><![CDATA[select 
-     b.YearMonth as yearmonth,
+     b.BIDate as bidate,
      sum(a.SaleAmt) as '结算金额'
 from fact_sumday a 
 inner join dim_bidate b on a.BIDateId = b.BIDateId
@@ -314,7 +314,7 @@ where
       and (c.ShopId = ${shopParam} or ${shopParam} = -1)
       and (c.OutletId = ${outletParam} or ${outletParam} = -1)
       and (f.PlaceId = ${placeParam} or ${placeParam} = -1)
-group by b.YearMonth]]></Query>
+group by b.BIDate]]></Query>
    </DataAccess>
    <DataAccess access="public" connection="row7_col_query" id="row7_col_query" type="sql">
       <Name>row7_col_query</Name>

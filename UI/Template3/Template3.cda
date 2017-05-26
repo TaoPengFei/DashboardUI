@@ -52,6 +52,9 @@
       <Connection id="saleAmtQuery1" type="sql.jndi">
          <Jndi>jdbc_bi</Jndi>
       </Connection>
+      <Connection id="demo" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
       <Connection id="_________________KPI_____________________" type="sql.jndi">
          <Jndi/>
       </Connection>
@@ -613,6 +616,46 @@ FROM
     AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)
 GROUP BY
      `dim_area`.`AreaName_level1`]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="demo" id="demo" type="sql">
+      <Name>demo</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Output indexes="1,2,3,4" mode="include"/>
+      <Parameters>
+         <Parameter default="startDay" name="startDay" type="String"/>
+         <Parameter default="endDay" name="endDay" type="String"/>
+         <Parameter default="brandParam" name="brandParam" type="String"/>
+         <Parameter default="placeParam" name="placeParam" type="String"/>
+         <Parameter default="area1Param" name="area1Param" type="String"/>
+         <Parameter default="area2Param" name="area2Param" type="String"/>
+         <Parameter default="area3Param" name="area3Param" type="String"/>
+         <Parameter default="shopParam" name="shopParam" type="String"/>
+         <Parameter default="outletParam" name="outletParam" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select 
+    
+     f.GuestNoTypeId,
+     f.GuestNoTypeName as Guest, -- '台型',
+     sum(a.SaleAmt)/sum(a.GuestQty) as PreSaleAmt,-- '人均消费',
+     (sum(a.SaleAmt)-sum(a.SaleCostAmt))/sum(a.GuestQty) as PreProAmt, -- '人均利润',
+     sum(a.CheckQty)/sum(b.TableQty) as TableTal -- '总翻台率'
+     from fact_sumcheck a
+   left join dim_guestnotype f on f.GuestNoTypeId = a.GuestNoTypeId
+   left join dim_outlet b on a.OutletId_t = b.OutletId_t
+   inner join dim_area c on b.AreaId = c.AreaId
+   inner join dim_brand d on b.BrandId = d.BrandId
+   inner join dim_place e on b.PlaceId = e.PlaceId
+ where a.BusinessDate BETWEEN ${startDay} AND ${endDay}
+   and (d.BrandId_level1 = ${brandParam} OR ${brandParam} = -1 )
+   AND (e.PlaceId = ${placeParam} OR ${placeParam} = -1) 
+   AND (c.AreaId_level1 = ${area1Param} OR ${area1Param} = -1)
+   AND (c.AreaId_level2 = ${area2Param} OR ${area2Param} = -1)
+   AND (c.AreaId_level3 = ${area3Param} OR ${area3Param} = -1)
+   AND (b.ShopId = ${shopParam} OR ${shopParam} = -1)
+   AND (b.OutletId = ${outletParam} OR ${outletParam} = -1)
+group by f.GuestNoTypeId,f.GuestNoTypeName
+order by f.GuestNoTypeId]]></Query>
    </DataAccess>
    <DataAccess access="public" connection="_________________KPI_____________________"
                id="_________________KPI_____________________"

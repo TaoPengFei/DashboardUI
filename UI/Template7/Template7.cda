@@ -13,6 +13,9 @@
       <Connection id="row3_col2_query" type="sql.jndi">
          <Jndi>jdbc_bi</Jndi>
       </Connection>
+      <Connection id="row4_col_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
       <Connection id="row5_col_query" type="sql.jndi">
          <Jndi>jdbc_bi</Jndi>
       </Connection>
@@ -169,7 +172,9 @@ group by b.ItemDeptName_level1]]></Query>
          <Parameter default="placeParam" name="placeParam" type="String"/>
       </Parameters>
       <Query><![CDATA[select 
-      b.PayTypeName as paytypename,
+      case when b.PayTypeClassName is null
+      then '其他'
+      else b.PayTypeClassName end as paytypeclassname,
       sum(a.PayAmt) as payamt
 from fact_checkpay a 
 inner join dim_paytype b on a.PayTypeId = b.PayTypeId
@@ -247,14 +252,43 @@ group by b.ItemCatName_level1]]></Query>
          <Parameter default="outletParam" name="outletParam" type="String"/>
          <Parameter default="placeParam" name="placeParam" type="String"/>
       </Parameters>
-      <Query><![CDATA[select
-      b.ItemCatName_level1 as itemcatname_level1,
-      
-      format(sum(a.ItemSaleAmt),2) as itemsaleamt,
-      0 as it,
-      sum(a.ItemSaleQty) as itemsaleqty
-from fact_checkitem a 
-inner join  dim_itemcategory b on a.ItemCatId = b.ItemCatId
+      <Query><![CDATA[select ifnull 
+
+(t.itemcatname_level1,'合计'),
+itemsaleamt,
+it,
+itemsaleqty 
+
+from  
+   (select 
+    			b1.ItemCatName_level1 AS itemcatname_level1,
+				FORMAT(SUM(a.ItemSaleAmt),2) AS itemsaleamt,
+				CONCAT(FORMAT(SUM(a.ItemSaleAmt)/b.aa *100,2),'%') AS it ,
+				SUM(a.ItemSaleQty) AS itemsaleqty
+from fact_checkitem AS a
+inner join  (select SUM(ItemSaleAmt) AS aa from fact_checkitem bb
+
+inner join  dim_itemcategory b1 on bb.ItemCatId = b1.ItemCatId
+
+inner join dim_bidate g on bb.BIDateId = g.BIDateId
+inner join dim_outlet c on bb.OutletId_t = c.OutletId_t
+inner join dim_brand  d on c.BrandId = d.BrandId
+inner join dim_area e on c.AreaId = e.AreaId
+inner join dim_place f on c.PlaceId = f.PlaceId
+
+
+where 
+      g.BIDate between ${startDay} and ${endDay}
+      and (d.BrandId_level1 = ${brandParam} or ${brandParam} = -1)
+      and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)
+      and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)
+      and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)
+      and (c.ShopId = ${shopParam} or ${shopParam} = -1)
+      and (c.OutletId = ${outletParam} or ${outletParam} = -1)
+      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)
+) b ON 1 = 1
+
+inner join  dim_itemcategory b1 ON a.ItemCatId = b1.ItemCatId
 inner join dim_bidate g on a.BIDateId = g.BIDateId
 inner join dim_outlet c on a.OutletId_t = c.OutletId_t
 inner join dim_brand  d on c.BrandId = d.BrandId
@@ -271,8 +305,82 @@ where
       and (c.ShopId = ${shopParam} or ${shopParam} = -1)
       and (c.OutletId = ${outletParam} or ${outletParam} = -1)
       and (f.PlaceId = ${placeParam} or ${placeParam} = -1)
+group by b1.ItemCatName_level1
+WITH ROLLUP ) t;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="row4_col_query" id="row4_col_query" type="sql">
+      <Name>row4_col_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="startDay" name="startDay" type="String"/>
+         <Parameter default="endDay" name="endDay" type="String"/>
+         <Parameter default="brandParam" name="brandParam" type="String"/>
+         <Parameter default="placeParam" name="placeParam" type="String"/>
+         <Parameter default="area1Param" name="area1Param" type="String"/>
+         <Parameter default="area2Param" name="area2Param" type="String"/>
+         <Parameter default="area3Param" name="area3Param" type="String"/>
+         <Parameter default="shopParam" name="shopParam" type="String"/>
+         <Parameter default="outletParam" name="outletParam" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT 
+    tbl.YearMonth,        -- 年月
+    
+	CASE WHEN t2 = 0 OR t2 IS NULL
+		THEN 0.00
+	ELSE  ((t1-t2) / t2) * 100 END AS '营业额（环比）',		-- 环比 
 
-group by b.ItemCatName_level1]]></Query>
+	CASE WHEN t3 = 0 OR t3 IS NULL
+		THEN 0.00
+	ELSE ((t1-t3) / t3) * 100 END AS '营业额（去年同比）',		-- 同比
+    
+    tbl.t1 AS '营业额'    	-- 当期金额
+
+FROM
+(
+	SELECT 
+		DATE_FORMAT(b1.BIDate,'%Y-%m') AS YearMonth,
+		SUM(a1.SaleAmt) AS t1,		-- 当期金额
+		(		
+			SELECT 
+				CASE WHEN a2.SaleAmt = 0 OR a2.SaleAmt IS NULL
+					THEN 0.00
+				ELSE SUM(a2.SaleAmt) END
+			FROM fact_sumday AS a2 INNER JOIN dim_bidate AS b2 ON a2.BIDateId = b2.BIDateId 
+                       
+			WHERE DATE_FORMAT(b1.BIDate,'%Y-%m') = DATE_FORMAT(DATE_ADD(b2.BIDate,INTERVAL 1 MONTH),'%Y-%m')		-- 表的自连接实现
+           
+
+		) AS t2,		-- 环期金额
+		(
+			SELECT 
+				CASE WHEN a3.SaleAmt = 0 OR a3.SaleAmt IS NULL
+					THEN 0.00
+				ELSE SUM(a3.SaleAmt)  END
+			FROM fact_sumday AS a3 INNER JOIN dim_bidate AS b3 ON a3.BIDateId = b3.BIDateId 
+                             
+			WHERE DATE_FORMAT(b1.BIDate,'%Y-%m') = DATE_FORMAT(DATE_ADD(b3.BIDate,INTERVAL 1 YEAR),'%Y-%m')		-- 表的自连接实现
+           
+		) AS t3		-- 同期金额
+	FROM fact_sumday AS a1 INNER JOIN dim_bidate AS b1 ON a1.BIDateId = b1.BIDateId
+                         inner join dim_outlet c on a1.OutletId_t = c.OutletId_t
+												inner join dim_brand  d on c.BrandId = d.BrandId
+												inner join dim_area e on c.AreaId = e.AreaId
+												inner join dim_place f on c.PlaceId = f.PlaceId
+       where  
+             (d.BrandId_level1 = ${brandParam}  or ${brandParam} = -1)
+             and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)
+      and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)
+      and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)
+      and (c.ShopId = ${shopParam} or ${shopParam} = -1)
+      and (c.OutletId = ${outletParam} or ${outletParam} = -1)
+      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)
+      
+
+
+	GROUP BY 1
+) AS tbl
+WHERE tbl.YearMonth BETWEEN DATE_FORMAT(${startDay},'%Y-%m') AND DATE_FORMAT(${endDay},'%Y-%m')]]></Query>
    </DataAccess>
    <DataAccess access="public" connection="row5_col_query" id="row5_col_query" type="sql">
       <Name>row5_col_query</Name>
@@ -666,7 +774,7 @@ group by b.UserName]]></Query>
       </Parameters>
       <Query><![CDATA[select 
       b.HourNo as hourno,
-      sum(a.SaleAmt) '营业额',
+     
       case when sum(a.CheckQty) = 0 then '0.00'
       when sum(a.CheckQty) = null then '0.00'
       else (sum(a.SaleAmt)/sum(a.CheckQty)) end as '平均每单',    
@@ -674,7 +782,9 @@ group by b.UserName]]></Query>
 
       case when sum(a.GuestQty) = 0 then '0.00'
       when sum(a.GuestQty) = null then '0.00'
-      else (sum(a.SaleAmt)/sum(a.GuestQty)) end as '平均每人'
+      else (sum(a.SaleAmt)/sum(a.GuestQty)) end as '平均每人',
+   
+       sum(a.SaleAmt) as '营业额'
 from fact_sumcheck a 
 inner join dim_bitime b on a.CheckOpenTimeId = b.BITimeId
 inner join dim_bidate g on a.BIDateId = g.BIDateId
@@ -682,7 +792,6 @@ inner join dim_outlet c on a.OutletId_t = c.OutletId_t
 inner join dim_brand  d on c.BrandId = d.BrandId
 inner join dim_area e on c.AreaId = e.AreaId
 inner join dim_place f on c.PlaceId = f.PlaceId
-
 
 where 
       g.BIDate between ${startDay} and ${endDay}
@@ -693,6 +802,7 @@ where
       and (c.ShopId = ${shopParam} or ${shopParam} = -1)
       and (c.OutletId = ${outletParam} or ${outletParam} = -1)
       and (f.PlaceId = ${placeParam} or ${placeParam} = -1)
+
 
 group by b.HourNo]]></Query>
    </DataAccess>
@@ -719,7 +829,7 @@ group by b.HourNo]]></Query>
       sum(a.CheckQty) as checkqty,
       sum(a.GuestQty) as guestqty,
       format(sum(a.SaleAmt),2) as saleamt,
-      0 as it,
+      concat(format(sum(a.ItemSaleAmt)/b.aa *100,2),'%') as it ,
       format(sum(a.SCAmt),2) as scamt,
       format(sum(a.TaxAmt),2) as taxamt,
       format(sum(a.RoundAmt),2) as roundamt,
@@ -735,6 +845,16 @@ group by b.HourNo]]></Query>
       when sum(a.GuestQty) = null then '0.00'
       else format((sum(a.SaleAmt)/sum(a.GuestQty)),2) end as saleguest
 from fact_sumcheck a 
+inner join 
+
+(select sum(ItemSaleAmt) as aa from fact_checkitem bb
+
+inner join dim_bitime b on bb.CheckOpenTimeId = b.BITimeId
+inner join dim_bidate g on bb.BIDateId = g.BIDateId
+inner join dim_outlet c on bb.OutletId_t = c.OutletId_t
+inner join dim_brand  d on c.BrandId = d.BrandId
+inner join dim_area e on c.AreaId = e.AreaId
+inner join dim_place f on c.PlaceId = f.PlaceId) b on 1 = 1
 
 inner join dim_bitime b on a.CheckOpenTimeId = b.BITimeId
 inner join dim_bidate g on a.BIDateId = g.BIDateId
@@ -742,7 +862,6 @@ inner join dim_outlet c on a.OutletId_t = c.OutletId_t
 inner join dim_brand  d on c.BrandId = d.BrandId
 inner join dim_area e on c.AreaId = e.AreaId
 inner join dim_place f on c.PlaceId = f.PlaceId
-
 
 where 
       g.BIDate between ${startDay} and ${endDay}
@@ -753,6 +872,7 @@ where
       and (c.ShopId = ${shopParam} or ${shopParam} = -1)
       and (c.OutletId = ${outletParam} or ${outletParam} = -1)
       and (f.PlaceId = ${placeParam} or ${placeParam} = -1)
+
 
 
 
@@ -855,19 +975,31 @@ limit 20]]></Query>
          <Parameter default="outletParam" name="outletParam" type="String"/>
       </Parameters>
       <Query><![CDATA[select
-      b.ItemName as itemname,
+      b1.ItemName as itemname,
       format(sum(a.ItemSaleAmt),2) as itemsaleamt,
       sum(a.ItemSaleQty) as itemsaleqty,
-      0 as it
+      CONCAT(FORMAT(SUM(a.ItemSaleAmt)/b.aa *100,2),'%') AS it 
 from fact_checkitem a 
-inner join  dim_item b on a.ItemId_t = b.ItemId_t
+inner join  
+
+      (select SUM(ItemSaleAmt) AS aa from fact_checkitem bb
+inner join  dim_item b1 on bb.ItemId_t = b1.ItemId_t
+
+inner join dim_bidate g on bb.BIDateId = g.BIDateId
+inner join dim_outlet c on bb.OutletId_t = c.OutletId_t
+inner join dim_brand  d on c.BrandId = d.BrandId
+inner join dim_area e on c.AreaId = e.AreaId
+inner join dim_place f on c.PlaceId = f.PlaceId
+
+) b ON 1 = 1
+
+inner join  dim_item b1 on a.ItemId_t = b1.ItemId_t
 
 inner join dim_bidate g on a.BIDateId = g.BIDateId
 inner join dim_outlet c on a.OutletId_t = c.OutletId_t
 inner join dim_brand  d on c.BrandId = d.BrandId
 inner join dim_area e on c.AreaId = e.AreaId
 inner join dim_place f on c.PlaceId = f.PlaceId
-
 
 where 
       g.BIDate between ${startDay} and ${endDay}
@@ -879,7 +1011,7 @@ where
       and (c.OutletId = ${outletParam} or ${outletParam} = -1)
       and (f.PlaceId = ${placeParam} or ${placeParam} = -1)
 
-group by b.ItemName
+group by b1.ItemName
 order by itemsaleqty desc]]></Query>
    </DataAccess>
    <DataAccess access="public" connection="row13_col2_query" id="row13_col2_query" type="sql">
@@ -1000,8 +1132,8 @@ group by c.DiscountTypeName,a.CheckNo,a.Begtime,d.UserName,e.ItemDeptName_level1
      e.PayTypeClassName as paytypeclassname,
      format(sum(a.PayAmt),2) as payamt,
      format(sum(a.TipAmt),2) as tipamt,
-     0 as it,
-     0 as it1,
+     count(*) as it,
+    
      format(sum(a.SaleAmt),2) as saleamt
      
 from fact_check a 

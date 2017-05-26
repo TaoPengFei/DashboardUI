@@ -2026,6 +2026,1311 @@
     "typeDesc": "CCC Pie Chart"
    },
    {
+    "id": "72c353c4-7889-bf40-8930-c723bc4ef1aa",
+    "type": "ComponentscccBarChart",
+    "typeDesc": "CCC Bar Chart",
+    "parent": "CHARTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row4_col",
+      "type": "Id"
+     },
+     {
+      "name": "title",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "listeners",
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:placeParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\",\"${p:shopParam}\",\"${p:outletParam}\"]",
+      "type": "Listeners"
+     },
+     {
+      "name": "parameters",
+      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"placeParam\",\"placeParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"],[\"shopParam\",\"shopParam\"],[\"outletParam\",\"outletParam\"]]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "dataSource",
+      "value": "row4_col_query",
+      "type": "Datasource"
+     },
+     {
+      "name": "height",
+      "value": "600",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "width",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "colors",
+      "value": "[]",
+      "type": "Array"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:row4_col}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postFetch",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "extensionPoints",
+      "value": "[]",
+      "type": "EditorValuesArray"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     },
+     {
+      "name": "animate",
+      "value": true,
+      "type": "Boolean"
+     },
+     {
+      "name": "barOrthoSizeMin",
+      "value": 1.5,
+      "type": "Float"
+     },
+     {
+      "name": "barSizeMax",
+      "value": "100",
+      "type": "Float"
+     },
+     {
+      "name": "barSizeRatio",
+      "value": 0.9,
+      "type": "Float"
+     },
+     {
+      "name": "barStackedMargin",
+      "value": 0,
+      "type": "Float"
+     },
+     {
+      "name": "baseAxisBandSize",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "baseAxisBandSizeMax",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "baseAxisBandSizeMin",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "baseAxisBandSpacing",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "baseAxisBandSpacingMax",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "baseAxisBandSpacingMin",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "baseAxisClickAction",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "baseAxisDoubleClickAction",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "baseAxisFont",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "baseAxisGrid",
+      "value": false,
+      "type": "Boolean"
+     },
+     {
+      "name": "baseAxisLabelSpacingMin",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "baseAxisOffset",
+      "value": 0,
+      "type": "Float"
+     },
+     {
+      "name": "baseAxisOverlappedLabelsMode",
+      "value": "hide",
+      "type": "cccBaseAxisOverlappedLabelsModeCustom"
+     },
+     {
+      "name": "baseAxisPosition",
+      "value": "",
+      "type": "cccBaseAxisPositionCustom"
+     },
+     {
+      "name": "baseAxisSize",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "baseAxisSizeMax",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "baseAxisTickFormatter",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "baseAxisTicks",
+      "value": true,
+      "type": "Boolean"
+     },
+     {
+      "name": "baseAxisTitle",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "baseAxisTitleAlign",
+      "value": "",
+      "type": "cccBaseAxisTitleAlignCustom"
+     },
+     {
+      "name": "baseAxisTitleFont",
+      "value": "12px sans-serif",
+      "type": "String"
+     },
+     {
+      "name": "baseAxisTitleMargins",
+      "value": "0",
+      "type": "String"
+     },
+     {
+      "name": "baseAxisTitleSize",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "baseAxisTitleSizeMax",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "baseAxisTooltipAutoContent",
+      "value": "value",
+      "type": "cccBaseAxisTooltipAutoContentCustom"
+     },
+     {
+      "name": "baseAxisTooltipEnabled",
+      "value": true,
+      "type": "Boolean"
+     },
+     {
+      "name": "baseAxisTooltipFormat",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "baseAxisVisible",
+      "value": true,
+      "type": "Boolean"
+     },
+     {
+      "name": "categoryRole",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "clearSelectionMode",
+      "value": "emptySpaceClick",
+      "type": "cccClearSelectionModeCustom"
+     },
+     {
+      "name": "clickable",
+      "value": false,
+      "type": "Boolean"
+     },
+     {
+      "name": "clickAction",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "color2AxisColors",
+      "value": "[]",
+      "type": "Array"
+     },
+     {
+      "name": "color2AxisLegendClickMode",
+      "value": "toggleVisible",
+      "type": "cccColor2AxisLegendClickModeCustom"
+     },
+     {
+      "name": "color2AxisLegendDrawLine",
+      "value": "",
+      "type": "Boolean"
+     },
+     {
+      "name": "color2AxisLegendDrawMarker",
+      "value": "",
+      "type": "Boolean"
+     },
+     {
+      "name": "color2AxisLegendShape",
+      "value": "",
+      "type": "cccColor2AxisLegendShapeCustom"
+     },
+     {
+      "name": "color2AxisLegendVisible",
+      "value": true,
+      "type": "Boolean"
+     },
+     {
+      "name": "color2AxisTransform",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "color2AxisUnbound",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "colorRole",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "colorTransform",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "colorUnbound",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "compatVersion",
+      "value": 2,
+      "type": "Float"
+     },
+     {
+      "name": "contentMargins",
+      "value": "0",
+      "type": "String"
+     },
+     {
+      "name": "contentPaddings",
+      "value": "0",
+      "type": "String"
+     },
+     {
+      "name": "crosstabMode",
+      "value": true,
+      "type": "Boolean"
+     },
+     {
+      "name": "ctrlSelectMode",
+      "value": true,
+      "type": "Boolean"
+     },
+     {
+      "name": "dataCategoriesCount",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "dataIgnoreMetadataLabels",
+      "value": false,
+      "type": "Boolean"
+     },
+     {
+      "name": "dataMeasuresInColumns",
+      "value": "",
+      "type": "Boolean"
+     },
+     {
+      "name": "dataPartRole",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "dataSeparator",
+      "value": "~",
+      "type": "String"
+     },
+     {
+      "name": "dataWhere",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "doubleClickAction",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "groupedLabelSep",
+      "value": " ~ ",
+      "type": "String"
+     },
+     {
+      "name": "hoverable",
+      "value": false,
+      "type": "Boolean"
+     },
+     {
+      "name": "ignoreNulls",
+      "value": true,
+      "type": "Boolean"
+     },
+     {
+      "name": "interactive",
+      "value": "",
+      "type": "Boolean"
+     },
+     {
+      "name": "isMultiValued",
+      "value": false,
+      "type": "Boolean"
+     },
+     {
+      "name": "leafContentOverflow",
+      "value": "auto",
+      "type": "cccLeafContentOverflowCustom"
+     },
+     {
+      "name": "legend",
+      "value": true,
+      "type": "Boolean"
+     },
+     {
+      "name": "legendAlign",
+      "value": "",
+      "type": "cccLegendAlignCustom"
+     },
+     {
+      "name": "legendClickMode",
+      "value": "toggleVisible",
+      "type": "cccLegendClickModeCustom"
+     },
+     {
+      "name": "legendDrawLine",
+      "value": "",
+      "type": "Boolean"
+     },
+     {
+      "name": "legendDrawMarker",
+      "value": "",
+      "type": "Boolean"
+     },
+     {
+      "name": "legendFont",
+      "value": "10px sans-serif",
+      "type": "String"
+     },
+     {
+      "name": "legendItemPadding",
+      "value": "2.5",
+      "type": "String"
+     },
+     {
+      "name": "legendItemSize",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "legendMargins",
+      "value": "0",
+      "type": "String"
+     },
+     {
+      "name": "legendMarkerSize",
+      "value": 15,
+      "type": "Float"
+     },
+     {
+      "name": "legendPaddings",
+      "value": "5",
+      "type": "String"
+     },
+     {
+      "name": "legendPosition",
+      "value": "right",
+      "type": "cccLegendPositionCustom"
+     },
+     {
+      "name": "legendShape",
+      "value": "",
+      "type": "cccLegendShapeCustom"
+     },
+     {
+      "name": "legendSize",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "legendSizeMax",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "legendTextMargin",
+      "value": 6,
+      "type": "Float"
+     },
+     {
+      "name": "legendVisible",
+      "value": true,
+      "type": "Boolean"
+     },
+     {
+      "name": "margins",
+      "value": "3",
+      "type": "String"
+     },
+     {
+      "name": "measuresIndexes",
+      "value": "[]",
+      "type": "Array"
+     },
+     {
+      "name": "multiChartColumnsMax",
+      "value": 3,
+      "type": "Float"
+     },
+     {
+      "name": "multiChartIndexes",
+      "value": "[]",
+      "type": "Array"
+     },
+     {
+      "name": "multiChartMax",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "multiChartOverflow",
+      "value": "grow",
+      "type": "cccMultiChartOverflowCustom"
+     },
+     {
+      "name": "multiChartRole",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "multiChartSingleColFillsHeight",
+      "value": true,
+      "type": "Boolean"
+     },
+     {
+      "name": "multiChartSingleRowFillsHeight",
+      "value": true,
+      "type": "Boolean"
+     },
+     {
+      "name": "nullInterpolationMode",
+      "value": "none",
+      "type": "cccNullInterpolationModeCustom"
+     },
+     {
+      "name": "orientation",
+      "value": "vertical",
+      "type": "cccOrientationCustom"
+     },
+     {
+      "name": "ortho2AxisDesiredTickCount",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "ortho2AxisDomainRoundMode",
+      "value": "tick",
+      "type": "cccOrtho2AxisDomainRoundModeCustom"
+     },
+     {
+      "name": "ortho2AxisDomainScope",
+      "value": "global",
+      "type": "cccOrtho2AxisDomainScopeCustom"
+     },
+     {
+      "name": "ortho2AxisFixedMax",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "ortho2AxisFixedMin",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "ortho2AxisFont",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "ortho2AxisGrid",
+      "value": false,
+      "type": "Boolean"
+     },
+     {
+      "name": "ortho2AxisLabelSpacingMin",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "ortho2AxisMinorTicks",
+      "value": true,
+      "type": "Boolean"
+     },
+     {
+      "name": "ortho2AxisOffset",
+      "value": 0,
+      "type": "Float"
+     },
+     {
+      "name": "ortho2AxisOriginIsZero",
+      "value": "",
+      "type": "Boolean"
+     },
+     {
+      "name": "ortho2AxisOverlappedLabelsMode",
+      "value": "hide",
+      "type": "cccOrtho2AxisOverlappedLabelsModeCustom"
+     },
+     {
+      "name": "ortho2AxisPosition",
+      "value": "",
+      "type": "cccOrtho2AxisPositionCustom"
+     },
+     {
+      "name": "ortho2AxisSize",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "ortho2AxisSizeMax",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "ortho2AxisTickExponentMax",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "ortho2AxisTickExponentMin",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "ortho2AxisTickFormatter",
+      "value": "function f(v) { \r\n    return sprintf('%d', v/1000) + 'K'; \r\n} \r\n ",
+      "type": "JavaScript"
+     },
+     {
+      "name": "ortho2AxisTicks",
+      "value": true,
+      "type": "Boolean"
+     },
+     {
+      "name": "ortho2AxisTickUnit",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "ortho2AxisTickUnitMax",
+      "value": "Infinity",
+      "type": "String"
+     },
+     {
+      "name": "ortho2AxisTickUnitMin",
+      "value": "0",
+      "type": "String"
+     },
+     {
+      "name": "ortho2AxisTitle",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "ortho2AxisTitleAlign",
+      "value": "",
+      "type": "cccOrtho2AxisTitleAlignCustom"
+     },
+     {
+      "name": "ortho2AxisTitleFont",
+      "value": "12px sans-serif",
+      "type": "String"
+     },
+     {
+      "name": "ortho2AxisTitleMargins",
+      "value": "0",
+      "type": "String"
+     },
+     {
+      "name": "ortho2AxisTitleSize",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "ortho2AxisTitleSizeMax",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "ortho2AxisVisible",
+      "value": true,
+      "type": "Boolean"
+     },
+     {
+      "name": "ortho2AxisZeroLine",
+      "value": true,
+      "type": "Boolean"
+     },
+     {
+      "name": "orthoAxisDesiredTickCount",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "orthoAxisDomainRoundMode",
+      "value": "tick",
+      "type": "cccOrthoAxisDomainRoundModeCustom"
+     },
+     {
+      "name": "orthoAxisDomainScope",
+      "value": "global",
+      "type": "cccOrthoAxisDomainScopeCustom"
+     },
+     {
+      "name": "orthoAxisFixedMax",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "orthoAxisFixedMin",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "orthoAxisFont",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "orthoAxisGrid",
+      "value": false,
+      "type": "Boolean"
+     },
+     {
+      "name": "orthoAxisLabelSpacingMin",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "orthoAxisMinorTicks",
+      "value": true,
+      "type": "Boolean"
+     },
+     {
+      "name": "orthoAxisOffset",
+      "value": 0,
+      "type": "Float"
+     },
+     {
+      "name": "orthoAxisOriginIsZero",
+      "value": "",
+      "type": "Boolean"
+     },
+     {
+      "name": "orthoAxisOverlappedLabelsMode",
+      "value": "hide",
+      "type": "cccOrthoAxisOverlappedLabelsModeCustom"
+     },
+     {
+      "name": "orthoAxisPosition",
+      "value": "",
+      "type": "cccOrthoAxisPositionCustom"
+     },
+     {
+      "name": "orthoAxisSize",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "orthoAxisSizeMax",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "orthoAxisTickExponentMax",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "orthoAxisTickExponentMin",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "orthoAxisTickFormatter",
+      "value": "function f(v) { \r\n    return sprintf('%d', v) + '%'; \r\n} \r\n ",
+      "type": "JavaScript"
+     },
+     {
+      "name": "orthoAxisTicks",
+      "value": true,
+      "type": "Boolean"
+     },
+     {
+      "name": "orthoAxisTickUnit",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "orthoAxisTickUnitMax",
+      "value": "Infinity",
+      "type": "String"
+     },
+     {
+      "name": "orthoAxisTickUnitMin",
+      "value": "0",
+      "type": "String"
+     },
+     {
+      "name": "orthoAxisTitle",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "orthoAxisTitleAlign",
+      "value": "",
+      "type": "cccOrthoAxisTitleAlignCustom"
+     },
+     {
+      "name": "orthoAxisTitleFont",
+      "value": "12px sans-serif",
+      "type": "String"
+     },
+     {
+      "name": "orthoAxisTitleMargins",
+      "value": "0",
+      "type": "String"
+     },
+     {
+      "name": "orthoAxisTitleSize",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "orthoAxisTitleSizeMax",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "orthoAxisVisible",
+      "value": true,
+      "type": "Boolean"
+     },
+     {
+      "name": "orthoAxisZeroLine",
+      "value": true,
+      "type": "Boolean"
+     },
+     {
+      "name": "overflowMarkersVisible",
+      "value": true,
+      "type": "Boolean"
+     },
+     {
+      "name": "paddings",
+      "value": "0",
+      "type": "String"
+     },
+     {
+      "name": "panelSizeRatio",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "percentValueFormat",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "plot2",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "plot2AreasVisible",
+      "value": false,
+      "type": "Boolean"
+     },
+     {
+      "name": "plot2ColorAxis",
+      "value": 2,
+      "type": "Float"
+     },
+     {
+      "name": "plot2DotsVisible",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "plot2LinesVisible",
+      "value": true,
+      "type": "Boolean"
+     },
+     {
+      "name": "plot2NullInterpolationMode",
+      "value": "none",
+      "type": "cccPlot2NullInterpolationModeCustom"
+     },
+     {
+      "name": "plot2OrthoAxis",
+      "value": "2",
+      "type": "Float"
+     },
+     {
+      "name": "plot2Series",
+      "value": "[]",
+      "type": "Array"
+     },
+     {
+      "name": "plot2SeriesIndexes",
+      "value": -1,
+      "type": "Array"
+     },
+     {
+      "name": "plot2Stacked",
+      "value": false,
+      "type": "Boolean"
+     },
+     {
+      "name": "plot2TrendLabel",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "plot2TrendType",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "plot2ValuesAnchor",
+      "value": "",
+      "type": "cccPlot2ValuesAnchorCustom"
+     },
+     {
+      "name": "plot2ValuesFont",
+      "value": "10px sans-serif",
+      "type": "String"
+     },
+     {
+      "name": "plot2ValuesMask",
+      "value": "{value}",
+      "type": "String"
+     },
+     {
+      "name": "plot2ValuesVisible",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "plotFrameVisible",
+      "value": true,
+      "type": "Boolean"
+     },
+     {
+      "name": "pointingMode",
+      "value": "near",
+      "type": "cccPointingModeCustom"
+     },
+     {
+      "name": "readers",
+      "value": "[]",
+      "type": "Array"
+     },
+     {
+      "name": "renderCallback",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "renderedCallback",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "selectable",
+      "value": false,
+      "type": "Boolean"
+     },
+     {
+      "name": "selectionChangedAction",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "seriesInRows",
+      "value": false,
+      "type": "Boolean"
+     },
+     {
+      "name": "seriesRole",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "smallAspectRatio",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "smallContentMargins",
+      "value": "0",
+      "type": "String"
+     },
+     {
+      "name": "smallContentPaddings",
+      "value": "0",
+      "type": "String"
+     },
+     {
+      "name": "smallHeight",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "smallMargins",
+      "value": "2%",
+      "type": "String"
+     },
+     {
+      "name": "smallPaddings",
+      "value": "0",
+      "type": "String"
+     },
+     {
+      "name": "smallTitleAlign",
+      "value": "",
+      "type": "cccSmallTitleAlignCustom"
+     },
+     {
+      "name": "smallTitleFont",
+      "value": "14px sans-serif",
+      "type": "String"
+     },
+     {
+      "name": "smallTitleMargins",
+      "value": "0",
+      "type": "String"
+     },
+     {
+      "name": "smallTitlePaddings",
+      "value": "0",
+      "type": "String"
+     },
+     {
+      "name": "smallTitlePosition",
+      "value": "top",
+      "type": "cccSmallTitlePositionCustom"
+     },
+     {
+      "name": "smallTitleSize",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "smallTitleSizeMax",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "smallWidth",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "stacked",
+      "value": false,
+      "type": "Boolean"
+     },
+     {
+      "name": "timeSeries",
+      "value": false,
+      "type": "Boolean"
+     },
+     {
+      "name": "timeSeriesFormat",
+      "value": "%Y-%m-%d",
+      "type": "String"
+     },
+     {
+      "name": "titleAlign",
+      "value": "",
+      "type": "cccTitleAlignCustom"
+     },
+     {
+      "name": "titleFont",
+      "value": "14px sans-serif",
+      "type": "String"
+     },
+     {
+      "name": "titleMargins",
+      "value": "0",
+      "type": "String"
+     },
+     {
+      "name": "titlePaddings",
+      "value": "0",
+      "type": "String"
+     },
+     {
+      "name": "titlePosition",
+      "value": "top",
+      "type": "cccTitlePositionCustom"
+     },
+     {
+      "name": "titleSize",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "titleSizeMax",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "tooltipArrowVisible",
+      "value": "",
+      "type": "Boolean"
+     },
+     {
+      "name": "tooltipClassName",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "tooltipEnabled",
+      "value": true,
+      "type": "Boolean"
+     },
+     {
+      "name": "tooltipFade",
+      "value": true,
+      "type": "Boolean"
+     },
+     {
+      "name": "tooltipFollowMouse",
+      "value": false,
+      "type": "Boolean"
+     },
+     {
+      "name": "tooltipFormat",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltipGravity",
+      "value": "",
+      "type": "cccTooltipGravityCustom"
+     },
+     {
+      "name": "tooltipHtml",
+      "value": true,
+      "type": "Boolean"
+     },
+     {
+      "name": "tooltipOffset",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "tooltipOpacity",
+      "value": 0.9,
+      "type": "Float"
+     },
+     {
+      "name": "tooltipUseCorners",
+      "value": "",
+      "type": "Boolean"
+     },
+     {
+      "name": "trendAreasVisible",
+      "value": false,
+      "type": "Boolean"
+     },
+     {
+      "name": "trendColorAxis",
+      "value": 2,
+      "type": "Float"
+     },
+     {
+      "name": "trendDotsVisible",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "trendLabel",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "trendLinesVisible",
+      "value": true,
+      "type": "Boolean"
+     },
+     {
+      "name": "trendOrthoAxis",
+      "value": "2",
+      "type": "Float"
+     },
+     {
+      "name": "trendStacked",
+      "value": false,
+      "type": "Boolean"
+     },
+     {
+      "name": "trendType",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "trendValuesAnchor",
+      "value": "right",
+      "type": "cccTrendValuesAnchorCustom"
+     },
+     {
+      "name": "trendValuesFont",
+      "value": "10px sans-serif",
+      "type": "String"
+     },
+     {
+      "name": "trendValuesMask",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "trendValuesVisible",
+      "value": false,
+      "type": "Boolean"
+     },
+     {
+      "name": "userSelectionAction",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "valueFormat",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "valueRole",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "valuesAnchor",
+      "value": "",
+      "type": "cccValuesAnchorCustom"
+     },
+     {
+      "name": "valuesFont",
+      "value": "10px sans-serif",
+      "type": "String"
+     },
+     {
+      "name": "valuesMask",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "valuesNormalized",
+      "value": false,
+      "type": "Boolean"
+     },
+     {
+      "name": "valuesOptimizeLegibility",
+      "value": "",
+      "type": "Boolean"
+     },
+     {
+      "name": "valuesOverflow",
+      "value": "hide",
+      "type": "cccValuesOverflowCustom"
+     },
+     {
+      "name": "valuesVisible",
+      "value": "",
+      "type": "Boolean"
+     }
+    ],
+    "meta_cdwSupport": "true",
+    "rowName": "CCC Bar Chart"
+   },
+   {
     "id": "37fc4194-1b40-c2ae-7ca6-5e6254eef8d6",
     "meta_cdwSupport": "true",
     "parent": "CHARTS",
@@ -3773,7 +5078,7 @@
      {
       "name": "hoverable",
       "type": "Boolean",
-      "value": false
+      "value": "false"
      },
      {
       "name": "ignoreNulls",
@@ -4278,7 +5583,7 @@
      {
       "name": "plot2LinesVisible",
       "type": "Boolean",
-      "value": true
+      "value": "true"
      },
      {
       "name": "plot2NullInterpolationMode",
@@ -4671,7 +5976,7 @@
     "typeDesc": "CCC Bar Chart"
    },
    {
-    "id": "2c8bcf51-bccd-6fb4-9147-c53d64560314",
+    "id": "89bc257c-5345-ab5e-6288-256de6175cde",
     "meta_cdwSupport": "true",
     "parent": "CHARTS",
     "properties": [
@@ -5573,7 +6878,7 @@
      {
       "name": "plot2ColorAxis",
       "type": "Float",
-      "value": "3"
+      "value": 2
      },
      {
       "name": "plot2DotsVisible",
@@ -5593,7 +6898,7 @@
      {
       "name": "plot2OrthoAxis",
       "type": "Float",
-      "value": "3"
+      "value": "2"
      },
      {
       "name": "plot2Series",
@@ -5868,7 +7173,7 @@
      {
       "name": "trendColorAxis",
       "type": "Float",
-      "value": "3"
+      "value": 2
      },
      {
       "name": "trendDotsVisible",
@@ -5888,7 +7193,7 @@
      {
       "name": "trendOrthoAxis",
       "type": "Float",
-      "value": "3"
+      "value": "2"
      },
      {
       "name": "trendStacked",
@@ -9983,7 +11288,7 @@
      {
       "name": "extensionPoints",
       "type": "EditorValuesArray",
-      "value": "[]"
+      "value": "[[\"xAxisLabel_textAngle\",\"-0.55\"]]"
      },
      {
       "name": "tooltip",
@@ -11138,7 +12443,7 @@
      {
       "name": "trendValuesVisible",
       "type": "Boolean",
-      "value": false
+      "value": "false"
      },
      {
       "name": "userSelectionAction",
@@ -14920,7 +16225,7 @@
      {
       "name": "colHeaders",
       "type": "ColHeadersArray",
-      "value": "[\"营业日期\",\"收银员\",\"支付方式（中文）\",\"实际支付金额\",\"总小费\",\"付款次数\",\"单据总数\",\"总额\"]"
+      "value": "[\"营业日期\",\"收银员\",\"支付方式（中文）\",\"实际支付金额\",\"总小费\",\"付款次数\",\"总额\"]"
      },
      {
       "name": "colSortable",
@@ -16713,7 +18018,7 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "select \r\n      b.PayTypeName as paytypename,\r\n      sum(a.PayAmt) as payamt\r\nfrom fact_checkpay a \r\ninner join dim_paytype b on a.PayTypeId = b.PayTypeId\r\ninner join dim_bidate g on a.BIDateId = g.BIDateId\r\ninner join dim_outlet c on a.OutletId_t = c.OutletId_t\r\ninner join dim_brand  d on c.BrandId = d.BrandId\r\ninner join dim_area e on c.AreaId = e.AreaId\r\ninner join dim_place f on c.PlaceId = f.PlaceId\r\n\r\n\r\nwhere \r\n      g.BIDate between ${startDay} and ${endDay}\r\n      and (d.BrandId_level1 = ${brandParam} or ${brandParam} = -1)\r\n      and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)\r\n      and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)\r\n      and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)\r\n      and (c.ShopId = ${shopParam} or ${shopParam} = -1)\r\n      and (c.OutletId = ${outletParam} or ${outletParam} = -1)\r\n      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)\r\n\r\ngroup by b.PayTypeName"
+      "value": "select \r\n      case when b.PayTypeClassName is null\r\n      then '其他'\r\n      else b.PayTypeClassName end as paytypeclassname,\r\n      sum(a.PayAmt) as payamt\r\nfrom fact_checkpay a \r\ninner join dim_paytype b on a.PayTypeId = b.PayTypeId\r\ninner join dim_bidate g on a.BIDateId = g.BIDateId\r\ninner join dim_outlet c on a.OutletId_t = c.OutletId_t\r\ninner join dim_brand  d on c.BrandId = d.BrandId\r\ninner join dim_area e on c.AreaId = e.AreaId\r\ninner join dim_place f on c.PlaceId = f.PlaceId\r\n\r\n\r\nwhere \r\n      g.BIDate between ${startDay} and ${endDay}\r\n      and (d.BrandId_level1 = ${brandParam} or ${brandParam} = -1)\r\n      and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)\r\n      and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)\r\n      and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)\r\n      and (c.ShopId = ${shopParam} or ${shopParam} = -1)\r\n      and (c.OutletId = ${outletParam} or ${outletParam} = -1)\r\n      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)\r\n\r\ngroup by b.PayTypeName"
      },
      {
       "name": "parameters",
@@ -16857,7 +18162,7 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "select\r\n      b.ItemCatName_level1 as itemcatname_level1,\r\n      \r\n      format(sum(a.ItemSaleAmt),2) as itemsaleamt,\r\n      0 as it,\r\n      sum(a.ItemSaleQty) as itemsaleqty\r\nfrom fact_checkitem a \r\ninner join  dim_itemcategory b on a.ItemCatId = b.ItemCatId\r\ninner join dim_bidate g on a.BIDateId = g.BIDateId\r\ninner join dim_outlet c on a.OutletId_t = c.OutletId_t\r\ninner join dim_brand  d on c.BrandId = d.BrandId\r\ninner join dim_area e on c.AreaId = e.AreaId\r\ninner join dim_place f on c.PlaceId = f.PlaceId\r\n\r\n\r\nwhere \r\n      g.BIDate between ${startDay} and ${endDay}\r\n      and (d.BrandId_level1 = ${brandParam} or ${brandParam} = -1)\r\n      and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)\r\n      and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)\r\n      and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)\r\n      and (c.ShopId = ${shopParam} or ${shopParam} = -1)\r\n      and (c.OutletId = ${outletParam} or ${outletParam} = -1)\r\n      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)\r\n\r\ngroup by b.ItemCatName_level1"
+      "value": "select ifnull \r\n\r\n(t.itemcatname_level1,'合计'),\r\nitemsaleamt,\r\nit,\r\nitemsaleqty \r\n\r\nfrom  \r\n   (select \r\n    \t\t\tb1.ItemCatName_level1 AS itemcatname_level1,\r\n\t\t\t\tFORMAT(SUM(a.ItemSaleAmt),2) AS itemsaleamt,\r\n\t\t\t\tCONCAT(FORMAT(SUM(a.ItemSaleAmt)/b.aa *100,2),'%') AS it ,\r\n\t\t\t\tSUM(a.ItemSaleQty) AS itemsaleqty\r\nfrom fact_checkitem AS a\r\ninner join  (select SUM(ItemSaleAmt) AS aa from fact_checkitem bb\r\n\r\ninner join  dim_itemcategory b1 on bb.ItemCatId = b1.ItemCatId\r\n\r\ninner join dim_bidate g on bb.BIDateId = g.BIDateId\r\ninner join dim_outlet c on bb.OutletId_t = c.OutletId_t\r\ninner join dim_brand  d on c.BrandId = d.BrandId\r\ninner join dim_area e on c.AreaId = e.AreaId\r\ninner join dim_place f on c.PlaceId = f.PlaceId\r\n\r\n\r\nwhere \r\n      g.BIDate between ${startDay} and ${endDay}\r\n      and (d.BrandId_level1 = ${brandParam} or ${brandParam} = -1)\r\n      and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)\r\n      and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)\r\n      and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)\r\n      and (c.ShopId = ${shopParam} or ${shopParam} = -1)\r\n      and (c.OutletId = ${outletParam} or ${outletParam} = -1)\r\n      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)\r\n) b ON 1 = 1\r\n\r\ninner join  dim_itemcategory b1 ON a.ItemCatId = b1.ItemCatId\r\ninner join dim_bidate g on a.BIDateId = g.BIDateId\r\ninner join dim_outlet c on a.OutletId_t = c.OutletId_t\r\ninner join dim_brand  d on c.BrandId = d.BrandId\r\ninner join dim_area e on c.AreaId = e.AreaId\r\ninner join dim_place f on c.PlaceId = f.PlaceId\r\n\r\n\r\nwhere \r\n      g.BIDate between ${startDay} and ${endDay}\r\n      and (d.BrandId_level1 = ${brandParam} or ${brandParam} = -1)\r\n      and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)\r\n      and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)\r\n      and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)\r\n      and (c.ShopId = ${shopParam} or ${shopParam} = -1)\r\n      and (c.OutletId = ${outletParam} or ${outletParam} = -1)\r\n      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)\r\ngroup by b1.ItemCatName_level1\r\nWITH ROLLUP ) t;"
      },
      {
       "name": "parameters",
@@ -16903,6 +18208,78 @@
     "rowName": "sql over sqlJndi",
     "type": "Componentssql_sqlJndi",
     "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "acaf29e8-25a2-9e38-006d-61fc52bcfc75",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row4_col_query",
+      "type": "Id"
+     },
+     {
+      "name": "access",
+      "value": "public",
+      "type": "Access"
+     },
+     {
+      "name": "jndi",
+      "value": "jdbc_bi",
+      "type": "Jndi"
+     },
+     {
+      "name": "query",
+      "value": "SELECT \r\n    tbl.YearMonth,        -- 年月\r\n    \r\n\tCASE WHEN t2 = 0 OR t2 IS NULL\r\n\t\tTHEN 0.00\r\n\tELSE  ((t1-t2) / t2) * 100 END AS '营业额（环比）',\t\t-- 环比 \r\n\r\n\tCASE WHEN t3 = 0 OR t3 IS NULL\r\n\t\tTHEN 0.00\r\n\tELSE ((t1-t3) / t3) * 100 END AS '营业额（去年同比）',\t\t-- 同比\r\n    \r\n    tbl.t1 AS '营业额'    \t-- 当期金额\r\n\r\nFROM\r\n(\r\n\tSELECT \r\n\t\tDATE_FORMAT(b1.BIDate,'%Y-%m') AS YearMonth,\r\n\t\tSUM(a1.SaleAmt) AS t1,\t\t-- 当期金额\r\n\t\t(\t\t\r\n\t\t\tSELECT \r\n\t\t\t\tCASE WHEN a2.SaleAmt = 0 OR a2.SaleAmt IS NULL\r\n\t\t\t\t\tTHEN 0.00\r\n\t\t\t\tELSE SUM(a2.SaleAmt) END\r\n\t\t\tFROM fact_sumday AS a2 INNER JOIN dim_bidate AS b2 ON a2.BIDateId = b2.BIDateId \r\n                       \r\n\t\t\tWHERE DATE_FORMAT(b1.BIDate,'%Y-%m') = DATE_FORMAT(DATE_ADD(b2.BIDate,INTERVAL 1 MONTH),'%Y-%m')\t\t-- 表的自连接实现\r\n           \r\n\r\n\t\t) AS t2,\t\t-- 环期金额\r\n\t\t(\r\n\t\t\tSELECT \r\n\t\t\t\tCASE WHEN a3.SaleAmt = 0 OR a3.SaleAmt IS NULL\r\n\t\t\t\t\tTHEN 0.00\r\n\t\t\t\tELSE SUM(a3.SaleAmt)  END\r\n\t\t\tFROM fact_sumday AS a3 INNER JOIN dim_bidate AS b3 ON a3.BIDateId = b3.BIDateId \r\n                             \r\n\t\t\tWHERE DATE_FORMAT(b1.BIDate,'%Y-%m') = DATE_FORMAT(DATE_ADD(b3.BIDate,INTERVAL 1 YEAR),'%Y-%m')\t\t-- 表的自连接实现\r\n           \r\n\t\t) AS t3\t\t-- 同期金额\r\n\tFROM fact_sumday AS a1 INNER JOIN dim_bidate AS b1 ON a1.BIDateId = b1.BIDateId\r\n                         inner join dim_outlet c on a1.OutletId_t = c.OutletId_t\r\n\t\t\t\t\t\t\t\t\t\t\t\tinner join dim_brand  d on c.BrandId = d.BrandId\r\n\t\t\t\t\t\t\t\t\t\t\t\tinner join dim_area e on c.AreaId = e.AreaId\r\n\t\t\t\t\t\t\t\t\t\t\t\tinner join dim_place f on c.PlaceId = f.PlaceId\r\n       where  \r\n             (d.BrandId_level1 = ${brandParam}  or ${brandParam} = -1)\r\n             and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)\r\n      and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)\r\n      and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)\r\n      and (c.ShopId = ${shopParam} or ${shopParam} = -1)\r\n      and (c.OutletId = ${outletParam} or ${outletParam} = -1)\r\n      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)\r\n      \r\n\r\n\r\n\tGROUP BY 1\r\n) AS tbl\r\nWHERE tbl.YearMonth BETWEEN DATE_FORMAT(${startDay},'%Y-%m') AND DATE_FORMAT(${endDay},'%Y-%m')",
+      "type": "SqlQuery"
+     },
+     {
+      "name": "parameters",
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"placeParam\",\"placeParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"],[\"shopParam\",\"shopParam\",\"String\",\"\",\"\"],[\"outletParam\",\"outletParam\",\"String\",\"\",\"\"]]",
+      "type": "CdaParameters"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "value": "[]",
+      "type": "CdaCalculatedColumnsArray"
+     },
+     {
+      "name": "cdacolumns",
+      "value": "[]",
+      "type": "CdaColumnsArray"
+     },
+     {
+      "name": "output",
+      "value": "[]",
+      "type": "IndexArray"
+     },
+     {
+      "name": "outputMode",
+      "value": "include",
+      "type": "OutputMode"
+     },
+     {
+      "name": "cacheKeys",
+      "value": "[]",
+      "type": "CacheKeysValues"
+     },
+     {
+      "name": "cacheDuration",
+      "value": 3600,
+      "type": "Integer"
+     },
+     {
+      "name": "cache",
+      "value": "true",
+      "type": "Boolean"
+     }
+    ],
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "rowName": "sql over sqlJndi"
    },
    {
     "id": "c22335ef-bc16-a753-b32d-823d09d3d909",
@@ -17433,7 +18810,7 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "select \r\n      b.HourNo as hourno,\r\n      sum(a.SaleAmt) '营业额',\r\n      case when sum(a.CheckQty) = 0 then '0.00'\r\n      when sum(a.CheckQty) = null then '0.00'\r\n      else (sum(a.SaleAmt)/sum(a.CheckQty)) end as '平均每单',    \r\n\r\n\r\n      case when sum(a.GuestQty) = 0 then '0.00'\r\n      when sum(a.GuestQty) = null then '0.00'\r\n      else (sum(a.SaleAmt)/sum(a.GuestQty)) end as '平均每人'\r\nfrom fact_sumcheck a \r\ninner join dim_bitime b on a.CheckOpenTimeId = b.BITimeId\r\ninner join dim_bidate g on a.BIDateId = g.BIDateId\r\ninner join dim_outlet c on a.OutletId_t = c.OutletId_t\r\ninner join dim_brand  d on c.BrandId = d.BrandId\r\ninner join dim_area e on c.AreaId = e.AreaId\r\ninner join dim_place f on c.PlaceId = f.PlaceId\r\n\r\n\r\nwhere \r\n      g.BIDate between ${startDay} and ${endDay}\r\n      and (d.BrandId_level1 = ${brandParam} or ${brandParam} = -1)\r\n      and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)\r\n      and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)\r\n      and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)\r\n      and (c.ShopId = ${shopParam} or ${shopParam} = -1)\r\n      and (c.OutletId = ${outletParam} or ${outletParam} = -1)\r\n      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)\r\n\r\ngroup by b.HourNo"
+      "value": "select \r\n      b.HourNo as hourno,\r\n     \r\n      case when sum(a.CheckQty) = 0 then '0.00'\r\n      when sum(a.CheckQty) = null then '0.00'\r\n      else (sum(a.SaleAmt)/sum(a.CheckQty)) end as '平均每单',    \r\n\r\n\r\n      case when sum(a.GuestQty) = 0 then '0.00'\r\n      when sum(a.GuestQty) = null then '0.00'\r\n      else (sum(a.SaleAmt)/sum(a.GuestQty)) end as '平均每人',\r\n   \r\n       sum(a.SaleAmt) as '营业额'\r\nfrom fact_sumcheck a \r\ninner join dim_bitime b on a.CheckOpenTimeId = b.BITimeId\r\ninner join dim_bidate g on a.BIDateId = g.BIDateId\r\ninner join dim_outlet c on a.OutletId_t = c.OutletId_t\r\ninner join dim_brand  d on c.BrandId = d.BrandId\r\ninner join dim_area e on c.AreaId = e.AreaId\r\ninner join dim_place f on c.PlaceId = f.PlaceId\r\n\r\nwhere \r\n      g.BIDate between ${startDay} and ${endDay}\r\n      and (d.BrandId_level1 = ${brandParam} or ${brandParam} = -1)\r\n      and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)\r\n      and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)\r\n      and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)\r\n      and (c.ShopId = ${shopParam} or ${shopParam} = -1)\r\n      and (c.OutletId = ${outletParam} or ${outletParam} = -1)\r\n      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)\r\n\r\n\r\ngroup by b.HourNo"
      },
      {
       "name": "parameters",
@@ -17505,7 +18882,7 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "select \r\n     \r\n      b.HourNo as hourno,\r\n      \r\n      \r\n      sum(a.CheckQty) as checkqty,\r\n      sum(a.GuestQty) as guestqty,\r\n      format(sum(a.SaleAmt),2) as saleamt,\r\n      0 as it,\r\n      format(sum(a.SCAmt),2) as scamt,\r\n      format(sum(a.TaxAmt),2) as taxamt,\r\n      format(sum(a.RoundAmt),2) as roundamt,\r\n      format((sum(a.SaleAmt)+sum(a.CheckDiscountAmt)-sum(a.SCAmt)+sum(a.RoundAmt)),2) as salevalue,\r\n      format(sum(a.PayAmt),2) as payamt,\r\n      \r\n      case when sum(a.CheckQty) = 0 then '0.00'\r\n      when sum(a.CheckQty) = null then '0.00'\r\n      else format((sum(a.SaleAmt)/sum(a.CheckQty)),2) end as salecheck,    \r\n\r\n\r\n      case when sum(a.GuestQty) = 0 then '0.00'\r\n      when sum(a.GuestQty) = null then '0.00'\r\n      else format((sum(a.SaleAmt)/sum(a.GuestQty)),2) end as saleguest\r\nfrom fact_sumcheck a \r\n\r\ninner join dim_bitime b on a.CheckOpenTimeId = b.BITimeId\r\ninner join dim_bidate g on a.BIDateId = g.BIDateId\r\ninner join dim_outlet c on a.OutletId_t = c.OutletId_t\r\ninner join dim_brand  d on c.BrandId = d.BrandId\r\ninner join dim_area e on c.AreaId = e.AreaId\r\ninner join dim_place f on c.PlaceId = f.PlaceId\r\n\r\n\r\nwhere \r\n      g.BIDate between ${startDay} and ${endDay}\r\n      and (d.BrandId_level1 = ${brandParam} or ${brandParam} = -1)\r\n      and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)\r\n      and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)\r\n      and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)\r\n      and (c.ShopId = ${shopParam} or ${shopParam} = -1)\r\n      and (c.OutletId = ${outletParam} or ${outletParam} = -1)\r\n      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)\r\n\r\n\r\n\r\ngroup by  b.HourNo\r\n\r\n"
+      "value": "select \r\n     \r\n      b.HourNo as hourno,\r\n      \r\n      \r\n      sum(a.CheckQty) as checkqty,\r\n      sum(a.GuestQty) as guestqty,\r\n      format(sum(a.SaleAmt),2) as saleamt,\r\n      concat(format(sum(a.ItemSaleAmt)/b.aa *100,2),'%') as it ,\r\n      format(sum(a.SCAmt),2) as scamt,\r\n      format(sum(a.TaxAmt),2) as taxamt,\r\n      format(sum(a.RoundAmt),2) as roundamt,\r\n      format((sum(a.SaleAmt)+sum(a.CheckDiscountAmt)-sum(a.SCAmt)+sum(a.RoundAmt)),2) as salevalue,\r\n      format(sum(a.PayAmt),2) as payamt,\r\n      \r\n      case when sum(a.CheckQty) = 0 then '0.00'\r\n      when sum(a.CheckQty) = null then '0.00'\r\n      else format((sum(a.SaleAmt)/sum(a.CheckQty)),2) end as salecheck,    \r\n\r\n\r\n      case when sum(a.GuestQty) = 0 then '0.00'\r\n      when sum(a.GuestQty) = null then '0.00'\r\n      else format((sum(a.SaleAmt)/sum(a.GuestQty)),2) end as saleguest\r\nfrom fact_sumcheck a \r\ninner join \r\n\r\n(select sum(ItemSaleAmt) as aa from fact_checkitem bb\r\n\r\ninner join dim_bitime b on bb.CheckOpenTimeId = b.BITimeId\r\ninner join dim_bidate g on bb.BIDateId = g.BIDateId\r\ninner join dim_outlet c on bb.OutletId_t = c.OutletId_t\r\ninner join dim_brand  d on c.BrandId = d.BrandId\r\ninner join dim_area e on c.AreaId = e.AreaId\r\ninner join dim_place f on c.PlaceId = f.PlaceId) b on 1 = 1\r\n\r\ninner join dim_bitime b on a.CheckOpenTimeId = b.BITimeId\r\ninner join dim_bidate g on a.BIDateId = g.BIDateId\r\ninner join dim_outlet c on a.OutletId_t = c.OutletId_t\r\ninner join dim_brand  d on c.BrandId = d.BrandId\r\ninner join dim_area e on c.AreaId = e.AreaId\r\ninner join dim_place f on c.PlaceId = f.PlaceId\r\n\r\nwhere \r\n      g.BIDate between ${startDay} and ${endDay}\r\n      and (d.BrandId_level1 = ${brandParam} or ${brandParam} = -1)\r\n      and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)\r\n      and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)\r\n      and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)\r\n      and (c.ShopId = ${shopParam} or ${shopParam} = -1)\r\n      and (c.OutletId = ${outletParam} or ${outletParam} = -1)\r\n      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)\r\n\r\n\r\n\r\n\r\ngroup by  b.HourNo\r\n\r\n"
      },
      {
       "name": "parameters",
@@ -17721,7 +19098,7 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "select\r\n      b.ItemName as itemname,\r\n      format(sum(a.ItemSaleAmt),2) as itemsaleamt,\r\n      sum(a.ItemSaleQty) as itemsaleqty,\r\n      0 as it\r\nfrom fact_checkitem a \r\ninner join  dim_item b on a.ItemId_t = b.ItemId_t\r\n\r\ninner join dim_bidate g on a.BIDateId = g.BIDateId\r\ninner join dim_outlet c on a.OutletId_t = c.OutletId_t\r\ninner join dim_brand  d on c.BrandId = d.BrandId\r\ninner join dim_area e on c.AreaId = e.AreaId\r\ninner join dim_place f on c.PlaceId = f.PlaceId\r\n\r\n\r\nwhere \r\n      g.BIDate between ${startDay} and ${endDay}\r\n      and (d.BrandId_level1 = ${brandParam} or ${brandParam} = -1)\r\n      and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)\r\n      and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)\r\n      and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)\r\n      and (c.ShopId = ${shopParam} or ${shopParam} = -1)\r\n      and (c.OutletId = ${outletParam} or ${outletParam} = -1)\r\n      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)\r\n\r\ngroup by b.ItemName\r\norder by itemsaleqty desc"
+      "value": "select\r\n      b1.ItemName as itemname,\r\n      format(sum(a.ItemSaleAmt),2) as itemsaleamt,\r\n      sum(a.ItemSaleQty) as itemsaleqty,\r\n      CONCAT(FORMAT(SUM(a.ItemSaleAmt)/b.aa *100,2),'%') AS it \r\nfrom fact_checkitem a \r\ninner join  \r\n\r\n      (select SUM(ItemSaleAmt) AS aa from fact_checkitem bb\r\ninner join  dim_item b1 on bb.ItemId_t = b1.ItemId_t\r\n\r\ninner join dim_bidate g on bb.BIDateId = g.BIDateId\r\ninner join dim_outlet c on bb.OutletId_t = c.OutletId_t\r\ninner join dim_brand  d on c.BrandId = d.BrandId\r\ninner join dim_area e on c.AreaId = e.AreaId\r\ninner join dim_place f on c.PlaceId = f.PlaceId\r\n\r\n) b ON 1 = 1\r\n\r\ninner join  dim_item b1 on a.ItemId_t = b1.ItemId_t\r\n\r\ninner join dim_bidate g on a.BIDateId = g.BIDateId\r\ninner join dim_outlet c on a.OutletId_t = c.OutletId_t\r\ninner join dim_brand  d on c.BrandId = d.BrandId\r\ninner join dim_area e on c.AreaId = e.AreaId\r\ninner join dim_place f on c.PlaceId = f.PlaceId\r\n\r\nwhere \r\n      g.BIDate between ${startDay} and ${endDay}\r\n      and (d.BrandId_level1 = ${brandParam} or ${brandParam} = -1)\r\n      and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)\r\n      and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)\r\n      and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)\r\n      and (c.ShopId = ${shopParam} or ${shopParam} = -1)\r\n      and (c.OutletId = ${outletParam} or ${outletParam} = -1)\r\n      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)\r\n\r\ngroup by b1.ItemName\r\norder by itemsaleqty desc"
      },
      {
       "name": "parameters",
@@ -17937,7 +19314,7 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "select \r\n     c.BIDate as bidate,\r\n     d.UserName as username,\r\n     e.PayTypeClassName as paytypeclassname,\r\n     format(sum(a.PayAmt),2) as payamt,\r\n     format(sum(a.TipAmt),2) as tipamt,\r\n     0 as it,\r\n     0 as it1,\r\n     format(sum(a.SaleAmt),2) as saleamt\r\n     \r\nfrom fact_check a \r\ninner join fact_checkpay b on a.BIDateId = b.BIDateId\r\n                           and a.OutletId_t = b.OutletId_t\r\n                           and a.CheckId = b.CheckId\r\ninner join dim_bidate c on a.BIDateId = c.BIDateId\r\ninner join dim_user d on a.OpenUserId = d.UserId\r\ninner join dim_paytype e on b.PayTypeId = e.PayTypeId\r\n\r\n\r\ninner join dim_outlet f on a.OutletId_t = f.OutletId_t\r\ninner join dim_brand  g on f.BrandId = g.BrandId\r\ninner join dim_area h on f.AreaId = h.AreaId\r\ninner join dim_place i on f.PlaceId = i.PlaceId\r\n\r\n\r\nwhere \r\n      c.BIDate between ${startDay} and ${endDay}\r\n      and (g.BrandId_level1 = ${brandParam} or ${brandParam} = -1)\r\n      and (h.AreaId_level1 = ${area1Param} or ${area1Param} = -1)\r\n      and (h.AreaId_level2 = ${area2Param} or ${area2Param} = -1)\r\n      and (h.AreaId_level3 = ${area3Param} or ${area3Param} = -1)\r\n      and (f.ShopId = ${shopParam} or ${shopParam} = -1)\r\n      and (f.OutletId = ${outletParam} or ${outletParam} = -1)\r\n      and (i.PlaceId = ${placeParam} or ${placeParam} = -1)\r\n\r\n\r\ngroup by c.BIDate,d.UserName,e.PayTypeClassName"
+      "value": "select \r\n     c.BIDate as bidate,\r\n     d.UserName as username,\r\n     e.PayTypeClassName as paytypeclassname,\r\n     format(sum(a.PayAmt),2) as payamt,\r\n     format(sum(a.TipAmt),2) as tipamt,\r\n     count(*) as it,\r\n    \r\n     format(sum(a.SaleAmt),2) as saleamt\r\n     \r\nfrom fact_check a \r\ninner join fact_checkpay b on a.BIDateId = b.BIDateId\r\n                           and a.OutletId_t = b.OutletId_t\r\n                           and a.CheckId = b.CheckId\r\ninner join dim_bidate c on a.BIDateId = c.BIDateId\r\ninner join dim_user d on a.OpenUserId = d.UserId\r\ninner join dim_paytype e on b.PayTypeId = e.PayTypeId\r\n\r\n\r\ninner join dim_outlet f on a.OutletId_t = f.OutletId_t\r\ninner join dim_brand  g on f.BrandId = g.BrandId\r\ninner join dim_area h on f.AreaId = h.AreaId\r\ninner join dim_place i on f.PlaceId = i.PlaceId\r\n\r\n\r\nwhere \r\n      c.BIDate between ${startDay} and ${endDay}\r\n      and (g.BrandId_level1 = ${brandParam} or ${brandParam} = -1)\r\n      and (h.AreaId_level1 = ${area1Param} or ${area1Param} = -1)\r\n      and (h.AreaId_level2 = ${area2Param} or ${area2Param} = -1)\r\n      and (h.AreaId_level3 = ${area3Param} or ${area3Param} = -1)\r\n      and (f.ShopId = ${shopParam} or ${shopParam} = -1)\r\n      and (f.OutletId = ${outletParam} or ${outletParam} = -1)\r\n      and (i.PlaceId = ${placeParam} or ${placeParam} = -1)\r\n\r\n\r\ngroup by c.BIDate,d.UserName,e.PayTypeClassName"
      },
      {
       "name": "parameters",
@@ -21577,7 +22954,7 @@
      {
       "name": "height",
       "type": "Integer",
-      "value": "400"
+      "value": "700"
      },
      {
       "name": "roundCorners",
@@ -21658,6 +23035,107 @@
     ],
     "type": "LayoutHtml",
     "typeDesc": "Html"
+   },
+   {
+    "id": "e334ffec-6425-7a83-ff44-4b5124875c50",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "42b39d33-c971-4fab-d029-f0e17abb8744",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "a68c0f59-db63-fbeb-23f3-1b8baf1a2c72",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "e334ffec-6425-7a83-ff44-4b5124875c50",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row4_col",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "600",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
    },
    {
     "id": "08f744a4-a44b-adb0-bd83-a561cf66de89",

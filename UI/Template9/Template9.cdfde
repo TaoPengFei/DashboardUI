@@ -260,7 +260,7 @@
      {
       "name": "displayLength",
       "type": "Integer",
-      "value": ""
+      "value": "8"
      },
      {
       "name": "expandOnClick",
@@ -464,7 +464,7 @@
      {
       "name": "displayLength",
       "type": "Integer",
-      "value": ""
+      "value": "8"
      },
      {
       "name": "expandOnClick",
@@ -2888,7 +2888,7 @@
      {
       "name": "plot2ValuesVisible",
       "type": "Boolean",
-      "value": false
+      "value": "true"
      },
      {
       "name": "plotFrameVisible",
@@ -3218,7 +3218,7 @@
      {
       "name": "valuesVisible",
       "type": "Boolean",
-      "value": ""
+      "value": "true"
      }
     ],
     "rowName": "CCC Bar Chart",
@@ -5239,7 +5239,7 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "select \r\n     b.YearMonth as yearmonth,\r\n     d.AreaName_level1 as areaname1,\r\n     c.OutletName as outletname,\r\n     0 as it,\r\n     format(sum(a.SaleAmt),2) as saleamt,\r\n     0 as it1,\r\n     format(sum(a.BudgetSaleAmt),2) as budgetsaleamt,\r\n     0 as it2,\r\n     case when sum(a.BudgetSaleAmt) = 0 then '0.00'\r\n     when sum(a.BudgetSaleAmt) = null then '0.00'\r\n     else sum(a.SaleAmt)/sum(a.BudgetSaleAmt)  end as percent\r\nfrom fact_sumday a \r\ninner join dim_bidate b on a.BIDateId = b.BIDateId\r\ninner join dim_outlet c on a.OutletId_t = c.OutletId_t\r\ninner join dim_area d on c.AreaId = d.AreaId\r\ninner join dim_brand  e on c.BrandId = e.BrandId\r\ninner join dim_place f on c.PlaceId = f.PlaceId\r\n\r\n\r\nwhere \r\n      b.BIDate between ${startDay} and ${endDay}\r\n      and (e.BrandId_level1 = ${brandParam} or ${brandParam} = -1)\r\n      and (d.AreaId_level1 = ${area1Param} or ${area1Param} = -1)\r\n      and (d.AreaId_level2 = ${area2Param} or ${area2Param} = -1)\r\n      and (d.AreaId_level3 = ${area3Param} or ${area3Param} = -1)\r\n      and (c.ShopId = ${shopParam} or ${shopParam} = -1)\r\n      and (c.OutletId = ${outletParam} or ${outletParam} = -1)\r\n      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)\r\n\r\n\r\n\r\ngroup by b.YearMonth,d.AreaName_level1,c.OutletName\r\n     "
+      "value": "SELECT \r\n    tbl.YearMonth,        -- 年月\r\n\t  tbl.areaname1,\r\n    tbl.outletname,\r\n    tbl.yingye,\r\n    format(tbl.t1,2),     \t-- 当期金额\r\n\tCASE WHEN t2 = 0 OR t2 IS NULL\r\n\t\tTHEN 0.00\r\n\tELSE  concat(format(((t1-t2) / t2) *100,2),'%') END as percentyingye,\t\t-- 营业额环比 \r\n    format(tbl.t3,2) ,   --  目标金额\r\n\tCASE WHEN t4 = 0 OR t4 IS NULL\r\n\t\tTHEN 0.00\r\n\tELSE  concat(format(((t3-t4) / t4) * 100,2),'%') END \tas  percentmubiao,    -- 目标金额环比\r\n \r\n  case when t3 = 0 then '0.00'\r\n     when t3 = null then '0.00'\r\n     else concat(format(t1/t3 *100,2),'%')  end as percent\r\n\r\n\t\r\n    \r\n   \r\n\r\nFROM\r\n(\r\n\tSELECT \r\n\t\tDATE_FORMAT(b1.BIDate,'%Y-%m') AS YearMonth,\r\n    e.AreaName_level1 as areaname1,\r\n    c.OutletName as outletname,\r\n    0 as yingye,\r\n\t\tSUM(a1.SaleAmt) AS t1,\t\t-- 当期金额\r\n\t\t(\t\t\r\n\t\t\tSELECT \r\n\t\t\t\tCASE WHEN a2.SaleAmt = 0 OR a2.SaleAmt IS NULL\r\n\t\t\t\t\tTHEN 0.00\r\n\t\t\t\tELSE SUM(a2.SaleAmt) END\r\n\t\t\tFROM fact_sumday AS a2 INNER JOIN dim_bidate AS b2 ON a2.BIDateId = b2.BIDateId \r\n                       \r\n\t\t\tWHERE DATE_FORMAT(b1.BIDate,'%Y-%m') = DATE_FORMAT(DATE_ADD(b2.BIDate,INTERVAL 1 MONTH),'%Y-%m')\t\t-- 表的自连接实现\r\n           \r\n\r\n\t\t) AS t2,\t\t-- 环期金额\r\n    SUM(a1.BudgetSaleAmt) AS t3,\t\t-- 当期目标金额\r\n\t\t(\t\t\r\n\t\t\tSELECT \r\n\t\t\t\tCASE WHEN a2.BudgetSaleAmt = 0 OR a2.BudgetSaleAmt IS NULL\r\n\t\t\t\t\tTHEN 0.00\r\n\t\t\t\tELSE SUM(a2.BudgetSaleAmt) END\r\n\t\t\tFROM fact_sumday AS a2 INNER JOIN dim_bidate AS b2 ON a2.BIDateId = b2.BIDateId \r\n                       \r\n\t\t\tWHERE DATE_FORMAT(b1.BIDate,'%Y-%m') = DATE_FORMAT(DATE_ADD(b2.BIDate,INTERVAL 1 MONTH),'%Y-%m')\t\t-- 表的自连接实现\r\n           \r\n\r\n\t\t) AS t4\t\t-- 环期目标金额\r\n\t\t\r\n\tFROM fact_sumday AS a1 INNER JOIN dim_bidate AS b1 ON a1.BIDateId = b1.BIDateId\r\n                         inner join dim_outlet c on a1.OutletId_t = c.OutletId_t\r\n\t\t\t\t\t\t\t\t\t\t\t\tinner join dim_brand  d on c.BrandId = d.BrandId\r\n\t\t\t\t\t\t\t\t\t\t\t\tinner join dim_area e on c.AreaId = e.AreaId\r\n\t\t\t\t\t\t\t\t\t\t\t\tinner join dim_place f on c.PlaceId = f.PlaceId\r\n       \r\n  where  \r\n             (d.BrandId_level1 = ${brandParam}  or ${brandParam} = -1)\r\n             and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)\r\n      and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)\r\n      and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)\r\n      and (c.ShopId = ${shopParam} or ${shopParam} = -1)\r\n      and (c.OutletId = ${outletParam} or ${outletParam} = -1)\r\n      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)\r\n\r\n\tGROUP BY 1\r\n) AS tbl\r\nWHERE tbl.YearMonth BETWEEN DATE_FORMAT(${startDay},'%Y-%m') AND DATE_FORMAT(${endDay},'%Y-%m')\r\n\r\n"
      },
      {
       "name": "parameters",
@@ -5311,7 +5311,7 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "select \r\n     b.BIDate as bidate,\r\n     c.OutletName as outletname,\r\n     0 as it,\r\n     format(sum(a.SaleAmt),2) as saleamt,\r\n     0 as it1,\r\n     format(sum(a.BudgetSaleAmt),2) as budgetsaleamt,\r\n     0 as it2,\r\n     case when sum(a.BudgetSaleAmt) = 0 then '0.00'\r\n     when sum(a.BudgetSaleAmt) = null then '0.00'\r\n     else sum(a.SaleAmt)/sum(a.BudgetSaleAmt)  end as percent\r\nfrom fact_sumday a \r\ninner join dim_bidate b on a.BIDateId = b.BIDateId\r\ninner join dim_outlet c on a.OutletId_t = c.OutletId_t\r\ninner join dim_brand  d on c.BrandId = d.BrandId\r\ninner join dim_area e on c.AreaId = e.AreaId\r\ninner join dim_place f on c.PlaceId = f.PlaceId\r\n\r\n\r\nwhere \r\n      b.BIDate between ${startDay} and ${endDay}\r\n      and (d.BrandId_level1 = ${brandParam} or ${brandParam} = -1)\r\n      and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)\r\n      and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)\r\n      and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)\r\n      and (c.ShopId = ${shopParam} or ${shopParam} = -1)\r\n      and (c.OutletId = ${outletParam} or ${outletParam} = -1)\r\n      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)\r\n\r\n\r\n\r\ngroup by b.BIDate,c.OutletName\r\n     "
+      "value": "SELECT \r\n    tbl.YearMonth,        -- 年月\r\n\t \r\n    tbl.outletname,\r\n    tbl.yingye,\r\n    format(tbl.t1,2),     \t-- 当期金额\r\n\tCASE WHEN t2 = 0 OR t2 IS NULL\r\n\t\tTHEN 0.00\r\n\tELSE  concat(format(((t1-t2) / t2) *100,2),'%') END as percentyingye,\t\t-- 营业额环比 \r\n    format(tbl.t3,2) ,   -- 当期金额\r\n\tCASE WHEN t4 = 0 OR t4 IS NULL\r\n\t\tTHEN 0.00\r\n\tELSE  concat(format(((t3-t4) / t4) * 100,2),'%') END     as  percentmubiao,    -- 目标金额环比\r\n \r\n  case when t3 = 0 then '0.00'\r\n     when t3 = null then '0.00'\r\n     else concat(format(t1/t3 * 100,2),'%')  end as percent\r\n\r\n\t\r\n    \r\n   \r\n\r\nFROM\r\n(\r\n\tSELECT \r\n\t\tb1.BIDate AS YearMonth,\r\n   \r\n    c.OutletName as outletname,\r\n    0 as yingye,\r\n\t\tSUM(a1.SaleAmt) AS t1,\t\t-- 当期金额\r\n\t\t(\t\t\r\n\t\t\tSELECT \r\n\t\t\t\tCASE WHEN a2.SaleAmt = 0 OR a2.SaleAmt IS NULL\r\n\t\t\t\t\tTHEN 0.00\r\n\t\t\t\tELSE SUM(a2.SaleAmt) END\r\n\t\t\tFROM fact_sumday AS a2 INNER JOIN dim_bidate AS b2 ON a2.BIDateId = b2.BIDateId \r\n                       \r\n\t\t\tWHERE b1.BIDate = DATE_ADD(b2.BIDate,INTERVAL 1 MONTH)\t\t-- 表的自连接实现\r\n           \r\n\r\n\t\t) AS t2,\t\t-- 环期金额\r\n    SUM(a1.BudgetSaleAmt) AS t3,\t\t-- 当期目标金额\r\n\t\t(\t\t\r\n\t\t\tSELECT \r\n\t\t\t\tCASE WHEN a2.BudgetSaleAmt = 0 OR a2.BudgetSaleAmt IS NULL\r\n\t\t\t\t\tTHEN 0.00\r\n\t\t\t\tELSE SUM(a2.BudgetSaleAmt) END\r\n\t\t\tFROM fact_sumday AS a2 INNER JOIN dim_bidate AS b2 ON a2.BIDateId = b2.BIDateId \r\n                       \r\n\t\t\tWHERE b1.BIDate = DATE_ADD(b2.BIDate,INTERVAL 1 MONTH)\t\t-- 表的自连接实现\r\n           \r\n\r\n\t\t) AS t4\t\t-- 环期目标金额\r\n\t\t\r\n\tFROM fact_sumday AS a1 INNER JOIN dim_bidate AS b1 ON a1.BIDateId = b1.BIDateId\r\n                         inner join dim_outlet c on a1.OutletId_t = c.OutletId_t\r\n\t\t\t\t\t\t\t\t\t\t\t\tinner join dim_brand  d on c.BrandId = d.BrandId\r\n\t\t\t\t\t\t\t\t\t\t\t\tinner join dim_area e on c.AreaId = e.AreaId\r\n\t\t\t\t\t\t\t\t\t\t\t\tinner join dim_place f on c.PlaceId = f.PlaceId\r\n        where  \r\n             (d.BrandId_level1 = ${brandParam}  or ${brandParam} = -1)\r\n             and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)\r\n      and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)\r\n      and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)\r\n      and (c.ShopId = ${shopParam} or ${shopParam} = -1)\r\n      and (c.OutletId = ${outletParam} or ${outletParam} = -1)\r\n      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)\r\n\r\n\r\n\tGROUP BY 1\r\n) AS tbl\r\nWHERE tbl.YearMonth BETWEEN (${startDay}) AND (${endDay})"
      },
      {
       "name": "parameters",
@@ -8108,7 +8108,7 @@
      {
       "name": "height",
       "type": "Integer",
-      "value": "600"
+      "value": "400"
      },
      {
       "name": "roundCorners",

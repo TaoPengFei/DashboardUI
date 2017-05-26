@@ -1500,7 +1500,7 @@
      {
       "name": "preExecution",
       "type": "JavaScript",
-      "value": "function f(){\r\n    resizeGraphical(this);\r\n    this.chartDefinition.xAxisLabel_textAngle = -0.55;\r\n    this.chartDefinition.stacked = true;\r\n    this.chartDefinition.legendShape = 'circle';\r\n    this.chartDefinition.selectable = true;\r\n    this.chartDefinition.hoverable = true;\r\n    this.chartDefinition.legendPosition =  'bottom';\r\n    this.chartDefinition.plotFrameVisible = false;\r\n    this.chartDefinition.orthoAxisGrid = true;\r\n    this.chartDefinition.orthoAxisTicks = false;\r\n    //this.chartDefinition.orthoAxisVisible = false;\r\n    //this.chartDefinition.anchor(\"left\");//.add(pv.Label).text(y.tickFormat);\r\n    /*\r\n    this.chartDefinition.extensionPoints = {  hoverable  \r\n        xAxisTicks_strokeStyle: 'gray',\r\n        rubberBand_strokeStyle: 'rgb(0,0,240)',\r\n        rubberBand_fillStyle:   'rgba(0,0,255, 0.5)',\r\n        rubberBand_lineWidth:   2.5\r\n    }\r\n    */\r\n} "
+      "value": "function f(){\r\n    resizeGraphical(this);\r\n    \r\n    \r\n    this.chartDefinition.xAxisLabel_textAngle = -1.6;//-0.55;\r\n    \r\n    \r\n    \r\n    this.chartDefinition.stacked = true;\r\n    this.chartDefinition.legendShape = 'circle';\r\n    this.chartDefinition.selectable = true;\r\n    this.chartDefinition.hoverable = true;\r\n    this.chartDefinition.legendPosition =  'bottom';\r\n    this.chartDefinition.plotFrameVisible = false;\r\n    this.chartDefinition.orthoAxisGrid = true;\r\n    this.chartDefinition.orthoAxisTicks = false;\r\n    //this.chartDefinition.orthoAxisVisible = false;\r\n    //this.chartDefinition.anchor(\"left\");//.add(pv.Label).text(y.tickFormat);\r\n    /*\r\n    this.chartDefinition.extensionPoints = {  hoverable  \r\n        xAxisTicks_strokeStyle: 'gray',\r\n        rubberBand_strokeStyle: 'rgb(0,0,240)',\r\n        rubberBand_fillStyle:   'rgba(0,0,255, 0.5)',\r\n        rubberBand_lineWidth:   2.5\r\n    }\r\n    */\r\n} "
      },
      {
       "name": "postExecution",
@@ -4815,7 +4815,7 @@
      {
       "name": "preExecution",
       "type": "JavaScript",
-      "value": "function f(){\r\n    resizeGraphical(this);\r\n    this.chartDefinition.xAxisLabel_textAngle = -0.55;\r\n    this.chartDefinition.stacked = true;\r\n    this.chartDefinition.legendShape = 'circle';\r\n    this.chartDefinition.selectable = true;\r\n    this.chartDefinition.hoverable = true;\r\n    this.chartDefinition.legendPosition =  'bottom';\r\n    this.chartDefinition.plotFrameVisible = false;\r\n    this.chartDefinition.orthoAxisGrid = true;\r\n    this.chartDefinition.orthoAxisTicks = false;\r\n    //this.chartDefinition.orthoAxisVisible = false;\r\n    //this.chartDefinition.anchor(\"left\");//.add(pv.Label).text(y.tickFormat);\r\n    /*\r\n    this.chartDefinition.extensionPoints = {  hoverable  \r\n        xAxisTicks_strokeStyle: 'gray',\r\n        rubberBand_strokeStyle: 'rgb(0,0,240)',\r\n        rubberBand_fillStyle:   'rgba(0,0,255, 0.5)',\r\n        rubberBand_lineWidth:   2.5\r\n    }\r\n    */\r\n} "
+      "value": "function f(){\r\n    resizeGraphical(this);\r\n    /*\r\n    this.chartDefinition.xAxisLabel_textAngle = -0.55;\r\n    //this.chartDefinition.stacked = true;\r\n    this.chartDefinition.legendShape = 'circle';\r\n    this.chartDefinition.selectable = true;\r\n    this.chartDefinition.hoverable = true;\r\n    this.chartDefinition.legendPosition =  'bottom';\r\n    this.chartDefinition.plotFrameVisible = false;\r\n    this.chartDefinition.orthoAxisGrid = true;\r\n    this.chartDefinition.orthoAxisTicks = false;\r\n    //this.chartDefinition.orthoAxisVisible = false;\r\n    //this.chartDefinition.anchor(\"left\");//.add(pv.Label).text(y.tickFormat);\r\n    */\r\n} "
      },
      {
       "name": "postExecution",
@@ -5045,7 +5045,7 @@
      {
       "name": "color2AxisLegendDrawLine",
       "type": "Boolean",
-      "value": ""
+      "value": "false"
      },
      {
       "name": "color2AxisLegendDrawMarker",
@@ -5650,7 +5650,7 @@
      {
       "name": "plot2ColorAxis",
       "type": "Float",
-      "value": 2
+      "value": "2"
      },
      {
       "name": "plot2DotsVisible",
@@ -9902,6 +9902,100 @@
     "rowName": "d3 Component",
     "type": "Componentsd3",
     "typeDesc": "D3 Component Component"
+   },
+   {
+    "id": "fae871af-da61-d4da-bb00-93489132e542",
+    "parent": "D3COMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "demoD3Js"
+     },
+     {
+      "name": "listeners",
+      "type": "Listeners",
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:placeParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\",\"${p:shopParam}\",\"${p:outletParam}\"]"
+     },
+     {
+      "name": "customfunction",
+      "type": "JavaScript",
+      "value": "function f(dataset){\r\n    var data = this.cdaResultToD3Array(dataset);\r\n    var margin = {top: 80, right: 20, bottom: 30, left: 60},\r\n        width = document.getElementById(\"row3_col2_panel_body\").scrollWidth - 100,\r\n        //width = this.getWidth(),\r\n        height = this.getHeight() - margin.top - margin.bottom;\r\n    \r\n    var x = d3.scale.ordinal().rangeRoundBands([0, width], .1);\r\n    var y0 = d3.scale.linear().range([height, 0]),\r\n        y1 = d3.scale.linear().range([height, 0]); \r\n    \r\n    var xAxis = d3.svg.axis().scale(x).orient(\"bottom\");\r\n    var yAxisLeft = d3.svg.axis().scale(y0).ticks(6).orient(\"left\");\r\n    var yAxisRight = d3.svg.axis().scale(y1).ticks(6).orient(\"right\");\r\n    \r\n    var svg = d3.select(\"#\"+this.htmlObject).append(\"svg\")\r\n        .attr(\"width\", width + margin.left + margin.right)\r\n        .attr(\"height\", height + margin.top + margin.bottom)\r\n        .append(\"g\")\r\n        .attr(\"transform\", \"translate(\" + margin.left + \",\" + margin.top + \")\");\r\n    \r\n    data.forEach(function(d) {\r\n        d.TableTal = +d.TableTal;\r\n    });\r\n    \r\n    x.domain(data.map(function(d) { return d.Guest; }));\r\n    y0.domain([0, d3.max(data, function(d) { return d.TableTal; })]);\r\n    y1.domain([0, d3.max(data, function(d) { return d.PreSaleAmt; })]);\r\n   \r\n   //创建一个直线生成器 \r\n    var linePath1 = d3.svg.line()\r\n        .x(function(d) { return x(d.Guest); })\r\n        .y(function(d) { return y1(d.PreProAmt); })\r\n        .interpolate('monotone'); \r\n    var linePath2 = d3.svg.line()\r\n        .x(function(d) { return x(d.Guest); })\r\n        //.y(function(d) { return y1(d.PreSaleAmt); })\r\n        .y(function(d) { return y0(d.TableTal); })\r\n        .interpolate('monotone'); \r\n    \r\n    svg.append(\"g\")\r\n        .attr(\"class\", \"x axis\")\r\n        .attr(\"transform\", \"translate(0,\" + height + \")\")\r\n        .call(xAxis);\r\n    \r\n    svg.append(\"g\")\r\n        .attr(\"class\", \"y axis axisLeft\")\r\n        .attr(\"transform\", \"translate(0,0)\")\r\n        //.attr(\"transform\", \"rotate(-90)\")\r\n        //.attr(\"transform\",\"rotate(-90)\")\r\n        .call(yAxisLeft)\r\n        .append(\"text\")\r\n        .attr(\"y\", 6)\r\n        //.attr(\"dy\", \"-2em\")\r\n        .style(\"text-anchor\", \"end\")\r\n        //.attr(\"dy\",\"1em\")//沿y轴平移一个字体的大小\r\n        .text(\"总翻台率\");\r\n    \r\n    svg.append(\"g\")\r\n        .attr(\"class\", \"y axis axisRight\")\r\n        .attr(\"transform\", \"translate(\" + (width) + \",0)\")\r\n        //.attr(\"transform\", \"rotate(-90)\")\r\n        .call(yAxisRight)\r\n        .append(\"text\")\r\n        .attr(\"y\", 6)\r\n        .attr(\"dy\", \"-2em\")\r\n        //.attr(\"dx\", \"2em\")\r\n        .style(\"text-anchor\", \"end\")\r\n        .text(\"人均消费/人均利润\");\r\n    \r\n    bars = svg.selectAll(\".bar\").data(data).enter();\r\n    //立柱1\r\n    bars.append(\"rect\")\r\n      .attr(\"class\", \"bar1\")\r\n      .attr(\"x\", function(d) { return x(d.Guest); })\r\n      .attr(\"width\", x.rangeBand()/3)\r\n      //.attr(\"width\", x.rangeBand())\r\n      //.attr(\"transform\", \"translate(\" + x.rangeBand()/4 + \",0)\")\r\n      .attr(\"y\", function(d) { return y0(d.TableTal); })\r\n      .attr(\"height\", function(d,i,j) { return height - y0(d.TableTal); })\r\n      .attr(\"fill\", \"#1F77B4\");\r\n    //立柱2\r\n    bars.append(\"rect\")\r\n      .attr(\"class\", \"bar2\")\r\n      .attr(\"x\", function(d) { return x(d.Guest) + x.rangeBand()/3; })\r\n      .attr(\"width\", x.rangeBand() / 3)\r\n      .attr(\"y\", function(d) { return y1(d.PreSaleAmt); })\r\n      .attr(\"height\", function(d,i,j) { return height - y1(d.PreSaleAmt); })\r\n      .attr(\"fill\", \"#FF7F0E\");\r\n    //立柱3\r\n    bars.append(\"rect\")\r\n      .attr(\"class\", \"bar3\")\r\n      .attr(\"x\", function(d) { return x(d.Guest) + x.rangeBand()/3*2; })\r\n      .attr(\"width\", x.rangeBand() / 3)\r\n      .attr(\"y\", function(d) { return y1(d.PreProAmt); })\r\n      .attr(\"height\", function(d,i,j) { return height - y1(d.PreProAmt); })\r\n      .attr(\"fill\", \"green\");\r\n    \r\n    //折线1\r\n    svg.append('path')\r\n        .attr('class', 'line')\r\n        .attr(\"fill\",\"#FF7F0E\")  \r\n        .attr(\"stroke\",\"#FF7F0E\")\r\n        //.attr(\"transform\", \"translate(\" + margin.left + \",\" + margin.top + \")\")\r\n        .attr(\"transform\", \"translate(\" + margin.left + \",0)\")\r\n        .attr('d', linePath1(data));\r\n    //折线2\r\n    svg.append('path')\r\n        .attr('class', 'line')\r\n        .attr(\"fill\",\"#D62728\") \r\n        .attr(\"stroke\",\"#D62728\")\r\n        .attr(\"transform\", \"translate(\" + margin.left + \",0)\")\r\n        .attr('d', linePath2(data));\r\n    \r\n    svg.selectAll('circle').data(data).enter()\r\n        .append('g')\r\n        .append('circle')\r\n        //.attr('class', 'linecircle1')\r\n        .attr('cx', linePath1.x())\r\n        .attr('cy', linePath1.y())\r\n        .attr(\"transform\", \"translate(\" + margin.left + \",0)\")\r\n        .attr(\"fill\", \"green\")\r\n        .attr('r', 5)\r\n        .on('mouseover', function() {\r\n            d3.select(this).transition().duration(500).attr('r', 5);\r\n        });\r\n    \r\n    svg.selectAll('circle').data(data).enter()\r\n        .append('g')\r\n        .append('circle')\r\n        //.attr('class', 'linecircle2')\r\n        .attr('cx', linePath2.x())\r\n        .attr('cy', linePath2.y())\r\n        .attr(\"transform\", \"translate(\" + margin.left + \",0)\")\r\n        .attr(\"fill\", \"yellow\")\r\n        .attr('r', 5);\r\n    \r\n} "
+     },
+     {
+      "name": "parameters",
+      "type": "ValuesArray",
+      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"placeParam\",\"placeParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"],[\"shopParam\",\"shopParam\"],[\"outletParam\",\"outletParam\"]]"
+     },
+     {
+      "name": "dataSource",
+      "type": "Datasource",
+      "value": "demo"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": "320"
+     },
+     {
+      "name": "priority",
+      "type": "Integer",
+      "value": 5
+     },
+     {
+      "name": "refreshPeriod",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "width",
+      "type": "Integer",
+      "value": "600"
+     },
+     {
+      "name": "htmlObject",
+      "type": "HtmlObject",
+      "value": "${h:demoDom}"
+     },
+     {
+      "name": "executeAtStart",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "preExecution",
+      "type": "JavaScript",
+      "value": "function f(){\r\n    //resizeGraphical(this);\r\n} "
+     },
+     {
+      "name": "postExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postFetch",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "preChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "tooltip",
+      "type": "Html",
+      "value": ""
+     }
+    ],
+    "rowName": "d3 Component",
+    "type": "Componentsd3",
+    "typeDesc": "D3 Component Component"
    }
   ]
  },
@@ -11146,6 +11240,78 @@
     "typeDesc": "sql over sqlJndi"
    },
    {
+    "id": "94434962-f552-9a00-da6c-cf09a449e78e",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "demo"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "select \r\n    \r\n     f.GuestNoTypeId,\r\n     f.GuestNoTypeName as Guest, -- '台型',\r\n     sum(a.SaleAmt)/sum(a.GuestQty) as PreSaleAmt,-- '人均消费',\r\n     (sum(a.SaleAmt)-sum(a.SaleCostAmt))/sum(a.GuestQty) as PreProAmt, -- '人均利润',\r\n     sum(a.CheckQty)/sum(b.TableQty) as TableTal -- '总翻台率'\r\n     from fact_sumcheck a\r\n   left join dim_guestnotype f on f.GuestNoTypeId = a.GuestNoTypeId\r\n   left join dim_outlet b on a.OutletId_t = b.OutletId_t\r\n   inner join dim_area c on b.AreaId = c.AreaId\r\n   inner join dim_brand d on b.BrandId = d.BrandId\r\n   inner join dim_place e on b.PlaceId = e.PlaceId\r\n where a.BusinessDate BETWEEN ${startDay} AND ${endDay}\r\n   and (d.BrandId_level1 = ${brandParam} OR ${brandParam} = -1 )\r\n   AND (e.PlaceId = ${placeParam} OR ${placeParam} = -1) \r\n   AND (c.AreaId_level1 = ${area1Param} OR ${area1Param} = -1)\r\n   AND (c.AreaId_level2 = ${area2Param} OR ${area2Param} = -1)\r\n   AND (c.AreaId_level3 = ${area3Param} OR ${area3Param} = -1)\r\n   AND (b.ShopId = ${shopParam} OR ${shopParam} = -1)\r\n   AND (b.OutletId = ${outletParam} OR ${outletParam} = -1)\r\ngroup by f.GuestNoTypeId,f.GuestNoTypeName\r\norder by f.GuestNoTypeId\r\n"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"placeParam\",\"placeParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"],[\"shopParam\",\"shopParam\",\"String\",\"\",\"\"],[\"outletParam\",\"outletParam\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[\"1\",\"2\",\"3\",\"4\"]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
     "id": "0435d98c-9a57-d6ea-7ecd-6a591b9a9cbd",
     "meta": "CDA",
     "meta_conntype": "sql.jndi",
@@ -11870,6 +12036,29 @@
  "filename": "/public/UI/Template3/Template3.cdfde",
  "layout": {
   "rows": [
+   {
+    "id": "61862744-58f3-32b1-7ed5-2e896da6f88c",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "svgCss"
+     },
+     {
+      "name": "resourceCode",
+      "type": "Resource",
+      "value": "/*\r\n.svg-container {\r\n    display: inline-block;\r\n    position: relative;\r\n    width: 100%;\r\n    padding-bottom: 100%;  aspect ratio \r\n    vertical-align: top;\r\n    overflow: hidden;\r\n}\r\n.svg-content-responsive {\r\n    display: inline-block;\r\n    position: absolute;\r\n    top: 10px;\r\n    left: 0;\r\n}\r\n\r\n.container{\r\n    height:100%;\r\n    width:100%;\r\n}\r\nsvg{\r\n    height:100%;\r\n    width:100%;\r\n}\r\n*/\r\nsvg, g {\r\n  pointer-events: all;\r\n}\r\n.axis path,\r\n.axis line {\r\n  fill: none;\r\n  stroke: #000;\r\n  shape-rendering: crispEdges;\r\n}\r\n\r\n.title {\r\n  text-anchor: middle;\r\n  font-weight: 700;\r\n}\r\n\r\n\r\n/*.x.axis path {\r\n  display: none;\r\n}*/\r\n\r\n.line {\r\n  fill: none;\r\n  /*\r\n  stroke: steelblue;\r\n  */\r\n  stroke-width: 1.5px;\r\n}\r\n\r\n.linecircle1 {\r\n  fill: green;\r\n}\r\n.linecircle2 {\r\n  fill: red;\r\n}\r\n.linecircle:hover {\r\n  fill: steelblue;\r\n}\r\n.flag {\r\n  stroke: gray;\r\n  stroke-dasharray: 5;\r\n  stroke-width: 1.5;\r\n  display: none;\r\n  pointer-events: none;\r\n}\r\n.tips {\r\n  pointer-events: none;\r\n  display: none;\r\n}\r\n.tips-border {\r\n  fill: #F3E4E4;\r\n  stroke: gray;        \r\n  stroke-width: 2;\r\n}\r\n.grid .tick {\r\n  stroke: lightgrey;\r\n  opacity: 0.7;\r\n}\r\n.grid path {\r\n  stroke-width: 0;\r\n} "
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Css"
+     }
+    ],
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource"
+   },
    {
     "id": "abd0b80a-3172-fd5a-b9ee-c31ccb131186",
     "parent": "UnIqEiD",
@@ -14984,7 +15173,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "门店投资回报盈利趋势 "
+      "value": "<!-- \n门店投资回报盈利趋势 \n-->\n<div id=\"demoDom\"></div> "
      },
      {
       "name": "fontSize",

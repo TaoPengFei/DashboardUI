@@ -34,6 +34,9 @@
       <Connection id="outletOperationQuery3" type="sql.jndi">
          <Jndi>jdbc_bi</Jndi>
       </Connection>
+      <Connection id="ringQuery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
       <Connection id="_________________KPI_____________________" type="sql.jndi">
          <Jndi/>
       </Connection>
@@ -315,6 +318,85 @@ FROM
     AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)
     AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)
     AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="ringQuery" id="ringQuery" type="sql">
+      <Name>ringQuery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="startDay" name="startDay" type="String"/>
+         <Parameter default="endDay" name="endDay" type="String"/>
+         <Parameter default="brandParam" name="brandParam" type="String"/>
+         <Parameter default="placeParam" name="placeParam" type="String"/>
+         <Parameter default="area1Param" name="area1Param" type="String"/>
+         <Parameter default="area2Param" name="area2Param" type="String"/>
+         <Parameter default="area3Param" name="area3Param" type="String"/>
+         <Parameter default="shopParam" name="shopParam" type="String"/>
+         <Parameter default="outletParam" name="outletParam" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT
+    IdName,
+    GuestQty
+FROM
+(
+	SELECT 
+			IdName,
+			IdName_en,
+			GuestQty
+	FROM
+			(
+				SELECT
+					 sum(`Fact_SumDay`.`CheckQty`) AS CheckQty,
+					 sum(`Fact_SumDay`.`GuestQty`) AS GuestQty
+			FROM
+                 `fact_sumday` INNER JOIN `dim_outlet` ON `fact_sumday`.`OutletId_t` = `dim_outlet`.`OutletId_t`
+                 INNER JOIN `dim_bidate` ON `fact_sumday`.`BIDateId` = `dim_bidate`.`BIDateId`
+                 INNER JOIN `dim_place` ON `fact_sumday`.`PlaceId` = `dim_place`.`PlaceId`
+                 INNER JOIN `dim_area` ON `fact_sumday`.`AreaId` = `dim_area`.`AreaId`
+                 INNER JOIN `dim_brand` ON `dim_outlet`.`BrandId` = `dim_brand`.`BrandId`
+             WHERE 
+                `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
+                AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
+                AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)
+                AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)
+                AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)
+                AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)
+                AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)
+                AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)
+			)AS tbl JOIN SY_SaleName WHERE SY_SaleName.Id IN (4)
+) AS B
+UNION ALL
+SELECT
+    IdName,
+        CheckQty
+FROM
+(
+	SELECT 
+			IdName,
+			IdName_en,
+			CheckQty
+	FROM
+			(
+				SELECT
+					 sum(`Fact_SumDay`.`CheckQty`) AS CheckQty,
+					 sum(`Fact_SumDay`.`GuestQty`) AS GuestQty
+                FROM
+    			     `fact_sumday` INNER JOIN `dim_outlet` ON `fact_sumday`.`OutletId_t` = `dim_outlet`.`OutletId_t`
+                     INNER JOIN `dim_bidate` ON `fact_sumday`.`BIDateId` = `dim_bidate`.`BIDateId`
+                     INNER JOIN `dim_place` ON `fact_sumday`.`PlaceId` = `dim_place`.`PlaceId`
+                     INNER JOIN `dim_area` ON `fact_sumday`.`AreaId` = `dim_area`.`AreaId`
+                     INNER JOIN `dim_brand` ON `dim_outlet`.`BrandId` = `dim_brand`.`BrandId`
+                 WHERE 
+                    `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
+                    AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
+                    AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)
+                    AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)
+                    AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)
+                    AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)
+                    AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)
+                    AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)
+			)AS tbl JOIN SY_SaleName WHERE SY_SaleName.Id IN (3)
+) AS A]]></Query>
    </DataAccess>
    <DataAccess access="public" connection="_________________KPI_____________________"
                id="_________________KPI_____________________"

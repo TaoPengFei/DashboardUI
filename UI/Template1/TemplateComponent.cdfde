@@ -1,0 +1,906 @@
+{
+ "components": {
+  "rows": [
+   {
+    "id": "OTHERCOMPONENTS",
+    "name": "Others",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "type": "Label",
+      "value": "Others"
+     }
+    ],
+    "type": "Label",
+    "typeDesc": "<i>Group</i>"
+   },
+   {
+    "id": "8c119e6e-8fc2-8f48-bf30-c09d33059518",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "tempCom"
+     },
+     {
+      "name": "listeners",
+      "type": "Listeners",
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:placeParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\",\"${p:shopParam}\",\"${p:outletParam}\"]"
+     },
+     {
+      "name": "parameters",
+      "type": "ValuesArray",
+      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"placeParam\",\"placeParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"],[\"shopParam\",\"shopParam\"],[\"outletParam\",\"outletParam\"]]"
+     },
+     {
+      "name": "dataSource",
+      "type": "Datasource",
+      "value": "tempQuery"
+     },
+     {
+      "name": "priority",
+      "type": "Integer",
+      "value": 5
+     },
+     {
+      "name": "htmlObject",
+      "type": "HtmlObject",
+      "value": "${h:tempDom}"
+     },
+     {
+      "name": "executeAtStart",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "preExecution",
+      "type": "JavaScript",
+      "value": "function f(){\n    var cccChartOpts = { \n        //type: 'PieChart',\n        type: 'BarChart',\n        chartOpts: {\n            //width: 100,\n            height: 160,\n            seriesInRows: false,\n            crossTabMode: false,\n            timeSeries: false,\n            legendVisible: false,\n            plotFrameVisible: false,\n            orthoAxisTicks: false,\n            //xAxisLabel_textAngle:  -0.55,\n            xAxisLabel_font: '4px sans-serif',\n            xAxisLabel_textOffset: '10',\n            axisOffset:   0.02,\n            axisGrid: false,\n            xAxisLabel_textAngle: -1,\n            xAxisLabel_textAlign: 'right',\n            xAxisLabel_textBaseline: 'top',\n            showYScale: false,\n            //plot2: true,\n            //plot2OrthoAxis: 2,\n            orthoAxisTickFormatter: function(value) {\n                return Utils.numberFormat(value, \"#A\");\n            },\n            valuesLabelStyle: 'inside',\n            valuesOptimizeLegibility: true,\n            valueFormat: function(value) {\n                return Utils.numberFormat(value, \"#,#.00\");\n            },\n            selectable: true,\n            hoverable:  true,\n            valuesFont: 'normal 9px \"Open Sans\"',\n            xAxisRule_strokeStyle: '#005CA7',\n            yAxisRule_strokeStyle: '#005CA7',\n            slice_innerRadiusEx: '50%',\n            slice_strokeStyle:   'white',\n            colors: ['#005CA7']\n            /*\n            colors: [\n                '#333333', '#777777', '#FFC20F', '#FFE085',\n                '#00325b', '#005CA7', '#0086F4', '#39A74A',\n                '#63CA73', '#80BCA3', '#655643', '#BF4D28'\n            ]    \n            */\n        }\n    };\n    this.setAddInOptions(\"templateType\",\"cccChart\", cccChartOpts);\n} "
+     },
+     {
+      "name": "postExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postFetch",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "tooltip",
+      "type": "Html",
+      "value": ""
+     },
+     {
+      "name": "modelHandler",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "template",
+      "type": "JavaScript",
+      "value": "function() { \n           \n    var template =  '<div class=\"row card\">' +\n                    '<% _.each(items, function(elem) { %>' +\n                    '  <div class=\"col-xs-12 col-sm-6 col-md-4 col-lg-3 single clickable\" data-category=\"<%=elem[0]%>\"> '+\n                    '    <div class=\"category\"> <b> <%= addin(elem[0], \"clippedText\", \"YearMonth\") %> </b> </div>'+\n                    //'    <div class=\"value\"> <%= formatter(elem[1], \"YearMonth\") %> </div> '+\n                    '    <div class=\"addin\"> <%= addin(elem[1], \"cccChart\", \"cccChart\") %> </div>'+\n                    '  </div>' +\n                    '<% }); %>' +\n                    '</div>'; \n     \n    return template;\n} "
+     },
+     {
+      "name": "templateType",
+      "type": "templateTypeCustom",
+      "value": "underscore"
+     },
+     {
+      "name": "events",
+      "type": "EditorValuesArray",
+      "value": "[]"
+     },
+     {
+      "name": "formatters",
+      "type": "EditorValuesArray",
+      "value": "[]"
+     },
+     {
+      "name": "rootElement",
+      "type": "String",
+      "value": "items"
+     },
+     {
+      "name": "extendableOptions",
+      "type": "JavaScript",
+      "value": ""
+     }
+    ],
+    "rowName": "Template Component",
+    "type": "ComponentsTemplateComponent",
+    "typeDesc": "Template Component"
+   },
+   {
+    "id": "SCRIPT",
+    "name": "Scripts",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "type": "Label",
+      "value": "Scripts"
+     }
+    ],
+    "type": "Label",
+    "typeDesc": "<i>Group</i>"
+   },
+   {
+    "id": "ec54cb12-2d6d-1c0a-4081-20f8364616b5",
+    "parent": "SCRIPT",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "js"
+     },
+     {
+      "name": "javaScript",
+      "type": "JavaScript",
+      "value": "\r\ndashboard.postInit = function() {\r\n    var chartsTypeToUpdate = ['cccChart', 'cccChart'];\r\n    var chartsToUpdate = _.filter(dashboard.components, function(elem, index) {\r\n        return (chartsTypeToUpdate.indexOf(elem.type) >= 0);\r\n    });\r\n    \r\n    var resizeChart = function() {\r\n        _.each(chartsToUpdate, function(elem, index){\r\n            elem.chart.options.width = elem.placeholder().width();\r\n            elem.chartDefinition.width = elem.placeholder().width();\r\n            elem.chart.render(true, true, false);\r\n        });\r\n    }; \r\n    \r\n    var throttle = _.throttle(resizeChart, 100, {leading: false});\r\n    $(document).ready(function() {\r\n        $(window).resize(throttle);\r\n    });\r\n}; \r\n\r\n/**\r\n * 解决CDE图形的自适应\r\n */\r\nfunction resizeGraphical(cdeObj){\r\n    var myself = cdeObj;\r\n    //设置初始宽度 与placeholder()匹配\r\n    myself.chartDefinition.width = myself.placeholder().width();\r\n    //仅在图表组件的第一个执行上附加调整处理程序\r\n    if( !cdeObj.resizeHandlerAttached ){\r\n        //确保渲染只在事件发生后被触发\r\n        var debouncedResize = _.debounce(function(){\r\n            //再次显示 图形\r\n            myself.placeholder().children().css('visibility','visible');\r\n            // 改变 图形 的 宽度\r\n            myself.chartDefinition.width = myself.placeholder().width();\r\n            myself.render( myself.query.lastResults() );\r\n        },200);\r\n        // 高度调整 处理\r\n        $(window).resize(function(){\r\n            //仅当容器已更改宽度时才触发调整大小\r\n            if( myself.chartDefinition.width != myself.placeholder().width() ){\r\n                //暂时隐藏图表，使溢出不会发生\r\n                myself.placeholder().children().css('visibility','hidden');\r\n                //触发与调整\r\n                debouncedResize();\r\n            }\r\n        });\r\n        cdeObj.resizeHandlerAttached = true;\r\n    }\r\n} \r\n\r\nwindow.onresize = function(){\r\n    console.log('size changed')\r\n} "
+     }
+    ],
+    "rowName": "Function",
+    "type": "ComponentsFunction",
+    "typeDesc": "JavaScript function"
+   },
+   {
+    "id": "GENERIC",
+    "name": "Generic",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "type": "Label",
+      "value": "Generic"
+     }
+    ],
+    "type": "Label",
+    "typeDesc": "<i>Group</i>"
+   },
+   {
+    "id": "3a4fc280-bfac-b5f9-57e5-e195b3aebaf2",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "startDay"
+     },
+     {
+      "name": "propertyDateValue",
+      "type": "Date",
+      "value": "2016-01-01"
+     },
+     {
+      "name": "bookmarkable",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "public",
+      "type": "Boolean",
+      "value": "false"
+     }
+    ],
+    "rowName": "Date Parameter",
+    "type": "ComponentsDateParameter",
+    "typeDesc": "Date Parameter"
+   },
+   {
+    "id": "81dc9337-fd6c-5110-de2a-17bc247f04b5",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "endDay"
+     },
+     {
+      "name": "propertyDateValue",
+      "type": "Date",
+      "value": "today"
+     },
+     {
+      "name": "bookmarkable",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "public",
+      "type": "Boolean",
+      "value": "false"
+     }
+    ],
+    "rowName": "Date Parameter",
+    "type": "ComponentsDateParameter",
+    "typeDesc": "Date Parameter"
+   },
+   {
+    "id": "8fbfec6b-e848-0a8f-59dd-d56c3e43c72f",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "brandParam"
+     },
+     {
+      "name": "propertyValue",
+      "type": "String",
+      "value": "-1"
+     },
+     {
+      "name": "parameterViewRole",
+      "type": "parameterViewRoleCustom",
+      "value": "unused"
+     },
+     {
+      "name": "bookmarkable",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "public",
+      "type": "Boolean",
+      "value": "false"
+     }
+    ],
+    "rowName": "Simple Parameter",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter"
+   },
+   {
+    "id": "ccb77daa-c294-667b-d93b-627933620893",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "placeParam"
+     },
+     {
+      "name": "propertyValue",
+      "type": "String",
+      "value": "-1"
+     },
+     {
+      "name": "parameterViewRole",
+      "type": "parameterViewRoleCustom",
+      "value": "unused"
+     },
+     {
+      "name": "bookmarkable",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "public",
+      "type": "Boolean",
+      "value": "false"
+     }
+    ],
+    "rowName": "Simple Parameter",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter"
+   },
+   {
+    "id": "1deff53f-d316-e0e8-0da9-aa8cfd9227c9",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "area1Param"
+     },
+     {
+      "name": "propertyValue",
+      "type": "String",
+      "value": "-1"
+     },
+     {
+      "name": "parameterViewRole",
+      "type": "parameterViewRoleCustom",
+      "value": "unused"
+     },
+     {
+      "name": "bookmarkable",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "public",
+      "type": "Boolean",
+      "value": "false"
+     }
+    ],
+    "rowName": "Simple Parameter",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter"
+   },
+   {
+    "id": "9796811a-82b5-5c55-0098-c4b36dadd38b",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "area2Param"
+     },
+     {
+      "name": "propertyValue",
+      "type": "String",
+      "value": "-1"
+     },
+     {
+      "name": "parameterViewRole",
+      "type": "parameterViewRoleCustom",
+      "value": "unused"
+     },
+     {
+      "name": "bookmarkable",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "public",
+      "type": "Boolean",
+      "value": "false"
+     }
+    ],
+    "rowName": "Simple Parameter",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter"
+   },
+   {
+    "id": "a0e9f4b4-926a-97c2-da04-159bb1ba7bc2",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "area3Param"
+     },
+     {
+      "name": "propertyValue",
+      "type": "String",
+      "value": "-1"
+     },
+     {
+      "name": "parameterViewRole",
+      "type": "parameterViewRoleCustom",
+      "value": "unused"
+     },
+     {
+      "name": "bookmarkable",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "public",
+      "type": "Boolean",
+      "value": "false"
+     }
+    ],
+    "rowName": "Simple Parameter",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter"
+   },
+   {
+    "id": "3b561c90-3c43-497e-3375-7bdc45a78cad",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "shopParam"
+     },
+     {
+      "name": "propertyValue",
+      "type": "String",
+      "value": "-1"
+     },
+     {
+      "name": "parameterViewRole",
+      "type": "parameterViewRoleCustom",
+      "value": "unused"
+     },
+     {
+      "name": "bookmarkable",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "public",
+      "type": "Boolean",
+      "value": "false"
+     }
+    ],
+    "rowName": "Simple Parameter",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter"
+   },
+   {
+    "id": "42d1b483-7feb-d32b-ce0f-c34a8e181a4b",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "outletParam"
+     },
+     {
+      "name": "propertyValue",
+      "type": "String",
+      "value": "-1"
+     },
+     {
+      "name": "parameterViewRole",
+      "type": "parameterViewRoleCustom",
+      "value": "unused"
+     },
+     {
+      "name": "bookmarkable",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "public",
+      "type": "Boolean",
+      "value": "false"
+     }
+    ],
+    "rowName": "Simple Parameter",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter"
+   }
+  ]
+ },
+ "datasources": {
+  "rows": [
+   {
+    "id": "SQL",
+    "name": "SQL Queries",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "type": "Label",
+      "value": "SQL Queries"
+     }
+    ],
+    "type": "Label",
+    "typeDesc": "<i>Group</i>"
+   },
+   {
+    "id": "f25b5b9a-10a7-7ab8-8a82-581f3545381f",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "tempQuery"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "SELECT\r\n    tbl.YearMonth AS YearMonth,\r\n\tCONCAT( \"[\", GROUP_CONCAT(T1 ORDER BY ItemDeptId), \"]\"  ) AS cccChart\r\nFROM\r\n    (\r\n\t\tSELECT\r\n\t\t\t`dim_bidate`.`YearNo`,\r\n\t\t\t`dim_bidate`.`MonthNo`,\r\n\t\t\t`dim_bidate`.`YearMonth`,\r\n\t\t\t`dim_itemdeptment`.`ItemDeptId_level2` AS ItemDeptId,\r\n\t\t\t`dim_itemdeptment`.`ItemDeptName_level2` AS ItemDeptName,\r\n\t\t\tsum(`fact_sumitem`.`ItemSaleAmt`) AS ItemSaleAmt,\r\n\t\t\tCONCAT( '[\"',`dim_itemdeptment`.`ItemDeptName_level2`,'\",\"',sum(`fact_sumitem`.`ItemSaleAmt`), '\"]') AS T1\r\n\t\tFROM\r\n\t\t\t`fact_sumitem` INNER JOIN `dim_outlet` ON `fact_sumitem`.`OutletId_t` = `dim_outlet`.`OutletId_t`\r\n\t\t\tINNER JOIN `dim_bidate` ON `fact_sumitem`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n\t\t\tINNER JOIN `dim_itemdeptment` ON `fact_sumitem`.`ItemDeptId` = `dim_itemdeptment`.`ItemDeptId`\r\n\t\t\tINNER JOIN `dim_brand` ON `dim_outlet`.`BrandId` = `dim_brand`.`BrandId`\r\n\t\t\tINNER JOIN `dim_place` ON `dim_outlet`.`PlaceId` = `dim_place`.`PlaceId`\r\n\t\t    INNER JOIN `dim_area` ON `dim_outlet`.`AreaId` = `dim_area`.`AreaId`\r\n        WHERE \r\n            `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n            AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n            AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n            AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n            AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\n            AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)\r\n            AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)\r\n            AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)\r\n        GROUP BY\r\n\t\t\t`dim_itemdeptment`.`ItemDeptName_level2`,\r\n\t\t\t`dim_bidate`.`YearMonth`,\r\n\t\t\t`dim_itemdeptment`.`ItemDeptId_level2`\r\n\t\tORDER BY\r\n\t\t\t`dim_bidate`.`YearNo` ASC,\r\n\t\t\t`dim_bidate`.`MonthNo` ASC,\r\n\t\t\t`dim_itemdeptment`.`ItemDeptId_level2` ASC\r\n    ) AS tbl\r\nGROUP BY tbl.YearMonth\r\nORDER BY\r\n\ttbl.`YearNo` ASC,\r\n\ttbl.`MonthNo` ASC"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"placeParam\",\"placeParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"],[\"shopParam\",\"shopParam\",\"String\",\"\",\"\"],[\"outletParam\",\"outletParam\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   }
+  ]
+ },
+ "filename": "/public/UI/Template1/TemplateComponent.cdfde",
+ "layout": {
+  "rows": [
+   {
+    "id": "a55e6b5c-24bb-3704-817e-e5da7c19cdaa",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "clippedText"
+     },
+     {
+      "name": "resourceFile",
+      "type": "ResourceFile",
+      "value": "${solution:../js/clippedText.js}"
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Javascript"
+     }
+    ],
+    "type": "LayoutResourceFile",
+    "typeDesc": "Resource"
+   },
+   {
+    "id": "f6714a19-b3d2-bda5-cef2-ccb5259dcd41",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "cccChart"
+     },
+     {
+      "name": "resourceFile",
+      "type": "ResourceFile",
+      "value": "${solution:../js/cccChart.js}"
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Javascript"
+     }
+    ],
+    "type": "LayoutResourceFile",
+    "typeDesc": "Resource"
+   },
+   {
+    "id": "0b99f025-8176-2fe1-b65a-c52ab3e1e629",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "css_1"
+     },
+     {
+      "name": "resourceCode",
+      "type": "Resource",
+      "value": ".single {\n    text-align: center;\n    border: 1px solid #eee;\n    cursor: pointer;\n    padding: 10px 0px;\n} \n\n.single:hover, .single.selected:hover {\n    border: 1px solid #49AEC0;\n    background-color: rgba(240, 240, 240, 0.8);\n}\n\n.single.selected {\n    background-color: rgba(240, 240, 240, 0.4);\n}\n\n.single .value {\n    font-size: 18px;\n    color: #888;\n    font-weight: 300;\n    margin: 10px;\n}\n\n\n.sparklineContainer {\n    margin: 10px 0px;\n}\n\n.clippedTextContainer {\n    margin: 0px 20px;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    overflow: hidden;\n    background-color: rgba(220,220,220,0.8);\n    font-size: 26px;\n    color: #fff;\n}\n\n.addin .bubble {\n    display: inline-block;\n    text-align: center;\n    vertical-align: middle;\n    border: 1px solid #eee;\n    border-radius: 100%;\n}\n\n\n.totalSales .sales {\n    text-align: right;\n}\n\n\n.trendArrowContainer .arrow {\n    font-size: 30px;\n}\n\n.hyperlink {\n    margin: 5px 0px;\n}\n\n.template {\n    margin: 20px 0px;\n}\n\n.clippedText {\n    margin: 10px 0px 5px 0px;\n}\n\n\n\n.addin .clippedText {\n    width: 50%;\n    margin-right: 25%;\n    margin-left: 25%;\n} \n\n.addin .bubble {\n    display: inline-block;\n    text-align: center;\n    vertical-align: middle;\n}\n\n.bubbleContainer {\n    display: table-cell;\n    vertical-align: middle;\n    text-align: center;\n} "
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Css"
+     }
+    ],
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource"
+   },
+   {
+    "id": "1ca70f46-edf9-9eca-cb75-c205e8787157",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "css_2"
+     },
+     {
+      "name": "resourceCode",
+      "type": "Resource",
+      "value": "@font-face{\r\n    font-family: TPF_Font_Thin;\r\n    src: url('/pentaho/BI/fonts/Comfortaa_Thin.ttf'),\r\n         url('/pentaho/BI/fonts/Comfortaa_Thin.eot');  /* IE9 */ \r\n}\r\nbody{\r\n    background-color:#ECF0F5;\r\n}\r\n.container {\r\n    width:100%;\r\n    height: 100%;\r\n    overflow: auto;\r\n    position: absolute; \r\n    padding-top: 10px;\r\n    padding-right: 0px;\r\n    padding-left: 10px;\r\n    padding-bottom: 10px;\r\n    margin-right: auto;\r\n    margin-left: auto;\r\n}\r\n/*   #   */\r\n.panel-default {\r\n    border: none;\r\n    border-radius: 0px;\r\n    margin-bottom: 0px;\r\n    box-shadow: none;\r\n    -webkit-box-shadow: none;\r\n}\r\n.panel-default > .panel-heading {\r\n    color: #777;\r\n    background-color: #fff;\r\n    border-color: #e6e6e6;\r\n    padding: 10px 10px;\r\n}\r\n.panel-default > .panel-body {\r\n    padding: 10px;\r\n    padding-bottom: 0px;\r\n}\r\n.panel-default > .panel-body ul {\r\n    overflow: hidden;\r\n    padding: 0;\r\n    margin: 0px;\r\n    margin-top: -5px;\r\n}\r\n.panel-default > .panel-body ul li {\r\n    line-height: 27px;\r\n    list-style-type: none;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n}\r\n.panel-default > .panel-body ul li .time {\r\n    color: #a1a1a1;\r\n    float: right;\r\n    padding-right: 5px;\r\n} \r\n\r\n\r\n .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, \r\n .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, \r\n .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, \r\n .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, \r\n .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, \r\n .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, \r\n .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, \r\n .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, \r\n .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, \r\n .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, \r\n .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, \r\n .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {\r\n    position: relative;\r\n    min-height: 1px;\r\n    padding-right: 10px;\r\n    padding-left: 0px;\r\n} \r\n.row {\r\n    margin-right: 0px;\r\n    margin-left: 0px;\r\n} \r\n#dateRangePickerDom > input {\r\n    height: 20px;\r\n    border-radius:4px;\r\n    cursor:pointer;\r\n    border:0px solid #DBDBDB;\r\n    border-right:1px solid #DBDBDB; ;\r\n}\r\nhr {\r\n    margin-top: 10px; \r\n    margin-bottom: 0px; \r\n    border: 0;\r\n    border-top: 0px solid #eee; \r\n} \r\n#saleAmtDom_KPI, #ATVDom_KPI, #discountDom_KPI, \r\n#overTableVDom_KPI, #backItemDom_KPI, #rushItamDom_KPI {\r\n    color:#666666;\r\n    font-size:40px;\r\n    font-weight:lighter;\r\n    font-family:TPF_Font_Thin;\r\n} \r\n#row3{\r\n    padding-right: 10px;\r\n} \r\n#row4, #row5, #row6, #row7, #row8, #row9, #row10, .row2_col1-xs, .row1_col1-xs{\r\n    margin-right:10px;\r\n} \r\n#row3_col1{\r\n    margin-right:-10px;\r\n} \r\n\r\n\r\n/*\r\n#header { margin-top:1em; }\r\nh2 { font-size:1.4em; padding-top:7px; padding-left:1em; height:1.6em; }\r\n.topRow1 { font-size:1.2em; font-weight:700; margin-left:1em; }\r\n.topRow2 { font-size:1em; margin-left:1em; }\r\nhr.topRowHR { height:2px; width:900px; color:red; }\r\n#ParamRow { font-size:0.9em; vertical-align:bottom; margin-bottom:2em; }\r\n#ParamRow select { font-size:0.9em; vertical-align:top; }\r\n#ParamRow input { font-size:0.9em; vertical-align:top; }\r\n#nResultTable { margin-top:2em; }\r\ntable tr.even, table tr.odd{ background-color: white; }\r\ntable thead th { border-bottom: 1px solid #CCC; background-color: #fff; }\r\ntable tbody td.number, th.number{ text-align: right; }\r\ntable tbody td.string, th.string{ text-align: left; }\r\ntable tfooter td { background-color: white; }\r\n.ui-widget-header { background: white; color: white; border-bottom:0px } \r\n\r\nthead td\r\n*/\r\n.table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th {\r\n    background-color: white;\r\n}\r\n.table-striped > tbody > tr:nth-child(even) > td, .table-striped > tbody > tr:nth-child(even) > th {\r\n    background-color: #F7F8F9;\r\n}\r\n.table-bordered > thead > tr > th, .table-bordered > thead > tr > td {\r\n    border-bottom-width: 2px;\r\n    text-align: center;\r\n    background-color: #ECEFF1;\r\n}\r\ntable tbody tr.even{\r\n    background-color: red;\r\n}\r\ntable { \r\n    text-align:right; \r\n} \r\ntr td:nth-child(1){\r\n        text-align:left;\r\n}/*把第1个td的背景设为黑色*/\r\n\r\n\r\n\r\n\r\n/********************************************************/\r\n        #test .arc2 {\r\n            stroke-weight:0.1;\r\n            fill: #3660b0;\r\n        }\r\n        #outer {\r\n            background:#FFFFFF;\r\n            border-radius: 5px;\r\n            color: #000;\r\n        }\r\n        #div1, #div2, #div3, #div4 {\r\n            width: 33%;\r\n            height: 200px;\r\n            box-sizing: border-box;\r\n            float: left;\r\n        }\r\n        #div2 .arc {\r\n            stroke-weight: 0.1;\r\n            fill: #f0a417;\r\n        }\r\n        #div2 .arc2 {\r\n            stroke-weight: 0.1;\r\n            fill: #b00d08;\r\n        }\r\n        #div3 .arc {\r\n            stroke-weight: 0.1;\r\n            fill: #1d871b;\r\n        }\r\n        .selectedRadial {\r\n            border-radius: 3px;\r\n            background: #f4f4f4;\r\n            color: #000;\r\n            box-shadow: 0 1px 5px rgba(0,0,0,0.4);\r\n            -moz-box-shadow: 0 1px 5px rgba(0,0,0,0.4);\r\n            border: 1px solid rgba(200,200,200,0.85);\r\n        }\r\n        .radial {\r\n            border-radius: 3px;\r\n            background: #FFFFFF;\r\n            color: #000;\r\n\r\n        }\r\n/********************************************/\r\n.single {\r\n    text-align: center;\r\n    border: 1px solid white;\r\n} \r\n.clippedTextContainer {\r\n    margin: 0px 20px;\r\n    text-overflow: ellipsis;\r\n    white-space: nowrap;\r\n    overflow: hidden;\r\n    \r\n    background-color: white;\r\n    \r\n    font-size: 26px;\r\n    color:#666666;\r\n    font-weight:lighter;\r\n    font-family:TPF_Font_Thin;\r\n    font-size: 20px;\r\n} "
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Css"
+     }
+    ],
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource"
+   },
+   {
+    "id": "d5d92854-35c5-6a27-4b9a-b9223ec1a984",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row1"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutRow",
+    "typeDesc": "Row"
+   },
+   {
+    "id": "52717ce9-a341-0ea9-13b1-2874305ebff6",
+    "parent": "d5d92854-35c5-6a27-4b9a-b9223ec1a984",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row1_col1"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "bbb916dc-f258-c50a-8cea-78d6041c9253",
+    "parent": "52717ce9-a341-0ea9-13b1-2874305ebff6",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row1_col1_panel"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": "1200"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "type": "bootstrapPanelStyleCustom",
+      "value": "panel-default"
+     }
+    ],
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel"
+   },
+   {
+    "id": "d8a44d4f-fb78-3968-2be3-1c17621ec8a7",
+    "parent": "bbb916dc-f258-c50a-8cea-78d6041c9253",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row1_col1_panel_header"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelHeader",
+    "typeDesc": "Panel Header"
+   },
+   {
+    "id": "bfb9e633-f6ed-5c5c-79ea-2148ab0dea60",
+    "parent": "d8a44d4f-fb78-3968-2be3-1c17621ec8a7",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row1_col1_panel_header_html"
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-bar-chart\" style=\"padding-right: 5px;\"></i> 菜品分类销售额(按月)\r\n</div> "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "5b7add25-0fd4-3d18-4ef9-fe06456e11f3",
+    "parent": "bbb916dc-f258-c50a-8cea-78d6041c9253",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row1_col1_panel_body"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body"
+   },
+   {
+    "id": "710cfdde-a305-dddc-c3a3-13d0ff79f487",
+    "parent": "5b7add25-0fd4-3d18-4ef9-fe06456e11f3",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row1_col1_panel_body_html"
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "<div id='tempDom'></div> "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   }
+  ],
+  "title": "CDF - Sample structure"
+ }
+}

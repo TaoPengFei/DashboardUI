@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="templateQuery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" connection="templateQuery" id="templateQuery" type="sql">
+      <Name>templateQuery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT DISTINCT
+     `dim_bidate`.`YearMonth`,
+     sum(`fact_sumday`.`SaleAmt`)
+FROM
+     `fact_sumday` INNER JOIN `dim_bidate` ON `fact_sumday`.`BIDateId` = `dim_bidate`.`BIDateId`
+WHERE
+     `dim_bidate`.`BIDate` BETWEEN '2016-01-01'AND '2017-05-01'
+GROUP BY
+     `dim_bidate`.`YearMonth`]]></Query>
+   </DataAccess>
+</CDADescriptor>

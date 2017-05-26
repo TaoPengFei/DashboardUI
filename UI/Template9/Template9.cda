@@ -300,39 +300,78 @@ group by b.YearMonth]]></Query>
          <Parameter default="shopParam" name="shopParam" type="String"/>
          <Parameter default="outletParam" name="outletParam" type="String"/>
       </Parameters>
-      <Query><![CDATA[select 
-     b.YearMonth as yearmonth,
-     d.AreaName_level1 as areaname1,
-     c.OutletName as outletname,
-     0 as it,
-     format(sum(a.SaleAmt),2) as saleamt,
-     0 as it1,
-     format(sum(a.BudgetSaleAmt),2) as budgetsaleamt,
-     0 as it2,
-     case when sum(a.BudgetSaleAmt) = 0 then '0.00'
-     when sum(a.BudgetSaleAmt) = null then '0.00'
-     else sum(a.SaleAmt)/sum(a.BudgetSaleAmt)  end as percent
-from fact_sumday a 
-inner join dim_bidate b on a.BIDateId = b.BIDateId
-inner join dim_outlet c on a.OutletId_t = c.OutletId_t
-inner join dim_area d on c.AreaId = d.AreaId
-inner join dim_brand  e on c.BrandId = e.BrandId
-inner join dim_place f on c.PlaceId = f.PlaceId
+      <Query><![CDATA[SELECT 
+    tbl.YearMonth,        -- 年月
+	  tbl.areaname1,
+    tbl.outletname,
+    tbl.yingye,
+    format(tbl.t1,2),     	-- 当期金额
+	CASE WHEN t2 = 0 OR t2 IS NULL
+		THEN 0.00
+	ELSE  concat(format(((t1-t2) / t2) *100,2),'%') END as percentyingye,		-- 营业额环比 
+    format(tbl.t3,2) ,   --  目标金额
+	CASE WHEN t4 = 0 OR t4 IS NULL
+		THEN 0.00
+	ELSE  concat(format(((t3-t4) / t4) * 100,2),'%') END 	as  percentmubiao,    -- 目标金额环比
+ 
+  case when t3 = 0 then '0.00'
+     when t3 = null then '0.00'
+     else concat(format(t1/t3 *100,2),'%')  end as percent
 
+	
+    
+   
 
-where 
-      b.BIDate between ${startDay} and ${endDay}
-      and (e.BrandId_level1 = ${brandParam} or ${brandParam} = -1)
-      and (d.AreaId_level1 = ${area1Param} or ${area1Param} = -1)
-      and (d.AreaId_level2 = ${area2Param} or ${area2Param} = -1)
-      and (d.AreaId_level3 = ${area3Param} or ${area3Param} = -1)
+FROM
+(
+	SELECT 
+		DATE_FORMAT(b1.BIDate,'%Y-%m') AS YearMonth,
+    e.AreaName_level1 as areaname1,
+    c.OutletName as outletname,
+    0 as yingye,
+		SUM(a1.SaleAmt) AS t1,		-- 当期金额
+		(		
+			SELECT 
+				CASE WHEN a2.SaleAmt = 0 OR a2.SaleAmt IS NULL
+					THEN 0.00
+				ELSE SUM(a2.SaleAmt) END
+			FROM fact_sumday AS a2 INNER JOIN dim_bidate AS b2 ON a2.BIDateId = b2.BIDateId 
+                       
+			WHERE DATE_FORMAT(b1.BIDate,'%Y-%m') = DATE_FORMAT(DATE_ADD(b2.BIDate,INTERVAL 1 MONTH),'%Y-%m')		-- 表的自连接实现
+           
+
+		) AS t2,		-- 环期金额
+    SUM(a1.BudgetSaleAmt) AS t3,		-- 当期目标金额
+		(		
+			SELECT 
+				CASE WHEN a2.BudgetSaleAmt = 0 OR a2.BudgetSaleAmt IS NULL
+					THEN 0.00
+				ELSE SUM(a2.BudgetSaleAmt) END
+			FROM fact_sumday AS a2 INNER JOIN dim_bidate AS b2 ON a2.BIDateId = b2.BIDateId 
+                       
+			WHERE DATE_FORMAT(b1.BIDate,'%Y-%m') = DATE_FORMAT(DATE_ADD(b2.BIDate,INTERVAL 1 MONTH),'%Y-%m')		-- 表的自连接实现
+           
+
+		) AS t4		-- 环期目标金额
+		
+	FROM fact_sumday AS a1 INNER JOIN dim_bidate AS b1 ON a1.BIDateId = b1.BIDateId
+                         inner join dim_outlet c on a1.OutletId_t = c.OutletId_t
+												inner join dim_brand  d on c.BrandId = d.BrandId
+												inner join dim_area e on c.AreaId = e.AreaId
+												inner join dim_place f on c.PlaceId = f.PlaceId
+       
+  where  
+             (d.BrandId_level1 = ${brandParam}  or ${brandParam} = -1)
+             and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)
+      and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)
+      and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)
       and (c.ShopId = ${shopParam} or ${shopParam} = -1)
       and (c.OutletId = ${outletParam} or ${outletParam} = -1)
       and (f.PlaceId = ${placeParam} or ${placeParam} = -1)
 
-
-
-group by b.YearMonth,d.AreaName_level1,c.OutletName]]></Query>
+	GROUP BY 1
+) AS tbl
+WHERE tbl.YearMonth BETWEEN DATE_FORMAT(${startDay},'%Y-%m') AND DATE_FORMAT(${endDay},'%Y-%m')]]></Query>
    </DataAccess>
    <DataAccess access="public" connection="row4_col_query" id="row4_col_query" type="sql">
       <Name>row4_col_query</Name>
@@ -349,29 +388,68 @@ group by b.YearMonth,d.AreaName_level1,c.OutletName]]></Query>
          <Parameter default="shopParam" name="shopParam" type="String"/>
          <Parameter default="outletParam" name="outletParam" type="String"/>
       </Parameters>
-      <Query><![CDATA[select 
-     b.BIDate as bidate,
-     c.OutletName as outletname,
-     0 as it,
-     format(sum(a.SaleAmt),2) as saleamt,
-     0 as it1,
-     format(sum(a.BudgetSaleAmt),2) as budgetsaleamt,
-     0 as it2,
-     case when sum(a.BudgetSaleAmt) = 0 then '0.00'
-     when sum(a.BudgetSaleAmt) = null then '0.00'
-     else sum(a.SaleAmt)/sum(a.BudgetSaleAmt)  end as percent
-from fact_sumday a 
-inner join dim_bidate b on a.BIDateId = b.BIDateId
-inner join dim_outlet c on a.OutletId_t = c.OutletId_t
-inner join dim_brand  d on c.BrandId = d.BrandId
-inner join dim_area e on c.AreaId = e.AreaId
-inner join dim_place f on c.PlaceId = f.PlaceId
+      <Query><![CDATA[SELECT 
+    tbl.YearMonth,        -- 年月
+	 
+    tbl.outletname,
+    tbl.yingye,
+    format(tbl.t1,2),     	-- 当期金额
+	CASE WHEN t2 = 0 OR t2 IS NULL
+		THEN 0.00
+	ELSE  concat(format(((t1-t2) / t2) *100,2),'%') END as percentyingye,		-- 营业额环比 
+    format(tbl.t3,2) ,   -- 当期金额
+	CASE WHEN t4 = 0 OR t4 IS NULL
+		THEN 0.00
+	ELSE  concat(format(((t3-t4) / t4) * 100,2),'%') END     as  percentmubiao,    -- 目标金额环比
+ 
+  case when t3 = 0 then '0.00'
+     when t3 = null then '0.00'
+     else concat(format(t1/t3 * 100,2),'%')  end as percent
 
+	
+    
+   
 
-where 
-      b.BIDate between ${startDay} and ${endDay}
-      and (d.BrandId_level1 = ${brandParam} or ${brandParam} = -1)
-      and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)
+FROM
+(
+	SELECT 
+		b1.BIDate AS YearMonth,
+   
+    c.OutletName as outletname,
+    0 as yingye,
+		SUM(a1.SaleAmt) AS t1,		-- 当期金额
+		(		
+			SELECT 
+				CASE WHEN a2.SaleAmt = 0 OR a2.SaleAmt IS NULL
+					THEN 0.00
+				ELSE SUM(a2.SaleAmt) END
+			FROM fact_sumday AS a2 INNER JOIN dim_bidate AS b2 ON a2.BIDateId = b2.BIDateId 
+                       
+			WHERE b1.BIDate = DATE_ADD(b2.BIDate,INTERVAL 1 MONTH)		-- 表的自连接实现
+           
+
+		) AS t2,		-- 环期金额
+    SUM(a1.BudgetSaleAmt) AS t3,		-- 当期目标金额
+		(		
+			SELECT 
+				CASE WHEN a2.BudgetSaleAmt = 0 OR a2.BudgetSaleAmt IS NULL
+					THEN 0.00
+				ELSE SUM(a2.BudgetSaleAmt) END
+			FROM fact_sumday AS a2 INNER JOIN dim_bidate AS b2 ON a2.BIDateId = b2.BIDateId 
+                       
+			WHERE b1.BIDate = DATE_ADD(b2.BIDate,INTERVAL 1 MONTH)		-- 表的自连接实现
+           
+
+		) AS t4		-- 环期目标金额
+		
+	FROM fact_sumday AS a1 INNER JOIN dim_bidate AS b1 ON a1.BIDateId = b1.BIDateId
+                         inner join dim_outlet c on a1.OutletId_t = c.OutletId_t
+												inner join dim_brand  d on c.BrandId = d.BrandId
+												inner join dim_area e on c.AreaId = e.AreaId
+												inner join dim_place f on c.PlaceId = f.PlaceId
+        where  
+             (d.BrandId_level1 = ${brandParam}  or ${brandParam} = -1)
+             and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)
       and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)
       and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)
       and (c.ShopId = ${shopParam} or ${shopParam} = -1)
@@ -379,8 +457,9 @@ where
       and (f.PlaceId = ${placeParam} or ${placeParam} = -1)
 
 
-
-group by b.BIDate,c.OutletName]]></Query>
+	GROUP BY 1
+) AS tbl
+WHERE tbl.YearMonth BETWEEN (${startDay}) AND (${endDay})]]></Query>
    </DataAccess>
    <DataAccess access="public" connection="________select______" id="________select______"
                type="sql">
