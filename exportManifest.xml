@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:ExportManifest xmlns:ns2="http://www.pentaho.com/schema/">
-    <ExportManifestInformation exportDate="26-05-2017 05:14:31 CST" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
+    <ExportManifestInformation exportDate="27-05-2017 01:57:02 CST" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
     <ExportManifestEntity path="UI">
         <ExportManifestProperty>
             <EntityMetaData name="UI" createdDate="2017-05-04T16:22:05.302+08:00" isFolder="true" path="UI" isHidden="false" locale="zh_CN" title="UI"/>
@@ -721,9 +721,45 @@
             </EntityAcl>
         </ExportManifestProperty>
     </ExportManifestEntity>
+    <ExportManifestEntity path="UI/css/clippedText.css">
+        <ExportManifestProperty>
+            <EntityMetaData name="clippedText.css" createdDate="2017-05-27T13:45:02.871+08:00" isFolder="false" path="UI/css/clippedText.css" isHidden="true" locale="zh_CN" title="clippedText"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
     <ExportManifestEntity path="UI/css/radialProgress.css">
         <ExportManifestProperty>
             <EntityMetaData name="radialProgress.css" createdDate="2017-05-17T10:29:00.211+08:00" isFolder="false" path="UI/css/radialProgress.css" isHidden="true" locale="zh_CN" title="radialProgress"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/css/steelWheelsSample.css">
+        <ExportManifestProperty>
+            <EntityMetaData name="steelWheelsSample.css" createdDate="2017-05-27T13:45:12.047+08:00" isFolder="false" path="UI/css/steelWheelsSample.css" isHidden="true" locale="zh_CN" title="steelWheelsSample"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/css/trendArrow.css">
+        <ExportManifestProperty>
+            <EntityMetaData name="trendArrow.css" createdDate="2017-05-27T13:45:22.187+08:00" isFolder="false" path="UI/css/trendArrow.css" isHidden="true" locale="zh_CN" title="trendArrow"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -1012,6 +1048,138 @@
     <ExportManifestEntity path="UI/js/Echarts3.6.0/echarts.min.js">
         <ExportManifestProperty>
             <EntityMetaData name="echarts.min.js" createdDate="2017-05-26T09:37:50.234+08:00" isFolder="false" path="UI/js/Echarts3.6.0/echarts.min.js" isHidden="true" locale="zh_CN" title="echarts.min"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/js/Protovis">
+        <ExportManifestProperty>
+            <EntityMetaData name="Protovis" createdDate="2017-05-27T11:20:00.068+08:00" isFolder="true" path="UI/js/Protovis" isHidden="false" locale="zh_CN" title="Protovis"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/js/Protovis/bubble.js">
+        <ExportManifestProperty>
+            <EntityMetaData name="bubble.js" createdDate="2017-05-27T11:20:40.663+08:00" isFolder="false" path="UI/js/Protovis/bubble.js" isHidden="true" locale="zh_CN" title="bubble"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/js/Protovis/bulletChart.js">
+        <ExportManifestProperty>
+            <EntityMetaData name="bulletChart.js" createdDate="2017-05-27T11:21:13.631+08:00" isFolder="false" path="UI/js/Protovis/bulletChart.js" isHidden="true" locale="zh_CN" title="bulletChart"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/js/Protovis/cccChart.js">
+        <ExportManifestProperty>
+            <EntityMetaData name="cccChart.js" createdDate="2017-05-27T11:21:41.702+08:00" isFolder="false" path="UI/js/Protovis/cccChart.js" isHidden="true" locale="zh_CN" title="cccChart"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/js/Protovis/clippedText.js">
+        <ExportManifestProperty>
+            <EntityMetaData name="clippedText.js" createdDate="2017-05-27T11:22:31.241+08:00" isFolder="false" path="UI/js/Protovis/clippedText.js" isHidden="true" locale="zh_CN" title="clippedText"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/js/Protovis/formatted.js">
+        <ExportManifestProperty>
+            <EntityMetaData name="formatted.js" createdDate="2017-05-27T11:20:23.394+08:00" isFolder="false" path="UI/js/Protovis/formatted.js" isHidden="true" locale="zh_CN" title="formatted"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/js/Protovis/hyperlink.js">
+        <ExportManifestProperty>
+            <EntityMetaData name="hyperlink.js" createdDate="2017-05-27T11:22:56.034+08:00" isFolder="false" path="UI/js/Protovis/hyperlink.js" isHidden="true" locale="zh_CN" title="hyperlink"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/js/Protovis/localizedText.js">
+        <ExportManifestProperty>
+            <EntityMetaData name="localizedText.js" createdDate="2017-05-27T11:23:10.135+08:00" isFolder="false" path="UI/js/Protovis/localizedText.js" isHidden="true" locale="zh_CN" title="localizedText"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/js/Protovis/sparkline.js">
+        <ExportManifestProperty>
+            <EntityMetaData name="sparkline.js" createdDate="2017-05-27T11:23:31.405+08:00" isFolder="false" path="UI/js/Protovis/sparkline.js" isHidden="true" locale="zh_CN" title="sparkline"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/js/Protovis/steelWheelsSample.js">
+        <ExportManifestProperty>
+            <EntityMetaData name="steelWheelsSample.js" createdDate="2017-05-27T11:23:50.532+08:00" isFolder="false" path="UI/js/Protovis/steelWheelsSample.js" isHidden="true" locale="zh_CN" title="steelWheelsSample"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/js/Protovis/trendArrow.js">
+        <ExportManifestProperty>
+            <EntityMetaData name="trendArrow.js" createdDate="2017-05-27T11:24:03.813+08:00" isFolder="false" path="UI/js/Protovis/trendArrow.js" isHidden="true" locale="zh_CN" title="trendArrow"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>

@@ -2661,6 +2661,410 @@
     "typeDesc": "CCC Pie Chart"
    },
    {
+    "id": "da4d82e1-c88f-adc5-b39e-2115c22acc40",
+    "type": "ComponentscggDial",
+    "typeDesc": "CGG Dial Chart",
+    "parent": "CHARTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "123123",
+      "type": "Id"
+     },
+     {
+      "name": "colors",
+      "value": "[]",
+      "type": "Array"
+     },
+     {
+      "name": "intervals",
+      "value": "[]",
+      "type": "Array"
+     },
+     {
+      "name": "parameter",
+      "value": "",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "width",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     }
+    ],
+    "meta_cdwSupport": "true",
+    "rowName": "CGG Dial Component"
+   },
+   {
+    "id": "e16a9d23-ab1d-1976-2c12-b92bc01acea4",
+    "type": "Componentscgg",
+    "typeDesc": "Container for CGG Grahpics",
+    "parent": "CHARTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "parameters",
+      "value": "[]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "resourceFile",
+      "value": "",
+      "type": "CggPath"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "width",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     }
+    ],
+    "meta_cdwSupport": "false",
+    "rowName": "CGG Component"
+   },
+   {
+    "id": "1f53c7ea-8b55-8970-ea6a-d44b162144ca",
+    "type": "ComponentsJFreeChart",
+    "typeDesc": "Chart Component",
+    "parent": "CHARTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "Link",
+      "type": "Id"
+     },
+     {
+      "name": "backgroundAlpha",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "caption",
+      "value": "[]",
+      "type": "String"
+     },
+     {
+      "name": "chartType",
+      "value": "BarChart",
+      "type": "ChartType"
+     },
+     {
+      "name": "domainLabelRotation",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "domainLabelRotationDir",
+      "value": "down",
+      "type": "DomainLabelRotation"
+     },
+     {
+      "name": "domainPeriodType",
+      "value": "Day",
+      "type": "DomainPeriodType"
+     },
+     {
+      "name": "domainTickFontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "foregroundAlpha",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "interiorGap",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "legendFontFamily",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "legendFontIsBold",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "legendFontIsItalic",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "legendFontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "markersVisible",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "maxBarWidth",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "orientation",
+      "value": "vertical",
+      "type": "Orientation"
+     },
+     {
+      "name": "parameterName",
+      "value": "PARAM",
+      "type": "String"
+     },
+     {
+      "name": "rangeTitle",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "seriesName",
+      "value": "SERIE",
+      "type": "String"
+     },
+     {
+      "name": "subtitle",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "title",
+      "value": "123",
+      "type": "String"
+     },
+     {
+      "name": "tooltipContent",
+      "value": "({1},{0}) = {2})",
+      "type": "String"
+     },
+     {
+      "name": "tooltipYContent",
+      "value": "###,###,##0.###",
+      "type": "String"
+     },
+     {
+      "name": "topCount",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "topCountAxis",
+      "value": "rows",
+      "type": "TopCountAxis"
+     },
+     {
+      "name": "urlTarget",
+      "value": "_blank",
+      "type": "String"
+     },
+     {
+      "name": "urlTemplate",
+      "value": "/pentaho/plugin/pentaho-cdf-dd/api/Render?solution=UI&path=/Template1&file=TemplateComponent.wcdf",
+      "type": "UrlTemplate"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "directory",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "transformation",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "importStep",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "lineStyle",
+      "value": "solid",
+      "type": "String"
+     },
+     {
+      "name": "byRow",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "includeLegend",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "is3d",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "isStacked",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "lineWidth",
+      "value": 1,
+      "type": "Integer"
+     },
+     {
+      "name": "useBaseUrl",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "jFreeChartDataSource",
+      "value": "",
+      "type": "Datasource"
+     },
+     {
+      "name": "datasetType",
+      "value": "CategoryDataset",
+      "type": "DatasetType"
+     },
+     {
+      "name": "height",
+      "value": "320",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "width",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "plotbgcolor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:LinkCDEDom}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ],
+    "rowName": "Chart Component"
+   },
+   {
     "id": "GENERIC",
     "name": "Generic",
     "parent": "UnIqEiD",
@@ -9443,7 +9847,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "\n<div class=\"panel-heading \">\n    <i class=\"fa fa-line-chart\" style=\"padding-right: 5px;\"></i> 指标比率概况 \n</div> \n<div id='radarMapDom' style='height: 350px' ></div> \n\n\n<!--  -->\n<script type=\"text/javascript\">\nfunction onload_echarts(){\n    \n\n    let readJSONFile = url =>{\n        let jsonData;\n        $.ajax({\n    \t\ttype : 'GET',\n\t\t\turl : url,\n\t\t\tasync : false,\n\t\t\tdataType : 'json',\n\t\t\tdata : null,\n            success : (response)=>{ jsonData = response; }\n\t\t})\n        return jsonData;\n    }\n    let radarMapUrl = \"/pentaho/plugin/cda/api/doQuery?path=/public/UI/Template6/Template6.cda&dataAccessId=radarMapQuery\";\n        radarMapUrl += \"&paramstartDay=\" + startDay + \"&paramendDay=\" + endDay + \"&parambrandParam=\" + brandParam + \"&paramplaceParam=\" + placeParam + \"&paramarea1Param=\" + area1Param + \"&paramarea2Param=\" + area2Param + \"&paramarea3Param=\" + area3Param + \"&paramshopParam=\" + shopParam + \"&paramoutletParam=\" + outletParam;     \n    let radarMapJSON = readJSONFile(radarMapUrl).resultset;    //获取结果集\n    let radarMapChart = echarts.init(document.querySelector(\"#radarMapDom\"));\n    radarMapChart.setOption({\n        legend: {\n            right: 10,\n            data: ['预算', '实际']\n        },\n        tooltip: {},\n        radar: {\n            shape: 'circle',\n            indicator: radarMapJSON.map((value, index, arr)=>{\n                let newArr = [];\n                newArr.push({\n                    name: value[1],\n                    max: value[2]\n                });\n                console.log(newArr[0]);\n                return newArr[0];\n            }),\n            \n            name: {\n                textStyle: {\n                    color: 'rgb(238, 197, 102)'\n                }\n            },\n            \n            splitLine: {\n                lineStyle: {\n                    color: [\n                        'rgba(238, 197, 102, 0.1)', 'rgba(238, 197, 102, 0.2)',\n                        'rgba(238, 197, 102, 0.4)', 'rgba(238, 197, 102, 0.6)',\n                        'rgba(238, 197, 102, 0.8)', 'rgba(238, 197, 102, 1)'\n                    ].reverse()\n                }\n            },\n            \n            splitArea: {\n                show: false\n            },\n            axisLine: {\n                lineStyle: {\n                    color: 'rgba(238, 197, 102, 0.5)'\n                }\n            }\n            \n         },\n        series: [{\n            type: 'radar',\n            //areaStyle: {normal: {}},\n            data : [\n                {\n                    value: radarMapJSON.map((value, index, arr)=>{\n                        console.log(value[3]);\n                        console.log('********************************');\n                        return value[3];\n                    }),\n                   name : '预算'\n                },\n                {\n                    value: radarMapJSON.map((value, index, arr)=>{\n                        console.log(value[4]);\n                        return value[4];\n                    }),\n                    name : '实际'\n                }\n            ]\n        }]\n    }); \n    window.addEventListener('resize',function () {\n        radarMapChart.resize();\n    });\n}\n</script> "
+      "value": "\n<div class=\"panel-heading \">\n    <i class=\"fa fa-line-chart\" style=\"padding-right: 5px;\"></i> 指标比率概况 \n</div> \n<div id='radarMapDom' style='height: 350px' ></div> \n\n\n<!--  -->\n<script type=\"text/javascript\">\nfunction onload_echarts(){\n    let readJSONFile = url =>{\n        let jsonData;\n        $.ajax({\n    \t\ttype : 'GET',\n\t\t\turl : url,\n\t\t\tasync : false,\n\t\t\tdataType : 'json',\n\t\t\tdata : null,\n            success : (response)=>{ jsonData = response; }\n\t\t})\n        return jsonData;\n    }\n    let radarMapUrl = \"/pentaho/plugin/cda/api/doQuery?path=/public/UI/Template6/Template6.cda&dataAccessId=radarMapQuery\";\n        radarMapUrl += \"&paramstartDay=\" + startDay + \"&paramendDay=\" + endDay + \"&parambrandParam=\" + brandParam + \"&paramplaceParam=\" + placeParam + \"&paramarea1Param=\" + area1Param + \"&paramarea2Param=\" + area2Param + \"&paramarea3Param=\" + area3Param + \"&paramshopParam=\" + shopParam + \"&paramoutletParam=\" + outletParam;     \n    let radarMapJSON = readJSONFile(radarMapUrl).resultset;    //获取结果集\n    let radarMapChart = echarts.init(document.querySelector(\"#radarMapDom\"));\n    radarMapChart.setOption({\n        legend: {\n            right: 10,\n            data: ['预算', '实际']\n        },\n        tooltip: {},\n        radar: {\n            shape: 'circle',\n            indicator: radarMapJSON.map((value, index, arr)=>{\n                let newArr = [];\n                newArr.push({\n                    name: value[1],\n                    max: value[2]\n                });\n                console.log(newArr[0]);\n                return newArr[0];\n            }),\n            \n            name: {\n                textStyle: {\n                    color: 'rgb(238, 197, 102)'\n                }\n            },\n            \n            splitLine: {\n                lineStyle: {\n                    color: [\n                        'rgba(238, 197, 102, 0.1)', 'rgba(238, 197, 102, 0.2)',\n                        'rgba(238, 197, 102, 0.4)', 'rgba(238, 197, 102, 0.6)',\n                        'rgba(238, 197, 102, 0.8)', 'rgba(238, 197, 102, 1)'\n                    ].reverse()\n                }\n            },\n            \n            splitArea: {\n                show: false\n            },\n            axisLine: {\n                lineStyle: {\n                    color: 'rgba(238, 197, 102, 0.5)'\n                }\n            }\n            \n         },\n        series: [{\n            type: 'radar',\n            //areaStyle: {normal: {}},\n            data : [\n                {\n                    value: radarMapJSON.map((value, index, arr)=>{\n                        console.log(value[3]);\n                        console.log('********************************');\n                        return value[3];\n                    }),\n                   name : '预算'\n                },\n                {\n                    value: radarMapJSON.map((value, index, arr)=>{\n                        console.log(value[4]);\n                        return value[4];\n                    }),\n                    name : '实际'\n                }\n            ]\n        }]\n    }); \n    window.addEventListener('resize',function () {\n        radarMapChart.resize();\n    });\n}\n</script> "
      },
      {
       "name": "fontSize",
@@ -10087,7 +10491,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-bar-chart\" style=\"padding-right: 5px;\"></i> 门店收款变动情况 \r\n</div> "
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-bar-chart\" style=\"padding-right: 5px;\"></i> 门店收款变动情况 \r\n</div> \r\n<div id='LinkCDEDom'></div> "
      },
      {
       "name": "fontSize",

@@ -57,7 +57,7 @@
      {
       "name": "preExecution",
       "type": "JavaScript",
-      "value": "function f(){\n    var cccChartOpts = { \n        //type: 'PieChart',\n        type: 'BarChart',\n        chartOpts: {\n            //width: 100,\n            height: 160,\n            seriesInRows: false,\n            crossTabMode: false,\n            timeSeries: false,\n            legendVisible: false,\n            plotFrameVisible: false,\n            orthoAxisTicks: false,\n            //xAxisLabel_textAngle:  -0.55,\n            xAxisLabel_font: '4px sans-serif',\n            xAxisLabel_textOffset: '10',\n            axisOffset:   0.02,\n            axisGrid: false,\n            xAxisLabel_textAngle: -1,\n            xAxisLabel_textAlign: 'right',\n            xAxisLabel_textBaseline: 'top',\n            showYScale: false,\n            //plot2: true,\n            //plot2OrthoAxis: 2,\n            orthoAxisTickFormatter: function(value) {\n                return Utils.numberFormat(value, \"#A\");\n            },\n            valuesLabelStyle: 'inside',\n            valuesOptimizeLegibility: true,\n            valueFormat: function(value) {\n                return Utils.numberFormat(value, \"#,#.00\");\n            },\n            selectable: true,\n            hoverable:  true,\n            valuesFont: 'normal 9px \"Open Sans\"',\n            xAxisRule_strokeStyle: '#005CA7',\n            yAxisRule_strokeStyle: '#005CA7',\n            slice_innerRadiusEx: '50%',\n            slice_strokeStyle:   'white',\n            colors: ['#005CA7']\n            /*\n            colors: [\n                '#333333', '#777777', '#FFC20F', '#FFE085',\n                '#00325b', '#005CA7', '#0086F4', '#39A74A',\n                '#63CA73', '#80BCA3', '#655643', '#BF4D28'\n            ]    \n            */\n        }\n    };\n    this.setAddInOptions(\"templateType\",\"cccChart\", cccChartOpts);\n} "
+      "value": "function f(){\n    \n    \n    var cccChartOpts = { \n        type: 'BarChart',\n        chartOpts: {\n            //width: 50,\n            height: 160,\n            seriesInRows: false,\n            crossTabMode: false,\n            timeSeries: false,\n            legendVisible: false,\n            plotFrameVisible: false,\n            orthoAxisTicks: false,\n            //xAxisLabel_textAngle:  -0.55,\n            xAxisLabel_font: '4px sans-serif',\n            xAxisLabel_textOffset: '10',\n            axisOffset:   0.02,\n            axisGrid: false,\n            xAxisLabel_textAngle: -1,\n            xAxisLabel_textAlign: 'right',\n            xAxisLabel_textBaseline: 'top',\n            showYScale: false,\n            //plot2: true,\n            //plot2OrthoAxis: 2,\n            orthoAxisTickFormatter: function(value) {\n                return Utils.numberFormat(value, \"#A\");\n            },\n            valuesLabelStyle: 'inside',\n            valuesOptimizeLegibility: true,\n            valueFormat: function(value) {\n                return Utils.numberFormat(value, \"#,#.00\");\n            },\n            selectable: true,\n            hoverable:  true,\n            valuesFont: 'normal 9px \"Open Sans\"',\n            xAxisRule_strokeStyle: '#005CA7',\n            yAxisRule_strokeStyle: '#005CA7',\n            slice_innerRadiusEx: '50%',\n            slice_strokeStyle:   'white',\n            colors: ['#005CA7']\n            \n        }\n    };\n    this.setAddInOptions(\"templateType\",\"cccChart\", cccChartOpts);\n} "
      },
      {
       "name": "postExecution",
@@ -82,7 +82,7 @@
      {
       "name": "template",
       "type": "JavaScript",
-      "value": "function() { \n           \n    var template =  '<div class=\"row card\">' +\n                    '<% _.each(items, function(elem) { %>' +\n                    '  <div class=\"col-xs-12 col-sm-6 col-md-4 col-lg-3 single clickable\" data-category=\"<%=elem[0]%>\"> '+\n                    '    <div class=\"category\"> <b> <%= addin(elem[0], \"clippedText\", \"YearMonth\") %> </b> </div>'+\n                    //'    <div class=\"value\"> <%= formatter(elem[1], \"YearMonth\") %> </div> '+\n                    '    <div class=\"addin\"> <%= addin(elem[1], \"cccChart\", \"cccChart\") %> </div>'+\n                    '  </div>' +\n                    '<% }); %>' +\n                    '</div>'; \n     \n    return template;\n} "
+      "value": "function() { \n           \n    var template =  '<div class=\"row card\">' +\n                    '<% _.each(items, function(elem) { %>' +\n                    '  <div class=\"col-xs-12 col-sm-6 col-md-4 col-lg-3 single clickable\" data-category=\"<%=elem[0]%>\"> '+\n                    '    <div class=\"category\"> <b> <%= addin(elem[0], \"clippedText\", \"YearMonth\") %> </b> </div>'+\n                    '    <div class=\"addin\"> <%= addin(elem[1], \"trendArrow\", \"Sales\") %> </div>'+\n                    '    <div class=\"value\"><%= formatter(elem[1], \"Sales\") %> </div> '+\n                    //'    <div class=\"addin\"> <%= addin(elem[2], \"cccChart\", \"cccChart_bar\") %> </div>'+\n                    '    <div class=\"addin\"> <%= addin(elem[2], \"cccChart\", \"cccChart\") %> </div>'+\n                    '  </div>' +\n                    '<% }); %>' +\n                    '</div>'; \n     \n    return template;\n} "
      },
      {
       "name": "templateType",
@@ -97,7 +97,7 @@
      {
       "name": "formatters",
       "type": "EditorValuesArray",
-      "value": "[]"
+      "value": "[[\"Sales\",\"function(value) {\\n    return Utils.numberFormat(value, '#,#.00');\\n}\"]]"
      },
      {
       "name": "rootElement",
@@ -476,7 +476,7 @@
     "typeDesc": "<i>Group</i>"
    },
    {
-    "id": "f25b5b9a-10a7-7ab8-8a82-581f3545381f",
+    "id": "ead20ea8-4543-652c-4986-ecd40a7bd6c0",
     "meta": "CDA",
     "meta_conntype": "sql.jndi",
     "meta_datype": "sql",
@@ -486,6 +486,78 @@
       "name": "name",
       "type": "Id",
       "value": "tempQuery"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "SELECT\r\n    tbl.YearMonth AS YearMonth,\r\n    ROUND(tbl2.ItemSaleAmt,2) AS Sales,\r\n\tCONCAT( \"[\", GROUP_CONCAT(T1 ORDER BY ItemDeptId), \"]\"  ) AS cccChart\r\nFROM\r\n    (\r\n\t\tSELECT\r\n\t\t\t`dim_bidate`.`YearNo`,\r\n\t\t\t`dim_bidate`.`MonthNo`,\r\n\t\t\t`dim_bidate`.`YearMonth`,\r\n\t\t\t`dim_itemdeptment`.`ItemDeptId_level2` AS ItemDeptId,\r\n\t\t\t`dim_itemdeptment`.`ItemDeptName_level2` AS ItemDeptName,\r\n\t\t\tsum(`fact_sumitem`.`ItemSaleAmt`) AS ItemSaleAmt,\r\n\t\t\tCONCAT( '[\"',`dim_itemdeptment`.`ItemDeptName_level2`,'\",\"',sum(`fact_sumitem`.`ItemSaleAmt`), '\"]') AS T1\r\n\t\tFROM\r\n\t\t\t`fact_sumitem` INNER JOIN `dim_outlet` ON `fact_sumitem`.`OutletId_t` = `dim_outlet`.`OutletId_t`\r\n\t\t\tINNER JOIN `dim_bidate` ON `fact_sumitem`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n\t\t\tINNER JOIN `dim_itemdeptment` ON `fact_sumitem`.`ItemDeptId` = `dim_itemdeptment`.`ItemDeptId`\r\n\t\t\tINNER JOIN `dim_brand` ON `dim_outlet`.`BrandId` = `dim_brand`.`BrandId`\r\n\t\t\tINNER JOIN `dim_place` ON `dim_outlet`.`PlaceId` = `dim_place`.`PlaceId`\r\n\t\t  INNER JOIN `dim_area` ON `dim_outlet`.`AreaId` = `dim_area`.`AreaId`\r\n\t\tWHERE \r\n            `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n            AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n            AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n            AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n            AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\n            AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)\r\n            AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)\r\n            AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)\r\n    GROUP BY\r\n\t\t\t`dim_itemdeptment`.`ItemDeptName_level2`,\r\n\t\t\t`dim_bidate`.`YearMonth`,\r\n\t\t\t`dim_itemdeptment`.`ItemDeptId_level2`\r\n\t\tORDER BY\r\n\t\t\t`dim_bidate`.`YearNo` ASC,\r\n\t\t\t`dim_bidate`.`MonthNo` ASC,\r\n\t\t\t`dim_itemdeptment`.`ItemDeptId_level2` ASC\r\n    ) AS tbl\r\n\t\tINNER JOIN \r\n\t\t(\r\n\t\t\tSELECT\r\n\t\t\t\t`dim_bidate`.`YearMonth`,\r\n\t\t\t\tsum(`fact_sumitem`.`ItemSaleAmt`) AS ItemSaleAmt\r\n\t\t\tFROM\r\n\t\t\t\t`fact_sumitem` INNER JOIN `dim_outlet` ON `fact_sumitem`.`OutletId_t` = `dim_outlet`.`OutletId_t`\r\n\t\t\t\tINNER JOIN `dim_bidate` ON `fact_sumitem`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n\t\t\t\tINNER JOIN `dim_itemdeptment` ON `fact_sumitem`.`ItemDeptId` = `dim_itemdeptment`.`ItemDeptId`\r\n\t\t\t\tINNER JOIN `dim_brand` ON `dim_outlet`.`BrandId` = `dim_brand`.`BrandId`\r\n\t\t\t\tINNER JOIN `dim_place` ON `dim_outlet`.`PlaceId` = `dim_place`.`PlaceId`\r\n\t\t\t\tINNER JOIN `dim_area` ON `dim_outlet`.`AreaId` = `dim_area`.`AreaId`\r\n\t\t\tWHERE \r\n            `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  \r\n            AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )\r\n            AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)\r\n            AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)\r\n            AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)\r\n            AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)\r\n            AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)\r\n            AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)\r\n\t\t\tGROUP BY\r\n\t\t\t\t`dim_bidate`.`YearMonth`\r\n\t\t\tORDER BY\r\n\t\t\t\t`dim_bidate`.`YearNo` ASC,\r\n\t\t\t\t`dim_bidate`.`MonthNo` ASC\r\n\t\t) AS tbl2 ON tbl2.YearMonth = tbl.YearMonth\r\nGROUP BY tbl.YearMonth\r\nORDER BY\r\n\ttbl.`YearNo` ASC,\r\n\ttbl.`MonthNo` ASC"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"placeParam\",\"placeParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"],[\"shopParam\",\"shopParam\",\"String\",\"\",\"\"],[\"outletParam\",\"outletParam\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "f25b5b9a-10a7-7ab8-8a82-581f3545381f",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "tempQuery_2"
      },
      {
       "name": "access",
@@ -553,6 +625,98 @@
  "layout": {
   "rows": [
    {
+    "id": "dbb62b9f-13c9-d9cd-7dfd-04e2a469410a",
+    "type": "LayoutResourceFile",
+    "typeDesc": "Resource",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "clippedText",
+      "type": "Id"
+     },
+     {
+      "name": "resourceFile",
+      "value": "${solution:../css/clippedText.css}",
+      "type": "ResourceFile"
+     },
+     {
+      "name": "resourceType",
+      "value": "Css",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "f37dc2af-1b1f-165d-18eb-12045eab1c57",
+    "type": "LayoutResourceFile",
+    "typeDesc": "Resource",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "trendArrow",
+      "type": "Id"
+     },
+     {
+      "name": "resourceFile",
+      "value": "${solution:../css/trendArrow.css}",
+      "type": "ResourceFile"
+     },
+     {
+      "name": "resourceType",
+      "value": "Css",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "2212484b-d25a-d196-da23-54946f5e09b5",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "trendArrow"
+     },
+     {
+      "name": "resourceFile",
+      "type": "ResourceFile",
+      "value": "${solution:../js/Protovis/trendArrow.js}"
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Javascript"
+     }
+    ],
+    "type": "LayoutResourceFile",
+    "typeDesc": "Resource"
+   },
+   {
+    "id": "440b9ac0-e512-c2a8-789f-dd7268e215d2",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "formatted"
+     },
+     {
+      "name": "resourceFile",
+      "type": "ResourceFile",
+      "value": "${solution:../js/Protovis/formatted.js}"
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Javascript"
+     }
+    ],
+    "type": "LayoutResourceFile",
+    "typeDesc": "Resource"
+   },
+   {
     "id": "a55e6b5c-24bb-3704-817e-e5da7c19cdaa",
     "parent": "UnIqEiD",
     "properties": [
@@ -564,7 +728,7 @@
      {
       "name": "resourceFile",
       "type": "ResourceFile",
-      "value": "${solution:../js/clippedText.js}"
+      "value": "${solution:../js/Protovis/clippedText.js}"
      },
      {
       "name": "resourceType",
@@ -587,7 +751,7 @@
      {
       "name": "resourceFile",
       "type": "ResourceFile",
-      "value": "${solution:../js/cccChart.js}"
+      "value": "${solution:../js/Protovis/cccChart.js}"
      },
      {
       "name": "resourceType",
@@ -610,7 +774,7 @@
      {
       "name": "resourceCode",
       "type": "Resource",
-      "value": ".single {\n    text-align: center;\n    border: 1px solid #eee;\n    cursor: pointer;\n    padding: 10px 0px;\n} \n\n.single:hover, .single.selected:hover {\n    border: 1px solid #49AEC0;\n    background-color: rgba(240, 240, 240, 0.8);\n}\n\n.single.selected {\n    background-color: rgba(240, 240, 240, 0.4);\n}\n\n.single .value {\n    font-size: 18px;\n    color: #888;\n    font-weight: 300;\n    margin: 10px;\n}\n\n\n.sparklineContainer {\n    margin: 10px 0px;\n}\n\n.clippedTextContainer {\n    margin: 0px 20px;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    overflow: hidden;\n    background-color: rgba(220,220,220,0.8);\n    font-size: 26px;\n    color: #fff;\n}\n\n.addin .bubble {\n    display: inline-block;\n    text-align: center;\n    vertical-align: middle;\n    border: 1px solid #eee;\n    border-radius: 100%;\n}\n\n\n.totalSales .sales {\n    text-align: right;\n}\n\n\n.trendArrowContainer .arrow {\n    font-size: 30px;\n}\n\n.hyperlink {\n    margin: 5px 0px;\n}\n\n.template {\n    margin: 20px 0px;\n}\n\n.clippedText {\n    margin: 10px 0px 5px 0px;\n}\n\n\n\n.addin .clippedText {\n    width: 50%;\n    margin-right: 25%;\n    margin-left: 25%;\n} \n\n.addin .bubble {\n    display: inline-block;\n    text-align: center;\n    vertical-align: middle;\n}\n\n.bubbleContainer {\n    display: table-cell;\n    vertical-align: middle;\n    text-align: center;\n} "
+      "value": ".single {\n    text-align: center;\n    border: 1px solid #eee;\n    cursor: pointer;\n    padding: 10px 0px;\n} \n\n.single:hover, .single.selected:hover {\n    border: 1px solid #49AEC0;\n    /*\n    background-color: rgba(240, 240, 240, 0.8);\n    */\n}\n\n.single.selected {\n    background-color: rgba(240, 240, 240, 0.4);\n}\n\n.single .value {\n    font-size: 18px;\n    color: #888;\n    font-weight: 300;\n    margin: 10px;\n}\n\n\n.sparklineContainer {\n    margin: 10px 0px;\n}\n\n.clippedTextContainer {\n    margin: 0px 20px;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    overflow: hidden;\n    background-color: rgba(220,220,220,0.8);\n    font-size: 26px;\n    color: #fff;\n}\n\n.addin .bubble {\n    display: inline-block;\n    text-align: center;\n    vertical-align: middle;\n    border: 1px solid #eee;\n    border-radius: 100%;\n}\n\n\n.totalSales .sales {\n    text-align: right;\n}\n\n\n.trendArrowContainer .arrow {\n    font-size: 30px;\n}\n\n.hyperlink {\n    margin: 5px 0px;\n}\n\n.template {\n    margin: 20px 0px;\n}\n\n.clippedText {\n    margin: 10px 0px 5px 0px;\n}\n\n\n\n.addin .clippedText {\n    width: 50%;\n    margin-right: 25%;\n    margin-left: 25%;\n} \n\n.addin .bubble {\n    display: inline-block;\n    text-align: center;\n    vertical-align: middle;\n}\n\n.bubbleContainer {\n    display: table-cell;\n    vertical-align: middle;\n    text-align: center;\n} \n\n.value{\n    color:#666666;\n    font-weight:lighter;\n    font-family:TPF_Font_Thin;\n    font-size: 10px;\n} "
      },
      {
       "name": "resourceType",
