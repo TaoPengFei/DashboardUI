@@ -1,9 +1,45 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:ExportManifest xmlns:ns2="http://www.pentaho.com/schema/">
-    <ExportManifestInformation exportDate="27-05-2017 02:55:50 CST" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
+    <ExportManifestInformation exportDate="27-05-2017 06:58:04 CST" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
     <ExportManifestEntity path="UI">
         <ExportManifestProperty>
             <EntityMetaData name="UI" createdDate="2017-05-04T16:22:05.302+08:00" isFolder="true" path="UI" isHidden="false" locale="zh_CN" title="UI"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/Template0">
+        <ExportManifestProperty>
+            <EntityMetaData name="Template0" createdDate="2017-05-27T16:44:20.761+08:00" isFolder="true" path="UI/Template0" isHidden="false" locale="zh_CN" title="Template0"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/Template0/Template0.cdfde">
+        <ExportManifestProperty>
+            <EntityMetaData name="Template0.cdfde" createdDate="2017-05-27T17:32:02.687+08:00" isFolder="false" path="UI/Template0/Template0.cdfde" isHidden="false" locale="zh_CN" title="Template0.cdfde"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/Template0/Template0.wcdf">
+        <ExportManifestProperty>
+            <EntityMetaData name="Template0.wcdf" createdDate="2017-05-27T17:32:02.602+08:00" isFolder="false" path="UI/Template0/Template0.wcdf" isHidden="false" locale="zh_CN" description="Template0" title="UI模板"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
