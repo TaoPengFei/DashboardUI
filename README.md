@@ -1,2 +1,1 @@
-![image](https://github.com/TaoPengFei/DashboardUI/tree/master/Demo/imgs/Template1.jpg)
-
+![image](https://github.com/TaoPengFei/DashboardUI/blob/master/Demo/imgs/Template1.jpg)
