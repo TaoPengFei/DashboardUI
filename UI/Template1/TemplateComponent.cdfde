@@ -632,7 +632,7 @@
     "properties": [
      {
       "name": "name",
-      "value": "clippedText",
+      "value": "clippedTextCss",
       "type": "Id"
      },
      {
@@ -655,7 +655,7 @@
     "properties": [
      {
       "name": "name",
-      "value": "trendArrow",
+      "value": "trendArrowCss",
       "type": "Id"
      },
      {
@@ -677,7 +677,7 @@
      {
       "name": "name",
       "type": "Id",
-      "value": "trendArrow"
+      "value": "trendArrowJs"
      },
      {
       "name": "resourceFile",
@@ -700,7 +700,7 @@
      {
       "name": "name",
       "type": "Id",
-      "value": "formatted"
+      "value": "formattedJs"
      },
      {
       "name": "resourceFile",
@@ -723,7 +723,7 @@
      {
       "name": "name",
       "type": "Id",
-      "value": "clippedText"
+      "value": "clippedTextJs"
      },
      {
       "name": "resourceFile",
@@ -746,7 +746,7 @@
      {
       "name": "name",
       "type": "Id",
-      "value": "cccChart"
+      "value": "cccChartJs"
      },
      {
       "name": "resourceFile",
@@ -807,6 +807,107 @@
     ],
     "type": "LayoutResourceCode",
     "typeDesc": "Resource"
+   },
+   {
+    "id": "e5ad1968-9e0b-b954-daf1-de6d61743838",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row0",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "069ba415-31fa-e436-56eb-db09c5556e6a",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "e5ad1968-9e0b-b954-daf1-de6d61743838",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
    },
    {
     "id": "d5d92854-35c5-6a27-4b9a-b9223ec1a984",
