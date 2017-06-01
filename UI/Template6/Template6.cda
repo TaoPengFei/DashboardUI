@@ -338,6 +338,86 @@ FROM
          <Parameter default="outletParam" name="outletParam" type="String"/>
       </Parameters>
       <Query><![CDATA[SELECT 
+    		SY_SaleName.Id AS KPI_Id,
+			IdName AS KPI_Name,
+            
+            CASE WHEN CheckQty = 0 OR CheckQty IS NULL
+    	        THEN 0
+	        ELSE CheckQty*2 END AS KPI_Max,	
+            
+            CASE WHEN CheckQty = 0 OR CheckQty IS NULL
+                THEN 0
+	        ELSE CheckQty*1.5 END AS KPI_Budget,
+            
+            CASE WHEN CheckQty = 0 OR CheckQty IS NULL
+                THEN 0
+            ELSE CheckQty END AS KPI_Actual
+            
+			-- CheckQty*2 AS KPI_Max,
+			-- CheckQty*1.5 AS KPI_Budget,
+			-- CheckQty AS KPI_Actual
+	FROM
+		(
+			SELECT
+					 sum(`Fact_SumDay`.`CheckQty`) AS CheckQty
+			FROM
+					 `Fact_SumDay` INNER JOIN `Dim_BIDate` ON `Fact_SumDay`.`BIDateId` = `Dim_BIDate`.`BIDateId`
+					 INNER JOIN `Dim_Outlet` ON `Fact_SumDay`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`
+                     INNER JOIN `dim_place` ON `fact_sumday`.`PlaceId` = `dim_place`.`PlaceId`
+                     INNER JOIN `dim_area` ON `fact_sumday`.`AreaId` = `dim_area`.`AreaId`
+                     INNER JOIN `dim_brand` ON `dim_outlet`.`BrandId` = `dim_brand`.`BrandId`
+            WHERE 
+                `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
+                AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
+                AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)
+                AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)
+                AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)
+                AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)
+                AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)
+                AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)
+		)AS tbl JOIN SY_SaleName WHERE SY_SaleName.Id IN (1)
+	UNION ALL
+    SELECT 
+    		SY_SaleName.Id AS KPI_Id,
+			IdName AS KPI_Name,
+            
+            CASE WHEN CheckQty = 0 OR CheckQty IS NULL
+    	        THEN 0
+	        ELSE CheckQty*2 END AS KPI_Max,	
+            
+            CASE WHEN CheckQty = 0 OR CheckQty IS NULL
+                THEN 0
+	        ELSE CheckQty*1.5 END AS KPI_Budget,
+            
+            CASE WHEN CheckQty = 0 OR CheckQty IS NULL
+                THEN 0
+            ELSE CheckQty END AS KPI_Actual
+            
+			-- CheckQty*2 AS KPI_Max,
+			-- CheckQty*1.5 AS KPI_Budget,
+			-- CheckQty AS KPI_Actual
+	FROM
+		(
+			SELECT
+					 sum(`Fact_SumDay`.`CheckQty`) AS CheckQty
+			FROM
+					 `Fact_SumDay` INNER JOIN `Dim_BIDate` ON `Fact_SumDay`.`BIDateId` = `Dim_BIDate`.`BIDateId`
+					 INNER JOIN `Dim_Outlet` ON `Fact_SumDay`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`
+                     INNER JOIN `dim_place` ON `fact_sumday`.`PlaceId` = `dim_place`.`PlaceId`
+                     INNER JOIN `dim_area` ON `fact_sumday`.`AreaId` = `dim_area`.`AreaId`
+                     INNER JOIN `dim_brand` ON `dim_outlet`.`BrandId` = `dim_brand`.`BrandId`
+            WHERE 
+                `Dim_BIDate`.`BIDate` BETWEEN ${startDay} AND ${endDay}  
+                AND (`Dim_Brand`.`BrandId_level1` = ${brandParam} OR ${brandParam} = -1 )
+                AND (`Dim_Area`.`AreaId_level1` = ${area1Param} OR ${area1Param} = -1)
+                AND (`Dim_Area`.`AreaId_level2` = ${area2Param} OR ${area2Param} = -1)
+                AND (`Dim_Area`.`AreaId_level3` = ${area3Param} OR ${area3Param} = -1)
+                AND (`Dim_Outlet`.`ShopId` = ${shopParam} OR ${shopParam} = -1)
+                AND (`Dim_Outlet`.`OutletId` = ${outletParam} OR ${outletParam} = -1)
+                AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)
+		)AS tbl JOIN SY_SaleName WHERE SY_SaleName.Id IN (2)
+	UNION ALL
+    SELECT 
 			SY_SaleName.Id AS KPI_Id,
 			IdName AS KPI_Name,
             
