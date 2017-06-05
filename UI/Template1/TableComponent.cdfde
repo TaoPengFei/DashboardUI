@@ -372,7 +372,7 @@
      {
       "name": "colTypes",
       "type": "colTypesCustom",
-      "value": "[]"
+      "value": "[\"string\",\"string\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"]"
      },
      {
       "name": "colWidths",
@@ -392,7 +392,7 @@
      {
       "name": "displayLength",
       "type": "Integer",
-      "value": ""
+      "value": "10"
      },
      {
       "name": "expandOnClick",
@@ -402,7 +402,7 @@
      {
       "name": "filter",
       "type": "Boolean",
-      "value": "true"
+      "value": "false"
      },
      {
       "name": "info",
@@ -422,7 +422,7 @@
      {
       "name": "sort",
       "type": "Boolean",
-      "value": "true"
+      "value": "false"
      },
      {
       "name": "colSearchable",
@@ -432,7 +432,7 @@
      {
       "name": "drawCallback",
       "type": "JavaScript",
-      "value": ""
+      "value": " \r\n\r\n "
      },
      {
       "name": "dataSource",
@@ -487,12 +487,12 @@
      {
       "name": "preExecution",
       "type": "JavaScript",
-      "value": "function f(){\r\n    resizeGraphical(this);\r\n    \r\n} "
+      "value": "function f(){\r\n    //resizeGraphical(this);\r\n    let myself = this;\r\n    require(['amd!cdf/lib/underscore', 'cdf/dashboard/Utils'],function(_, Utils){\r\n        let numericOpts = {\r\n            color: function(st) {\r\n                console.log(st);\r\n                var values = st.tableData.map(function(e){\r\n                        return Number(_.last(e[st.colIdx].split(',')));\r\n                    });\r\n                var tblMax = _.max(values),\r\n                    tblMin = _.min(values);\r\n                var value = Number(_.last(st.value.split(','))),\r\n                    size = (value-tblMin)/(tblMax-tblMin),\r\n                    red = Math.min(255, Math.round(510 - 2 * 255 * size)),\r\n                    green = Math.min(255, Math.round(2 * 255 * size));\r\n                return \"rgb(\" + red + \",\" + green + \",0)\";\r\n            },\r\n        };\r\n        myself.setAddInOptions(\"colType\", \"numeric\", numericOpts);\r\n    })\r\n} "
      },
      {
       "name": "postExecution",
       "type": "JavaScript",
-      "value": "function() {\n    ($('#TableDomTable thead tr').clone()).insertBefore($('#TableDomTable thead tr'));\n    _.each($('#TableDomTable thead tr:nth-child(1) th'), function(elem, idx) {\n        //if (idx>0) {\n        if (idx>1) {    //用于控制clone的位置\n            if (((idx-1)%2)==0) {\n                $(elem).text($(elem).text().split('/')[0]).attr('colspan', 2);\n            } else {\n                $(elem).remove();\n            }    \n        } else {\n            $(elem).text('');\n        }\n    });\n    _.each($('#TableDomTable thead tr:nth-child(2) th'), function(elem) {\n        if ($(elem).text().split('/').length>1) {\n            $(elem).text($(elem).text().split('/')[1])\n        }    \n    });\n    \n    _.each($('#TableDomTable tbody tr'), function(elem, idx) {\n        /*\n        //鼠标点击选择行时候变色\n        elem.onclick = function(){\n            //console.log('click...');\n            var oObj = window.event.srcElement;\n            console.log(this.tagName.toLowerCase());\n            console.log(oObj.tagName.toLowerCase());\n            console.log(document.all.TableDomTable.rows.length);\n            if(oObj.tagName.toLowerCase() == \"td\"){\n                var oTr = oObj.parentNode; \n                for( var i = 3; i < document.all.TableDomTable.rows.length; i++ ){\n                    document.all.TableDomTable.rows[i].style.backgroundColor   =   \"\";   \n    \t\t\t    document.all.TableDomTable.rows[i].tag = false\n                }\n                oTr.style.backgroundColor = \"#888888\";  \n                //oTr.style.color = \"#fff\";  \n    \t\t    oTr.tag = true;   \n            }\n        };\n        //鼠标点击另外一行时关闭已选行变色\n        \n        elem.onMouseOut = function(){\n            console.log('onMouseOut...');\n            //var oObj = event.srcElement;\n            var oObj = window.event.srcElement;\n            if(oObj.tagName.toLowerCase() == \"td\"){\n                var oTr = oObj.parentNode;\n                if(!oTr.tag){\n                    oTr.style.backgroundColor = \"#E1E9FD\";\n                }\n            }\n        };\n        */\n        console.log(elem);\n        console.log(idx);\n    });\n    \n    /*\n    _.each( $(\"#TableDomTable tbody tr\"), function(elem, idx){\n        if(idx>1){\n            //$tr = $(this);\n            //console.log($(this));\n            //console.log($(elem).text());\n        }\n    });\n    /*\n    $(\"#TableDomTable tbody tr\").each(function(){//循环table的每行（tr）\n        $tr = $(this);\n    \t$td = $(\">td\",$tr);//每个tr下的td\n    \tif($.trim($td.text()) >= 165663){//去掉首尾空格并匹配td的内容\n    \t\t$tr.css(\"background\",\"red\"); //改变当前行的背景颜色为红色\n    \t}\n    });\n    \n    var tbody = $(\"#TableDomTable tbody\");\n    var tr = tbody.childNodes;\n    console.log(tr.length);\n    */\n    //console.log(this.Rows.Count);\n} "
+      "value": "function() {\n    ($('#TableDomTable thead tr').clone()).insertBefore($('#TableDomTable thead tr'));\n    _.each($('#TableDomTable thead tr:nth-child(1) th'), function(elem, idx) {\n        //if (idx>0) {\n        if (idx>1) {    //用于控制clone的位置\n            if (((idx-1)%2)==0) {\n                $(elem).text($(elem).text().split('/')[0]).attr('colspan', 2);\n            } else {\n                $(elem).remove();\n            }    \n        } else {\n            $(elem).text('');\n        }\n    });\n    _.each($('#TableDomTable thead tr:nth-child(2) th'), function(elem) {\n        if ($(elem).text().split('/').length>1) {\n            $(elem).text($(elem).text().split('/')[1])\n        }    \n    });\n    \n    //_.each($('#TableDomTable tbody tr'), function(elem, idx) {\n        /*\n        //鼠标点击选择行时候变色\n        elem.onclick = function(){\n            //console.log('click...');\n            var oObj = window.event.srcElement;\n            console.log(this.tagName.toLowerCase());\n            console.log(oObj.tagName.toLowerCase());\n            console.log(document.all.TableDomTable.rows.length);\n            if(oObj.tagName.toLowerCase() == \"td\"){\n                var oTr = oObj.parentNode; \n                for( var i = 3; i < document.all.TableDomTable.rows.length; i++ ){\n                    document.all.TableDomTable.rows[i].style.backgroundColor   =   \"\";   \n    \t\t\t    document.all.TableDomTable.rows[i].tag = false\n                }\n                oTr.style.backgroundColor = \"#888888\";  \n                //oTr.style.color = \"#fff\";  \n    \t\t    oTr.tag = true;   \n            }\n        };\n        //鼠标点击另外一行时关闭已选行变色\n        \n        elem.onMouseOut = function(){\n            console.log('onMouseOut...');\n            //var oObj = event.srcElement;\n            var oObj = window.event.srcElement;\n            if(oObj.tagName.toLowerCase() == \"td\"){\n                var oTr = oObj.parentNode;\n                if(!oTr.tag){\n                    oTr.style.backgroundColor = \"#E1E9FD\";\n                }\n            }\n        };\n        */\n        //console.log(elem);\n        //console.log(idx);\n    //});\n    //标注色卡\n    _.each($('#TableDomTable tbody tr'), function(elem, idx) {\n        \n        //console.log(elem.cells.length);\n        //console.log(elem.cells);\n        \n        \n        \n        _.each(elem.cells,function(tag,index){\n            if(index > 1 || tag.innerText > 100000){\n               //tag.setAttribute(\"class\",\"td_class\");\n               //console.log(tag);\n               //console.log(tag.innerText);\n               //console.log(tag);\n            }\n            /*\n            if(index > 1){\n                //console.log(tag.innerHTML);\n                if(tag.innerHTML > 100000){\n                    //tag.setAttribute(\"class\",\"td_class\");\n                    //console.log($(tag));\n                    $(tag).addClass(\"td_class\");\n                }\n                \n            }\n            */\n        });\n    });\n    \n    /*\n    _.each( $(\"#TableDomTable tbody tr\"), function(elem, idx){\n        if(idx>1){\n            //$tr = $(this);\n            //console.log($(this));\n            //console.log($(elem).text());\n        }\n    });\n    /*\n    $(\"#TableDomTable tbody tr\").each(function(){//循环table的每行（tr）\n        $tr = $(this);\n    \t$td = $(\">td\",$tr);//每个tr下的td\n    \tif($.trim($td.text()) >= 165663){//去掉首尾空格并匹配td的内容\n    \t\t$tr.css(\"background\",\"red\"); //改变当前行的背景颜色为红色\n    \t}\n    });\n    \n    var tbody = $(\"#TableDomTable tbody\");\n    var tr = tbody.childNodes;\n    console.log(tr.length);\n    */\n    //console.log(this.Rows.Count);\n    \n    \n    //可实现合并单元格,上下行来比较\n    var totalCols = $(\"#TableDomTable\").find(\"tr:eq(0)\").find(\"td\").length;\n    //console.log($('#TableDomTable tbody tr').find(\"td\").length);\n\tvar totalRows = $(\"#TableDomTable\").find(\"tr\").length;\n\t//for ( var i = totalCols-1; i >= 0; i--) {\n    for ( var i = 0; i >= 0; i--) {\n\t\tfor ( var j = totalRows-1; j >= 0; j--) {\n        //for ( var j = 0; j >= 0; j--) {\n\t\t\tstartCell = $(\"#TableDomTable\").find(\"tr\").eq(j).find(\"td\").eq(i);\n\t\t\ttargetCell = $(\"#TableDomTable\").find(\"tr\").eq(j - 1).find(\"td\").eq(i);\n            if (startCell.text() == targetCell.text() && targetCell.text() !== \"\") {\n\t\t\t\ttargetCell.attr(\"rowSpan\", (startCell.attr(\"rowSpan\") === undefined)?2:(eval(startCell.attr(\"rowSpan\"))+1));\n\t\t\t\t//startCell.remove();\n                startCell.addClass(\"hidden-lg hidden-md hidden-sm hidden-xs\");\n                //console.log(startCell.text());\n\t\t\t}\n            \n\t\t}\n\t}\n    \n    /*\n    var Cols = $(\"#TableDomTable\").find(\"tr:eq(0)\").find(\"td\").length;\n    var Rows = $(\"#TableDomTable\").find(\"tr\").length;\n    for( var m = Cols - 1; m >= 1; m--  ){\n        for( var n = Rows - 1; n >= 1; n-- ){\n            startCel = $(\"#TableDomTable\").find(\"tr\").eq(n).find(\"td\").eq(m);\n    \t\ttargetCel = $(\"#TableDomTable\").find(\"tr\").eq(n - 1).find(\"td\").eq(m);\n            if( startCel.text() >= 10000 ){\n                console.log(startCel);\n            }\n        }\n    }\n    */\n    \n    //,td:eq(1)\n    \n    $('#TableDomTable tbody tr').find(\"td:eq(0),td:eq(1)\")\n                                .css(\"background-color\", \"#F8FAFB\")\n                                .css(\"border\", \"1px solid #FFFFFF\")\n                                .css('color','#2779aa');\n    \n   \n} "
      },
      {
       "name": "postFetch",
@@ -530,37 +530,304 @@
     "typeDesc": "table Component"
    },
    {
+    "id": "e96b45e9-ac31-4914-19c3-989794528828",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "ExportTableCom"
+     },
+     {
+      "name": "label",
+      "type": "String",
+      "value": ".xls"
+     },
+     {
+      "name": "listeners",
+      "type": "Listeners",
+      "value": "[]"
+     },
+     {
+      "name": "parameters",
+      "type": "ValuesArray",
+      "value": "[]"
+     },
+     {
+      "name": "priority",
+      "type": "Integer",
+      "value": 5
+     },
+     {
+      "name": "refreshPeriod",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "componentName",
+      "type": "String",
+      "value": "TableCom"
+     },
+     {
+      "name": "outputType",
+      "type": "String",
+      "value": "xls"
+     },
+     {
+      "name": "htmlObject",
+      "type": "HtmlObject",
+      "value": "${h:ExportDom}"
+     },
+     {
+      "name": "executeAtStart",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "preExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "tooltip",
+      "type": "Html",
+      "value": ""
+     }
+    ],
+    "rowName": "Export Button",
+    "type": "ComponentsexportButton",
+    "typeDesc": "Export Button Component"
+   },
+   {
     "id": "SCRIPT",
     "name": "Scripts",
-    "type": "Label",
-    "typeDesc": "<i>Group</i>",
     "parent": "UnIqEiD",
     "properties": [
      {
       "name": "Group",
-      "value": "Scripts",
-      "type": "Label"
+      "type": "Label",
+      "value": "Scripts"
      }
-    ]
+    ],
+    "type": "Label",
+    "typeDesc": "<i>Group</i>"
    },
    {
     "id": "695b93f2-4653-ef80-7c52-410e9c0f3e2e",
-    "type": "ComponentsFunction",
-    "typeDesc": "JavaScript function",
     "parent": "SCRIPT",
     "properties": [
      {
       "name": "name",
-      "value": "JS",
-      "type": "Id"
+      "type": "Id",
+      "value": "JS"
      },
      {
       "name": "javaScript",
-      "value": "/**\r\n * 解决CDE图形的自适应\r\n */\r\nfunction resizeGraphical(cdeObj){\r\n    var myself = cdeObj;\r\n    //设置初始宽度 与placeholder()匹配\r\n    myself.chartDefinition.width = myself.placeholder().width();\r\n    //仅在图表组件的第一个执行上附加调整处理程序\r\n    if( !cdeObj.resizeHandlerAttached ){\r\n        //确保渲染只在事件发生后被触发\r\n        var debouncedResize = _.debounce(function(){\r\n            //再次显示 图形\r\n            myself.placeholder().children().css('visibility','visible');\r\n            // 改变 图形 的 宽度\r\n            myself.chartDefinition.width = myself.placeholder().width();\r\n            myself.render( myself.query.lastResults() );\r\n        },200);\r\n        // 高度调整 处理\r\n        $(window).resize(function(){\r\n            //仅当容器已更改宽度时才触发调整大小\r\n            if( myself.chartDefinition.width != myself.placeholder().width() ){\r\n                //暂时隐藏图表，使溢出不会发生\r\n                myself.placeholder().children().css('visibility','hidden');\r\n                //触发与调整\r\n                debouncedResize();\r\n            }\r\n        });\r\n        cdeObj.resizeHandlerAttached = true;\r\n    }\r\n} ",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": "/**\r\n * 解决CDE图形的自适应\r\n */\r\nfunction resizeGraphical(cdeObj){\r\n    var myself = cdeObj;\r\n    //设置初始宽度 与placeholder()匹配\r\n    myself.chartDefinition.width = myself.placeholder().width();\r\n    //仅在图表组件的第一个执行上附加调整处理程序\r\n    if( !cdeObj.resizeHandlerAttached ){\r\n        //确保渲染只在事件发生后被触发\r\n        var debouncedResize = _.debounce(function(){\r\n            //再次显示 图形\r\n            myself.placeholder().children().css('visibility','visible');\r\n            // 改变 图形 的 宽度\r\n            myself.chartDefinition.width = myself.placeholder().width();\r\n            myself.render( myself.query.lastResults() );\r\n        },200);\r\n        // 高度调整 处理\r\n        $(window).resize(function(){\r\n            //仅当容器已更改宽度时才触发调整大小\r\n            if( myself.chartDefinition.width != myself.placeholder().width() ){\r\n                //暂时隐藏图表，使溢出不会发生\r\n                myself.placeholder().children().css('visibility','hidden');\r\n                //触发与调整\r\n                debouncedResize();\r\n            }\r\n        });\r\n        cdeObj.resizeHandlerAttached = true;\r\n    }\r\n} \r\n\r\n\r\n\r\n "
      }
     ],
-    "rowName": "Function"
+    "rowName": "Function",
+    "type": "ComponentsFunction",
+    "typeDesc": "JavaScript function"
+   },
+   {
+    "id": "SELECTORS",
+    "name": "Selects",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "type": "Label",
+      "value": "Selects"
+     }
+    ],
+    "type": "Label",
+    "typeDesc": "<i>Group</i>"
+   },
+   {
+    "id": "45a5f707-0ce7-b052-cffc-118c308e5aea",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "title",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "parameter",
+      "type": "Parameter",
+      "value": ""
+     },
+     {
+      "name": "listeners",
+      "type": "Listeners",
+      "value": "[]"
+     },
+     {
+      "name": "parameters",
+      "type": "ValuesArray",
+      "value": "[]"
+     },
+     {
+      "name": "valueAsId",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "outputFormat",
+      "type": "outputFormatCustom",
+      "value": "lowestID"
+     },
+     {
+      "name": "dataSource",
+      "type": "Datasource",
+      "value": ""
+     },
+     {
+      "name": "valuesArray",
+      "type": "ValuesArray",
+      "value": "[]"
+     },
+     {
+      "name": "priority",
+      "type": "Integer",
+      "value": 5
+     },
+     {
+      "name": "alwaysExpanded",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "multiselect",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "selectionLimit",
+      "type": "Integer",
+      "value": 200
+     },
+     {
+      "name": "pageSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "showIcons",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "showButtonOnlyThis",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "useOverlay",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "showFilter",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "htmlObject",
+      "type": "HtmlObject",
+      "value": ""
+     },
+     {
+      "name": "executeAtStart",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "preExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postFetch",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "preChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postUpdate",
+      "type": "Array",
+      "value": "[]"
+     },
+     {
+      "name": "renderRootHeader",
+      "type": "Array",
+      "value": "[]"
+     },
+     {
+      "name": "renderRootSelection",
+      "type": "Array",
+      "value": "[]"
+     },
+     {
+      "name": "renderRootFooter",
+      "type": "Array",
+      "value": "[]"
+     },
+     {
+      "name": "renderGroupSelection",
+      "type": "Array",
+      "value": "[]"
+     },
+     {
+      "name": "renderItemSelection",
+      "type": "Array",
+      "value": "[]"
+     },
+     {
+      "name": "sortGroup",
+      "type": "Array",
+      "value": "[]"
+     },
+     {
+      "name": "sortItem",
+      "type": "Array",
+      "value": "[]"
+     },
+     {
+      "name": "options",
+      "type": "JavaScript",
+      "value": "function options(){\n    return {};\n}"
+     }
+    ],
+    "rowName": "Filter Component",
+    "type": "ComponentsFilterComponent",
+    "typeDesc": "Filter Component"
    }
   ]
  },
@@ -605,7 +872,7 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "CALL P_DAILY_BUSINESS_PROFILE('2016-01-17', '2017-01-01', -1, -1, -1, -1, -1, -1, -1);\n"
+      "value": "CALL P_DAILY_BUSINESS_PROFILE('2017-01-17', '2017-06-01', -1, -1, -1, -1, -1, -1, -1);\n"
      },
      {
       "name": "parameters",
@@ -669,7 +936,7 @@
      {
       "name": "resourceCode",
       "type": "Resource",
-      "value": "@font-face{\r\n    font-family: TPF_Font_Thin;\r\n    src: url('/pentaho/BI/fonts/Comfortaa_Thin.ttf'),\r\n         url('/pentaho/BI/fonts/Comfortaa_Thin.eot');  /* IE9 */ \r\n}\r\nbody{\r\n    \r\n    background-color:#ECF0F5;\r\n    /*\r\n    background-color:#FFFFFF;  #ECF0F5\r\n    */\r\n}\r\n.container {\r\n    width:100%;\r\n    height: 100%;\r\n    overflow: auto;\r\n    position: absolute; \r\n    padding-top: 10px;\r\n    padding-right: 0px;\r\n    padding-left: 10px;\r\n    padding-bottom: 10px;\r\n    margin-right: auto;\r\n    margin-left: auto;\r\n}\r\n/*   #   */\r\n.panel-default {\r\n    border: none;\r\n    border-radius: 0px;\r\n    margin-bottom: 0px;\r\n    box-shadow: none;\r\n    -webkit-box-shadow: none;\r\n}\r\n.panel-default > .panel-heading {\r\n    color: #777;\r\n    background-color: #fff;\r\n    border-color: #e6e6e6;\r\n    padding: 10px 10px;\r\n}\r\n.panel-default > .panel-body {\r\n    padding: 10px;\r\n    padding-bottom: 0px;\r\n}\r\n.panel-default > .panel-body ul {\r\n    overflow: hidden;\r\n    padding: 0;\r\n    margin: 0px;\r\n    margin-top: -5px;\r\n}\r\n.panel-default > .panel-body ul li {\r\n    line-height: 27px;\r\n    list-style-type: none;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n}\r\n.panel-default > .panel-body ul li .time {\r\n    color: #a1a1a1;\r\n    float: right;\r\n    padding-right: 5px;\r\n} \r\n.single {\r\n    cursor: pointer;\r\n    border: 1px solid #eee;\r\n    border-radius: 0px;\r\n    text-align: center;\r\n    \r\n    padding: 10px;\r\n    padding-top: 10px;\r\n    padding-right: 10px;\r\n    margin-bottom: 10px;\r\n    \r\n} \r\n\r\n .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, \r\n .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, \r\n .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, \r\n .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, \r\n .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, \r\n .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, \r\n .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, \r\n .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, \r\n .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, \r\n .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, \r\n .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, \r\n .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {\r\n    position: relative;\r\n    min-height: 1px;\r\n    padding-right: 10px;\r\n    padding-left: 0px;\r\n} \r\n.row {\r\n    margin-right: 0px;\r\n    margin-left: 0px;\r\n} \r\n\r\nhr {\r\n    margin-top: 10px; \r\n    margin-bottom: 0px; \r\n    border: 0;\r\n    border-top: 0px solid #eee; \r\n} \r\n\r\n/**************************浮动**************************/\r\n.floatPanel {\r\n    cursor: pointer;\r\n    border: 1px solid #eee;\r\n    border-radius: 0px;\r\n    \r\n    /*\r\n    text-align: center;\r\n    padding: 10px;\r\n    padding-top: 10px;\r\n    padding-right: 10px;\r\n    margin-bottom: 10px;\r\n    */\r\n} \r\n.floatPanel:hover, .single.selected:hover {\r\n    -webkit-box-shadow: 0px 0px 35px -8px rgba(0,0,0,0.5);\r\n    -moz-box-shadow: 0px 0px 35px -8px rgba(0,0,0,0.5);\r\n    box-shadow: 0px 0px 35px -8px rgba(0,0,0,0.5);\r\n    \r\n    /*\r\n    border: 1px solid #49AEC0;\r\n    border: 1px solid #49AEC0;\r\n    background-color: rgba(240, 240, 240, 0.8);  rgba(0,0,0,0.5);\r\n    */\r\n}\r\n.floatPanel.selected {\r\n    background-color: rgba(240, 240, 240, 0.4);\r\n}\r\n \r\n/* ================ TABLE ================ */\r\n\r\ntable.table.dataTable {\r\n    /*\r\n    margin-top: 18px;\r\n    */\r\n    border: none;\r\n}\r\n\r\ntable.table.dataTable thead {\r\n    /*\r\n    display: none;\r\n    */\r\n    background-color: #F8FAFB;\r\n    border: none;\r\n}\r\n\r\n\r\ntable.table.dataTable tbody tr {\r\n    background-color: white;\r\n    border: none;\r\n}\r\n\r\ntable.table.dataTable tbody tr td {\r\n    border: none;\r\n    background-color: white;\r\n    padding: 4px;\r\n    line-height: 22px;\r\n}\r\n\r\ntable.table.dataTable tbody tr td.column2 {\r\n    font-size: 16px;\r\n}\r\n\r\n.salesByProduct {\r\n    margin-top: 20px;\r\n}\r\n\r\n.dataTables_wrapper .dataTables_filter input {\r\n    margin-left: 0.5em;\r\n    border: 1px solid #efefef;\r\n    padding: 5px;\r\n    margin: 10px;\r\n}\r\n\r\n.dataTables_wrapper .dataTables_length, \r\n.dataTables_wrapper .dataTables_filter, \r\n.dataTables_wrapper .dataTables_info, \r\n.dataTables_wrapper .dataTables_processing, \r\n.dataTables_wrapper .dataTables_paginate {\r\n    color: #333333;\r\n    width: 100%;\r\n    background-color: #F8FAFB;\r\n    padding: 4px;\r\n    border-bottom: 2px solid white;\r\n}\r\n\r\ntable.dataTable.compact thead th, \r\ntable.dataTable.compact thead td {\r\n    padding: 5px 9px;\r\n    background-color: #F8FAFB;\r\n    border: 2px solid white;\r\n}\r\n\r\ntable.tableComponent td.numeric {\r\n    font-family: 'Open Sans';\r\n    font-size: 12px;\r\n    vertical-align: middle;\r\n}\r\n\r\n\r\n\r\ntable .trend {\r\n    position: relative;\r\n\r\n}\r\n\r\ntable .trend:after {\r\n    position: absolute;\r\n    background: none;\r\n    font: normal normal normal 20px/1 FontAwesome;\r\n    top: -5px;\r\n    left: -3px;\r\n}\r\n\r\ntable .trend.down.good {\r\n    background: none;\r\n}\r\n\r\ntable .trend.down.good:after {\r\n    content: \"\\f0ab\";\r\n    color: red;\r\n}\r\n\r\ntable .trend.up.good {\r\n    background: none;\r\n}\r\n\r\ntable .trend.up.good:after {\r\n    content: \"\\f0aa\";\r\n    color: green;\r\n}\r\n\r\ntable .trend.neutral.good {\r\n    background: none;\r\n}\r\n\r\ntable .trend.neutral.good:after {\r\n    content: \"\\f0a9\";\r\n    color: #ccc;\r\n} \r\n\r\n.dataTables_wrapper .ui-toolbar {\r\n    padding: 0px;\r\n} \r\n.dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {\r\n    color: #333333;\r\n    width: 100%;\r\n    /* background-color: #F8FAFB; */\r\n    /* padding: 4px; */\r\n    /* border-bottom: 2px solid white; */\r\n}\r\n.dataTables_wrapper .dataTables_paginate {\r\n    float: right;\r\n    text-align: right;\r\n    /* padding-top: 0.25em; */\r\n} \r\n.ui-widget-header {\r\n    border: 0px solid #aed0ea;\r\n    background: #F8FAFB url(images/ui-bg_highlight-soft_100_deedf7_1x100.png) 50% 50% repeat-x; \r\n    /*\r\n    color: #222222;\r\n    */\r\n    color: #2779AA;\r\n    font-weight: bold;\r\n} \r\n.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {\r\n    border: 1px solid #aed0ea;\r\n    background: #F8FAFB url(images/ui-bg_glass_80_d7ebf9_1x400.png) 50% 50% repeat-x;\r\n    font-weight: bold;\r\n    color: #2779aa;\r\n}\r\n#TableDomTable_length{\r\n    color: #333333;\r\n    /* background-color: #F8FAFB; */\r\n    /* padding: 4px; */\r\n    /* border-bottom: 2px solid white; */\r\n    width:125px;\r\n}\r\n#TableDomTable_filter{\r\n    color: #333333;\r\n    background-color: #F8FAFB;\r\n    padding: 4px;\r\n    border-bottom: 2px solid white;\r\n    width:280px;height:35px;\r\n} \r\n.dataTables_wrapper .dataTables_filter input {\r\n    margin-left: 0em; \r\n    border: 1px solid #efefef;\r\n    padding: 0px; \r\n    margin: 0px; \r\n} \r\n#TableDomTable_info{\r\n    width: 50%;\r\n} \r\n#TableDomTable_paginate{\r\n    width: 20%;\r\n} \r\n.dataTables_wrapper .dataTables_paginate{\r\n    color: #333333;\r\n    width: 100%;\r\n    background-color: #F8FAFB;\r\n    padding: 0px;\r\n    border-bottom: 0px solid white;\r\n} \r\n\r\n.dataTables_wrapper .dataTables_info{\r\n    color: #2779AA;\r\n    width: 100%;\r\n    background-color: #F8FAFB;\r\n    padding: 4px;\r\n    border-bottom: 0px solid white; \r\n}\r\ntbody tr:hover td,tbody tr.over td{\r\n    background-color:#888888;\r\n    color:#fff;\r\n}\r\n "
+      "value": "@font-face{\r\n    font-family: TPF_Font_Thin;\r\n    src: url('/pentaho/BI/fonts/Comfortaa_Thin.ttf'),\r\n         url('/pentaho/BI/fonts/Comfortaa_Thin.eot');  /* IE9 */ \r\n}\r\nbody{\r\n    \r\n    background-color:#ECF0F5;\r\n    /*\r\n    background-color:#FFFFFF;  #ECF0F5\r\n    */\r\n    font-size: 10px;\r\n    font-family: 'TPF_Font_Thin';\r\n}\r\n.container {\r\n    width:100%;\r\n    height: 100%;\r\n    overflow: auto;\r\n    position: absolute; \r\n    padding-top: 10px;\r\n    padding-right: 0px;\r\n    padding-left: 10px;\r\n    padding-bottom: 10px;\r\n    margin-right: auto;\r\n    margin-left: auto;\r\n}\r\n/*   #   */\r\n.panel-default {\r\n    border: none;\r\n    border-radius: 0px;\r\n    margin-bottom: 0px;\r\n    box-shadow: none;\r\n    -webkit-box-shadow: none;\r\n}\r\n.panel-heading {\r\n    /*\r\n    padding: 10px 15px;\r\n    */\r\n    padding: 0px 0px;\r\n    border-bottom: 0px solid transparent;\r\n    border-top-left-radius: 3px;\r\n    border-top-right-radius: 3px;\r\n}\r\n.panel-default > .panel-heading {\r\n    color: #777;\r\n    background-color: #fff;\r\n    border-color: #e6e6e6;\r\n    padding: 10px 10px;\r\n}\r\n.panel-default > .panel-body {\r\n    padding: 10px;\r\n    padding-bottom: 0px;\r\n}\r\n.panel-default > .panel-body ul {\r\n    overflow: hidden;\r\n    padding: 0;\r\n    margin: 0px;\r\n    margin-top: -5px;\r\n}\r\n.panel-default > .panel-body ul li {\r\n    line-height: 27px;\r\n    list-style-type: none;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n}\r\n.panel-default > .panel-body ul li .time {\r\n    color: #a1a1a1;\r\n    float: right;\r\n    padding-right: 5px;\r\n} \r\n.single {\r\n    cursor: pointer;\r\n    border: 1px solid #eee;\r\n    border-radius: 0px;\r\n    text-align: center;\r\n    \r\n    padding: 10px;\r\n    padding-top: 10px;\r\n    padding-right: 10px;\r\n    margin-bottom: 10px;\r\n    \r\n} \r\n\r\n .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, \r\n .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, \r\n .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, \r\n .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, \r\n .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, \r\n .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, \r\n .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, \r\n .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, \r\n .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, \r\n .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, \r\n .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, \r\n .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {\r\n    position: relative;\r\n    min-height: 1px;\r\n    padding-right: 10px;\r\n    padding-left: 0px;\r\n} \r\n.row {\r\n    margin-right: 0px;\r\n    margin-left: 0px;\r\n} \r\n\r\nhr {\r\n    margin-top: 10px; \r\n    margin-bottom: 0px; \r\n    border: 0;\r\n    border-top: 0px solid #eee; \r\n} \r\n\r\n/**************************浮动**************************/\r\n.floatPanel {\r\n    cursor: pointer;\r\n    border: 1px solid #eee;\r\n    border-radius: 0px;\r\n    \r\n    /*\r\n    text-align: center;\r\n    padding: 10px;\r\n    padding-top: 10px;\r\n    padding-right: 10px;\r\n    margin-bottom: 10px;\r\n    */\r\n} \r\n.floatPanel:hover, .single.selected:hover {\r\n    -webkit-box-shadow: 0px 0px 35px -8px rgba(0,0,0,0.5);\r\n    -moz-box-shadow: 0px 0px 35px -8px rgba(0,0,0,0.5);\r\n    box-shadow: 0px 0px 35px -8px rgba(0,0,0,0.5);\r\n    \r\n    /*\r\n    border: 1px solid #49AEC0;\r\n    border: 1px solid #49AEC0;\r\n    background-color: rgba(240, 240, 240, 0.8);  rgba(0,0,0,0.5);\r\n    */\r\n}\r\n.floatPanel.selected {\r\n    background-color: rgba(240, 240, 240, 0.4);\r\n}\r\n \r\n/* ================ TABLE ================ */\r\ntable,table tr th, table tr td {\r\n    border:1px solid #F8FAFB; \r\n    /*\r\n    #F8FAFB  #278DC5\r\n    */\r\n}\r\n\r\ntable.table.dataTable {\r\n    /*\r\n    margin-top: 18px;\r\n    */\r\n    border: none;\r\n}\r\n\r\ntable.table.dataTable thead {\r\n    /*\r\n    display: none;\r\n    */\r\n    background-color: #F8FAFB;\r\n    /*\r\n    border: none;\r\n    */\r\n    border: 1px solid #efefef;\r\n}\r\n\r\n\r\ntable.table.dataTable tbody tr {\r\n    background-color: white;\r\n    /*\r\n    border: none;\r\n    */\r\n    border: 1px solid #efefef;\r\n}\r\n\r\ntable.table.dataTable tbody tr td {\r\n    border: none;\r\n    background-color: white;\r\n    padding: 4px;\r\n    line-height: 22px;\r\n}\r\n\r\ntable.table.dataTable tbody tr td.column2 {\r\n    font-size: 16px;\r\n}\r\n\r\n.salesByProduct {\r\n    margin-top: 20px;\r\n}\r\n\r\n.dataTables_wrapper .dataTables_filter input {\r\n    margin-left: 0.5em;\r\n    border: 1px solid #efefef;\r\n    padding: 5px;\r\n    margin: 10px;\r\n}\r\n\r\n.dataTables_wrapper .dataTables_length, \r\n.dataTables_wrapper .dataTables_filter, \r\n.dataTables_wrapper .dataTables_info, \r\n.dataTables_wrapper .dataTables_processing, \r\n.dataTables_wrapper .dataTables_paginate {\r\n    color: #333333;\r\n    width: 100%;\r\n    background-color: #F8FAFB;\r\n    padding: 4px;\r\n    border-bottom: 2px solid white;\r\n}\r\n\r\ntable.dataTable.compact thead th, \r\ntable.dataTable.compact thead td {\r\n    padding: 5px 9px;\r\n    background-color: #F8FAFB;\r\n    border: 2px solid white;\r\n}\r\n\r\ntable.tableComponent td.numeric {\r\n    font-family: 'Open Sans';\r\n    font-size: 12px;\r\n    vertical-align: middle;\r\n}\r\n\r\n\r\n\r\ntable .trend {\r\n    position: relative;\r\n\r\n}\r\n\r\ntable .trend:after {\r\n    position: absolute;\r\n    background: none;\r\n    font: normal normal normal 20px/1 FontAwesome;\r\n    top: -5px;\r\n    left: -3px;\r\n}\r\n\r\ntable .trend.down.good {\r\n    background: none;\r\n}\r\n\r\ntable .trend.down.good:after {\r\n    content: \"\\f0ab\";\r\n    color: red;\r\n}\r\n\r\ntable .trend.up.good {\r\n    background: none;\r\n}\r\n\r\ntable .trend.up.good:after {\r\n    content: \"\\f0aa\";\r\n    color: green;\r\n}\r\n\r\ntable .trend.neutral.good {\r\n    background: none;\r\n}\r\n\r\ntable .trend.neutral.good:after {\r\n    content: \"\\f0a9\";\r\n    color: #ccc;\r\n} \r\n\r\n.dataTables_wrapper .ui-toolbar {\r\n    padding: 0px;\r\n} \r\n.dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {\r\n    color: #333333;\r\n    width: 100%;\r\n    /* background-color: #F8FAFB; */\r\n    /* padding: 4px; */\r\n    /* border-bottom: 2px solid white; */\r\n}\r\n.dataTables_wrapper .dataTables_paginate {\r\n    float: right;\r\n    text-align: right;\r\n    /* padding-top: 0.25em; */\r\n} \r\n.ui-widget-header {\r\n    border: 0px solid #aed0ea;\r\n    background: #F8FAFB url(images/ui-bg_highlight-soft_100_deedf7_1x100.png) 50% 50% repeat-x; \r\n    /*\r\n    color: #222222;\r\n    */\r\n    color: #2779AA;\r\n    font-weight: bold;\r\n} \r\n.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {\r\n    border: 1px solid #aed0ea;\r\n    background: #F8FAFB url(images/ui-bg_glass_80_d7ebf9_1x400.png) 50% 50% repeat-x;\r\n    font-weight: bold;\r\n    color: #2779aa;\r\n}\r\n#TableDomTable_length{\r\n    color: #333333;\r\n    /* background-color: #F8FAFB; */\r\n    /* padding: 4px; */\r\n    /* border-bottom: 2px solid white; */\r\n    width:125px;\r\n}\r\n#TableDomTable_filter{\r\n    color: #333333;\r\n    background-color: #F8FAFB;\r\n    padding: 4px;\r\n    border-bottom: 2px solid white;\r\n    width:280px;height:35px;\r\n} \r\n.dataTables_wrapper .dataTables_filter input {\r\n    margin-left: 0em; \r\n    border: 1px solid #efefef;\r\n    padding: 0px; \r\n    margin: 0px; \r\n} \r\n#TableDomTable_info{\r\n    width: 50%;\r\n} \r\n#TableDomTable_paginate{\r\n    width: 20%;\r\n} \r\n.dataTables_wrapper .dataTables_paginate{\r\n    color: #333333;\r\n    width: 100%;\r\n    background-color: #F8FAFB;\r\n    padding: 0px;\r\n    border-bottom: 0px solid white;\r\n} \r\n\r\n.dataTables_wrapper .dataTables_info{\r\n    color: #2779AA;\r\n    width: 100%;\r\n    background-color: #F8FAFB;\r\n    padding: 4px;\r\n    border-bottom: 0px solid white; \r\n}\r\n.dataTables_wrapper .dataTables_length{\r\n    color: #333333;\r\n    width: 100%;\r\n    background-color: #F8FAFB;\r\n    padding: 4px;\r\n    border-bottom: 0px solid white;\r\n}\r\n\r\ntbody tr:hover td,tbody tr.over td{\r\n    background-color:#888888;\r\n    color:#fff;\r\n}\r\n\r\n.groupHeader.group0 {\r\n    background: #F8FAFB;\r\n}\r\n\r\n/*************************指标卡 ****************************/\r\n.td_class{\r\n    background-color: red;   \r\n}\r\n\r\n/*******************************************************/\r\n#row_table_col_panel_body{\r\n    height:400px;\r\n   overflow:auto; \r\n}\r\n "
      },
      {
       "name": "resourceType",
@@ -679,6 +946,285 @@
     ],
     "type": "LayoutResourceCode",
     "typeDesc": "Resource"
+   },
+   {
+    "id": "4689f1ff-9799-e3eb-2bf1-8f106e12f985",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "filter_row"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutRow",
+    "typeDesc": "Row"
+   },
+   {
+    "id": "d24a15a8-86ff-99b4-7327-95d47d4e6a46",
+    "parent": "4689f1ff-9799-e3eb-2bf1-8f106e12f985",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "filter_row_col"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "cc295d81-01a7-81d2-caad-76d6b690e8d7",
+    "parent": "d24a15a8-86ff-99b4-7327-95d47d4e6a46",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "filter_row_col_panel"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": "100"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "floatPanel"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "type": "bootstrapPanelStyleCustom",
+      "value": "panel-default"
+     }
+    ],
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel"
+   },
+   {
+    "id": "dfa7770c-ae9b-3111-e60f-4d98b6489f20",
+    "parent": "cc295d81-01a7-81d2-caad-76d6b690e8d7",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "filter_row_col_panel_header"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelHeader",
+    "typeDesc": "Panel Header"
+   },
+   {
+    "id": "3f9a9422-0679-1bde-5a54-2e5e4101c227",
+    "parent": "dfa7770c-ae9b-3111-e60f-4d98b6489f20",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "filter_row_col_panel_header_html"
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-filter\"></i>\r\n</div> "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "b7b6b6bf-b464-4849-304f-0cf103386cfb",
+    "parent": "cc295d81-01a7-81d2-caad-76d6b690e8d7",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "filter_row_col_panel_body"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "hidden-xs hidden-sm hidden-md hidden-lg"
+     }
+    ],
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body"
+   },
+   {
+    "id": "386aca4a-4a12-fc4c-1dc6-310a6dc38337",
+    "parent": "b7b6b6bf-b464-4849-304f-0cf103386cfb",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "filter_row_col_panel_body_html"
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-filter\"></i> 筛选器 \r\n</div> "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "e1e2c0d2-033c-e379-ea31-7a0fbf6d3646",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutSpace",
+    "typeDesc": "Space"
    },
    {
     "id": "a444be32-93c7-6dde-358c-29bd80c9105d",
@@ -793,7 +1339,7 @@
      {
       "name": "height",
       "type": "Integer",
-      "value": "800"
+      "value": "450"
      },
      {
       "name": "roundCorners",
@@ -854,7 +1400,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-table\"></i> 交叉表格\r\n</div> "
+      "value": "<!-- \r\n<div class=\"panel-heading \">\r\n    <i class=\"fa fa-table\"></i> 交叉表格\r\n</div> \r\n    \r\n</div>\r\n<div class='container'>\r\n    <div id='row_table'  class='row clearfix ' >\r\n        <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12 last'>\r\n            <div id='row_table_col' >\r\n                <div id='row_table_col_panel'  class='floatPanel panel panel-default '  style='height:800px;' >\r\n                    <div id='row_table_col_panel_header'  class='panel-heading ' >\r\n                        <div class=\"panel-heading \">\r\n                            <i class=\"fa fa-table\"></i> 交叉表格\r\n                        </div> \r\n                    </div>\r\n                    <div id='row_table_col_panel_body'  class='panel-body ' >\r\n                        <div id='TableDom'></div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n-->\r\n<div class='row clearfix '>\r\n    <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>\r\n        <div class=\"panel-heading \">\r\n            <i class=\"fa fa-table\"></i> 交叉表格\r\n        </div> \r\n    </div>\r\n    <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6 last'>\r\n        <div class=\"panel-heading pull-right\">\r\n            <!-- \r\n            <i class=\"fa fa-share-square-o\"></i> \r\n            -->\r\n            <div id='ExportDom'></div>\r\n        </div> \r\n    </div>\r\n</div> "
      },
      {
       "name": "fontSize",
