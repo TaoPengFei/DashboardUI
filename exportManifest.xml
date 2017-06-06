@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:ExportManifest xmlns:ns2="http://www.pentaho.com/schema/">
-    <ExportManifestInformation exportDate="06-06-2017 02:04:02 CST" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
+    <ExportManifestInformation exportDate="06-06-2017 03:26:29 CST" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
     <ExportManifestEntity path="UI">
         <ExportManifestProperty>
             <EntityMetaData name="UI" createdDate="2017-05-04T16:22:05.302+08:00" isFolder="true" path="UI" isHidden="false" locale="zh_CN" title="UI"/>
@@ -88,6 +88,42 @@
     <ExportManifestEntity path="UI/Template1/TableComponent.wcdf">
         <ExportManifestProperty>
             <EntityMetaData name="TableComponent.wcdf" createdDate="2017-06-01T13:38:30.498+08:00" isFolder="false" path="UI/Template1/TableComponent.wcdf" isHidden="false" locale="zh_CN" description="TableComponent" title="交叉表格"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/Template1/TableComponent_tmp.cda">
+        <ExportManifestProperty>
+            <EntityMetaData name="TableComponent_tmp.cda" createdDate="2017-06-06T14:17:14.207+08:00" isFolder="false" path="UI/Template1/TableComponent_tmp.cda" isHidden="false" locale="zh_CN" title="TableComponent_tmp.cda"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/Template1/TableComponent_tmp.cdfde">
+        <ExportManifestProperty>
+            <EntityMetaData name="TableComponent_tmp.cdfde" createdDate="2017-06-06T14:17:14.064+08:00" isFolder="false" path="UI/Template1/TableComponent_tmp.cdfde" isHidden="false" locale="zh_CN" title="TableComponent_tmp.cdfde"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/Template1/TableComponent_tmp.wcdf">
+        <ExportManifestProperty>
+            <EntityMetaData name="TableComponent_tmp.wcdf" createdDate="2017-06-06T14:17:13.974+08:00" isFolder="false" path="UI/Template1/TableComponent_tmp.wcdf" isHidden="false" locale="zh_CN" title="TableComponent_tmp.wcdf"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>

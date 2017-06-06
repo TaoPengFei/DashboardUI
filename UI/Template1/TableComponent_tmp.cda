@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="TableQuery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" connection="TableQuery" id="TableQuery" type="sql">
+      <Name>TableQuery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[CALL P_DAILY_BUSINESS_PROFILE('2017-01-17', '2017-06-01', -1, -1, -1, -1, -1, -1, -1);]]></Query>
+   </DataAccess>
+</CDADescriptor>
