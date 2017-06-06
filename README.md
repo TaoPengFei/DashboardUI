@@ -4,5 +4,8 @@
 #Pentaho CDE Table Component组件的使用
 ![Image](https://github.com/TaoPengFei/DashboardUI/blob/master/Demo/imgs/CrossTable.png)
 
+#Pentaho CDE Table Component组件的使用
+![Image](https://github.com/TaoPengFei/DashboardUI/blob/master/Demo/imgs/CrossTable.png)
+
 #Pentaho CDE前端布局方案--指标卡式布局
 ![Image](https://github.com/TaoPengFei/DashboardUI/blob/master/Demo/imgs/Template_0.png)
