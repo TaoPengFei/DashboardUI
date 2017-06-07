@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CDADescriptor>
    <DataSources>
-      <Connection id="GaugeEchartsQuery_new" type="sql.jndi">
-         <Jndi>jdbc_bi</Jndi>
-      </Connection>
       <Connection id="GaugeEchartsQuery" type="sql.jndi">
          <Jndi>jdbc_bi</Jndi>
       </Connection>
@@ -11,9 +8,9 @@
          <Jndi>jdbc_bi</Jndi>
       </Connection>
    </DataSources>
-   <DataAccess access="public" connection="GaugeEchartsQuery_new" id="GaugeEchartsQuery_new"
+   <DataAccess access="public" connection="GaugeEchartsQuery" id="GaugeEchartsQuery"
                type="sql">
-      <Name>GaugeEchartsQuery_new</Name>
+      <Name>GaugeEchartsQuery</Name>
       <Cache duration="3600" enabled="true"/>
       <Columns/>
       <Parameters/>
@@ -28,14 +25,6 @@ FROM
      INNER JOIN `dim_place` ON `fact_sumday`.`PlaceId` = `dim_place`.`PlaceId`
      INNER JOIN `dim_area` ON `fact_sumday`.`AreaId` = `dim_area`.`AreaId`
      INNER JOIN `dim_brand` ON `dim_outlet`.`BrandId` = `dim_brand`.`BrandId`]]></Query>
-   </DataAccess>
-   <DataAccess access="public" connection="GaugeEchartsQuery" id="GaugeEchartsQuery"
-               type="sql">
-      <Name>GaugeEchartsQuery</Name>
-      <Cache duration="3600" enabled="true"/>
-      <Columns/>
-      <Parameters/>
-      <Query><![CDATA[SELECT 1, 14.45;]]></Query>
    </DataAccess>
    <DataAccess access="public" connection="TableQuery" id="TableQuery" type="sql">
       <Name>TableQuery</Name>

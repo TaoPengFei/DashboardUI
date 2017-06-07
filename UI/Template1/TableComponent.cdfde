@@ -594,7 +594,7 @@
      {
       "name": "postExecution",
       "type": "JavaScript",
-      "value": "function() {\n\n    /**\n     * 双表头的制作\n     */\n    ($('#TableDomTable thead tr').clone()).insertBefore($('#TableDomTable thead tr'));\n    _.each($('#TableDomTable thead tr:nth-child(1) th'), function(elem, idx) {\n        //if (idx>0) {\n        if (idx>1) {    //用于控制clone的位置\n            if (((idx-1)%2)==0) {\n                $(elem).text($(elem).text().split('/')[0]).attr('colspan', 2);\n            } else {\n                $(elem).remove();\n            }    \n        } else {\n            $(elem).text('');\n        }\n    });\n    _.each($('#TableDomTable thead tr:nth-child(2) th'), function(elem) {\n        if ($(elem).text().split('/').length>1) {\n            $(elem).text($(elem).text().split('/')[1])\n        }    \n    });\n    \n    //_.each($('#TableDomTable tbody tr'), function(elem, idx) {\n        /*\n        //鼠标点击选择行时候变色\n        elem.onclick = function(){\n            //console.log('click...');\n            var oObj = window.event.srcElement;\n            console.log(this.tagName.toLowerCase());\n            console.log(oObj.tagName.toLowerCase());\n            console.log(document.all.TableDomTable.rows.length);\n            if(oObj.tagName.toLowerCase() == \"td\"){\n                var oTr = oObj.parentNode; \n                for( var i = 3; i < document.all.TableDomTable.rows.length; i++ ){\n                    document.all.TableDomTable.rows[i].style.backgroundColor   =   \"\";   \n    \t\t\t    document.all.TableDomTable.rows[i].tag = false\n                }\n                oTr.style.backgroundColor = \"#888888\";  \n                //oTr.style.color = \"#fff\";  \n    \t\t    oTr.tag = true;   \n            }\n        };\n        //鼠标点击另外一行时关闭已选行变色\n        \n        elem.onMouseOut = function(){\n            console.log('onMouseOut...');\n            //var oObj = event.srcElement;\n            var oObj = window.event.srcElement;\n            if(oObj.tagName.toLowerCase() == \"td\"){\n                var oTr = oObj.parentNode;\n                if(!oTr.tag){\n                    oTr.style.backgroundColor = \"#E1E9FD\";\n                }\n            }\n        };\n        */\n        //console.log(elem);\n        //console.log(idx);\n    //});\n    \n    /**\n     * 可实现合并单元格,上下行来比较\n     */\n    var totalCols = $(\"#TableDomTable\").find(\"tr:eq(0)\").find(\"td\").length;\n    //console.log($('#TableDomTable tbody tr').find(\"td\").length);\n\tvar totalRows = $(\"#TableDomTable\").find(\"tr\").length;\n\t//for ( var i = totalCols-1; i >= 0; i--) {\n    for ( var i = 0; i >= 0; i--) {\n\t\tfor ( var j = totalRows-1; j >= 0; j--) {\n        //for ( var j = 0; j >= 0; j--) {\n\t\t\tstartCell = $(\"#TableDomTable\").find(\"tr\").eq(j).find(\"td\").eq(i);\n\t\t\ttargetCell = $(\"#TableDomTable\").find(\"tr\").eq(j - 1).find(\"td\").eq(i);\n            if (startCell.text() == targetCell.text() && targetCell.text() !== \"\") {\n\t\t\t\ttargetCell.attr(\"rowSpan\", (startCell.attr(\"rowSpan\") === undefined)?2:(eval(startCell.attr(\"rowSpan\"))+1));\n\t\t\t\t//startCell.remove();   //注意区别\n                startCell.addClass(\"hidden-lg hidden-md hidden-sm hidden-xs\");\n                //console.log(startCell.text());\n\t\t\t}\n            \n\t\t}\n\t}\n    \n    //,td:eq(1)\n    //$('#TableDomTable').addClass(\"itemList\");\n    /**\n     * @bestValueLine    最好值刻度线  绿色\n     * @mediumValueLine  中上值刻度线  蓝色\n     * @normalValueLine  正常值刻度线  白色\n     * @badValueLine     最差值刻度线  红色\n     */\n    $.fn.TableColorGuide = function(bestValueLine, mediumValueLine, badValueLine ){\n        //var bestValueLine = 500000;\n        //var mediumValueLine = 100000;\n        //var badValueLine = 1000;\n        $('#TableDomTable tbody').find('td').each(function(index, elem){\n            if(index > 1){\n                //console.log(elem);\n                //console.log(elem.innerHTML.__proto__);\n                //console.log(elem.innerHTML.replace(\",\",\"\"));\n                //console.log(parseFloat(elem.innerHTML.replace(\",\",\"\")));\n                //if(elem.innerHTML.replace(\",\",\"\") >= '100000.00'){\n                if( parseInt(elem.innerHTML.replace(\",\",\"\")) >= bestValueLine &&\n                    parseInt(elem.innerHTML.replace(\",\",\"\")) !== 0 && bestValueLine !== 0 ){\n                    $(this).css(\"background-color\",\"#40A276\")\n                           .css('-moz-border-radius','0px')\n                           .css('-webkit-border-radius','0px')\n                           .css('color','#ffffff');\n                } else if( parseInt(elem.innerHTML.replace(\",\",\"\")) < bestValueLine && \n                            parseInt(elem.innerHTML.replace(\",\",\"\")) >= mediumValueLine && \n                            parseInt(elem.innerHTML.replace(\",\",\"\")) !== 0 && mediumValueLine !== 0 ){\n                    $(this).css(\"background-color\",\"#1979CA\")\n                           .css('-moz-border-radius','0px')\n                           .css('-webkit-border-radius','0px')\n                           .css('color','#ffffff');\n                }else if(parseInt(elem.innerHTML.replace(\",\",\"\")) < badValueLine && \n                            parseInt(elem.innerHTML.replace(\",\",\"\")) !== 0 && badValueLine !== 0 ){\n                    $(this).css(\"background-color\",\"#EE4B4B\")\n                           .css('-moz-border-radius','0px')\n                           .css('-webkit-border-radius','0px')\n                           .css('color','#ffffff');\n                }//else if(bestValueLine === 0 && mediumValueLine === 0 && badValueLine === 0 ){\n                    \n                //}\n            }\n        });\n    }\n    $(function() {\n        $.fn.TableColorGuide(//500000,100000,1000\n            /*\n            dashboard.getParameterValue(\"bestValueLineParam\"),\n            dashboard.getParameterValue(\"mediumValueLineParam\"),\n            dashboard.getParameterValue(\"badValueLineParam\")\n            */\n            \n            Dashboards.getParameterValue(\"bestValueLineParam\"),\n            Dashboards.getParameterValue(\"mediumValueLineParam\"),\n            Dashboards.getParameterValue(\"badValueLineParam\")\n            \n        );\n\t});\n    \n    $('#TableDomTable tbody tr').find(\"td:eq(0),td:eq(1)\")\n                                .css(\"background-color\", \"#F8FAFB\")\n                                .css(\"border\", \"1px solid #FFFFFF\")\n                                .css('color','#2779aa');\n\n\n\n\n\n\n\n\n\n\n\n\n   \n} "
+      "value": "function() {\n\n    /**\n     * 双表头的制作\n     */\n    ($('#TableDomTable thead tr').clone()).insertBefore($('#TableDomTable thead tr'));\n    _.each($('#TableDomTable thead tr:nth-child(1) th'), function(elem, idx) {\n        //if (idx>0) {\n        if (idx>1) {    //用于控制clone的位置\n            if (((idx-1)%2)==0) {\n                $(elem).text($(elem).text().split('/')[0]).attr('colspan', 2);\n            } else {\n                $(elem).remove();\n            }    \n        } else {\n            $(elem).text('');\n        }\n    });\n    _.each($('#TableDomTable thead tr:nth-child(2) th'), function(elem) {\n        if ($(elem).text().split('/').length>1) {\n            $(elem).text($(elem).text().split('/')[1])\n        }    \n    });\n    \n    //_.each($('#TableDomTable tbody tr'), function(elem, idx) {\n        /*\n        //鼠标点击选择行时候变色\n        elem.onclick = function(){\n            //console.log('click...');\n            var oObj = window.event.srcElement;\n            console.log(this.tagName.toLowerCase());\n            console.log(oObj.tagName.toLowerCase());\n            console.log(document.all.TableDomTable.rows.length);\n            if(oObj.tagName.toLowerCase() == \"td\"){\n                var oTr = oObj.parentNode; \n                for( var i = 3; i < document.all.TableDomTable.rows.length; i++ ){\n                    document.all.TableDomTable.rows[i].style.backgroundColor   =   \"\";   \n    \t\t\t    document.all.TableDomTable.rows[i].tag = false\n                }\n                oTr.style.backgroundColor = \"#888888\";  \n                //oTr.style.color = \"#fff\";  \n    \t\t    oTr.tag = true;   \n            }\n        };\n        //鼠标点击另外一行时关闭已选行变色\n        \n        elem.onMouseOut = function(){\n            console.log('onMouseOut...');\n            //var oObj = event.srcElement;\n            var oObj = window.event.srcElement;\n            if(oObj.tagName.toLowerCase() == \"td\"){\n                var oTr = oObj.parentNode;\n                if(!oTr.tag){\n                    oTr.style.backgroundColor = \"#E1E9FD\";\n                }\n            }\n        };\n        */\n        //console.log(elem);\n        //console.log(idx);\n    //});\n    \n    /**\n     * 可实现合并单元格,上下行来比较\n     */\n    var totalCols = $(\"#TableDomTable\").find(\"tr:eq(0)\").find(\"td\").length;\n    //console.log($('#TableDomTable tbody tr').find(\"td\").length);\n\tvar totalRows = $(\"#TableDomTable\").find(\"tr\").length;\n\t//for ( var i = totalCols-1; i >= 0; i--) {\n    for ( var i = 0; i >= 0; i--) {\n\t\tfor ( var j = totalRows-1; j >= 0; j--) {\n        //for ( var j = 0; j >= 0; j--) {\n\t\t\tstartCell = $(\"#TableDomTable\").find(\"tr\").eq(j).find(\"td\").eq(i);\n\t\t\ttargetCell = $(\"#TableDomTable\").find(\"tr\").eq(j - 1).find(\"td\").eq(i);\n            if (startCell.text() == targetCell.text() && targetCell.text() !== \"\") {\n\t\t\t\ttargetCell.attr(\"rowSpan\", (startCell.attr(\"rowSpan\") === undefined)?2:(eval(startCell.attr(\"rowSpan\"))+1));\n\t\t\t\t//startCell.remove();   //注意区别\n                startCell.addClass(\"hidden-lg hidden-md hidden-sm hidden-xs\");\n                //console.log(startCell.text());\n\t\t\t}\n            \n\t\t}\n\t}\n    \n    //,td:eq(1)\n    //$('#TableDomTable').addClass(\"itemList\");\n    /**\n     * @bestValueLine    最好值刻度线  绿色\n     * @mediumValueLine  中上值刻度线  蓝色\n     * @normalValueLine  正常值刻度线  白色\n     * @badValueLine     最差值刻度线  红色\n     */\n    $.fn.TableColorGuide = function(bestValueLine, mediumValueLine, badValueLine ){\n        //var bestValueLine = 500000;\n        //var mediumValueLine = 100000;\n        //var badValueLine = 1000;\n        $('#TableDomTable tbody').find('td').each(function(index, elem){\n            if(index > 1){\n                //console.log(elem);\n                //console.log(elem.innerHTML.__proto__);\n                //console.log(elem.innerHTML.replace(\",\",\"\"));\n                //console.log(parseFloat(elem.innerHTML.replace(\",\",\"\")));\n                //if(elem.innerHTML.replace(\",\",\"\") >= '100000.00'){\n                if( parseInt(elem.innerHTML.replace(\",\",\"\")) >= bestValueLine &&\n                    parseInt(elem.innerHTML.replace(\",\",\"\")) !== 0 && bestValueLine !== 0 ){\n                    $(this).css(\"background-color\",\"#40A276\")\n                           .css('-moz-border-radius','0px')\n                           .css('-webkit-border-radius','0px')\n                           .css('color','#ffffff');\n                } else if( parseInt(elem.innerHTML.replace(\",\",\"\")) < bestValueLine && \n                            parseInt(elem.innerHTML.replace(\",\",\"\")) >= mediumValueLine && \n                            parseInt(elem.innerHTML.replace(\",\",\"\")) !== 0 && mediumValueLine !== 0 ){\n                    $(this).css(\"background-color\",\"#1979CA\")\n                           .css('-moz-border-radius','0px')\n                           .css('-webkit-border-radius','0px')\n                           .css('color','#ffffff');\n                }else if(parseInt(elem.innerHTML.replace(\",\",\"\")) < badValueLine && \n                            parseInt(elem.innerHTML.replace(\",\",\"\")) !== 0 && badValueLine !== 0 ){\n                    $(this).css(\"background-color\",\"#EE4B4B\")\n                           .css('-moz-border-radius','0px')\n                           .css('-webkit-border-radius','0px')\n                           .css('color','#ffffff');\n                }//else if(bestValueLine === 0 && mediumValueLine === 0 && badValueLine === 0 ){\n                    \n                //}\n            }\n        });\n    }\n    $(function() {\n        $.fn.TableColorGuide(//500000,100000,1000\n            /*\n            dashboard.getParameterValue(\"bestValueLineParam\"),\n            dashboard.getParameterValue(\"mediumValueLineParam\"),\n            dashboard.getParameterValue(\"badValueLineParam\")\n            */\n            \n            Dashboards.getParameterValue(\"bestValueLineParam\"),\n            Dashboards.getParameterValue(\"mediumValueLineParam\"),\n            Dashboards.getParameterValue(\"badValueLineParam\")\n            \n        );\n\t});\n    \n    $('#TableDomTable tbody tr').find(\"td:eq(0),td:eq(1)\")\n                                .css(\"background-color\", \"#F8FAFB\")\n                                .css(\"border\", \"1px solid #FFFFFF\")\n                                .css('color','#2779aa');\n   \n} "
      },
      {
       "name": "postFetch",
@@ -731,7 +731,7 @@
      {
       "name": "javaScript",
       "type": "JavaScript",
-      "value": "/**\r\n * 加载Ecahrts图形\r\n */\r\n//window.onload = initEcahrts;\r\n\r\n(function($){\r\n    $(window).on(\"load\",function(){\r\n        initEcahrts();\r\n\t\t$(\"#row_table_col_panel_body\").mCustomScrollbar({\r\n\t\t\tautoHideScrollbar:true,\r\n            axis:\"yx\",\r\n            scrollButtons:{\r\n                enable:true //是否使用上下滚动按钮\r\n\t\t\t},\r\n            mouseWheelPixels:300,\r\n\t\t\ttheme:\"rounded\"\r\n            //theme:\"dark\"\r\n\t\t});\r\n        \r\n        \r\n        document.getElementsByTagName('container')[0].mCustomScrollbar({\r\n            autoHideScrollbar:true,\r\n            //axis:\"yx\",\r\n\t\t\ttheme:\"rounded\"\r\n\t\t});\r\n        console.log(document.getElementsByTagName('container')[0]);\r\n\t});\r\n})($);\r\n\r\n/**\r\n * 解决CDE图形的自适应\r\n */\r\nfunction resizeGraphical(cdeObj){\r\n    var myself = cdeObj;\r\n    //设置初始宽度 与placeholder()匹配\r\n    myself.chartDefinition.width = myself.placeholder().width();\r\n    //仅在图表组件的第一个执行上附加调整处理程序\r\n    if( !cdeObj.resizeHandlerAttached ){\r\n        //确保渲染只在事件发生后被触发\r\n        var debouncedResize = _.debounce(function(){\r\n            //再次显示 图形\r\n            myself.placeholder().children().css('visibility','visible');\r\n            // 改变 图形 的 宽度\r\n            myself.chartDefinition.width = myself.placeholder().width();\r\n            myself.render( myself.query.lastResults() );\r\n        },200);\r\n        // 高度调整 处理\r\n        $(window).resize(function(){\r\n            //仅当容器已更改宽度时才触发调整大小\r\n            if( myself.chartDefinition.width != myself.placeholder().width() ){\r\n                //暂时隐藏图表，使溢出不会发生\r\n                myself.placeholder().children().css('visibility','hidden');\r\n                //触发与调整\r\n                debouncedResize();\r\n            }\r\n        });\r\n        cdeObj.resizeHandlerAttached = true;\r\n    }\r\n} \r\n\r\n\r\n "
+      "value": "/**\r\n * 加载Ecahrts图形\r\n */\r\n//window.onload = initEcahrts;\r\n\r\n(function($){\r\n    $(window).on(\"load\",function(){\r\n        initEcahrts();\r\n\t\t$(\"#row_table_col_panel_body\").mCustomScrollbar({\r\n\t\t\tautoHideScrollbar:true,\r\n            axis:\"yx\",\r\n            scrollButtons:{\r\n                enable:true //是否使用上下滚动按钮\r\n\t\t\t},\r\n            mouseWheelPixels:300,\r\n\t\t\ttheme:\"rounded\"\r\n            //theme:\"dark\"\r\n\t\t});\r\n        \r\n        /*\r\n        document.getElementsByTagName('container')[0].mCustomScrollbar({\r\n            autoHideScrollbar:true,\r\n            //axis:\"yx\",\r\n\t\t\ttheme:\"rounded\"\r\n\t\t});\r\n        console.log(document.getElementsByTagName('container')[0]);\r\n        */\r\n\t});\r\n})($);\r\n\r\n/**\r\n * 解决CDE图形的自适应\r\n */\r\nfunction resizeGraphical(cdeObj){\r\n    var myself = cdeObj;\r\n    //设置初始宽度 与placeholder()匹配\r\n    myself.chartDefinition.width = myself.placeholder().width();\r\n    //仅在图表组件的第一个执行上附加调整处理程序\r\n    if( !cdeObj.resizeHandlerAttached ){\r\n        //确保渲染只在事件发生后被触发\r\n        var debouncedResize = _.debounce(function(){\r\n            //再次显示 图形\r\n            myself.placeholder().children().css('visibility','visible');\r\n            // 改变 图形 的 宽度\r\n            myself.chartDefinition.width = myself.placeholder().width();\r\n            myself.render( myself.query.lastResults() );\r\n        },200);\r\n        // 高度调整 处理\r\n        $(window).resize(function(){\r\n            //仅当容器已更改宽度时才触发调整大小\r\n            if( myself.chartDefinition.width != myself.placeholder().width() ){\r\n                //暂时隐藏图表，使溢出不会发生\r\n                myself.placeholder().children().css('visibility','hidden');\r\n                //触发与调整\r\n                debouncedResize();\r\n            }\r\n        });\r\n        cdeObj.resizeHandlerAttached = true;\r\n    }\r\n} \r\n\r\n\r\n "
      }
     ],
     "rowName": "Function",
@@ -1388,78 +1388,6 @@
      {
       "name": "name",
       "type": "Id",
-      "value": "GaugeEchartsQuery_new"
-     },
-     {
-      "name": "access",
-      "type": "Access",
-      "value": "public"
-     },
-     {
-      "name": "jndi",
-      "type": "Jndi",
-      "value": "jdbc_bi"
-     },
-     {
-      "name": "query",
-      "type": "SqlQuery",
-      "value": "SELECT\r\n    -1,\r\n    case when sum(`fact_sumday`.`BudgetSaleAmt`) = 0 then 100\r\n         when sum(`fact_sumday`.`BudgetSaleAmt`) = null then 100\r\n    else format(sum(`fact_sumday`.`SaleAmt`)/sum(`fact_sumday`.`BudgetSaleAmt`)*100,2) end AS peleterate\r\nFROM\r\n     `fact_sumday` INNER JOIN `dim_outlet` ON `fact_sumday`.`OutletId_t` = `dim_outlet`.`OutletId_t`\r\n     INNER JOIN `dim_bidate` ON `fact_sumday`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n     INNER JOIN `dim_place` ON `fact_sumday`.`PlaceId` = `dim_place`.`PlaceId`\r\n     INNER JOIN `dim_area` ON `fact_sumday`.`AreaId` = `dim_area`.`AreaId`\r\n     INNER JOIN `dim_brand` ON `dim_outlet`.`BrandId` = `dim_brand`.`BrandId`\r\n"
-     },
-     {
-      "name": "parameters",
-      "type": "CdaParameters",
-      "value": "[]"
-     },
-     {
-      "name": "cdacalculatedcolumns",
-      "type": "CdaCalculatedColumnsArray",
-      "value": "[]"
-     },
-     {
-      "name": "cdacolumns",
-      "type": "CdaColumnsArray",
-      "value": "[]"
-     },
-     {
-      "name": "output",
-      "type": "IndexArray",
-      "value": "[]"
-     },
-     {
-      "name": "outputMode",
-      "type": "OutputMode",
-      "value": "include"
-     },
-     {
-      "name": "cacheKeys",
-      "type": "CacheKeysValues",
-      "value": "[]"
-     },
-     {
-      "name": "cacheDuration",
-      "type": "Integer",
-      "value": 3600
-     },
-     {
-      "name": "cache",
-      "type": "Boolean",
-      "value": "true"
-     }
-    ],
-    "rowName": "sql over sqlJndi",
-    "type": "Componentssql_sqlJndi",
-    "typeDesc": "sql over sqlJndi"
-   },
-   {
-    "id": "20d07de3-3d3d-487a-5160-f5782279bce0",
-    "meta": "CDA",
-    "meta_conntype": "sql.jndi",
-    "meta_datype": "sql",
-    "parent": "SQL",
-    "properties": [
-     {
-      "name": "name",
-      "type": "Id",
       "value": "GaugeEchartsQuery"
      },
      {
@@ -1475,7 +1403,7 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "SELECT 1, 14.45;"
+      "value": "SELECT\r\n    -1,\r\n    case when sum(`fact_sumday`.`BudgetSaleAmt`) = 0 then 100\r\n         when sum(`fact_sumday`.`BudgetSaleAmt`) = null then 100\r\n    else format(sum(`fact_sumday`.`SaleAmt`)/sum(`fact_sumday`.`BudgetSaleAmt`)*100,2) end AS peleterate\r\nFROM\r\n     `fact_sumday` INNER JOIN `dim_outlet` ON `fact_sumday`.`OutletId_t` = `dim_outlet`.`OutletId_t`\r\n     INNER JOIN `dim_bidate` ON `fact_sumday`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n     INNER JOIN `dim_place` ON `fact_sumday`.`PlaceId` = `dim_place`.`PlaceId`\r\n     INNER JOIN `dim_area` ON `fact_sumday`.`AreaId` = `dim_area`.`AreaId`\r\n     INNER JOIN `dim_brand` ON `dim_outlet`.`BrandId` = `dim_brand`.`BrandId`\r\n"
      },
      {
       "name": "parameters",
@@ -1600,13 +1528,36 @@
  "layout": {
   "rows": [
    {
+    "id": "7cf1202b-4789-d519-0c5c-64fe72ee73b3",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "BmapApi_AK"
+     },
+     {
+      "name": "resourceCode",
+      "type": "Resource",
+      "value": "/***\n * \n * <!--引入百度地图的jssdk，这里需要使用你在百度地图开发者平台申请的 ak-->\n * \n ***/\ndocument.write(\"<script type='text/javascript' src='http://api.map.baidu.com/api?v=2.0&ak=4NyU6iMlimvtdReQphZkoqVRd3VSPuwx'><\\/script>\"); "
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Javascript"
+     }
+    ],
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource"
+   },
+   {
     "id": "039be076-e410-3ad6-f403-18b79ddc1da8",
     "parent": "UnIqEiD",
     "properties": [
      {
       "name": "name",
       "type": "Id",
-      "value": "Echarts"
+      "value": "EchartsJS"
      },
      {
       "name": "resourceFile",
@@ -1621,6 +1572,52 @@
     ],
     "type": "LayoutResourceFile",
     "typeDesc": "Resource"
+   },
+   {
+    "id": "449d40f9-8857-b033-6d04-a4b676de4185",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "BmapJS"
+     },
+     {
+      "name": "resourceFile",
+      "type": "ResourceFile",
+      "value": "${solution:../js/Echarts3.6.0/bmap.min.js}"
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Javascript"
+     }
+    ],
+    "type": "LayoutResourceFile",
+    "typeDesc": "Resource"
+   },
+   {
+    "id": "83cb8e87-e67b-2dbc-0011-481fe5a6b583",
+    "type": "LayoutResourceFile",
+    "typeDesc": "Resource",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "geoCoordMapJS",
+      "type": "Id"
+     },
+     {
+      "name": "resourceFile",
+      "value": "${solution:../js/Echarts3.6.0/geoCoordMap.js}",
+      "type": "ResourceFile"
+     },
+     {
+      "name": "resourceType",
+      "value": "Javascript",
+      "type": "Label"
+     }
+    ]
    },
    {
     "id": "5694b0e0-da47-a667-48ef-44c1c539629e",
@@ -2015,7 +2012,7 @@
      {
       "name": "name",
       "type": "Id",
-      "value": "echarts_row1_col1"
+      "value": "echarts_gauge_row1_col1"
      },
      {
       "name": "bootstrapExtraSmall",
@@ -2030,12 +2027,12 @@
      {
       "name": "bootstrapMedium",
       "type": "String",
-      "value": "6"
+      "value": "5"
      },
      {
       "name": "bootstrapLarge",
       "type": "String",
-      "value": "6"
+      "value": "5"
      },
      {
       "name": "bootstrapCssClass",
@@ -2078,12 +2075,12 @@
      {
       "name": "name",
       "type": "Id",
-      "value": "echarts_row1_col1_panel"
+      "value": "echarts_gauge_row1_col1_panel"
      },
      {
       "name": "height",
       "type": "Integer",
-      "value": "400"
+      "value": "600"
      },
      {
       "name": "roundCorners",
@@ -2111,7 +2108,7 @@
      {
       "name": "name",
       "type": "Id",
-      "value": "echarts_row1_col1_panel_header"
+      "value": "echarts_gauge_row1_col1_panel_header"
      },
      {
       "name": "roundCorners",
@@ -2139,12 +2136,12 @@
      {
       "name": "name",
       "type": "Id",
-      "value": "echarts_row1_col1_panel_header_html"
+      "value": "echarts_gauge_row1_col1_panel_header_html"
      },
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-dashboard\"></i> CGG Dial Component\r\n</div> "
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-dashboard\"></i> Echarts Gauge\r\n</div> "
      },
      {
       "name": "fontSize",
@@ -2172,7 +2169,7 @@
      {
       "name": "name",
       "type": "Id",
-      "value": "echarts_row1_col1_panel_body"
+      "value": "echarts_gauge_row1_col1_panel_body"
      },
      {
       "name": "roundCorners",
@@ -2200,12 +2197,12 @@
      {
       "name": "name",
       "type": "Id",
-      "value": "echarts_row1_col1_panel_body_html"
+      "value": "echarts_gauge_row1_col1_panel_body_html"
      },
      {
       "name": "html",
       "type": "Html",
-      "value": "<div id='completemain' style='height: 350px'></div>\n<script type=\"text/javascript\">\n    function initEcahrts(){\n        let readJSONFile = function(url){\n            let jsonData;\n            $.ajax({\n            \ttype : 'get',\n    \t\t\turl : url,\n    \t\t\tasync : false,\n    \t\t\tdataType : 'json',\n    \t\t\tdata : null,\n    \t\t\tsuccess : function(response){\n    \t\t\t\tjsonData = response;\n    \t\t\t\t//alert(jsonData);\n    \t\t\t}\n    \t\t})\n    \t\treturn jsonData;\n    \t};\n        \n        let url_gauge = \"/pentaho/plugin/cda/api/doQuery?path=/public/UI/Template1/TableComponent.cda&dataAccessId=GaugeEchartsQuery\";\n        let getFirstGaugeJSON = readJSONFile(url_gauge).resultset;\n        //alert(getFirstGaugeJSON);\n        //console.log(getFirstGaugeJSON );\n        //console.log('*******************************');\n        let myChart = echarts.init(document.getElementById('completemain'));\n        let FirstGaugeDataEncapsulation = (function(){\n            let data = function(){\n                let tempArr = [];\n                for(let i = 0; i < getFirstGaugeJSON.length; i++){\n                    tempArr.push({\n                \t\t'name' : getFirstGaugeJSON[i][0],\n                        'value': getFirstGaugeJSON[i][1],\n                        selected : true\n        \t\t\t})\n                }\n                return tempArr;\n                //alert(tempArr);\n            };\n            return {\n                getDatas : function(){\n                    return data()\n                }\n            }\n            \n        })();\n        let ShowFirstGaugeEcharts = function(){\n            // 基于准备好的dom，初始化echarts实例\n            // 指定图表的配置项和数据\n            myChart.setOption({\n                title: {\n                    text: '', //标题文本内容\n                },\n                toolbox: { //可视化的工具箱\n                    show: true,\n                    feature: {\n                       /* restore: { //重置\n                            show: true\n                        },\n                        saveAsImage: {//保存图片\n                            show: true\n                        }*/\n                    }\n                },\n                tooltip: { //弹窗组件\n                    formatter: \"{a} <br/>{b} : {c}%\"\n                },\n                series: [{\n                    name: '营业额完成情况',\n                    type: 'gauge',\n                    detail: {formatter: '{value}%',\n                            offsetCenter:[0,'65%'],\n                                textStyle: {       \n                                   fontSize: 20\n                                }\n                            },\n                           \n                    data:[\n                        {name:'完成率',\n                        value:FirstGaugeDataEncapsulation.getDatas()[0].value}\n                    ]\n                }]\n            });\n        }();\n        window.addEventListener(\"resize\",function(){\n            myChart.resize();\n        });\n    }\n</script> "
+      "value": "<div id='EchartsGaugeDom' style='height: 550px'></div>\n<script type=\"text/javascript\">\n    function initEcahrts(){\n        let readJSONFile = function(url){\n            let jsonData;\n            $.ajax({\n            \ttype : 'get',\n    \t\t\turl : url,\n    \t\t\tasync : false,\n    \t\t\tdataType : 'json',\n    \t\t\tdata : null,\n    \t\t\tsuccess : function(response){\n    \t\t\t\tjsonData = response;\n    \t\t\t\t//alert(jsonData);\n    \t\t\t}\n    \t\t})\n    \t\treturn jsonData;\n    \t};\n        \n        let url_gauge = \"/pentaho/plugin/cda/api/doQuery?path=/public/UI/Template1/TableComponent.cda&dataAccessId=GaugeEchartsQuery\";\n        let getFirstGaugeJSON = readJSONFile(url_gauge).resultset;\n        //alert(getFirstGaugeJSON);\n        //console.log(getFirstGaugeJSON );\n        //console.log('*******************************');\n        let myChart = echarts.init(document.getElementById('EchartsGaugeDom'));\n        let FirstGaugeDataEncapsulation = (function(){\n            let data = function(){\n                let tempArr = [];\n                for(let i = 0; i < getFirstGaugeJSON.length; i++){\n                    tempArr.push({\n                \t\t'name' : getFirstGaugeJSON[i][0],\n                        'value': getFirstGaugeJSON[i][1],\n                        selected : true\n        \t\t\t})\n                }\n                return tempArr;\n                //alert(tempArr);\n            };\n            return {\n                getDatas : function(){\n                    return data()\n                }\n            }\n            \n        })();\n        let ShowFirstGaugeEcharts = function(){\n            // 基于准备好的dom，初始化echarts实例\n            // 指定图表的配置项和数据\n            myChart.setOption({\n                title: {\n                    text: '', //标题文本内容\n                },\n                toolbox: { //可视化的工具箱\n                    show: true,\n                    feature: {\n                       /* restore: { //重置\n                            show: true\n                        },\n                        saveAsImage: {//保存图片\n                            show: true\n                        }*/\n                    }\n                },\n                tooltip: { //弹窗组件\n                    formatter: \"{a} <br/>{b} : {c}%\"\n                },\n                series: [{\n                    name: '营业额完成情况',\n                    type: 'gauge',\n                    detail: {formatter: '{value}%',\n                            offsetCenter:[0,'65%'],\n                                textStyle: {       \n                                   fontSize: 20\n                                }\n                            },\n                           \n                    data:[\n                        {name:'完成率',\n                        value:FirstGaugeDataEncapsulation.getDatas()[0].value}\n                    ]\n                }]\n            });\n        }();\n        window.addEventListener(\"resize\",function(){\n            myChart.resize();\n        });\n    }\n</script> "
      },
      {
       "name": "fontSize",
@@ -2233,7 +2230,7 @@
      {
       "name": "name",
       "type": "Id",
-      "value": ""
+      "value": "echarts_bmap_row1_col2"
      },
      {
       "name": "bootstrapExtraSmall",
@@ -2248,12 +2245,12 @@
      {
       "name": "bootstrapMedium",
       "type": "String",
-      "value": "6"
+      "value": "7"
      },
      {
       "name": "bootstrapLarge",
       "type": "String",
-      "value": "6"
+      "value": "7"
      },
      {
       "name": "bootstrapCssClass",
@@ -2296,12 +2293,12 @@
      {
       "name": "name",
       "type": "Id",
-      "value": ""
+      "value": "echarts_bmap_row1_col2_panel"
      },
      {
       "name": "height",
       "type": "Integer",
-      "value": "400"
+      "value": "600"
      },
      {
       "name": "roundCorners",
@@ -2329,7 +2326,7 @@
      {
       "name": "name",
       "type": "Id",
-      "value": ""
+      "value": "echarts_bmap_row1_col2_panel_header"
      },
      {
       "name": "roundCorners",
@@ -2351,13 +2348,46 @@
     "typeDesc": "Panel Header"
    },
    {
+    "id": "593466f1-dea4-30ab-ce65-26d3ada5f0b3",
+    "parent": "6e53dbe5-7311-ba59-da19-172c40022c86",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "echarts_bmap_row1_col2_panel_header_html"
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-map-marker\"></i> Echarts bmap\r\n</div> "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
     "id": "b6497122-1649-6be4-8d6b-635a042d3883",
     "parent": "dba38bdd-8e94-3114-326b-94bb43b38bd1",
     "properties": [
      {
       "name": "name",
       "type": "Id",
-      "value": ""
+      "value": "echarts_bmap_row1_col2_body"
      },
      {
       "name": "roundCorners",
@@ -2377,6 +2407,39 @@
     ],
     "type": "BootstrapPanelBody",
     "typeDesc": "Panel Body"
+   },
+   {
+    "id": "44a3d30d-0df1-0710-2a79-99668fcc3e33",
+    "parent": "b6497122-1649-6be4-8d6b-635a042d3883",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "echarts_bmap_row1_col2_body_html"
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "<div id='EchartsBmapDom' style='height: 550px'></div> \n\n\n<script type=\"text/javascript\">\nlet bmapChart = echarts.init(document.getElementById('EchartsBmapDom'));\nlet data = [\n     {name: '海门', value: 9},\n     {name: '鄂尔多斯', value: 12},\n     {name: '招远', value: 12},\n     {name: '舟山', value: 12},\n     {name: '齐齐哈尔', value: 14},\n     {name: '盐城', value: 15},\n     {name: '赤峰', value: 16},\n     {name: '青岛', value: 18},\n     {name: '乳山', value: 18},\n     {name: '金昌', value: 19},\n     {name: '泉州', value: 21},\n     {name: '莱西', value: 21},\n     {name: '日照', value: 21},\n     {name: '胶南', value: 22},\n     {name: '南通', value: 23},\n     {name: '拉萨', value: 24},\n     {name: '云浮', value: 24},\n     {name: '梅州', value: 25},\n     {name: '文登', value: 25},\n     {name: '上海', value: 25},\n     {name: '攀枝花', value: 25},\n     {name: '威海', value: 25},\n     {name: '承德', value: 25},\n     {name: '厦门', value: 26},\n     {name: '汕尾', value: 26},\n     {name: '潮州', value: 26},\n     {name: '丹东', value: 27},\n     {name: '太仓', value: 27},\n     {name: '曲靖', value: 27},\n     {name: '烟台', value: 28},\n     {name: '福州', value: 29},\n     {name: '瓦房店', value: 30},\n     {name: '即墨', value: 30},\n     {name: '抚顺', value: 31},\n     {name: '玉溪', value: 31},\n     {name: '张家口', value: 31},\n     {name: '阳泉', value: 31},\n     {name: '莱州', value: 32},\n     {name: '湖州', value: 32},\n     {name: '汕头', value: 32},\n     {name: '昆山', value: 33},\n     {name: '宁波', value: 33},\n     {name: '湛江', value: 33},\n     {name: '揭阳', value: 34},\n     {name: '荣成', value: 34},\n     {name: '连云港', value: 35},\n     {name: '葫芦岛', value: 35},\n     {name: '常熟', value: 36},\n     {name: '东莞', value: 36},\n     {name: '河源', value: 36},\n     {name: '淮安', value: 36},\n     {name: '泰州', value: 36},\n     {name: '南宁', value: 37},\n     {name: '营口', value: 37},\n     {name: '惠州', value: 37},\n     {name: '江阴', value: 37},\n     {name: '蓬莱', value: 37},\n     {name: '韶关', value: 38},\n     {name: '嘉峪关', value: 38},\n     {name: '广州', value: 38},\n     {name: '延安', value: 38},\n     {name: '太原', value: 39},\n     {name: '清远', value: 39},\n     {name: '中山', value: 39},\n     {name: '昆明', value: 39},\n     {name: '寿光', value: 40},\n     {name: '盘锦', value: 40},\n     {name: '长治', value: 41},\n     {name: '深圳', value: 41},\n     {name: '珠海', value: 42},\n     {name: '宿迁', value: 43},\n     {name: '咸阳', value: 43},\n     {name: '铜川', value: 44},\n     {name: '平度', value: 44},\n     {name: '佛山', value: 44},\n     {name: '海口', value: 44},\n     {name: '江门', value: 45},\n     {name: '章丘', value: 45},\n     {name: '肇庆', value: 46},\n     {name: '大连', value: 47},\n     {name: '临汾', value: 47},\n     {name: '吴江', value: 47},\n     {name: '石嘴山', value: 49},\n     {name: '沈阳', value: 50},\n     {name: '苏州', value: 50},\n     {name: '茂名', value: 50},\n     {name: '嘉兴', value: 51},\n     {name: '长春', value: 51},\n     {name: '胶州', value: 52},\n     {name: '银川', value: 52},\n     {name: '张家港', value: 52},\n     {name: '三门峡', value: 53},\n     {name: '锦州', value: 54},\n     {name: '南昌', value: 54},\n     {name: '柳州', value: 54},\n     {name: '三亚', value: 54},\n     {name: '自贡', value: 56},\n     {name: '吉林', value: 56},\n     {name: '阳江', value: 57},\n     {name: '泸州', value: 57},\n     {name: '西宁', value: 57},\n     {name: '宜宾', value: 58},\n     {name: '呼和浩特', value: 58},\n     {name: '成都', value: 58},\n     {name: '大同', value: 58},\n     {name: '镇江', value: 59},\n     {name: '桂林', value: 59},\n     {name: '张家界', value: 59},\n     {name: '宜兴', value: 59},\n     {name: '北海', value: 60},\n     {name: '西安', value: 61},\n     {name: '金坛', value: 62},\n     {name: '东营', value: 62},\n     {name: '牡丹江', value: 63},\n     {name: '遵义', value: 63},\n     {name: '绍兴', value: 63},\n     {name: '扬州', value: 64},\n     {name: '常州', value: 64},\n     {name: '潍坊', value: 65},\n     {name: '重庆', value: 66},\n     {name: '台州', value: 67},\n     {name: '南京', value: 67},\n     {name: '滨州', value: 70},\n     {name: '贵阳', value: 71},\n     {name: '无锡', value: 71},\n     {name: '本溪', value: 71},\n     {name: '克拉玛依', value: 72},\n     {name: '渭南', value: 72},\n     {name: '马鞍山', value: 72},\n     {name: '宝鸡', value: 72},\n     {name: '焦作', value: 75},\n     {name: '句容', value: 75},\n     {name: '北京', value: 79},\n     {name: '徐州', value: 79},\n     {name: '衡水', value: 80},\n     {name: '包头', value: 80},\n     {name: '绵阳', value: 80},\n     {name: '乌鲁木齐', value: 84},\n     {name: '枣庄', value: 84},\n     {name: '杭州', value: 84},\n     {name: '淄博', value: 85},\n     {name: '鞍山', value: 86},\n     {name: '溧阳', value: 86},\n     {name: '库尔勒', value: 86},\n     {name: '安阳', value: 90},\n     {name: '开封', value: 90},\n     {name: '济南', value: 92},\n     {name: '德阳', value: 93},\n     {name: '温州', value: 95},\n     {name: '九江', value: 96},\n     {name: '邯郸', value: 98},\n     {name: '临安', value: 99},\n     {name: '兰州', value: 99},\n     {name: '沧州', value: 100},\n     {name: '临沂', value: 103},\n     {name: '南充', value: 104},\n     {name: '天津', value: 105},\n     {name: '富阳', value: 106},\n     {name: '泰安', value: 112},\n     {name: '诸暨', value: 112},\n     {name: '郑州', value: 113},\n     {name: '哈尔滨', value: 114},\n     {name: '聊城', value: 116},\n     {name: '芜湖', value: 117},\n     {name: '唐山', value: 119},\n     {name: '平顶山', value: 119},\n     {name: '邢台', value: 119},\n     {name: '德州', value: 120},\n     {name: '济宁', value: 120},\n     {name: '荆州', value: 127},\n     {name: '宜昌', value: 130},\n     {name: '义乌', value: 132},\n     {name: '丽水', value: 133},\n     {name: '洛阳', value: 134},\n     {name: '秦皇岛', value: 136},\n     {name: '株洲', value: 143},\n     {name: '石家庄', value: 147},\n     {name: '莱芜', value: 148},\n     {name: '常德', value: 152},\n     {name: '保定', value: 153},\n     {name: '湘潭', value: 154},\n     {name: '金华', value: 157},\n     {name: '岳阳', value: 169},\n     {name: '长沙', value: 175},\n     {name: '衢州', value: 177},\n     {name: '廊坊', value: 193},\n     {name: '菏泽', value: 194},\n     {name: '合肥', value: 229},\n     {name: '武汉', value: 273},\n     {name: '大庆', value: 279}\n];\n\n\nlet convertData = function (data) {\n    var res = [];\n    for (var i = 0; i < data.length; i++) {\n        var geoCoord = geoCoordMap[data[i].name];\n        if (geoCoord) {\n            res.push({\n                name: data[i].name,\n                value: geoCoord.concat(data[i].value)\n            });\n        }\n    }\n    return res;\n};\n\n/*\n    let option = {\n        title: {\n            text: '全国主要城市空气质量 - 百度地图',\n            subtext: 'data from PM25.in',\n            sublink: 'http://www.pm25.in',\n            left: 'center'\n        },\n        tooltip : {\n            trigger: 'item'\n        },\n        bmap: {\n            //center: [113.65,34.76],121.446235, 31.169152\n            center: [121.446235, 31.169152],\n            zoom: 5,\n            roam: true,\n            mapStyle: {\n                styleJson: [{\n                    'featureType': 'water',\n                    'elementType': 'all',\n                    'stylers': {\n                        'color': '#d1d1d1'\n                    }\n                }, {\n                    'featureType': 'land',\n                    'elementType': 'all',\n                    'stylers': {\n                        'color': '#f3f3f3'\n                    }\n                }, {\n                    'featureType': 'railway',\n                    'elementType': 'all',\n                    'stylers': {\n                        'visibility': 'off'\n                    }\n                }, {\n                    'featureType': 'highway',\n                    'elementType': 'all',\n                    'stylers': {\n                        'color': '#fdfdfd'\n                    }\n                }, {\n                    'featureType': 'highway',\n                    'elementType': 'labels',\n                    'stylers': {\n                        'visibility': 'off'\n                    }\n                }, {\n                    'featureType': 'arterial',\n                    'elementType': 'geometry',\n                    'stylers': {\n                        'color': '#fefefe'\n                    }\n                }, {\n                    'featureType': 'arterial',\n                    'elementType': 'geometry.fill',\n                    'stylers': {\n                        'color': '#fefefe'\n                    }\n                }, {\n                    'featureType': 'poi',\n                    'elementType': 'all',\n                    'stylers': {\n                        'visibility': 'off'\n                    }\n                }, {\n                    'featureType': 'green',\n                    'elementType': 'all',\n                    'stylers': {\n                        'visibility': 'off'\n                    }\n                }, {\n                    'featureType': 'subway',\n                    'elementType': 'all',\n                    'stylers': {\n                        'visibility': 'off'\n                    }\n                }, {\n                    'featureType': 'manmade',\n                    'elementType': 'all',\n                    'stylers': {\n                        'color': '#d1d1d1'\n                    }\n                }, {\n                    'featureType': 'local',\n                    'elementType': 'all',\n                    'stylers': {\n                        'color': '#d1d1d1'\n                    }\n                }, {\n                    'featureType': 'arterial',\n                    'elementType': 'labels',\n                    'stylers': {\n                        'visibility': 'off'\n                    }\n                }, {\n                    'featureType': 'boundary',\n                    'elementType': 'all',\n                    'stylers': {\n                        'color': '#fefefe'\n                    }\n                }, {\n                    'featureType': 'building',\n                    'elementType': 'all',\n                    'stylers': {\n                        'color': '#d1d1d1'\n                    }\n                }, {\n                    'featureType': 'label',\n                    'elementType': 'labels.text.fill',\n                    'stylers': {\n                        'color': '#999999'\n                    }\n                }]\n            }            \n        },\n        \n        series: [{\n            type: 'map',\n            mapType: 'china',\n            coordinateSystem: 'bmap'\n        }]\n        \n        series: [{\n            type: 'scatter',\n            // 使用百度地图坐标系\n            coordinateSystem: 'bmap',\n            // 数据格式跟在 geo 坐标系上一样，每一项都是 [经度，纬度，数值大小，其它维度...]\n            data: [ [120, 30, 1],[121, 31, 100] ]\n        }]\n    };\n    */\nlet option = {\n    /*\n    title: {\n        text: '全国主要城市空气质量 - 百度地图',\n        subtext: 'data from PM25.in',\n        sublink: 'http://www.pm25.in',\n        left: 'center'\n    },\n    */\n    tooltip : {\n        trigger: 'item'\n    },\n    bmap: {\n        center: [104.114129, 37.550339],\n        zoom: 5,\n        roam: true,\n        mapStyle: {\n            styleJson: [{\n                'featureType': 'water',\n                'elementType': 'all',\n                'stylers': {\n                    'color': '#d1d1d1'\n                }\n            }, {\n                'featureType': 'land',\n                'elementType': 'all',\n                'stylers': {\n                    'color': '#f3f3f3'\n                }\n            }, {\n                'featureType': 'railway',\n                'elementType': 'all',\n                'stylers': {\n                    'visibility': 'off'\n                }\n            }, {\n                'featureType': 'highway',\n                'elementType': 'all',\n                'stylers': {\n                    'color': '#fdfdfd'\n                }\n            }, {\n                'featureType': 'highway',\n                'elementType': 'labels',\n                'stylers': {\n                    'visibility': 'off'\n                }\n            }, {\n                'featureType': 'arterial',\n                'elementType': 'geometry',\n                'stylers': {\n                    'color': '#fefefe'\n                }\n            }, {\n                'featureType': 'arterial',\n                'elementType': 'geometry.fill',\n                'stylers': {\n                    'color': '#fefefe'\n                }\n            }, {\n                'featureType': 'poi',\n                'elementType': 'all',\n                'stylers': {\n                    'visibility': 'off'\n                }\n            }, {\n                'featureType': 'green',\n                'elementType': 'all',\n                'stylers': {\n                    'visibility': 'off'\n                }\n            }, {\n                'featureType': 'subway',\n                'elementType': 'all',\n                'stylers': {\n                    'visibility': 'off'\n                }\n            }, {\n                'featureType': 'manmade',\n                'elementType': 'all',\n                'stylers': {\n                    'color': '#d1d1d1'\n                }\n            }, {\n                'featureType': 'local',\n                'elementType': 'all',\n                'stylers': {\n                    'color': '#d1d1d1'\n                }\n            }, {\n                'featureType': 'arterial',\n                'elementType': 'labels',\n                'stylers': {\n                    'visibility': 'off'\n                }\n            }, {\n                'featureType': 'boundary',\n                'elementType': 'all',\n                'stylers': {\n                    'color': '#fefefe'\n                }\n            }, {\n                'featureType': 'building',\n                'elementType': 'all',\n                'stylers': {\n                    'color': '#d1d1d1'\n                }\n            }, {\n                'featureType': 'label',\n                'elementType': 'labels.text.fill',\n                'stylers': {\n                    'color': '#999999'\n                }\n            }]\n        }\n    },\n    series : [\n        {\n            //name: 'pm2.5',\n            type: 'scatter',\n            coordinateSystem: 'bmap',\n            data: convertData(data),\n            symbolSize: function (val) {\n                return val[2] / 10;\n            },\n            label: {\n                normal: {\n                    formatter: '{b}',\n                    position: 'right',\n                    show: false\n                },\n                emphasis: {\n                    show: true\n                }\n            },\n            itemStyle: {\n                normal: {\n                    color: 'purple'\n                    //color: '#40A276'\n                }\n            }\n        },\n        {\n            //name: 'Top 5',\n            type: 'effectScatter',\n            coordinateSystem: 'bmap',\n            data: convertData(data.sort(function (a, b) {\n                return b.value - a.value;\n            }).slice(0, 6)),\n            symbolSize: function (val) {\n                return val[2] / 10;\n            },\n            showEffectOn: 'render',\n            rippleEffect: {\n                brushType: 'stroke'\n            },\n            hoverAnimation: true,\n            label: {\n                normal: {\n                    formatter: '{b}',\n                    position: 'right',\n                    show: true\n                }\n            },\n            itemStyle: {\n                normal: {\n                    color: 'purple',\n                    //color: '#40A276',\n                    shadowBlur: 10,\n                    shadowColor: '#333'\n                    //shadowColor: '#40A276'\n                }\n            },\n            zlevel: 1\n        }\n    ]\n};\nbmapChart.setOption(option);\n</script> "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
    },
    {
     "id": "233f5b07-0eb4-76e5-3227-0a4f3834b539",

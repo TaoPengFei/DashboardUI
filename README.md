@@ -1,3 +1,6 @@
+#Pentaho Echarts图形的使用
+![Image](https://github.com/TaoPengFei/DashboardUI/blob/master/Demo/imgs/Echarts_Gauge_Bmap.png)
+
 #Pentaho CDE Template Component组件的使用
 ![Image](https://github.com/TaoPengFei/DashboardUI/blob/master/Demo/imgs/Template_1.png)
 

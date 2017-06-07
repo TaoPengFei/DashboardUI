@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:ExportManifest xmlns:ns2="http://www.pentaho.com/schema/">
-    <ExportManifestInformation exportDate="07-06-2017 01:25:32 GMT+08:00" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
+    <ExportManifestInformation exportDate="07-06-2017 05:52:12 GMT+08:00" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
     <ExportManifestEntity path="UI">
         <ExportManifestProperty>
             <EntityMetaData name="UI" createdDate="2017-06-06T23:15:18.346+08:00" isFolder="true" path="UI" isHidden="false" locale="en_US" title="UI"/>
@@ -1045,6 +1045,30 @@
             </EntityAcl>
         </ExportManifestProperty>
     </ExportManifestEntity>
+    <ExportManifestEntity path="UI/js/Echarts3.6.0/bmap.js">
+        <ExportManifestProperty>
+            <EntityMetaData name="bmap.js" createdDate="2017-06-07T14:56:28.830+08:00" isFolder="false" path="UI/js/Echarts3.6.0/bmap.js" isHidden="true" locale="en_US" title="bmap"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/js/Echarts3.6.0/bmap.min.js">
+        <ExportManifestProperty>
+            <EntityMetaData name="bmap.min.js" createdDate="2017-06-07T14:57:15.810+08:00" isFolder="false" path="UI/js/Echarts3.6.0/bmap.min.js" isHidden="true" locale="en_US" title="bmap.min"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
     <ExportManifestEntity path="UI/js/Echarts3.6.0/echarts.js">
         <ExportManifestProperty>
             <EntityMetaData name="echarts.js" createdDate="2017-06-06T23:15:28.647+08:00" isFolder="false" path="UI/js/Echarts3.6.0/echarts.js" isHidden="true" locale="en_US" title="echarts"/>
@@ -1060,6 +1084,18 @@
     <ExportManifestEntity path="UI/js/Echarts3.6.0/echarts.min.js">
         <ExportManifestProperty>
             <EntityMetaData name="echarts.min.js" createdDate="2017-06-06T23:15:28.782+08:00" isFolder="false" path="UI/js/Echarts3.6.0/echarts.min.js" isHidden="true" locale="en_US" title="echarts.min"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/js/Echarts3.6.0/geoCoordMap.js">
+        <ExportManifestProperty>
+            <EntityMetaData name="geoCoordMap.js" createdDate="2017-06-07T17:45:21.508+08:00" isFolder="false" path="UI/js/Echarts3.6.0/geoCoordMap.js" isHidden="true" locale="en_US" title="geoCoordMap"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>

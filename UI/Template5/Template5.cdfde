@@ -6239,6 +6239,26 @@
       "value": "brandSelect"
      },
      {
+      "name": "buttonBlock",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "buttonIcon",
+      "type": "buttonIconCustom",
+      "value": "glyphicon-th-list"
+     },
+     {
+      "name": "buttonSize",
+      "type": "buttonSizeCustom",
+      "value": "btn-xs"
+     },
+     {
+      "name": "buttonType",
+      "type": "buttonTypeCustom",
+      "value": "btn-default"
+     },
+     {
       "name": "parameter",
       "type": "Parameter",
       "value": "${p:brandParam}"
@@ -6279,31 +6299,6 @@
       "value": ""
      },
      {
-      "name": "buttonBlock",
-      "type": "Boolean",
-      "value": "false"
-     },
-     {
-      "name": "buttonType",
-      "type": "buttonTypeCustom",
-      "value": "btn-default"
-     },
-     {
-      "name": "buttonSize",
-      "type": "buttonSizeCustom",
-      "value": "btn-xs"
-     },
-     {
-      "name": "prependIcon",
-      "type": "Boolean",
-      "value": "true"
-     },
-     {
-      "name": "buttonIcon",
-      "type": "buttonIconCustom",
-      "value": "glyphicon-th-list"
-     },
-     {
       "name": "htmlObject",
       "type": "HtmlObject",
       "value": "${h:brandSelectDom}"
@@ -6337,11 +6332,16 @@
       "name": "postChange",
       "type": "JavaScript",
       "value": ""
+     },
+     {
+      "name": "prependIcon",
+      "type": "Boolean",
+      "value": "true"
      }
     ],
     "rowName": "Bootstrap Select",
     "type": "ComponentsBSSelectBaseComponent",
-    "typeDesc": "Bootstrap Select"
+    "typeDesc": "? ComponentsBSSelectBaseComponent"
    },
    {
     "id": "6b487088-0104-51ad-f07c-548307a70e9d",
@@ -6351,6 +6351,26 @@
       "name": "name",
       "type": "Id",
       "value": "placeSelect"
+     },
+     {
+      "name": "buttonBlock",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "buttonIcon",
+      "type": "buttonIconCustom",
+      "value": "glyphicon-th-list"
+     },
+     {
+      "name": "buttonSize",
+      "type": "buttonSizeCustom",
+      "value": "btn-xs"
+     },
+     {
+      "name": "buttonType",
+      "type": "buttonTypeCustom",
+      "value": "btn-default"
      },
      {
       "name": "parameter",
@@ -6393,31 +6413,6 @@
       "value": ""
      },
      {
-      "name": "buttonBlock",
-      "type": "Boolean",
-      "value": "false"
-     },
-     {
-      "name": "buttonType",
-      "type": "buttonTypeCustom",
-      "value": "btn-default"
-     },
-     {
-      "name": "buttonSize",
-      "type": "buttonSizeCustom",
-      "value": "btn-xs"
-     },
-     {
-      "name": "prependIcon",
-      "type": "Boolean",
-      "value": "true"
-     },
-     {
-      "name": "buttonIcon",
-      "type": "buttonIconCustom",
-      "value": "glyphicon-th-list"
-     },
-     {
       "name": "htmlObject",
       "type": "HtmlObject",
       "value": "${h:placeSelectDom}"
@@ -6451,11 +6446,16 @@
       "name": "postChange",
       "type": "JavaScript",
       "value": ""
+     },
+     {
+      "name": "prependIcon",
+      "type": "Boolean",
+      "value": "true"
      }
     ],
     "rowName": "Bootstrap Select",
     "type": "ComponentsBSSelectBaseComponent",
-    "typeDesc": "Bootstrap Select"
+    "typeDesc": "? ComponentsBSSelectBaseComponent"
    },
    {
     "id": "63ee637d-b518-82d8-f727-234f08151b4c",
@@ -6465,6 +6465,26 @@
       "name": "name",
       "type": "Id",
       "value": "area1Select"
+     },
+     {
+      "name": "buttonBlock",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "buttonIcon",
+      "type": "buttonIconCustom",
+      "value": "glyphicon-th-list"
+     },
+     {
+      "name": "buttonSize",
+      "type": "buttonSizeCustom",
+      "value": "btn-xs"
+     },
+     {
+      "name": "buttonType",
+      "type": "buttonTypeCustom",
+      "value": "btn-default"
      },
      {
       "name": "parameter",
@@ -6507,31 +6527,6 @@
       "value": ""
      },
      {
-      "name": "buttonBlock",
-      "type": "Boolean",
-      "value": "false"
-     },
-     {
-      "name": "buttonType",
-      "type": "buttonTypeCustom",
-      "value": "btn-default"
-     },
-     {
-      "name": "buttonSize",
-      "type": "buttonSizeCustom",
-      "value": "btn-xs"
-     },
-     {
-      "name": "prependIcon",
-      "type": "Boolean",
-      "value": "true"
-     },
-     {
-      "name": "buttonIcon",
-      "type": "buttonIconCustom",
-      "value": "glyphicon-th-list"
-     },
-     {
       "name": "htmlObject",
       "type": "HtmlObject",
       "value": "${h:area1SelectDom}"
@@ -6565,11 +6560,16 @@
       "name": "postChange",
       "type": "JavaScript",
       "value": ""
+     },
+     {
+      "name": "prependIcon",
+      "type": "Boolean",
+      "value": "true"
      }
     ],
     "rowName": "Bootstrap Select",
     "type": "ComponentsBSSelectBaseComponent",
-    "typeDesc": "Bootstrap Select"
+    "typeDesc": "? ComponentsBSSelectBaseComponent"
    },
    {
     "id": "99e874a9-b1b4-633f-e09a-e3771f500ac7",
@@ -6579,6 +6579,26 @@
       "name": "name",
       "type": "Id",
       "value": "area2Select"
+     },
+     {
+      "name": "buttonBlock",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "buttonIcon",
+      "type": "buttonIconCustom",
+      "value": "glyphicon-th-list"
+     },
+     {
+      "name": "buttonSize",
+      "type": "buttonSizeCustom",
+      "value": "btn-xs"
+     },
+     {
+      "name": "buttonType",
+      "type": "buttonTypeCustom",
+      "value": "btn-default"
      },
      {
       "name": "parameter",
@@ -6621,31 +6641,6 @@
       "value": ""
      },
      {
-      "name": "buttonBlock",
-      "type": "Boolean",
-      "value": "false"
-     },
-     {
-      "name": "buttonType",
-      "type": "buttonTypeCustom",
-      "value": "btn-default"
-     },
-     {
-      "name": "buttonSize",
-      "type": "buttonSizeCustom",
-      "value": "btn-xs"
-     },
-     {
-      "name": "prependIcon",
-      "type": "Boolean",
-      "value": "true"
-     },
-     {
-      "name": "buttonIcon",
-      "type": "buttonIconCustom",
-      "value": "glyphicon-th-list"
-     },
-     {
       "name": "htmlObject",
       "type": "HtmlObject",
       "value": "${h:area2SelectDom}"
@@ -6679,11 +6674,16 @@
       "name": "postChange",
       "type": "JavaScript",
       "value": ""
+     },
+     {
+      "name": "prependIcon",
+      "type": "Boolean",
+      "value": "true"
      }
     ],
     "rowName": "Bootstrap Select",
     "type": "ComponentsBSSelectBaseComponent",
-    "typeDesc": "Bootstrap Select"
+    "typeDesc": "? ComponentsBSSelectBaseComponent"
    },
    {
     "id": "939011ae-10e2-e136-5aae-af93c9376db1",
@@ -6693,6 +6693,26 @@
       "name": "name",
       "type": "Id",
       "value": "area3Select"
+     },
+     {
+      "name": "buttonBlock",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "buttonIcon",
+      "type": "buttonIconCustom",
+      "value": "glyphicon-th-list"
+     },
+     {
+      "name": "buttonSize",
+      "type": "buttonSizeCustom",
+      "value": "btn-xs"
+     },
+     {
+      "name": "buttonType",
+      "type": "buttonTypeCustom",
+      "value": "btn-default"
      },
      {
       "name": "parameter",
@@ -6735,31 +6755,6 @@
       "value": ""
      },
      {
-      "name": "buttonBlock",
-      "type": "Boolean",
-      "value": "false"
-     },
-     {
-      "name": "buttonType",
-      "type": "buttonTypeCustom",
-      "value": "btn-default"
-     },
-     {
-      "name": "buttonSize",
-      "type": "buttonSizeCustom",
-      "value": "btn-xs"
-     },
-     {
-      "name": "prependIcon",
-      "type": "Boolean",
-      "value": "true"
-     },
-     {
-      "name": "buttonIcon",
-      "type": "buttonIconCustom",
-      "value": "glyphicon-th-list"
-     },
-     {
       "name": "htmlObject",
       "type": "HtmlObject",
       "value": "${h:area3SelectDom}"
@@ -6793,11 +6788,16 @@
       "name": "postChange",
       "type": "JavaScript",
       "value": ""
+     },
+     {
+      "name": "prependIcon",
+      "type": "Boolean",
+      "value": "true"
      }
     ],
     "rowName": "Bootstrap Select",
     "type": "ComponentsBSSelectBaseComponent",
-    "typeDesc": "Bootstrap Select"
+    "typeDesc": "? ComponentsBSSelectBaseComponent"
    },
    {
     "id": "bf4f51d6-39fc-b6b8-cd4e-61f4074e8386",
@@ -6807,6 +6807,26 @@
       "name": "name",
       "type": "Id",
       "value": "shopSelect"
+     },
+     {
+      "name": "buttonBlock",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "buttonIcon",
+      "type": "buttonIconCustom",
+      "value": "glyphicon-th-list"
+     },
+     {
+      "name": "buttonSize",
+      "type": "buttonSizeCustom",
+      "value": "btn-xs"
+     },
+     {
+      "name": "buttonType",
+      "type": "buttonTypeCustom",
+      "value": "btn-default"
      },
      {
       "name": "parameter",
@@ -6849,31 +6869,6 @@
       "value": ""
      },
      {
-      "name": "buttonBlock",
-      "type": "Boolean",
-      "value": "false"
-     },
-     {
-      "name": "buttonType",
-      "type": "buttonTypeCustom",
-      "value": "btn-default"
-     },
-     {
-      "name": "buttonSize",
-      "type": "buttonSizeCustom",
-      "value": "btn-xs"
-     },
-     {
-      "name": "prependIcon",
-      "type": "Boolean",
-      "value": "true"
-     },
-     {
-      "name": "buttonIcon",
-      "type": "buttonIconCustom",
-      "value": "glyphicon-th-list"
-     },
-     {
       "name": "htmlObject",
       "type": "HtmlObject",
       "value": "${h:shopSelectDom}"
@@ -6907,11 +6902,16 @@
       "name": "postChange",
       "type": "JavaScript",
       "value": ""
+     },
+     {
+      "name": "prependIcon",
+      "type": "Boolean",
+      "value": "true"
      }
     ],
     "rowName": "Bootstrap Select",
     "type": "ComponentsBSSelectBaseComponent",
-    "typeDesc": "Bootstrap Select"
+    "typeDesc": "? ComponentsBSSelectBaseComponent"
    },
    {
     "id": "60ab60d4-86b1-9376-c6e8-6c142daca4d4",
@@ -6921,6 +6921,26 @@
       "name": "name",
       "type": "Id",
       "value": "outletSelect"
+     },
+     {
+      "name": "buttonBlock",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "buttonIcon",
+      "type": "buttonIconCustom",
+      "value": "glyphicon-th-list"
+     },
+     {
+      "name": "buttonSize",
+      "type": "buttonSizeCustom",
+      "value": "btn-xs"
+     },
+     {
+      "name": "buttonType",
+      "type": "buttonTypeCustom",
+      "value": "btn-default"
      },
      {
       "name": "parameter",
@@ -6963,31 +6983,6 @@
       "value": ""
      },
      {
-      "name": "buttonBlock",
-      "type": "Boolean",
-      "value": "false"
-     },
-     {
-      "name": "buttonType",
-      "type": "buttonTypeCustom",
-      "value": "btn-default"
-     },
-     {
-      "name": "buttonSize",
-      "type": "buttonSizeCustom",
-      "value": "btn-xs"
-     },
-     {
-      "name": "prependIcon",
-      "type": "Boolean",
-      "value": "true"
-     },
-     {
-      "name": "buttonIcon",
-      "type": "buttonIconCustom",
-      "value": "glyphicon-th-list"
-     },
-     {
       "name": "htmlObject",
       "type": "HtmlObject",
       "value": "${h:outletSelectDom}"
@@ -7021,11 +7016,16 @@
       "name": "postChange",
       "type": "JavaScript",
       "value": ""
+     },
+     {
+      "name": "prependIcon",
+      "type": "Boolean",
+      "value": "true"
      }
     ],
     "rowName": "Bootstrap Select",
     "type": "ComponentsBSSelectBaseComponent",
-    "typeDesc": "Bootstrap Select"
+    "typeDesc": "? ComponentsBSSelectBaseComponent"
    },
    {
     "id": "SELECTORS",
@@ -7207,21 +7207,6 @@
       "value": "saleAmtGauge"
      },
      {
-      "name": "label",
-      "type": "String",
-      "value": "  "
-     },
-     {
-      "name": "listeners",
-      "type": "Listeners",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:placeParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\",\"${p:shopParam}\",\"${p:outletParam}\"]"
-     },
-     {
-      "name": "parameters",
-      "type": "CdaParameters",
-      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"placeParam\",\"placeParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"],[\"shopParam\",\"shopParam\",\"String\",\"\",\"\"],[\"outletParam\",\"outletParam\",\"String\",\"\",\"\"]]"
-     },
-     {
       "name": "expression",
       "type": "JavaScript",
       "value": ""
@@ -7232,34 +7217,9 @@
       "value": "salesAmtQuery"
      },
      {
-      "name": "priority",
-      "type": "Integer",
-      "value": "5"
-     },
-     {
-      "name": "gaugeType",
-      "type": "gaugeTypeCustom",
-      "value": "gauge"
-     },
-     {
-      "name": "minValue",
-      "type": "String",
-      "value": "0"
-     },
-     {
-      "name": "maxValue",
-      "type": "String",
-      "value": "700000"
-     },
-     {
-      "name": "gaugeSymbol",
-      "type": "String",
-      "value": ""
-     },
-     {
-      "name": "gaugeWidthScale",
-      "type": "String",
-      "value": "-0.4"
+      "name": "executeAtStart",
+      "type": "Boolean",
+      "value": "true"
      },
      {
       "name": "extensionPoints",
@@ -7267,29 +7227,59 @@
       "value": "[[\"valueFontColor\",\"#1F77B4\"]]"
      },
      {
-      "name": "subTitle",
-      "type": "String",
-      "value": ""
-     },
-     {
       "name": "formatNumber",
       "type": "Boolean",
       "value": "false"
      },
      {
-      "name": "textRenderer",
-      "type": "JavaScript",
+      "name": "gaugeSymbol",
+      "type": "String",
       "value": ""
+     },
+     {
+      "name": "gaugeType",
+      "type": "gaugeTypeCustom",
+      "value": "gauge"
+     },
+     {
+      "name": "gaugeWidthScale",
+      "type": "String",
+      "value": "-0.4"
+     },
+     {
+      "name": "label",
+      "type": "String",
+      "value": "  "
+     },
+     {
+      "name": "listeners",
+      "type": "Listeners",
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:placeParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\",\"${p:shopParam}\",\"${p:outletParam}\"]"
+     },
+     {
+      "name": "maxValue",
+      "type": "String",
+      "value": "700000"
+     },
+     {
+      "name": "minValue",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"],[\"brandParam\",\"brandParam\",\"String\",\"\",\"\"],[\"placeParam\",\"placeParam\",\"String\",\"\",\"\"],[\"area1Param\",\"area1Param\",\"String\",\"\",\"\"],[\"area2Param\",\"area2Param\",\"String\",\"\",\"\"],[\"area3Param\",\"area3Param\",\"String\",\"\",\"\"],[\"shopParam\",\"shopParam\",\"String\",\"\",\"\"],[\"outletParam\",\"outletParam\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "priority",
+      "type": "Integer",
+      "value": "5"
      },
      {
       "name": "htmlObject",
       "type": "HtmlObject",
       "value": ""
-     },
-     {
-      "name": "executeAtStart",
-      "type": "Boolean",
-      "value": "true"
      },
      {
       "name": "preExecution",
@@ -7300,11 +7290,21 @@
       "name": "postExecution",
       "type": "JavaScript",
       "value": ""
+     },
+     {
+      "name": "subTitle",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "textRenderer",
+      "type": "JavaScript",
+      "value": ""
      }
     ],
     "rowName": "Gauge Component",
     "type": "ComponentsgaugeComponent",
-    "typeDesc": "Gauge Component"
+    "typeDesc": "? ComponentsgaugeComponent"
    },
    {
     "id": "OTHERCOMPONENTS",
@@ -7412,7 +7412,7 @@
      {
       "name": "paginate",
       "type": "Boolean",
-      "value": "true"
+      "value": "false"
      },
      {
       "name": "sort",
@@ -7462,7 +7462,7 @@
      {
       "name": "tableStyle",
       "type": "TableStyle",
-      "value": ""
+      "value": "themeroller"
      },
      {
       "name": "htmlObject",
@@ -9003,110 +9003,110 @@
    {
     "id": "D3COMPONENTS",
     "name": "D3 Components",
-    "type": "Label",
-    "typeDesc": "<i>Group</i>",
     "parent": "UnIqEiD",
     "properties": [
      {
       "name": "Group",
-      "value": "D3 Components",
-      "type": "Label"
+      "type": "Label",
+      "value": "D3 Components"
      }
-    ]
+    ],
+    "type": "Label",
+    "typeDesc": "<i>Group</i>"
    },
    {
     "id": "9cb62ad9-bc3b-f748-182d-b6a44f1234f7",
-    "type": "Componentsd3",
-    "typeDesc": "D3 Component Component",
     "parent": "D3COMPONENTS",
     "properties": [
      {
       "name": "name",
-      "value": "areaOrEmpQtyEffectiveQueryBar",
-      "type": "Id"
+      "type": "Id",
+      "value": "areaOrEmpQtyEffectiveQueryBar"
      },
      {
       "name": "listeners",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:placeParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\",\"${p:shopParam}\",\"${p:outletParam}\"]",
-      "type": "Listeners"
-     },
-     {
-      "name": "customfunction",
-      "value": "function f(dataset){\r\n    var data = this.cdaResultToD3Array(dataset);\r\n    \r\n    var margin = {top: 40, right: 20, bottom: 30, left: 60},\r\n        width = document.getElementById(\"row4_col1_panel_body\").scrollWidth - 100,\r\n        //width = this.getWidth(),\r\n        height = this.getHeight() - margin.top - margin.bottom;\r\n    \r\n    var x = d3.scale.ordinal().rangeRoundBands([0, width], .1);\r\n    var y0 = d3.scale.linear().range([height, 0]),\r\n        y1 = d3.scale.linear().range([height, 0]); \r\n    \r\n    var xAxis = d3.svg.axis().scale(x).orient(\"bottom\");\r\n    var yAxisLeft = d3.svg.axis().scale(y0).ticks(6).orient(\"left\");\r\n    var yAxisRight = d3.svg.axis().scale(y1).ticks(6).orient(\"right\");\r\n    \r\n    var svg = d3.select(\"#\"+this.htmlObject).append(\"svg\")\r\n        .attr(\"width\", width + margin.left + margin.right)\r\n        .attr(\"height\", height + margin.top + margin.bottom)\r\n        .append(\"g\")\r\n        .attr(\"transform\", \"translate(\" + margin.left + \",\" + margin.top + \")\");\r\n    \r\n    data.forEach(function(d) {\r\n        d.EmpQtyEffective = +d.EmpQtyEffective;\r\n        d.AreaEffective = +d.AreaEffective;\r\n    });\r\n    \r\n    x.domain(data.map(function(d) { return d.ShopName; }));\r\n    y0.domain([0, d3.max(data, function(d) { return d.EmpQtyEffective; })]);\r\n    y1.domain([0, d3.max(data, function(d) { return d.AreaEffective; })]);\r\n   \r\n    svg.append(\"g\")\r\n        .attr(\"class\", \"x axis\")\r\n        .attr(\"transform\", \"translate(0,\" + height + \")\")\r\n        //.attr(\"transform\", \"rotate(-90)\")\r\n        .call(xAxis);\r\n    \r\n    svg.append(\"g\")\r\n        .attr(\"class\", \"y axis axisLeft\")\r\n        .attr(\"transform\", \"translate(0,0)\")\r\n        //.attr(\"transform\", \"rotate(-90)\")\r\n        //.attr(\"transform\",\"rotate(-90)\")\r\n        .call(yAxisLeft)\r\n        .append(\"text\")\r\n        .attr(\"y\", 6)\r\n        //.attr(\"dy\", \"-2em\")\r\n        .style(\"text-anchor\", \"end\")\r\n        //.attr(\"dy\",\"1em\")//沿y轴平移一个字体的大小\r\n        .text(\"门店总人数\");\r\n    \r\n    svg.append(\"g\")\r\n        .attr(\"class\", \"y axis axisRight\")\r\n        .attr(\"transform\", \"translate(\" + (width) + \",0)\")\r\n        //.attr(\"transform\", \"rotate(-90)\")\r\n        .call(yAxisRight)\r\n        .append(\"text\")\r\n        .attr(\"y\", 6)\r\n        .attr(\"dy\", \"-2em\")\r\n        //.attr(\"dx\", \"2em\")\r\n        .style(\"text-anchor\", \"end\")\r\n        .text(\"门店总坪数\");\r\n        \r\n   \r\n    \r\n    bars = svg.selectAll(\".bar\").data(data).enter();\r\n    //立柱1\r\n    bars.append(\"rect\")\r\n      .attr(\"class\", \"bar1\")\r\n      .attr(\"x\", function(d) { return x(d.ShopName); })\r\n      //.attr(\"width\", x.rangeBand()/2)\r\n      .attr(\"width\", x.rangeBand())\r\n      //.attr(\"transform\", \"translate(\" + x.rangeBand()/4 + \",0)\")\r\n      .attr(\"y\", function(d) { return y0(d.EmpQtyEffective); })\r\n      .attr(\"height\", function(d,i,j) { return height - y0(d.EmpQtyEffective); })\r\n      .attr(\"fill\", \"#1F77B4\");\r\n    //立柱2\r\n    \r\n    bars.append(\"rect\")\r\n      .attr(\"class\", \"bar2\")\r\n      .attr(\"x\", function(d) { return x(d.ShopName) + x.rangeBand()/2; })\r\n      .attr(\"width\", x.rangeBand() / 2)\r\n      .attr(\"y\", function(d) { return y1(d.AreaEffective); })\r\n      .attr(\"height\", function(d,i,j) { return height - y1(d.AreaEffective); })\r\n      .attr(\"fill\", \"#FF7F0E\");\r\n   \r\n    \r\n} ",
-      "type": "JavaScript"
+      "type": "Listeners",
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:placeParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\",\"${p:shopParam}\",\"${p:outletParam}\"]"
      },
      {
       "name": "parameters",
-      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"placeParam\",\"placeParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"],[\"shopParam\",\"shopParam\"],[\"outletParam\",\"outletParam\"]]",
-      "type": "ValuesArray"
+      "type": "ValuesArray",
+      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"placeParam\",\"placeParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"],[\"shopParam\",\"shopParam\"],[\"outletParam\",\"outletParam\"]]"
+     },
+     {
+      "name": "customfunction",
+      "type": "JavaScript",
+      "value": "function f(dataset){\r\n    var data = this.cdaResultToD3Array(dataset);\r\n    \r\n    var margin = {top: 40, right: 20, bottom: 30, left: 60},\r\n        width = document.getElementById(\"row4_col1_panel_body\").scrollWidth - 100,\r\n        //width = this.getWidth(),\r\n        height = this.getHeight() - margin.top - margin.bottom;\r\n    \r\n    var x = d3.scale.ordinal().rangeRoundBands([0, width], .1);\r\n    var y0 = d3.scale.linear().range([height, 0]),\r\n        y1 = d3.scale.linear().range([height, 0]); \r\n    \r\n    var xAxis = d3.svg.axis().scale(x).orient(\"bottom\");\r\n    var yAxisLeft = d3.svg.axis().scale(y0).ticks(6).orient(\"left\");\r\n    var yAxisRight = d3.svg.axis().scale(y1).ticks(6).orient(\"right\");\r\n    \r\n    var svg = d3.select(\"#\"+this.htmlObject).append(\"svg\")\r\n        .attr(\"width\", width + margin.left + margin.right)\r\n        .attr(\"height\", height + margin.top + margin.bottom)\r\n        .append(\"g\")\r\n        .attr(\"transform\", \"translate(\" + margin.left + \",\" + margin.top + \")\");\r\n    \r\n    data.forEach(function(d) {\r\n        d.EmpQtyEffective = +d.EmpQtyEffective;\r\n        d.AreaEffective = +d.AreaEffective;\r\n    });\r\n    \r\n    x.domain(data.map(function(d) { return d.ShopName; }));\r\n    y0.domain([0, d3.max(data, function(d) { return d.EmpQtyEffective; })]);\r\n    y1.domain([0, d3.max(data, function(d) { return d.AreaEffective; })]);\r\n   \r\n    svg.append(\"g\")\r\n        .attr(\"class\", \"x axis\")\r\n        .attr(\"transform\", \"translate(0,\" + height + \")\")\r\n        //.attr(\"transform\", \"rotate(-90)\")\r\n        .call(xAxis);\r\n    \r\n    svg.append(\"g\")\r\n        .attr(\"class\", \"y axis axisLeft\")\r\n        .attr(\"transform\", \"translate(0,0)\")\r\n        //.attr(\"transform\", \"rotate(-90)\")\r\n        //.attr(\"transform\",\"rotate(-90)\")\r\n        .call(yAxisLeft)\r\n        .append(\"text\")\r\n        .attr(\"y\", 6)\r\n        //.attr(\"dy\", \"-2em\")\r\n        .style(\"text-anchor\", \"end\")\r\n        //.attr(\"dy\",\"1em\")//沿y轴平移一个字体的大小\r\n        .text(\"门店总人数\");\r\n    \r\n    svg.append(\"g\")\r\n        .attr(\"class\", \"y axis axisRight\")\r\n        .attr(\"transform\", \"translate(\" + (width) + \",0)\")\r\n        //.attr(\"transform\", \"rotate(-90)\")\r\n        .call(yAxisRight)\r\n        .append(\"text\")\r\n        .attr(\"y\", 6)\r\n        .attr(\"dy\", \"-2em\")\r\n        //.attr(\"dx\", \"2em\")\r\n        .style(\"text-anchor\", \"end\")\r\n        .text(\"门店总坪数\");\r\n        \r\n   \r\n    \r\n    bars = svg.selectAll(\".bar\").data(data).enter();\r\n    //立柱1\r\n    bars.append(\"rect\")\r\n      .attr(\"class\", \"bar1\")\r\n      .attr(\"x\", function(d) { return x(d.ShopName); })\r\n      //.attr(\"width\", x.rangeBand()/2)\r\n      .attr(\"width\", x.rangeBand())\r\n      //.attr(\"transform\", \"translate(\" + x.rangeBand()/4 + \",0)\")\r\n      .attr(\"y\", function(d) { return y0(d.EmpQtyEffective); })\r\n      .attr(\"height\", function(d,i,j) { return height - y0(d.EmpQtyEffective); })\r\n      .attr(\"fill\", \"#1F77B4\");\r\n    //立柱2\r\n    \r\n    bars.append(\"rect\")\r\n      .attr(\"class\", \"bar2\")\r\n      .attr(\"x\", function(d) { return x(d.ShopName) + x.rangeBand()/2; })\r\n      .attr(\"width\", x.rangeBand() / 2)\r\n      .attr(\"y\", function(d) { return y1(d.AreaEffective); })\r\n      .attr(\"height\", function(d,i,j) { return height - y1(d.AreaEffective); })\r\n      .attr(\"fill\", \"#FF7F0E\");\r\n   \r\n    \r\n} "
      },
      {
       "name": "dataSource",
-      "value": "areaOrEmpQtyEffectiveQuery",
-      "type": "Datasource"
+      "type": "Datasource",
+      "value": "areaOrEmpQtyEffectiveQuery"
      },
      {
       "name": "height",
-      "value": "320",
-      "type": "Integer"
+      "type": "Integer",
+      "value": "320"
      },
      {
       "name": "priority",
-      "value": 5,
-      "type": "Integer"
+      "type": "Integer",
+      "value": 5
      },
      {
       "name": "refreshPeriod",
-      "value": "",
-      "type": "Integer"
+      "type": "Integer",
+      "value": ""
      },
      {
       "name": "width",
-      "value": "",
-      "type": "Integer"
+      "type": "Integer",
+      "value": ""
      },
      {
       "name": "htmlObject",
-      "value": "${h:areaOrEmpQtyEffectiveDom}",
-      "type": "HtmlObject"
+      "type": "HtmlObject",
+      "value": "${h:areaOrEmpQtyEffectiveDom}"
      },
      {
       "name": "executeAtStart",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      },
      {
       "name": "preExecution",
-      "value": "function f(){\n    if($(\"#areaOrEmpQtyEffectiveDom > svg\").length > 0){\n        $('#areaOrEmpQtyEffectiveDom svg').remove();\n    }else{\n        console.log('First loading D3 Chart...');\n    }\n    resizeGraphical(this);\n    var margin = {top: 80, right: 20, bottom: 30, left: 60},\n        width = document.getElementById(\"row4_col1_panel_body\").scrollWidth - 100,\n        //width = this.getWidth(),\n        height = this.getHeight() - margin.top - margin.bottom;\n} ",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": "function f(){\n    if($(\"#areaOrEmpQtyEffectiveDom > svg\").length > 0){\n        $('#areaOrEmpQtyEffectiveDom svg').remove();\n    }else{\n        console.log('First loading D3 Chart...');\n    }\n    resizeGraphical(this);\n    var margin = {top: 80, right: 20, bottom: 30, left: 60},\n        width = document.getElementById(\"row4_col1_panel_body\").scrollWidth - 100,\n        //width = this.getWidth(),\n        height = this.getHeight() - margin.top - margin.bottom;\n} "
      },
      {
       "name": "postExecution",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "postFetch",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "preChange",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "postChange",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "tooltip",
-      "value": "",
-      "type": "Html"
+      "type": "Html",
+      "value": ""
      }
     ],
-    "rowName": "d3 Component"
+    "rowName": "d3 Component",
+    "type": "Componentsd3",
+    "typeDesc": "? Componentsd3"
    }
   ]
  },
@@ -11375,7 +11375,7 @@
      {
       "name": "resourceCode",
       "type": "Resource",
-      "value": "@font-face{\r\n    font-family: TPF_Font_Thin;\r\n    src: url('/pentaho/BI/fonts/Comfortaa_Thin.ttf'),\r\n         url('/pentaho/BI/fonts/Comfortaa_Thin.eot');  /* IE9 */ \r\n}\r\nbody{\r\n    background-color:#ECF0F5;\r\n}\r\n.container {\r\n    width:100%;\r\n    height: 100%;\r\n    overflow: auto;\r\n    position: absolute; \r\n    padding-top: 10px;\r\n    padding-right: 0px;\r\n    padding-left: 10px;\r\n    padding-bottom: 10px;\r\n    margin-right: auto;\r\n    margin-left: auto;\r\n}\r\n/*   #   */\r\n.panel-default {\r\n    border: none;\r\n    border-radius: 0px;\r\n    margin-bottom: 0px;\r\n    box-shadow: none;\r\n    -webkit-box-shadow: none;\r\n}\r\n.panel-default > .panel-heading {\r\n    color: #777;\r\n    background-color: #fff;\r\n    border-color: #e6e6e6;\r\n    padding: 10px 10px;\r\n}\r\n.panel-default > .panel-body {\r\n    padding: 10px;\r\n    padding-bottom: 0px;\r\n}\r\n.panel-default > .panel-body ul {\r\n    overflow: hidden;\r\n    padding: 0;\r\n    margin: 0px;\r\n    margin-top: -5px;\r\n}\r\n.panel-default > .panel-body ul li {\r\n    line-height: 27px;\r\n    list-style-type: none;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n}\r\n.panel-default > .panel-body ul li .time {\r\n    color: #a1a1a1;\r\n    float: right;\r\n    padding-right: 5px;\r\n} \r\n .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, \r\n .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, \r\n .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, \r\n .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, \r\n .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, \r\n .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, \r\n .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, \r\n .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, \r\n .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, \r\n .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, \r\n .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, \r\n .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {\r\n    position: relative;\r\n    min-height: 1px;\r\n    padding-right: 10px;\r\n    padding-left: 0px;\r\n} \r\n.row {\r\n    margin-right: 0px;\r\n    margin-left: 0px;\r\n} \r\n#dateRangePickerDom > input {\r\n    height: 20px;\r\n    border-radius:4px;\r\n    cursor:pointer;\r\n    border:0px solid #DBDBDB;\r\n    border-right:1px solid #DBDBDB; ;\r\n}\r\nhr {\r\n    margin-top: 10px; \r\n    margin-bottom: 0px; \r\n    border: 0;\r\n    border-top: 0px solid #eee; \r\n} \r\n#saleAmtDom_KPI, #ATVDom_KPI, #discountDom_KPI, \r\n#overTableVDom_KPI, #backItemDom_KPI, #rushItamDom_KPI {\r\n    color:#666666;\r\n    font-size:40px;\r\n    font-weight:lighter;\r\n    font-family:TPF_Font_Thin;\r\n} \r\n#row2_col2{\r\n    margin-right:-10px;\r\n} \r\n/*\r\n#saleAmtGaugeDom_KPI{\r\n    overflow: hidden;\r\n    position: absolute;\r\n    top: 15px;\r\n    left: 20px;\r\n} \r\n*/\r\n\r\n\r\n/************************ table ************************\r\n#header { margin-top:1em; }\r\nh2 { font-size:1.4em; padding-top:7px; padding-left:1em; height:1.6em; }\r\n.topRow1 { font-size:1.2em; font-weight:700; margin-left:1em; }\r\n.topRow2 { font-size:1em; margin-left:1em; }\r\nhr.topRowHR { height:2px; width:900px; color:red; }\r\n#ParamRow { font-size:0.9em; vertical-align:bottom; margin-bottom:2em; }\r\n#ParamRow select { font-size:0.9em; vertical-align:top; }\r\n#ParamRow input { font-size:0.9em; vertical-align:top; }\r\n#nResultTable { margin-top:2em; }\r\ntable tr.even, table tr.odd{ background-color: white; }\r\ntable thead th { border-bottom: 1px solid #CCC; background-color: #fff; }\r\ntable tbody td.number, th.number{ text-align: right; }\r\ntable tbody td.string, th.string{ text-align: left; }\r\ntable tfooter td { background-color: white; }\r\n.ui-widget-header { background: white; color: white; border-bottom:0px } \r\n*/\r\n\r\n#table1Dom,#table2Dom,#table3Dom{\r\n    overflow:auto; \r\n} "
+      "value": "@font-face{\r\n    font-family: TPF_Font_Thin;\r\n    src: url('/pentaho/BI/fonts/Comfortaa_Thin.ttf'),\r\n         url('/pentaho/BI/fonts/Comfortaa_Thin.eot');  /* IE9 */ \r\n}\r\nbody{\r\n    background-color:#ECF0F5;\r\n}\r\n.container {\r\n    width:100%;\r\n    height: 100%;\r\n    overflow: auto;\r\n    position: absolute; \r\n    padding-top: 10px;\r\n    padding-right: 0px;\r\n    padding-left: 10px;\r\n    padding-bottom: 10px;\r\n    margin-right: auto;\r\n    margin-left: auto;\r\n}\r\n/*   #   */\r\n.panel-default {\r\n    border: none;\r\n    border-radius: 0px;\r\n    margin-bottom: 0px;\r\n    box-shadow: none;\r\n    -webkit-box-shadow: none;\r\n}\r\n.panel-default > .panel-heading {\r\n    color: #777;\r\n    background-color: #fff;\r\n    border-color: #e6e6e6;\r\n    padding: 10px 10px;\r\n}\r\n.panel-default > .panel-body {\r\n    padding: 10px;\r\n    padding-bottom: 0px;\r\n}\r\n.panel-default > .panel-body ul {\r\n    overflow: hidden;\r\n    padding: 0;\r\n    margin: 0px;\r\n    margin-top: -5px;\r\n}\r\n.panel-default > .panel-body ul li {\r\n    line-height: 27px;\r\n    list-style-type: none;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n}\r\n.panel-default > .panel-body ul li .time {\r\n    color: #a1a1a1;\r\n    float: right;\r\n    padding-right: 5px;\r\n} \r\n .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, \r\n .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, \r\n .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, \r\n .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, \r\n .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, \r\n .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, \r\n .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, \r\n .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, \r\n .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, \r\n .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, \r\n .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, \r\n .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {\r\n    position: relative;\r\n    min-height: 1px;\r\n    padding-right: 10px;\r\n    padding-left: 0px;\r\n} \r\n.row {\r\n    margin-right: 0px;\r\n    margin-left: 0px;\r\n} \r\n#dateRangePickerDom > input {\r\n    height: 20px;\r\n    border-radius:4px;\r\n    cursor:pointer;\r\n    border:0px solid #DBDBDB;\r\n    border-right:1px solid #DBDBDB; ;\r\n}\r\nhr {\r\n    margin-top: 10px; \r\n    margin-bottom: 0px; \r\n    border: 0;\r\n    border-top: 0px solid #eee; \r\n} \r\n#saleAmtDom_KPI, #ATVDom_KPI, #discountDom_KPI, \r\n#overTableVDom_KPI, #backItemDom_KPI, #rushItamDom_KPI {\r\n    color:#666666;\r\n    font-size:40px;\r\n    font-weight:lighter;\r\n    font-family:TPF_Font_Thin;\r\n} \r\n#row2_col2{\r\n    margin-right:-10px;\r\n} \r\n/*\r\n#saleAmtGaugeDom_KPI{\r\n    overflow: hidden;\r\n    position: absolute;\r\n    top: 15px;\r\n    left: 20px;\r\n} \r\n*/\r\n\r\n\r\n/************************ table ************************\r\n#header { margin-top:1em; }\r\nh2 { font-size:1.4em; padding-top:7px; padding-left:1em; height:1.6em; }\r\n.topRow1 { font-size:1.2em; font-weight:700; margin-left:1em; }\r\n.topRow2 { font-size:1em; margin-left:1em; }\r\nhr.topRowHR { height:2px; width:900px; color:red; }\r\n#ParamRow { font-size:0.9em; vertical-align:bottom; margin-bottom:2em; }\r\n#ParamRow select { font-size:0.9em; vertical-align:top; }\r\n#ParamRow input { font-size:0.9em; vertical-align:top; }\r\n#nResultTable { margin-top:2em; }\r\ntable tr.even, table tr.odd{ background-color: white; }\r\ntable thead th { border-bottom: 1px solid #CCC; background-color: #fff; }\r\ntable tbody td.number, th.number{ text-align: right; }\r\ntable tbody td.string, th.string{ text-align: left; }\r\ntable tfooter td { background-color: white; }\r\n.ui-widget-header { background: white; color: white; border-bottom:0px } \r\n*/\r\n\r\n#table1Dom,#table2Dom,#table3Dom{\r\n    overflow:auto; \r\n} \r\n\r\n/* ================ TABLE ================ */\r\ntable,table tr th, table tr td {\r\n    border:1px solid #F8FAFB; \r\n    /*\r\n    #F8FAFB  #278DC5\r\n    */\r\n}\r\n\r\ntable.table.dataTable {\r\n    /*\r\n    margin-top: 18px;\r\n    */\r\n    border: none;\r\n}\r\n\r\ntable.table.dataTable thead {\r\n    /*\r\n    display: none;\r\n    */\r\n    background-color: #F8FAFB;\r\n    /*\r\n    border: none;\r\n    */\r\n    border: 1px solid #efefef;\r\n}\r\n\r\n\r\ntable.table.dataTable tbody tr {\r\n    background-color: white;\r\n    /*\r\n    border: none;\r\n    */\r\n    border: 1px solid #efefef;\r\n}\r\n\r\ntable.table.dataTable tbody tr td {\r\n    border: none;\r\n    background-color: white;\r\n    padding: 4px;\r\n    line-height: 22px;\r\n}\r\n\r\ntable.table.dataTable tbody tr td.column2 {\r\n    font-size: 16px;\r\n}\r\n\r\n.salesByProduct {\r\n    margin-top: 20px;\r\n}\r\n\r\n.dataTables_wrapper .dataTables_filter input {\r\n    margin-left: 0.5em;\r\n    border: 1px solid #efefef;\r\n    padding: 5px;\r\n    margin: 10px;\r\n}\r\n\r\n.dataTables_wrapper .dataTables_length, \r\n.dataTables_wrapper .dataTables_filter, \r\n.dataTables_wrapper .dataTables_info, \r\n.dataTables_wrapper .dataTables_processing, \r\n.dataTables_wrapper .dataTables_paginate {\r\n    color: #333333;\r\n    width: 100%;\r\n    background-color: #F8FAFB;\r\n    padding: 4px;\r\n    border-bottom: 2px solid white;\r\n}\r\n\r\ntable.dataTable.compact thead th, \r\ntable.dataTable.compact thead td {\r\n    padding: 5px 9px;\r\n    background-color: #F8FAFB;\r\n    border: 2px solid white;\r\n}\r\n\r\ntable.tableComponent td.numeric {\r\n    font-family: 'Open Sans';\r\n    font-size: 12px;\r\n    vertical-align: middle;\r\n}\r\n\r\n\r\n\r\ntable .trend {\r\n    position: relative;\r\n\r\n}\r\n\r\ntable .trend:after {\r\n    position: absolute;\r\n    background: none;\r\n    font: normal normal normal 20px/1 FontAwesome;\r\n    top: -5px;\r\n    left: -3px;\r\n}\r\n\r\ntable .trend.down.good {\r\n    background: none;\r\n}\r\n\r\ntable .trend.down.good:after {\r\n    content: \"\\f0ab\";\r\n    color: red;\r\n}\r\n\r\ntable .trend.up.good {\r\n    background: none;\r\n}\r\n\r\ntable .trend.up.good:after {\r\n    content: \"\\f0aa\";\r\n    color: green;\r\n}\r\n\r\ntable .trend.neutral.good {\r\n    background: none;\r\n}\r\n\r\ntable .trend.neutral.good:after {\r\n    content: \"\\f0a9\";\r\n    color: #ccc;\r\n} \r\n\r\n.dataTables_wrapper .ui-toolbar {\r\n    padding: 0px;\r\n} \r\n.dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {\r\n    color: #333333;\r\n    width: 100%;\r\n    /* background-color: #F8FAFB; */\r\n    /* padding: 4px; */\r\n    /* border-bottom: 2px solid white; */\r\n}\r\n.dataTables_wrapper .dataTables_paginate {\r\n    float: right;\r\n    text-align: right;\r\n    /* padding-top: 0.25em; */\r\n} \r\n.ui-widget-header {\r\n    border: 0px solid #aed0ea;\r\n    background: #F8FAFB url(images/ui-bg_highlight-soft_100_deedf7_1x100.png) 50% 50% repeat-x; \r\n    /*\r\n    color: #222222;\r\n    */\r\n    color: #2779AA;\r\n    font-weight: bold;\r\n} \r\n.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {\r\n    border: 1px solid #aed0ea;\r\n    background: #F8FAFB url(images/ui-bg_glass_80_d7ebf9_1x400.png) 50% 50% repeat-x;\r\n    font-weight: bold;\r\n    color: #2779aa;\r\n} "
      },
      {
       "name": "resourceType",
