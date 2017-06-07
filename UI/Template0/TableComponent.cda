@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CDADescriptor>
    <DataSources>
-      <Connection id="GaugeEchartsQuery_new" type="sql.jndi">
+      <Connection id="GaugeEchartsQuery_old" type="sql.jndi">
          <Jndi>jdbc_bi</Jndi>
       </Connection>
       <Connection id="GaugeEchartsQuery" type="sql.jndi">
          <Jndi>jdbc_bi</Jndi>
       </Connection>
-      <Connection id="TableQuery" type="sql.jndi">
-         <Jndi>jdbc_bi</Jndi>
-      </Connection>
    </DataSources>
-   <DataAccess access="public" connection="GaugeEchartsQuery_new" id="GaugeEchartsQuery_new"
+   <DataAccess access="public" connection="GaugeEchartsQuery_old" id="GaugeEchartsQuery_old"
                type="sql">
-      <Name>GaugeEchartsQuery_new</Name>
+      <Name>GaugeEchartsQuery_old</Name>
       <Cache duration="3600" enabled="true"/>
       <Columns/>
       <Parameters/>
@@ -36,12 +33,5 @@ FROM
       <Columns/>
       <Parameters/>
       <Query><![CDATA[SELECT 1, 14.45;]]></Query>
-   </DataAccess>
-   <DataAccess access="public" connection="TableQuery" id="TableQuery" type="sql">
-      <Name>TableQuery</Name>
-      <Cache duration="3600" enabled="true"/>
-      <Columns/>
-      <Parameters/>
-      <Query><![CDATA[CALL P_DAILY_BUSINESS_PROFILE('2017-01-17', '2017-06-01', -1, -1, -1, -1, -1, -1, -1);]]></Query>
    </DataAccess>
 </CDADescriptor>

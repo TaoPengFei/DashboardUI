@@ -205,7 +205,7 @@
      {
       "name": "expandContainerObject",
       "type": "HtmlTarget",
-      "value": ""
+      "value": "${h: }"
      },
      {
       "name": "listeners",
@@ -285,7 +285,7 @@
      {
       "name": "paginate",
       "type": "Boolean",
-      "value": "true"
+      "value": "false"
      },
      {
       "name": "sort",
@@ -320,7 +320,7 @@
      {
       "name": "priority",
       "type": "Integer",
-      "value": 5
+      "value": "5"
      },
      {
       "name": "refreshPeriod",
@@ -335,7 +335,7 @@
      {
       "name": "tableStyle",
       "type": "TableStyle",
-      "value": ""
+      "value": "themeroller"
      },
      {
       "name": "htmlObject",
@@ -360,7 +360,7 @@
      {
       "name": "postExecution",
       "type": "JavaScript",
-      "value": ""
+      "value": "function() {\r\n    \r\n    \r\n    //可实现合并单元格,上下行来比较\r\n    var totalCols = $(\"#row3_colTable\").find(\"tr:eq(0)\").find(\"td\").length;\r\n    //console.log($('#row3_colTable tbody tr').find(\"td\").length);\r\n\tvar totalRows = $(\"#row3_colTable\").find(\"tr\").length;\r\n\t//for ( var i = totalCols-1; i >= 0; i--) {\r\n    for ( var i = 2; i >= 0; i--) {\r\n\t\tfor ( var j = totalRows-1; j >= 0; j--) {\r\n        //for ( var j = 0; j >= 0; j--) {\r\n\t\t\tstartCell = $(\"#row3_colTable\").find(\"tr\").eq(j).find(\"td\").eq(i);\r\n\t\t\ttargetCell = $(\"#row3_colTable\").find(\"tr\").eq(j - 1).find(\"td\").eq(i);\r\n            if (startCell.text() == targetCell.text() && targetCell.text() !== \"\") {\r\n\t\t\t\ttargetCell.attr(\"rowSpan\", (startCell.attr(\"rowSpan\") === undefined)?2:(eval(startCell.attr(\"rowSpan\"))+1));\r\n\t\t\t\t//startCell.remove();   //注意区别\r\n                startCell.addClass(\"hidden-lg hidden-md hidden-sm hidden-xs\");\r\n                //console.log(startCell.text());\r\n\t\t\t}\r\n            \r\n\t\t}\r\n\t}\r\n    \r\n\r\n   \r\n} "
      },
      {
       "name": "postFetch",
@@ -683,7 +683,7 @@
      {
       "name": "preExecution",
       "type": "JavaScript",
-      "value": ""
+      "value": "function f(){\r\n    resizeGraphical(this);\r\n} "
      },
      {
       "name": "postExecution",
@@ -788,7 +788,7 @@
      {
       "name": "baseAxisGrid",
       "type": "Boolean",
-      "value": "false"
+      "value": false
      },
      {
       "name": "baseAxisLabelSpacingMin",
@@ -1623,7 +1623,7 @@
      {
       "name": "seriesInRows",
       "type": "Boolean",
-      "value": false
+      "value": "false"
      },
      {
       "name": "seriesRole",
@@ -1708,7 +1708,7 @@
      {
       "name": "timeSeries",
       "type": "Boolean",
-      "value": false
+      "value": "false"
      },
      {
       "name": "timeSeriesFormat",
@@ -1873,7 +1873,7 @@
      {
       "name": "valueFormat",
       "type": "JavaScript",
-      "value": ""
+      "value": "function f(value){\r\n    return sprintf(\"%.2f\", value)\r\n    }\r\n "
      },
      {
       "name": "valueRole",
@@ -1883,7 +1883,7 @@
      {
       "name": "valuesAnchor",
       "type": "cccValuesAnchorCustom",
-      "value": ""
+      "value": "top"
      },
      {
       "name": "valuesFont",
@@ -3178,7 +3178,7 @@
      {
       "name": "valueFormat",
       "type": "JavaScript",
-      "value": ""
+      "value": "function f(value){\r\n    return sprintf(\"%.2f\", value)\r\n    }\r\n "
      },
      {
       "name": "valueRole",
@@ -3188,7 +3188,7 @@
      {
       "name": "valuesAnchor",
       "type": "cccValuesAnchorCustom",
-      "value": ""
+      "value": "top"
      },
      {
       "name": "valuesFont",
@@ -4483,7 +4483,7 @@
      {
       "name": "valueFormat",
       "type": "JavaScript",
-      "value": ""
+      "value": "function f(value){\r\n    return sprintf(\"%.2f\", value)\r\n    }\r\n "
      },
      {
       "name": "valueRole",
@@ -4493,7 +4493,7 @@
      {
       "name": "valuesAnchor",
       "type": "cccValuesAnchorCustom",
-      "value": ""
+      "value": "top"
      },
      {
       "name": "valuesFont",
@@ -9096,7 +9096,7 @@
      {
       "name": "resourceCode",
       "type": "Resource",
-      "value": "html {\r\n    /*\r\n    overflow-y: scroll;  hidden\r\n    height: 100%;\r\n    overflow-y: scroll;\r\n    overflow-x: hidden;\r\n    */\r\n    \r\n}\r\nbody{\r\n    background-color:#ECF0F5;\r\n}\r\n.container {\r\n    width:100%;\r\n    height: 100%;\r\n    overflow: auto;\r\n    position: absolute; \r\n    padding-right: 0px;\r\n    padding-left: 10px;\r\n    padding-bottom: 10px;\r\n    margin-right: auto;\r\n    margin-left: auto;\r\n    /*\r\n    width : 98% !important;\r\n    \r\n    \r\n    position: absolute; \r\n    position: relative;\r\n    overflow-y:scroll; \r\n    overflow-x:scroll;\r\n    */\r\n    \r\n}\r\n/*   #   */\r\n.dashboard-stats {\r\n    float: left;\r\n    width: 25%;\r\n}\r\n.dashboard-stats-item {\r\n    position: relative;\r\n    overflow: hidden;\r\n    color: #fff;\r\n    cursor: pointer;\r\n    height: 105px;\r\n    margin-right: 10px;\r\n    margin-bottom: 10px;\r\n    padding-left: 15px;\r\n    padding-top: 20px;\r\n    background-color: #fff;\r\n}\r\n.dashboard-stats-item .m-top-none {\r\n    margin-top: 5px;\r\n}\r\n.dashboard-stats-item h2 {\r\n    font-size: 28px;\r\n    font-family: inherit;\r\n    line-height: 1.1;\r\n    font-weight: 500;\r\n    padding-left: 70px;\r\n}\r\n.dashboard-stats-item h2 span {\r\n    font-size: 12px;\r\n    padding-left: 5px;\r\n}\r\n.dashboard-stats-item h5 {\r\n    font-size: 12px;\r\n    font-family: inherit;\r\n    margin-top: 1px;\r\n    line-height: 1.1;\r\n    padding-left: 70px;\r\n}\r\n.dashboard-stats-item .stat-icon {\r\n    position: absolute;\r\n    top: 18px;\r\n    font-size: 50px;\r\n    opacity: .3;\r\n}\r\n.dashboard-stats i.fa.stats-icon {\r\n    width: 50px;\r\n    padding: 20px;\r\n    font-size: 50px;\r\n    text-align: center;\r\n    \r\n    color: #fff;\r\n    \r\n    height: 50px;\r\n    border-radius: 10px;\r\n} \r\n/*   #   */\r\n.panel-default {\r\n    border: none;\r\n    border-radius: 0px;\r\n    margin-bottom: 0px;\r\n    box-shadow: none;\r\n    -webkit-box-shadow: none;\r\n}\r\n.panel-default > .panel-heading {\r\n    color: #777;\r\n    background-color: #fff;\r\n    border-color: #e6e6e6;\r\n    padding: 10px 10px;\r\n}\r\n.panel-default > .panel-body {\r\n    padding: 10px;\r\n    padding-bottom: 0px;\r\n}\r\n.panel-default > .panel-body ul {\r\n    overflow: hidden;\r\n    padding: 0;\r\n    margin: 0px;\r\n    margin-top: -5px;\r\n}\r\n.panel-default > .panel-body ul li {\r\n    line-height: 27px;\r\n    list-style-type: none;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n}\r\n.panel-default > .panel-body ul li .time {\r\n    color: #a1a1a1;\r\n    float: right;\r\n    padding-right: 5px;\r\n} \r\n\r\n\r\n.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {\r\n    position: relative;\r\n    min-height: 1px;\r\n    padding-right: 10px;\r\n    padding-left: 0px;\r\n} \r\n.row {\r\n    margin-right: 0px;\r\n    margin-left: 0px;\r\n} \r\nhr {\r\n    margin-top: 10px; \r\n    margin-bottom: 0px; \r\n    border: 0;\r\n    border-top: 0px solid #eee; \r\n} \r\n#dateRangePickerDom > input {\r\n    height: 22px;\r\n    border-radius:4px;\r\n    cursor:pointer;\r\n    border:1px solid #DBDBDB;} "
+      "value": "html {\r\n    /*\r\n    overflow-y: scroll;  hidden\r\n    height: 100%;\r\n    overflow-y: scroll;\r\n    overflow-x: hidden;\r\n    */\r\n    \r\n}\r\nbody{\r\n    background-color:#ECF0F5;\r\n}\r\n.container {\r\n    width:100%;\r\n    height: 100%;\r\n    overflow: auto;\r\n    position: absolute; \r\n    padding-right: 0px;\r\n    padding-left: 10px;\r\n    padding-bottom: 10px;\r\n    margin-right: auto;\r\n    margin-left: auto;\r\n    /*\r\n    width : 98% !important;\r\n    \r\n    \r\n    position: absolute; \r\n    position: relative;\r\n    overflow-y:scroll; \r\n    overflow-x:scroll;\r\n    */\r\n    \r\n}\r\n/*   #   */\r\n.dashboard-stats {\r\n    float: left;\r\n    width: 25%;\r\n}\r\n.dashboard-stats-item {\r\n    position: relative;\r\n    overflow: hidden;\r\n    color: #fff;\r\n    cursor: pointer;\r\n    height: 105px;\r\n    margin-right: 10px;\r\n    margin-bottom: 10px;\r\n    padding-left: 15px;\r\n    padding-top: 20px;\r\n    background-color: #fff;\r\n}\r\n.dashboard-stats-item .m-top-none {\r\n    margin-top: 5px;\r\n}\r\n.dashboard-stats-item h2 {\r\n    font-size: 28px;\r\n    font-family: inherit;\r\n    line-height: 1.1;\r\n    font-weight: 500;\r\n    padding-left: 70px;\r\n}\r\n.dashboard-stats-item h2 span {\r\n    font-size: 12px;\r\n    padding-left: 5px;\r\n}\r\n.dashboard-stats-item h5 {\r\n    font-size: 12px;\r\n    font-family: inherit;\r\n    margin-top: 1px;\r\n    line-height: 1.1;\r\n    padding-left: 70px;\r\n}\r\n.dashboard-stats-item .stat-icon {\r\n    position: absolute;\r\n    top: 18px;\r\n    font-size: 50px;\r\n    opacity: .3;\r\n}\r\n.dashboard-stats i.fa.stats-icon {\r\n    width: 50px;\r\n    padding: 20px;\r\n    font-size: 50px;\r\n    text-align: center;\r\n    \r\n    color: #fff;\r\n    \r\n    height: 50px;\r\n    border-radius: 10px;\r\n} \r\n/*   #   */\r\n.panel-default {\r\n    border: none;\r\n    border-radius: 0px;\r\n    margin-bottom: 0px;\r\n    box-shadow: none;\r\n    -webkit-box-shadow: none;\r\n}\r\n.panel-default > .panel-heading {\r\n    color: #777;\r\n    background-color: #fff;\r\n    border-color: #e6e6e6;\r\n    padding: 10px 10px;\r\n}\r\n.panel-default > .panel-body {\r\n    padding: 10px;\r\n    padding-bottom: 0px;\r\n}\r\n.panel-default > .panel-body ul {\r\n    overflow: hidden;\r\n    padding: 0;\r\n    margin: 0px;\r\n    margin-top: -5px;\r\n}\r\n.panel-default > .panel-body ul li {\r\n    line-height: 27px;\r\n    list-style-type: none;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n}\r\n.panel-default > .panel-body ul li .time {\r\n    color: #a1a1a1;\r\n    float: right;\r\n    padding-right: 5px;\r\n} \r\n\r\n\r\n.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {\r\n    position: relative;\r\n    min-height: 1px;\r\n    padding-right: 10px;\r\n    padding-left: 0px;\r\n} \r\n.row {\r\n    margin-right: 0px;\r\n    margin-left: 0px;\r\n} \r\nhr {\r\n    margin-top: 10px; \r\n    margin-bottom: 0px; \r\n    border: 0;\r\n    border-top: 0px solid #eee; \r\n} \r\n#dateRangePickerDom > input {\r\n    height: 22px;\r\n    border-radius:4px;\r\n    cursor:pointer;\r\n    border:1px solid #DBDBDB;} \r\n    \r\n    \r\n    \r\n    \r\n/*******************************Table****************************/\r\n#row3_col{\r\n    height:500px;\r\n   overflow:auto; \r\n}\r\ntable,table tr th, table tr td {\r\n    border:2px solid #F8FAFB; \r\n    /*\r\n    #F8FAFB  #278DC5\r\n    */\r\n}\r\n\r\n \r\n    \r\n    \r\n    \r\n    \r\n\r\n    \r\n    \r\n    "
      },
      {
       "name": "resourceType",

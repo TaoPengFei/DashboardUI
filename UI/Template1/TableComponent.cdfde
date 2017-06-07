@@ -594,7 +594,7 @@
      {
       "name": "postExecution",
       "type": "JavaScript",
-      "value": "function() {\n    ($('#TableDomTable thead tr').clone()).insertBefore($('#TableDomTable thead tr'));\n    _.each($('#TableDomTable thead tr:nth-child(1) th'), function(elem, idx) {\n        //if (idx>0) {\n        if (idx>1) {    //用于控制clone的位置\n            if (((idx-1)%2)==0) {\n                $(elem).text($(elem).text().split('/')[0]).attr('colspan', 2);\n            } else {\n                $(elem).remove();\n            }    \n        } else {\n            $(elem).text('');\n        }\n    });\n    _.each($('#TableDomTable thead tr:nth-child(2) th'), function(elem) {\n        if ($(elem).text().split('/').length>1) {\n            $(elem).text($(elem).text().split('/')[1])\n        }    \n    });\n    \n    //_.each($('#TableDomTable tbody tr'), function(elem, idx) {\n        /*\n        //鼠标点击选择行时候变色\n        elem.onclick = function(){\n            //console.log('click...');\n            var oObj = window.event.srcElement;\n            console.log(this.tagName.toLowerCase());\n            console.log(oObj.tagName.toLowerCase());\n            console.log(document.all.TableDomTable.rows.length);\n            if(oObj.tagName.toLowerCase() == \"td\"){\n                var oTr = oObj.parentNode; \n                for( var i = 3; i < document.all.TableDomTable.rows.length; i++ ){\n                    document.all.TableDomTable.rows[i].style.backgroundColor   =   \"\";   \n    \t\t\t    document.all.TableDomTable.rows[i].tag = false\n                }\n                oTr.style.backgroundColor = \"#888888\";  \n                //oTr.style.color = \"#fff\";  \n    \t\t    oTr.tag = true;   \n            }\n        };\n        //鼠标点击另外一行时关闭已选行变色\n        \n        elem.onMouseOut = function(){\n            console.log('onMouseOut...');\n            //var oObj = event.srcElement;\n            var oObj = window.event.srcElement;\n            if(oObj.tagName.toLowerCase() == \"td\"){\n                var oTr = oObj.parentNode;\n                if(!oTr.tag){\n                    oTr.style.backgroundColor = \"#E1E9FD\";\n                }\n            }\n        };\n        */\n        //console.log(elem);\n        //console.log(idx);\n    //});\n    \n    \n    \n    \n    //可实现合并单元格,上下行来比较\n    var totalCols = $(\"#TableDomTable\").find(\"tr:eq(0)\").find(\"td\").length;\n    //console.log($('#TableDomTable tbody tr').find(\"td\").length);\n\tvar totalRows = $(\"#TableDomTable\").find(\"tr\").length;\n\t//for ( var i = totalCols-1; i >= 0; i--) {\n    for ( var i = 0; i >= 0; i--) {\n\t\tfor ( var j = totalRows-1; j >= 0; j--) {\n        //for ( var j = 0; j >= 0; j--) {\n\t\t\tstartCell = $(\"#TableDomTable\").find(\"tr\").eq(j).find(\"td\").eq(i);\n\t\t\ttargetCell = $(\"#TableDomTable\").find(\"tr\").eq(j - 1).find(\"td\").eq(i);\n            if (startCell.text() == targetCell.text() && targetCell.text() !== \"\") {\n\t\t\t\ttargetCell.attr(\"rowSpan\", (startCell.attr(\"rowSpan\") === undefined)?2:(eval(startCell.attr(\"rowSpan\"))+1));\n\t\t\t\t//startCell.remove();   //注意区别\n                startCell.addClass(\"hidden-lg hidden-md hidden-sm hidden-xs\");\n                //console.log(startCell.text());\n\t\t\t}\n            \n\t\t}\n\t}\n    \n    //,td:eq(1)\n    //$('#TableDomTable').addClass(\"itemList\");\n    /**\n     * @bestValueLine    最好值刻度线  绿色\n     * @mediumValueLine  中上值刻度线  蓝色\n     * @normalValueLine  正常值刻度线  白色\n     * @badValueLine     最差值刻度线  红色\n     */\n    $.fn.TableColorGuide = function(bestValueLine, mediumValueLine, badValueLine ){\n        //var bestValueLine = 500000;\n        //var mediumValueLine = 100000;\n        //var badValueLine = 1000;\n        $('#TableDomTable tbody').find('td').each(function(index, elem){\n            if(index > 1){\n                //console.log(elem);\n                //console.log(elem.innerHTML.__proto__);\n                //console.log(elem.innerHTML.replace(\",\",\"\"));\n                //console.log(parseFloat(elem.innerHTML.replace(\",\",\"\")));\n                //if(elem.innerHTML.replace(\",\",\"\") >= '100000.00'){\n                if( parseInt(elem.innerHTML.replace(\",\",\"\")) >= bestValueLine &&\n                    parseInt(elem.innerHTML.replace(\",\",\"\")) !== 0 && bestValueLine !== 0 ){\n                    $(this).css(\"background-color\",\"#40A276\")\n                           .css('-moz-border-radius','0px')\n                           .css('-webkit-border-radius','0px')\n                           .css('color','#ffffff');\n                } else if( parseInt(elem.innerHTML.replace(\",\",\"\")) < bestValueLine && \n                            parseInt(elem.innerHTML.replace(\",\",\"\")) >= mediumValueLine && \n                            parseInt(elem.innerHTML.replace(\",\",\"\")) !== 0 && mediumValueLine !== 0 ){\n                    $(this).css(\"background-color\",\"#1979CA\")\n                           .css('-moz-border-radius','0px')\n                           .css('-webkit-border-radius','0px')\n                           .css('color','#ffffff');\n                }else if(parseInt(elem.innerHTML.replace(\",\",\"\")) < badValueLine && \n                            parseInt(elem.innerHTML.replace(\",\",\"\")) !== 0 && badValueLine !== 0 ){\n                    $(this).css(\"background-color\",\"#EE4B4B\")\n                           .css('-moz-border-radius','0px')\n                           .css('-webkit-border-radius','0px')\n                           .css('color','#ffffff');\n                }//else if(bestValueLine === 0 && mediumValueLine === 0 && badValueLine === 0 ){\n                    \n                //}\n            }\n        });\n    }\n    $(function() {\n        $.fn.TableColorGuide(//500000,100000,1000\n            dashboard.getParameterValue(\"bestValueLineParam\"),\n            dashboard.getParameterValue(\"mediumValueLineParam\"),\n            dashboard.getParameterValue(\"badValueLineParam\")\n        );\n\t});\n    \n    $('#TableDomTable tbody tr').find(\"td:eq(0),td:eq(1)\")\n                                .css(\"background-color\", \"#F8FAFB\")\n                                .css(\"border\", \"1px solid #FFFFFF\")\n                                .css('color','#2779aa');\n\n\n\n\n\n\n\n\n\n\n\n\n   \n} "
+      "value": "function() {\n\n    /**\n     * 双表头的制作\n     */\n    ($('#TableDomTable thead tr').clone()).insertBefore($('#TableDomTable thead tr'));\n    _.each($('#TableDomTable thead tr:nth-child(1) th'), function(elem, idx) {\n        //if (idx>0) {\n        if (idx>1) {    //用于控制clone的位置\n            if (((idx-1)%2)==0) {\n                $(elem).text($(elem).text().split('/')[0]).attr('colspan', 2);\n            } else {\n                $(elem).remove();\n            }    \n        } else {\n            $(elem).text('');\n        }\n    });\n    _.each($('#TableDomTable thead tr:nth-child(2) th'), function(elem) {\n        if ($(elem).text().split('/').length>1) {\n            $(elem).text($(elem).text().split('/')[1])\n        }    \n    });\n    \n    //_.each($('#TableDomTable tbody tr'), function(elem, idx) {\n        /*\n        //鼠标点击选择行时候变色\n        elem.onclick = function(){\n            //console.log('click...');\n            var oObj = window.event.srcElement;\n            console.log(this.tagName.toLowerCase());\n            console.log(oObj.tagName.toLowerCase());\n            console.log(document.all.TableDomTable.rows.length);\n            if(oObj.tagName.toLowerCase() == \"td\"){\n                var oTr = oObj.parentNode; \n                for( var i = 3; i < document.all.TableDomTable.rows.length; i++ ){\n                    document.all.TableDomTable.rows[i].style.backgroundColor   =   \"\";   \n    \t\t\t    document.all.TableDomTable.rows[i].tag = false\n                }\n                oTr.style.backgroundColor = \"#888888\";  \n                //oTr.style.color = \"#fff\";  \n    \t\t    oTr.tag = true;   \n            }\n        };\n        //鼠标点击另外一行时关闭已选行变色\n        \n        elem.onMouseOut = function(){\n            console.log('onMouseOut...');\n            //var oObj = event.srcElement;\n            var oObj = window.event.srcElement;\n            if(oObj.tagName.toLowerCase() == \"td\"){\n                var oTr = oObj.parentNode;\n                if(!oTr.tag){\n                    oTr.style.backgroundColor = \"#E1E9FD\";\n                }\n            }\n        };\n        */\n        //console.log(elem);\n        //console.log(idx);\n    //});\n    \n    /**\n     * 可实现合并单元格,上下行来比较\n     */\n    var totalCols = $(\"#TableDomTable\").find(\"tr:eq(0)\").find(\"td\").length;\n    //console.log($('#TableDomTable tbody tr').find(\"td\").length);\n\tvar totalRows = $(\"#TableDomTable\").find(\"tr\").length;\n\t//for ( var i = totalCols-1; i >= 0; i--) {\n    for ( var i = 0; i >= 0; i--) {\n\t\tfor ( var j = totalRows-1; j >= 0; j--) {\n        //for ( var j = 0; j >= 0; j--) {\n\t\t\tstartCell = $(\"#TableDomTable\").find(\"tr\").eq(j).find(\"td\").eq(i);\n\t\t\ttargetCell = $(\"#TableDomTable\").find(\"tr\").eq(j - 1).find(\"td\").eq(i);\n            if (startCell.text() == targetCell.text() && targetCell.text() !== \"\") {\n\t\t\t\ttargetCell.attr(\"rowSpan\", (startCell.attr(\"rowSpan\") === undefined)?2:(eval(startCell.attr(\"rowSpan\"))+1));\n\t\t\t\t//startCell.remove();   //注意区别\n                startCell.addClass(\"hidden-lg hidden-md hidden-sm hidden-xs\");\n                //console.log(startCell.text());\n\t\t\t}\n            \n\t\t}\n\t}\n    \n    //,td:eq(1)\n    //$('#TableDomTable').addClass(\"itemList\");\n    /**\n     * @bestValueLine    最好值刻度线  绿色\n     * @mediumValueLine  中上值刻度线  蓝色\n     * @normalValueLine  正常值刻度线  白色\n     * @badValueLine     最差值刻度线  红色\n     */\n    $.fn.TableColorGuide = function(bestValueLine, mediumValueLine, badValueLine ){\n        //var bestValueLine = 500000;\n        //var mediumValueLine = 100000;\n        //var badValueLine = 1000;\n        $('#TableDomTable tbody').find('td').each(function(index, elem){\n            if(index > 1){\n                //console.log(elem);\n                //console.log(elem.innerHTML.__proto__);\n                //console.log(elem.innerHTML.replace(\",\",\"\"));\n                //console.log(parseFloat(elem.innerHTML.replace(\",\",\"\")));\n                //if(elem.innerHTML.replace(\",\",\"\") >= '100000.00'){\n                if( parseInt(elem.innerHTML.replace(\",\",\"\")) >= bestValueLine &&\n                    parseInt(elem.innerHTML.replace(\",\",\"\")) !== 0 && bestValueLine !== 0 ){\n                    $(this).css(\"background-color\",\"#40A276\")\n                           .css('-moz-border-radius','0px')\n                           .css('-webkit-border-radius','0px')\n                           .css('color','#ffffff');\n                } else if( parseInt(elem.innerHTML.replace(\",\",\"\")) < bestValueLine && \n                            parseInt(elem.innerHTML.replace(\",\",\"\")) >= mediumValueLine && \n                            parseInt(elem.innerHTML.replace(\",\",\"\")) !== 0 && mediumValueLine !== 0 ){\n                    $(this).css(\"background-color\",\"#1979CA\")\n                           .css('-moz-border-radius','0px')\n                           .css('-webkit-border-radius','0px')\n                           .css('color','#ffffff');\n                }else if(parseInt(elem.innerHTML.replace(\",\",\"\")) < badValueLine && \n                            parseInt(elem.innerHTML.replace(\",\",\"\")) !== 0 && badValueLine !== 0 ){\n                    $(this).css(\"background-color\",\"#EE4B4B\")\n                           .css('-moz-border-radius','0px')\n                           .css('-webkit-border-radius','0px')\n                           .css('color','#ffffff');\n                }//else if(bestValueLine === 0 && mediumValueLine === 0 && badValueLine === 0 ){\n                    \n                //}\n            }\n        });\n    }\n    $(function() {\n        $.fn.TableColorGuide(//500000,100000,1000\n            /*\n            dashboard.getParameterValue(\"bestValueLineParam\"),\n            dashboard.getParameterValue(\"mediumValueLineParam\"),\n            dashboard.getParameterValue(\"badValueLineParam\")\n            */\n            \n            Dashboards.getParameterValue(\"bestValueLineParam\"),\n            Dashboards.getParameterValue(\"mediumValueLineParam\"),\n            Dashboards.getParameterValue(\"badValueLineParam\")\n            \n        );\n\t});\n    \n    $('#TableDomTable tbody tr').find(\"td:eq(0),td:eq(1)\")\n                                .css(\"background-color\", \"#F8FAFB\")\n                                .css(\"border\", \"1px solid #FFFFFF\")\n                                .css('color','#2779aa');\n\n\n\n\n\n\n\n\n\n\n\n\n   \n} "
      },
      {
       "name": "postFetch",
@@ -731,7 +731,7 @@
      {
       "name": "javaScript",
       "type": "JavaScript",
-      "value": "/**\r\n * 解决CDE图形的自适应\r\n */\r\nfunction resizeGraphical(cdeObj){\r\n    var myself = cdeObj;\r\n    //设置初始宽度 与placeholder()匹配\r\n    myself.chartDefinition.width = myself.placeholder().width();\r\n    //仅在图表组件的第一个执行上附加调整处理程序\r\n    if( !cdeObj.resizeHandlerAttached ){\r\n        //确保渲染只在事件发生后被触发\r\n        var debouncedResize = _.debounce(function(){\r\n            //再次显示 图形\r\n            myself.placeholder().children().css('visibility','visible');\r\n            // 改变 图形 的 宽度\r\n            myself.chartDefinition.width = myself.placeholder().width();\r\n            myself.render( myself.query.lastResults() );\r\n        },200);\r\n        // 高度调整 处理\r\n        $(window).resize(function(){\r\n            //仅当容器已更改宽度时才触发调整大小\r\n            if( myself.chartDefinition.width != myself.placeholder().width() ){\r\n                //暂时隐藏图表，使溢出不会发生\r\n                myself.placeholder().children().css('visibility','hidden');\r\n                //触发与调整\r\n                debouncedResize();\r\n            }\r\n        });\r\n        cdeObj.resizeHandlerAttached = true;\r\n    }\r\n} \r\n\r\n\r\n "
+      "value": "/**\r\n * 加载Ecahrts图形\r\n */\r\n//window.onload = initEcahrts;\r\n\r\n(function($){\r\n    $(window).on(\"load\",function(){\r\n        initEcahrts();\r\n\t\t$(\"#row_table_col_panel_body\").mCustomScrollbar({\r\n\t\t\tautoHideScrollbar:true,\r\n            axis:\"yx\",\r\n            scrollButtons:{\r\n                enable:true //是否使用上下滚动按钮\r\n\t\t\t},\r\n            mouseWheelPixels:300,\r\n\t\t\ttheme:\"rounded\"\r\n            //theme:\"dark\"\r\n\t\t});\r\n        \r\n        \r\n        document.getElementsByTagName('container')[0].mCustomScrollbar({\r\n            autoHideScrollbar:true,\r\n            //axis:\"yx\",\r\n\t\t\ttheme:\"rounded\"\r\n\t\t});\r\n        console.log(document.getElementsByTagName('container')[0]);\r\n\t});\r\n})($);\r\n\r\n/**\r\n * 解决CDE图形的自适应\r\n */\r\nfunction resizeGraphical(cdeObj){\r\n    var myself = cdeObj;\r\n    //设置初始宽度 与placeholder()匹配\r\n    myself.chartDefinition.width = myself.placeholder().width();\r\n    //仅在图表组件的第一个执行上附加调整处理程序\r\n    if( !cdeObj.resizeHandlerAttached ){\r\n        //确保渲染只在事件发生后被触发\r\n        var debouncedResize = _.debounce(function(){\r\n            //再次显示 图形\r\n            myself.placeholder().children().css('visibility','visible');\r\n            // 改变 图形 的 宽度\r\n            myself.chartDefinition.width = myself.placeholder().width();\r\n            myself.render( myself.query.lastResults() );\r\n        },200);\r\n        // 高度调整 处理\r\n        $(window).resize(function(){\r\n            //仅当容器已更改宽度时才触发调整大小\r\n            if( myself.chartDefinition.width != myself.placeholder().width() ){\r\n                //暂时隐藏图表，使溢出不会发生\r\n                myself.placeholder().children().css('visibility','hidden');\r\n                //触发与调整\r\n                debouncedResize();\r\n            }\r\n        });\r\n        cdeObj.resizeHandlerAttached = true;\r\n    }\r\n} \r\n\r\n\r\n "
      }
     ],
     "rowName": "Function",
@@ -1167,6 +1167,198 @@
     "rowName": "TextInput Component",
     "type": "ComponentstextInput",
     "typeDesc": "Text input Component"
+   },
+   {
+    "id": "CHARTS",
+    "name": "Charts",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "type": "Label",
+      "value": "Charts"
+     }
+    ],
+    "type": "Label",
+    "typeDesc": "<i>Group</i>"
+   },
+   {
+    "id": "211d9ea3-170b-b41c-6d5d-1ab316e3d7c1",
+    "meta_cdwSupport": "true",
+    "parent": "CHARTS",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "colors",
+      "type": "Array",
+      "value": "[]"
+     },
+     {
+      "name": "intervals",
+      "type": "Array",
+      "value": "[]"
+     },
+     {
+      "name": "parameter",
+      "type": "Parameter",
+      "value": ""
+     },
+     {
+      "name": "listeners",
+      "type": "Listeners",
+      "value": "[]"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "priority",
+      "type": "Integer",
+      "value": 5
+     },
+     {
+      "name": "width",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "htmlObject",
+      "type": "HtmlObject",
+      "value": ""
+     },
+     {
+      "name": "executeAtStart",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "preExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postExecution",
+      "type": "JavaScript",
+      "value": ""
+     }
+    ],
+    "rowName": "CGG Dial Component",
+    "type": "ComponentscggDial",
+    "typeDesc": "CGG Dial Chart"
+   },
+   {
+    "id": "CUSTOMCOMPONENTS",
+    "name": "Custom",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "type": "Label",
+      "value": "Custom"
+     }
+    ],
+    "type": "Label",
+    "typeDesc": "<i>Group</i>"
+   },
+   {
+    "id": "78d8ea4d-3176-042c-152a-9407f51f0bb0",
+    "parent": "CUSTOMCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "url",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "listeners",
+      "type": "Listeners",
+      "value": "[]"
+     },
+     {
+      "name": "parameters",
+      "type": "ValuesArray",
+      "value": "[]"
+     },
+     {
+      "name": "resultvar",
+      "type": "Result",
+      "value": ""
+     },
+     {
+      "name": "priority",
+      "type": "Integer",
+      "value": 5
+     },
+     {
+      "name": "refreshPeriod",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "ajaxRequestType",
+      "type": "ajaxRequestTypeCustom",
+      "value": "json"
+     },
+     {
+      "name": "htmlObject",
+      "type": "HtmlObject",
+      "value": ""
+     },
+     {
+      "name": "asyncCall",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "executeAtStart",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "preExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postFetch",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "preChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "tooltip",
+      "type": "Html",
+      "value": ""
+     }
+    ],
+    "rowName": "AjaxRequestComponent",
+    "type": "ComponentsAjaxRequestComponent",
+    "typeDesc": "AjaxRequestComponent"
    }
   ]
  },
@@ -1185,6 +1377,150 @@
     ],
     "type": "Label",
     "typeDesc": "<i>Group</i>"
+   },
+   {
+    "id": "0fab82e4-7ceb-fcc7-d032-f17f993afd92",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "GaugeEchartsQuery_new"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "SELECT\r\n    -1,\r\n    case when sum(`fact_sumday`.`BudgetSaleAmt`) = 0 then 100\r\n         when sum(`fact_sumday`.`BudgetSaleAmt`) = null then 100\r\n    else format(sum(`fact_sumday`.`SaleAmt`)/sum(`fact_sumday`.`BudgetSaleAmt`)*100,2) end AS peleterate\r\nFROM\r\n     `fact_sumday` INNER JOIN `dim_outlet` ON `fact_sumday`.`OutletId_t` = `dim_outlet`.`OutletId_t`\r\n     INNER JOIN `dim_bidate` ON `fact_sumday`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n     INNER JOIN `dim_place` ON `fact_sumday`.`PlaceId` = `dim_place`.`PlaceId`\r\n     INNER JOIN `dim_area` ON `fact_sumday`.`AreaId` = `dim_area`.`AreaId`\r\n     INNER JOIN `dim_brand` ON `dim_outlet`.`BrandId` = `dim_brand`.`BrandId`\r\n"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "20d07de3-3d3d-487a-5160-f5782279bce0",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "GaugeEchartsQuery"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "SELECT 1, 14.45;"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
    },
    {
     "id": "11a1465c-ab13-ae60-37b6-411eac5fee30",
@@ -1264,6 +1600,75 @@
  "layout": {
   "rows": [
    {
+    "id": "039be076-e410-3ad6-f403-18b79ddc1da8",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "Echarts"
+     },
+     {
+      "name": "resourceFile",
+      "type": "ResourceFile",
+      "value": "${solution:../js/Echarts3.6.0/echarts.min.js}"
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Javascript"
+     }
+    ],
+    "type": "LayoutResourceFile",
+    "typeDesc": "Resource"
+   },
+   {
+    "id": "5694b0e0-da47-a667-48ef-44c1c539629e",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "mCustomScrollbarCSS"
+     },
+     {
+      "name": "resourceFile",
+      "type": "ResourceFile",
+      "value": "${solution:../css/jQuery/jquery.mCustomScrollbar.min.css}"
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Css"
+     }
+    ],
+    "type": "LayoutResourceFile",
+    "typeDesc": "Resource"
+   },
+   {
+    "id": "f3afcbdb-3276-18de-2c2b-5d537f244bba",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "mCustomScrollbarJS"
+     },
+     {
+      "name": "resourceFile",
+      "type": "ResourceFile",
+      "value": "${solution:../js/jQuery/jquery.mCustomScrollbar.concat.min.js}"
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Javascript"
+     }
+    ],
+    "type": "LayoutResourceFile",
+    "typeDesc": "Resource"
+   },
+   {
     "id": "af7407e0-b3c6-2f49-1892-d9262e37575f",
     "parent": "UnIqEiD",
     "properties": [
@@ -1275,7 +1680,7 @@
      {
       "name": "resourceCode",
       "type": "Resource",
-      "value": "@font-face{\r\n    font-family: TPF_Font_Thin;\r\n    src: url('/pentaho/BI/fonts/Comfortaa_Thin.ttf'),\r\n         url('/pentaho/BI/fonts/Comfortaa_Thin.eot');  /* IE9 */ \r\n}\r\nbody{\r\n    \r\n    background-color:#ECF0F5;\r\n    /*\r\n    background-color:#FFFFFF;  #ECF0F5\r\n    */\r\n    font-size: 10px;\r\n    font-family: 'TPF_Font_Thin';\r\n}\r\n.container {\r\n    width:100%;\r\n    height: 100%;\r\n    overflow: auto;\r\n    position: absolute; \r\n    padding-top: 10px;\r\n    padding-right: 0px;\r\n    padding-left: 10px;\r\n    padding-bottom: 10px;\r\n    margin-right: auto;\r\n    margin-left: auto;\r\n}\r\n/*   #   */\r\n.panel-default {\r\n    border: none;\r\n    border-radius: 0px;\r\n    margin-bottom: 0px;\r\n    box-shadow: none;\r\n    -webkit-box-shadow: none;\r\n}\r\n.panel-heading {\r\n    /*\r\n    padding: 10px 15px;\r\n    */\r\n    padding: 0px 0px;\r\n    border-bottom: 0px solid transparent;\r\n    border-top-left-radius: 3px;\r\n    border-top-right-radius: 3px;\r\n}\r\n.panel-default > .panel-heading {\r\n    color: #777;\r\n    background-color: #fff;\r\n    border-color: #e6e6e6;\r\n    padding: 10px 10px;\r\n}\r\n.panel-default > .panel-body {\r\n    padding: 10px;\r\n    padding-bottom: 0px;\r\n}\r\n.panel-default > .panel-body ul {\r\n    overflow: hidden;\r\n    padding: 0;\r\n    margin: 0px;\r\n    margin-top: -5px;\r\n}\r\n.panel-default > .panel-body ul li {\r\n    line-height: 27px;\r\n    list-style-type: none;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n}\r\n.panel-default > .panel-body ul li .time {\r\n    color: #a1a1a1;\r\n    float: right;\r\n    padding-right: 5px;\r\n} \r\n.single {\r\n    cursor: pointer;\r\n    border: 1px solid #eee;\r\n    border-radius: 0px;\r\n    text-align: center;\r\n    \r\n    padding: 10px;\r\n    padding-top: 10px;\r\n    padding-right: 10px;\r\n    margin-bottom: 10px;\r\n    \r\n} \r\n\r\n .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, \r\n .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, \r\n .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, \r\n .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, \r\n .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, \r\n .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, \r\n .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, \r\n .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, \r\n .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, \r\n .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, \r\n .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, \r\n .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {\r\n    position: relative;\r\n    min-height: 1px;\r\n    padding-right: 10px;\r\n    padding-left: 0px;\r\n} \r\n.row {\r\n    margin-right: 0px;\r\n    margin-left: 0px;\r\n} \r\n\r\nhr {\r\n    margin-top: 10px; \r\n    margin-bottom: 0px; \r\n    border: 0;\r\n    border-top: 0px solid #eee; \r\n} \r\n\r\n/**************************浮动**************************/\r\n.floatPanel {\r\n    cursor: pointer;\r\n    border: 1px solid #eee;\r\n    border-radius: 0px;\r\n    \r\n    /*\r\n    text-align: center;\r\n    padding: 10px;\r\n    padding-top: 10px;\r\n    padding-right: 10px;\r\n    margin-bottom: 10px;\r\n    */\r\n} \r\n.floatPanel:hover, .single.selected:hover {\r\n    -webkit-box-shadow: 0px 0px 35px -8px rgba(0,0,0,0.5);\r\n    -moz-box-shadow: 0px 0px 35px -8px rgba(0,0,0,0.5);\r\n    box-shadow: 0px 0px 35px -8px rgba(0,0,0,0.5);\r\n    \r\n    /*\r\n    border: 1px solid #49AEC0;\r\n    border: 1px solid #49AEC0;\r\n    background-color: rgba(240, 240, 240, 0.8);  rgba(0,0,0,0.5);\r\n    */\r\n}\r\n.floatPanel.selected {\r\n    background-color: rgba(240, 240, 240, 0.4);\r\n}\r\n \r\n/* ================ TABLE ================ */\r\ntable,table tr th, table tr td {\r\n    border:1px solid #F8FAFB; \r\n    /*\r\n    #F8FAFB  #278DC5\r\n    */\r\n}\r\n\r\ntable.table.dataTable {\r\n    /*\r\n    margin-top: 18px;\r\n    */\r\n    border: none;\r\n}\r\n\r\ntable.table.dataTable thead {\r\n    /*\r\n    display: none;\r\n    */\r\n    background-color: #F8FAFB;\r\n    /*\r\n    border: none;\r\n    */\r\n    border: 1px solid #efefef;\r\n}\r\n\r\n\r\ntable.table.dataTable tbody tr {\r\n    background-color: white;\r\n    /*\r\n    border: none;\r\n    */\r\n    border: 1px solid #efefef;\r\n}\r\n\r\ntable.table.dataTable tbody tr td {\r\n    border: none;\r\n    background-color: white;\r\n    padding: 4px;\r\n    line-height: 22px;\r\n}\r\n\r\ntable.table.dataTable tbody tr td.column2 {\r\n    font-size: 16px;\r\n}\r\n\r\n.salesByProduct {\r\n    margin-top: 20px;\r\n}\r\n\r\n.dataTables_wrapper .dataTables_filter input {\r\n    margin-left: 0.5em;\r\n    border: 1px solid #efefef;\r\n    padding: 5px;\r\n    margin: 10px;\r\n}\r\n\r\n.dataTables_wrapper .dataTables_length, \r\n.dataTables_wrapper .dataTables_filter, \r\n.dataTables_wrapper .dataTables_info, \r\n.dataTables_wrapper .dataTables_processing, \r\n.dataTables_wrapper .dataTables_paginate {\r\n    color: #333333;\r\n    width: 100%;\r\n    background-color: #F8FAFB;\r\n    padding: 4px;\r\n    border-bottom: 2px solid white;\r\n}\r\n\r\ntable.dataTable.compact thead th, \r\ntable.dataTable.compact thead td {\r\n    padding: 5px 9px;\r\n    background-color: #F8FAFB;\r\n    border: 2px solid white;\r\n}\r\n\r\ntable.tableComponent td.numeric {\r\n    font-family: 'Open Sans';\r\n    font-size: 12px;\r\n    vertical-align: middle;\r\n}\r\n\r\n\r\n\r\ntable .trend {\r\n    position: relative;\r\n\r\n}\r\n\r\ntable .trend:after {\r\n    position: absolute;\r\n    background: none;\r\n    font: normal normal normal 20px/1 FontAwesome;\r\n    top: -5px;\r\n    left: -3px;\r\n}\r\n\r\ntable .trend.down.good {\r\n    background: none;\r\n}\r\n\r\ntable .trend.down.good:after {\r\n    content: \"\\f0ab\";\r\n    color: red;\r\n}\r\n\r\ntable .trend.up.good {\r\n    background: none;\r\n}\r\n\r\ntable .trend.up.good:after {\r\n    content: \"\\f0aa\";\r\n    color: green;\r\n}\r\n\r\ntable .trend.neutral.good {\r\n    background: none;\r\n}\r\n\r\ntable .trend.neutral.good:after {\r\n    content: \"\\f0a9\";\r\n    color: #ccc;\r\n} \r\n\r\n.dataTables_wrapper .ui-toolbar {\r\n    padding: 0px;\r\n} \r\n.dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {\r\n    color: #333333;\r\n    width: 100%;\r\n    /* background-color: #F8FAFB; */\r\n    /* padding: 4px; */\r\n    /* border-bottom: 2px solid white; */\r\n}\r\n.dataTables_wrapper .dataTables_paginate {\r\n    float: right;\r\n    text-align: right;\r\n    /* padding-top: 0.25em; */\r\n} \r\n.ui-widget-header {\r\n    border: 0px solid #aed0ea;\r\n    background: #F8FAFB url(images/ui-bg_highlight-soft_100_deedf7_1x100.png) 50% 50% repeat-x; \r\n    /*\r\n    color: #222222;\r\n    */\r\n    color: #2779AA;\r\n    font-weight: bold;\r\n} \r\n.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {\r\n    border: 1px solid #aed0ea;\r\n    background: #F8FAFB url(images/ui-bg_glass_80_d7ebf9_1x400.png) 50% 50% repeat-x;\r\n    font-weight: bold;\r\n    color: #2779aa;\r\n}\r\n#TableDomTable_length{\r\n    color: #333333;\r\n    /* background-color: #F8FAFB; */\r\n    /* padding: 4px; */\r\n    /* border-bottom: 2px solid white; */\r\n    width:125px;\r\n}\r\n#TableDomTable_filter{\r\n    color: #333333;\r\n    background-color: #F8FAFB;\r\n    padding: 4px;\r\n    border-bottom: 2px solid white;\r\n    width:280px;height:35px;\r\n} \r\n.dataTables_wrapper .dataTables_filter input {\r\n    margin-left: 0em; \r\n    border: 1px solid #efefef;\r\n    padding: 0px; \r\n    margin: 0px; \r\n} \r\n#TableDomTable_info{\r\n    width: 50%;\r\n} \r\n#TableDomTable_paginate{\r\n    width: 20%;\r\n} \r\n.dataTables_wrapper .dataTables_paginate{\r\n    color: #333333;\r\n    width: 100%;\r\n    background-color: #F8FAFB;\r\n    padding: 0px;\r\n    border-bottom: 0px solid white;\r\n} \r\n\r\n.dataTables_wrapper .dataTables_info{\r\n    color: #2779AA;\r\n    width: 100%;\r\n    background-color: #F8FAFB;\r\n    padding: 4px;\r\n    border-bottom: 0px solid white; \r\n}\r\n.dataTables_wrapper .dataTables_length{\r\n    color: #333333;\r\n    width: 100%;\r\n    background-color: #F8FAFB;\r\n    padding: 4px;\r\n    border-bottom: 0px solid white;\r\n}\r\n\r\ntbody tr:hover td,tbody tr.over td{\r\n    background-color:#888888;\r\n    color:#fff;\r\n}\r\n\r\n.groupHeader.group0 {\r\n    background: #F8FAFB;\r\n}\r\n\r\n/*************************指标卡 ****************************/\r\n.td_class{\r\n    background-color: red;   \r\n}\r\n\r\n/*******************************************************/\r\n#row_table_col_panel_body{\r\n    height:400px;\r\n   overflow:auto; \r\n}\r\n\r\n    .itemList\r\n\t{\r\n\t\tborder: solid 1px #cccccc;\r\n\t\toverflow: hidden;\r\n\t\twidth: 100%;\r\n\t\tborder-collapse: collapse;\r\n\t}\r\n\t.itemList td\r\n\t{\r\n\t\tpadding: 0px 0px 0px 0px;\r\n\t\tcolor: #444444;\r\n\t\tborder: solid 1px #cccccc;\r\n\t\ttext-align: center;\r\n\t\tline-height: 20px;\r\n\t}\r\n \r\n /*********************************************************/\r\n input, button, select, textarea {\r\n    font-family: 'TPF_Font_Thin'; \r\n    font-size: 10px; \r\n    line-height: 10px; \r\n    border-radius: 5px;\r\n    border:1px solid #DBDBDB ;\r\n} "
+      "value": "@font-face{\r\n    font-family: TPF_Font_Thin;\r\n    src: url('/pentaho/BI/fonts/Comfortaa_Thin.ttf'),\r\n         url('/pentaho/BI/fonts/Comfortaa_Thin.eot');  /* IE9 */ \r\n}\r\nbody{\r\n    \r\n    background-color:#ECF0F5;\r\n    /*\r\n    background-color:#FFFFFF;  #ECF0F5\r\n    */\r\n    font-size: 10px;\r\n    font-family: 'TPF_Font_Thin';\r\n    \r\n}\r\n\r\n.container {\r\n    width:100%;\r\n    height: 100%;\r\n    overflow: auto;\r\n    position: absolute; \r\n    padding-top: 10px;\r\n    padding-right: 0px;\r\n    padding-left: 10px;\r\n    padding-bottom: 10px;\r\n    margin-right: auto;\r\n    margin-left: auto;\r\n}\r\n\r\n/*   #   */\r\n.panel-default {\r\n    border: none;\r\n    border-radius: 0px;\r\n    margin-bottom: 0px;\r\n    box-shadow: none;\r\n    -webkit-box-shadow: none;\r\n}\r\n.panel-heading {\r\n    /*\r\n    padding: 10px 15px;\r\n    */\r\n    padding: 0px 0px;\r\n    border-bottom: 0px solid transparent;\r\n    border-top-left-radius: 3px;\r\n    border-top-right-radius: 3px;\r\n}\r\n.panel-default > .panel-heading {\r\n    color: #777;\r\n    background-color: #fff;\r\n    border-color: #e6e6e6;\r\n    padding: 10px 10px;\r\n}\r\n.panel-default > .panel-body {\r\n    padding: 10px;\r\n    padding-bottom: 0px;\r\n}\r\n.panel-default > .panel-body ul {\r\n    overflow: hidden;\r\n    padding: 0;\r\n    margin: 0px;\r\n    margin-top: -5px;\r\n}\r\n.panel-default > .panel-body ul li {\r\n    line-height: 27px;\r\n    list-style-type: none;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n}\r\n.panel-default > .panel-body ul li .time {\r\n    color: #a1a1a1;\r\n    float: right;\r\n    padding-right: 5px;\r\n} \r\n.single {\r\n    cursor: pointer;\r\n    border: 1px solid #eee;\r\n    border-radius: 0px;\r\n    text-align: center;\r\n    \r\n    padding: 10px;\r\n    padding-top: 10px;\r\n    padding-right: 10px;\r\n    margin-bottom: 10px;\r\n    \r\n} \r\n\r\n .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, \r\n .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, \r\n .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, \r\n .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, \r\n .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, \r\n .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, \r\n .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, \r\n .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, \r\n .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, \r\n .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, \r\n .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, \r\n .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {\r\n    position: relative;\r\n    min-height: 1px;\r\n    padding-right: 10px;\r\n    padding-left: 0px;\r\n} \r\n.row {\r\n    margin-right: 0px;\r\n    margin-left: 0px;\r\n} \r\n\r\nhr {\r\n    margin-top: 10px; \r\n    margin-bottom: 0px; \r\n    border: 0;\r\n    border-top: 0px solid #eee; \r\n} \r\n\r\n/**************************浮动**************************/\r\n.floatPanel {\r\n    cursor: pointer;\r\n    border: 1px solid #eee;\r\n    border-radius: 0px;\r\n    \r\n    /*\r\n    text-align: center;\r\n    padding: 10px;\r\n    padding-top: 10px;\r\n    padding-right: 10px;\r\n    margin-bottom: 10px;\r\n    */\r\n} \r\n.floatPanel:hover, .single.selected:hover {\r\n    -webkit-box-shadow: 0px 0px 35px -8px rgba(0,0,0,0.5);\r\n    -moz-box-shadow: 0px 0px 35px -8px rgba(0,0,0,0.5);\r\n    box-shadow: 0px 0px 35px -8px rgba(0,0,0,0.5);\r\n    \r\n    /*\r\n    border: 1px solid #49AEC0;\r\n    border: 1px solid #49AEC0;\r\n    background-color: rgba(240, 240, 240, 0.8);  rgba(0,0,0,0.5);\r\n    */\r\n}\r\n.floatPanel.selected {\r\n    background-color: rgba(240, 240, 240, 0.4);\r\n}\r\n \r\n/* ================ TABLE ================ */\r\ntable,table tr th, table tr td {\r\n    border:1px solid #F8FAFB; \r\n    /*\r\n    #F8FAFB  #278DC5\r\n    */\r\n}\r\n\r\ntable.table.dataTable {\r\n    /*\r\n    margin-top: 18px;\r\n    */\r\n    border: none;\r\n}\r\n\r\ntable.table.dataTable thead {\r\n    /*\r\n    display: none;\r\n    */\r\n    background-color: #F8FAFB;\r\n    /*\r\n    border: none;\r\n    */\r\n    border: 1px solid #efefef;\r\n}\r\n\r\n\r\ntable.table.dataTable tbody tr {\r\n    background-color: white;\r\n    /*\r\n    border: none;\r\n    */\r\n    border: 1px solid #efefef;\r\n}\r\n\r\ntable.table.dataTable tbody tr td {\r\n    border: none;\r\n    background-color: white;\r\n    padding: 4px;\r\n    line-height: 22px;\r\n}\r\n\r\ntable.table.dataTable tbody tr td.column2 {\r\n    font-size: 16px;\r\n}\r\n\r\n.salesByProduct {\r\n    margin-top: 20px;\r\n}\r\n\r\n.dataTables_wrapper .dataTables_filter input {\r\n    margin-left: 0.5em;\r\n    border: 1px solid #efefef;\r\n    padding: 5px;\r\n    margin: 10px;\r\n}\r\n\r\n.dataTables_wrapper .dataTables_length, \r\n.dataTables_wrapper .dataTables_filter, \r\n.dataTables_wrapper .dataTables_info, \r\n.dataTables_wrapper .dataTables_processing, \r\n.dataTables_wrapper .dataTables_paginate {\r\n    color: #333333;\r\n    width: 100%;\r\n    background-color: #F8FAFB;\r\n    padding: 4px;\r\n    border-bottom: 2px solid white;\r\n}\r\n\r\ntable.dataTable.compact thead th, \r\ntable.dataTable.compact thead td {\r\n    padding: 5px 9px;\r\n    background-color: #F8FAFB;\r\n    border: 2px solid white;\r\n}\r\n\r\ntable.tableComponent td.numeric {\r\n    font-family: 'Open Sans';\r\n    font-size: 12px;\r\n    vertical-align: middle;\r\n}\r\n\r\n\r\n\r\ntable .trend {\r\n    position: relative;\r\n\r\n}\r\n\r\ntable .trend:after {\r\n    position: absolute;\r\n    background: none;\r\n    font: normal normal normal 20px/1 FontAwesome;\r\n    top: -5px;\r\n    left: -3px;\r\n}\r\n\r\ntable .trend.down.good {\r\n    background: none;\r\n}\r\n\r\ntable .trend.down.good:after {\r\n    content: \"\\f0ab\";\r\n    color: red;\r\n}\r\n\r\ntable .trend.up.good {\r\n    background: none;\r\n}\r\n\r\ntable .trend.up.good:after {\r\n    content: \"\\f0aa\";\r\n    color: green;\r\n}\r\n\r\ntable .trend.neutral.good {\r\n    background: none;\r\n}\r\n\r\ntable .trend.neutral.good:after {\r\n    content: \"\\f0a9\";\r\n    color: #ccc;\r\n} \r\n\r\n.dataTables_wrapper .ui-toolbar {\r\n    padding: 0px;\r\n} \r\n.dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {\r\n    color: #333333;\r\n    width: 100%;\r\n    /* background-color: #F8FAFB; */\r\n    /* padding: 4px; */\r\n    /* border-bottom: 2px solid white; */\r\n}\r\n.dataTables_wrapper .dataTables_paginate {\r\n    float: right;\r\n    text-align: right;\r\n    /* padding-top: 0.25em; */\r\n} \r\n.ui-widget-header {\r\n    border: 0px solid #aed0ea;\r\n    background: #F8FAFB url(images/ui-bg_highlight-soft_100_deedf7_1x100.png) 50% 50% repeat-x; \r\n    /*\r\n    color: #222222;\r\n    */\r\n    color: #2779AA;\r\n    font-weight: bold;\r\n} \r\n.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {\r\n    border: 1px solid #aed0ea;\r\n    background: #F8FAFB url(images/ui-bg_glass_80_d7ebf9_1x400.png) 50% 50% repeat-x;\r\n    font-weight: bold;\r\n    color: #2779aa;\r\n}\r\n#TableDomTable_length{\r\n    color: #333333;\r\n    /* background-color: #F8FAFB; */\r\n    /* padding: 4px; */\r\n    /* border-bottom: 2px solid white; */\r\n    width:125px;\r\n}\r\n#TableDomTable_filter{\r\n    color: #333333;\r\n    background-color: #F8FAFB;\r\n    padding: 4px;\r\n    border-bottom: 2px solid white;\r\n    width:280px;height:35px;\r\n} \r\n.dataTables_wrapper .dataTables_filter input {\r\n    margin-left: 0em; \r\n    border: 1px solid #efefef;\r\n    padding: 0px; \r\n    margin: 0px; \r\n} \r\n#TableDomTable_info{\r\n    width: 50%;\r\n} \r\n#TableDomTable_paginate{\r\n    width: 20%;\r\n} \r\n.dataTables_wrapper .dataTables_paginate{\r\n    color: #333333;\r\n    width: 100%;\r\n    background-color: #F8FAFB;\r\n    padding: 0px;\r\n    border-bottom: 0px solid white;\r\n} \r\n\r\n.dataTables_wrapper .dataTables_info{\r\n    color: #2779AA;\r\n    width: 100%;\r\n    background-color: #F8FAFB;\r\n    padding: 4px;\r\n    border-bottom: 0px solid white; \r\n}\r\n.dataTables_wrapper .dataTables_length{\r\n    color: #333333;\r\n    width: 100%;\r\n    background-color: #F8FAFB;\r\n    padding: 4px;\r\n    border-bottom: 0px solid white;\r\n}\r\n\r\ntbody tr:hover td,tbody tr.over td{\r\n    background-color:#888888;\r\n    color:#fff;\r\n}\r\n\r\n.groupHeader.group0 {\r\n    background: #F8FAFB;\r\n}\r\n\r\n/*************************指标卡 ****************************/\r\n.td_class{\r\n    background-color: red;   \r\n}\r\n\r\n/*******************************************************/\r\n#row_table_col_panel_body{\r\n    height:400px;\r\n   overflow:auto; \r\n}\r\n \r\n /*********************************************************/\r\n input, button, select, textarea {\r\n    font-family: 'TPF_Font_Thin'; \r\n    font-size: 10px; \r\n    line-height: 10px; \r\n    border-radius: 5px;\r\n    border:1px solid #DBDBDB ;\r\n} \r\n\r\n/**************************CustomScrollbar************************************/\r\n.mCS-rounded.mCSB_scrollTools .mCSB_draggerRail {\r\n    background-color: #C1C1C1;\r\n} "
      },
      {
       "name": "resourceType",
@@ -1566,6 +1971,437 @@
     "typeDesc": "Space"
    },
    {
+    "id": "13b18f50-f23f-a1f2-e36e-ba3eb37ea73f",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "echarts_row1"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutRow",
+    "typeDesc": "Row"
+   },
+   {
+    "id": "8c17cc8f-5353-f4b3-b733-b602dc6c618a",
+    "parent": "13b18f50-f23f-a1f2-e36e-ba3eb37ea73f",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "echarts_row1_col1"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "a9b937e3-2259-aa67-8b4c-8d29090f34c9",
+    "parent": "8c17cc8f-5353-f4b3-b733-b602dc6c618a",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "echarts_row1_col1_panel"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": "400"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "floatPanel"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "type": "bootstrapPanelStyleCustom",
+      "value": "panel-default"
+     }
+    ],
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel"
+   },
+   {
+    "id": "23e7e148-029f-6e77-cafb-c3700ef71d5b",
+    "parent": "a9b937e3-2259-aa67-8b4c-8d29090f34c9",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "echarts_row1_col1_panel_header"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelHeader",
+    "typeDesc": "Panel Header"
+   },
+   {
+    "id": "9aef75cb-8523-4a9f-dff8-6fe3d95f219b",
+    "parent": "23e7e148-029f-6e77-cafb-c3700ef71d5b",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "echarts_row1_col1_panel_header_html"
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-dashboard\"></i> CGG Dial Component\r\n</div> "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "e95a75ed-0c11-3c6f-6021-6d78d2063481",
+    "parent": "a9b937e3-2259-aa67-8b4c-8d29090f34c9",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "echarts_row1_col1_panel_body"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body"
+   },
+   {
+    "id": "c7d80fbe-da17-29ec-d05e-615cd72e6f97",
+    "parent": "e95a75ed-0c11-3c6f-6021-6d78d2063481",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "echarts_row1_col1_panel_body_html"
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "<div id='completemain' style='height: 350px'></div>\n<script type=\"text/javascript\">\n    function initEcahrts(){\n        let readJSONFile = function(url){\n            let jsonData;\n            $.ajax({\n            \ttype : 'get',\n    \t\t\turl : url,\n    \t\t\tasync : false,\n    \t\t\tdataType : 'json',\n    \t\t\tdata : null,\n    \t\t\tsuccess : function(response){\n    \t\t\t\tjsonData = response;\n    \t\t\t\t//alert(jsonData);\n    \t\t\t}\n    \t\t})\n    \t\treturn jsonData;\n    \t};\n        \n        let url_gauge = \"/pentaho/plugin/cda/api/doQuery?path=/public/UI/Template1/TableComponent.cda&dataAccessId=GaugeEchartsQuery\";\n        let getFirstGaugeJSON = readJSONFile(url_gauge).resultset;\n        //alert(getFirstGaugeJSON);\n        //console.log(getFirstGaugeJSON );\n        //console.log('*******************************');\n        let myChart = echarts.init(document.getElementById('completemain'));\n        let FirstGaugeDataEncapsulation = (function(){\n            let data = function(){\n                let tempArr = [];\n                for(let i = 0; i < getFirstGaugeJSON.length; i++){\n                    tempArr.push({\n                \t\t'name' : getFirstGaugeJSON[i][0],\n                        'value': getFirstGaugeJSON[i][1],\n                        selected : true\n        \t\t\t})\n                }\n                return tempArr;\n                //alert(tempArr);\n            };\n            return {\n                getDatas : function(){\n                    return data()\n                }\n            }\n            \n        })();\n        let ShowFirstGaugeEcharts = function(){\n            // 基于准备好的dom，初始化echarts实例\n            // 指定图表的配置项和数据\n            myChart.setOption({\n                title: {\n                    text: '', //标题文本内容\n                },\n                toolbox: { //可视化的工具箱\n                    show: true,\n                    feature: {\n                       /* restore: { //重置\n                            show: true\n                        },\n                        saveAsImage: {//保存图片\n                            show: true\n                        }*/\n                    }\n                },\n                tooltip: { //弹窗组件\n                    formatter: \"{a} <br/>{b} : {c}%\"\n                },\n                series: [{\n                    name: '营业额完成情况',\n                    type: 'gauge',\n                    detail: {formatter: '{value}%',\n                            offsetCenter:[0,'65%'],\n                                textStyle: {       \n                                   fontSize: 20\n                                }\n                            },\n                           \n                    data:[\n                        {name:'完成率',\n                        value:FirstGaugeDataEncapsulation.getDatas()[0].value}\n                    ]\n                }]\n            });\n        }();\n        window.addEventListener(\"resize\",function(){\n            myChart.resize();\n        });\n    }\n</script> "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "931357f6-9ecf-afd2-f08d-3a2a0ec3fe7d",
+    "parent": "13b18f50-f23f-a1f2-e36e-ba3eb37ea73f",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "dba38bdd-8e94-3114-326b-94bb43b38bd1",
+    "parent": "931357f6-9ecf-afd2-f08d-3a2a0ec3fe7d",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": "400"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "floatPanel"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "type": "bootstrapPanelStyleCustom",
+      "value": "panel-default"
+     }
+    ],
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel"
+   },
+   {
+    "id": "6e53dbe5-7311-ba59-da19-172c40022c86",
+    "parent": "dba38bdd-8e94-3114-326b-94bb43b38bd1",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelHeader",
+    "typeDesc": "Panel Header"
+   },
+   {
+    "id": "b6497122-1649-6be4-8d6b-635a042d3883",
+    "parent": "dba38bdd-8e94-3114-326b-94bb43b38bd1",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body"
+   },
+   {
+    "id": "233f5b07-0eb4-76e5-3227-0a4f3834b539",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutSpace",
+    "typeDesc": "Space"
+   },
+   {
     "id": "a444be32-93c7-6dde-358c-29bd80c9105d",
     "parent": "UnIqEiD",
     "properties": [
@@ -1678,7 +2514,7 @@
      {
       "name": "height",
       "type": "Integer",
-      "value": "450"
+      "value": "460"
      },
      {
       "name": "roundCorners",
@@ -1820,6 +2656,523 @@
     ],
     "type": "LayoutHtml",
     "typeDesc": "Html"
+   },
+   {
+    "id": "a6b8583b-3c01-7556-fbd9-1bed3b0b7715",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutSpace",
+    "typeDesc": "Space"
+   },
+   {
+    "id": "5efc0ad8-c4a7-4590-3682-660ee168ded7",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutRow",
+    "typeDesc": "Row"
+   },
+   {
+    "id": "9c3cabaf-c7ba-fc88-2dfc-317034107366",
+    "parent": "5efc0ad8-c4a7-4590-3682-660ee168ded7",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": "4"
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": "4"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "a4b94ff0-0e88-4739-e167-07acdb56fea0",
+    "parent": "9c3cabaf-c7ba-fc88-2dfc-317034107366",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": "400"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "floatPanel"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "type": "bootstrapPanelStyleCustom",
+      "value": "panel-default"
+     }
+    ],
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel"
+   },
+   {
+    "id": "35214896-3a1b-f67d-4eea-7b5c3a112181",
+    "parent": "a4b94ff0-0e88-4739-e167-07acdb56fea0",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelHeader",
+    "typeDesc": "Panel Header"
+   },
+   {
+    "id": "852f5aef-ea1f-eb17-b4d3-70b845b1c749",
+    "parent": "a4b94ff0-0e88-4739-e167-07acdb56fea0",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body"
+   },
+   {
+    "id": "e49a3ad0-bc82-1583-0ad3-483f7e5ca34b",
+    "parent": "5efc0ad8-c4a7-4590-3682-660ee168ded7",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": "4"
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": "4"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "5a94ba8f-f33f-df4b-8b8e-333cfbae9a3a",
+    "parent": "e49a3ad0-bc82-1583-0ad3-483f7e5ca34b",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": "400"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "floatPanel"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "type": "bootstrapPanelStyleCustom",
+      "value": "panel-default"
+     }
+    ],
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel"
+   },
+   {
+    "id": "5b38f199-ed7a-80b5-6093-dd3413f73a77",
+    "parent": "5a94ba8f-f33f-df4b-8b8e-333cfbae9a3a",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelHeader",
+    "typeDesc": "Panel Header"
+   },
+   {
+    "id": "2da91a49-f65d-c7c4-3fdf-b7384ceb4638",
+    "parent": "5a94ba8f-f33f-df4b-8b8e-333cfbae9a3a",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body"
+   },
+   {
+    "id": "e15f902b-2251-c93f-117a-6e62d7d78f2f",
+    "parent": "5efc0ad8-c4a7-4590-3682-660ee168ded7",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": "4"
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": "4"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "27070492-4e6b-2bfb-9979-fa09993e695d",
+    "parent": "e15f902b-2251-c93f-117a-6e62d7d78f2f",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": "400"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "floatPanel"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "type": "bootstrapPanelStyleCustom",
+      "value": "panel-default"
+     }
+    ],
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel"
+   },
+   {
+    "id": "4ec771bf-0914-452c-2f94-271c73ac8587",
+    "parent": "27070492-4e6b-2bfb-9979-fa09993e695d",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelHeader",
+    "typeDesc": "Panel Header"
+   },
+   {
+    "id": "8b7cc95b-5d3b-2cde-5dbe-aae24ba3ad21",
+    "parent": "27070492-4e6b-2bfb-9979-fa09993e695d",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body"
    }
   ],
   "title": "CDF - Sample structure"

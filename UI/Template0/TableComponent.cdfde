@@ -1,0 +1,532 @@
+{
+ "components": {
+  "rows": [
+   {
+    "id": "SCRIPT",
+    "name": "Scripts",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "Scripts",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "7150e5e0-9ea8-ba04-dbe6-1be8140b043e",
+    "type": "ComponentsFunction",
+    "typeDesc": "JavaScript function",
+    "parent": "SCRIPT",
+    "properties": [
+     {
+      "name": "name",
+      "value": "JS",
+      "type": "Id"
+     },
+     {
+      "name": "javaScript",
+      "value": "window.onload = initEcahrts; ",
+      "type": "JavaScript"
+     }
+    ],
+    "rowName": "Function"
+   }
+  ]
+ },
+ "datasources": {
+  "rows": [
+   {
+    "id": "SQL",
+    "name": "SQL Queries",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "type": "Label",
+      "value": "SQL Queries"
+     }
+    ],
+    "type": "Label",
+    "typeDesc": "<i>Group</i>"
+   },
+   {
+    "id": "0fab82e4-7ceb-fcc7-d032-f17f993afd92",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "GaugeEchartsQuery_old"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "SELECT\r\n    -1,\r\n    case when sum(`fact_sumday`.`BudgetSaleAmt`) = 0 then 100\r\n         when sum(`fact_sumday`.`BudgetSaleAmt`) = null then 100\r\n    else format(sum(`fact_sumday`.`SaleAmt`)/sum(`fact_sumday`.`BudgetSaleAmt`)*100,2) end AS peleterate\r\nFROM\r\n     `fact_sumday` INNER JOIN `dim_outlet` ON `fact_sumday`.`OutletId_t` = `dim_outlet`.`OutletId_t`\r\n     INNER JOIN `dim_bidate` ON `fact_sumday`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n     INNER JOIN `dim_place` ON `fact_sumday`.`PlaceId` = `dim_place`.`PlaceId`\r\n     INNER JOIN `dim_area` ON `fact_sumday`.`AreaId` = `dim_area`.`AreaId`\r\n     INNER JOIN `dim_brand` ON `dim_outlet`.`BrandId` = `dim_brand`.`BrandId`\r\n"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "20d07de3-3d3d-487a-5160-f5782279bce0",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "GaugeEchartsQuery"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "SELECT 1, 14.45;"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   }
+  ]
+ },
+ "filename": "/public/UI/Template0/TableComponent.cdfde",
+ "layout": {
+  "rows": [
+   {
+    "id": "039be076-e410-3ad6-f403-18b79ddc1da8",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "Echarts"
+     },
+     {
+      "name": "resourceFile",
+      "type": "ResourceFile",
+      "value": "${solution:../js/Echarts3.6.0/echarts.min.js}"
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Javascript"
+     }
+    ],
+    "type": "LayoutResourceFile",
+    "typeDesc": "Resource"
+   },
+   {
+    "id": "af7407e0-b3c6-2f49-1892-d9262e37575f",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "CSS"
+     },
+     {
+      "name": "resourceCode",
+      "type": "Resource",
+      "value": "body{\r\n    \r\n    background-color:#ECF0F5;\r\n    /*\r\n    background-color:#FFFFFF;  #ECF0F5\r\n    */\r\n    font-size: 10px;\r\n    font-family: 'TPF_Font_Thin';\r\n    \r\n}\r\n\r\n.container {\r\n    width:100%;\r\n    height: 100%;\r\n    overflow: auto;\r\n    position: absolute; \r\n    padding-top: 10px;\r\n    padding-right: 0px;\r\n    padding-left: 10px;\r\n    padding-bottom: 10px;\r\n    margin-right: auto;\r\n    margin-left: auto;\r\n}\r\n\r\n/*   #   */\r\n.panel-default {\r\n    border: none;\r\n    border-radius: 0px;\r\n    margin-bottom: 0px;\r\n    box-shadow: none;\r\n    -webkit-box-shadow: none;\r\n}\r\n.panel-heading {\r\n    /*\r\n    padding: 10px 15px;\r\n    */\r\n    padding: 0px 0px;\r\n    border-bottom: 0px solid transparent;\r\n    border-top-left-radius: 3px;\r\n    border-top-right-radius: 3px;\r\n}\r\n.panel-default > .panel-heading {\r\n    color: #777;\r\n    background-color: #fff;\r\n    border-color: #e6e6e6;\r\n    padding: 10px 10px;\r\n}\r\n.panel-default > .panel-body {\r\n    padding: 10px;\r\n    padding-bottom: 0px;\r\n}\r\n.panel-default > .panel-body ul {\r\n    overflow: hidden;\r\n    padding: 0;\r\n    margin: 0px;\r\n    margin-top: -5px;\r\n}\r\n.panel-default > .panel-body ul li {\r\n    line-height: 27px;\r\n    list-style-type: none;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n}\r\n.panel-default > .panel-body ul li .time {\r\n    color: #a1a1a1;\r\n    float: right;\r\n    padding-right: 5px;\r\n} \r\n.single {\r\n    cursor: pointer;\r\n    border: 1px solid #eee;\r\n    border-radius: 0px;\r\n    text-align: center;\r\n    \r\n    padding: 10px;\r\n    padding-top: 10px;\r\n    padding-right: 10px;\r\n    margin-bottom: 10px;\r\n    \r\n} \r\n\r\n .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, \r\n .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, \r\n .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, \r\n .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, \r\n .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, \r\n .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, \r\n .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, \r\n .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, \r\n .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, \r\n .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, \r\n .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, \r\n .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {\r\n    position: relative;\r\n    min-height: 1px;\r\n    padding-right: 10px;\r\n    padding-left: 0px;\r\n} \r\n.row {\r\n    margin-right: 0px;\r\n    margin-left: 0px;\r\n} \r\n\r\nhr {\r\n    margin-top: 10px; \r\n    margin-bottom: 0px; \r\n    border: 0;\r\n    border-top: 0px solid #eee; \r\n} \r\n\r\n\r\n "
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Css"
+     }
+    ],
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource"
+   },
+   {
+    "id": "13b18f50-f23f-a1f2-e36e-ba3eb37ea73f",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "echarts_row1"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutRow",
+    "typeDesc": "Row"
+   },
+   {
+    "id": "8c17cc8f-5353-f4b3-b733-b602dc6c618a",
+    "parent": "13b18f50-f23f-a1f2-e36e-ba3eb37ea73f",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "echarts_row1_col1"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "a9b937e3-2259-aa67-8b4c-8d29090f34c9",
+    "parent": "8c17cc8f-5353-f4b3-b733-b602dc6c618a",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "echarts_row1_col1_panel"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": "400"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "floatPanel"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "type": "bootstrapPanelStyleCustom",
+      "value": "panel-default"
+     }
+    ],
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel"
+   },
+   {
+    "id": "23e7e148-029f-6e77-cafb-c3700ef71d5b",
+    "parent": "a9b937e3-2259-aa67-8b4c-8d29090f34c9",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "echarts_row1_col1_panel_header"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelHeader",
+    "typeDesc": "Panel Header"
+   },
+   {
+    "id": "9aef75cb-8523-4a9f-dff8-6fe3d95f219b",
+    "parent": "23e7e148-029f-6e77-cafb-c3700ef71d5b",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "echarts_row1_col1_panel_header_html"
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-dashboard\"></i> CGG Dial Component\r\n</div> "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "e95a75ed-0c11-3c6f-6021-6d78d2063481",
+    "parent": "a9b937e3-2259-aa67-8b4c-8d29090f34c9",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "echarts_row1_col1_panel_body"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body"
+   },
+   {
+    "id": "c7d80fbe-da17-29ec-d05e-615cd72e6f97",
+    "parent": "e95a75ed-0c11-3c6f-6021-6d78d2063481",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "echarts_row1_col1_panel_body_html"
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "<div id='completemain' style='height: 350px'></div>\n<script type=\"text/javascript\">\n    function initEcahrts(){\n        let readJSONFile = function(url){\n            let jsonData;\n            $.ajax({\n            \ttype : 'get',\n    \t\t\turl : url,\n    \t\t\tasync : false,\n    \t\t\tdataType : 'json',\n    \t\t\tdata : null,\n    \t\t\tsuccess : function(response){\n    \t\t\t\tjsonData = response;\n    \t\t\t\t//alert(jsonData);\n    \t\t\t}\n    \t\t})\n    \t\treturn jsonData;\n    \t};\n        \n        let url_gauge = \"/pentaho/plugin/cda/api/doQuery?path=/public/UI/Template0/TableComponent.cda&dataAccessId=GaugeEchartsQuery\";\n        let getFirstGaugeJSON = readJSONFile(url_gauge).resultset;\n        //alert(getFirstGaugeJSON);\n        //console.log(getFirstGaugeJSON );\n        //console.log('*******************************');\n        let myChart = echarts.init(document.getElementById('completemain'));\n        let FirstGaugeDataEncapsulation = (function(){\n            let data = function(){\n                let tempArr = [];\n                for(let i = 0; i < getFirstGaugeJSON.length; i++){\n                    tempArr.push({\n                \t\t'name' : getFirstGaugeJSON[i][0],\n                        'value': getFirstGaugeJSON[i][1],\n                        selected : true\n        \t\t\t})\n                }\n                return tempArr;\n                //alert(tempArr);\n            };\n            return {\n                getDatas : function(){\n                    return data()\n                }\n            }\n            \n        })();\n        let ShowFirstGaugeEcharts = function(){\n            // 基于准备好的dom，初始化echarts实例\n            // 指定图表的配置项和数据\n            myChart.setOption({\n                title: {\n                    text: '', //标题文本内容\n                },\n                toolbox: { //可视化的工具箱\n                    show: true,\n                    feature: {\n                       /* restore: { //重置\n                            show: true\n                        },\n                        saveAsImage: {//保存图片\n                            show: true\n                        }*/\n                    }\n                },\n                tooltip: { //弹窗组件\n                    formatter: \"{a} <br/>{b} : {c}%\"\n                },\n                series: [{\n                    name: '营业额完成情况',\n                    type: 'gauge',\n                    detail: {formatter: '{value}%',\n                            offsetCenter:[0,'65%'],\n                                textStyle: {       \n                                   fontSize: 20\n                                }\n                            },\n                           \n                    data:[\n                        {name:'完成率',\n                        value:FirstGaugeDataEncapsulation.getDatas()[0].value}\n                    ]\n                }]\n            });\n        }();\n        window.addEventListener(\"resize\",function(){\n            myChart.resize();\n        });\n    }\n</script> "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "233f5b07-0eb4-76e5-3227-0a4f3834b539",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutSpace",
+    "typeDesc": "Space"
+   }
+  ],
+  "title": "CDF - Sample structure"
+ }
+}

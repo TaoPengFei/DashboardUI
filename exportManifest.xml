@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:ExportManifest xmlns:ns2="http://www.pentaho.com/schema/">
-    <ExportManifestInformation exportDate="06-06-2017 04:35:02 CST" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
+    <ExportManifestInformation exportDate="07-06-2017 11:58:01 GMT+08:00" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
     <ExportManifestEntity path="UI">
         <ExportManifestProperty>
-            <EntityMetaData name="UI" createdDate="2017-05-04T16:22:05.302+08:00" isFolder="true" path="UI" isHidden="false" locale="zh_CN" title="UI"/>
+            <EntityMetaData name="UI" createdDate="2017-06-06T23:15:18.346+08:00" isFolder="true" path="UI" isHidden="false" locale="en_US" title="UI"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -15,7 +15,43 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template0">
         <ExportManifestProperty>
-            <EntityMetaData name="Template0" createdDate="2017-05-27T16:44:20.761+08:00" isFolder="true" path="UI/Template0" isHidden="false" locale="zh_CN" title="Template0"/>
+            <EntityMetaData name="Template0" createdDate="2017-06-06T23:15:18.424+08:00" isFolder="true" path="UI/Template0" isHidden="false" locale="en_US" title="Template0"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/Template0/TableComponent.cda">
+        <ExportManifestProperty>
+            <EntityMetaData name="TableComponent.cda" createdDate="2017-06-07T11:42:31.449+08:00" isFolder="false" path="UI/Template0/TableComponent.cda" isHidden="false" locale="en_US" title="TableComponent"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/Template0/TableComponent.cdfde">
+        <ExportManifestProperty>
+            <EntityMetaData name="TableComponent.cdfde" createdDate="2017-06-07T11:42:31.516+08:00" isFolder="false" path="UI/Template0/TableComponent.cdfde" isHidden="false" locale="en_US" title="TableComponent"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/Template0/TableComponent.wcdf">
+        <ExportManifestProperty>
+            <EntityMetaData name="TableComponent.wcdf" createdDate="2017-06-07T11:42:31.585+08:00" isFolder="false" path="UI/Template0/TableComponent.wcdf" isHidden="false" locale="en_US" title="TableComponent"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -27,7 +63,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template0/Template0.cdfde">
         <ExportManifestProperty>
-            <EntityMetaData name="Template0.cdfde" createdDate="2017-05-27T17:32:02.687+08:00" isFolder="false" path="UI/Template0/Template0.cdfde" isHidden="false" locale="zh_CN" title="Template0.cdfde"/>
+            <EntityMetaData name="Template0.cdfde" createdDate="2017-06-06T23:15:18.510+08:00" isFolder="false" path="UI/Template0/Template0.cdfde" isHidden="false" locale="en_US" title="Template0"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -39,7 +75,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template0/Template0.wcdf">
         <ExportManifestProperty>
-            <EntityMetaData name="Template0.wcdf" createdDate="2017-05-27T17:32:02.602+08:00" isFolder="false" path="UI/Template0/Template0.wcdf" isHidden="false" locale="zh_CN" description="Template0" title="UI模板"/>
+            <EntityMetaData name="Template0.wcdf" createdDate="2017-06-06T23:15:19.136+08:00" isFolder="false" path="UI/Template0/Template0.wcdf" isHidden="false" locale="en_US" title="Template0"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -51,7 +87,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template0/TemplateComponent.cda">
         <ExportManifestProperty>
-            <EntityMetaData name="TemplateComponent.cda" createdDate="2017-06-06T16:21:09.969+08:00" isFolder="false" path="UI/Template0/TemplateComponent.cda" isHidden="false" locale="zh_CN" title="TemplateComponent"/>
+            <EntityMetaData name="TemplateComponent.cda" createdDate="2017-06-06T23:15:18.706+08:00" isFolder="false" path="UI/Template0/TemplateComponent.cda" isHidden="false" locale="en_US" title="TemplateComponent"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -63,7 +99,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template0/TemplateComponent.cdfde">
         <ExportManifestProperty>
-            <EntityMetaData name="TemplateComponent.cdfde" createdDate="2017-06-06T16:21:10.090+08:00" isFolder="false" path="UI/Template0/TemplateComponent.cdfde" isHidden="false" locale="zh_CN" title="TemplateComponent"/>
+            <EntityMetaData name="TemplateComponent.cdfde" createdDate="2017-06-06T23:15:18.865+08:00" isFolder="false" path="UI/Template0/TemplateComponent.cdfde" isHidden="false" locale="en_US" title="TemplateComponent"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -75,7 +111,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template0/TemplateComponent.wcdf">
         <ExportManifestProperty>
-            <EntityMetaData name="TemplateComponent.wcdf" createdDate="2017-06-06T16:21:10.232+08:00" isFolder="false" path="UI/Template0/TemplateComponent.wcdf" isHidden="false" locale="zh_CN" title="TemplateComponent"/>
+            <EntityMetaData name="TemplateComponent.wcdf" createdDate="2017-06-06T23:15:19.011+08:00" isFolder="false" path="UI/Template0/TemplateComponent.wcdf" isHidden="false" locale="en_US" title="TemplateComponent"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -87,7 +123,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template1">
         <ExportManifestProperty>
-            <EntityMetaData name="Template1" createdDate="2017-05-04T16:23:02.794+08:00" isFolder="true" path="UI/Template1" isHidden="false" locale="zh_CN" title="Template1"/>
+            <EntityMetaData name="Template1" createdDate="2017-06-06T23:15:19.239+08:00" isFolder="true" path="UI/Template1" isHidden="false" locale="en_US" title="Template1"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -99,7 +135,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template1/TableComponent.cda">
         <ExportManifestProperty>
-            <EntityMetaData name="TableComponent.cda" createdDate="2017-06-01T13:39:18.333+08:00" isFolder="false" path="UI/Template1/TableComponent.cda" isHidden="false" locale="zh_CN" title="TableComponent.cda"/>
+            <EntityMetaData name="TableComponent.cda" createdDate="2017-06-06T23:15:19.302+08:00" isFolder="false" path="UI/Template1/TableComponent.cda" isHidden="false" locale="en_US" title="TableComponent"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -111,7 +147,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template1/TableComponent.cdfde">
         <ExportManifestProperty>
-            <EntityMetaData name="TableComponent.cdfde" createdDate="2017-06-01T13:38:30.605+08:00" isFolder="false" path="UI/Template1/TableComponent.cdfde" isHidden="false" locale="zh_CN" title="TableComponent.cdfde"/>
+            <EntityMetaData name="TableComponent.cdfde" createdDate="2017-06-06T23:15:19.401+08:00" isFolder="false" path="UI/Template1/TableComponent.cdfde" isHidden="false" locale="en_US" title="TableComponent"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -123,43 +159,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template1/TableComponent.wcdf">
         <ExportManifestProperty>
-            <EntityMetaData name="TableComponent.wcdf" createdDate="2017-06-01T13:38:30.498+08:00" isFolder="false" path="UI/Template1/TableComponent.wcdf" isHidden="false" locale="zh_CN" description="TableComponent" title="交叉表格"/>
-        </ExportManifestProperty>
-        <ExportManifestProperty>
-            <EntityAcl>
-                <entriesInheriting>true</entriesInheriting>
-                <owner>admin</owner>
-                <ownerType>USER</ownerType>
-            </EntityAcl>
-        </ExportManifestProperty>
-    </ExportManifestEntity>
-    <ExportManifestEntity path="UI/Template1/TableComponent_tmp.cda">
-        <ExportManifestProperty>
-            <EntityMetaData name="TableComponent_tmp.cda" createdDate="2017-06-06T14:17:14.207+08:00" isFolder="false" path="UI/Template1/TableComponent_tmp.cda" isHidden="false" locale="zh_CN" title="TableComponent_tmp.cda"/>
-        </ExportManifestProperty>
-        <ExportManifestProperty>
-            <EntityAcl>
-                <entriesInheriting>true</entriesInheriting>
-                <owner>admin</owner>
-                <ownerType>USER</ownerType>
-            </EntityAcl>
-        </ExportManifestProperty>
-    </ExportManifestEntity>
-    <ExportManifestEntity path="UI/Template1/TableComponent_tmp.cdfde">
-        <ExportManifestProperty>
-            <EntityMetaData name="TableComponent_tmp.cdfde" createdDate="2017-06-06T14:17:14.064+08:00" isFolder="false" path="UI/Template1/TableComponent_tmp.cdfde" isHidden="false" locale="zh_CN" title="TableComponent_tmp.cdfde"/>
-        </ExportManifestProperty>
-        <ExportManifestProperty>
-            <EntityAcl>
-                <entriesInheriting>true</entriesInheriting>
-                <owner>admin</owner>
-                <ownerType>USER</ownerType>
-            </EntityAcl>
-        </ExportManifestProperty>
-    </ExportManifestEntity>
-    <ExportManifestEntity path="UI/Template1/TableComponent_tmp.wcdf">
-        <ExportManifestProperty>
-            <EntityMetaData name="TableComponent_tmp.wcdf" createdDate="2017-06-06T14:17:13.974+08:00" isFolder="false" path="UI/Template1/TableComponent_tmp.wcdf" isHidden="false" locale="zh_CN" title="TableComponent_tmp.wcdf"/>
+            <EntityMetaData name="TableComponent.wcdf" createdDate="2017-06-06T23:15:21.369+08:00" isFolder="false" path="UI/Template1/TableComponent.wcdf" isHidden="false" locale="en_US" title="TableComponent"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -171,7 +171,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template1/TemplateComponent.cda">
         <ExportManifestProperty>
-            <EntityMetaData name="TemplateComponent.cda" createdDate="2017-05-25T16:37:05.606+08:00" isFolder="false" path="UI/Template1/TemplateComponent.cda" isHidden="false" locale="zh_CN" title="TemplateComponent"/>
+            <EntityMetaData name="TemplateComponent.cda" createdDate="2017-06-06T23:15:19.575+08:00" isFolder="false" path="UI/Template1/TemplateComponent.cda" isHidden="false" locale="en_US" title="TemplateComponent"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -183,7 +183,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template1/TemplateComponent.cdfde">
         <ExportManifestProperty>
-            <EntityMetaData name="TemplateComponent.cdfde" createdDate="2017-05-25T16:37:05.678+08:00" isFolder="false" path="UI/Template1/TemplateComponent.cdfde" isHidden="false" locale="zh_CN" title="TemplateComponent"/>
+            <EntityMetaData name="TemplateComponent.cdfde" createdDate="2017-06-06T23:15:19.980+08:00" isFolder="false" path="UI/Template1/TemplateComponent.cdfde" isHidden="false" locale="en_US" title="TemplateComponent"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -195,7 +195,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template1/TemplateComponent.wcdf">
         <ExportManifestProperty>
-            <EntityMetaData name="TemplateComponent.wcdf" createdDate="2017-05-25T16:37:05.756+08:00" isFolder="false" path="UI/Template1/TemplateComponent.wcdf" isHidden="false" locale="zh_CN" title="TemplateComponent"/>
+            <EntityMetaData name="TemplateComponent.wcdf" createdDate="2017-06-06T23:15:20.168+08:00" isFolder="false" path="UI/Template1/TemplateComponent.wcdf" isHidden="false" locale="en_US" title="TemplateComponent"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -207,7 +207,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template1/messages.properties">
         <ExportManifestProperty>
-            <EntityMetaData name="messages.properties" createdDate="2017-05-25T09:42:49.178+08:00" isFolder="false" path="UI/Template1/messages.properties" isHidden="true" locale="zh_CN" title="messages"/>
+            <EntityMetaData name="messages.properties" createdDate="2017-06-06T23:15:20.368+08:00" isFolder="false" path="UI/Template1/messages.properties" isHidden="true" locale="en_US" title="messages"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -219,7 +219,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template1/messages_en.properties">
         <ExportManifestProperty>
-            <EntityMetaData name="messages_en.properties" createdDate="2017-05-25T09:43:05.447+08:00" isFolder="false" path="UI/Template1/messages_en.properties" isHidden="true" locale="zh_CN" title="messages_en"/>
+            <EntityMetaData name="messages_en.properties" createdDate="2017-06-06T23:15:20.556+08:00" isFolder="false" path="UI/Template1/messages_en.properties" isHidden="true" locale="en_US" title="messages_en"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -231,7 +231,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template1/messages_pt.properties">
         <ExportManifestProperty>
-            <EntityMetaData name="messages_pt.properties" createdDate="2017-05-25T09:43:30.975+08:00" isFolder="false" path="UI/Template1/messages_pt.properties" isHidden="true" locale="zh_CN" title="messages_pt"/>
+            <EntityMetaData name="messages_pt.properties" createdDate="2017-06-06T23:15:20.813+08:00" isFolder="false" path="UI/Template1/messages_pt.properties" isHidden="true" locale="en_US" title="messages_pt"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -243,7 +243,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template1/messages_supported_languages.properties">
         <ExportManifestProperty>
-            <EntityMetaData name="messages_supported_languages.properties" createdDate="2017-05-25T09:40:49.841+08:00" isFolder="false" path="UI/Template1/messages_supported_languages.properties" isHidden="true" locale="zh_CN" title="messages_supported_languages"/>
+            <EntityMetaData name="messages_supported_languages.properties" createdDate="2017-06-06T23:15:20.951+08:00" isFolder="false" path="UI/Template1/messages_supported_languages.properties" isHidden="true" locale="en_US" title="messages_supported_languages"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -255,7 +255,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template1/messages_zh.properties">
         <ExportManifestProperty>
-            <EntityMetaData name="messages_zh.properties" createdDate="2017-05-25T09:43:47.630+08:00" isFolder="false" path="UI/Template1/messages_zh.properties" isHidden="true" locale="zh_CN" title="messages_zh"/>
+            <EntityMetaData name="messages_zh.properties" createdDate="2017-06-06T23:15:21.189+08:00" isFolder="false" path="UI/Template1/messages_zh.properties" isHidden="true" locale="en_US" title="messages_zh"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -267,7 +267,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template2">
         <ExportManifestProperty>
-            <EntityMetaData name="Template2" createdDate="2017-05-04T17:56:31.331+08:00" isFolder="true" path="UI/Template2" isHidden="false" locale="zh_CN" title="Template2"/>
+            <EntityMetaData name="Template2" createdDate="2017-06-06T23:15:21.543+08:00" isFolder="true" path="UI/Template2" isHidden="false" locale="en_US" title="Template2"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -279,7 +279,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template2/Template2.cdfde">
         <ExportManifestProperty>
-            <EntityMetaData name="Template2.cdfde" createdDate="2017-05-04T17:56:58.993+08:00" isFolder="false" path="UI/Template2/Template2.cdfde" isHidden="false" locale="zh_CN" title="Template2.cdfde"/>
+            <EntityMetaData name="Template2.cdfde" createdDate="2017-06-06T23:15:21.820+08:00" isFolder="false" path="UI/Template2/Template2.cdfde" isHidden="false" locale="en_US" title="Template2"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -291,7 +291,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template2/Template2.wcdf">
         <ExportManifestProperty>
-            <EntityMetaData name="Template2.wcdf" createdDate="2017-05-04T17:56:58.895+08:00" isFolder="false" path="UI/Template2/Template2.wcdf" isHidden="false" locale="zh_CN" description="Template1" title="Template2"/>
+            <EntityMetaData name="Template2.wcdf" createdDate="2017-06-06T23:15:21.688+08:00" isFolder="false" path="UI/Template2/Template2.wcdf" isHidden="false" locale="en_US" title="Template2"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -303,7 +303,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template2/TestTemplate.cda">
         <ExportManifestProperty>
-            <EntityMetaData name="TestTemplate.cda" createdDate="2017-05-24T10:26:37.319+08:00" isFolder="false" path="UI/Template2/TestTemplate.cda" isHidden="false" locale="zh_CN" title="TestTemplate.cda"/>
+            <EntityMetaData name="TestTemplate.cda" createdDate="2017-06-06T23:15:21.999+08:00" isFolder="false" path="UI/Template2/TestTemplate.cda" isHidden="false" locale="en_US" title="TestTemplate"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -315,7 +315,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template2/TestTemplate.cdfde">
         <ExportManifestProperty>
-            <EntityMetaData name="TestTemplate.cdfde" createdDate="2017-05-24T10:23:35.455+08:00" isFolder="false" path="UI/Template2/TestTemplate.cdfde" isHidden="false" locale="zh_CN" title="TestTemplate.cdfde"/>
+            <EntityMetaData name="TestTemplate.cdfde" createdDate="2017-06-06T23:15:22.148+08:00" isFolder="false" path="UI/Template2/TestTemplate.cdfde" isHidden="false" locale="en_US" title="TestTemplate"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -327,7 +327,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template2/TestTemplate.wcdf">
         <ExportManifestProperty>
-            <EntityMetaData name="TestTemplate.wcdf" createdDate="2017-05-24T10:23:35.362+08:00" isFolder="false" path="UI/Template2/TestTemplate.wcdf" isHidden="false" locale="zh_CN" description="TestTemplate" title="TestTemplate"/>
+            <EntityMetaData name="TestTemplate.wcdf" createdDate="2017-06-06T23:15:21.914+08:00" isFolder="false" path="UI/Template2/TestTemplate.wcdf" isHidden="false" locale="en_US" title="TestTemplate"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -339,7 +339,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template2/demo.html">
         <ExportManifestProperty>
-            <EntityMetaData name="demo.html" createdDate="2017-05-25T14:46:25.510+08:00" isFolder="false" path="UI/Template2/demo.html" isHidden="true" locale="zh_CN" title="demo"/>
+            <EntityMetaData name="demo.html" createdDate="2017-06-06T23:15:22.255+08:00" isFolder="false" path="UI/Template2/demo.html" isHidden="true" locale="en_US" title="demo"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -351,7 +351,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template3">
         <ExportManifestProperty>
-            <EntityMetaData name="Template3" createdDate="2017-05-05T09:53:03.645+08:00" isFolder="true" path="UI/Template3" isHidden="false" locale="zh_CN" title="Template3"/>
+            <EntityMetaData name="Template3" createdDate="2017-06-06T23:15:22.428+08:00" isFolder="true" path="UI/Template3" isHidden="false" locale="en_US" title="Template3"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -363,7 +363,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template3/Template3-Copy(2).cdfde">
         <ExportManifestProperty>
-            <EntityMetaData name="Template3-Copy(2).cdfde" createdDate="2017-05-05T22:26:15.880+08:00" isFolder="false" path="UI/Template3/Template3-Copy(2).cdfde" isHidden="false" locale="zh_CN" title="Template3-Copy(2).cdfde"/>
+            <EntityMetaData name="Template3-Copy(2).cdfde" createdDate="2017-06-06T23:15:23.063+08:00" isFolder="false" path="UI/Template3/Template3-Copy(2).cdfde" isHidden="false" locale="en_US" title="Template3-Copy(2)"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -375,7 +375,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template3/Template3-Copy(2).wcdf">
         <ExportManifestProperty>
-            <EntityMetaData name="Template3-Copy(2).wcdf" createdDate="2017-05-05T22:26:15.791+08:00" isFolder="false" path="UI/Template3/Template3-Copy(2).wcdf" isHidden="false" locale="zh_CN" title="Template3-Copy(2)"/>
+            <EntityMetaData name="Template3-Copy(2).wcdf" createdDate="2017-06-06T23:15:22.998+08:00" isFolder="false" path="UI/Template3/Template3-Copy(2).wcdf" isHidden="false" locale="en_US" title="Template3-Copy(2)"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -387,7 +387,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template3/Template3-Copy.cdfde">
         <ExportManifestProperty>
-            <EntityMetaData name="Template3-Copy.cdfde" createdDate="2017-05-05T15:41:42.105+08:00" isFolder="false" path="UI/Template3/Template3-Copy.cdfde" isHidden="false" locale="zh_CN" title="Template3-Copy.cdfde"/>
+            <EntityMetaData name="Template3-Copy.cdfde" createdDate="2017-06-06T23:15:23.150+08:00" isFolder="false" path="UI/Template3/Template3-Copy.cdfde" isHidden="false" locale="en_US" title="Template3-Copy"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -399,7 +399,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template3/Template3-Copy.wcdf">
         <ExportManifestProperty>
-            <EntityMetaData name="Template3-Copy.wcdf" createdDate="2017-05-05T15:41:42.029+08:00" isFolder="false" path="UI/Template3/Template3-Copy.wcdf" isHidden="false" locale="zh_CN" title="Template3-Copy"/>
+            <EntityMetaData name="Template3-Copy.wcdf" createdDate="2017-06-06T23:15:22.813+08:00" isFolder="false" path="UI/Template3/Template3-Copy.wcdf" isHidden="false" locale="en_US" title="Template3-Copy"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -411,7 +411,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template3/Template3.cda">
         <ExportManifestProperty>
-            <EntityMetaData name="Template3.cda" createdDate="2017-05-15T14:21:04.658+08:00" isFolder="false" path="UI/Template3/Template3.cda" isHidden="false" locale="zh_CN" title="Template3.cda"/>
+            <EntityMetaData name="Template3.cda" createdDate="2017-06-06T23:15:23.275+08:00" isFolder="false" path="UI/Template3/Template3.cda" isHidden="false" locale="en_US" title="Template3"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -423,7 +423,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template3/Template3.cdfde">
         <ExportManifestProperty>
-            <EntityMetaData name="Template3.cdfde" createdDate="2017-05-05T09:54:37.714+08:00" isFolder="false" path="UI/Template3/Template3.cdfde" isHidden="false" locale="zh_CN" title="Template3.cdfde"/>
+            <EntityMetaData name="Template3.cdfde" createdDate="2017-06-06T23:15:23.402+08:00" isFolder="false" path="UI/Template3/Template3.cdfde" isHidden="false" locale="en_US" title="Template3"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -435,7 +435,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template3/Template3.wcdf">
         <ExportManifestProperty>
-            <EntityMetaData name="Template3.wcdf" createdDate="2017-05-05T09:54:37.616+08:00" isFolder="false" path="UI/Template3/Template3.wcdf" isHidden="false" locale="zh_CN" description="Template3" title="Template3"/>
+            <EntityMetaData name="Template3.wcdf" createdDate="2017-06-06T23:15:22.494+08:00" isFolder="false" path="UI/Template3/Template3.wcdf" isHidden="false" locale="en_US" title="Template3"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -447,7 +447,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template4">
         <ExportManifestProperty>
-            <EntityMetaData name="Template4" createdDate="2017-05-09T22:22:03.906+08:00" isFolder="true" path="UI/Template4" isHidden="false" locale="zh_CN" title="Template4"/>
+            <EntityMetaData name="Template4" createdDate="2017-06-06T23:15:23.481+08:00" isFolder="true" path="UI/Template4" isHidden="false" locale="en_US" title="Template4"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -459,7 +459,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template4/Template4.cda">
         <ExportManifestProperty>
-            <EntityMetaData name="Template4.cda" createdDate="2017-05-09T22:22:24.162+08:00" isFolder="false" path="UI/Template4/Template4.cda" isHidden="false" locale="zh_CN" title="Template4"/>
+            <EntityMetaData name="Template4.cda" createdDate="2017-06-06T23:15:23.514+08:00" isFolder="false" path="UI/Template4/Template4.cda" isHidden="false" locale="en_US" title="Template4"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -471,7 +471,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template4/Template4.cdfde">
         <ExportManifestProperty>
-            <EntityMetaData name="Template4.cdfde" createdDate="2017-05-09T22:22:24.452+08:00" isFolder="false" path="UI/Template4/Template4.cdfde" isHidden="false" locale="zh_CN" title="Template4"/>
+            <EntityMetaData name="Template4.cdfde" createdDate="2017-06-06T23:15:23.600+08:00" isFolder="false" path="UI/Template4/Template4.cdfde" isHidden="false" locale="en_US" title="Template4"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -483,7 +483,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template4/Template4.wcdf">
         <ExportManifestProperty>
-            <EntityMetaData name="Template4.wcdf" createdDate="2017-05-09T22:22:24.807+08:00" isFolder="false" path="UI/Template4/Template4.wcdf" isHidden="false" locale="zh_CN" title="Template4"/>
+            <EntityMetaData name="Template4.wcdf" createdDate="2017-06-06T23:15:23.664+08:00" isFolder="false" path="UI/Template4/Template4.wcdf" isHidden="false" locale="en_US" title="Template4"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -495,7 +495,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template4_error">
         <ExportManifestProperty>
-            <EntityMetaData name="Template4_error" createdDate="2017-05-06T06:37:39.651+08:00" isFolder="true" path="UI/Template4_error" isHidden="false" locale="zh_CN" title="Template4_error"/>
+            <EntityMetaData name="Template4_error" createdDate="2017-06-06T23:15:23.775+08:00" isFolder="true" path="UI/Template4_error" isHidden="false" locale="en_US" title="Template4_error"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -507,7 +507,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template4_error/Template4-Copy.cdfde">
         <ExportManifestProperty>
-            <EntityMetaData name="Template4-Copy.cdfde" createdDate="2017-05-09T22:45:28.786+08:00" isFolder="false" path="UI/Template4_error/Template4-Copy.cdfde" isHidden="false" locale="zh_CN" title="Template4-Copy.cdfde"/>
+            <EntityMetaData name="Template4-Copy.cdfde" createdDate="2017-06-06T23:15:23.832+08:00" isFolder="false" path="UI/Template4_error/Template4-Copy.cdfde" isHidden="false" locale="en_US" title="Template4-Copy"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -519,7 +519,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template4_error/Template4-Copy.wcdf">
         <ExportManifestProperty>
-            <EntityMetaData name="Template4-Copy.wcdf" createdDate="2017-05-09T22:45:01.054+08:00" isFolder="false" path="UI/Template4_error/Template4-Copy.wcdf" isHidden="false" locale="zh_CN" title="运营总监-Copy"/>
+            <EntityMetaData name="Template4-Copy.wcdf" createdDate="2017-06-06T23:15:24.401+08:00" isFolder="false" path="UI/Template4_error/Template4-Copy.wcdf" isHidden="false" locale="en_US" title="Template4-Copy"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -531,7 +531,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template4_error/Template4.cda">
         <ExportManifestProperty>
-            <EntityMetaData name="Template4.cda" createdDate="2017-05-06T21:53:48.676+08:00" isFolder="false" path="UI/Template4_error/Template4.cda" isHidden="false" locale="zh_CN" title="Template4.cda"/>
+            <EntityMetaData name="Template4.cda" createdDate="2017-06-06T23:15:24.168+08:00" isFolder="false" path="UI/Template4_error/Template4.cda" isHidden="false" locale="en_US" title="Template4"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -543,7 +543,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template4_error/Template4.cdfde">
         <ExportManifestProperty>
-            <EntityMetaData name="Template4.cdfde" createdDate="2017-05-06T06:40:42.940+08:00" isFolder="false" path="UI/Template4_error/Template4.cdfde" isHidden="false" locale="zh_CN" title="Template4.cdfde"/>
+            <EntityMetaData name="Template4.cdfde" createdDate="2017-06-06T23:15:24.260+08:00" isFolder="false" path="UI/Template4_error/Template4.cdfde" isHidden="false" locale="en_US" title="Template4"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -555,7 +555,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template4_error/Template4.wcdf">
         <ExportManifestProperty>
-            <EntityMetaData name="Template4.wcdf" createdDate="2017-05-06T06:40:42.869+08:00" isFolder="false" path="UI/Template4_error/Template4.wcdf" isHidden="false" locale="zh_CN" description="Template4" title="运营总监"/>
+            <EntityMetaData name="Template4.wcdf" createdDate="2017-06-06T23:15:24.327+08:00" isFolder="false" path="UI/Template4_error/Template4.wcdf" isHidden="false" locale="en_US" title="Template4"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -567,7 +567,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template5">
         <ExportManifestProperty>
-            <EntityMetaData name="Template5" createdDate="2017-05-06T11:42:13.629+08:00" isFolder="true" path="UI/Template5" isHidden="false" locale="zh_CN" title="Template5"/>
+            <EntityMetaData name="Template5" createdDate="2017-06-06T23:15:24.484+08:00" isFolder="true" path="UI/Template5" isHidden="false" locale="en_US" title="Template5"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -579,7 +579,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template5/Template5.cda">
         <ExportManifestProperty>
-            <EntityMetaData name="Template5.cda" createdDate="2017-05-11T10:24:16.258+08:00" isFolder="false" path="UI/Template5/Template5.cda" isHidden="false" locale="zh_CN" title="Template5.cda"/>
+            <EntityMetaData name="Template5.cda" createdDate="2017-06-06T23:15:24.530+08:00" isFolder="false" path="UI/Template5/Template5.cda" isHidden="false" locale="en_US" title="Template5"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -591,7 +591,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template5/Template5.cdfde">
         <ExportManifestProperty>
-            <EntityMetaData name="Template5.cdfde" createdDate="2017-05-06T11:43:22.012+08:00" isFolder="false" path="UI/Template5/Template5.cdfde" isHidden="false" locale="zh_CN" title="Template5.cdfde"/>
+            <EntityMetaData name="Template5.cdfde" createdDate="2017-06-06T23:15:24.655+08:00" isFolder="false" path="UI/Template5/Template5.cdfde" isHidden="false" locale="en_US" title="Template5"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -603,7 +603,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template5/Template5.wcdf">
         <ExportManifestProperty>
-            <EntityMetaData name="Template5.wcdf" createdDate="2017-05-06T11:43:21.955+08:00" isFolder="false" path="UI/Template5/Template5.wcdf" isHidden="false" locale="zh_CN" description="Template5" title="门店经营情况分析"/>
+            <EntityMetaData name="Template5.wcdf" createdDate="2017-06-06T23:15:24.760+08:00" isFolder="false" path="UI/Template5/Template5.wcdf" isHidden="false" locale="en_US" title="Template5"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -615,7 +615,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template6">
         <ExportManifestProperty>
-            <EntityMetaData name="Template6" createdDate="2017-05-06T15:14:41.673+08:00" isFolder="true" path="UI/Template6" isHidden="false" locale="zh_CN" title="Template6"/>
+            <EntityMetaData name="Template6" createdDate="2017-06-06T23:15:24.817+08:00" isFolder="true" path="UI/Template6" isHidden="false" locale="en_US" title="Template6"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -627,7 +627,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template6/Template6.cda">
         <ExportManifestProperty>
-            <EntityMetaData name="Template6.cda" createdDate="2017-05-24T22:29:40.760+08:00" isFolder="false" path="UI/Template6/Template6.cda" isHidden="false" locale="zh_CN" title="Template6"/>
+            <EntityMetaData name="Template6.cda" createdDate="2017-06-06T23:15:24.853+08:00" isFolder="false" path="UI/Template6/Template6.cda" isHidden="false" locale="en_US" title="Template6"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -639,7 +639,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template6/Template6.cdfde">
         <ExportManifestProperty>
-            <EntityMetaData name="Template6.cdfde" createdDate="2017-05-24T22:29:40.893+08:00" isFolder="false" path="UI/Template6/Template6.cdfde" isHidden="false" locale="zh_CN" title="Template6"/>
+            <EntityMetaData name="Template6.cdfde" createdDate="2017-06-06T23:15:24.951+08:00" isFolder="false" path="UI/Template6/Template6.cdfde" isHidden="false" locale="en_US" title="Template6"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -651,7 +651,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template6/Template6.wcdf">
         <ExportManifestProperty>
-            <EntityMetaData name="Template6.wcdf" createdDate="2017-05-24T22:29:41.062+08:00" isFolder="false" path="UI/Template6/Template6.wcdf" isHidden="false" locale="zh_CN" title="Template6"/>
+            <EntityMetaData name="Template6.wcdf" createdDate="2017-06-06T23:15:25.031+08:00" isFolder="false" path="UI/Template6/Template6.wcdf" isHidden="false" locale="en_US" title="Template6"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -663,7 +663,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template7">
         <ExportManifestProperty>
-            <EntityMetaData name="Template7" createdDate="2017-05-10T11:13:57.822+08:00" isFolder="true" path="UI/Template7" isHidden="false" locale="zh_CN" title="Template7"/>
+            <EntityMetaData name="Template7" createdDate="2017-06-06T23:15:25.177+08:00" isFolder="true" path="UI/Template7" isHidden="false" locale="en_US" title="Template7"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -675,7 +675,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template7/Template7.cda">
         <ExportManifestProperty>
-            <EntityMetaData name="Template7.cda" createdDate="2017-05-10T11:39:44.915+08:00" isFolder="false" path="UI/Template7/Template7.cda" isHidden="false" locale="zh_CN" title="Template7"/>
+            <EntityMetaData name="Template7.cda" createdDate="2017-06-06T23:15:25.534+08:00" isFolder="false" path="UI/Template7/Template7.cda" isHidden="false" locale="en_US" title="Template7"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -687,7 +687,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template7/Template7.cdfde">
         <ExportManifestProperty>
-            <EntityMetaData name="Template7.cdfde" createdDate="2017-05-10T11:39:44.761+08:00" isFolder="false" path="UI/Template7/Template7.cdfde" isHidden="false" locale="zh_CN" title="Template7"/>
+            <EntityMetaData name="Template7.cdfde" createdDate="2017-06-06T23:15:25.328+08:00" isFolder="false" path="UI/Template7/Template7.cdfde" isHidden="false" locale="en_US" title="Template7"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -699,7 +699,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template7/Template7.wcdf">
         <ExportManifestProperty>
-            <EntityMetaData name="Template7.wcdf" createdDate="2017-05-10T11:39:44.693+08:00" isFolder="false" path="UI/Template7/Template7.wcdf" isHidden="false" locale="zh_CN" title="Template7"/>
+            <EntityMetaData name="Template7.wcdf" createdDate="2017-06-06T23:15:25.244+08:00" isFolder="false" path="UI/Template7/Template7.wcdf" isHidden="false" locale="en_US" title="Template7"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -711,7 +711,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template8">
         <ExportManifestProperty>
-            <EntityMetaData name="Template8" createdDate="2017-05-12T11:55:15.222+08:00" isFolder="true" path="UI/Template8" isHidden="false" locale="zh_CN" title="Template8"/>
+            <EntityMetaData name="Template8" createdDate="2017-06-06T23:15:25.650+08:00" isFolder="true" path="UI/Template8" isHidden="false" locale="en_US" title="Template8"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -723,7 +723,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template8/Template8.cda">
         <ExportManifestProperty>
-            <EntityMetaData name="Template8.cda" createdDate="2017-05-12T12:51:14.399+08:00" isFolder="false" path="UI/Template8/Template8.cda" isHidden="false" locale="zh_CN" title="Template8.cda"/>
+            <EntityMetaData name="Template8.cda" createdDate="2017-06-06T23:15:25.945+08:00" isFolder="false" path="UI/Template8/Template8.cda" isHidden="false" locale="en_US" title="Template8"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -735,7 +735,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template8/Template8.cdfde">
         <ExportManifestProperty>
-            <EntityMetaData name="Template8.cdfde" createdDate="2017-05-12T11:56:09.465+08:00" isFolder="false" path="UI/Template8/Template8.cdfde" isHidden="false" locale="zh_CN" title="Template8.cdfde"/>
+            <EntityMetaData name="Template8.cdfde" createdDate="2017-06-06T23:15:26.037+08:00" isFolder="false" path="UI/Template8/Template8.cdfde" isHidden="false" locale="en_US" title="Template8"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -747,7 +747,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template8/Template8.wcdf">
         <ExportManifestProperty>
-            <EntityMetaData name="Template8.wcdf" createdDate="2017-05-12T11:56:09.374+08:00" isFolder="false" path="UI/Template8/Template8.wcdf" isHidden="false" locale="zh_CN" description="Template8" title="Template8"/>
+            <EntityMetaData name="Template8.wcdf" createdDate="2017-06-06T23:15:25.692+08:00" isFolder="false" path="UI/Template8/Template8.wcdf" isHidden="false" locale="en_US" title="Template8"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -759,7 +759,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template9">
         <ExportManifestProperty>
-            <EntityMetaData name="Template9" createdDate="2017-05-12T14:15:34.778+08:00" isFolder="true" path="UI/Template9" isHidden="false" locale="zh_CN" title="Template9"/>
+            <EntityMetaData name="Template9" createdDate="2017-06-06T23:15:26.201+08:00" isFolder="true" path="UI/Template9" isHidden="false" locale="en_US" title="Template9"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -771,7 +771,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template9/Template9.cda">
         <ExportManifestProperty>
-            <EntityMetaData name="Template9.cda" createdDate="2017-05-12T14:24:46.762+08:00" isFolder="false" path="UI/Template9/Template9.cda" isHidden="false" locale="zh_CN" title="Template9.cda"/>
+            <EntityMetaData name="Template9.cda" createdDate="2017-06-06T23:15:26.320+08:00" isFolder="false" path="UI/Template9/Template9.cda" isHidden="false" locale="en_US" title="Template9"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -783,7 +783,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template9/Template9.cdfde">
         <ExportManifestProperty>
-            <EntityMetaData name="Template9.cdfde" createdDate="2017-05-12T14:16:06.769+08:00" isFolder="false" path="UI/Template9/Template9.cdfde" isHidden="false" locale="zh_CN" title="Template9.cdfde"/>
+            <EntityMetaData name="Template9.cdfde" createdDate="2017-06-06T23:15:26.411+08:00" isFolder="false" path="UI/Template9/Template9.cdfde" isHidden="false" locale="en_US" title="Template9"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -795,7 +795,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/Template9/Template9.wcdf">
         <ExportManifestProperty>
-            <EntityMetaData name="Template9.wcdf" createdDate="2017-05-12T14:16:06.680+08:00" isFolder="false" path="UI/Template9/Template9.wcdf" isHidden="false" locale="zh_CN" description="Template9" title="Template9"/>
+            <EntityMetaData name="Template9.wcdf" createdDate="2017-06-06T23:15:26.254+08:00" isFolder="false" path="UI/Template9/Template9.wcdf" isHidden="false" locale="en_US" title="Template9"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -807,7 +807,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/css">
         <ExportManifestProperty>
-            <EntityMetaData name="css" createdDate="2017-05-17T10:28:36.755+08:00" isFolder="true" path="UI/css" isHidden="false" locale="zh_CN" title="css"/>
+            <EntityMetaData name="css" createdDate="2017-06-06T23:15:26.476+08:00" isFolder="true" path="UI/css" isHidden="false" locale="en_US" title="css"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -819,7 +819,55 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/css/clippedText.css">
         <ExportManifestProperty>
-            <EntityMetaData name="clippedText.css" createdDate="2017-05-27T13:45:02.871+08:00" isFolder="false" path="UI/css/clippedText.css" isHidden="true" locale="zh_CN" title="clippedText"/>
+            <EntityMetaData name="clippedText.css" createdDate="2017-06-06T23:15:26.517+08:00" isFolder="false" path="UI/css/clippedText.css" isHidden="true" locale="en_US" title="clippedText"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/css/jQuery">
+        <ExportManifestProperty>
+            <EntityMetaData name="jQuery" createdDate="2017-06-07T10:11:51.329+08:00" isFolder="true" path="UI/css/jQuery" isHidden="false" locale="en_US" title="jQuery"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/css/jQuery/jquery.mCustomScrollbar.css">
+        <ExportManifestProperty>
+            <EntityMetaData name="jquery.mCustomScrollbar.css" createdDate="2017-06-07T11:30:05.724+08:00" isFolder="false" path="UI/css/jQuery/jquery.mCustomScrollbar.css" isHidden="true" locale="en_US" title="jquery.mCustomScrollbar"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/css/jQuery/jquery.mCustomScrollbar.min.css">
+        <ExportManifestProperty>
+            <EntityMetaData name="jquery.mCustomScrollbar.min.css" createdDate="2017-06-07T10:12:30.222+08:00" isFolder="false" path="UI/css/jQuery/jquery.mCustomScrollbar.min.css" isHidden="true" locale="en_US" title="jquery.mCustomScrollbar.min"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/css/jQuery/style.css">
+        <ExportManifestProperty>
+            <EntityMetaData name="style.css" createdDate="2017-06-07T10:24:39.230+08:00" isFolder="false" path="UI/css/jQuery/style.css" isHidden="true" locale="en_US" title="style"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -831,7 +879,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/css/radialProgress.css">
         <ExportManifestProperty>
-            <EntityMetaData name="radialProgress.css" createdDate="2017-05-17T10:29:00.211+08:00" isFolder="false" path="UI/css/radialProgress.css" isHidden="true" locale="zh_CN" title="radialProgress"/>
+            <EntityMetaData name="radialProgress.css" createdDate="2017-06-06T23:15:26.574+08:00" isFolder="false" path="UI/css/radialProgress.css" isHidden="true" locale="en_US" title="radialProgress"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -843,7 +891,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/css/steelWheelsSample.css">
         <ExportManifestProperty>
-            <EntityMetaData name="steelWheelsSample.css" createdDate="2017-05-27T13:45:12.047+08:00" isFolder="false" path="UI/css/steelWheelsSample.css" isHidden="true" locale="zh_CN" title="steelWheelsSample"/>
+            <EntityMetaData name="steelWheelsSample.css" createdDate="2017-06-06T23:15:26.967+08:00" isFolder="false" path="UI/css/steelWheelsSample.css" isHidden="true" locale="en_US" title="steelWheelsSample"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -855,7 +903,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/css/trendArrow.css">
         <ExportManifestProperty>
-            <EntityMetaData name="trendArrow.css" createdDate="2017-05-27T13:45:22.187+08:00" isFolder="false" path="UI/css/trendArrow.css" isHidden="true" locale="zh_CN" title="trendArrow"/>
+            <EntityMetaData name="trendArrow.css" createdDate="2017-06-06T23:15:27.110+08:00" isFolder="false" path="UI/css/trendArrow.css" isHidden="true" locale="en_US" title="trendArrow"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -867,7 +915,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/imgs">
         <ExportManifestProperty>
-            <EntityMetaData name="imgs" createdDate="2017-05-27T14:14:41.471+08:00" isFolder="true" path="UI/imgs" isHidden="false" locale="zh_CN" title="imgs"/>
+            <EntityMetaData name="imgs" createdDate="2017-06-06T23:15:27.201+08:00" isFolder="true" path="UI/imgs" isHidden="false" locale="en_US" title="imgs"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -879,7 +927,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/imgs/check.png">
         <ExportManifestProperty>
-            <EntityMetaData name="check.png" createdDate="2017-05-27T14:14:41.562+08:00" isFolder="false" path="UI/imgs/check.png" isHidden="true" locale="zh_CN" title="check"/>
+            <EntityMetaData name="check.png" createdDate="2017-06-06T23:15:27.234+08:00" isFolder="false" path="UI/imgs/check.png" isHidden="true" locale="en_US" title="check"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -891,7 +939,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/imgs/footer-bg.png">
         <ExportManifestProperty>
-            <EntityMetaData name="footer-bg.png" createdDate="2017-05-27T14:14:41.822+08:00" isFolder="false" path="UI/imgs/footer-bg.png" isHidden="true" locale="zh_CN" title="footer-bg"/>
+            <EntityMetaData name="footer-bg.png" createdDate="2017-06-06T23:15:27.549+08:00" isFolder="false" path="UI/imgs/footer-bg.png" isHidden="true" locale="en_US" title="footer-bg"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -903,7 +951,19 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/imgs/header-bg.png">
         <ExportManifestProperty>
-            <EntityMetaData name="header-bg.png" createdDate="2017-05-27T14:14:42.073+08:00" isFolder="false" path="UI/imgs/header-bg.png" isHidden="true" locale="zh_CN" title="header-bg"/>
+            <EntityMetaData name="header-bg.png" createdDate="2017-06-06T23:15:27.666+08:00" isFolder="false" path="UI/imgs/header-bg.png" isHidden="true" locale="en_US" title="header-bg"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/imgs/mCSB_buttons.png">
+        <ExportManifestProperty>
+            <EntityMetaData name="mCSB_buttons.png" createdDate="2017-06-07T10:24:54.793+08:00" isFolder="false" path="UI/imgs/mCSB_buttons.png" isHidden="true" locale="en_US" title="mCSB_buttons"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -915,7 +975,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/imgs/selector-arrow.svg">
         <ExportManifestProperty>
-            <EntityMetaData name="selector-arrow.svg" createdDate="2017-05-27T14:14:42.310+08:00" isFolder="false" path="UI/imgs/selector-arrow.svg" isHidden="true" locale="zh_CN" title="selector-arrow"/>
+            <EntityMetaData name="selector-arrow.svg" createdDate="2017-06-06T23:15:27.827+08:00" isFolder="false" path="UI/imgs/selector-arrow.svg" isHidden="true" locale="en_US" title="selector-arrow"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -927,7 +987,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/js">
         <ExportManifestProperty>
-            <EntityMetaData name="js" createdDate="2017-05-17T10:28:19.517+08:00" isFolder="true" path="UI/js" isHidden="false" locale="zh_CN" title="js"/>
+            <EntityMetaData name="js" createdDate="2017-06-06T23:15:27.928+08:00" isFolder="true" path="UI/js" isHidden="false" locale="en_US" title="js"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -939,7 +999,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/js/D3.4.9.1">
         <ExportManifestProperty>
-            <EntityMetaData name="D3.4.9.1" createdDate="2017-05-26T09:39:07.654+08:00" isFolder="true" path="UI/js/D3.4.9.1" isHidden="false" locale="zh_CN" title="D3.4.9.1"/>
+            <EntityMetaData name="D3.4.9.1" createdDate="2017-06-06T23:15:27.950+08:00" isFolder="true" path="UI/js/D3.4.9.1" isHidden="false" locale="en_US" title="D3.4.9.1"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -951,7 +1011,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/js/D3.4.9.1/d3.js">
         <ExportManifestProperty>
-            <EntityMetaData name="d3.js" createdDate="2017-05-26T09:43:20.406+08:00" isFolder="false" path="UI/js/D3.4.9.1/d3.js" isHidden="true" locale="zh_CN" title="d3"/>
+            <EntityMetaData name="d3.js" createdDate="2017-06-06T23:15:27.977+08:00" isFolder="false" path="UI/js/D3.4.9.1/d3.js" isHidden="true" locale="en_US" title="d3"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -963,7 +1023,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/js/D3.4.9.1/d3.min.js">
         <ExportManifestProperty>
-            <EntityMetaData name="d3.min.js" createdDate="2017-05-26T09:43:06.231+08:00" isFolder="false" path="UI/js/D3.4.9.1/d3.min.js" isHidden="true" locale="zh_CN" title="d3.min"/>
+            <EntityMetaData name="d3.min.js" createdDate="2017-06-06T23:15:28.427+08:00" isFolder="false" path="UI/js/D3.4.9.1/d3.min.js" isHidden="true" locale="en_US" title="d3.min"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -975,7 +1035,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/js/Echarts3.6.0">
         <ExportManifestProperty>
-            <EntityMetaData name="Echarts3.6.0" createdDate="2017-05-26T09:35:44.178+08:00" isFolder="true" path="UI/js/Echarts3.6.0" isHidden="false" locale="zh_CN" title="Echarts3.6.0"/>
+            <EntityMetaData name="Echarts3.6.0" createdDate="2017-06-06T23:15:28.595+08:00" isFolder="true" path="UI/js/Echarts3.6.0" isHidden="false" locale="en_US" title="Echarts3.6.0"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -987,7 +1047,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/js/Echarts3.6.0/echarts.js">
         <ExportManifestProperty>
-            <EntityMetaData name="echarts.js" createdDate="2017-05-26T09:36:26.075+08:00" isFolder="false" path="UI/js/Echarts3.6.0/echarts.js" isHidden="true" locale="zh_CN" title="echarts"/>
+            <EntityMetaData name="echarts.js" createdDate="2017-06-06T23:15:28.647+08:00" isFolder="false" path="UI/js/Echarts3.6.0/echarts.js" isHidden="true" locale="en_US" title="echarts"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -999,7 +1059,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/js/Echarts3.6.0/echarts.min.js">
         <ExportManifestProperty>
-            <EntityMetaData name="echarts.min.js" createdDate="2017-05-26T09:37:50.234+08:00" isFolder="false" path="UI/js/Echarts3.6.0/echarts.min.js" isHidden="true" locale="zh_CN" title="echarts.min"/>
+            <EntityMetaData name="echarts.min.js" createdDate="2017-06-06T23:15:28.782+08:00" isFolder="false" path="UI/js/Echarts3.6.0/echarts.min.js" isHidden="true" locale="en_US" title="echarts.min"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -1011,7 +1071,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/js/Protovis">
         <ExportManifestProperty>
-            <EntityMetaData name="Protovis" createdDate="2017-05-27T11:20:00.068+08:00" isFolder="true" path="UI/js/Protovis" isHidden="false" locale="zh_CN" title="Protovis"/>
+            <EntityMetaData name="Protovis" createdDate="2017-06-06T23:15:29.007+08:00" isFolder="true" path="UI/js/Protovis" isHidden="false" locale="en_US" title="Protovis"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -1023,7 +1083,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/js/Protovis/bubble.js">
         <ExportManifestProperty>
-            <EntityMetaData name="bubble.js" createdDate="2017-05-27T11:20:40.663+08:00" isFolder="false" path="UI/js/Protovis/bubble.js" isHidden="true" locale="zh_CN" title="bubble"/>
+            <EntityMetaData name="bubble.js" createdDate="2017-06-06T23:15:29.051+08:00" isFolder="false" path="UI/js/Protovis/bubble.js" isHidden="true" locale="en_US" title="bubble"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -1035,7 +1095,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/js/Protovis/bulletChart.js">
         <ExportManifestProperty>
-            <EntityMetaData name="bulletChart.js" createdDate="2017-05-27T11:21:13.631+08:00" isFolder="false" path="UI/js/Protovis/bulletChart.js" isHidden="true" locale="zh_CN" title="bulletChart"/>
+            <EntityMetaData name="bulletChart.js" createdDate="2017-06-06T23:15:29.228+08:00" isFolder="false" path="UI/js/Protovis/bulletChart.js" isHidden="true" locale="en_US" title="bulletChart"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -1047,7 +1107,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/js/Protovis/cccChart.js">
         <ExportManifestProperty>
-            <EntityMetaData name="cccChart.js" createdDate="2017-05-27T11:21:41.702+08:00" isFolder="false" path="UI/js/Protovis/cccChart.js" isHidden="true" locale="zh_CN" title="cccChart"/>
+            <EntityMetaData name="cccChart.js" createdDate="2017-06-06T23:15:29.363+08:00" isFolder="false" path="UI/js/Protovis/cccChart.js" isHidden="true" locale="en_US" title="cccChart"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -1059,7 +1119,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/js/Protovis/clippedText.js">
         <ExportManifestProperty>
-            <EntityMetaData name="clippedText.js" createdDate="2017-05-27T11:22:31.241+08:00" isFolder="false" path="UI/js/Protovis/clippedText.js" isHidden="true" locale="zh_CN" title="clippedText"/>
+            <EntityMetaData name="clippedText.js" createdDate="2017-06-06T23:15:29.755+08:00" isFolder="false" path="UI/js/Protovis/clippedText.js" isHidden="true" locale="en_US" title="clippedText"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -1071,7 +1131,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/js/Protovis/formatted.js">
         <ExportManifestProperty>
-            <EntityMetaData name="formatted.js" createdDate="2017-05-27T11:20:23.394+08:00" isFolder="false" path="UI/js/Protovis/formatted.js" isHidden="true" locale="zh_CN" title="formatted"/>
+            <EntityMetaData name="formatted.js" createdDate="2017-06-06T23:15:29.828+08:00" isFolder="false" path="UI/js/Protovis/formatted.js" isHidden="true" locale="en_US" title="formatted"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -1083,7 +1143,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/js/Protovis/hyperlink.js">
         <ExportManifestProperty>
-            <EntityMetaData name="hyperlink.js" createdDate="2017-05-27T11:22:56.034+08:00" isFolder="false" path="UI/js/Protovis/hyperlink.js" isHidden="true" locale="zh_CN" title="hyperlink"/>
+            <EntityMetaData name="hyperlink.js" createdDate="2017-06-06T23:15:29.912+08:00" isFolder="false" path="UI/js/Protovis/hyperlink.js" isHidden="true" locale="en_US" title="hyperlink"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -1095,7 +1155,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/js/Protovis/localizedText.js">
         <ExportManifestProperty>
-            <EntityMetaData name="localizedText.js" createdDate="2017-05-27T11:23:10.135+08:00" isFolder="false" path="UI/js/Protovis/localizedText.js" isHidden="true" locale="zh_CN" title="localizedText"/>
+            <EntityMetaData name="localizedText.js" createdDate="2017-06-06T23:15:30.131+08:00" isFolder="false" path="UI/js/Protovis/localizedText.js" isHidden="true" locale="en_US" title="localizedText"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -1107,7 +1167,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/js/Protovis/sparkline.js">
         <ExportManifestProperty>
-            <EntityMetaData name="sparkline.js" createdDate="2017-05-27T11:23:31.405+08:00" isFolder="false" path="UI/js/Protovis/sparkline.js" isHidden="true" locale="zh_CN" title="sparkline"/>
+            <EntityMetaData name="sparkline.js" createdDate="2017-06-06T23:15:30.196+08:00" isFolder="false" path="UI/js/Protovis/sparkline.js" isHidden="true" locale="en_US" title="sparkline"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -1119,7 +1179,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/js/Protovis/steelWheelsSample.js">
         <ExportManifestProperty>
-            <EntityMetaData name="steelWheelsSample.js" createdDate="2017-05-27T11:23:50.532+08:00" isFolder="false" path="UI/js/Protovis/steelWheelsSample.js" isHidden="true" locale="zh_CN" title="steelWheelsSample"/>
+            <EntityMetaData name="steelWheelsSample.js" createdDate="2017-06-06T23:15:30.271+08:00" isFolder="false" path="UI/js/Protovis/steelWheelsSample.js" isHidden="true" locale="en_US" title="steelWheelsSample"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -1131,7 +1191,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/js/Protovis/trendArrow.js">
         <ExportManifestProperty>
-            <EntityMetaData name="trendArrow.js" createdDate="2017-05-27T11:24:03.813+08:00" isFolder="false" path="UI/js/Protovis/trendArrow.js" isHidden="true" locale="zh_CN" title="trendArrow"/>
+            <EntityMetaData name="trendArrow.js" createdDate="2017-06-06T23:15:30.364+08:00" isFolder="false" path="UI/js/Protovis/trendArrow.js" isHidden="true" locale="en_US" title="trendArrow"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -1143,7 +1203,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/js/cccChart.js">
         <ExportManifestProperty>
-            <EntityMetaData name="cccChart.js" createdDate="2017-05-25T09:27:15.600+08:00" isFolder="false" path="UI/js/cccChart.js" isHidden="true" locale="zh_CN" title="cccChart"/>
+            <EntityMetaData name="cccChart.js" createdDate="2017-06-06T23:15:30.428+08:00" isFolder="false" path="UI/js/cccChart.js" isHidden="true" locale="en_US" title="cccChart"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -1155,7 +1215,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/js/clippedText.js">
         <ExportManifestProperty>
-            <EntityMetaData name="clippedText.js" createdDate="2017-05-25T10:28:45.193+08:00" isFolder="false" path="UI/js/clippedText.js" isHidden="true" locale="zh_CN" title="clippedText"/>
+            <EntityMetaData name="clippedText.js" createdDate="2017-06-06T23:15:30.475+08:00" isFolder="false" path="UI/js/clippedText.js" isHidden="true" locale="en_US" title="clippedText"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -1167,7 +1227,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/js/d3.min.js">
         <ExportManifestProperty>
-            <EntityMetaData name="d3.min.js" createdDate="2017-05-17T10:27:17.061+08:00" isFolder="false" path="UI/js/d3.min.js" isHidden="true" locale="zh_CN" title="d3.min"/>
+            <EntityMetaData name="d3.min.js" createdDate="2017-06-06T23:15:30.524+08:00" isFolder="false" path="UI/js/d3.min.js" isHidden="true" locale="en_US" title="d3.min"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -1179,7 +1239,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/js/echarts.min.js">
         <ExportManifestProperty>
-            <EntityMetaData name="echarts.min.js" createdDate="2017-05-06T21:41:34.603+08:00" isFolder="false" path="UI/js/echarts.min.js" isHidden="true" locale="zh_CN" title="echarts.min"/>
+            <EntityMetaData name="echarts.min.js" createdDate="2017-06-06T23:15:30.693+08:00" isFolder="false" path="UI/js/echarts.min.js" isHidden="true" locale="en_US" title="echarts.min"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -1191,7 +1251,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/js/jQuery">
         <ExportManifestProperty>
-            <EntityMetaData name="jQuery" createdDate="2017-06-05T13:51:01.491+08:00" isFolder="true" path="UI/js/jQuery" isHidden="false" locale="zh_CN" title="jQuery"/>
+            <EntityMetaData name="jQuery" createdDate="2017-06-06T23:15:30.795+08:00" isFolder="true" path="UI/js/jQuery" isHidden="false" locale="en_US" title="jQuery"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -1203,7 +1263,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/js/jQuery/jquery-ui.js">
         <ExportManifestProperty>
-            <EntityMetaData name="jquery-ui.js" createdDate="2017-06-05T13:52:30.292+08:00" isFolder="false" path="UI/js/jQuery/jquery-ui.js" isHidden="true" locale="zh_CN" title="jquery-ui"/>
+            <EntityMetaData name="jquery-ui.js" createdDate="2017-06-06T23:15:31.123+08:00" isFolder="false" path="UI/js/jQuery/jquery-ui.js" isHidden="true" locale="en_US" title="jquery-ui"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -1215,7 +1275,19 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/js/jQuery/jquery.js">
         <ExportManifestProperty>
-            <EntityMetaData name="jquery.js" createdDate="2017-06-05T13:51:45.780+08:00" isFolder="false" path="UI/js/jQuery/jquery.js" isHidden="true" locale="zh_CN" title="jquery"/>
+            <EntityMetaData name="jquery.js" createdDate="2017-06-06T23:15:30.827+08:00" isFolder="false" path="UI/js/jQuery/jquery.js" isHidden="true" locale="en_US" title="jquery"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/js/jQuery/jquery.mCustomScrollbar.concat.min.js">
+        <ExportManifestProperty>
+            <EntityMetaData name="jquery.mCustomScrollbar.concat.min.js" createdDate="2017-06-07T10:14:15.294+08:00" isFolder="false" path="UI/js/jQuery/jquery.mCustomScrollbar.concat.min.js" isHidden="true" locale="en_US" title="jquery.mCustomScrollbar.concat.min"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -1227,7 +1299,7 @@
     </ExportManifestEntity>
     <ExportManifestEntity path="UI/js/radialProgress.min.js">
         <ExportManifestProperty>
-            <EntityMetaData name="radialProgress.min.js" createdDate="2017-05-17T10:27:36.214+08:00" isFolder="false" path="UI/js/radialProgress.min.js" isHidden="true" locale="zh_CN" title="radialProgress.min"/>
+            <EntityMetaData name="radialProgress.min.js" createdDate="2017-06-06T23:15:31.268+08:00" isFolder="false" path="UI/js/radialProgress.min.js" isHidden="true" locale="en_US" title="radialProgress.min"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
