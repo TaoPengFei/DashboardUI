@@ -27,7 +27,7 @@
      {
       "name": "propertyDateValue",
       "type": "Date",
-      "value": "2016-01-01"
+      "value": "lastMonth"
      },
      {
       "name": "bookmarkable",
@@ -632,6 +632,414 @@
     "typeDesc": "table Component"
    },
    {
+    "id": "d7d9668a-28f3-37da-00fe-28f07b04242b",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "TableCom_v2"
+     },
+     {
+      "name": "expandContainerObject",
+      "type": "HtmlTarget",
+      "value": ""
+     },
+     {
+      "name": "listeners",
+      "type": "Listeners",
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:bestValueLineParam}\",\"${p:mediumValueLineParam}\",\"${p:badValueLineParam}\"]"
+     },
+     {
+      "name": "oLanguage",
+      "type": "JavaScript",
+      "value": "{\n    \"sEmptyTable\":     \"No data available in table\",\n    //\"sInfo\":           \"Showing _START_ to _END_ of _TOTAL_ entries\",\n    \"sInfo\":           \"当前条目 _START_ / _END_ ,共计 _TOTAL_ 条目\",\n    //\"sInfoEmpty\":      \"Showing 0 to 0 of 0 entries\",\n    \"sInfoEmpty\":      \"显示 0 / 0 ,共计 0 条目\",\n    //\"sInfoFiltered\":   \"(filtered from _MAX_ total entries)\",\n    \"sInfoFiltered\":   \"(从_MAX_个总条目过滤)\",\n    \"sInfoPostFix\":    \"\",\n    \"sInfoThousands\":  \",\",\n    //\"sLengthMenu\":     \"Show _MENU_ entries\",\n    \"sLengthMenu\":     \"显示 _MENU_ 条目\",\n    \"sLoadingRecords\": \"Loading...\",\n    \"sProcessing\":     \"Processing...\",\n    //\"sSearch\":         \"Search:\",\n    \"sSearch\":         \"模糊查询：\",\n    //\"sZeroRecords\":    \"No matching records found\",\n    \"sZeroRecords\":    \"没有找到匹配的记录\",\n    \"oPaginate\": {\n        \"sFirst\":    \"First\",\n        \"sLast\":     \"Last\",\n        \"sNext\":     \"Next\",\n        \"sPrevious\": \"Previous\"\n    },\n    \"oAria\": {\n        \"sSortAscending\":  \": activate to sort column ascending\",\n        \"sSortDescending\": \": activate to sort column descending\"\n    }\n} "
+     },
+     {
+      "name": "language",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "colFormats",
+      "type": "ColFormatsArray",
+      "value": "[null,\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\"]"
+     },
+     {
+      "name": "colHeaders",
+      "type": "ColHeadersArray",
+      "value": "[]"
+     },
+     {
+      "name": "colSortable",
+      "type": "ColSortableArray",
+      "value": "[]"
+     },
+     {
+      "name": "colTypes",
+      "type": "colTypesCustom",
+      "value": "[]"
+     },
+     {
+      "name": "colWidths",
+      "type": "ColWidthsArray",
+      "value": "[]"
+     },
+     {
+      "name": "expandParameters",
+      "type": "ExpandParameters",
+      "value": "[]"
+     },
+     {
+      "name": "parameters",
+      "type": "ValuesArray",
+      "value": "[[\"bestValueLineParam\",\"bestValueLineParam\"],[\"mediumValueLineParam\",\"mediumValueLineParam\"],[\"badValueLineParam\",\"badValueLineParam\"],[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"]]"
+     },
+     {
+      "name": "displayLength",
+      "type": "Integer",
+      "value": "10"
+     },
+     {
+      "name": "expandOnClick",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "filter",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "info",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "lengthChange",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "paginate",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "sort",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "colSearchable",
+      "type": "ColSearchableArray",
+      "value": "[]"
+     },
+     {
+      "name": "drawCallback",
+      "type": "JavaScript",
+      "value": " \r\n\r\n "
+     },
+     {
+      "name": "dataSource",
+      "type": "Datasource",
+      "value": "TableQuery_v2"
+     },
+     {
+      "name": "sDom",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "sortBy",
+      "type": "SortByArray",
+      "value": "[]"
+     },
+     {
+      "name": "priority",
+      "type": "Integer",
+      "value": "5"
+     },
+     {
+      "name": "refreshPeriod",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "paginationType",
+      "type": "PaginationType",
+      "value": "two_button"
+     },
+     {
+      "name": "tableStyle",
+      "type": "TableStyle",
+      "value": "themeroller"
+     },
+     {
+      "name": "htmlObject",
+      "type": "HtmlObject",
+      "value": "${h:TableDom_v2}"
+     },
+     {
+      "name": "executeAtStart",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "paginateServerside",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "preExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postExecution",
+      "type": "JavaScript",
+      "value": "function() {\n\n    /**\n     * 双表头的制作\n     */\n     /*\n    ($('#TableDom_v2 thead tr').clone()).insertBefore($('#TableDom_v2 thead tr'));\n    _.each($('#TableDom_v2 thead tr:nth-child(1) th'), function(elem, idx) {\n        console.log(elem);\n        //if (idx>0) {\n        if (idx>0) {    //用于控制clone的位置\n            if (((idx-1)%4)==0) {\n                $(elem).text($(elem).text().split('/')[0]).attr('colspan', 4);\n            } else {\n                $(elem).remove();\n            }    \n        } else {\n            $(elem).text('');\n        }\n    });\n    _.each($('#TableDom_v2 thead tr:nth-child(2) th'), function(elem) {\n        if ($(elem).text().split('/').length>1) {\n            $(elem).text($(elem).text().split('/')[1])\n        }    \n    });\n    */\n    \n    /**\n     * 可实现合并单元格,上下行来比较\n     */\n    var totalCols = $(\"#TableDom_v2Table\").find(\"tr:eq(0)\").find(\"td\").length;\n    //console.log($('#TableDom_v2Table tbody tr').find(\"td\").length);\n\tvar totalRows = $(\"#TableDom_v2Table\").find(\"tr\").length;\n\t//for ( var i = totalCols-1; i >= 0; i--) {\n    for ( var i = 0; i >= 0; i--) {\n\t\tfor ( var j = totalRows-1; j >= 0; j--) {\n        //for ( var j = 0; j >= 0; j--) {\n\t\t\tstartCell = $(\"#TableDom_v2Table\").find(\"tr\").eq(j).find(\"td\").eq(i);\n\t\t\ttargetCell = $(\"#TableDom_v2Table\").find(\"tr\").eq(j - 1).find(\"td\").eq(i);\n            if (startCell.text() == targetCell.text() && targetCell.text() !== \"\") {\n\t\t\t\ttargetCell.attr(\"rowSpan\", (startCell.attr(\"rowSpan\") === undefined)?2:(eval(startCell.attr(\"rowSpan\"))+1));\n\t\t\t\t//startCell.remove();   //注意区别\n                startCell.addClass(\"hidden-lg hidden-md hidden-sm hidden-xs\");\n                //console.log(startCell.text());\n\t\t\t}\n            \n\t\t}\n\t}\n    \n    /**\n     * @bestValueLine    最好值刻度线  绿色\n     * @mediumValueLine  中上值刻度线  蓝色\n     * @normalValueLine  正常值刻度线  白色\n     * @badValueLine     最差值刻度线  红色\n     */\n    $.fn.TableColorGuide = function(bestValueLine, mediumValueLine, badValueLine ){\n        $('#TableDom_v2Table tbody').find('td').each(function(index, elem){\n            \n            if(index > 1){\n                //console.log(elem);\n                //console.log(elem.innerHTML.__proto__);\n                //console.log(elem.innerHTML.replace(\",\",\"\"));\n                //console.log(parseFloat(elem.innerHTML.replace(\",\",\"\")));\n                //if(elem.innerHTML.replace(\",\",\"\") >= '100000.00'){\n                if( parseInt(elem.innerHTML.replace(\",\",\"\")) >= bestValueLine &&\n                    parseInt(elem.innerHTML.replace(\",\",\"\")) !== 0 && bestValueLine !== 0 ){\n                    $(this).css(\"background-color\",\"#40A276\")\n                           .css('-moz-border-radius','0px')\n                           .css('-webkit-border-radius','0px')\n                           .css('color','#ffffff');\n                } else if( parseInt(elem.innerHTML.replace(\",\",\"\")) < bestValueLine && \n                            parseInt(elem.innerHTML.replace(\",\",\"\")) >= mediumValueLine && \n                            parseInt(elem.innerHTML.replace(\",\",\"\")) !== 0 && mediumValueLine !== 0 ){\n                    $(this).css(\"background-color\",\"#1979CA\")\n                           .css('-moz-border-radius','0px')\n                           .css('-webkit-border-radius','0px')\n                           .css('color','#ffffff');\n                }else if(parseInt(elem.innerHTML.replace(\",\",\"\")) < badValueLine && \n                            parseInt(elem.innerHTML.replace(\",\",\"\")) !== 0 && badValueLine !== 0 ){\n                    $(this).css(\"background-color\",\"#EE4B4B\")\n                           .css('-moz-border-radius','0px')\n                           .css('-webkit-border-radius','0px')\n                           .css('color','#ffffff');\n                }\n            }\n        });\n    }\n    $(function() {\n        $.fn.TableColorGuide(100000,50000,50\n            /*\n            dashboard.getParameterValue(\"bestValueLineParam\"),\n            dashboard.getParameterValue(\"mediumValueLineParam\"),\n            dashboard.getParameterValue(\"badValueLineParam\")\n            */\n            \n            /*\n            Dashboards.getParameterValue(\"bestValueLineParam\"),\n            Dashboards.getParameterValue(\"mediumValueLineParam\"),\n            Dashboards.getParameterValue(\"badValueLineParam\")\n            */\n            \n        );\n\t});\n    \n    $('#TableDom_v2Table tbody tr').find(\"td:eq(0)\")\n                                .css(\"background-color\", \"#F8FAFB\")\n                                .css(\"border\", \"1px solid #FFFFFF\")\n                                .css('color','#2779aa');\n   \n} "
+     },
+     {
+      "name": "postFetch",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "preChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "extraOptions",
+      "type": "ExtraOptionsArray",
+      "value": "[]"
+     },
+     {
+      "name": "tooltip",
+      "type": "Html",
+      "value": ""
+     },
+     {
+      "name": "clickAction",
+      "type": "JavaScript",
+      "value": ""
+     }
+    ],
+    "rowName": "Table Component",
+    "type": "ComponentsTable",
+    "typeDesc": "table Component"
+   },
+   {
+    "id": "e21b3c78-6218-6247-90ef-bbbf842e3dee",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "TableCom_v2_new"
+     },
+     {
+      "name": "expandContainerObject",
+      "type": "HtmlTarget",
+      "value": ""
+     },
+     {
+      "name": "listeners",
+      "type": "Listeners",
+      "value": "[\"${p:bestValueLineParam}\",\"${p:mediumValueLineParam}\",\"${p:badValueLineParam}\"]"
+     },
+     {
+      "name": "oLanguage",
+      "type": "JavaScript",
+      "value": "{\n    \"sEmptyTable\":     \"No data available in table\",\n    //\"sInfo\":           \"Showing _START_ to _END_ of _TOTAL_ entries\",\n    \"sInfo\":           \"当前条目 _START_ / _END_ ,共计 _TOTAL_ 条目\",\n    //\"sInfoEmpty\":      \"Showing 0 to 0 of 0 entries\",\n    \"sInfoEmpty\":      \"显示 0 / 0 ,共计 0 条目\",\n    //\"sInfoFiltered\":   \"(filtered from _MAX_ total entries)\",\n    \"sInfoFiltered\":   \"(从_MAX_个总条目过滤)\",\n    \"sInfoPostFix\":    \"\",\n    \"sInfoThousands\":  \",\",\n    //\"sLengthMenu\":     \"Show _MENU_ entries\",\n    \"sLengthMenu\":     \"显示 _MENU_ 条目\",\n    \"sLoadingRecords\": \"Loading...\",\n    \"sProcessing\":     \"Processing...\",\n    //\"sSearch\":         \"Search:\",\n    \"sSearch\":         \"模糊查询：\",\n    //\"sZeroRecords\":    \"No matching records found\",\n    \"sZeroRecords\":    \"没有找到匹配的记录\",\n    \"oPaginate\": {\n        \"sFirst\":    \"First\",\n        \"sLast\":     \"Last\",\n        \"sNext\":     \"Next\",\n        \"sPrevious\": \"Previous\"\n    },\n    \"oAria\": {\n        \"sSortAscending\":  \": activate to sort column ascending\",\n        \"sSortDescending\": \": activate to sort column descending\"\n    }\n} "
+     },
+     {
+      "name": "language",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "colFormats",
+      "type": "ColFormatsArray",
+      "value": "[null,\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\"]"
+     },
+     {
+      "name": "colHeaders",
+      "type": "ColHeadersArray",
+      "value": "[]"
+     },
+     {
+      "name": "colSortable",
+      "type": "ColSortableArray",
+      "value": "[]"
+     },
+     {
+      "name": "colTypes",
+      "type": "colTypesCustom",
+      "value": "[\"string\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"]"
+     },
+     {
+      "name": "colWidths",
+      "type": "ColWidthsArray",
+      "value": "[]"
+     },
+     {
+      "name": "expandParameters",
+      "type": "ExpandParameters",
+      "value": "[]"
+     },
+     {
+      "name": "parameters",
+      "type": "ValuesArray",
+      "value": "[[\"bestValueLineParam\",\"bestValueLineParam\"],[\"mediumValueLineParam\",\"mediumValueLineParam\"],[\"badValueLineParam\",\"badValueLineParam\"],[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"]]"
+     },
+     {
+      "name": "displayLength",
+      "type": "Integer",
+      "value": "10"
+     },
+     {
+      "name": "expandOnClick",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "filter",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "info",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "lengthChange",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "paginate",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "sort",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "colSearchable",
+      "type": "ColSearchableArray",
+      "value": "[]"
+     },
+     {
+      "name": "drawCallback",
+      "type": "JavaScript",
+      "value": " \r\n\r\n "
+     },
+     {
+      "name": "dataSource",
+      "type": "Datasource",
+      "value": ""
+     },
+     {
+      "name": "sDom",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "sortBy",
+      "type": "SortByArray",
+      "value": "[]"
+     },
+     {
+      "name": "priority",
+      "type": "Integer",
+      "value": "5"
+     },
+     {
+      "name": "refreshPeriod",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "paginationType",
+      "type": "PaginationType",
+      "value": "two_button"
+     },
+     {
+      "name": "tableStyle",
+      "type": "TableStyle",
+      "value": "themeroller"
+     },
+     {
+      "name": "htmlObject",
+      "type": "HtmlObject",
+      "value": ""
+     },
+     {
+      "name": "executeAtStart",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "paginateServerside",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "preExecution",
+      "type": "JavaScript",
+      "value": "function f(){\r\n    //resizeGraphical(this);\r\n    let myself = this;\r\n    require(['amd!cdf/lib/underscore', 'cdf/dashboard/Utils'],function(_, Utils){\r\n        let numericOpts = {\r\n            color: function(st) {\r\n                console.log(st);\r\n                var values = st.tableData.map(function(e){\r\n                        return Number(_.last(e[st.colIdx].split(',')));\r\n                    });\r\n                var tblMax = _.max(values),\r\n                    tblMin = _.min(values);\r\n                var value = Number(_.last(st.value.split(','))),\r\n                    size = (value-tblMin)/(tblMax-tblMin),\r\n                    red = Math.min(255, Math.round(510 - 2 * 255 * size)),\r\n                    green = Math.min(255, Math.round(2 * 255 * size));\r\n                return \"rgb(\" + red + \",\" + green + \",0)\";\r\n            },\r\n        };\r\n        myself.setAddInOptions(\"colType\", \"numeric\", numericOpts);\r\n    })\r\n} "
+     },
+     {
+      "name": "postExecution",
+      "type": "JavaScript",
+      "value": "function() {\n\n    /**\n     * 双表头的制作\n     */\n    ($('#TableDom_v2 thead tr').clone()).insertBefore($('#TableDom_v2 thead tr'));\n    _.each($('#TableDom_v2 thead tr:nth-child(1) th'), function(elem, idx) {\n        console.log(elem);\n        //if (idx>0) {\n        if (idx>0) {    //用于控制clone的位置\n            if (((idx-1)%4)==0) {\n                $(elem).text($(elem).text().split('/')[0]).attr('colspan', 4);\n            } else {\n                $(elem).remove();\n            }    \n        } else {\n            $(elem).text('');\n        }\n    });\n    _.each($('#TableDom_v2 thead tr:nth-child(2) th'), function(elem) {\n        if ($(elem).text().split('/').length>1) {\n            $(elem).text($(elem).text().split('/')[1])\n        }    \n    });\n    \n    \n    /**\n     * 可实现合并单元格,上下行来比较\n     */\n    var totalCols = $(\"#TableDom_v2Table\").find(\"tr:eq(0)\").find(\"td\").length;\n    //console.log($('#TableDom_v2Table tbody tr').find(\"td\").length);\n\tvar totalRows = $(\"#TableDom_v2Table\").find(\"tr\").length;\n\t//for ( var i = totalCols-1; i >= 0; i--) {\n    for ( var i = 0; i >= 0; i--) {\n\t\tfor ( var j = totalRows-1; j >= 0; j--) {\n        //for ( var j = 0; j >= 0; j--) {\n\t\t\tstartCell = $(\"#TableDom_v2Table\").find(\"tr\").eq(j).find(\"td\").eq(i);\n\t\t\ttargetCell = $(\"#TableDom_v2Table\").find(\"tr\").eq(j - 1).find(\"td\").eq(i);\n            if (startCell.text() == targetCell.text() && targetCell.text() !== \"\") {\n\t\t\t\ttargetCell.attr(\"rowSpan\", (startCell.attr(\"rowSpan\") === undefined)?2:(eval(startCell.attr(\"rowSpan\"))+1));\n\t\t\t\t//startCell.remove();   //注意区别\n                startCell.addClass(\"hidden-lg hidden-md hidden-sm hidden-xs\");\n                //console.log(startCell.text());\n\t\t\t}\n            \n\t\t}\n\t}\n    \n    /**\n     * @bestValueLine    最好值刻度线  绿色\n     * @mediumValueLine  中上值刻度线  蓝色\n     * @normalValueLine  正常值刻度线  白色\n     * @badValueLine     最差值刻度线  红色\n     */\n    $.fn.TableColorGuide = function(bestValueLine, mediumValueLine, badValueLine ){\n        $('#TableDom_v2Table tbody').find('td').each(function(index, elem){\n            \n            if(index > 1){\n                //console.log(elem);\n                //console.log(elem.innerHTML.__proto__);\n                //console.log(elem.innerHTML.replace(\",\",\"\"));\n                //console.log(parseFloat(elem.innerHTML.replace(\",\",\"\")));\n                //if(elem.innerHTML.replace(\",\",\"\") >= '100000.00'){\n                if( parseInt(elem.innerHTML.replace(\",\",\"\")) >= bestValueLine &&\n                    parseInt(elem.innerHTML.replace(\",\",\"\")) !== 0 && bestValueLine !== 0 ){\n                    $(this).css(\"background-color\",\"#40A276\")\n                           .css('-moz-border-radius','0px')\n                           .css('-webkit-border-radius','0px')\n                           .css('color','#ffffff');\n                } else if( parseInt(elem.innerHTML.replace(\",\",\"\")) < bestValueLine && \n                            parseInt(elem.innerHTML.replace(\",\",\"\")) >= mediumValueLine && \n                            parseInt(elem.innerHTML.replace(\",\",\"\")) !== 0 && mediumValueLine !== 0 ){\n                    $(this).css(\"background-color\",\"#1979CA\")\n                           .css('-moz-border-radius','0px')\n                           .css('-webkit-border-radius','0px')\n                           .css('color','#ffffff');\n                }else if(parseInt(elem.innerHTML.replace(\",\",\"\")) < badValueLine && \n                            parseInt(elem.innerHTML.replace(\",\",\"\")) !== 0 && badValueLine !== 0 ){\n                    $(this).css(\"background-color\",\"#EE4B4B\")\n                           .css('-moz-border-radius','0px')\n                           .css('-webkit-border-radius','0px')\n                           .css('color','#ffffff');\n                }\n            }\n        });\n    }\n    $(function() {\n        $.fn.TableColorGuide(100000,50000,50\n            /*\n            dashboard.getParameterValue(\"bestValueLineParam\"),\n            dashboard.getParameterValue(\"mediumValueLineParam\"),\n            dashboard.getParameterValue(\"badValueLineParam\")\n            */\n            \n            /*\n            Dashboards.getParameterValue(\"bestValueLineParam\"),\n            Dashboards.getParameterValue(\"mediumValueLineParam\"),\n            Dashboards.getParameterValue(\"badValueLineParam\")\n            */\n            \n        );\n\t});\n    \n    $('#TableDom_v2Table tbody tr').find(\"td:eq(0)\")\n                                .css(\"background-color\", \"#F8FAFB\")\n                                .css(\"border\", \"1px solid #FFFFFF\")\n                                .css('color','#2779aa');\n   \n} "
+     },
+     {
+      "name": "postFetch",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "preChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "extraOptions",
+      "type": "ExtraOptionsArray",
+      "value": "[]"
+     },
+     {
+      "name": "tooltip",
+      "type": "Html",
+      "value": ""
+     },
+     {
+      "name": "clickAction",
+      "type": "JavaScript",
+      "value": ""
+     }
+    ],
+    "rowName": "Table Component",
+    "type": "ComponentsTable",
+    "typeDesc": "table Component"
+   },
+   {
     "id": "e96b45e9-ac31-4914-19c3-989794528828",
     "parent": "OTHERCOMPONENTS",
     "properties": [
@@ -731,7 +1139,7 @@
      {
       "name": "javaScript",
       "type": "JavaScript",
-      "value": "/**\r\n * 加载Ecahrts图形\r\n */\r\n//window.onload = initEcahrts;\r\n\r\n(function($){\r\n    $(window).on(\"load\",function(){\r\n        initEcahrts();\r\n\t\t$(\"#row_table_col_panel_body\").mCustomScrollbar({\r\n\t\t\tautoHideScrollbar:true,\r\n            axis:\"yx\",\r\n            scrollButtons:{\r\n                enable:true //是否使用上下滚动按钮\r\n\t\t\t},\r\n            mouseWheelPixels:300,\r\n\t\t\ttheme:\"rounded\"\r\n            //theme:\"dark\"\r\n\t\t});\r\n        \r\n        /*\r\n        document.getElementsByTagName('container')[0].mCustomScrollbar({\r\n            autoHideScrollbar:true,\r\n            //axis:\"yx\",\r\n\t\t\ttheme:\"rounded\"\r\n\t\t});\r\n        console.log(document.getElementsByTagName('container')[0]);\r\n        */\r\n\t});\r\n})($);\r\n\r\n/**\r\n * 解决CDE图形的自适应\r\n */\r\nfunction resizeGraphical(cdeObj){\r\n    var myself = cdeObj;\r\n    //设置初始宽度 与placeholder()匹配\r\n    myself.chartDefinition.width = myself.placeholder().width();\r\n    //仅在图表组件的第一个执行上附加调整处理程序\r\n    if( !cdeObj.resizeHandlerAttached ){\r\n        //确保渲染只在事件发生后被触发\r\n        var debouncedResize = _.debounce(function(){\r\n            //再次显示 图形\r\n            myself.placeholder().children().css('visibility','visible');\r\n            // 改变 图形 的 宽度\r\n            myself.chartDefinition.width = myself.placeholder().width();\r\n            myself.render( myself.query.lastResults() );\r\n        },200);\r\n        // 高度调整 处理\r\n        $(window).resize(function(){\r\n            //仅当容器已更改宽度时才触发调整大小\r\n            if( myself.chartDefinition.width != myself.placeholder().width() ){\r\n                //暂时隐藏图表，使溢出不会发生\r\n                myself.placeholder().children().css('visibility','hidden');\r\n                //触发与调整\r\n                debouncedResize();\r\n            }\r\n        });\r\n        cdeObj.resizeHandlerAttached = true;\r\n    }\r\n} \r\n\r\n\r\n "
+      "value": "/**\r\n * 加载Ecahrts图形\r\n */\r\n//window.onload = initEcahrts;\r\n\r\n(function($){\r\n    $(window).on(\"load\",function(){\r\n        initEcahrts();\r\n        \r\n\t\t$(\"#row_table_col_panel_body\").mCustomScrollbar({\r\n\t\t\tautoHideScrollbar:true,\r\n            axis:\"yx\",\r\n            scrollButtons:{\r\n                enable:true //是否使用上下滚动按钮\r\n\t\t\t},\r\n            mouseWheelPixels:300,\r\n\t\t\ttheme:\"rounded\"\r\n            //theme:\"dark\"\r\n\t\t});\r\n        \r\n        $(\"#row_table_col_panel_body_v2\").mCustomScrollbar({\r\n    \t\tautoHideScrollbar:true,\r\n            axis:\"yx\",\r\n            scrollButtons:{\r\n                enable:true //是否使用上下滚动按钮\r\n\t\t\t},\r\n            mouseWheelPixels:300,\r\n\t\t\ttheme:\"rounded\"\r\n            //theme:\"dark\"\r\n\t\t});\r\n        \r\n        /*\r\n        document.getElementsByTagName('container')[0].mCustomScrollbar({\r\n            autoHideScrollbar:true,\r\n            //axis:\"yx\",\r\n\t\t\ttheme:\"rounded\"\r\n\t\t});\r\n        console.log(document.getElementsByTagName('container')[0]);\r\n        */\r\n\t});\r\n    \r\n})($);\r\n\r\n/**\r\n * 解决CDE图形的自适应\r\n */\r\nfunction resizeGraphical(cdeObj){\r\n    var myself = cdeObj;\r\n    //设置初始宽度 与placeholder()匹配\r\n    myself.chartDefinition.width = myself.placeholder().width();\r\n    //仅在图表组件的第一个执行上附加调整处理程序\r\n    if( !cdeObj.resizeHandlerAttached ){\r\n        //确保渲染只在事件发生后被触发\r\n        var debouncedResize = _.debounce(function(){\r\n            //再次显示 图形\r\n            myself.placeholder().children().css('visibility','visible');\r\n            // 改变 图形 的 宽度\r\n            myself.chartDefinition.width = myself.placeholder().width();\r\n            myself.render( myself.query.lastResults() );\r\n        },200);\r\n        // 高度调整 处理\r\n        $(window).resize(function(){\r\n            //仅当容器已更改宽度时才触发调整大小\r\n            if( myself.chartDefinition.width != myself.placeholder().width() ){\r\n                //暂时隐藏图表，使溢出不会发生\r\n                myself.placeholder().children().css('visibility','hidden');\r\n                //触发与调整\r\n                debouncedResize();\r\n            }\r\n        });\r\n        cdeObj.resizeHandlerAttached = true;\r\n    }\r\n} \r\n\r\n\r\n "
      }
     ],
     "rowName": "Function",
@@ -1011,6 +1419,85 @@
     "typeDesc": "Text input Component"
    },
    {
+    "id": "9983a57a-b41a-fc89-d764-ba30537dd7ef",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "bestValueLineCom_v2"
+     },
+     {
+      "name": "parameter",
+      "type": "Parameter",
+      "value": "${p:bestValueLineParam}"
+     },
+     {
+      "name": "listeners",
+      "type": "Listeners",
+      "value": "[\"${p:bestValueLineParam}\"]"
+     },
+     {
+      "name": "maxLength",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "priority",
+      "type": "Integer",
+      "value": 5
+     },
+     {
+      "name": "refreshPeriod",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "size",
+      "type": "Integer",
+      "value": "10"
+     },
+     {
+      "name": "htmlObject",
+      "type": "HtmlObject",
+      "value": "${h:bestValueLineDom_v2}"
+     },
+     {
+      "name": "executeAtStart",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "preExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "preChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "tooltip",
+      "type": "Html",
+      "value": ""
+     }
+    ],
+    "rowName": "TextInput Component",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component"
+   },
+   {
     "id": "469330cc-c194-5a55-00d5-705ba1f9a845",
     "parent": "SELECTORS",
     "properties": [
@@ -1053,6 +1540,85 @@
       "name": "htmlObject",
       "type": "HtmlObject",
       "value": "${h:mediumValueLineDom}"
+     },
+     {
+      "name": "executeAtStart",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "preExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "preChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "tooltip",
+      "type": "Html",
+      "value": ""
+     }
+    ],
+    "rowName": "TextInput Component",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component"
+   },
+   {
+    "id": "69a753f3-a46c-ebe7-6c2f-7d452643d1fd",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "mediumValueLineCom_v2"
+     },
+     {
+      "name": "parameter",
+      "type": "Parameter",
+      "value": "${p:mediumValueLineParam}"
+     },
+     {
+      "name": "listeners",
+      "type": "Listeners",
+      "value": "[\"${p:mediumValueLineParam}\"]"
+     },
+     {
+      "name": "maxLength",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "priority",
+      "type": "Integer",
+      "value": 5
+     },
+     {
+      "name": "refreshPeriod",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "size",
+      "type": "Integer",
+      "value": "10"
+     },
+     {
+      "name": "htmlObject",
+      "type": "HtmlObject",
+      "value": "${h:mediumValueLineDom_v2}"
      },
      {
       "name": "executeAtStart",
@@ -1169,6 +1735,283 @@
     "typeDesc": "Text input Component"
    },
    {
+    "id": "40875d1e-f691-e219-681f-76485125e4cd",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "badValueLineCom_v2"
+     },
+     {
+      "name": "parameter",
+      "type": "Parameter",
+      "value": "${p:badValueLineParam}"
+     },
+     {
+      "name": "listeners",
+      "type": "Listeners",
+      "value": "[\"${p:badValueLineParam}\"]"
+     },
+     {
+      "name": "maxLength",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "priority",
+      "type": "Integer",
+      "value": 5
+     },
+     {
+      "name": "refreshPeriod",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "size",
+      "type": "Integer",
+      "value": "10"
+     },
+     {
+      "name": "htmlObject",
+      "type": "HtmlObject",
+      "value": "${h:badValueLineDom_v2}"
+     },
+     {
+      "name": "executeAtStart",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "preExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "preChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "tooltip",
+      "type": "Html",
+      "value": ""
+     }
+    ],
+    "rowName": "TextInput Component",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component"
+   },
+   {
+    "id": "3f2a5890-2e28-6e95-83bd-2e337763aa4b",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "DateRangeCom"
+     },
+     {
+      "name": "listeners",
+      "type": "Listeners",
+      "value": "[\"${p:startDay}\",\"${p:endDay}\"]"
+     },
+     {
+      "name": "earliestDate",
+      "type": "String",
+      "value": "-1years"
+     },
+     {
+      "name": "latestDate",
+      "type": "String",
+      "value": "+1years"
+     },
+     {
+      "name": "leftOffset",
+      "type": "Integer",
+      "value": 0
+     },
+     {
+      "name": "topOffset",
+      "type": "Integer",
+      "value": 15
+     },
+     {
+      "name": "parameter",
+      "type": "ArrayParameter",
+      "value": "[\"${p:startDay}\",\"${p:endDay}\"]"
+     },
+     {
+      "name": "singleInput",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "inputSeparator",
+      "type": "String",
+      "value": ">"
+     },
+     {
+      "name": "canClickOutsidePopup",
+      "type": "Boolean",
+      "value": false
+     },
+     {
+      "name": "priority",
+      "type": "Integer",
+      "value": 5
+     },
+     {
+      "name": "htmlObject",
+      "type": "HtmlObject",
+      "value": "${h:datePickerDom}"
+     },
+     {
+      "name": "onCloseEvent",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "onOpenEvent",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "executeAtStart",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "preExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "preChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "tooltip",
+      "type": "Html",
+      "value": ""
+     }
+    ],
+    "rowName": "Date range input Component",
+    "type": "ComponentsDateRangeInput",
+    "typeDesc": "Date range input Component"
+   },
+   {
+    "id": "ca0f2628-fdd4-e7a8-0b14-72250a3d9c82",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "DateInputCom"
+     },
+     {
+      "name": "parameter",
+      "type": "Parameter",
+      "value": ""
+     },
+     {
+      "name": "listeners",
+      "type": "Listeners",
+      "value": "[]"
+     },
+     {
+      "name": "dateFormat",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "endDate",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "startDate",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "priority",
+      "type": "Integer",
+      "value": 5
+     },
+     {
+      "name": "htmlObject",
+      "type": "HtmlObject",
+      "value": "${h:datePickerDom2}"
+     },
+     {
+      "name": "onCloseEvent",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "onOpenEvent",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "executeAtStart",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "preExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "preChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "tooltip",
+      "type": "Html",
+      "value": ""
+     }
+    ],
+    "rowName": "Date input Component",
+    "type": "ComponentsDateInput",
+    "typeDesc": "Date input Component"
+   },
+   {
     "id": "CHARTS",
     "name": "Charts",
     "parent": "UnIqEiD",
@@ -1251,114 +2094,6 @@
     "rowName": "CGG Dial Component",
     "type": "ComponentscggDial",
     "typeDesc": "CGG Dial Chart"
-   },
-   {
-    "id": "CUSTOMCOMPONENTS",
-    "name": "Custom",
-    "parent": "UnIqEiD",
-    "properties": [
-     {
-      "name": "Group",
-      "type": "Label",
-      "value": "Custom"
-     }
-    ],
-    "type": "Label",
-    "typeDesc": "<i>Group</i>"
-   },
-   {
-    "id": "78d8ea4d-3176-042c-152a-9407f51f0bb0",
-    "parent": "CUSTOMCOMPONENTS",
-    "properties": [
-     {
-      "name": "name",
-      "type": "Id",
-      "value": ""
-     },
-     {
-      "name": "url",
-      "type": "String",
-      "value": ""
-     },
-     {
-      "name": "listeners",
-      "type": "Listeners",
-      "value": "[]"
-     },
-     {
-      "name": "parameters",
-      "type": "ValuesArray",
-      "value": "[]"
-     },
-     {
-      "name": "resultvar",
-      "type": "Result",
-      "value": ""
-     },
-     {
-      "name": "priority",
-      "type": "Integer",
-      "value": 5
-     },
-     {
-      "name": "refreshPeriod",
-      "type": "Integer",
-      "value": ""
-     },
-     {
-      "name": "ajaxRequestType",
-      "type": "ajaxRequestTypeCustom",
-      "value": "json"
-     },
-     {
-      "name": "htmlObject",
-      "type": "HtmlObject",
-      "value": ""
-     },
-     {
-      "name": "asyncCall",
-      "type": "Boolean",
-      "value": "true"
-     },
-     {
-      "name": "executeAtStart",
-      "type": "Boolean",
-      "value": "true"
-     },
-     {
-      "name": "preExecution",
-      "type": "JavaScript",
-      "value": ""
-     },
-     {
-      "name": "postExecution",
-      "type": "JavaScript",
-      "value": ""
-     },
-     {
-      "name": "postFetch",
-      "type": "JavaScript",
-      "value": ""
-     },
-     {
-      "name": "preChange",
-      "type": "JavaScript",
-      "value": ""
-     },
-     {
-      "name": "postChange",
-      "type": "JavaScript",
-      "value": ""
-     },
-     {
-      "name": "tooltip",
-      "type": "Html",
-      "value": ""
-     }
-    ],
-    "rowName": "AjaxRequestComponent",
-    "type": "ComponentsAjaxRequestComponent",
-    "typeDesc": "AjaxRequestComponent"
    }
   ]
  },
@@ -1521,6 +2256,78 @@
     "rowName": "sql over sqlJndi",
     "type": "Componentssql_sqlJndi",
     "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "b875061e-17ce-062c-41bd-1112de1dcb84",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "TableQuery_v2"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "CALL P_DAILY_DATA_TRACKING(${startDay}, ${endDay}, 1, -1, -1, -1, -1, -1, -1);    "
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": "3600"
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "false"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
    }
   ]
  },
@@ -1539,7 +2346,7 @@
      {
       "name": "resourceCode",
       "type": "Resource",
-      "value": "/***\n * \n * <!--引入百度地图的jssdk，这里需要使用你在百度地图开发者平台申请的 ak-->\n * \n ***/\ndocument.write(\"<script type='text/javascript' src='http://api.map.baidu.com/api?v=2.0&ak=4NyU6iMlimvtdReQphZkoqVRd3VSPuwx'><\\/script>\"); "
+      "value": "/***\n * \n * <!--引入百度地图的jssdk，这里需要使用你在百度地图开发者平台申请的 ak-->\n * \n ***/\ndocument.write(\"<script type='text/javascript' src='http://api.map.baidu.com/api?v=2.0&ak=Z2rqxCaEjYQ2OWA5uP0rnumvfxGf14Y6'><\\/script>\"); "
      },
      {
       "name": "resourceType",
@@ -1598,26 +2405,26 @@
    },
    {
     "id": "83cb8e87-e67b-2dbc-0011-481fe5a6b583",
-    "type": "LayoutResourceFile",
-    "typeDesc": "Resource",
     "parent": "UnIqEiD",
     "properties": [
      {
       "name": "name",
-      "value": "geoCoordMapJS",
-      "type": "Id"
+      "type": "Id",
+      "value": "geoCoordMapJS"
      },
      {
       "name": "resourceFile",
-      "value": "${solution:../js/Echarts3.6.0/geoCoordMap.js}",
-      "type": "ResourceFile"
+      "type": "ResourceFile",
+      "value": "${solution:../js/Echarts3.6.0/geoCoordMap.js}"
      },
      {
       "name": "resourceType",
-      "value": "Javascript",
-      "type": "Label"
+      "type": "Label",
+      "value": "Javascript"
      }
-    ]
+    ],
+    "type": "LayoutResourceFile",
+    "typeDesc": "Resource"
    },
    {
     "id": "5694b0e0-da47-a667-48ef-44c1c539629e",
@@ -1677,7 +2484,7 @@
      {
       "name": "resourceCode",
       "type": "Resource",
-      "value": "@font-face{\r\n    font-family: TPF_Font_Thin;\r\n    src: url('/pentaho/BI/fonts/Comfortaa_Thin.ttf'),\r\n         url('/pentaho/BI/fonts/Comfortaa_Thin.eot');  /* IE9 */ \r\n}\r\nbody{\r\n    \r\n    background-color:#ECF0F5;\r\n    /*\r\n    background-color:#FFFFFF;  #ECF0F5\r\n    */\r\n    font-size: 10px;\r\n    font-family: 'TPF_Font_Thin';\r\n    \r\n}\r\n\r\n.container {\r\n    width:100%;\r\n    height: 100%;\r\n    overflow: auto;\r\n    position: absolute; \r\n    padding-top: 10px;\r\n    padding-right: 0px;\r\n    padding-left: 10px;\r\n    padding-bottom: 10px;\r\n    margin-right: auto;\r\n    margin-left: auto;\r\n}\r\n\r\n/*   #   */\r\n.panel-default {\r\n    border: none;\r\n    border-radius: 0px;\r\n    margin-bottom: 0px;\r\n    box-shadow: none;\r\n    -webkit-box-shadow: none;\r\n}\r\n.panel-heading {\r\n    /*\r\n    padding: 10px 15px;\r\n    */\r\n    padding: 0px 0px;\r\n    border-bottom: 0px solid transparent;\r\n    border-top-left-radius: 3px;\r\n    border-top-right-radius: 3px;\r\n}\r\n.panel-default > .panel-heading {\r\n    color: #777;\r\n    background-color: #fff;\r\n    border-color: #e6e6e6;\r\n    padding: 10px 10px;\r\n}\r\n.panel-default > .panel-body {\r\n    padding: 10px;\r\n    padding-bottom: 0px;\r\n}\r\n.panel-default > .panel-body ul {\r\n    overflow: hidden;\r\n    padding: 0;\r\n    margin: 0px;\r\n    margin-top: -5px;\r\n}\r\n.panel-default > .panel-body ul li {\r\n    line-height: 27px;\r\n    list-style-type: none;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n}\r\n.panel-default > .panel-body ul li .time {\r\n    color: #a1a1a1;\r\n    float: right;\r\n    padding-right: 5px;\r\n} \r\n.single {\r\n    cursor: pointer;\r\n    border: 1px solid #eee;\r\n    border-radius: 0px;\r\n    text-align: center;\r\n    \r\n    padding: 10px;\r\n    padding-top: 10px;\r\n    padding-right: 10px;\r\n    margin-bottom: 10px;\r\n    \r\n} \r\n\r\n .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, \r\n .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, \r\n .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, \r\n .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, \r\n .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, \r\n .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, \r\n .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, \r\n .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, \r\n .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, \r\n .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, \r\n .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, \r\n .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {\r\n    position: relative;\r\n    min-height: 1px;\r\n    padding-right: 10px;\r\n    padding-left: 0px;\r\n} \r\n.row {\r\n    margin-right: 0px;\r\n    margin-left: 0px;\r\n} \r\n\r\nhr {\r\n    margin-top: 10px; \r\n    margin-bottom: 0px; \r\n    border: 0;\r\n    border-top: 0px solid #eee; \r\n} \r\n\r\n/**************************浮动**************************/\r\n.floatPanel {\r\n    cursor: pointer;\r\n    border: 1px solid #eee;\r\n    border-radius: 0px;\r\n    \r\n    /*\r\n    text-align: center;\r\n    padding: 10px;\r\n    padding-top: 10px;\r\n    padding-right: 10px;\r\n    margin-bottom: 10px;\r\n    */\r\n} \r\n.floatPanel:hover, .single.selected:hover {\r\n    -webkit-box-shadow: 0px 0px 35px -8px rgba(0,0,0,0.5);\r\n    -moz-box-shadow: 0px 0px 35px -8px rgba(0,0,0,0.5);\r\n    box-shadow: 0px 0px 35px -8px rgba(0,0,0,0.5);\r\n    \r\n    /*\r\n    border: 1px solid #49AEC0;\r\n    border: 1px solid #49AEC0;\r\n    background-color: rgba(240, 240, 240, 0.8);  rgba(0,0,0,0.5);\r\n    */\r\n}\r\n.floatPanel.selected {\r\n    background-color: rgba(240, 240, 240, 0.4);\r\n}\r\n \r\n/* ================ TABLE ================ */\r\ntable,table tr th, table tr td {\r\n    border:1px solid #F8FAFB; \r\n    /*\r\n    #F8FAFB  #278DC5\r\n    */\r\n}\r\n\r\ntable.table.dataTable {\r\n    /*\r\n    margin-top: 18px;\r\n    */\r\n    border: none;\r\n}\r\n\r\ntable.table.dataTable thead {\r\n    /*\r\n    display: none;\r\n    */\r\n    background-color: #F8FAFB;\r\n    /*\r\n    border: none;\r\n    */\r\n    border: 1px solid #efefef;\r\n}\r\n\r\n\r\ntable.table.dataTable tbody tr {\r\n    background-color: white;\r\n    /*\r\n    border: none;\r\n    */\r\n    border: 1px solid #efefef;\r\n}\r\n\r\ntable.table.dataTable tbody tr td {\r\n    border: none;\r\n    background-color: white;\r\n    padding: 4px;\r\n    line-height: 22px;\r\n}\r\n\r\ntable.table.dataTable tbody tr td.column2 {\r\n    font-size: 16px;\r\n}\r\n\r\n.salesByProduct {\r\n    margin-top: 20px;\r\n}\r\n\r\n.dataTables_wrapper .dataTables_filter input {\r\n    margin-left: 0.5em;\r\n    border: 1px solid #efefef;\r\n    padding: 5px;\r\n    margin: 10px;\r\n}\r\n\r\n.dataTables_wrapper .dataTables_length, \r\n.dataTables_wrapper .dataTables_filter, \r\n.dataTables_wrapper .dataTables_info, \r\n.dataTables_wrapper .dataTables_processing, \r\n.dataTables_wrapper .dataTables_paginate {\r\n    color: #333333;\r\n    width: 100%;\r\n    background-color: #F8FAFB;\r\n    padding: 4px;\r\n    border-bottom: 2px solid white;\r\n}\r\n\r\ntable.dataTable.compact thead th, \r\ntable.dataTable.compact thead td {\r\n    padding: 5px 9px;\r\n    background-color: #F8FAFB;\r\n    border: 2px solid white;\r\n}\r\n\r\ntable.tableComponent td.numeric {\r\n    font-family: 'Open Sans';\r\n    font-size: 12px;\r\n    vertical-align: middle;\r\n}\r\n\r\n\r\n\r\ntable .trend {\r\n    position: relative;\r\n\r\n}\r\n\r\ntable .trend:after {\r\n    position: absolute;\r\n    background: none;\r\n    font: normal normal normal 20px/1 FontAwesome;\r\n    top: -5px;\r\n    left: -3px;\r\n}\r\n\r\ntable .trend.down.good {\r\n    background: none;\r\n}\r\n\r\ntable .trend.down.good:after {\r\n    content: \"\\f0ab\";\r\n    color: red;\r\n}\r\n\r\ntable .trend.up.good {\r\n    background: none;\r\n}\r\n\r\ntable .trend.up.good:after {\r\n    content: \"\\f0aa\";\r\n    color: green;\r\n}\r\n\r\ntable .trend.neutral.good {\r\n    background: none;\r\n}\r\n\r\ntable .trend.neutral.good:after {\r\n    content: \"\\f0a9\";\r\n    color: #ccc;\r\n} \r\n\r\n.dataTables_wrapper .ui-toolbar {\r\n    padding: 0px;\r\n} \r\n.dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {\r\n    color: #333333;\r\n    width: 100%;\r\n    /* background-color: #F8FAFB; */\r\n    /* padding: 4px; */\r\n    /* border-bottom: 2px solid white; */\r\n}\r\n.dataTables_wrapper .dataTables_paginate {\r\n    float: right;\r\n    text-align: right;\r\n    /* padding-top: 0.25em; */\r\n} \r\n.ui-widget-header {\r\n    border: 0px solid #aed0ea;\r\n    background: #F8FAFB url(images/ui-bg_highlight-soft_100_deedf7_1x100.png) 50% 50% repeat-x; \r\n    /*\r\n    color: #222222;\r\n    */\r\n    color: #2779AA;\r\n    font-weight: bold;\r\n} \r\n.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {\r\n    border: 1px solid #aed0ea;\r\n    background: #F8FAFB url(images/ui-bg_glass_80_d7ebf9_1x400.png) 50% 50% repeat-x;\r\n    font-weight: bold;\r\n    color: #2779aa;\r\n}\r\n#TableDomTable_length{\r\n    color: #333333;\r\n    /* background-color: #F8FAFB; */\r\n    /* padding: 4px; */\r\n    /* border-bottom: 2px solid white; */\r\n    width:125px;\r\n}\r\n#TableDomTable_filter{\r\n    color: #333333;\r\n    background-color: #F8FAFB;\r\n    padding: 4px;\r\n    border-bottom: 2px solid white;\r\n    width:280px;height:35px;\r\n} \r\n.dataTables_wrapper .dataTables_filter input {\r\n    margin-left: 0em; \r\n    border: 1px solid #efefef;\r\n    padding: 0px; \r\n    margin: 0px; \r\n} \r\n#TableDomTable_info{\r\n    width: 50%;\r\n} \r\n#TableDomTable_paginate{\r\n    width: 20%;\r\n} \r\n.dataTables_wrapper .dataTables_paginate{\r\n    color: #333333;\r\n    width: 100%;\r\n    background-color: #F8FAFB;\r\n    padding: 0px;\r\n    border-bottom: 0px solid white;\r\n} \r\n\r\n.dataTables_wrapper .dataTables_info{\r\n    color: #2779AA;\r\n    width: 100%;\r\n    background-color: #F8FAFB;\r\n    padding: 4px;\r\n    border-bottom: 0px solid white; \r\n}\r\n.dataTables_wrapper .dataTables_length{\r\n    color: #333333;\r\n    width: 100%;\r\n    background-color: #F8FAFB;\r\n    padding: 4px;\r\n    border-bottom: 0px solid white;\r\n}\r\n\r\ntbody tr:hover td,tbody tr.over td{\r\n    background-color:#888888;\r\n    color:#fff;\r\n}\r\n\r\n.groupHeader.group0 {\r\n    background: #F8FAFB;\r\n}\r\n\r\n/*************************指标卡 ****************************/\r\n.td_class{\r\n    background-color: red;   \r\n}\r\n\r\n/*******************************************************/\r\n#row_table_col_panel_body{\r\n    height:400px;\r\n   overflow:auto; \r\n}\r\n \r\n /*********************************************************/\r\n input, button, select, textarea {\r\n    font-family: 'TPF_Font_Thin'; \r\n    font-size: 10px; \r\n    line-height: 10px; \r\n    border-radius: 5px;\r\n    border:1px solid #DBDBDB ;\r\n} \r\n\r\n/**************************CustomScrollbar************************************/\r\n.mCS-rounded.mCSB_scrollTools .mCSB_draggerRail {\r\n    background-color: #C1C1C1;\r\n} \r\n.mCSB_container_wrapper {\r\n    position: absolute;\r\n    height: auto;\r\n    width: auto;\r\n    overflow: hidden;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    bottom: 0;\r\n    margin-right: 5px;\r\n    margin-bottom: 30px;\r\n}\r\n.mCSB_scrollTools {\r\n    position: absolute;\r\n    width: 5px;\r\n    height: auto;\r\n    left: auto;\r\n    top: 0;\r\n    right: 0;\r\n    bottom: 0;\r\n} "
+      "value": "@font-face{\r\n    font-family: TPF_Font_Thin;\r\n    src: url('/pentaho/BI/fonts/Comfortaa_Thin.ttf'),\r\n         url('/pentaho/BI/fonts/Comfortaa_Thin.eot');  /* IE9 */ \r\n}\r\nbody{\r\n    \r\n    background-color:#E7EBED;\r\n    /*\r\n    background-color:#FFFFFF;  #ECF0F5\r\n    */\r\n    font-size: 10px;\r\n    font-family: 'TPF_Font_Thin';\r\n    \r\n}\r\n\r\n.container {\r\n    width:100%;\r\n    height: 100%;\r\n    overflow: auto;\r\n    position: absolute; \r\n    padding-top: 10px;\r\n    padding-right: 0px;\r\n    padding-left: 10px;\r\n    padding-bottom: 10px;\r\n    margin-right: auto;\r\n    margin-left: auto;\r\n}\r\n\r\n/*   #   */\r\n.panel-default {\r\n    border: none;\r\n    border-radius: 0px;\r\n    margin-bottom: 0px;\r\n    box-shadow: none;\r\n    -webkit-box-shadow: none;\r\n}\r\n.panel-heading {\r\n    /*\r\n    padding: 10px 15px;\r\n    */\r\n    padding: 0px 0px;\r\n    border-bottom: 0px solid transparent;\r\n    border-top-left-radius: 3px;\r\n    border-top-right-radius: 3px;\r\n}\r\n.panel-default > .panel-heading {\r\n    color: #777;\r\n    background-color: #fff;\r\n    border-color: #e6e6e6;\r\n    padding: 10px 10px;\r\n}\r\n.panel-default > .panel-body {\r\n    padding: 10px;\r\n    padding-bottom: 0px;\r\n}\r\n.panel-default > .panel-body ul {\r\n    overflow: hidden;\r\n    padding: 0;\r\n    margin: 0px;\r\n    margin-top: -5px;\r\n}\r\n.panel-default > .panel-body ul li {\r\n    line-height: 27px;\r\n    list-style-type: none;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n}\r\n.panel-default > .panel-body ul li .time {\r\n    color: #a1a1a1;\r\n    float: right;\r\n    padding-right: 5px;\r\n} \r\n.single {\r\n    cursor: pointer;\r\n    border: 1px solid #eee;\r\n    border-radius: 0px;\r\n    text-align: center;\r\n    \r\n    padding: 10px;\r\n    padding-top: 10px;\r\n    padding-right: 10px;\r\n    margin-bottom: 10px;\r\n    \r\n} \r\n\r\n .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, \r\n .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, \r\n .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, \r\n .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, \r\n .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, \r\n .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, \r\n .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, \r\n .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, \r\n .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, \r\n .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, \r\n .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, \r\n .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {\r\n    position: relative;\r\n    min-height: 1px;\r\n    padding-right: 10px;\r\n    padding-left: 0px;\r\n} \r\n.row {\r\n    margin-right: 0px;\r\n    margin-left: 0px;\r\n} \r\n\r\nhr {\r\n    margin-top: 10px; \r\n    margin-bottom: 0px; \r\n    border: 0;\r\n    border-top: 0px solid #eee; \r\n} \r\n\r\n/**************************浮动**************************/\r\n.floatPanel {\r\n    cursor: pointer;\r\n    border: 1px solid #eee;\r\n    border-radius: 0px;\r\n    \r\n    /*\r\n    text-align: center;\r\n    padding: 10px;\r\n    padding-top: 10px;\r\n    padding-right: 10px;\r\n    margin-bottom: 10px;\r\n    */\r\n} \r\n.floatPanel:hover, .single.selected:hover {\r\n    -webkit-box-shadow: 0px 0px 35px -8px rgba(0,0,0,0.5);\r\n    -moz-box-shadow: 0px 0px 35px -8px rgba(0,0,0,0.5);\r\n    box-shadow: 0px 0px 35px -8px rgba(0,0,0,0.5);\r\n    \r\n    /*\r\n    border: 1px solid #49AEC0;\r\n    border: 1px solid #49AEC0;\r\n    background-color: rgba(240, 240, 240, 0.8);  rgba(0,0,0,0.5);\r\n    */\r\n}\r\n.floatPanel.selected {\r\n    background-color: rgba(240, 240, 240, 0.4);\r\n}\r\n \r\n/* ================ TABLE ================ */\r\ntable,table tr th, table tr td {\r\n    border:1px solid #F8FAFB; \r\n    /*\r\n    #F8FAFB  #278DC5\r\n    */\r\n}\r\n\r\ntable.table.dataTable {\r\n    /*\r\n    margin-top: 18px;\r\n    */\r\n    border: none;\r\n}\r\n\r\ntable.table.dataTable thead {\r\n    /*\r\n    display: none;\r\n    */\r\n    background-color: #F8FAFB;\r\n    /*\r\n    border: none;\r\n    */\r\n    border: 1px solid #efefef;\r\n}\r\n\r\n\r\ntable.table.dataTable tbody tr {\r\n    background-color: white;\r\n    /*\r\n    border: none;\r\n    */\r\n    border: 1px solid #efefef;\r\n}\r\n\r\ntable.table.dataTable tbody tr td {\r\n    border: none;\r\n    background-color: white;\r\n    padding: 4px;\r\n    line-height: 22px;\r\n}\r\n\r\ntable.table.dataTable tbody tr td.column2 {\r\n    font-size: 16px;\r\n}\r\n\r\n.salesByProduct {\r\n    margin-top: 20px;\r\n}\r\n\r\n.dataTables_wrapper .dataTables_filter input {\r\n    margin-left: 0.5em;\r\n    border: 1px solid #efefef;\r\n    padding: 5px;\r\n    margin: 10px;\r\n}\r\n\r\n.dataTables_wrapper .dataTables_length, \r\n.dataTables_wrapper .dataTables_filter, \r\n.dataTables_wrapper .dataTables_info, \r\n.dataTables_wrapper .dataTables_processing, \r\n.dataTables_wrapper .dataTables_paginate {\r\n    color: #333333;\r\n    width: 100%;\r\n    background-color: #F8FAFB;\r\n    padding: 4px;\r\n    border-bottom: 2px solid white;\r\n}\r\n\r\ntable.dataTable.compact thead th, \r\ntable.dataTable.compact thead td {\r\n    padding: 5px 9px;\r\n    background-color: #F8FAFB;\r\n    border: 2px solid white;\r\n}\r\n\r\ntable.tableComponent td.numeric {\r\n    font-family: 'Open Sans';\r\n    font-size: 12px;\r\n    vertical-align: middle;\r\n}\r\n\r\n\r\n\r\ntable .trend {\r\n    position: relative;\r\n\r\n}\r\n\r\ntable .trend:after {\r\n    position: absolute;\r\n    background: none;\r\n    font: normal normal normal 20px/1 FontAwesome;\r\n    top: -5px;\r\n    left: -3px;\r\n}\r\n\r\ntable .trend.down.good {\r\n    background: none;\r\n}\r\n\r\ntable .trend.down.good:after {\r\n    content: \"\\f0ab\";\r\n    color: red;\r\n}\r\n\r\ntable .trend.up.good {\r\n    background: none;\r\n}\r\n\r\ntable .trend.up.good:after {\r\n    content: \"\\f0aa\";\r\n    color: green;\r\n}\r\n\r\ntable .trend.neutral.good {\r\n    background: none;\r\n}\r\n\r\ntable .trend.neutral.good:after {\r\n    content: \"\\f0a9\";\r\n    color: #ccc;\r\n} \r\n\r\n.dataTables_wrapper .ui-toolbar {\r\n    padding: 0px;\r\n} \r\n.dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {\r\n    color: #333333;\r\n    width: 100%;\r\n    /* background-color: #F8FAFB; */\r\n    /* padding: 4px; */\r\n    /* border-bottom: 2px solid white; */\r\n}\r\n.dataTables_wrapper .dataTables_paginate {\r\n    float: right;\r\n    text-align: right;\r\n    /* padding-top: 0.25em; */\r\n} \r\n.ui-widget-header {\r\n    border: 0px solid #aed0ea;\r\n    background: #F8FAFB url(images/ui-bg_highlight-soft_100_deedf7_1x100.png) 50% 50% repeat-x; \r\n    /*\r\n    color: #222222;\r\n    */\r\n    color: #2779AA;\r\n    font-weight: bold;\r\n} \r\n.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {\r\n    border: 1px solid #aed0ea;\r\n    background: #F8FAFB url(images/ui-bg_glass_80_d7ebf9_1x400.png) 50% 50% repeat-x;\r\n    font-weight: bold;\r\n    color: #2779aa;\r\n}\r\n#TableDomTable_length{\r\n    color: #333333;\r\n    /* background-color: #F8FAFB; */\r\n    /* padding: 4px; */\r\n    /* border-bottom: 2px solid white; */\r\n    width:125px;\r\n}\r\n#TableDomTable_filter{\r\n    color: #333333;\r\n    background-color: #F8FAFB;\r\n    padding: 4px;\r\n    border-bottom: 2px solid white;\r\n    width:280px;height:35px;\r\n} \r\n\r\n#TableDom_v2Table_length{\r\n    color: #333333;\r\n    /* background-color: #F8FAFB; */\r\n    /* padding: 4px; */\r\n    /* border-bottom: 2px solid white; */\r\n    width:125px;\r\n}\r\n#TableDom_v2Table_filter{\r\n    color: #333333;\r\n    background-color: #F8FAFB;\r\n    padding: 4px;\r\n    border-bottom: 2px solid white;\r\n    width:280px;height:35px;\r\n} \r\n\r\n.dataTables_wrapper .dataTables_filter input {\r\n    margin-left: 0em; \r\n    border: 1px solid #efefef;\r\n    padding: 0px; \r\n    margin: 0px; \r\n} \r\n#TableDomTable_info{\r\n    width: 50%;\r\n} \r\n#TableDomTable_paginate{\r\n    width: 20%;\r\n} \r\n\r\n#TableDom_v2Table_info{\r\n    width: 50%;\r\n} \r\n#TableDom_v2Table_paginate{\r\n    width: 20%;\r\n} \r\n.dataTables_wrapper .dataTables_paginate{\r\n    color: #333333;\r\n    width: 100%;\r\n    background-color: #F8FAFB;\r\n    padding: 0px;\r\n    border-bottom: 0px solid white;\r\n} \r\n\r\n.dataTables_wrapper .dataTables_info{\r\n    color: #2779AA;\r\n    width: 100%;\r\n    background-color: #F8FAFB;\r\n    padding: 4px;\r\n    border-bottom: 0px solid white; \r\n}\r\n.dataTables_wrapper .dataTables_length{\r\n    color: #333333;\r\n    width: 100%;\r\n    background-color: #F8FAFB;\r\n    padding: 4px;\r\n    border-bottom: 0px solid white;\r\n}\r\n\r\ntbody tr:hover td,tbody tr.over td{\r\n    background-color:#888888;\r\n    color:#fff;\r\n}\r\n\r\n.groupHeader.group0 {\r\n    background: #F8FAFB;\r\n}\r\n\r\n/*************************指标卡 ****************************/\r\n.td_class{\r\n    background-color: red;   \r\n}\r\n\r\n/*******************************************************/\r\n#row_table_col_panel_body{\r\n    height:400px;\r\n   overflow:auto; \r\n}\r\n#row_table_col_panel_body_v2{\r\n    height:400px;\r\n   overflow:auto; \r\n}\r\n \r\n /*********************************************************/\r\n input, button, select, textarea {\r\n    font-family: 'TPF_Font_Thin'; \r\n    font-size: 10px; \r\n    line-height: 10px; \r\n    border-radius: 5px;\r\n    border:1px solid #DBDBDB ;\r\n} \r\n\r\n/**************************CustomScrollbar************************************/\r\n.mCS-rounded.mCSB_scrollTools .mCSB_draggerRail {\r\n    background-color: #C1C1C1;\r\n} \r\n.mCSB_container_wrapper {\r\n    position: absolute;\r\n    height: auto;\r\n    width: auto;\r\n    overflow: hidden;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    bottom: 0;\r\n    margin-right: 5px;\r\n    margin-bottom: 30px;\r\n}\r\n.mCSB_scrollTools {\r\n    position: absolute;\r\n    width: 5px;\r\n    height: auto;\r\n    left: auto;\r\n    top: 0;\r\n    right: 0;\r\n    bottom: 0;\r\n} "
      },
      {
       "name": "resourceType",
@@ -1733,27 +2540,27 @@
      {
       "name": "name",
       "type": "Id",
-      "value": "filter_row_col"
+      "value": "filter_row_col1"
      },
      {
       "name": "bootstrapExtraSmall",
       "type": "String",
-      "value": "12"
+      "value": "6"
      },
      {
       "name": "bootstrapSmall",
       "type": "String",
-      "value": ""
+      "value": "6"
      },
      {
       "name": "bootstrapMedium",
       "type": "String",
-      "value": ""
+      "value": "2"
      },
      {
       "name": "bootstrapLarge",
       "type": "String",
-      "value": ""
+      "value": "2"
      },
      {
       "name": "bootstrapCssClass",
@@ -1801,7 +2608,7 @@
      {
       "name": "height",
       "type": "Integer",
-      "value": "100"
+      "value": "70"
      },
      {
       "name": "roundCorners",
@@ -1862,7 +2669,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-filter\"></i>\r\n</div> "
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-filter\"></i> 双日期控件筛选器 \r\n</div> "
      },
      {
       "name": "fontSize",
@@ -1905,7 +2712,7 @@
      {
       "name": "cssClass",
       "type": "String",
-      "value": "hidden-xs hidden-sm hidden-md hidden-lg"
+      "value": ""
      }
     ],
     "type": "BootstrapPanelBody",
@@ -1923,7 +2730,1491 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-filter\"></i> 筛选器 \r\n</div> "
+      "value": "<div id='datePickerDom'></div> "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "0fc29902-266f-efe4-a9c6-7784174c6327",
+    "parent": "d24a15a8-86ff-99b4-7327-95d47d4e6a46",
+    "properties": [
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "hidden-lg hidden-md"
+     }
+    ],
+    "type": "LayoutSpace",
+    "typeDesc": "Space"
+   },
+   {
+    "id": "bd8772d2-ee7d-dab9-c36f-6d2381438d1d",
+    "parent": "4689f1ff-9799-e3eb-2bf1-8f106e12f985",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "filter_row_col2"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": "2"
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": "2"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "7cd8b923-01ad-ad96-d3f7-81c67b3079ee",
+    "parent": "bd8772d2-ee7d-dab9-c36f-6d2381438d1d",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "filter_row_col2_panel_new"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": "70"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "floatPanel"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "type": "bootstrapPanelStyleCustom",
+      "value": "panel-default"
+     }
+    ],
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel"
+   },
+   {
+    "id": "ad9d2cbb-7da4-75c1-6355-7f9b07a15943",
+    "parent": "7cd8b923-01ad-ad96-d3f7-81c67b3079ee",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "filter_row_col_panel_header_new"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelHeader",
+    "typeDesc": "Panel Header"
+   },
+   {
+    "id": "18b6aa4c-9df2-e712-03f5-d3bea58890f1",
+    "parent": "ad9d2cbb-7da4-75c1-6355-7f9b07a15943",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "filter_row_col_panel_header_html_new"
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-filter\"></i> 单日期控件筛选器 \r\n</div> "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "cf86b04f-7d35-e0b6-29cc-a260e7063581",
+    "parent": "7cd8b923-01ad-ad96-d3f7-81c67b3079ee",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "filter_row_col_panel_body_new"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body"
+   },
+   {
+    "id": "9200921b-e970-c262-c7ce-89ec7afb84e8",
+    "parent": "cf86b04f-7d35-e0b6-29cc-a260e7063581",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "filter_row_col_panel_body_html_new"
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "<div id='datePickerDom2'></div> "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "6339a5d0-a4d7-8fbd-b4b1-83025d572cba",
+    "parent": "bd8772d2-ee7d-dab9-c36f-6d2381438d1d",
+    "properties": [
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "hidden-lg hidden-md"
+     }
+    ],
+    "type": "LayoutSpace",
+    "typeDesc": "Space"
+   },
+   {
+    "id": "18efb738-0d52-0bfc-8811-1bb5f89db3cf",
+    "parent": "4689f1ff-9799-e3eb-2bf1-8f106e12f985",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "filter_row_col3"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": "2"
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": "2"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "3d46f398-a933-d695-9211-6c6611389230",
+    "parent": "18efb738-0d52-0bfc-8811-1bb5f89db3cf",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": "70"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "floatPanel"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "type": "bootstrapPanelStyleCustom",
+      "value": "panel-default"
+     }
+    ],
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel"
+   },
+   {
+    "id": "0876498f-176b-1e19-fa97-3aaec92c7624",
+    "parent": "3d46f398-a933-d695-9211-6c6611389230",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelHeader",
+    "typeDesc": "Panel Header"
+   },
+   {
+    "id": "694a7e7f-b4f6-7a53-8f40-a23f501b22be",
+    "parent": "0876498f-176b-1e19-fa97-3aaec92c7624",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-filter\"></i>  \r\n</div> "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "515532de-01d8-5012-c829-4056e259f72d",
+    "parent": "3d46f398-a933-d695-9211-6c6611389230",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body"
+   },
+   {
+    "id": "1323aced-5448-8c65-2bfb-6253885e1a02",
+    "parent": "515532de-01d8-5012-c829-4056e259f72d",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": ""
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "9006d0c5-b064-66ef-be61-5c3e764cc18c",
+    "parent": "18efb738-0d52-0bfc-8811-1bb5f89db3cf",
+    "properties": [
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "hidden-lg hidden-md"
+     }
+    ],
+    "type": "LayoutSpace",
+    "typeDesc": "Space"
+   },
+   {
+    "id": "fb07bbfc-4a17-18a8-90a6-32b92f6c6fbd",
+    "parent": "4689f1ff-9799-e3eb-2bf1-8f106e12f985",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "filter_row_col4"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": "2"
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": "2"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "58a2a84c-b252-ee89-f992-db79c652aeae",
+    "parent": "fb07bbfc-4a17-18a8-90a6-32b92f6c6fbd",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": "70"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "floatPanel"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "type": "bootstrapPanelStyleCustom",
+      "value": "panel-default"
+     }
+    ],
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel"
+   },
+   {
+    "id": "1d3ac168-c5d2-f4f9-1fa3-45ceab676cd0",
+    "parent": "58a2a84c-b252-ee89-f992-db79c652aeae",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelHeader",
+    "typeDesc": "Panel Header"
+   },
+   {
+    "id": "e18e9bb8-d588-bb6e-4c32-c3174bdb5772",
+    "parent": "1d3ac168-c5d2-f4f9-1fa3-45ceab676cd0",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-filter\"></i>  \r\n</div> "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "4c0b6381-c9eb-ddfd-3358-4e67756a1aad",
+    "parent": "58a2a84c-b252-ee89-f992-db79c652aeae",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body"
+   },
+   {
+    "id": "a032376c-e89c-0a08-65b2-023928cccc3e",
+    "parent": "4c0b6381-c9eb-ddfd-3358-4e67756a1aad",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": ""
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "01345276-0118-233a-d914-ec8fa64fbbf0",
+    "parent": "fb07bbfc-4a17-18a8-90a6-32b92f6c6fbd",
+    "properties": [
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "hidden-lg hidden-md"
+     }
+    ],
+    "type": "LayoutSpace",
+    "typeDesc": "Space"
+   },
+   {
+    "id": "e1408c18-c412-3bca-5764-0c551f043f9c",
+    "parent": "4689f1ff-9799-e3eb-2bf1-8f106e12f985",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "filter_row_col5"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": "2"
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": "2"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "32896025-1d56-b6da-9e27-fd91f5d6a04f",
+    "parent": "e1408c18-c412-3bca-5764-0c551f043f9c",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": "70"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "floatPanel"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "type": "bootstrapPanelStyleCustom",
+      "value": "panel-default"
+     }
+    ],
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel"
+   },
+   {
+    "id": "ac81cbdf-2d94-a74b-f0f9-ea2e8e468291",
+    "parent": "32896025-1d56-b6da-9e27-fd91f5d6a04f",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelHeader",
+    "typeDesc": "Panel Header"
+   },
+   {
+    "id": "440a2964-f67b-ac0d-14ad-8a18dc9e7353",
+    "parent": "ac81cbdf-2d94-a74b-f0f9-ea2e8e468291",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-filter\"></i>  \r\n</div> "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "56963081-c0f0-40e7-91b0-dab03f1b1472",
+    "parent": "32896025-1d56-b6da-9e27-fd91f5d6a04f",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body"
+   },
+   {
+    "id": "2f4bc627-244e-a2f1-3c5f-b891cf5f8d11",
+    "parent": "56963081-c0f0-40e7-91b0-dab03f1b1472",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": ""
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "e5f54dac-1cbb-5235-0550-50a0d72af52c",
+    "parent": "e1408c18-c412-3bca-5764-0c551f043f9c",
+    "properties": [
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "hidden-lg hidden-md"
+     }
+    ],
+    "type": "LayoutSpace",
+    "typeDesc": "Space"
+   },
+   {
+    "id": "3b80cef3-da8c-0512-f83d-d92cd5c4508a",
+    "parent": "4689f1ff-9799-e3eb-2bf1-8f106e12f985",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "filter_row_col6"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": "6"
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": "2"
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": "2"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "54310453-92c7-de7e-3316-9c09834658c3",
+    "parent": "3b80cef3-da8c-0512-f83d-d92cd5c4508a",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": "70"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "floatPanel"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "type": "bootstrapPanelStyleCustom",
+      "value": "panel-default"
+     }
+    ],
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel"
+   },
+   {
+    "id": "f069c4e5-b3c7-2067-f892-f36ad07c5564",
+    "parent": "54310453-92c7-de7e-3316-9c09834658c3",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelHeader",
+    "typeDesc": "Panel Header"
+   },
+   {
+    "id": "ab6e80c6-44bb-c00d-bdca-816cbdaf4cc9",
+    "parent": "f069c4e5-b3c7-2067-f892-f36ad07c5564",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-filter\"></i>  \r\n</div> "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "9f7ff2b8-27ac-7b94-f718-d10a0bfb2fc9",
+    "parent": "54310453-92c7-de7e-3316-9c09834658c3",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body"
+   },
+   {
+    "id": "363b3191-eab6-e7d3-31ab-56917c84c099",
+    "parent": "9f7ff2b8-27ac-7b94-f718-d10a0bfb2fc9",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": ""
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "a6b8583b-3c01-7556-fbd9-1bed3b0b7715",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "hidden-xs hidden-sm"
+     }
+    ],
+    "type": "LayoutSpace",
+    "typeDesc": "Space"
+   },
+   {
+    "id": "7ec9ad7b-0064-a316-3bbb-b07c8b18efa3",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row_table_v2"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutRow",
+    "typeDesc": "Row"
+   },
+   {
+    "id": "031dfa5f-2444-f467-9f97-e994c668d5a6",
+    "parent": "7ec9ad7b-0064-a316-3bbb-b07c8b18efa3",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row_table_col_v2"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "d919c76a-5267-63cc-3918-1c62e9e1dad4",
+    "parent": "031dfa5f-2444-f467-9f97-e994c668d5a6",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row_table_col_panel_v2"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": "460"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "floatPanel"
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "type": "bootstrapPanelStyleCustom",
+      "value": "panel-default"
+     }
+    ],
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel"
+   },
+   {
+    "id": "52c9d2ed-b35a-1037-c7d6-b0fd2c920afa",
+    "parent": "d919c76a-5267-63cc-3918-1c62e9e1dad4",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row_table_col_panel_header_v2"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelHeader",
+    "typeDesc": "Panel Header"
+   },
+   {
+    "id": "3b6760ab-5721-8820-728a-d3e99a505f90",
+    "parent": "52c9d2ed-b35a-1037-c7d6-b0fd2c920afa",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row_table_col_panel_header_html_v2"
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "<!-- \r\n<div class=\"panel-heading \">\r\n    <i class=\"fa fa-table\"></i> 交叉表格\r\n</div> \r\n    \r\n</div>\r\n<div class='container'>\r\n    <div id='row_table'  class='row clearfix ' >\r\n        <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12 last'>\r\n            <div id='row_table_col' >\r\n                <div id='row_table_col_panel'  class='floatPanel panel panel-default '  style='height:800px;' >\r\n                    <div id='row_table_col_panel_header'  class='panel-heading ' >\r\n                        <div class=\"panel-heading \">\r\n                            <i class=\"fa fa-table\"></i> 交叉表格\r\n                        </div> \r\n                    </div>\r\n                    <div id='row_table_col_panel_body'  class='panel-body ' >\r\n                        <div id='TableDom'></div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n       @bestValueLine    最好值刻度线  绿色\r\n     * @mediumValueLine  中上值刻度线  蓝色\r\n     * @normalValueLine  正常值刻度线  白色\r\n     * @badValueLine     最差值刻度线  红色\r\n-->\r\n<div class='row clearfix '>\r\n    <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4'>\r\n        <div class=\"panel-heading \">\r\n            <i class=\"fa fa-table\"></i> 每日数据追踪\r\n        </div> \r\n    </div>\r\n    \r\n    <!-- \r\n    <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4'>\r\n        <div class='row clearfix '>\r\n            <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4'>\r\n                <div class='row clearfix '>\r\n                    <div class='col-xs-12 col-sm-12 col-md-6 col-lg-4'>\r\n                        <div class='pull-right' style='border:1px solid #40A276;\r\n                                                        background-color:#40A276;\r\n                                                        -moz-border-radius: 0px;\r\n                                                        -webkit-border-radius: 0px;\r\n                                                        color: #ffffff;\r\n                                                        font-size: 10px;'>\r\n                            绿色线\r\n                        </div>\r\n                    </div>\r\n                    <div class='col-xs-12 col-sm-12 col-md-6 col-lg-8 last'>\r\n                        <div id='bestValueLineDom_v2'></div>\r\n                    </div>\r\n                </div>\r\n            </div> \r\n            <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4'>\r\n                <div class='row clearfix '>\r\n                    <div class='col-xs-12 col-sm-12 col-md-6 col-lg-4'>\r\n                        <div class='pull-right' style='border:1px solid #1979CA;\r\n                                                        background-color:#1979CA;\r\n                                                        -moz-border-radius: 0px;\r\n                                                        -webkit-border-radius: 0px;\r\n                                                        color: #ffffff;\r\n                                                        font-size: 10px;'>\r\n                            蓝色线\r\n                    </div>\r\n                    </div>\r\n                    <div class='col-xs-12 col-sm-12 col-md-6 col-lg-8 last'>\r\n                        <div id='mediumValueLineDom_v2'></div>\r\n                    </div>\r\n                </div>\r\n            </div> \r\n            <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4 last'>\r\n                <div class='row clearfix '>\r\n                    <div class='col-xs-12 col-sm-12 col-md-6 col-lg-4'>\r\n                        <div class='pull-right' style='border:1px solid #EE4B4B;\r\n                                                        background-color:#EE4B4B;\r\n                                                        -moz-border-radius: 0px;\r\n                                                        -webkit-border-radius: 0px;\r\n                                                        color: #ffffff;\r\n                                                        font-size: 10px;'>\r\n                            红色线\r\n                        </div>\r\n                    </div>\r\n                    <div class='col-xs-12 col-sm-12 col-md-6 col-lg-8 last'>\r\n                        <div id='badValueLineDom_v2'></div>\r\n                    </div>\r\n                </div>\r\n            </div> \r\n        </div> \r\n    </div>\r\n    -->\r\n    \r\n    <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4 last'>\r\n        <div class=\"panel-heading pull-right\">\r\n            <div id='ExportDom'></div>\r\n        </div> \r\n    </div>\r\n</div> "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "78872194-1ad2-0851-fe66-0f1f59088e51",
+    "parent": "d919c76a-5267-63cc-3918-1c62e9e1dad4",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row_table_col_panel_body_v2"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body"
+   },
+   {
+    "id": "717e3c5c-fe62-e569-ab9e-1c0ddca7d6f9",
+    "parent": "78872194-1ad2-0851-fe66-0f1f59088e51",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row_table_col_panel_body_html_v2"
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "<div id='TableDom_v2'></div> "
      },
      {
       "name": "fontSize",
@@ -2420,7 +4711,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div id='EchartsBmapDom' style='height: 550px'></div> \n\n\n<script type=\"text/javascript\">\nlet bmapChart = echarts.init(document.getElementById('EchartsBmapDom'));\nlet data = [\n     {name: '海门', value: 9},\n     {name: '鄂尔多斯', value: 12},\n     {name: '招远', value: 12},\n     {name: '舟山', value: 12},\n     {name: '齐齐哈尔', value: 14},\n     {name: '盐城', value: 15},\n     {name: '赤峰', value: 16},\n     {name: '青岛', value: 18},\n     {name: '乳山', value: 18},\n     {name: '金昌', value: 19},\n     {name: '泉州', value: 21},\n     {name: '莱西', value: 21},\n     {name: '日照', value: 21},\n     {name: '胶南', value: 22},\n     {name: '南通', value: 23},\n     {name: '拉萨', value: 24},\n     {name: '云浮', value: 24},\n     {name: '梅州', value: 25},\n     {name: '文登', value: 25},\n     {name: '上海', value: 25},\n     {name: '攀枝花', value: 25},\n     {name: '威海', value: 25},\n     {name: '承德', value: 25},\n     {name: '厦门', value: 26},\n     {name: '汕尾', value: 26},\n     {name: '潮州', value: 26},\n     {name: '丹东', value: 27},\n     {name: '太仓', value: 27},\n     {name: '曲靖', value: 27},\n     {name: '烟台', value: 28},\n     {name: '福州', value: 29},\n     {name: '瓦房店', value: 30},\n     {name: '即墨', value: 30},\n     {name: '抚顺', value: 31},\n     {name: '玉溪', value: 31},\n     {name: '张家口', value: 31},\n     {name: '阳泉', value: 31},\n     {name: '莱州', value: 32},\n     {name: '湖州', value: 32},\n     {name: '汕头', value: 32},\n     {name: '昆山', value: 33},\n     {name: '宁波', value: 33},\n     {name: '湛江', value: 33},\n     {name: '揭阳', value: 34},\n     {name: '荣成', value: 34},\n     {name: '连云港', value: 35},\n     {name: '葫芦岛', value: 35},\n     {name: '常熟', value: 36},\n     {name: '东莞', value: 36},\n     {name: '河源', value: 36},\n     {name: '淮安', value: 36},\n     {name: '泰州', value: 36},\n     {name: '南宁', value: 37},\n     {name: '营口', value: 37},\n     {name: '惠州', value: 37},\n     {name: '江阴', value: 37},\n     {name: '蓬莱', value: 37},\n     {name: '韶关', value: 38},\n     {name: '嘉峪关', value: 38},\n     {name: '广州', value: 38},\n     {name: '延安', value: 38},\n     {name: '太原', value: 39},\n     {name: '清远', value: 39},\n     {name: '中山', value: 39},\n     {name: '昆明', value: 39},\n     {name: '寿光', value: 40},\n     {name: '盘锦', value: 40},\n     {name: '长治', value: 41},\n     {name: '深圳', value: 41},\n     {name: '珠海', value: 42},\n     {name: '宿迁', value: 43},\n     {name: '咸阳', value: 43},\n     {name: '铜川', value: 44},\n     {name: '平度', value: 44},\n     {name: '佛山', value: 44},\n     {name: '海口', value: 44},\n     {name: '江门', value: 45},\n     {name: '章丘', value: 45},\n     {name: '肇庆', value: 46},\n     {name: '大连', value: 47},\n     {name: '临汾', value: 47},\n     {name: '吴江', value: 47},\n     {name: '石嘴山', value: 49},\n     {name: '沈阳', value: 50},\n     {name: '苏州', value: 50},\n     {name: '茂名', value: 50},\n     {name: '嘉兴', value: 51},\n     {name: '长春', value: 51},\n     {name: '胶州', value: 52},\n     {name: '银川', value: 52},\n     {name: '张家港', value: 52},\n     {name: '三门峡', value: 53},\n     {name: '锦州', value: 54},\n     {name: '南昌', value: 54},\n     {name: '柳州', value: 54},\n     {name: '三亚', value: 54},\n     {name: '自贡', value: 56},\n     {name: '吉林', value: 56},\n     {name: '阳江', value: 57},\n     {name: '泸州', value: 57},\n     {name: '西宁', value: 57},\n     {name: '宜宾', value: 58},\n     {name: '呼和浩特', value: 58},\n     {name: '成都', value: 58},\n     {name: '大同', value: 58},\n     {name: '镇江', value: 59},\n     {name: '桂林', value: 59},\n     {name: '张家界', value: 59},\n     {name: '宜兴', value: 59},\n     {name: '北海', value: 60},\n     {name: '西安', value: 61},\n     {name: '金坛', value: 62},\n     {name: '东营', value: 62},\n     {name: '牡丹江', value: 63},\n     {name: '遵义', value: 63},\n     {name: '绍兴', value: 63},\n     {name: '扬州', value: 64},\n     {name: '常州', value: 64},\n     {name: '潍坊', value: 65},\n     {name: '重庆', value: 66},\n     {name: '台州', value: 67},\n     {name: '南京', value: 67},\n     {name: '滨州', value: 70},\n     {name: '贵阳', value: 71},\n     {name: '无锡', value: 71},\n     {name: '本溪', value: 71},\n     {name: '克拉玛依', value: 72},\n     {name: '渭南', value: 72},\n     {name: '马鞍山', value: 72},\n     {name: '宝鸡', value: 72},\n     {name: '焦作', value: 75},\n     {name: '句容', value: 75},\n     {name: '北京', value: 79},\n     {name: '徐州', value: 79},\n     {name: '衡水', value: 80},\n     {name: '包头', value: 80},\n     {name: '绵阳', value: 80},\n     {name: '乌鲁木齐', value: 84},\n     {name: '枣庄', value: 84},\n     {name: '杭州', value: 84},\n     {name: '淄博', value: 85},\n     {name: '鞍山', value: 86},\n     {name: '溧阳', value: 86},\n     {name: '库尔勒', value: 86},\n     {name: '安阳', value: 90},\n     {name: '开封', value: 90},\n     {name: '济南', value: 92},\n     {name: '德阳', value: 93},\n     {name: '温州', value: 95},\n     {name: '九江', value: 96},\n     {name: '邯郸', value: 98},\n     {name: '临安', value: 99},\n     {name: '兰州', value: 99},\n     {name: '沧州', value: 100},\n     {name: '临沂', value: 103},\n     {name: '南充', value: 104},\n     {name: '天津', value: 105},\n     {name: '富阳', value: 106},\n     {name: '泰安', value: 112},\n     {name: '诸暨', value: 112},\n     {name: '郑州', value: 113},\n     {name: '哈尔滨', value: 114},\n     {name: '聊城', value: 116},\n     {name: '芜湖', value: 117},\n     {name: '唐山', value: 119},\n     {name: '平顶山', value: 119},\n     {name: '邢台', value: 119},\n     {name: '德州', value: 120},\n     {name: '济宁', value: 120},\n     {name: '荆州', value: 127},\n     {name: '宜昌', value: 130},\n     {name: '义乌', value: 132},\n     {name: '丽水', value: 133},\n     {name: '洛阳', value: 134},\n     {name: '秦皇岛', value: 136},\n     {name: '株洲', value: 143},\n     {name: '石家庄', value: 147},\n     {name: '莱芜', value: 148},\n     {name: '常德', value: 152},\n     {name: '保定', value: 153},\n     {name: '湘潭', value: 154},\n     {name: '金华', value: 157},\n     {name: '岳阳', value: 169},\n     {name: '长沙', value: 175},\n     {name: '衢州', value: 177},\n     {name: '廊坊', value: 193},\n     {name: '菏泽', value: 194},\n     {name: '合肥', value: 229},\n     {name: '武汉', value: 273},\n     {name: '大庆', value: 279}\n];\n\n\nlet convertData = function (data) {\n    var res = [];\n    for (var i = 0; i < data.length; i++) {\n        var geoCoord = geoCoordMap[data[i].name];\n        if (geoCoord) {\n            res.push({\n                name: data[i].name,\n                value: geoCoord.concat(data[i].value)\n            });\n        }\n    }\n    return res;\n};\n\n/*\n    let option = {\n        title: {\n            text: '全国主要城市空气质量 - 百度地图',\n            subtext: 'data from PM25.in',\n            sublink: 'http://www.pm25.in',\n            left: 'center'\n        },\n        tooltip : {\n            trigger: 'item'\n        },\n        bmap: {\n            //center: [113.65,34.76],121.446235, 31.169152\n            center: [121.446235, 31.169152],\n            zoom: 5,\n            roam: true,\n            mapStyle: {\n                styleJson: [{\n                    'featureType': 'water',\n                    'elementType': 'all',\n                    'stylers': {\n                        'color': '#d1d1d1'\n                    }\n                }, {\n                    'featureType': 'land',\n                    'elementType': 'all',\n                    'stylers': {\n                        'color': '#f3f3f3'\n                    }\n                }, {\n                    'featureType': 'railway',\n                    'elementType': 'all',\n                    'stylers': {\n                        'visibility': 'off'\n                    }\n                }, {\n                    'featureType': 'highway',\n                    'elementType': 'all',\n                    'stylers': {\n                        'color': '#fdfdfd'\n                    }\n                }, {\n                    'featureType': 'highway',\n                    'elementType': 'labels',\n                    'stylers': {\n                        'visibility': 'off'\n                    }\n                }, {\n                    'featureType': 'arterial',\n                    'elementType': 'geometry',\n                    'stylers': {\n                        'color': '#fefefe'\n                    }\n                }, {\n                    'featureType': 'arterial',\n                    'elementType': 'geometry.fill',\n                    'stylers': {\n                        'color': '#fefefe'\n                    }\n                }, {\n                    'featureType': 'poi',\n                    'elementType': 'all',\n                    'stylers': {\n                        'visibility': 'off'\n                    }\n                }, {\n                    'featureType': 'green',\n                    'elementType': 'all',\n                    'stylers': {\n                        'visibility': 'off'\n                    }\n                }, {\n                    'featureType': 'subway',\n                    'elementType': 'all',\n                    'stylers': {\n                        'visibility': 'off'\n                    }\n                }, {\n                    'featureType': 'manmade',\n                    'elementType': 'all',\n                    'stylers': {\n                        'color': '#d1d1d1'\n                    }\n                }, {\n                    'featureType': 'local',\n                    'elementType': 'all',\n                    'stylers': {\n                        'color': '#d1d1d1'\n                    }\n                }, {\n                    'featureType': 'arterial',\n                    'elementType': 'labels',\n                    'stylers': {\n                        'visibility': 'off'\n                    }\n                }, {\n                    'featureType': 'boundary',\n                    'elementType': 'all',\n                    'stylers': {\n                        'color': '#fefefe'\n                    }\n                }, {\n                    'featureType': 'building',\n                    'elementType': 'all',\n                    'stylers': {\n                        'color': '#d1d1d1'\n                    }\n                }, {\n                    'featureType': 'label',\n                    'elementType': 'labels.text.fill',\n                    'stylers': {\n                        'color': '#999999'\n                    }\n                }]\n            }            \n        },\n        \n        series: [{\n            type: 'map',\n            mapType: 'china',\n            coordinateSystem: 'bmap'\n        }]\n        \n        series: [{\n            type: 'scatter',\n            // 使用百度地图坐标系\n            coordinateSystem: 'bmap',\n            // 数据格式跟在 geo 坐标系上一样，每一项都是 [经度，纬度，数值大小，其它维度...]\n            data: [ [120, 30, 1],[121, 31, 100] ]\n        }]\n    };\n    */\nlet option = {\n    /*\n    title: {\n        text: '全国主要城市空气质量 - 百度地图',\n        subtext: 'data from PM25.in',\n        sublink: 'http://www.pm25.in',\n        left: 'center'\n    },\n    */\n    tooltip : {\n        trigger: 'item'\n    },\n    bmap: {\n        center: [104.114129, 37.550339],\n        zoom: 5,\n        roam: true,\n        mapStyle: {\n            styleJson: [{\n                'featureType': 'water',\n                'elementType': 'all',\n                'stylers': {\n                    'color': '#d1d1d1'\n                }\n            }, {\n                'featureType': 'land',\n                'elementType': 'all',\n                'stylers': {\n                    'color': '#f3f3f3'\n                }\n            }, {\n                'featureType': 'railway',\n                'elementType': 'all',\n                'stylers': {\n                    'visibility': 'off'\n                }\n            }, {\n                'featureType': 'highway',\n                'elementType': 'all',\n                'stylers': {\n                    'color': '#fdfdfd'\n                }\n            }, {\n                'featureType': 'highway',\n                'elementType': 'labels',\n                'stylers': {\n                    'visibility': 'off'\n                }\n            }, {\n                'featureType': 'arterial',\n                'elementType': 'geometry',\n                'stylers': {\n                    'color': '#fefefe'\n                }\n            }, {\n                'featureType': 'arterial',\n                'elementType': 'geometry.fill',\n                'stylers': {\n                    'color': '#fefefe'\n                }\n            }, {\n                'featureType': 'poi',\n                'elementType': 'all',\n                'stylers': {\n                    'visibility': 'off'\n                }\n            }, {\n                'featureType': 'green',\n                'elementType': 'all',\n                'stylers': {\n                    'visibility': 'off'\n                }\n            }, {\n                'featureType': 'subway',\n                'elementType': 'all',\n                'stylers': {\n                    'visibility': 'off'\n                }\n            }, {\n                'featureType': 'manmade',\n                'elementType': 'all',\n                'stylers': {\n                    'color': '#d1d1d1'\n                }\n            }, {\n                'featureType': 'local',\n                'elementType': 'all',\n                'stylers': {\n                    'color': '#d1d1d1'\n                }\n            }, {\n                'featureType': 'arterial',\n                'elementType': 'labels',\n                'stylers': {\n                    'visibility': 'off'\n                }\n            }, {\n                'featureType': 'boundary',\n                'elementType': 'all',\n                'stylers': {\n                    'color': '#fefefe'\n                }\n            }, {\n                'featureType': 'building',\n                'elementType': 'all',\n                'stylers': {\n                    'color': '#d1d1d1'\n                }\n            }, {\n                'featureType': 'label',\n                'elementType': 'labels.text.fill',\n                'stylers': {\n                    'color': '#999999'\n                }\n            }]\n        }\n    },\n    series : [\n        {\n            //name: 'pm2.5',\n            type: 'scatter',\n            coordinateSystem: 'bmap',\n            data: convertData(data),\n            symbolSize: function (val) {\n                return val[2] / 10;\n            },\n            label: {\n                normal: {\n                    formatter: '{b}',\n                    position: 'right',\n                    show: false\n                },\n                emphasis: {\n                    show: true\n                }\n            },\n            itemStyle: {\n                normal: {\n                    color: 'purple'\n                    //color: '#40A276'\n                }\n            }\n        },\n        {\n            //name: 'Top 5',\n            type: 'effectScatter',\n            coordinateSystem: 'bmap',\n            data: convertData(data.sort(function (a, b) {\n                return b.value - a.value;\n            }).slice(0, 6)),\n            symbolSize: function (val) {\n                return val[2] / 10;\n            },\n            showEffectOn: 'render',\n            rippleEffect: {\n                brushType: 'stroke'\n            },\n            hoverAnimation: true,\n            label: {\n                normal: {\n                    formatter: '{b}',\n                    position: 'right',\n                    show: true\n                }\n            },\n            itemStyle: {\n                normal: {\n                    color: 'purple',\n                    //color: '#40A276',\n                    shadowBlur: 10,\n                    shadowColor: '#333'\n                    //shadowColor: '#40A276'\n                }\n            },\n            zlevel: 1\n        }\n    ]\n};\nbmapChart.setOption(option);\n</script> "
+      "value": "<div id='EchartsBmapDom' style='height: 550px'></div> \n\n\n<script type=\"text/javascript\">\n//let bmapChart = echarts.init(document.getElementById('EchartsBmapDom'));\nlet bmapChart = echarts.init(document.querySelector(\"#EchartsBmapDom\"));\nlet data = [\n     {name: '海门', value: 9},\n     {name: '鄂尔多斯', value: 12},\n     {name: '招远', value: 12},\n     {name: '舟山', value: 12},\n     {name: '齐齐哈尔', value: 14},\n     {name: '盐城', value: 15},\n     {name: '赤峰', value: 16},\n     {name: '青岛', value: 18},\n     {name: '乳山', value: 18},\n     {name: '金昌', value: 19},\n     {name: '泉州', value: 21},\n     {name: '莱西', value: 21},\n     {name: '日照', value: 21},\n     {name: '胶南', value: 22},\n     {name: '南通', value: 23},\n     {name: '拉萨', value: 24},\n     {name: '云浮', value: 24},\n     {name: '梅州', value: 25},\n     {name: '文登', value: 25},\n     {name: '上海', value: 25},\n     {name: '攀枝花', value: 25},\n     {name: '威海', value: 25},\n     {name: '承德', value: 25},\n     {name: '厦门', value: 26},\n     {name: '汕尾', value: 26},\n     {name: '潮州', value: 26},\n     {name: '丹东', value: 27},\n     {name: '太仓', value: 27},\n     {name: '曲靖', value: 27},\n     {name: '烟台', value: 28},\n     {name: '福州', value: 29},\n     {name: '瓦房店', value: 30},\n     {name: '即墨', value: 30},\n     {name: '抚顺', value: 31},\n     {name: '玉溪', value: 31},\n     {name: '张家口', value: 31},\n     {name: '阳泉', value: 31},\n     {name: '莱州', value: 32},\n     {name: '湖州', value: 32},\n     {name: '汕头', value: 32},\n     {name: '昆山', value: 33},\n     {name: '宁波', value: 33},\n     {name: '湛江', value: 33},\n     {name: '揭阳', value: 34},\n     {name: '荣成', value: 34},\n     {name: '连云港', value: 35},\n     {name: '葫芦岛', value: 35},\n     {name: '常熟', value: 36},\n     {name: '东莞', value: 36},\n     {name: '河源', value: 36},\n     {name: '淮安', value: 36},\n     {name: '泰州', value: 36},\n     {name: '南宁', value: 37},\n     {name: '营口', value: 37},\n     {name: '惠州', value: 37},\n     {name: '江阴', value: 37},\n     {name: '蓬莱', value: 37},\n     {name: '韶关', value: 38},\n     {name: '嘉峪关', value: 38},\n     {name: '广州', value: 38},\n     {name: '延安', value: 38},\n     {name: '太原', value: 39},\n     {name: '清远', value: 39},\n     {name: '中山', value: 39},\n     {name: '昆明', value: 39},\n     {name: '寿光', value: 40},\n     {name: '盘锦', value: 40},\n     {name: '长治', value: 41},\n     {name: '深圳', value: 41},\n     {name: '珠海', value: 42},\n     {name: '宿迁', value: 43},\n     {name: '咸阳', value: 43},\n     {name: '铜川', value: 44},\n     {name: '平度', value: 44},\n     {name: '佛山', value: 44},\n     {name: '海口', value: 44},\n     {name: '江门', value: 45},\n     {name: '章丘', value: 45},\n     {name: '肇庆', value: 46},\n     {name: '大连', value: 47},\n     {name: '临汾', value: 47},\n     {name: '吴江', value: 47},\n     {name: '石嘴山', value: 49},\n     {name: '沈阳', value: 50},\n     {name: '苏州', value: 50},\n     {name: '茂名', value: 50},\n     {name: '嘉兴', value: 51},\n     {name: '长春', value: 51},\n     {name: '胶州', value: 52},\n     {name: '银川', value: 52},\n     {name: '张家港', value: 52},\n     {name: '三门峡', value: 53},\n     {name: '锦州', value: 54},\n     {name: '南昌', value: 54},\n     {name: '柳州', value: 54},\n     {name: '三亚', value: 54},\n     {name: '自贡', value: 56},\n     {name: '吉林', value: 56},\n     {name: '阳江', value: 57},\n     {name: '泸州', value: 57},\n     {name: '西宁', value: 57},\n     {name: '宜宾', value: 58},\n     {name: '呼和浩特', value: 58},\n     {name: '成都', value: 58},\n     {name: '大同', value: 58},\n     {name: '镇江', value: 59},\n     {name: '桂林', value: 59},\n     {name: '张家界', value: 59},\n     {name: '宜兴', value: 59},\n     {name: '北海', value: 60},\n     {name: '西安', value: 61},\n     {name: '金坛', value: 62},\n     {name: '东营', value: 62},\n     {name: '牡丹江', value: 63},\n     {name: '遵义', value: 63},\n     {name: '绍兴', value: 63},\n     {name: '扬州', value: 64},\n     {name: '常州', value: 64},\n     {name: '潍坊', value: 65},\n     {name: '重庆', value: 66},\n     {name: '台州', value: 67},\n     {name: '南京', value: 67},\n     {name: '滨州', value: 70},\n     {name: '贵阳', value: 71},\n     {name: '无锡', value: 71},\n     {name: '本溪', value: 71},\n     {name: '克拉玛依', value: 72},\n     {name: '渭南', value: 72},\n     {name: '马鞍山', value: 72},\n     {name: '宝鸡', value: 72},\n     {name: '焦作', value: 75},\n     {name: '句容', value: 75},\n     {name: '北京', value: 79},\n     {name: '徐州', value: 79},\n     {name: '衡水', value: 80},\n     {name: '包头', value: 80},\n     {name: '绵阳', value: 80},\n     {name: '乌鲁木齐', value: 84},\n     {name: '枣庄', value: 84},\n     {name: '杭州', value: 84},\n     {name: '淄博', value: 85},\n     {name: '鞍山', value: 86},\n     {name: '溧阳', value: 86},\n     {name: '库尔勒', value: 86},\n     {name: '安阳', value: 90},\n     {name: '开封', value: 90},\n     {name: '济南', value: 92},\n     {name: '德阳', value: 93},\n     {name: '温州', value: 95},\n     {name: '九江', value: 96},\n     {name: '邯郸', value: 98},\n     {name: '临安', value: 99},\n     {name: '兰州', value: 99},\n     {name: '沧州', value: 100},\n     {name: '临沂', value: 103},\n     {name: '南充', value: 104},\n     {name: '天津', value: 105},\n     {name: '富阳', value: 106},\n     {name: '泰安', value: 112},\n     {name: '诸暨', value: 112},\n     {name: '郑州', value: 113},\n     {name: '哈尔滨', value: 114},\n     {name: '聊城', value: 116},\n     {name: '芜湖', value: 117},\n     {name: '唐山', value: 119},\n     {name: '平顶山', value: 119},\n     {name: '邢台', value: 119},\n     {name: '德州', value: 120},\n     {name: '济宁', value: 120},\n     {name: '荆州', value: 127},\n     {name: '宜昌', value: 130},\n     {name: '义乌', value: 132},\n     {name: '丽水', value: 133},\n     {name: '洛阳', value: 134},\n     {name: '秦皇岛', value: 136},\n     {name: '株洲', value: 143},\n     {name: '石家庄', value: 147},\n     {name: '莱芜', value: 148},\n     {name: '常德', value: 152},\n     {name: '保定', value: 153},\n     {name: '湘潭', value: 154},\n     {name: '金华', value: 557},\n     {name: '岳阳', value: 169},\n     {name: '长沙', value: 175},\n     {name: '衢州', value: 177},\n     {name: '廊坊', value: 193},\n     {name: '菏泽', value: 194},\n     {name: '合肥', value: 229},\n     {name: '武汉', value: 273},\n     {name: '大庆', value: 279}\n];\n\n/*\nlet convertData = function (data) {\n    let res = [];\n    for (let i = 0; i < data.length; i++) {\n        let geoCoord = geoCoordMap[data[i].name];\n        if (geoCoord) {\n            res.push({\n                name: data[i].name,\n                value: geoCoord.concat(data[i].value)\n            });\n        }\n    }\n    return res;\n};\n*/\n\nlet convertData = (data) => {\n    let res = [];\n    for (let i = 0; i < data.length; i++) {\n        let geoCoord = geoCoordMap[data[i].name];\n        if (geoCoord) {\n            res.push({\n                name: data[i].name,\n                value: geoCoord.concat(data[i].value)\n            });\n        }\n    }\n    return res;\n}\n\n/*\n    let option = {\n        title: {\n            text: '全国主要城市空气质量 - 百度地图',\n            subtext: 'data from PM25.in',\n            sublink: 'http://www.pm25.in',\n            left: 'center'\n        },\n        tooltip : {\n            trigger: 'item'\n        },\n        bmap: {\n            //center: [113.65,34.76],121.446235, 31.169152\n            center: [121.446235, 31.169152],\n            zoom: 5,\n            roam: true,\n            mapStyle: {\n                styleJson: [{\n                    'featureType': 'water',\n                    'elementType': 'all',\n                    'stylers': {\n                        'color': '#d1d1d1'\n                    }\n                }, {\n                    'featureType': 'land',\n                    'elementType': 'all',\n                    'stylers': {\n                        'color': '#f3f3f3'\n                    }\n                }, {\n                    'featureType': 'railway',\n                    'elementType': 'all',\n                    'stylers': {\n                        'visibility': 'off'\n                    }\n                }, {\n                    'featureType': 'highway',\n                    'elementType': 'all',\n                    'stylers': {\n                        'color': '#fdfdfd'\n                    }\n                }, {\n                    'featureType': 'highway',\n                    'elementType': 'labels',\n                    'stylers': {\n                        'visibility': 'off'\n                    }\n                }, {\n                    'featureType': 'arterial',\n                    'elementType': 'geometry',\n                    'stylers': {\n                        'color': '#fefefe'\n                    }\n                }, {\n                    'featureType': 'arterial',\n                    'elementType': 'geometry.fill',\n                    'stylers': {\n                        'color': '#fefefe'\n                    }\n                }, {\n                    'featureType': 'poi',\n                    'elementType': 'all',\n                    'stylers': {\n                        'visibility': 'off'\n                    }\n                }, {\n                    'featureType': 'green',\n                    'elementType': 'all',\n                    'stylers': {\n                        'visibility': 'off'\n                    }\n                }, {\n                    'featureType': 'subway',\n                    'elementType': 'all',\n                    'stylers': {\n                        'visibility': 'off'\n                    }\n                }, {\n                    'featureType': 'manmade',\n                    'elementType': 'all',\n                    'stylers': {\n                        'color': '#d1d1d1'\n                    }\n                }, {\n                    'featureType': 'local',\n                    'elementType': 'all',\n                    'stylers': {\n                        'color': '#d1d1d1'\n                    }\n                }, {\n                    'featureType': 'arterial',\n                    'elementType': 'labels',\n                    'stylers': {\n                        'visibility': 'off'\n                    }\n                }, {\n                    'featureType': 'boundary',\n                    'elementType': 'all',\n                    'stylers': {\n                        'color': '#fefefe'\n                    }\n                }, {\n                    'featureType': 'building',\n                    'elementType': 'all',\n                    'stylers': {\n                        'color': '#d1d1d1'\n                    }\n                }, {\n                    'featureType': 'label',\n                    'elementType': 'labels.text.fill',\n                    'stylers': {\n                        'color': '#999999'\n                    }\n                }]\n            }            \n        },\n        \n        series: [{\n            type: 'map',\n            mapType: 'china',\n            coordinateSystem: 'bmap'\n        }]\n        \n        series: [{\n            type: 'scatter',\n            // 使用百度地图坐标系\n            coordinateSystem: 'bmap',\n            // 数据格式跟在 geo 坐标系上一样，每一项都是 [经度，纬度，数值大小，其它维度...]\n            data: [ [120, 30, 1],[121, 31, 100] ]\n        }]\n    };\n    */\nlet option = {\n    /*\n    title: {\n        text: '全国主要城市空气质量 - 百度地图',\n        subtext: 'data from PM25.in',\n        sublink: 'http://www.pm25.in',\n        left: 'center'\n    },\n    */\n    visualMap: {\n        min: 0,\n        max: 500,\n        splitNumber: 5,\n        inRange: {\n            color: ['#d94e5d','#eac736','#50a3ba'].reverse()\n        },\n        textStyle: {\n            color: '#fff'\n        }\n    },\n    tooltip : {\n        trigger: 'item'\n    },\n    bmap: {\n        center: [104.114129, 37.550339],\n        zoom: 5,\n        roam: true,\n        mapStyle: {\n            styleJson: [{\n                'featureType': 'water',\n                'elementType': 'all',\n                'stylers': {\n                    'color': '#d1d1d1'\n                }\n            }, {\n                'featureType': 'land',\n                'elementType': 'all',\n                'stylers': {\n                    'color': '#f3f3f3'\n                }\n            }, {\n                'featureType': 'railway',\n                'elementType': 'all',\n                'stylers': {\n                    'visibility': 'off'\n                }\n            }, {\n                'featureType': 'highway',\n                'elementType': 'all',\n                'stylers': {\n                    'color': '#fdfdfd'\n                }\n            }, {\n                'featureType': 'highway',\n                'elementType': 'labels',\n                'stylers': {\n                    'visibility': 'off'\n                }\n            }, {\n                'featureType': 'arterial',\n                'elementType': 'geometry',\n                'stylers': {\n                    'color': '#fefefe'\n                }\n            }, {\n                'featureType': 'arterial',\n                'elementType': 'geometry.fill',\n                'stylers': {\n                    'color': '#fefefe'\n                }\n            }, {\n                'featureType': 'poi',\n                'elementType': 'all',\n                'stylers': {\n                    'visibility': 'off'\n                }\n            }, {\n                'featureType': 'green',\n                'elementType': 'all',\n                'stylers': {\n                    'visibility': 'off'\n                }\n            }, {\n                'featureType': 'subway',\n                'elementType': 'all',\n                'stylers': {\n                    'visibility': 'off'\n                }\n            }, {\n                'featureType': 'manmade',\n                'elementType': 'all',\n                'stylers': {\n                    'color': '#d1d1d1'\n                }\n            }, {\n                'featureType': 'local',\n                'elementType': 'all',\n                'stylers': {\n                    'color': '#d1d1d1'\n                }\n            }, {\n                'featureType': 'arterial',\n                'elementType': 'labels',\n                'stylers': {\n                    'visibility': 'off'\n                }\n            }, {\n                'featureType': 'boundary',\n                'elementType': 'all',\n                'stylers': {\n                    'color': '#fefefe'\n                }\n            }, {\n                'featureType': 'building',\n                'elementType': 'all',\n                'stylers': {\n                    'color': '#d1d1d1'\n                }\n            }, {\n                'featureType': 'label',\n                'elementType': 'labels.text.fill',\n                'stylers': {\n                    'color': '#999999'\n                }\n            }]\n        }\n    },\n    series : [\n        {\n            //name: 'pm2.5',\n            //type: 'scatter',\n            type: 'heatmap',\n            coordinateSystem: 'bmap',\n            //data: convertData(data),\n            symbolSize: function (val) {\n                return val[2] / 10;\n            },\n            label: {\n                normal: {\n                    formatter: '{b}',\n                    position: 'right',\n                    show: false\n                },\n                emphasis: {\n                    show: true\n                }\n            },\n            itemStyle: {\n                normal: {\n                    color: 'purple'\n                    //color: '#40A276'\n                }\n            }\n        }/*,\n        {\n            //name: 'Top 5',\n            //type: 'effectScatter',\n            type: 'heatmap',\n            coordinateSystem: 'bmap',\n            data: convertData(data.sort(function (a, b) {\n                return b.value - a.value;\n            }).slice(0, 6)),\n            symbolSize: function (val) {\n                return val[2] / 10;\n            },\n            showEffectOn: 'render',\n            rippleEffect: {\n                brushType: 'stroke'\n            },\n            hoverAnimation: true,\n            label: {\n                normal: {\n                    formatter: '{b}',\n                    position: 'right',\n                    show: true\n                }\n            },\n            itemStyle: {\n                normal: {\n                    color: 'purple',\n                    //color: '#40A276',\n                    shadowBlur: 10,\n                    shadowColor: '#333'\n                    //shadowColor: '#40A276'\n                }\n            },\n            zlevel: 1\n        }*/\n    ]\n};\nbmapChart.setOption(option);\n</script> "
      },
      {
       "name": "fontSize",
@@ -2721,7 +5012,7 @@
     "typeDesc": "Html"
    },
    {
-    "id": "a6b8583b-3c01-7556-fbd9-1bed3b0b7715",
+    "id": "8b79c1c3-ff23-d95a-0671-b6888cc39a58",
     "parent": "UnIqEiD",
     "properties": [
      {

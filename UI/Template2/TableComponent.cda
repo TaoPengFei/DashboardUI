@@ -38,12 +38,9 @@ FROM
    </DataAccess>
    <DataAccess access="public" connection="TableQuery_v2" id="TableQuery_v2" type="sql">
       <Name>TableQuery_v2</Name>
-      <Cache duration="3600" enabled="false"/>
+      <Cache duration="3600" enabled="true"/>
       <Columns/>
-      <Parameters>
-         <Parameter default="startDay" name="startDay" type="String"/>
-         <Parameter default="endDay" name="endDay" type="String"/>
-      </Parameters>
-      <Query><![CDATA[CALL P_DAILY_DATA_TRACKING(${startDay}, ${endDay}, 1, -1, -1, -1, -1, -1, -1);]]></Query>
+      <Parameters/>
+      <Query><![CDATA[CALL P_DAILY_DATA_TRACKING('2016-01-09', '2017-06-09', -1, -1, -1, -1, -1, -1, -1);]]></Query>
    </DataAccess>
 </CDADescriptor>

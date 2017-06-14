@@ -533,7 +533,7 @@
      {
       "name": "colTypes",
       "type": "colTypesCustom",
-      "value": "[\"string\",\"string\",\"hidden\"]"
+      "value": "[]"
      },
      {
       "name": "colWidths",
@@ -692,207 +692,207 @@
    },
    {
     "id": "b4201829-9ecd-c351-9b77-eea48634491e",
+    "type": "ComponentsTable",
+    "typeDesc": "table Component",
     "parent": "OTHERCOMPONENTS",
     "properties": [
      {
       "name": "name",
-      "type": "Id",
-      "value": "row5_col"
+      "value": "row5_col",
+      "type": "Id"
      },
      {
       "name": "expandContainerObject",
-      "type": "HtmlTarget",
-      "value": ""
+      "value": "",
+      "type": "HtmlTarget"
      },
      {
       "name": "listeners",
-      "type": "Listeners",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:bestValueLineParam}\",\"${p:mediumValueLineParam}\",\"${p:badValueLineParam}\"]"
+      "value": "[\"${p:bestValueLineParam}\",\"${p:mediumValueLineParam}\",\"${p:badValueLineParam}\"]",
+      "type": "Listeners"
      },
      {
       "name": "oLanguage",
-      "type": "JavaScript",
-      "value": ""
+      "value": "",
+      "type": "JavaScript"
      },
      {
       "name": "language",
-      "type": "JavaScript",
-      "value": ""
+      "value": "",
+      "type": "JavaScript"
      },
      {
       "name": "colFormats",
-      "type": "ColFormatsArray",
-      "value": "[null,\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\"]"
+      "value": "[]",
+      "type": "ColFormatsArray"
      },
      {
       "name": "colHeaders",
-      "type": "ColHeadersArray",
-      "value": "[]"
+      "value": "[]",
+      "type": "ColHeadersArray"
      },
      {
       "name": "colSortable",
-      "type": "ColSortableArray",
-      "value": "[]"
+      "value": "[]",
+      "type": "ColSortableArray"
      },
      {
       "name": "colTypes",
-      "type": "colTypesCustom",
-      "value": "[]"
+      "value": "[]",
+      "type": "colTypesCustom"
      },
      {
       "name": "colWidths",
-      "type": "ColWidthsArray",
-      "value": "[]"
+      "value": "[]",
+      "type": "ColWidthsArray"
      },
      {
       "name": "expandParameters",
-      "type": "ExpandParameters",
-      "value": "[]"
+      "value": "[]",
+      "type": "ExpandParameters"
      },
      {
       "name": "parameters",
-      "type": "ValuesArray",
-      "value": "[[\"badValueLineParam\",\"badValueLineParam\"],[\"bestValueLineParam\",\"bestValueLineParam\"],[\"mediumValueLineParam\",\"mediumValueLineParam\"],[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"]]"
+      "value": "[[\"badValueLineParam\",\"badValueLineParam\"],[\"bestValueLineParam\",\"bestValueLineParam\"],[\"mediumValueLineParam\",\"mediumValueLineParam\"]]",
+      "type": "ValuesArray"
      },
      {
       "name": "displayLength",
-      "type": "Integer",
-      "value": "5"
+      "value": "5",
+      "type": "Integer"
      },
      {
       "name": "expandOnClick",
-      "type": "Boolean",
-      "value": "false"
+      "value": "false",
+      "type": "Boolean"
      },
      {
       "name": "filter",
-      "type": "Boolean",
-      "value": "false"
+      "value": "false",
+      "type": "Boolean"
      },
      {
       "name": "info",
-      "type": "Boolean",
-      "value": "false"
+      "value": "false",
+      "type": "Boolean"
      },
      {
       "name": "lengthChange",
-      "type": "Boolean",
-      "value": "false"
+      "value": "false",
+      "type": "Boolean"
      },
      {
       "name": "paginate",
-      "type": "Boolean",
-      "value": "true"
+      "value": "true",
+      "type": "Boolean"
      },
      {
       "name": "sort",
-      "type": "Boolean",
-      "value": "true"
+      "value": "true",
+      "type": "Boolean"
      },
      {
       "name": "colSearchable",
-      "type": "ColSearchableArray",
-      "value": "[]"
+      "value": "[]",
+      "type": "ColSearchableArray"
      },
      {
       "name": "drawCallback",
-      "type": "JavaScript",
-      "value": ""
+      "value": "",
+      "type": "JavaScript"
      },
      {
       "name": "dataSource",
-      "type": "Datasource",
-      "value": "row5_col_query"
+      "value": "row5_col_query",
+      "type": "Datasource"
      },
      {
       "name": "sDom",
-      "type": "JavaScript",
-      "value": ""
+      "value": "",
+      "type": "JavaScript"
      },
      {
       "name": "sortBy",
-      "type": "SortByArray",
-      "value": "[]"
+      "value": "[]",
+      "type": "SortByArray"
      },
      {
       "name": "priority",
-      "type": "Integer",
-      "value": 5
+      "value": 5,
+      "type": "Integer"
      },
      {
       "name": "refreshPeriod",
-      "type": "Integer",
-      "value": ""
+      "value": "",
+      "type": "Integer"
      },
      {
       "name": "paginationType",
-      "type": "PaginationType",
-      "value": "simple_numbers"
+      "value": "simple_numbers",
+      "type": "PaginationType"
      },
      {
       "name": "tableStyle",
-      "type": "TableStyle",
-      "value": ""
+      "value": "",
+      "type": "TableStyle"
      },
      {
       "name": "htmlObject",
-      "type": "HtmlObject",
-      "value": "${h:row5_col}"
+      "value": "${h:row5_col}",
+      "type": "HtmlObject"
      },
      {
       "name": "executeAtStart",
-      "type": "Boolean",
-      "value": "true"
+      "value": "true",
+      "type": "Boolean"
      },
      {
       "name": "paginateServerside",
-      "type": "Boolean",
-      "value": "false"
+      "value": "false",
+      "type": "Boolean"
      },
      {
       "name": "preExecution",
-      "type": "JavaScript",
-      "value": "function f(){\r\n    //resizeGraphical(this);\r\n    let myself = this;\r\n    require(['amd!cdf/lib/underscore', 'cdf/dashboard/Utils'],function(_, Utils){\r\n        let numericOpts = {\r\n            color: function(st) {\r\n                console.log(st);\r\n                var values = st.tableData.map(function(e){\r\n                        return Number(_.last(e[st.colIdx].split(',')));\r\n                    });\r\n                var tblMax = _.max(values),\r\n                    tblMin = _.min(values);\r\n                var value = Number(_.last(st.value.split(','))),\r\n                    size = (value-tblMin)/(tblMax-tblMin),\r\n                    red = Math.min(255, Math.round(510 - 2 * 255 * size)),\r\n                    green = Math.min(255, Math.round(2 * 255 * size));\r\n                return \"rgb(\" + red + \",\" + green + \",0)\";\r\n            },\r\n        };\r\n        myself.setAddInOptions(\"colType\", \"numeric\", numericOpts);\r\n    })\r\n} "
+      "value": "function f(){\r\n    //resizeGraphical(this);\r\n    let myself = this;\r\n    require(['amd!cdf/lib/underscore', 'cdf/dashboard/Utils'],function(_, Utils){\r\n        let numericOpts = {\r\n            color: function(st) {\r\n                console.log(st);\r\n                var values = st.tableData.map(function(e){\r\n                        return Number(_.last(e[st.colIdx].split(',')));\r\n                    });\r\n                var tblMax = _.max(values),\r\n                    tblMin = _.min(values);\r\n                var value = Number(_.last(st.value.split(','))),\r\n                    size = (value-tblMin)/(tblMax-tblMin),\r\n                    red = Math.min(255, Math.round(510 - 2 * 255 * size)),\r\n                    green = Math.min(255, Math.round(2 * 255 * size));\r\n                return \"rgb(\" + red + \",\" + green + \",0)\";\r\n            },\r\n        };\r\n        myself.setAddInOptions(\"colType\", \"numeric\", numericOpts);\r\n    })\r\n} ",
+      "type": "JavaScript"
      },
      {
       "name": "postExecution",
-      "type": "JavaScript",
-      "value": "function() {\r\n\r\n    /**\r\n     * 双表头的制作\r\n     */\r\n    ($('#row5_colTable thead tr').clone()).insertBefore($('#row5_colTable thead tr'));\r\n    _.each($('#row5_colTable thead tr:nth-child(1) th'), function(elem, idx) {\r\n        //if (idx>0) {\r\n        if (idx>0) {    //用于控制clone的位置\r\n            if (((idx-1)%2)==0) {\r\n                $(elem).text($(elem).text().split('/')[0]).attr('colspan', 2);\r\n            } else {\r\n                $(elem).remove();\r\n            }    \r\n        } else {\r\n            $(elem).text('');\r\n        }\r\n    });\r\n    _.each($('#row5_colTable thead tr:nth-child(2) th'), function(elem) {\r\n        if ($(elem).text().split('/').length>1) {\r\n            $(elem).text($(elem).text().split('/')[1])\r\n        }    \r\n    });\r\n    \r\n    //_.each($('#TableDomTable tbody tr'), function(elem, idx) {\r\n        /*\r\n        //鼠标点击选择行时候变色\r\n        elem.onclick = function(){\r\n            //console.log('click...');\r\n            var oObj = window.event.srcElement;\r\n            console.log(this.tagName.toLowerCase());\r\n            console.log(oObj.tagName.toLowerCase());\r\n            console.log(document.all.TableDomTable.rows.length);\r\n            if(oObj.tagName.toLowerCase() == \"td\"){\r\n                var oTr = oObj.parentNode; \r\n                for( var i = 3; i < document.all.TableDomTable.rows.length; i++ ){\r\n                    document.all.TableDomTable.rows[i].style.backgroundColor   =   \"\";   \r\n        \t\t    document.all.TableDomTable.rows[i].tag = false\r\n                }\r\n                oTr.style.backgroundColor = \"#888888\";  \r\n                //oTr.style.color = \"#fff\";  \r\n    \t\t    oTr.tag = true;   \r\n            }\r\n        };\r\n        //鼠标点击另外一行时关闭已选行变色\r\n        \r\n        elem.onMouseOut = function(){\r\n            console.log('onMouseOut...');\r\n            //var oObj = event.srcElement;\r\n            var oObj = window.event.srcElement;\r\n            if(oObj.tagName.toLowerCase() == \"td\"){\r\n                var oTr = oObj.parentNode;\r\n                if(!oTr.tag){\r\n                    oTr.style.backgroundColor = \"#E1E9FD\";\r\n                }\r\n            }\r\n        };\r\n        */\r\n        //console.log(elem);\r\n        //console.log(idx);\r\n    //});\r\n    \r\n   \r\n    \r\n    //,td:eq(1)\r\n    //$('#TableDomTable').addClass(\"itemList\");\r\n    /**\r\n     * @bestValueLine    最好值刻度线  绿色\r\n     * @mediumValueLine  中上值刻度线  蓝色\r\n     * @normalValueLine  正常值刻度线  白色\r\n     * @badValueLine     最差值刻度线  红色\r\n     */\r\n    $.fn.TableColorGuide = function(bestValueLine, mediumValueLine, badValueLine ){\r\n        //var bestValueLine = 500000;\r\n        //var mediumValueLine = 100000;\r\n        //var badValueLine = 1000;\r\n        $('#row5_colTable tbody').find('td').each(function(index, elem){\r\n            if(index > 1){\r\n                //console.log(elem);\r\n                //console.log(elem.innerHTML.__proto__);\r\n                //console.log(elem.innerHTML.replace(\",\",\"\"));\r\n                //console.log(parseFloat(elem.innerHTML.replace(\",\",\"\")));\r\n                //if(elem.innerHTML.replace(\",\",\"\") >= '100000.00'){\r\n                if( parseInt(elem.innerHTML.replace(\",\",\"\")) >= bestValueLine &&\r\n                    parseInt(elem.innerHTML.replace(\",\",\"\")) !== 0 && bestValueLine !== 0 ){\r\n                    $(this).css(\"background-color\",\"#40A276\")\r\n                           .css('-moz-border-radius','0px')\r\n                           .css('-webkit-border-radius','0px')\r\n                           .css('color','#ffffff');\r\n                } else if( parseInt(elem.innerHTML.replace(\",\",\"\")) < bestValueLine && \r\n                            parseInt(elem.innerHTML.replace(\",\",\"\")) >= mediumValueLine && \r\n                            parseInt(elem.innerHTML.replace(\",\",\"\")) !== 0 && mediumValueLine !== 0 ){\r\n                    $(this).css(\"background-color\",\"#1979CA\")\r\n                           .css('-moz-border-radius','0px')\r\n                           .css('-webkit-border-radius','0px')\r\n                           .css('color','#ffffff');\r\n                }else if(parseInt(elem.innerHTML.replace(\",\",\"\")) < badValueLine && \r\n                            parseInt(elem.innerHTML.replace(\",\",\"\")) !== 0 && badValueLine !== 0 ){\r\n                    $(this).css(\"background-color\",\"#EE4B4B\")\r\n                           .css('-moz-border-radius','0px')\r\n                           .css('-webkit-border-radius','0px')\r\n                           .css('color','#ffffff');\r\n                }//else if(bestValueLine === 0 && mediumValueLine === 0 && badValueLine === 0 ){\r\n                    \r\n                //}\r\n            }\r\n        });\r\n    }\r\n    $(function() {\r\n        $.fn.TableColorGuide(//500000,100000,1000\r\n            \r\n            /*\r\n            dashboard.getParameterValue(\"bestValueLineParam\"),\r\n            dashboard.getParameterValue(\"mediumValueLineParam\"),\r\n            dashboard.getParameterValue(\"badValueLineParam\")\r\n            */\r\n            \r\n            \r\n            Dashboards.getParameterValue(\"bestValueLineParam\"),\r\n            Dashboards.getParameterValue(\"mediumValueLineParam\"),\r\n            Dashboards.getParameterValue(\"badValueLineParam\")\r\n            \r\n        );\r\n\t});\r\n    \r\n    $('#row5_colTable tbody tr').find(\"td:eq(0)\")\r\n                                .css(\"background-color\", \"#F8FAFB\")\r\n                                .css(\"border\", \"1px solid #FFFFFF\")\r\n                                .css('color','#2779aa');\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n   \r\n} "
+      "value": "function() {\r\n\r\n    /**\r\n     * 双表头的制作\r\n     */\r\n    ($('#row5_colTable thead tr').clone()).insertBefore($('#row5_colTable thead tr'));\r\n    _.each($('#row5_colTable thead tr:nth-child(1) th'), function(elem, idx) {\r\n        //if (idx>0) {\r\n        if (idx>1) {    //用于控制clone的位置\r\n            if (((idx-1)%2)==0) {\r\n                $(elem).text($(elem).text().split('/')[0]).attr('colspan', 2);\r\n            } else {\r\n                $(elem).remove();\r\n            }    \r\n        } else {\r\n            $(elem).text('');\r\n        }\r\n    });\r\n    _.each($('#row5_colTable thead tr:nth-child(2) th'), function(elem) {\r\n        if ($(elem).text().split('/').length>1) {\r\n            $(elem).text($(elem).text().split('/')[1])\r\n        }    \r\n    });\r\n    \r\n    //_.each($('#TableDomTable tbody tr'), function(elem, idx) {\r\n        /*\r\n        //鼠标点击选择行时候变色\r\n        elem.onclick = function(){\r\n            //console.log('click...');\r\n            var oObj = window.event.srcElement;\r\n            console.log(this.tagName.toLowerCase());\r\n            console.log(oObj.tagName.toLowerCase());\r\n            console.log(document.all.TableDomTable.rows.length);\r\n            if(oObj.tagName.toLowerCase() == \"td\"){\r\n                var oTr = oObj.parentNode; \r\n                for( var i = 3; i < document.all.TableDomTable.rows.length; i++ ){\r\n                    document.all.TableDomTable.rows[i].style.backgroundColor   =   \"\";   \r\n        \t\t    document.all.TableDomTable.rows[i].tag = false\r\n                }\r\n                oTr.style.backgroundColor = \"#888888\";  \r\n                //oTr.style.color = \"#fff\";  \r\n    \t\t    oTr.tag = true;   \r\n            }\r\n        };\r\n        //鼠标点击另外一行时关闭已选行变色\r\n        \r\n        elem.onMouseOut = function(){\r\n            console.log('onMouseOut...');\r\n            //var oObj = event.srcElement;\r\n            var oObj = window.event.srcElement;\r\n            if(oObj.tagName.toLowerCase() == \"td\"){\r\n                var oTr = oObj.parentNode;\r\n                if(!oTr.tag){\r\n                    oTr.style.backgroundColor = \"#E1E9FD\";\r\n                }\r\n            }\r\n        };\r\n        */\r\n        //console.log(elem);\r\n        //console.log(idx);\r\n    //});\r\n    \r\n   \r\n    \r\n    //,td:eq(1)\r\n    //$('#TableDomTable').addClass(\"itemList\");\r\n    /**\r\n     * @bestValueLine    最好值刻度线  绿色\r\n     * @mediumValueLine  中上值刻度线  蓝色\r\n     * @normalValueLine  正常值刻度线  白色\r\n     * @badValueLine     最差值刻度线  红色\r\n     */\r\n    $.fn.TableColorGuide = function(bestValueLine, mediumValueLine, badValueLine ){\r\n        //var bestValueLine = 500000;\r\n        //var mediumValueLine = 100000;\r\n        //var badValueLine = 1000;\r\n        $('#row5_colTable tbody').find('td').each(function(index, elem){\r\n            if(index > 1){\r\n                //console.log(elem);\r\n                //console.log(elem.innerHTML.__proto__);\r\n                //console.log(elem.innerHTML.replace(\",\",\"\"));\r\n                //console.log(parseFloat(elem.innerHTML.replace(\",\",\"\")));\r\n                //if(elem.innerHTML.replace(\",\",\"\") >= '100000.00'){\r\n                if( parseInt(elem.innerHTML.replace(\",\",\"\")) >= bestValueLine &&\r\n                    parseInt(elem.innerHTML.replace(\",\",\"\")) !== 0 && bestValueLine !== 0 ){\r\n                    $(this).css(\"background-color\",\"#40A276\")\r\n                           .css('-moz-border-radius','0px')\r\n                           .css('-webkit-border-radius','0px')\r\n                           .css('color','#ffffff');\r\n                } else if( parseInt(elem.innerHTML.replace(\",\",\"\")) < bestValueLine && \r\n                            parseInt(elem.innerHTML.replace(\",\",\"\")) >= mediumValueLine && \r\n                            parseInt(elem.innerHTML.replace(\",\",\"\")) !== 0 && mediumValueLine !== 0 ){\r\n                    $(this).css(\"background-color\",\"#1979CA\")\r\n                           .css('-moz-border-radius','0px')\r\n                           .css('-webkit-border-radius','0px')\r\n                           .css('color','#ffffff');\r\n                }else if(parseInt(elem.innerHTML.replace(\",\",\"\")) < badValueLine && \r\n                            parseInt(elem.innerHTML.replace(\",\",\"\")) !== 0 && badValueLine !== 0 ){\r\n                    $(this).css(\"background-color\",\"#EE4B4B\")\r\n                           .css('-moz-border-radius','0px')\r\n                           .css('-webkit-border-radius','0px')\r\n                           .css('color','#ffffff');\r\n                }//else if(bestValueLine === 0 && mediumValueLine === 0 && badValueLine === 0 ){\r\n                    \r\n                //}\r\n            }\r\n        });\r\n    }\r\n    $(function() {\r\n        $.fn.TableColorGuide(//500000,100000,1000\r\n            \r\n            /*\r\n            dashboard.getParameterValue(\"bestValueLineParam\"),\r\n            dashboard.getParameterValue(\"mediumValueLineParam\"),\r\n            dashboard.getParameterValue(\"badValueLineParam\")\r\n            */\r\n            \r\n            \r\n            Dashboards.getParameterValue(\"bestValueLineParam\"),\r\n            Dashboards.getParameterValue(\"mediumValueLineParam\"),\r\n            Dashboards.getParameterValue(\"badValueLineParam\")\r\n            \r\n        );\r\n\t});\r\n    \r\n    $('#row5_colTable tbody tr').find(\"td:eq(0),td:eq(1)\")\r\n                                .css(\"background-color\", \"#F8FAFB\")\r\n                                .css(\"border\", \"1px solid #FFFFFF\")\r\n                                .css('color','#2779aa');\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n   \r\n} ",
+      "type": "JavaScript"
      },
      {
       "name": "postFetch",
-      "type": "JavaScript",
-      "value": ""
+      "value": "",
+      "type": "JavaScript"
      },
      {
       "name": "preChange",
-      "type": "JavaScript",
-      "value": ""
+      "value": "",
+      "type": "JavaScript"
      },
      {
       "name": "postChange",
-      "type": "JavaScript",
-      "value": ""
+      "value": "",
+      "type": "JavaScript"
      },
      {
       "name": "extraOptions",
-      "type": "ExtraOptionsArray",
-      "value": "[]"
+      "value": "[]",
+      "type": "ExtraOptionsArray"
      },
      {
       "name": "tooltip",
-      "type": "Html",
-      "value": ""
+      "value": "",
+      "type": "Html"
      },
      {
       "name": "clickAction",
-      "type": "JavaScript",
-      "value": ""
+      "value": "",
+      "type": "JavaScript"
      }
     ],
-    "rowName": "Table Component",
-    "type": "ComponentsTable",
-    "typeDesc": "table Component"
+    "rowName": "Table Component"
    },
    {
     "id": "CHARTS",
@@ -4903,105 +4903,105 @@
    },
    {
     "id": "01bd33af-7ade-fe24-884d-a47b04b12282",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
     "parent": "GENERIC",
     "properties": [
      {
       "name": "name",
-      "type": "Id",
-      "value": "bestValueLineParam"
+      "value": "bestValueLineParam",
+      "type": "Id"
      },
      {
       "name": "propertyValue",
-      "type": "String",
-      "value": "500000"
+      "value": "500000",
+      "type": "String"
      },
      {
       "name": "parameterViewRole",
-      "type": "parameterViewRoleCustom",
-      "value": "unused"
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
      },
      {
       "name": "bookmarkable",
-      "type": "Boolean",
-      "value": "false"
+      "value": "false",
+      "type": "Boolean"
      },
      {
       "name": "public",
-      "type": "Boolean",
-      "value": "false"
+      "value": "false",
+      "type": "Boolean"
      }
     ],
-    "rowName": "Simple Parameter",
-    "type": "ComponentsParameter",
-    "typeDesc": "Simple parameter"
+    "rowName": "Simple Parameter"
    },
    {
     "id": "9d95c99c-b7bc-4e31-9eef-5f3d7b8749e3",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
     "parent": "GENERIC",
     "properties": [
      {
       "name": "name",
-      "type": "Id",
-      "value": "mediumValueLineParam"
+      "value": "mediumValueLineParam",
+      "type": "Id"
      },
      {
       "name": "propertyValue",
-      "type": "String",
-      "value": "100000"
+      "value": "100000",
+      "type": "String"
      },
      {
       "name": "parameterViewRole",
-      "type": "parameterViewRoleCustom",
-      "value": "unused"
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
      },
      {
       "name": "bookmarkable",
-      "type": "Boolean",
-      "value": "false"
+      "value": "false",
+      "type": "Boolean"
      },
      {
       "name": "public",
-      "type": "Boolean",
-      "value": "false"
+      "value": "false",
+      "type": "Boolean"
      }
     ],
-    "rowName": "Simple Parameter",
-    "type": "ComponentsParameter",
-    "typeDesc": "Simple parameter"
+    "rowName": "Simple Parameter"
    },
    {
     "id": "32226ca1-b800-97f6-5b74-0df72a300356",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
     "parent": "GENERIC",
     "properties": [
      {
       "name": "name",
-      "type": "Id",
-      "value": "badValueLineParam"
+      "value": "badValueLineParam",
+      "type": "Id"
      },
      {
       "name": "propertyValue",
-      "type": "String",
-      "value": "1000"
+      "value": "1000",
+      "type": "String"
      },
      {
       "name": "parameterViewRole",
-      "type": "parameterViewRoleCustom",
-      "value": "unused"
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
      },
      {
       "name": "bookmarkable",
-      "type": "Boolean",
-      "value": "false"
+      "value": "false",
+      "type": "Boolean"
      },
      {
       "name": "public",
-      "type": "Boolean",
-      "value": "false"
+      "value": "false",
+      "type": "Boolean"
      }
     ],
-    "rowName": "Simple Parameter",
-    "type": "ComponentsParameter",
-    "typeDesc": "Simple parameter"
+    "rowName": "Simple Parameter"
    },
    {
     "id": "SELECTORS",
@@ -5099,7 +5099,7 @@
      {
       "name": "preExecution",
       "type": "JavaScript",
-      "value": "function f(){\r\n    onload_echarts();\r\n} "
+      "value": "function f(){\r\n    onload_echarts();\r\n    \r\n} "
      },
      {
       "name": "postExecution",
@@ -5128,240 +5128,240 @@
    },
    {
     "id": "5eaf8594-2c8b-ddec-786b-f90dbe42d1c2",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
     "parent": "SELECTORS",
     "properties": [
      {
       "name": "name",
-      "type": "Id",
-      "value": "bestValueLineCom"
+      "value": "bestValueLineCom",
+      "type": "Id"
      },
      {
       "name": "parameter",
-      "type": "Parameter",
-      "value": "${p:bestValueLineParam}"
+      "value": "${p:bestValueLineParam}",
+      "type": "Parameter"
      },
      {
       "name": "listeners",
-      "type": "Listeners",
-      "value": "[\"${p:bestValueLineParam}\"]"
+      "value": "[\"${p:bestValueLineParam}\"]",
+      "type": "Listeners"
      },
      {
       "name": "maxLength",
-      "type": "Integer",
-      "value": ""
+      "value": "",
+      "type": "Integer"
      },
      {
       "name": "priority",
-      "type": "Integer",
-      "value": 5
+      "value": 5,
+      "type": "Integer"
      },
      {
       "name": "refreshPeriod",
-      "type": "Integer",
-      "value": ""
+      "value": "",
+      "type": "Integer"
      },
      {
       "name": "size",
-      "type": "Integer",
-      "value": "10"
+      "value": "10",
+      "type": "Integer"
      },
      {
       "name": "htmlObject",
-      "type": "HtmlObject",
-      "value": "${h:bestValueLineDom}"
+      "value": "${h:bestValueLineDom}",
+      "type": "HtmlObject"
      },
      {
       "name": "executeAtStart",
-      "type": "Boolean",
-      "value": "true"
+      "value": "true",
+      "type": "Boolean"
      },
      {
       "name": "preExecution",
-      "type": "JavaScript",
-      "value": ""
+      "value": "",
+      "type": "JavaScript"
      },
      {
       "name": "postExecution",
-      "type": "JavaScript",
-      "value": ""
+      "value": "",
+      "type": "JavaScript"
      },
      {
       "name": "preChange",
-      "type": "JavaScript",
-      "value": ""
+      "value": "",
+      "type": "JavaScript"
      },
      {
       "name": "postChange",
-      "type": "JavaScript",
-      "value": ""
+      "value": "",
+      "type": "JavaScript"
      },
      {
       "name": "tooltip",
-      "type": "Html",
-      "value": ""
+      "value": "",
+      "type": "Html"
      }
     ],
-    "rowName": "TextInput Component",
-    "type": "ComponentstextInput",
-    "typeDesc": "Text input Component"
+    "rowName": "TextInput Component"
    },
    {
     "id": "cc6c4a0e-fa11-d215-6afa-82718dc21244",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
     "parent": "SELECTORS",
     "properties": [
      {
       "name": "name",
-      "type": "Id",
-      "value": "mediumValueLineCom"
+      "value": "mediumValueLineCom",
+      "type": "Id"
      },
      {
       "name": "parameter",
-      "type": "Parameter",
-      "value": "${p:mediumValueLineParam}"
+      "value": "${p:mediumValueLineParam}",
+      "type": "Parameter"
      },
      {
       "name": "listeners",
-      "type": "Listeners",
-      "value": "[\"${p:mediumValueLineParam}\"]"
+      "value": "[\"${p:mediumValueLineParam}\"]",
+      "type": "Listeners"
      },
      {
       "name": "maxLength",
-      "type": "Integer",
-      "value": ""
+      "value": "",
+      "type": "Integer"
      },
      {
       "name": "priority",
-      "type": "Integer",
-      "value": 5
+      "value": 5,
+      "type": "Integer"
      },
      {
       "name": "refreshPeriod",
-      "type": "Integer",
-      "value": ""
+      "value": "",
+      "type": "Integer"
      },
      {
       "name": "size",
-      "type": "Integer",
-      "value": "10"
+      "value": "10",
+      "type": "Integer"
      },
      {
       "name": "htmlObject",
-      "type": "HtmlObject",
-      "value": "${h:mediumValueLineDom}"
+      "value": "${h:mediumValueLineDom}",
+      "type": "HtmlObject"
      },
      {
       "name": "executeAtStart",
-      "type": "Boolean",
-      "value": "true"
+      "value": "true",
+      "type": "Boolean"
      },
      {
       "name": "preExecution",
-      "type": "JavaScript",
-      "value": ""
+      "value": "",
+      "type": "JavaScript"
      },
      {
       "name": "postExecution",
-      "type": "JavaScript",
-      "value": ""
+      "value": "",
+      "type": "JavaScript"
      },
      {
       "name": "preChange",
-      "type": "JavaScript",
-      "value": ""
+      "value": "",
+      "type": "JavaScript"
      },
      {
       "name": "postChange",
-      "type": "JavaScript",
-      "value": ""
+      "value": "",
+      "type": "JavaScript"
      },
      {
       "name": "tooltip",
-      "type": "Html",
-      "value": ""
+      "value": "",
+      "type": "Html"
      }
     ],
-    "rowName": "TextInput Component",
-    "type": "ComponentstextInput",
-    "typeDesc": "Text input Component"
+    "rowName": "TextInput Component"
    },
    {
     "id": "b4de91f4-ab07-c85b-36fa-3ca15ef35212",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
     "parent": "SELECTORS",
     "properties": [
      {
       "name": "name",
-      "type": "Id",
-      "value": "badValueLineCom"
+      "value": "badValueLineCom",
+      "type": "Id"
      },
      {
       "name": "parameter",
-      "type": "Parameter",
-      "value": "${p:badValueLineParam}"
+      "value": "${p:badValueLineParam}",
+      "type": "Parameter"
      },
      {
       "name": "listeners",
-      "type": "Listeners",
-      "value": "[\"${p:badValueLineParam}\"]"
+      "value": "[\"${p:badValueLineParam}\"]",
+      "type": "Listeners"
      },
      {
       "name": "maxLength",
-      "type": "Integer",
-      "value": ""
+      "value": "",
+      "type": "Integer"
      },
      {
       "name": "priority",
-      "type": "Integer",
-      "value": 5
+      "value": 5,
+      "type": "Integer"
      },
      {
       "name": "refreshPeriod",
-      "type": "Integer",
-      "value": ""
+      "value": "",
+      "type": "Integer"
      },
      {
       "name": "size",
-      "type": "Integer",
-      "value": "10"
+      "value": "10",
+      "type": "Integer"
      },
      {
       "name": "htmlObject",
-      "type": "HtmlObject",
-      "value": "${h:badValueLineDom}"
+      "value": "${h:badValueLineDom}",
+      "type": "HtmlObject"
      },
      {
       "name": "executeAtStart",
-      "type": "Boolean",
-      "value": "true"
+      "value": "true",
+      "type": "Boolean"
      },
      {
       "name": "preExecution",
-      "type": "JavaScript",
-      "value": ""
+      "value": "",
+      "type": "JavaScript"
      },
      {
       "name": "postExecution",
-      "type": "JavaScript",
-      "value": ""
+      "value": "",
+      "type": "JavaScript"
      },
      {
       "name": "preChange",
-      "type": "JavaScript",
-      "value": ""
+      "value": "",
+      "type": "JavaScript"
      },
      {
       "name": "postChange",
-      "type": "JavaScript",
-      "value": ""
+      "value": "",
+      "type": "JavaScript"
      },
      {
       "name": "tooltip",
-      "type": "Html",
-      "value": ""
+      "value": "",
+      "type": "Html"
      }
     ],
-    "rowName": "TextInput Component",
-    "type": "ComponentstextInput",
-    "typeDesc": "Text input Component"
+    "rowName": "TextInput Component"
    },
    {
     "id": "SCRIPT",
@@ -5727,7 +5727,7 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "select \r\n     \r\n     case when sum(a.BudgetSaleAmt) = 0 then 100\r\n         when sum(a.BudgetSaleAmt) = null then 100\r\n    else format(sum(a.SaleAmt)/sum(a.BudgetSaleAmt)*100,2) end AS peleterate,\r\n    e.AreaName_level1 as areaname1\r\n    \r\nfrom fact_sumday a \r\ninner join dim_bidate b on a.BIDateId = b.BIDateId\r\ninner join dim_outlet c on a.OutletId_t = c.OutletId_t\r\ninner join dim_brand  d on c.BrandId = d.BrandId\r\ninner join dim_area e on c.AreaId = e.AreaId\r\ninner join dim_place f on c.PlaceId = f.PlaceId\r\n\r\n\r\nwhere \r\n      b.BIDate between ${startDay} and ${endDay}\r\n      and (d.BrandId_level1 = ${brandParam} or ${brandParam} = -1)\r\n      and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)\r\n      and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)\r\n      and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)\r\n      and (c.ShopId = ${shopParam} or ${shopParam} = -1)\r\n      and (c.OutletId = ${outletParam} or ${outletParam} = -1)\r\n      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)\r\n\r\n\r\ngroup by e.AreaName_level1\r\n     "
+      "value": "select \r\n     e.AreaName_level1 as areaname1,\r\n     case when sum(a.BudgetSaleAmt) = 0 then 100\r\n         when sum(a.BudgetSaleAmt) = null then 100\r\n    else format(sum(a.SaleAmt)/sum(a.BudgetSaleAmt)*100,2) end AS peleterate\r\n    \r\nfrom fact_sumday a \r\ninner join dim_bidate b on a.BIDateId = b.BIDateId\r\ninner join dim_outlet c on a.OutletId_t = c.OutletId_t\r\ninner join dim_brand  d on c.BrandId = d.BrandId\r\ninner join dim_area e on c.AreaId = e.AreaId\r\ninner join dim_place f on c.PlaceId = f.PlaceId\r\n\r\n\r\nwhere \r\n      b.BIDate between ${startDay} and ${endDay}\r\n      and (d.BrandId_level1 = ${brandParam} or ${brandParam} = -1)\r\n      and (e.AreaId_level1 = ${area1Param} or ${area1Param} = -1)\r\n      and (e.AreaId_level2 = ${area2Param} or ${area2Param} = -1)\r\n      and (e.AreaId_level3 = ${area3Param} or ${area3Param} = -1)\r\n      and (c.ShopId = ${shopParam} or ${shopParam} = -1)\r\n      and (c.OutletId = ${outletParam} or ${outletParam} = -1)\r\n      and (f.PlaceId = ${placeParam} or ${placeParam} = -1)\r\n\r\n\r\ngroup by e.AreaName_level1\r\n     "
      },
      {
       "name": "parameters",
@@ -6064,75 +6064,75 @@
    },
    {
     "id": "f3483207-bed2-3cf1-8ad5-e18cb6afecad",
-    "meta": "CDA",
-    "meta_conntype": "sql.jndi",
-    "meta_datype": "sql",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi",
     "parent": "SQL",
     "properties": [
      {
       "name": "name",
-      "type": "Id",
-      "value": "row5_col_query"
+      "value": "row5_col_query",
+      "type": "Id"
      },
      {
       "name": "access",
-      "type": "Access",
-      "value": "public"
+      "value": "public",
+      "type": "Access"
      },
      {
       "name": "jndi",
-      "type": "Jndi",
-      "value": "jdbc_bi"
+      "value": "jdbc_bi",
+      "type": "Jndi"
      },
      {
       "name": "query",
-      "type": "SqlQuery",
-      "value": "CALL P_DAILY_DATA_TRACKING(${startDay}, ${endDay}, -1, -1, -1, -1, -1, -1, -1);"
+      "value": "CALL P_DAILY_BUSINESS_PROFILE('2017-01-17', '2017-06-01', -1, -1, -1, -1, -1, -1, -1);\r\n",
+      "type": "SqlQuery"
      },
      {
       "name": "parameters",
-      "type": "CdaParameters",
-      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"]]"
+      "value": "[]",
+      "type": "CdaParameters"
      },
      {
       "name": "cdacalculatedcolumns",
-      "type": "CdaCalculatedColumnsArray",
-      "value": "[]"
+      "value": "[]",
+      "type": "CdaCalculatedColumnsArray"
      },
      {
       "name": "cdacolumns",
-      "type": "CdaColumnsArray",
-      "value": "[]"
+      "value": "[]",
+      "type": "CdaColumnsArray"
      },
      {
       "name": "output",
-      "type": "IndexArray",
-      "value": "[]"
+      "value": "[]",
+      "type": "IndexArray"
      },
      {
       "name": "outputMode",
-      "type": "OutputMode",
-      "value": "include"
+      "value": "include",
+      "type": "OutputMode"
      },
      {
       "name": "cacheKeys",
-      "type": "CacheKeysValues",
-      "value": "[]"
+      "value": "[]",
+      "type": "CacheKeysValues"
      },
      {
       "name": "cacheDuration",
-      "type": "Integer",
-      "value": 3600
+      "value": 3600,
+      "type": "Integer"
      },
      {
       "name": "cache",
-      "type": "Boolean",
-      "value": "true"
+      "value": "true",
+      "type": "Boolean"
      }
     ],
-    "rowName": "sql over sqlJndi",
-    "type": "Componentssql_sqlJndi",
-    "typeDesc": "sql over sqlJndi"
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "rowName": "sql over sqlJndi"
    },
    {
     "id": "431d6c77-a8b9-5ab1-1fb2-e72a2bd267fb",
@@ -6739,7 +6739,7 @@
     "typeDesc": "Resource"
    },
    {
-    "id": "2ccd40e0-217b-090a-1220-a93de9923901",
+    "id": "be31991d-4ad8-6b0e-38fa-19c2258a1ad9",
     "parent": "UnIqEiD",
     "properties": [
      {
@@ -7675,7 +7675,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": ""
+      "value": "<script type=\"text/javascript\">\r\nfunction onload_echarts(){\r\n    var readJSONFile = function(url){\r\n        var jsonData;\r\n        $.ajax({\r\n        \ttype : 'get',\r\n\t\t\turl : url,\r\n\t\t\tasync : false,\r\n\t\t\tdataType : 'json',\r\n\t\t\tdata : null,\r\n\t\t\tsuccess : function(response){\r\n\t\t\t\tjsonData = response;\r\n\t\t\t\t//alert(jsonData);\r\n\t\t\t}\r\n\t\t})\r\n\t\treturn jsonData;\r\n\t};\r\n    \r\n    //let startDay = Dashboards.get\r\n    var url_gauge =\"/pentaho/plugin/cda/api/doQuery?path=/public/dashboard/Template9.cda&dataAccessId=row1_col1_query&parambrandParam=\" + brandParam  + \"&paramplaceParam=\" + placeParam + \"&paramarea1Param=\" + area1Param + \"&paramarea2Param=\" + area2Param + \"&paramarea3Param=\" + area3Param + \"&paramshopParam=\" + shopParam + \"&paramoutletParam=\" + outletParam +\"&paramstartDay=\" + startDay + \"&paramendDay=\" + endDay;\r\n    //\"/pentaho/plugin/cda/api/doQuery?path=/public/dashboard/dashboard12.cda&dataAccessId=salesAmtQuery&paramstartDay=\" + startDay + \"&paramendDay\" + endDay;\r\n    //Dashboards.fireChange(\"startDay\",startDay);\r\n    \r\n   // let url_gauge = '/pentaho/plugin/cda/api/doQuery?path=/public/dashboard/dashboard12.cda&dataAccessId=salesAmtQuery';\r\n\t\t//url_gauge += '&paramendDay=' + endDay + '&paramstartDay=' + startDay + '&parambrandParam=' + brandParam + '&paramplaceParam=' + placeParam + '&paramarea1Param=' + area1Param + '&paramarea2Param=' + area2Param + '&paramarea3Param=' + area3Param + '&paramshopParam=' + shopParam + '&paramoutletParam=' + outletParam;\r\n\r\n\r\n    \r\n    //console.log('****************************************');\r\n    //console.log(url_gauge);\r\n    \r\n    //console.log( Dashboards.getQueryParameter(\"brandParam\"));\r\n    //\"/pentaho/plugin/cda/api/doQuery?path=/public/dashboard/dashboard12.cda&dataAccessId=salesAmtQuery&paramstartDay=startDay&paramendDay=endDay&parambrandParam=brandParam&paramplaceParam=placeParam&paramarea1Param=area1Param&paramarea2Param=area2Param&paramarea3Param=area3Param&paramshopParam=shopParam&paramoutletParam=outletParam\";\r\n    var getFirstGaugeJSON = readJSONFile(url_gauge).resultset;\r\n    //alert(getFirstGaugeJSON);\r\n    //console.log(getFirstGaugeJSON );\r\n    //console.log('*******************************');\r\n    var myChart = echarts.init(document.getElementById('row1_col1'));\r\n    var FirstGaugeDataEncapsulation = (function(){\r\n        var data = function(){\r\n            var tempArr = [];\r\n            for(var i = 0; i < getFirstGaugeJSON.length; i++){\r\n                tempArr.push({\r\n            \t\t'name' : getFirstGaugeJSON[i][0],\r\n                    'value': getFirstGaugeJSON[i][1],\r\n                    selected : true\r\n    \t\t\t})\r\n            }\r\n            return tempArr;\r\n            //alert(tempArr);\r\n        };\r\n       \r\n        return {\r\n            getDatas : function(){\r\n                return data()\r\n            }\r\n        }\r\n        \r\n    })();\r\n    //alert(FirstGaugeDataEncapsulation.getDatas()[0].value);\r\n    //console.log(FirstGaugeDataEncapsulation.getDatas()[1]);\r\n    var ShowFirstGaugeEcharts = function(){\r\n        // 基于准备好的dom，初始化echarts实例\r\n        \r\n        // 指定图表的配置项和数据\r\n        myChart.setOption({\r\n            title: {\r\n                text: '', //标题文本内容\r\n            },\r\n            toolbox: { //可视化的工具箱\r\n                show: true,\r\n                feature: {\r\n                   /* restore: { //重置\r\n                        show: true\r\n                    },\r\n                    saveAsImage: {//保存图片\r\n                        show: true\r\n                    }*/\r\n                }\r\n            },\r\n            tooltip: { //弹窗组件\r\n                formatter: \"{a} <br/>{b} : {c}%\"\r\n            },\r\n            series: [{\r\n                name: '营业额完成情况',\r\n                type: 'gauge',\r\n                detail: {formatter: '{value}%',\r\n                        offsetCenter:[0,'65%'],\r\n                            textStyle: {       \r\n                               fontSize: 20\r\n                            }\r\n                        },\r\n                       \r\n                data:[\r\n                    {name:'完成率',\r\n                    value:FirstGaugeDataEncapsulation.getDatas()[0].value}\r\n                ]\r\n            }]\r\n        });\r\n        \r\n        // 使用刚指定的配置项和数据显示图表。\r\n          \r\n        //myChart.setOption(option);\r\n        /*setInterval(function(){//把option.series[0].data[0].value的值使用random()方法获取一个随机数\r\n            option.series[0].data[0].value = (FirstGaugeDataEncapsulation.getDatas()[0].value;\r\n            myChart.setOption(option, true);\r\n        }, 2000);*/\r\n    }();\r\n        \r\n        window.addEventListener(\"resize\",function(){\r\n            myChart.resize();\r\n        });\r\n}\r\n</script> "
      },
      {
       "name": "fontSize",
@@ -7966,7 +7966,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<script type=\"text/javascript\">\r\nfunction onload_echarts(){\r\n    var readJSONFile = function(url){\r\n        var jsonData;\r\n        $.ajax({\r\n            type : 'get',\r\n\t\t\turl : url,\r\n\t\t\tasync : false,\r\n\t\t\tdataType : 'json',\r\n\t\t\tdata : null,\r\n\t\t\tsuccess : function(response){\r\n\t\t\t\tjsonData = response;\r\n\t\t\t\t//alert(jsonData);\r\n\t\t\t}\r\n\t\t})\r\n\t\treturn jsonData;\r\n\t};\r\n    \r\n    //let startDay = Dashboards.get\r\n    var url_gauge =\"/pentaho/plugin/cda/api/doQuery?path=/public/dashboard/Template9.cda&dataAccessId=row1_col1_query&parambrandParam=\" + brandParam  + \"&paramplaceParam=\" + placeParam + \"&paramarea1Param=\" + area1Param + \"&paramarea2Param=\" + area2Param + \"&paramarea3Param=\" + area3Param + \"&paramshopParam=\" + shopParam + \"&paramoutletParam=\" + outletParam +\"&paramstartDay=\" + startDay + \"&paramendDay=\" + endDay;\r\n    //\"/pentaho/plugin/cda/api/doQuery?path=/public/dashboard/dashboard12.cda&dataAccessId=salesAmtQuery&paramstartDay=\" + startDay + \"&paramendDay\" + endDay;\r\n    //Dashboards.fireChange(\"startDay\",startDay);\r\n    \r\n   // let url_gauge = '/pentaho/plugin/cda/api/doQuery?path=/public/dashboard/dashboard12.cda&dataAccessId=salesAmtQuery';\r\n\t\t//url_gauge += '&paramendDay=' + endDay + '&paramstartDay=' + startDay + '&parambrandParam=' + brandParam + '&paramplaceParam=' + placeParam + '&paramarea1Param=' + area1Param + '&paramarea2Param=' + area2Param + '&paramarea3Param=' + area3Param + '&paramshopParam=' + shopParam + '&paramoutletParam=' + outletParam;\r\n\r\n\r\n    \r\n    //console.log('****************************************');\r\n    //console.log(url_gauge);\r\n    \r\n    //console.log( Dashboards.getQueryParameter(\"brandParam\"));\r\n    //\"/pentaho/plugin/cda/api/doQuery?path=/public/dashboard/dashboard12.cda&dataAccessId=salesAmtQuery&paramstartDay=startDay&paramendDay=endDay&parambrandParam=brandParam&paramplaceParam=placeParam&paramarea1Param=area1Param&paramarea2Param=area2Param&paramarea3Param=area3Param&paramshopParam=shopParam&paramoutletParam=outletParam\";\r\n    var getFirstGaugeJSON = readJSONFile(url_gauge).resultset;\r\n    //alert(getFirstGaugeJSON);\r\n    //console.log(getFirstGaugeJSON );\r\n    //console.log('*******************************');\r\n    var myChart = echarts.init(document.getElementById('row1_col1'));\r\n    var FirstGaugeDataEncapsulation = (function(){\r\n        var data = function(){\r\n            var tempArr = [];\r\n            for(var i = 0; i < getFirstGaugeJSON.length; i++){\r\n                tempArr.push({\r\n            \t\t'name' : getFirstGaugeJSON[i][0],\r\n                    'value': getFirstGaugeJSON[i][1],\r\n                    selected : true\r\n    \t\t\t})\r\n            }\r\n            return tempArr;\r\n            //alert(tempArr);\r\n        };\r\n       \r\n        return {\r\n            getDatas : function(){\r\n                return data()\r\n            }\r\n        }\r\n        \r\n    })();\r\n    //alert(FirstGaugeDataEncapsulation.getDatas()[0].value);\r\n    //console.log(FirstGaugeDataEncapsulation.getDatas()[1]);\r\n    var ShowFirstGaugeEcharts = function(){\r\n        // 基于准备好的dom，初始化echarts实例\r\n        \r\n        // 指定图表的配置项和数据\r\n        myChart.setOption({\r\n            title: {\r\n                text: '', //标题文本内容\r\n            },\r\n            toolbox: { //可视化的工具箱\r\n                show: true,\r\n                feature: {\r\n                   /* restore: { //重置\r\n                        show: true\r\n                    },\r\n                    saveAsImage: {//保存图片\r\n                        show: true\r\n                    }*/\r\n                }\r\n            },\r\n            tooltip: { //弹窗组件\r\n                formatter: \"{a} <br/>{b} : {c}%\"\r\n            },\r\n            series: [{\r\n                name: '营业额完成情况',\r\n                type: 'gauge',\r\n                detail: {formatter: '{value}%',\r\n                        offsetCenter:[0,'65%'],\r\n                            textStyle: {       \r\n                               fontSize: 20\r\n                            }\r\n                        },\r\n                       \r\n                data:[\r\n                    {name:'完成率',\r\n                    value:FirstGaugeDataEncapsulation.getDatas()[0].value}\r\n                ]\r\n            }]\r\n        });\r\n        \r\n        // 使用刚指定的配置项和数据显示图表。\r\n          \r\n        //myChart.setOption(option);\r\n        /*setInterval(function(){//把option.series[0].data[0].value的值使用random()方法获取一个随机数\r\n            option.series[0].data[0].value = (FirstGaugeDataEncapsulation.getDatas()[0].value;\r\n            myChart.setOption(option, true);\r\n        }, 2000);*/\r\n    }();\r\n        \r\n        window.addEventListener(\"resize\",function(){\r\n            myChart.resize();\r\n        });\r\n}\r\n</script> "
+      "value": ""
      },
      {
       "name": "fontSize",
@@ -9327,98 +9327,98 @@
     "typeDesc": "Column"
    },
    {
-    "id": "4d04f964-ee25-2c00-98f2-7483a6c1e317",
-    "parent": "8840fa00-eb83-43d5-fbf0-bdf49ad9d533",
+    "id": "576d9b04-60d3-0f6d-b6a3-aecbc1b64fec",
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel",
+    "parent": "UnIqEiD",
     "properties": [
      {
       "name": "name",
-      "type": "Id",
-      "value": ""
+      "value": "",
+      "type": "Id"
      },
      {
       "name": "height",
-      "type": "Integer",
-      "value": "500"
+      "value": "500",
+      "type": "Integer"
      },
      {
       "name": "roundCorners",
-      "type": "RoundCorners",
-      "value": ""
+      "value": "",
+      "type": "RoundCorners"
      },
      {
       "name": "cssClass",
-      "type": "String",
-      "value": ""
+      "value": "",
+      "type": "String"
      },
      {
       "name": "bootstrapPanelStyle",
-      "type": "bootstrapPanelStyleCustom",
-      "value": "panel-default"
+      "value": "panel-default",
+      "type": "bootstrapPanelStyleCustom"
      }
-    ],
-    "type": "BootstrapPanel",
-    "typeDesc": "Bootstrap Panel"
+    ]
    },
    {
-    "id": "fd21faaf-0149-9b69-ff4d-31ffec6e81ab",
-    "parent": "4d04f964-ee25-2c00-98f2-7483a6c1e317",
+    "id": "3b080353-86d2-f7aa-09a7-f6f8af66be97",
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body",
+    "parent": "576d9b04-60d3-0f6d-b6a3-aecbc1b64fec",
     "properties": [
      {
       "name": "name",
-      "type": "Id",
-      "value": ""
+      "value": "",
+      "type": "Id"
      },
      {
       "name": "roundCorners",
-      "type": "RoundCorners",
-      "value": ""
+      "value": "",
+      "type": "RoundCorners"
      },
      {
       "name": "textAlign",
-      "type": "TextAlign",
-      "value": ""
+      "value": "",
+      "type": "TextAlign"
      },
      {
       "name": "cssClass",
-      "type": "String",
-      "value": ""
+      "value": "",
+      "type": "String"
      }
-    ],
-    "type": "BootstrapPanelBody",
-    "typeDesc": "Panel Body"
+    ]
    },
    {
-    "id": "1aa965f0-dabe-654c-1da9-1f703146af48",
-    "parent": "fd21faaf-0149-9b69-ff4d-31ffec6e81ab",
+    "id": "884984cc-5136-627c-3326-fa918c1234d5",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "3b080353-86d2-f7aa-09a7-f6f8af66be97",
     "properties": [
      {
       "name": "name",
-      "type": "Id",
-      "value": ""
+      "value": "",
+      "type": "Id"
      },
      {
       "name": "html",
-      "type": "Html",
-      "value": "<div class=\"panel-heading \" style=\"font-weight:bold;font-family:微软雅黑;font-size:20px\">\r\n    <i  style=\"padding-right: 5px;\"></i>每日数据追踪\r\n</div> \r\n\r\n\r\n    <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4'>\r\n        <div class='row clearfix '>\r\n            <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4'>\r\n                <div class='row clearfix '>\r\n                    <div class='col-xs-12 col-sm-12 col-md-6 col-lg-4'>\r\n                        <div class='pull-right' style='border:1px solid #40A276;\r\n                                                        background-color:#40A276;\r\n                                                        -moz-border-radius: 0px;\r\n                                                        -webkit-border-radius: 0px;\r\n                                                        color: #ffffff;\r\n                                                        font-size: 10px;'>\r\n                            绿色线\r\n                        </div>\r\n                    </div>\r\n                    <div class='col-xs-12 col-sm-12 col-md-6 col-lg-8 last'>\r\n                        <div id='bestValueLineDom'></div>\r\n                    </div>\r\n                </div>\r\n            </div> \r\n            <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4'>\r\n                <div class='row clearfix '>\r\n                    <div class='col-xs-12 col-sm-12 col-md-6 col-lg-4'>\r\n                        <div class='pull-right' style='border:1px solid #1979CA;\r\n                                                        background-color:#1979CA;\r\n                                                        -moz-border-radius: 0px;\r\n                                                        -webkit-border-radius: 0px;\r\n                                                        color: #ffffff;\r\n                                                        font-size: 10px;'>\r\n                            蓝色线\r\n                    </div>\r\n                    </div>\r\n                    <div class='col-xs-12 col-sm-12 col-md-6 col-lg-8 last'>\r\n                        <div id='mediumValueLineDom'></div>\r\n                    </div>\r\n                </div>\r\n            </div> \r\n            <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4 last'>\r\n                <div class='row clearfix '>\r\n                    <div class='col-xs-12 col-sm-12 col-md-6 col-lg-4'>\r\n                        <div class='pull-right' style='border:1px solid #EE4B4B;\r\n                                                        background-color:#EE4B4B;\r\n                                                        -moz-border-radius: 0px;\r\n                                                        -webkit-border-radius: 0px;\r\n                                                        color: #ffffff;\r\n                                                        font-size: 10px;'>\r\n                            红色线\r\n                        </div>\r\n                    </div>\r\n                    <div class='col-xs-12 col-sm-12 col-md-6 col-lg-8 last'>\r\n                        <div id='badValueLineDom'></div>\r\n                    </div>\r\n                </div>\r\n            </div> \r\n            \r\n            <!-- \r\n            <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4'>蓝色线\r\n                <div id='mediumValueLineDom'></div>\r\n            </div> \r\n            <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4 last'>红色线\r\n                <div id='badValueLineDom'></div>\r\n            </div> \r\n            -->\r\n        </div> \r\n    </div>\r\n    <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4 last'>\r\n        <div class=\"panel-heading pull-right\">\r\n            <!-- \r\n            <i class=\"fa fa-share-square-o\"></i> \r\n            -->\r\n            <div id='ExportDom'></div>\r\n        </div> \r\n    </div>\r\n</div> \r\n\r\n\r\n<div id='row5_col'></div> "
+      "value": "<div class=\"panel-heading \" style=\"font-weight:bold;font-family:微软雅黑;font-size:20px\">\r\n    <i  style=\"padding-right: 5px;\"></i>每日数据追踪\r\n</div> \r\n\r\n\r\n    <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4'>\r\n        <div class='row clearfix '>\r\n            <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4'>\r\n                <div class='row clearfix '>\r\n                    <div class='col-xs-12 col-sm-12 col-md-6 col-lg-4'>\r\n                        <div class='pull-right' style='border:1px solid #40A276;\r\n                                                        background-color:#40A276;\r\n                                                        -moz-border-radius: 0px;\r\n                                                        -webkit-border-radius: 0px;\r\n                                                        color: #ffffff;\r\n                                                        font-size: 10px;'>\r\n                            绿色线\r\n                        </div>\r\n                    </div>\r\n                    <div class='col-xs-12 col-sm-12 col-md-6 col-lg-8 last'>\r\n                        <div id='bestValueLineDom'></div>\r\n                    </div>\r\n                </div>\r\n            </div> \r\n            <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4'>\r\n                <div class='row clearfix '>\r\n                    <div class='col-xs-12 col-sm-12 col-md-6 col-lg-4'>\r\n                        <div class='pull-right' style='border:1px solid #1979CA;\r\n                                                        background-color:#1979CA;\r\n                                                        -moz-border-radius: 0px;\r\n                                                        -webkit-border-radius: 0px;\r\n                                                        color: #ffffff;\r\n                                                        font-size: 10px;'>\r\n                            蓝色线\r\n                    </div>\r\n                    </div>\r\n                    <div class='col-xs-12 col-sm-12 col-md-6 col-lg-8 last'>\r\n                        <div id='mediumValueLineDom'></div>\r\n                    </div>\r\n                </div>\r\n            </div> \r\n            <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4 last'>\r\n                <div class='row clearfix '>\r\n                    <div class='col-xs-12 col-sm-12 col-md-6 col-lg-4'>\r\n                        <div class='pull-right' style='border:1px solid #EE4B4B;\r\n                                                        background-color:#EE4B4B;\r\n                                                        -moz-border-radius: 0px;\r\n                                                        -webkit-border-radius: 0px;\r\n                                                        color: #ffffff;\r\n                                                        font-size: 10px;'>\r\n                            红色线\r\n                        </div>\r\n                    </div>\r\n                    <div class='col-xs-12 col-sm-12 col-md-6 col-lg-8 last'>\r\n                        <div id='badValueLineDom'></div>\r\n                    </div>\r\n                </div>\r\n            </div> \r\n            \r\n            <!-- \r\n            <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4'>蓝色线\r\n                <div id='mediumValueLineDom'></div>\r\n            </div> \r\n            <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4 last'>红色线\r\n                <div id='badValueLineDom'></div>\r\n            </div> \r\n            -->\r\n        </div> \r\n    </div>\r\n    <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4 last'>\r\n        <div class=\"panel-heading pull-right\">\r\n            <!-- \r\n            <i class=\"fa fa-share-square-o\"></i> \r\n            -->\r\n            <div id='ExportDom'></div>\r\n        </div> \r\n    </div>\r\n</div> \r\n\r\n\r\n<div id='row5_col'></div> ",
+      "type": "Html"
      },
      {
       "name": "fontSize",
-      "type": "Integer",
-      "value": ""
+      "value": "",
+      "type": "Integer"
      },
      {
       "name": "color",
-      "type": "Color",
-      "value": ""
+      "value": "",
+      "type": "Color"
      },
      {
       "name": "cssClass",
-      "type": "String",
-      "value": ""
+      "value": "",
+      "type": "String"
      }
-    ],
-    "type": "LayoutHtml",
-    "typeDesc": "Html"
+    ]
    }
   ],
   "title": "CDF - Sample structure"

@@ -1011,7 +1011,7 @@
      {
       "name": "propertyDateValue",
       "type": "Date",
-      "value": "lastMonth"
+      "value": "yearStart"
      },
      {
       "name": "bookmarkable",
@@ -4076,6 +4076,1311 @@
     "rowName": "CCC Pie Chart",
     "type": "ComponentscccPieChart",
     "typeDesc": "CCC Pie Chart"
+   },
+   {
+    "id": "dfe54828-baa2-a747-d25a-9411e06ec2fe",
+    "meta_cdwSupport": "true",
+    "parent": "CHARTS",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "operatingProfitTrendBar"
+     },
+     {
+      "name": "title",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "listeners",
+      "type": "Listeners",
+      "value": "[\"${p:startDay}\",\"${p:endDay}\"]"
+     },
+     {
+      "name": "parameters",
+      "type": "ValuesArray",
+      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"]]"
+     },
+     {
+      "name": "dataSource",
+      "type": "Datasource",
+      "value": "operatingProfitTrendQuery"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": "320"
+     },
+     {
+      "name": "priority",
+      "type": "Integer",
+      "value": 5
+     },
+     {
+      "name": "refreshPeriod",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "width",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "colors",
+      "type": "Array",
+      "value": "[]"
+     },
+     {
+      "name": "htmlObject",
+      "type": "HtmlObject",
+      "value": "${h:operatingProfitTrendDom}"
+     },
+     {
+      "name": "executeAtStart",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "preExecution",
+      "type": "JavaScript",
+      "value": "function f(){\r\n    resizeGraphical(this);\r\n    \r\n    \r\n    //this.chartDefinition.xAxisLabel_textAngle = -1.6;//-0.55;\r\n    \r\n    this.chartDefinition.barSizeRatio = 1;\r\n    \r\n    //this.chartDefinition.stacked = true;\r\n    this.chartDefinition.legendShape = 'circle';\r\n    this.chartDefinition.selectable = true;\r\n    this.chartDefinition.hoverable = true;\r\n    this.chartDefinition.legendPosition =  'bottom';\r\n    this.chartDefinition.plotFrameVisible = false;\r\n    this.chartDefinition.orthoAxisGrid = true;\r\n    this.chartDefinition.orthoAxisTicks = false;\r\n    //this.chartDefinition.orthoAxisVisible = false;\r\n    //this.chartDefinition.anchor(\"left\");//.add(pv.Label).text(y.tickFormat);\r\n    /*\r\n    this.chartDefinition.extensionPoints = {  hoverable  \r\n        xAxisTicks_strokeStyle: 'gray',\r\n        rubberBand_strokeStyle: 'rgb(0,0,240)',\r\n        rubberBand_fillStyle:   'rgba(0,0,255, 0.5)',\r\n        rubberBand_lineWidth:   2.5\r\n    }\r\n    */\r\n} "
+     },
+     {
+      "name": "postExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postFetch",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "preChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "extensionPoints",
+      "type": "EditorValuesArray",
+      "value": "[]"
+     },
+     {
+      "name": "tooltip",
+      "type": "Html",
+      "value": ""
+     },
+     {
+      "name": "animate",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "barOrthoSizeMin",
+      "type": "Float",
+      "value": 1.5
+     },
+     {
+      "name": "barSizeMax",
+      "type": "Float",
+      "value": 2000
+     },
+     {
+      "name": "barSizeRatio",
+      "type": "Float",
+      "value": "0.9"
+     },
+     {
+      "name": "barStackedMargin",
+      "type": "Float",
+      "value": 0
+     },
+     {
+      "name": "baseAxisBandSize",
+      "type": "Float",
+      "value": ""
+     },
+     {
+      "name": "baseAxisBandSizeMax",
+      "type": "Float",
+      "value": ""
+     },
+     {
+      "name": "baseAxisBandSizeMin",
+      "type": "Float",
+      "value": ""
+     },
+     {
+      "name": "baseAxisBandSpacing",
+      "type": "Float",
+      "value": ""
+     },
+     {
+      "name": "baseAxisBandSpacingMax",
+      "type": "Float",
+      "value": ""
+     },
+     {
+      "name": "baseAxisBandSpacingMin",
+      "type": "Float",
+      "value": ""
+     },
+     {
+      "name": "baseAxisClickAction",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "baseAxisDoubleClickAction",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "baseAxisFont",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "baseAxisGrid",
+      "type": "Boolean",
+      "value": false
+     },
+     {
+      "name": "baseAxisLabelSpacingMin",
+      "type": "Float",
+      "value": ""
+     },
+     {
+      "name": "baseAxisOffset",
+      "type": "Float",
+      "value": 0
+     },
+     {
+      "name": "baseAxisOverlappedLabelsMode",
+      "type": "cccBaseAxisOverlappedLabelsModeCustom",
+      "value": "hide"
+     },
+     {
+      "name": "baseAxisPosition",
+      "type": "cccBaseAxisPositionCustom",
+      "value": ""
+     },
+     {
+      "name": "baseAxisSize",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "baseAxisSizeMax",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "baseAxisTickFormatter",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "baseAxisTicks",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "baseAxisTitle",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "baseAxisTitleAlign",
+      "type": "cccBaseAxisTitleAlignCustom",
+      "value": ""
+     },
+     {
+      "name": "baseAxisTitleFont",
+      "type": "String",
+      "value": "12px sans-serif"
+     },
+     {
+      "name": "baseAxisTitleMargins",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "baseAxisTitleSize",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "baseAxisTitleSizeMax",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "baseAxisTooltipAutoContent",
+      "type": "cccBaseAxisTooltipAutoContentCustom",
+      "value": "value"
+     },
+     {
+      "name": "baseAxisTooltipEnabled",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "baseAxisTooltipFormat",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "baseAxisVisible",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "categoryRole",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "clearSelectionMode",
+      "type": "cccClearSelectionModeCustom",
+      "value": "emptySpaceClick"
+     },
+     {
+      "name": "clickable",
+      "type": "Boolean",
+      "value": false
+     },
+     {
+      "name": "clickAction",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "color2AxisColors",
+      "type": "Array",
+      "value": "[]"
+     },
+     {
+      "name": "color2AxisLegendClickMode",
+      "type": "cccColor2AxisLegendClickModeCustom",
+      "value": "toggleVisible"
+     },
+     {
+      "name": "color2AxisLegendDrawLine",
+      "type": "Boolean",
+      "value": ""
+     },
+     {
+      "name": "color2AxisLegendDrawMarker",
+      "type": "Boolean",
+      "value": ""
+     },
+     {
+      "name": "color2AxisLegendShape",
+      "type": "cccColor2AxisLegendShapeCustom",
+      "value": ""
+     },
+     {
+      "name": "color2AxisLegendVisible",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "color2AxisTransform",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "color2AxisUnbound",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "colorRole",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "colorTransform",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "colorUnbound",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "compatVersion",
+      "type": "Float",
+      "value": 2
+     },
+     {
+      "name": "contentMargins",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "contentPaddings",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "crosstabMode",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "ctrlSelectMode",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "dataCategoriesCount",
+      "type": "Float",
+      "value": ""
+     },
+     {
+      "name": "dataIgnoreMetadataLabels",
+      "type": "Boolean",
+      "value": false
+     },
+     {
+      "name": "dataMeasuresInColumns",
+      "type": "Boolean",
+      "value": ""
+     },
+     {
+      "name": "dataPartRole",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "dataSeparator",
+      "type": "String",
+      "value": "~"
+     },
+     {
+      "name": "dataWhere",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "doubleClickAction",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "groupedLabelSep",
+      "type": "String",
+      "value": " ~ "
+     },
+     {
+      "name": "hoverable",
+      "type": "Boolean",
+      "value": false
+     },
+     {
+      "name": "ignoreNulls",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "interactive",
+      "type": "Boolean",
+      "value": ""
+     },
+     {
+      "name": "isMultiValued",
+      "type": "Boolean",
+      "value": false
+     },
+     {
+      "name": "leafContentOverflow",
+      "type": "cccLeafContentOverflowCustom",
+      "value": "auto"
+     },
+     {
+      "name": "legend",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "legendAlign",
+      "type": "cccLegendAlignCustom",
+      "value": ""
+     },
+     {
+      "name": "legendClickMode",
+      "type": "cccLegendClickModeCustom",
+      "value": "toggleVisible"
+     },
+     {
+      "name": "legendDrawLine",
+      "type": "Boolean",
+      "value": ""
+     },
+     {
+      "name": "legendDrawMarker",
+      "type": "Boolean",
+      "value": ""
+     },
+     {
+      "name": "legendFont",
+      "type": "String",
+      "value": "10px sans-serif"
+     },
+     {
+      "name": "legendItemPadding",
+      "type": "String",
+      "value": "2.5"
+     },
+     {
+      "name": "legendItemSize",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "legendMargins",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "legendMarkerSize",
+      "type": "Float",
+      "value": 15
+     },
+     {
+      "name": "legendPaddings",
+      "type": "String",
+      "value": "5"
+     },
+     {
+      "name": "legendPosition",
+      "type": "cccLegendPositionCustom",
+      "value": "bottom"
+     },
+     {
+      "name": "legendShape",
+      "type": "cccLegendShapeCustom",
+      "value": ""
+     },
+     {
+      "name": "legendSize",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "legendSizeMax",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "legendTextMargin",
+      "type": "Float",
+      "value": 6
+     },
+     {
+      "name": "legendVisible",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "margins",
+      "type": "String",
+      "value": "3"
+     },
+     {
+      "name": "measuresIndexes",
+      "type": "Array",
+      "value": "[]"
+     },
+     {
+      "name": "multiChartColumnsMax",
+      "type": "Float",
+      "value": 3
+     },
+     {
+      "name": "multiChartIndexes",
+      "type": "Array",
+      "value": "[]"
+     },
+     {
+      "name": "multiChartMax",
+      "type": "Float",
+      "value": ""
+     },
+     {
+      "name": "multiChartOverflow",
+      "type": "cccMultiChartOverflowCustom",
+      "value": "grow"
+     },
+     {
+      "name": "multiChartRole",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "multiChartSingleColFillsHeight",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "multiChartSingleRowFillsHeight",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "nullInterpolationMode",
+      "type": "cccNullInterpolationModeCustom",
+      "value": "none"
+     },
+     {
+      "name": "orientation",
+      "type": "cccOrientationCustom",
+      "value": "vertical"
+     },
+     {
+      "name": "ortho2AxisDesiredTickCount",
+      "type": "Float",
+      "value": ""
+     },
+     {
+      "name": "ortho2AxisDomainRoundMode",
+      "type": "cccOrtho2AxisDomainRoundModeCustom",
+      "value": "tick"
+     },
+     {
+      "name": "ortho2AxisDomainScope",
+      "type": "cccOrtho2AxisDomainScopeCustom",
+      "value": "global"
+     },
+     {
+      "name": "ortho2AxisFixedMax",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "ortho2AxisFixedMin",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "ortho2AxisFont",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "ortho2AxisGrid",
+      "type": "Boolean",
+      "value": false
+     },
+     {
+      "name": "ortho2AxisLabelSpacingMin",
+      "type": "Float",
+      "value": ""
+     },
+     {
+      "name": "ortho2AxisMinorTicks",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "ortho2AxisOffset",
+      "type": "Float",
+      "value": 0
+     },
+     {
+      "name": "ortho2AxisOriginIsZero",
+      "type": "Boolean",
+      "value": ""
+     },
+     {
+      "name": "ortho2AxisOverlappedLabelsMode",
+      "type": "cccOrtho2AxisOverlappedLabelsModeCustom",
+      "value": "hide"
+     },
+     {
+      "name": "ortho2AxisPosition",
+      "type": "cccOrtho2AxisPositionCustom",
+      "value": ""
+     },
+     {
+      "name": "ortho2AxisSize",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "ortho2AxisSizeMax",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "ortho2AxisTickExponentMax",
+      "type": "Float",
+      "value": ""
+     },
+     {
+      "name": "ortho2AxisTickExponentMin",
+      "type": "Float",
+      "value": ""
+     },
+     {
+      "name": "ortho2AxisTickFormatter",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "ortho2AxisTicks",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "ortho2AxisTickUnit",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "ortho2AxisTickUnitMax",
+      "type": "String",
+      "value": "Infinity"
+     },
+     {
+      "name": "ortho2AxisTickUnitMin",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "ortho2AxisTitle",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "ortho2AxisTitleAlign",
+      "type": "cccOrtho2AxisTitleAlignCustom",
+      "value": ""
+     },
+     {
+      "name": "ortho2AxisTitleFont",
+      "type": "String",
+      "value": "12px sans-serif"
+     },
+     {
+      "name": "ortho2AxisTitleMargins",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "ortho2AxisTitleSize",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "ortho2AxisTitleSizeMax",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "ortho2AxisVisible",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "ortho2AxisZeroLine",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "orthoAxisDesiredTickCount",
+      "type": "Float",
+      "value": ""
+     },
+     {
+      "name": "orthoAxisDomainRoundMode",
+      "type": "cccOrthoAxisDomainRoundModeCustom",
+      "value": "tick"
+     },
+     {
+      "name": "orthoAxisDomainScope",
+      "type": "cccOrthoAxisDomainScopeCustom",
+      "value": "global"
+     },
+     {
+      "name": "orthoAxisFixedMax",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "orthoAxisFixedMin",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "orthoAxisFont",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "orthoAxisGrid",
+      "type": "Boolean",
+      "value": false
+     },
+     {
+      "name": "orthoAxisLabelSpacingMin",
+      "type": "Float",
+      "value": ""
+     },
+     {
+      "name": "orthoAxisMinorTicks",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "orthoAxisOffset",
+      "type": "Float",
+      "value": 0
+     },
+     {
+      "name": "orthoAxisOriginIsZero",
+      "type": "Boolean",
+      "value": ""
+     },
+     {
+      "name": "orthoAxisOverlappedLabelsMode",
+      "type": "cccOrthoAxisOverlappedLabelsModeCustom",
+      "value": "hide"
+     },
+     {
+      "name": "orthoAxisPosition",
+      "type": "cccOrthoAxisPositionCustom",
+      "value": ""
+     },
+     {
+      "name": "orthoAxisSize",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "orthoAxisSizeMax",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "orthoAxisTickExponentMax",
+      "type": "Float",
+      "value": ""
+     },
+     {
+      "name": "orthoAxisTickExponentMin",
+      "type": "Float",
+      "value": ""
+     },
+     {
+      "name": "orthoAxisTickFormatter",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "orthoAxisTicks",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "orthoAxisTickUnit",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "orthoAxisTickUnitMax",
+      "type": "String",
+      "value": "Infinity"
+     },
+     {
+      "name": "orthoAxisTickUnitMin",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "orthoAxisTitle",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "orthoAxisTitleAlign",
+      "type": "cccOrthoAxisTitleAlignCustom",
+      "value": ""
+     },
+     {
+      "name": "orthoAxisTitleFont",
+      "type": "String",
+      "value": "12px sans-serif"
+     },
+     {
+      "name": "orthoAxisTitleMargins",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "orthoAxisTitleSize",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "orthoAxisTitleSizeMax",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "orthoAxisVisible",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "orthoAxisZeroLine",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "overflowMarkersVisible",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "paddings",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "panelSizeRatio",
+      "type": "Float",
+      "value": ""
+     },
+     {
+      "name": "percentValueFormat",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "plot2",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "plot2AreasVisible",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "plot2ColorAxis",
+      "type": "Float",
+      "value": 2
+     },
+     {
+      "name": "plot2DotsVisible",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "plot2LinesVisible",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "plot2NullInterpolationMode",
+      "type": "cccPlot2NullInterpolationModeCustom",
+      "value": "none"
+     },
+     {
+      "name": "plot2OrthoAxis",
+      "type": "Float",
+      "value": "2"
+     },
+     {
+      "name": "plot2Series",
+      "type": "Array",
+      "value": "[]"
+     },
+     {
+      "name": "plot2SeriesIndexes",
+      "type": "Array",
+      "value": "[\"2\"]"
+     },
+     {
+      "name": "plot2Stacked",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "plot2TrendLabel",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "plot2TrendType",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "plot2ValuesAnchor",
+      "type": "cccPlot2ValuesAnchorCustom",
+      "value": ""
+     },
+     {
+      "name": "plot2ValuesFont",
+      "type": "String",
+      "value": "10px sans-serif"
+     },
+     {
+      "name": "plot2ValuesMask",
+      "type": "String",
+      "value": "{value}"
+     },
+     {
+      "name": "plot2ValuesVisible",
+      "type": "Boolean",
+      "value": false
+     },
+     {
+      "name": "plotFrameVisible",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "pointingMode",
+      "type": "cccPointingModeCustom",
+      "value": "near"
+     },
+     {
+      "name": "readers",
+      "type": "Array",
+      "value": "[]"
+     },
+     {
+      "name": "renderCallback",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "renderedCallback",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "selectable",
+      "type": "Boolean",
+      "value": false
+     },
+     {
+      "name": "selectionChangedAction",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "seriesInRows",
+      "type": "Boolean",
+      "value": false
+     },
+     {
+      "name": "seriesRole",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "smallAspectRatio",
+      "type": "Float",
+      "value": ""
+     },
+     {
+      "name": "smallContentMargins",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "smallContentPaddings",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "smallHeight",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "smallMargins",
+      "type": "String",
+      "value": "2%"
+     },
+     {
+      "name": "smallPaddings",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "smallTitleAlign",
+      "type": "cccSmallTitleAlignCustom",
+      "value": ""
+     },
+     {
+      "name": "smallTitleFont",
+      "type": "String",
+      "value": "14px sans-serif"
+     },
+     {
+      "name": "smallTitleMargins",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "smallTitlePaddings",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "smallTitlePosition",
+      "type": "cccSmallTitlePositionCustom",
+      "value": "top"
+     },
+     {
+      "name": "smallTitleSize",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "smallTitleSizeMax",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "smallWidth",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "stacked",
+      "type": "Boolean",
+      "value": false
+     },
+     {
+      "name": "timeSeries",
+      "type": "Boolean",
+      "value": false
+     },
+     {
+      "name": "timeSeriesFormat",
+      "type": "String",
+      "value": "%Y-%m-%d"
+     },
+     {
+      "name": "titleAlign",
+      "type": "cccTitleAlignCustom",
+      "value": ""
+     },
+     {
+      "name": "titleFont",
+      "type": "String",
+      "value": "14px sans-serif"
+     },
+     {
+      "name": "titleMargins",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "titlePaddings",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "titlePosition",
+      "type": "cccTitlePositionCustom",
+      "value": "top"
+     },
+     {
+      "name": "titleSize",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "titleSizeMax",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "tooltipArrowVisible",
+      "type": "Boolean",
+      "value": ""
+     },
+     {
+      "name": "tooltipClassName",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "tooltipEnabled",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "tooltipFade",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "tooltipFollowMouse",
+      "type": "Boolean",
+      "value": false
+     },
+     {
+      "name": "tooltipFormat",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "tooltipGravity",
+      "type": "cccTooltipGravityCustom",
+      "value": ""
+     },
+     {
+      "name": "tooltipHtml",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "tooltipOffset",
+      "type": "Float",
+      "value": ""
+     },
+     {
+      "name": "tooltipOpacity",
+      "type": "Float",
+      "value": 0.9
+     },
+     {
+      "name": "tooltipUseCorners",
+      "type": "Boolean",
+      "value": ""
+     },
+     {
+      "name": "trendAreasVisible",
+      "type": "Boolean",
+      "value": false
+     },
+     {
+      "name": "trendColorAxis",
+      "type": "Float",
+      "value": 2
+     },
+     {
+      "name": "trendDotsVisible",
+      "type": "Boolean",
+      "value": false
+     },
+     {
+      "name": "trendLabel",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "trendLinesVisible",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "trendOrthoAxis",
+      "type": "Float",
+      "value": "1"
+     },
+     {
+      "name": "trendStacked",
+      "type": "Boolean",
+      "value": false
+     },
+     {
+      "name": "trendType",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "trendValuesAnchor",
+      "type": "cccTrendValuesAnchorCustom",
+      "value": "right"
+     },
+     {
+      "name": "trendValuesFont",
+      "type": "String",
+      "value": "10px sans-serif"
+     },
+     {
+      "name": "trendValuesMask",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "trendValuesVisible",
+      "type": "Boolean",
+      "value": false
+     },
+     {
+      "name": "userSelectionAction",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "valueFormat",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "valueRole",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "valuesAnchor",
+      "type": "cccValuesAnchorCustom",
+      "value": ""
+     },
+     {
+      "name": "valuesFont",
+      "type": "String",
+      "value": "10px sans-serif"
+     },
+     {
+      "name": "valuesMask",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "valuesNormalized",
+      "type": "Boolean",
+      "value": false
+     },
+     {
+      "name": "valuesOptimizeLegibility",
+      "type": "Boolean",
+      "value": ""
+     },
+     {
+      "name": "valuesOverflow",
+      "type": "cccValuesOverflowCustom",
+      "value": "hide"
+     },
+     {
+      "name": "valuesVisible",
+      "type": "Boolean",
+      "value": ""
+     }
+    ],
+    "rowName": "CCC Bar Chart",
+    "type": "ComponentscccBarChart",
+    "typeDesc": "CCC Bar Chart"
    },
    {
     "id": "2f688cf4-958f-263b-f71d-08b480018d5d",
@@ -8748,7 +10053,7 @@
      {
       "name": "colTypes",
       "type": "colTypesCustom",
-      "value": "[\"numeric\",\"hyperlink\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"]"
+      "value": "[\"hidden\",\"hyperlink\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"]"
      },
      {
       "name": "colWidths",
@@ -9796,52 +11101,128 @@
     "typeDesc": "Query Component"
    },
    {
-    "id": "D3COMPONENTS",
-    "name": "D3 Components",
-    "parent": "UnIqEiD",
-    "properties": [
-     {
-      "name": "Group",
-      "type": "Label",
-      "value": "D3 Components"
-     }
-    ],
-    "type": "Label",
-    "typeDesc": "<i>Group</i>"
-   },
-   {
-    "id": "76e62ad7-80c2-791e-bd3e-dac7f02c8ae0",
-    "parent": "D3COMPONENTS",
+    "id": "2a15698f-f7f4-d09b-d1d9-3a42cc69522f",
+    "parent": "OTHERCOMPONENTS",
     "properties": [
      {
       "name": "name",
       "type": "Id",
-      "value": "saleAmtD3"
+      "value": "P_CONTRIBUTION_RATIO_TABLE"
+     },
+     {
+      "name": "expandContainerObject",
+      "type": "HtmlTarget",
+      "value": ""
      },
      {
       "name": "listeners",
       "type": "Listeners",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:placeParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\",\"${p:shopParam}\",\"${p:outletParam}\"]"
+      "value": "[]"
      },
      {
-      "name": "customfunction",
+      "name": "oLanguage",
       "type": "JavaScript",
-      "value": "function f(dataset){\r\n    //var data = this.cdaResultToD3Array(dataset);\r\n    //console.log(data[0].SaleAmt);\r\n    //var div3 = d3.select( document.getElementById('div3') );\r\n    //start();\r\n    /*\r\n\tfunction deselect() {\r\n\t\tdiv1.attr(\"class\",\"radial\");\r\n\t\tdiv2.attr(\"class\",\"radial\");\r\n\t\tdiv3.attr(\"class\",\"radial\");\r\n\t}\r\n    \r\n\tfunction start() {\r\n\t\tvar rp3 = radialProgress(document.getElementById('div3'))\r\n\t\t\t\t.label(\"RADIAL 3\")\r\n\t\t\t\t.diameter(200)\r\n\t\t\t\t.minValue(0)\r\n\t\t\t\t.maxValue(400000000)\r\n\t\t\t\t.value(data[0].SaleAmt)\r\n\t\t\t\t.render();\r\n\t}\r\n        var rp2 = radialProgress(document.getElementById('div2'))\r\n\t\t\t\t\t.label(\"RADIAL 2\")\r\n\t\t\t\t\t.onClick(onClick2)\r\n\t\t\t\t\t.diameter(150)\r\n\t\t\t\t\t.value(232)\r\n\t\t\t\t\t.render();\r\n    */\r\n    let div3 = d3.select( document.getElementById('div3') );\r\n    (()=>{\r\n        let radialChart = radialProgress(document.getElementById('div3'))\r\n    \t\t\t//.label(\"RADIAL 3\")\r\n\t\t\t\t.diameter(200)\r\n\t\t\t\t.minValue(0)\r\n\t\t\t\t.maxValue(4000000)\r\n\t\t\t\t.value(this.cdaResultToD3Array(dataset)[0].SaleAmt)\r\n\t\t\t\t.render();\r\n    })();\r\n    \r\n} "
+      "value": "{\r\n    \"sEmptyTable\":     \"No data available in table\",\r\n    //\"sInfo\":           \"Showing _START_ to _END_ of _TOTAL_ entries\",\r\n    \"sInfo\":           \"当前条目 _START_ / _END_ ,共计 _TOTAL_ 条目\",\r\n    //\"sInfoEmpty\":      \"Showing 0 to 0 of 0 entries\",\r\n    \"sInfoEmpty\":      \"显示 0 / 0 ,共计 0 条目\",\r\n    //\"sInfoFiltered\":   \"(filtered from _MAX_ total entries)\",\r\n    \"sInfoFiltered\":   \"(从_MAX_个总条目过滤)\",\r\n    \"sInfoPostFix\":    \"\",\r\n    \"sInfoThousands\":  \",\",\r\n    //\"sLengthMenu\":     \"Show _MENU_ entries\",\r\n    \"sLengthMenu\":     \"显示 _MENU_ 条目\",\r\n    \"sLoadingRecords\": \"Loading...\",\r\n    \"sProcessing\":     \"Processing...\",\r\n    //\"sSearch\":         \"Search:\",\r\n    \"sSearch\":         \"模糊查询：\",\r\n    //\"sZeroRecords\":    \"No matching records found\",\r\n    \"sZeroRecords\":    \"没有找到匹配的记录\",\r\n    \"oPaginate\": {\r\n        \"sFirst\":    \"First\",\r\n        \"sLast\":     \"Last\",\r\n        \"sNext\":     \"Next\",\r\n        \"sPrevious\": \"Previous\"\r\n    },\r\n    \"oAria\": {\r\n        \"sSortAscending\":  \": activate to sort column ascending\",\r\n        \"sSortDescending\": \": activate to sort column descending\"\r\n    }\r\n} "
+     },
+     {
+      "name": "language",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "colFormats",
+      "type": "ColFormatsArray",
+      "value": "[null,null,null,\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\",\"%.2f\"]"
+     },
+     {
+      "name": "colHeaders",
+      "type": "ColHeadersArray",
+      "value": "[]"
+     },
+     {
+      "name": "colSortable",
+      "type": "ColSortableArray",
+      "value": "[]"
+     },
+     {
+      "name": "colTypes",
+      "type": "colTypesCustom",
+      "value": "[\"hidden\",\"string\",\"string\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"]"
+     },
+     {
+      "name": "colWidths",
+      "type": "ColWidthsArray",
+      "value": "[]"
+     },
+     {
+      "name": "expandParameters",
+      "type": "ExpandParameters",
+      "value": "[]"
      },
      {
       "name": "parameters",
       "type": "ValuesArray",
-      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"placeParam\",\"placeParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"],[\"shopParam\",\"shopParam\"],[\"outletParam\",\"outletParam\"]]"
+      "value": "[]"
+     },
+     {
+      "name": "displayLength",
+      "type": "Integer",
+      "value": "8"
+     },
+     {
+      "name": "expandOnClick",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "filter",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "info",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "lengthChange",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "paginate",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "sort",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "colSearchable",
+      "type": "ColSearchableArray",
+      "value": "[]"
+     },
+     {
+      "name": "drawCallback",
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "dataSource",
       "type": "Datasource",
-      "value": "saleAmtQuery1"
+      "value": "P_CONTRIBUTION_RATIO"
      },
      {
-      "name": "height",
-      "type": "Integer",
-      "value": "320"
+      "name": "sDom",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "sortBy",
+      "type": "SortByArray",
+      "value": "[]"
      },
      {
       "name": "priority",
@@ -9854,19 +11235,29 @@
       "value": ""
      },
      {
-      "name": "width",
-      "type": "Integer",
-      "value": ""
+      "name": "paginationType",
+      "type": "PaginationType",
+      "value": "simple_numbers"
+     },
+     {
+      "name": "tableStyle",
+      "type": "TableStyle",
+      "value": "themeroller"
      },
      {
       "name": "htmlObject",
       "type": "HtmlObject",
-      "value": "${h:div3}"
+      "value": "${h:P_CONTRIBUTION_RATIO_DOM}"
      },
      {
       "name": "executeAtStart",
       "type": "Boolean",
       "value": "true"
+     },
+     {
+      "name": "paginateServerside",
+      "type": "Boolean",
+      "value": "false"
      },
      {
       "name": "preExecution",
@@ -9876,7 +11267,7 @@
      {
       "name": "postExecution",
       "type": "JavaScript",
-      "value": ""
+      "value": "function() {\n    \n    /**\n     * 可实现合并单元格,上下行来比较\n     */\n    var totalCols = $(\"#P_CONTRIBUTION_RATIO_DOMTable\").find(\"tr:eq(0)\").find(\"td\").length;\n    //console.log($('#P_CONTRIBUTION_RATIO_DOMTable tbody tr').find(\"td\").length);\n    var totalRows = $(\"#P_CONTRIBUTION_RATIO_DOMTable\").find(\"tr\").length;\n\t//for ( var i = totalCols-1; i >= 0; i--) {\n    for ( var i = 1; i >= 0; i--) {\n\t\tfor ( var j = totalRows-1; j >= 0; j--) {\n        //for ( var j = 0; j >= 0; j--) {\n\t\t\tstartCell = $(\"#P_CONTRIBUTION_RATIO_DOMTable\").find(\"tr\").eq(j).find(\"td\").eq(i);\n\t\t\ttargetCell = $(\"#P_CONTRIBUTION_RATIO_DOMTable\").find(\"tr\").eq(j - 1).find(\"td\").eq(i);\n            if (startCell.text() == targetCell.text() && targetCell.text() !== \"\") {\n\t\t\t\ttargetCell.attr(\"rowSpan\", (startCell.attr(\"rowSpan\") === undefined)?2:(eval(startCell.attr(\"rowSpan\"))+1));\n\t\t\t\t//startCell.remove();   //注意区别\n                startCell.addClass(\"hidden-lg hidden-md hidden-sm hidden-xs\");\n                //console.log(startCell.text());\n\t\t\t}\n            \n\t\t}\n\t}\n    \n     $('#P_CONTRIBUTION_RATIO_DOMTable tbody tr').find(\"td:eq(0),td:eq(1)\")\n                                .css(\"background-color\", \"#F8FAFB\")\n                                .css(\"border\", \"1px solid #FFFFFF\")\n                                .css('color','#2779aa');\n} "
      },
      {
       "name": "postFetch",
@@ -9894,14 +11285,38 @@
       "value": ""
      },
      {
+      "name": "extraOptions",
+      "type": "ExtraOptionsArray",
+      "value": "[]"
+     },
+     {
       "name": "tooltip",
       "type": "Html",
       "value": ""
+     },
+     {
+      "name": "clickAction",
+      "type": "JavaScript",
+      "value": ""
      }
     ],
-    "rowName": "d3 Component",
-    "type": "Componentsd3",
-    "typeDesc": "D3 Component Component"
+    "rowName": "Table Component",
+    "type": "ComponentsTable",
+    "typeDesc": "table Component"
+   },
+   {
+    "id": "D3COMPONENTS",
+    "name": "D3 Components",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "type": "Label",
+      "value": "D3 Components"
+     }
+    ],
+    "type": "Label",
+    "typeDesc": "<i>Group</i>"
    },
    {
     "id": "fae871af-da61-d4da-bb00-93489132e542",
@@ -9965,7 +11380,7 @@
      {
       "name": "preExecution",
       "type": "JavaScript",
-      "value": "function f(){\r\n    //resizeGraphical(this);\r\n} "
+      "value": "function f(){\r\n    if($(\"#demoDom > svg\").length > 0){\r\n        $('#demoDom svg').remove();\r\n    }else{\r\n        console.log('First loading D3 Chart...');\r\n    }\r\n    resizeGraphical(this);\r\n    var margin = {top: 80, right: 20, bottom: 30, left: 60},\r\n        width = document.getElementById(\"row4_col1_panel_body\").scrollWidth - 100,\r\n        //width = this.getWidth(),\r\n        height = this.getHeight() - margin.top - margin.bottom;\r\n} "
      },
      {
       "name": "postExecution",
@@ -10873,6 +12288,150 @@
       "name": "cache",
       "type": "Boolean",
       "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "f2716ee6-b3f6-790e-f0a2-73e631399e95",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "operatingProfitTrendQuery"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "SELECT \r\n    tbl.YearMonth,\t\t-- 年月\r\n\ttbl.t1 AS Profit,\t\t-- 当期利润金额\r\n\ttbl_1.SaleAmt,\r\n\tCASE WHEN t2 = 0 OR t2 IS NULL\r\n\t\tTHEN 0.00\r\n\tELSE ((t1-t2) / t2) * 100 END AS ProportionH\t\t-- 环比 \r\nFROM\r\n\t(\r\n\t\tSELECT \r\n\t\t\tDATE_FORMAT(b1.BIDate,'%Y-%m') AS YearMonth,\r\n\t\t\tSUM(a1.SaleAmt)-sum(a1.SaleCostAmt) AS t1,\t\t-- 当期金额\r\n\t\t\t(\t\t\r\n\t\t\t\tSELECT \r\n\t\t\t\t\tCASE WHEN SUM(a2.SaleAmt)-sum(a2.SaleCostAmt) = 0 OR SUM(a2.SaleAmt)-sum(a2.SaleCostAmt) IS NULL\r\n\t\t\t\t\t\tTHEN 0.00\r\n\t\t\t\t\tELSE SUM(a2.SaleAmt)-sum(a2.SaleCostAmt) END\r\n\t\t\t\tFROM fact_sumday AS a2 INNER JOIN dim_bidate AS b2 ON a2.BIDateId = b2.BIDateId \r\n\t\t\t\tWHERE DATE_FORMAT(b1.BIDate,'%Y-%m') = DATE_FORMAT(DATE_ADD(b2.BIDate,INTERVAL 1 MONTH),'%Y-%m')\t\t-- 表的自连接实现\r\n\t\t\t) AS t2\t\t-- 环期金额\r\n\t\tFROM fact_sumday AS a1 INNER JOIN dim_bidate AS b1 ON a1.BIDateId = b1.BIDateId\r\n\t\tGROUP BY 1\r\n\t) AS tbl INNER JOIN (\r\n\t\t\t\t\t\t\tSELECT\r\n\t\t\t\t\t\t\t\t\tDATE_FORMAT(dim_bidate.BIDate,'%Y-%m') AS YearMonth,\r\n\t\t\t\t\t\t\t\t\tSUM(fact_sumday.SaleAmt) AS SaleAmt\r\n\t\t\t\t\t\t\tFROM \r\n\t\t\t\t\t\t\t\tfact_sumday INNER JOIN dim_bidate ON fact_sumday.BIDateId = dim_bidate.BIDateId\r\n\t\t\t\t\t\t\tWHERE DATE_FORMAT(dim_bidate.BIDate,'%Y-%m') BETWEEN DATE_FORMAT(${startDay},'%Y-%m') AND DATE_FORMAT(${endDay},'%Y-%m')\r\n\t\t\t\t\t\t\tGROUP BY dim_bidate.YearMonth\r\n\t\t\t\t\t\t\tORDER BY dim_bidate.BIDateId ) AS tbl_1 ON tbl.YearMonth = tbl_1.YearMonth\r\n\r\nWHERE tbl.YearMonth BETWEEN DATE_FORMAT(${startDay},'%Y-%m') AND DATE_FORMAT(${endDay},'%Y-%m')"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"startDay\",\"startDay\",\"String\",\"\",\"\"],[\"endDay\",\"endDay\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "e8db6b9b-0504-f860-a516-c77b4e6874d6",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "P_CONTRIBUTION_RATIO"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "CALL P_CONTRIBUTION_RATIO('2016-01-01', '2017-06-09', -1, -1, -1, -1, -1, -1, -1);"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "false"
      }
     ],
     "rowName": "sql over sqlJndi",
@@ -12030,12 +13589,107 @@
     "rowName": "sql over sqlJndi",
     "type": "Componentssql_sqlJndi",
     "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "401dadd3-8065-c89a-0d65-5f1145eaf260",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "GaugeEchartsQuery"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "SELECT\r\n    -1,\r\n    case when sum(`fact_sumday`.`BudgetSaleAmt`) = 0 then 100\r\n         when sum(`fact_sumday`.`BudgetSaleAmt`) = null then 100\r\n    else format(sum(`fact_sumday`.`SaleAmt`)/sum(`fact_sumday`.`BudgetSaleAmt`)*100,2) end AS peleterate\r\nFROM\r\n     `fact_sumday` INNER JOIN `dim_outlet` ON `fact_sumday`.`OutletId_t` = `dim_outlet`.`OutletId_t`\r\n     INNER JOIN `dim_bidate` ON `fact_sumday`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n     INNER JOIN `dim_place` ON `fact_sumday`.`PlaceId` = `dim_place`.`PlaceId`\r\n     INNER JOIN `dim_area` ON `fact_sumday`.`AreaId` = `dim_area`.`AreaId`\r\n     INNER JOIN `dim_brand` ON `dim_outlet`.`BrandId` = `dim_brand`.`BrandId`\r\n"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
    }
   ]
  },
  "filename": "/public/UI/Template3/Template3.cdfde",
  "layout": {
   "rows": [
+   {
+    "id": "a10cfa05-221a-62a7-6984-1f4dd0037ea4",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "Echarts"
+     },
+     {
+      "name": "resourceFile",
+      "type": "ResourceFile",
+      "value": "${solution:../js/Echarts3.6.0/echarts.min.js}"
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Javascript"
+     }
+    ],
+    "type": "LayoutResourceFile",
+    "typeDesc": "Resource"
+   },
    {
     "id": "61862744-58f3-32b1-7ed5-2e896da6f88c",
     "parent": "UnIqEiD",
@@ -12060,52 +13714,6 @@
     "typeDesc": "Resource"
    },
    {
-    "id": "abd0b80a-3172-fd5a-b9ee-c31ccb131186",
-    "parent": "UnIqEiD",
-    "properties": [
-     {
-      "name": "name",
-      "type": "Id",
-      "value": "radialProgress_min_js"
-     },
-     {
-      "name": "resourceFile",
-      "type": "ResourceFile",
-      "value": "${solution:../js/radialProgress.min.js}"
-     },
-     {
-      "name": "resourceType",
-      "type": "Label",
-      "value": "Javascript"
-     }
-    ],
-    "type": "LayoutResourceFile",
-    "typeDesc": "Resource"
-   },
-   {
-    "id": "caa42967-2eec-01af-2214-9cafab8af2fe",
-    "parent": "UnIqEiD",
-    "properties": [
-     {
-      "name": "name",
-      "type": "Id",
-      "value": "radialProgress_css"
-     },
-     {
-      "name": "resourceFile",
-      "type": "ResourceFile",
-      "value": "${solution:../css/radialProgress.css}"
-     },
-     {
-      "name": "resourceType",
-      "type": "Label",
-      "value": "Css"
-     }
-    ],
-    "type": "LayoutResourceFile",
-    "typeDesc": "Resource"
-   },
-   {
     "id": "cd7ffa06-6a87-3381-533d-59c002027350",
     "parent": "UnIqEiD",
     "properties": [
@@ -12117,7 +13725,7 @@
      {
       "name": "resourceCode",
       "type": "Resource",
-      "value": "@font-face{\r\n    font-family: TPF_Font_Thin;\r\n    src: url('/pentaho/BI/fonts/Comfortaa_Thin.ttf'),\r\n         url('/pentaho/BI/fonts/Comfortaa_Thin.eot');  /* IE9 */ \r\n}\r\nbody{\r\n    background-color:#ECF0F5;\r\n}\r\n.container {\r\n    width:100%;\r\n    height: 100%;\r\n    overflow: auto;\r\n    position: absolute; \r\n    padding-top: 10px;\r\n    padding-right: 0px;\r\n    padding-left: 10px;\r\n    padding-bottom: 10px;\r\n    margin-right: auto;\r\n    margin-left: auto;\r\n}\r\n/*   #   */\r\n.panel-default {\r\n    border: none;\r\n    border-radius: 0px;\r\n    margin-bottom: 0px;\r\n    box-shadow: none;\r\n    -webkit-box-shadow: none;\r\n}\r\n.panel-default > .panel-heading {\r\n    color: #777;\r\n    background-color: #fff;\r\n    border-color: #e6e6e6;\r\n    padding: 10px 10px;\r\n}\r\n.panel-default > .panel-body {\r\n    padding: 10px;\r\n    padding-bottom: 0px;\r\n}\r\n.panel-default > .panel-body ul {\r\n    overflow: hidden;\r\n    padding: 0;\r\n    margin: 0px;\r\n    margin-top: -5px;\r\n}\r\n.panel-default > .panel-body ul li {\r\n    line-height: 27px;\r\n    list-style-type: none;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n}\r\n.panel-default > .panel-body ul li .time {\r\n    color: #a1a1a1;\r\n    float: right;\r\n    padding-right: 5px;\r\n} \r\n\r\n\r\n .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, \r\n .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, \r\n .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, \r\n .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, \r\n .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, \r\n .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, \r\n .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, \r\n .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, \r\n .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, \r\n .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, \r\n .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, \r\n .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {\r\n    position: relative;\r\n    min-height: 1px;\r\n    padding-right: 10px;\r\n    padding-left: 0px;\r\n} \r\n.row {\r\n    margin-right: 0px;\r\n    margin-left: 0px;\r\n} \r\n#dateRangePickerDom > input {\r\n    height: 20px;\r\n    border-radius:4px;\r\n    cursor:pointer;\r\n    border:0px solid #DBDBDB;\r\n    border-right:1px solid #DBDBDB; ;\r\n}\r\nhr {\r\n    margin-top: 10px; \r\n    margin-bottom: 0px; \r\n    border: 0;\r\n    border-top: 0px solid #eee; \r\n} \r\n#saleAmtDom_KPI, #ATVDom_KPI, #discountDom_KPI, \r\n#overTableVDom_KPI, #backItemDom_KPI, #rushItamDom_KPI {\r\n    color:#666666;\r\n    font-size:40px;\r\n    font-weight:lighter;\r\n    font-family:TPF_Font_Thin;\r\n} \r\n#row3{\r\n    padding-right: 10px;\r\n} \r\n#row4, #row5, #row6, #row7, #row8, #row9, #row10, .row2_col1-xs, .row1_col1-xs{\r\n    margin-right:10px;\r\n} \r\n#row3_col1{\r\n    margin-right:-10px;\r\n} \r\n\r\n\r\n/*\r\n#header { margin-top:1em; }\r\nh2 { font-size:1.4em; padding-top:7px; padding-left:1em; height:1.6em; }\r\n.topRow1 { font-size:1.2em; font-weight:700; margin-left:1em; }\r\n.topRow2 { font-size:1em; margin-left:1em; }\r\nhr.topRowHR { height:2px; width:900px; color:red; }\r\n#ParamRow { font-size:0.9em; vertical-align:bottom; margin-bottom:2em; }\r\n#ParamRow select { font-size:0.9em; vertical-align:top; }\r\n#ParamRow input { font-size:0.9em; vertical-align:top; }\r\n#nResultTable { margin-top:2em; }\r\ntable tr.even, table tr.odd{ background-color: white; }\r\ntable thead th { border-bottom: 1px solid #CCC; background-color: #fff; }\r\ntable tbody td.number, th.number{ text-align: right; }\r\ntable tbody td.string, th.string{ text-align: left; }\r\ntable tfooter td { background-color: white; }\r\n.ui-widget-header { background: white; color: white; border-bottom:0px } \r\n\r\nthead td\r\n*/\r\n.table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th {\r\n    background-color: white;\r\n}\r\n.table-striped > tbody > tr:nth-child(even) > td, .table-striped > tbody > tr:nth-child(even) > th {\r\n    background-color: #F7F8F9;\r\n}\r\n.table-bordered > thead > tr > th, .table-bordered > thead > tr > td {\r\n    border-bottom-width: 2px;\r\n    text-align: center;\r\n    background-color: #ECEFF1;\r\n}\r\ntable tbody tr.even{\r\n    background-color: red;\r\n}\r\ntable { \r\n    text-align:right; \r\n} \r\ntr td:nth-child(1){\r\n        text-align:left;\r\n}/*把第1个td的背景设为黑色*/\r\n\r\n\r\n\r\n\r\n/********************************************************/\r\n        #test .arc2 {\r\n            stroke-weight:0.1;\r\n            fill: #3660b0;\r\n        }\r\n        #outer {\r\n            background:#FFFFFF;\r\n            border-radius: 5px;\r\n            color: #000;\r\n        }\r\n        #div1, #div2, #div3, #div4 {\r\n            width: 33%;\r\n            height: 200px;\r\n            box-sizing: border-box;\r\n            float: left;\r\n        }\r\n        #div2 .arc {\r\n            stroke-weight: 0.1;\r\n            fill: #f0a417;\r\n        }\r\n        #div2 .arc2 {\r\n            stroke-weight: 0.1;\r\n            fill: #b00d08;\r\n        }\r\n        #div3 .arc {\r\n            stroke-weight: 0.1;\r\n            fill: #1d871b;\r\n        }\r\n        .selectedRadial {\r\n            border-radius: 3px;\r\n            background: #f4f4f4;\r\n            color: #000;\r\n            box-shadow: 0 1px 5px rgba(0,0,0,0.4);\r\n            -moz-box-shadow: 0 1px 5px rgba(0,0,0,0.4);\r\n            border: 1px solid rgba(200,200,200,0.85);\r\n        }\r\n        .radial {\r\n            border-radius: 3px;\r\n            background: #FFFFFF;\r\n            color: #000;\r\n\r\n        }\r\n "
+      "value": "@font-face{\r\n    font-family: TPF_Font_Thin;\r\n    src: url('/pentaho/BI/fonts/Comfortaa_Thin.ttf'),\r\n         url('/pentaho/BI/fonts/Comfortaa_Thin.eot');  /* IE9 */ \r\n}\r\nbody{\r\n    \r\n    background-color:#E7EBED;\r\n    /*\r\n    background-color:#FFFFFF;  #ECF0F5\r\n    */\r\n    font-size: 10px;\r\n    font-family: 'TPF_Font_Thin';\r\n    \r\n}\r\n\r\n.container {\r\n    width:100%;\r\n    height: 100%;\r\n    overflow: auto;\r\n    position: absolute; \r\n    padding-top: 10px;\r\n    padding-right: 0px;\r\n    padding-left: 10px;\r\n    padding-bottom: 10px;\r\n    margin-right: auto;\r\n    margin-left: auto;\r\n}\r\n\r\n/*   #   */\r\n.panel-default {\r\n    border: none;\r\n    border-radius: 0px;\r\n    margin-bottom: 0px;\r\n    box-shadow: none;\r\n    -webkit-box-shadow: none;\r\n}\r\n.panel-heading {\r\n    /*\r\n    padding: 10px 15px;\r\n    */\r\n    padding: 0px 0px;\r\n    border-bottom: 0px solid transparent;\r\n    border-top-left-radius: 3px;\r\n    border-top-right-radius: 3px;\r\n}\r\n.panel-default > .panel-heading {\r\n    color: #777;\r\n    background-color: #fff;\r\n    border-color: #e6e6e6;\r\n    padding: 10px 10px;\r\n}\r\n.panel-default > .panel-body {\r\n    padding: 10px;\r\n    padding-bottom: 0px;\r\n}\r\n.panel-default > .panel-body ul {\r\n    overflow: hidden;\r\n    padding: 0;\r\n    margin: 0px;\r\n    margin-top: -5px;\r\n}\r\n.panel-default > .panel-body ul li {\r\n    line-height: 27px;\r\n    list-style-type: none;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n}\r\n.panel-default > .panel-body ul li .time {\r\n    color: #a1a1a1;\r\n    float: right;\r\n    padding-right: 5px;\r\n} \r\n.single {\r\n    cursor: pointer;\r\n    border: 1px solid #eee;\r\n    border-radius: 0px;\r\n    text-align: center;\r\n    \r\n    padding: 10px;\r\n    padding-top: 10px;\r\n    padding-right: 10px;\r\n    margin-bottom: 10px;\r\n    \r\n} \r\n\r\n .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, \r\n .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, \r\n .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, \r\n .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, \r\n .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, \r\n .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, \r\n .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, \r\n .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, \r\n .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, \r\n .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, \r\n .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, \r\n .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {\r\n    position: relative;\r\n    min-height: 1px;\r\n    padding-right: 10px;\r\n    padding-left: 0px;\r\n} \r\n.row {\r\n    margin-right: 0px;\r\n    margin-left: 0px;\r\n} \r\n\r\nhr {\r\n    margin-top: 10px; \r\n    margin-bottom: 0px; \r\n    border: 0;\r\n    border-top: 0px solid #eee; \r\n} \r\n\r\n\r\n/************************************************************************************/\r\n#saleAmtDom_KPI, #ATVDom_KPI, #discountDom_KPI, \r\n#overTableVDom_KPI, #backItemDom_KPI, #rushItamDom_KPI {\r\n    color:#666666;\r\n    font-size:40px;\r\n    font-weight:lighter;\r\n    font-family:TPF_Font_Thin;\r\n} \r\n#row3{\r\n    padding-right: 10px;\r\n} \r\n#row4, #row5, #row6, #row7, #row8, #row9, #row10, .row2_col1-xs, .row1_col1-xs{\r\n    margin-right:10px;\r\n} \r\n#row3_col1{\r\n    margin-right:-10px;\r\n} \r\n\r\n\r\n/* ================ TABLE ================ */\r\ntable,table tr th, table tr td {\r\n    border:1px solid #F8FAFB; \r\n    /*\r\n    #F8FAFB  #278DC5\r\n    */\r\n}\r\n\r\ntable.table.dataTable {\r\n    /*\r\n    margin-top: 18px;\r\n    */\r\n    border: none;\r\n}\r\n\r\ntable.table.dataTable thead {\r\n    /*\r\n    display: none;\r\n    */\r\n    background-color: #F8FAFB;\r\n    /*\r\n    border: none;\r\n    */\r\n    border: 1px solid #efefef;\r\n}\r\n\r\n\r\ntable.table.dataTable tbody tr {\r\n    background-color: white;\r\n    /*\r\n    border: none;\r\n    */\r\n    border: 1px solid #efefef;\r\n}\r\n\r\ntable.table.dataTable tbody tr td {\r\n    border: none;\r\n    background-color: white;\r\n    padding: 4px;\r\n    line-height: 22px;\r\n}\r\n\r\ntable.table.dataTable tbody tr td.column2 {\r\n    font-size: 16px;\r\n}\r\n\r\n.salesByProduct {\r\n    margin-top: 20px;\r\n}\r\n\r\n.dataTables_wrapper .dataTables_filter input {\r\n    margin-left: 0.5em;\r\n    border: 1px solid #efefef;\r\n    padding: 5px;\r\n    margin: 10px;\r\n}\r\n\r\n.dataTables_wrapper .dataTables_length, \r\n.dataTables_wrapper .dataTables_filter, \r\n.dataTables_wrapper .dataTables_info, \r\n.dataTables_wrapper .dataTables_processing, \r\n.dataTables_wrapper .dataTables_paginate {\r\n    color: #333333;\r\n    width: 100%;\r\n    background-color: #F8FAFB;\r\n    padding: 4px;\r\n    border-bottom: 2px solid white;\r\n}\r\n\r\ntable.dataTable.compact thead th, \r\ntable.dataTable.compact thead td {\r\n    padding: 5px 9px;\r\n    background-color: #F8FAFB;\r\n    border: 2px solid white;\r\n}\r\n\r\ntable.tableComponent td.numeric {\r\n    font-family: 'Open Sans';\r\n    font-size: 12px;\r\n    vertical-align: middle;\r\n}\r\n\r\n\r\n\r\ntable .trend {\r\n    position: relative;\r\n\r\n}\r\n\r\ntable .trend:after {\r\n    position: absolute;\r\n    background: none;\r\n    font: normal normal normal 20px/1 FontAwesome;\r\n    top: -5px;\r\n    left: -3px;\r\n}\r\n\r\ntable .trend.down.good {\r\n    background: none;\r\n}\r\n\r\ntable .trend.down.good:after {\r\n    content: \"\\f0ab\";\r\n    color: red;\r\n}\r\n\r\ntable .trend.up.good {\r\n    background: none;\r\n}\r\n\r\ntable .trend.up.good:after {\r\n    content: \"\\f0aa\";\r\n    color: green;\r\n}\r\n\r\ntable .trend.neutral.good {\r\n    background: none;\r\n}\r\n\r\ntable .trend.neutral.good:after {\r\n    content: \"\\f0a9\";\r\n    color: #ccc;\r\n} \r\n\r\n.dataTables_wrapper .ui-toolbar {\r\n    padding: 0px;\r\n} \r\n.dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {\r\n    color: #333333;\r\n    width: 100%;\r\n    /* background-color: #F8FAFB; */\r\n    /* padding: 4px; */\r\n    /* border-bottom: 2px solid white; */\r\n}\r\n.dataTables_wrapper .dataTables_paginate {\r\n    float: right;\r\n    text-align: right;\r\n    /* padding-top: 0.25em; */\r\n} \r\n.ui-widget-header {\r\n    border: 0px solid #aed0ea;\r\n    background: #F8FAFB url(images/ui-bg_highlight-soft_100_deedf7_1x100.png) 50% 50% repeat-x; \r\n    /*\r\n    color: #222222;\r\n    */\r\n    color: #2779AA;\r\n    font-weight: bold;\r\n} \r\n.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {\r\n    border: 1px solid #aed0ea;\r\n    background: #F8FAFB url(images/ui-bg_glass_80_d7ebf9_1x400.png) 50% 50% repeat-x;\r\n    font-weight: bold;\r\n    color: #2779aa;\r\n}\r\n\r\n.dataTables_wrapper .dataTables_filter input {\r\n    margin-left: 0em; \r\n    border: 1px solid #efefef;\r\n    padding: 0px; \r\n    margin: 0px; \r\n} \r\n.dataTables_wrapper .dataTables_paginate{\r\n    color: #333333;\r\n    width: 100%;\r\n    background-color: #F8FAFB;\r\n    padding: 0px;\r\n    border-bottom: 0px solid white;\r\n} \r\n\r\n.dataTables_wrapper .dataTables_info{\r\n    color: #2779AA;\r\n    width: 100%;\r\n    background-color: #F8FAFB;\r\n    padding: 4px;\r\n    border-bottom: 0px solid white; \r\n}\r\n.dataTables_wrapper .dataTables_length{\r\n    color: #333333;\r\n    width: 100%;\r\n    background-color: #F8FAFB;\r\n    padding: 4px;\r\n    border-bottom: 0px solid white;\r\n}\r\n\r\ntbody tr:hover td,tbody tr.over td{\r\n    background-color:#888888;\r\n    color:#fff;\r\n}\r\n\r\n.groupHeader.group0 {\r\n    background: #F8FAFB;\r\n}\r\n\r\n\r\n#row6_col1_panel_body{\r\n    height:300px;\r\n   overflow:auto; \r\n}\r\n\r\n\r\n/********************************************************/\r\n        #test .arc2 {\r\n            stroke-weight:0.1;\r\n            fill: #3660b0;\r\n        }\r\n        #outer {\r\n            background:#FFFFFF;\r\n            border-radius: 5px;\r\n            color: #000;\r\n        }\r\n        #div1, #div2, #div3, #div4 {\r\n            width: 33%;\r\n            height: 200px;\r\n            box-sizing: border-box;\r\n            float: left;\r\n        }\r\n        #div2 .arc {\r\n            stroke-weight: 0.1;\r\n            fill: #f0a417;\r\n        }\r\n        #div2 .arc2 {\r\n            stroke-weight: 0.1;\r\n            fill: #b00d08;\r\n        }\r\n        #div3 .arc {\r\n            stroke-weight: 0.1;\r\n            fill: #1d871b;\r\n        }\r\n        .selectedRadial {\r\n            border-radius: 3px;\r\n            background: #f4f4f4;\r\n            color: #000;\r\n            box-shadow: 0 1px 5px rgba(0,0,0,0.4);\r\n            -moz-box-shadow: 0 1px 5px rgba(0,0,0,0.4);\r\n            border: 1px solid rgba(200,200,200,0.85);\r\n        }\r\n        .radial {\r\n            border-radius: 3px;\r\n            background: #FFFFFF;\r\n            color: #000;\r\n\r\n        }\r\n "
      },
      {
       "name": "resourceType",
@@ -12520,7 +14128,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\n    <i class=\"fa fa-paperclip\" style=\"padding-right: 5px;\"></i> 营业额 \n</div>  \n    <div id='outer' style=\"margin-top:40px; padding:10px\">\n\t\t<div id=\"main\" style=\"width:600px; height:200px; margin: 0px auto; \">\n\t\t\t<div id=\"div1\"></div>\n\t\t\t<div id=\"div2\"></div>\n\t\t\t<div id=\"div3\"></div>\n\t\t</div>\n\t</div>\n\t<script language=\"JavaScript\">\n\t\tvar div1=d3.select(document.getElementById('div1'));\n\t\tvar div2=d3.select(document.getElementById('div2'));\n\t\t//var div3=d3.select(document.getElementById('div3'));\n\t\t//var div4=d3.select(document.getElementById('div4'));\n\t\tstart();\n\t\tfunction onClick1() {\n\t\t\tdeselect();\n\t\t\tdiv1.attr(\"class\",\"selectedRadial\");\n\t\t}\n\t\tfunction onClick2() {\n\t\t\tdeselect();\n\t\t\tdiv2.attr(\"class\",\"selectedRadial\");\n\t\t}\n        /*\n\t\tfunction onClick3() {\n\t\t\tdeselect();\n\t\t\tdiv3.attr(\"class\",\"selectedRadial\");\n\t\t}\n        */\n\t\tfunction labelFunction(val,min,max) {\n\n\t\t}\n\t\tfunction deselect() {\n\t\t\tdiv1.attr(\"class\",\"radial\");\n\t\t\tdiv2.attr(\"class\",\"radial\");\n\t\t\t//div3.attr(\"class\",\"radial\");\n\t\t}\n\t\tfunction start() {\n\t\t\tvar rp1 = radialProgress(document.getElementById('div1'))\n\t\t\t\t\t.label(\"RADIAL 1\")\n\t\t\t\t\t.onClick(onClick1)\n\t\t\t\t\t.diameter(150)\n\t\t\t\t\t.value(78)\n\t\t\t\t\t.render();\n\t\t\tvar rp2 = radialProgress(document.getElementById('div2'))\n\t\t\t\t\t.label(\"RADIAL 2\")\n\t\t\t\t\t.onClick(onClick2)\n\t\t\t\t\t.diameter(150)\n\t\t\t\t\t.value(232)\n\t\t\t\t\t.render();\n                    /*\n\t\t\tvar rp3 = radialProgress(document.getElementById('div3'))\n\t\t\t\t\t.label(\"RADIAL 3\")\n\t\t\t\t\t.onClick(onClick3)\n\t\t\t\t\t.diameter(150)\n\t\t\t\t\t.minValue(100)\n\t\t\t\t\t.maxValue(200)\n\t\t\t\t\t.value(150)\n\t\t\t\t\t.render();\n            */\n\t\t}\n\t</script> "
+      "value": "<!-- \n<div class=\"panel-heading \">\n    <i class=\"fa fa-paperclip\" style=\"padding-right: 5px;\"></i> 营业额 \n</div> \n-->\n<div id='EchartsGaugeDom' style='height: 250px'></div>\n<script type=\"text/javascript\">\n    function initEcahrts(){\n        let readJSONFile = function(url){\n            let jsonData;\n            $.ajax({\n                type : 'get',\n    \t\t\turl : url,\n    \t\t\tasync : false,\n    \t\t\tdataType : 'json',\n    \t\t\tdata : null,\n    \t\t\tsuccess : function(response){\n    \t\t\t\tjsonData = response;\n    \t\t\t\t//alert(jsonData);\n    \t\t\t}\n    \t\t})\n    \t\treturn jsonData;\n    \t};\n        //http://localhost:8080\n        let url_gauge = \"/pentaho/plugin/cda/api/doQuery?path=/public/UI/Template3/Template3.cda&dataAccessId=GaugeEchartsQuery\";\n        let getFirstGaugeJSON = readJSONFile(url_gauge).resultset;\n        //alert(getFirstGaugeJSON);\n        console.log(getFirstGaugeJSON );\n        console.log('*******************************');\n        let myChart = echarts.init(document.getElementById('EchartsGaugeDom'));\n        let FirstGaugeDataEncapsulation = (function(){\n            let data = function(){\n                let tempArr = [];\n                for(let i = 0; i < getFirstGaugeJSON.length; i++){\n                    tempArr.push({\n                \t\t'name' : getFirstGaugeJSON[i][0],\n                        'value': getFirstGaugeJSON[i][1],\n                        selected : true\n        \t\t\t})\n                }\n                return tempArr;\n                //alert(tempArr);\n            };\n            return {\n                getDatas : function(){\n                    return data()\n                }\n            }\n            \n        })();\n        let ShowFirstGaugeEcharts = function(){\n            // 基于准备好的dom，初始化echarts实例\n            // 指定图表的配置项和数据\n            myChart.setOption({\n                title: {\n                    text: '', //标题文本内容\n                },\n                toolbox: { //可视化的工具箱\n                    show: true,\n                    feature: {\n                       /* restore: { //重置\n                            show: true\n                        },\n                        saveAsImage: {//保存图片\n                            show: true\n                        }*/\n                    }\n                },\n                tooltip: { //弹窗组件\n                    formatter: \"{a} <br/>{b} : {c}%\"\n                },\n                series: [{\n                    name: '营业额完成情况',\n                    type: 'gauge',\n                    detail: {formatter: '{value}%',\n                            offsetCenter:[0,'65%'],\n                                textStyle: {       \n                                   fontSize: 20\n                                }\n                            },\n                           \n                    data:[\n                        {name:'完成率',\n                        value:FirstGaugeDataEncapsulation.getDatas()[0].value}\n                    ]\n                }]\n            });\n        }();\n        window.addEventListener(\"resize\",function(){\n            myChart.resize();\n        });\n    }\n</script> \n\n "
      },
      {
       "name": "fontSize",
@@ -13379,7 +14987,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-paperclip\" style=\"padding-right: 5px;\"></i> 费用金额  \r\n</div> \r\n<div class=\"row\">\r\n    <div class=\"col text-center\" style=\"font-size:40px\">\r\n        <div id=\"ATVDom_KPI\" style=\"color:#666666;font-weight:lighter;font-family:TPF_Font_Thin;\">???</div>\r\n    </div>\r\n</div> \r\n<div class=\"row\">\r\n    <div class=\"panel-heading\">\r\n        <div class=\"col text-center\">\r\n            成本金额 &nbsp\r\n            <span id=\"costAmtDom_KPI\" style=\"color:red;font-family:TPF_Font_Thin;\"></span>\r\n        </div>\r\n    </div> \r\n</div> "
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-paperclip\" style=\"padding-right: 5px;\"></i> 费用金额  \r\n</div> \r\n<div class=\"row\">\r\n    <div class=\"col text-center\" style=\"font-size:40px\">\r\n        <div id=\"ATVDom_KPI\" style=\"color:#666666;font-weight:lighter;font-family:TPF_Font_Thin;\">---</div>\r\n    </div>\r\n</div> \r\n<div class=\"row\">\r\n    <div class=\"panel-heading\">\r\n        <div class=\"col text-center\">\r\n            成本金额 &nbsp\r\n            <span id=\"costAmtDom_KPI\" style=\"color:red;font-family:TPF_Font_Thin;\"></span>\r\n        </div>\r\n    </div> \r\n</div> "
      },
      {
       "name": "fontSize",
@@ -13878,7 +15486,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "销售目标完成率 "
+      "value": "<div class=\"panel-heading \">\n    <i class=\"fa fa-paperclip\" style=\"padding-right: 5px;\"></i> 销售目标完成率   \n</div> \n<div class=\"row\">\n    <div class=\"col text-center\" style=\"font-size:40px\">\n        <div id=\"ATVDom_KPI\" style=\"color:#666666;font-weight:lighter;font-family:TPF_Font_Thin;\">---</div>\n    </div>\n</div> "
      },
      {
       "name": "fontSize",
@@ -14276,7 +15884,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "折扣单数占比 "
+      "value": "\n<div class=\"panel-heading \">\n    <i class=\"fa fa-paperclip\" style=\"padding-right: 5px;\"></i> 折扣单数占比    \n</div> \n<div class=\"row\">\n    <div class=\"col text-center\" style=\"font-size:40px\">\n        <div id=\"ATVDom_KPI\" style=\"color:#666666;font-weight:lighter;font-family:TPF_Font_Thin;\">---</div>\n    </div>\n</div> "
      },
      {
       "name": "fontSize",
@@ -14775,7 +16383,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "投资金额 "
+      "value": " \n<div class=\"panel-heading \">\n    <i class=\"fa fa-paperclip\" style=\"padding-right: 5px;\"></i> 投资金额    \n</div> \n<div class=\"row\">\n    <div class=\"col text-center\" style=\"font-size:40px\">\n        <div id=\"ATVDom_KPI\" style=\"color:#666666;font-weight:lighter;font-family:TPF_Font_Thin;\">---</div>\n    </div>\n</div> "
      },
      {
       "name": "fontSize",
@@ -14993,7 +16601,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "投资回收所需时间 "
+      "value": " \n<div class=\"panel-heading \">\n    <i class=\"fa fa-paperclip\" style=\"padding-right: 5px;\"></i> 投资回收所需时间    \n</div> \n<div class=\"row\">\n    <div class=\"col text-center\" style=\"font-size:40px\">\n        <div id=\"ATVDom_KPI\" style=\"color:#666666;font-weight:lighter;font-family:TPF_Font_Thin;\">---</div>\n    </div>\n</div> "
      },
      {
       "name": "fontSize",
@@ -15391,7 +16999,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": " \n<div class=\"panel-heading \">\n    <i class=\"fa fa-pie-chart\" style=\"padding-right: 5px;\"></i> 营业额成本利润分布  \n</div>\n<div id=\"outletOperationDom3\"></div> "
+      "value": " \n\n<div id=\"outletOperationDom3\"></div> "
      },
      {
       "name": "fontSize",
@@ -15992,7 +17600,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "营业利润走势 "
+      "value": " \n<div class=\"panel-heading \">\n    <i class=\"fa fa-bar-chart\" style=\"padding-right: 5px;\"></i> 营业利润走势  \n</div> \n<div id=\"operatingProfitTrendDom\"></div> "
      },
      {
       "name": "fontSize",
@@ -16318,7 +17926,7 @@
     "typeDesc": "Column"
    },
    {
-    "id": "fe787ffa-41f0-5173-7e50-7546e5316e61",
+    "id": "7b3f1b8c-d27e-7d82-368a-447a4141d42c",
     "parent": "300a051e-90e7-2bb8-98a0-455b4126a380",
     "properties": [
      {
@@ -16329,7 +17937,7 @@
      {
       "name": "height",
       "type": "Integer",
-      "value": "390"
+      "value": "300"
      },
      {
       "name": "roundCorners",
@@ -16351,8 +17959,69 @@
     "typeDesc": "Bootstrap Panel"
    },
    {
-    "id": "9eb8c6f0-82b4-89c9-bb46-6523fc947208",
-    "parent": "fe787ffa-41f0-5173-7e50-7546e5316e61",
+    "id": "f75cd525-9c56-aded-8d56-76991d014b0a",
+    "parent": "7b3f1b8c-d27e-7d82-368a-447a4141d42c",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row6_col1_panel_header"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelHeader",
+    "typeDesc": "Panel Header"
+   },
+   {
+    "id": "3aec56d6-0dca-4b6d-939b-f2b5da124556",
+    "parent": "f75cd525-9c56-aded-8d56-76991d014b0a",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row6_col1_panel_header_html"
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-table\"></i> 贡献同环比图\r\n</div> "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "5b45e562-8143-b3a3-2ce6-a9cb252ff07a",
+    "parent": "7b3f1b8c-d27e-7d82-368a-447a4141d42c",
     "properties": [
      {
       "name": "name",
@@ -16379,8 +18048,8 @@
     "typeDesc": "Panel Body"
    },
    {
-    "id": "dbeb1f6d-d953-6845-ba9d-ec6da452eb80",
-    "parent": "9eb8c6f0-82b4-89c9-bb46-6523fc947208",
+    "id": "7598cc60-1259-0ed0-5082-335fcc429c1b",
+    "parent": "5b45e562-8143-b3a3-2ce6-a9cb252ff07a",
     "properties": [
      {
       "name": "name",
@@ -16390,7 +18059,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "贡献同环比图 "
+      "value": "<div id='P_CONTRIBUTION_RATIO_DOM'></div "
      },
      {
       "name": "fontSize",
@@ -16410,6 +18079,29 @@
     ],
     "type": "LayoutHtml",
     "typeDesc": "Html"
+   },
+   {
+    "id": "0ec262db-1b7f-e0b0-8608-905e25bf6309",
+    "parent": "300a051e-90e7-2bb8-98a0-455b4126a380",
+    "properties": [
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutSpace",
+    "typeDesc": "Space"
    },
    {
     "id": "4b97297c-ad8f-5fa9-a21d-22528792b260",
@@ -16466,7 +18158,7 @@
      {
       "name": "cssClass",
       "type": "String",
-      "value": ""
+      "value": "hidden-lg hidden-md hidden-sm hidden-xs"
      }
     ],
     "type": "LayoutRow",
@@ -16826,7 +18518,7 @@
      {
       "name": "cssClass",
       "type": "String",
-      "value": "hidden-lg hidden-md"
+      "value": ""
      }
     ],
     "type": "LayoutSpace",

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="ItemQuery1" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="ItemQuery2" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" connection="ItemQuery1" id="ItemQuery1" type="sql">
+      <Name>ItemQuery1</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT
+     -- `dim_item`.`ItemId`,
+     `dim_item`.`ItemName`,
+     sum(`fact_sumitem`.`ItemSaleAmt`)
+FROM
+     `fact_sumitem` INNER JOIN `dim_item` ON `fact_sumitem`.`ItemId_t` = `dim_item`.`ItemId_t`
+GROUP BY
+     `dim_item`.`ItemName`
+ORDER BY
+     `dim_item`.`ItemId` ASC]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="ItemQuery2" id="ItemQuery2" type="sql">
+      <Name>ItemQuery2</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT
+     -- `dim_itemcategory`.`ItemCatId_level2`,
+     `dim_itemcategory`.`ItemCatName_level2`,
+     sum(`fact_sumitem`.`ItemSaleAmt`)
+FROM
+     `fact_sumitem` INNER JOIN `dim_itemcategory` ON `fact_sumitem`.`ItemCatId` = `dim_itemcategory`.`ItemCatId`
+GROUP BY
+     `dim_itemcategory`.`ItemCatName_level2`
+ORDER BY
+     `dim_itemcategory`.`ItemCatId_level2` ASC]]></Query>
+   </DataAccess>
+</CDADescriptor>

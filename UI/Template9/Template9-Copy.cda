@@ -215,11 +215,10 @@ FROM
          <Parameter default="outletParam" name="outletParam" type="String"/>
       </Parameters>
       <Query><![CDATA[select 
-     
+     e.AreaName_level1 as areaname1,
      case when sum(a.BudgetSaleAmt) = 0 then 100
          when sum(a.BudgetSaleAmt) = null then 100
-    else format(sum(a.SaleAmt)/sum(a.BudgetSaleAmt)*100,2) end AS peleterate,
-    e.AreaName_level1 as areaname1
+    else format(sum(a.SaleAmt)/sum(a.BudgetSaleAmt)*100,2) end AS peleterate
     
 from fact_sumday a 
 inner join dim_bidate b on a.BIDateId = b.BIDateId
@@ -509,11 +508,8 @@ WHERE tbl.YearMonth BETWEEN (${startDay}) AND (${endDay})]]></Query>
       <Name>row5_col_query</Name>
       <Cache duration="3600" enabled="true"/>
       <Columns/>
-      <Parameters>
-         <Parameter default="startDay" name="startDay" type="String"/>
-         <Parameter default="endDay" name="endDay" type="String"/>
-      </Parameters>
-      <Query><![CDATA[CALL P_DAILY_DATA_TRACKING(${startDay}, ${endDay}, -1, -1, -1, -1, -1, -1, -1);]]></Query>
+      <Parameters/>
+      <Query><![CDATA[CALL P_DAILY_BUSINESS_PROFILE('2017-01-17', '2017-06-01', -1, -1, -1, -1, -1, -1, -1);]]></Query>
    </DataAccess>
    <DataAccess access="public" connection="________select______" id="________select______"
                type="sql">
