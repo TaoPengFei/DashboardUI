@@ -4666,7 +4666,7 @@
      {
       "name": "height",
       "type": "Integer",
-      "value": "320"
+      "value": "330"
      },
      {
       "name": "priority",
@@ -4701,7 +4701,7 @@
      {
       "name": "preExecution",
       "type": "JavaScript",
-      "value": "function f(){\r\n    resizeGraphical(this);\r\n    this.chartDefinition.xAxisLabel_textAngle = -0.55;\r\n    //this.chartDefinition.stacked = true;\r\n    this.chartDefinition.legendShape = 'circle';\r\n    this.chartDefinition.selectable = true;\r\n    this.chartDefinition.hoverable = true;\r\n    this.chartDefinition.legendPosition =  'bottom';\r\n    this.chartDefinition.plotFrameVisible = false;\r\n    this.chartDefinition.orthoAxisGrid = true;\r\n    this.chartDefinition.orthoAxisTicks = false;\r\n    //this.chartDefinition.orthoAxisVisible = false;\r\n    //this.chartDefinition.anchor(\"left\");//.add(pv.Label).text(y.tickFormat);\r\n    /*\r\n    this.chartDefinition.extensionPoints = {  hoverable  \r\n        xAxisTicks_strokeStyle: 'gray',\r\n        rubberBand_strokeStyle: 'rgb(0,0,240)',\r\n        rubberBand_fillStyle:   'rgba(0,0,255, 0.5)',\r\n        rubberBand_lineWidth:   2.5\r\n    }\r\n    */\r\n} "
+      "value": "function f(){\r\n    resizeGraphical(this);\r\n    this.chartDefinition.xAxisLabel_textAngle = -0.1;\r\n    //this.chartDefinition.stacked = true;\r\n    this.chartDefinition.legendShape = 'circle';\r\n    this.chartDefinition.selectable = true;\r\n    this.chartDefinition.hoverable = true;\r\n    this.chartDefinition.legendPosition =  'top';\r\n    this.chartDefinition.plotFrameVisible = false;\r\n    this.chartDefinition.orthoAxisGrid = true;\r\n    this.chartDefinition.orthoAxisTicks = false;\r\n    this.chartDefinition.ortho2AxisTicks = false;\r\n    this.chartDefinition.ortho2AxisTickUnit = 0.5;\r\n    \r\n    this.chartDefinition.orthoAxisTitle = '营业额';\r\n    this.chartDefinition.ortho2AxisTitle = '毛利率';\r\n    this.chartDefinition.xAxisLabel_textAlign = 'right';\r\n    this.chartDefinition.xAxisLabel_textBaseline = 'top';\r\n    //this.chartDefinition.orthoAxisVisible = false;\r\n    //this.chartDefinition.anchor(\"left\");//.add(pv.Label).text(y.tickFormat);\r\n   \r\n    //this.chartDefinition.baseAxisBandSpacing = 50;\r\n    //this.chartDefinition.orthoAxisTickUnit = 5000;\r\n    \r\n    \r\n    this.chartDefinition.orthoAxisTickFormatter = function(v){\r\n        return sprintf('%d', v/1000) + 'K'; \r\n    };\r\n    this.chartDefinition.format = {\r\n        number:  \"0.##A\",\r\n        percent: \"#.00%\"      \r\n    };\r\n} \r\n "
      },
      {
       "name": "postExecution",
@@ -15303,98 +15303,187 @@
     "typeDesc": "Column"
    },
    {
-    "id": "d8491c2f-317d-26ce-ac85-80857dae11de",
+    "id": "18294377-c64b-f3d9-73b9-2bcaed5b7331",
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel",
     "parent": "027f9bcd-e228-1e82-b513-0bbe4931a7a5",
     "properties": [
      {
       "name": "name",
-      "type": "Id",
-      "value": "row5_col2_panel"
+      "value": "row5_col2_panel",
+      "type": "Id"
      },
      {
       "name": "height",
-      "type": "Integer",
-      "value": "390"
+      "value": "390",
+      "type": "Integer"
      },
      {
       "name": "roundCorners",
-      "type": "RoundCorners",
-      "value": ""
+      "value": "",
+      "type": "RoundCorners"
      },
      {
       "name": "cssClass",
-      "type": "String",
-      "value": "floatPanel"
+      "value": "floatPanel",
+      "type": "String"
      },
      {
       "name": "bootstrapPanelStyle",
-      "type": "bootstrapPanelStyleCustom",
-      "value": "panel-default"
+      "value": "panel-default",
+      "type": "bootstrapPanelStyleCustom"
      }
-    ],
-    "type": "BootstrapPanel",
-    "typeDesc": "Bootstrap Panel"
+    ]
    },
    {
-    "id": "94c7d7ba-9ed4-5508-d690-f813c53d4de3",
-    "parent": "d8491c2f-317d-26ce-ac85-80857dae11de",
+    "id": "bccf6d07-1eb2-02f1-95e0-5c5d8ef45c85",
+    "type": "BootstrapPanelHeader",
+    "typeDesc": "Panel Header",
+    "parent": "18294377-c64b-f3d9-73b9-2bcaed5b7331",
     "properties": [
      {
       "name": "name",
-      "type": "Id",
-      "value": "row5_col2_panel_body"
+      "value": "row5_col2_panel_header",
+      "type": "Id"
      },
      {
       "name": "roundCorners",
-      "type": "RoundCorners",
-      "value": ""
+      "value": "",
+      "type": "RoundCorners"
      },
      {
       "name": "textAlign",
-      "type": "TextAlign",
-      "value": ""
+      "value": "",
+      "type": "TextAlign"
      },
      {
       "name": "cssClass",
-      "type": "String",
-      "value": ""
+      "value": "",
+      "type": "String"
      }
-    ],
-    "type": "BootstrapPanelBody",
-    "typeDesc": "Panel Body"
+    ]
    },
    {
-    "id": "2eebd687-d238-4463-f7a5-ae0741ea93e4",
-    "parent": "94c7d7ba-9ed4-5508-d690-f813c53d4de3",
+    "id": "c2e2a74c-9e8b-364d-241e-3799aecd8d38",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "bccf6d07-1eb2-02f1-95e0-5c5d8ef45c85",
     "properties": [
      {
       "name": "name",
-      "type": "Id",
-      "value": "row5_col2_panel_body_html"
+      "value": "row5_col2_panel_header_html",
+      "type": "Id"
      },
      {
       "name": "html",
-      "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-paperclip\" style=\"padding-right: 5px;\"></i> 门店销售额排行 \r\n</div> \r\n<div id=\"grossMarginOrSaleAmtDom\"></div> "
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-paperclip\" style=\"padding-right: 5px;\"></i> 门店销售额排行 \r\n</div> ",
+      "type": "Html"
      },
      {
       "name": "fontSize",
-      "type": "Integer",
-      "value": ""
+      "value": "",
+      "type": "Integer"
      },
      {
       "name": "color",
-      "type": "Color",
-      "value": ""
+      "value": "",
+      "type": "Color"
      },
      {
       "name": "cssClass",
-      "type": "String",
-      "value": ""
+      "value": "",
+      "type": "String"
      }
-    ],
+    ]
+   },
+   {
+    "id": "72324521-3789-5d4b-8b68-8d4a2f6c7b68",
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body",
+    "parent": "18294377-c64b-f3d9-73b9-2bcaed5b7331",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row5_col2_panel_body",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "d9ce655b-2422-4eae-e780-f22bc089ba22",
     "type": "LayoutHtml",
-    "typeDesc": "Html"
+    "typeDesc": "Html",
+    "parent": "72324521-3789-5d4b-8b68-8d4a2f6c7b68",
+    "properties": [
+     {
+      "name": "name",
+      "value": "row5_col2_panel_body_html",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<div id=\"grossMarginOrSaleAmtDom\"></div> ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "46661113-de02-f5ee-8432-0634b418a829",
+    "type": "BootstrapPanelFooter",
+    "typeDesc": "Panel Footer",
+    "parent": "18294377-c64b-f3d9-73b9-2bcaed5b7331",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "hidden-lg hidden-md hidden-sm hidden-xs",
+      "type": "String"
+     }
+    ]
    },
    {
     "id": "1d67b63e-c8c6-ff6f-4d48-93c5876e549f",

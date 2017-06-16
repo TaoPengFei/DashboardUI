@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:ExportManifest xmlns:ns2="http://www.pentaho.com/schema/">
-    <ExportManifestInformation exportDate="15-06-2017 06:12:04 GMT+08:00" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
+    <ExportManifestInformation exportDate="16-06-2017 10:03:03 GMT+08:00" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
     <ExportManifestEntity path="UI">
         <ExportManifestProperty>
             <EntityMetaData name="UI" createdDate="2017-06-06T23:15:18.346+08:00" isFolder="true" path="UI" isHidden="false" locale="zh_CN" title="UI"/>
@@ -160,18 +160,6 @@
     <ExportManifestEntity path="UI/BDP/StoreOperation/StoreOperation.cdfde">
         <ExportManifestProperty>
             <EntityMetaData name="StoreOperation.cdfde" createdDate="2017-06-14T13:43:49.940+08:00" isFolder="false" path="UI/BDP/StoreOperation/StoreOperation.cdfde" isHidden="false" locale="zh_CN" title="StoreOperation"/>
-        </ExportManifestProperty>
-        <ExportManifestProperty>
-            <EntityAcl>
-                <entriesInheriting>true</entriesInheriting>
-                <owner>admin</owner>
-                <ownerType>USER</ownerType>
-            </EntityAcl>
-        </ExportManifestProperty>
-    </ExportManifestEntity>
-    <ExportManifestEntity path="UI/BDP/StoreOperation/StoreOperation.css">
-        <ExportManifestProperty>
-            <EntityMetaData name="StoreOperation.css" createdDate="2017-06-15T16:31:41.665+08:00" isFolder="false" path="UI/BDP/StoreOperation/StoreOperation.css" isHidden="true" locale="zh_CN" title="StoreOperation"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -892,6 +880,102 @@
     <ExportManifestEntity path="UI/css">
         <ExportManifestProperty>
             <EntityMetaData name="css" createdDate="2017-06-06T23:15:26.476+08:00" isFolder="true" path="UI/css" isHidden="false" locale="zh_CN" title="css"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/css/Protovis">
+        <ExportManifestProperty>
+            <EntityMetaData name="Protovis" createdDate="2017-06-16T09:56:04.804+08:00" isFolder="true" path="UI/css/Protovis" isHidden="false" locale="zh_CN" title="Protovis"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/css/Protovis/clippedText.css">
+        <ExportManifestProperty>
+            <EntityMetaData name="clippedText.css" createdDate="2017-06-16T09:56:50.582+08:00" isFolder="false" path="UI/css/Protovis/clippedText.css" isHidden="true" locale="zh_CN" title="clippedText"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/css/Protovis/radialProgress.css">
+        <ExportManifestProperty>
+            <EntityMetaData name="radialProgress.css" createdDate="2017-06-16T09:56:50.702+08:00" isFolder="false" path="UI/css/Protovis/radialProgress.css" isHidden="true" locale="zh_CN" title="radialProgress"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/css/Protovis/steelWheelsSample.css">
+        <ExportManifestProperty>
+            <EntityMetaData name="steelWheelsSample.css" createdDate="2017-06-16T09:56:50.805+08:00" isFolder="false" path="UI/css/Protovis/steelWheelsSample.css" isHidden="true" locale="zh_CN" title="steelWheelsSample"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/css/Protovis/trendArrow.css">
+        <ExportManifestProperty>
+            <EntityMetaData name="trendArrow.css" createdDate="2017-06-16T09:56:50.928+08:00" isFolder="false" path="UI/css/Protovis/trendArrow.css" isHidden="true" locale="zh_CN" title="trendArrow"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/css/StoreOperation">
+        <ExportManifestProperty>
+            <EntityMetaData name="StoreOperation" createdDate="2017-06-16T09:55:03.608+08:00" isFolder="true" path="UI/css/StoreOperation" isHidden="false" locale="zh_CN" title="StoreOperation"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/css/StoreOperation/StoreOperation.css">
+        <ExportManifestProperty>
+            <EntityMetaData name="StoreOperation.css" createdDate="2017-06-16T09:58:06.392+08:00" isFolder="false" path="UI/css/StoreOperation/StoreOperation.css" isHidden="true" locale="zh_CN" title="StoreOperation"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/css/StoreOperation/StoreOperation.min.css">
+        <ExportManifestProperty>
+            <EntityMetaData name="StoreOperation.min.css" createdDate="2017-06-16T09:59:46.657+08:00" isFolder="false" path="UI/css/StoreOperation/StoreOperation.min.css" isHidden="true" locale="zh_CN" title="StoreOperation.min"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
