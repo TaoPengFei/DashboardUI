@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:ExportManifest xmlns:ns2="http://www.pentaho.com/schema/">
-    <ExportManifestInformation exportDate="16-06-2017 05:46:08 GMT+08:00" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
+    <ExportManifestInformation exportDate="18-06-2017 10:59:13 GMT+08:00" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
     <ExportManifestEntity path="UI">
         <ExportManifestProperty>
             <EntityMetaData name="UI" createdDate="2017-06-06T23:15:18.346+08:00" isFolder="true" path="UI" isHidden="false" locale="zh_CN" title="UI"/>
@@ -76,6 +76,54 @@
     <ExportManifestEntity path="UI/BDP/GeneralManager">
         <ExportManifestProperty>
             <EntityMetaData name="GeneralManager" createdDate="2017-06-14T13:51:22.413+08:00" isFolder="true" path="UI/BDP/GeneralManager" isHidden="false" locale="zh_CN" title="GeneralManager"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/BDP/GeneralManager/GeneralManager.cda">
+        <ExportManifestProperty>
+            <EntityMetaData name="GeneralManager.cda" createdDate="2017-06-17T18:12:24.571+08:00" isFolder="false" path="UI/BDP/GeneralManager/GeneralManager.cda" isHidden="false" locale="zh_CN" title="GeneralManager"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/BDP/GeneralManager/GeneralManager.cdfde">
+        <ExportManifestProperty>
+            <EntityMetaData name="GeneralManager.cdfde" createdDate="2017-06-17T18:12:40.785+08:00" isFolder="false" path="UI/BDP/GeneralManager/GeneralManager.cdfde" isHidden="false" locale="zh_CN" title="GeneralManager"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/BDP/GeneralManager/GeneralManager.min.css">
+        <ExportManifestProperty>
+            <EntityMetaData name="GeneralManager.min.css" createdDate="2017-06-18T09:21:09.246+08:00" isFolder="false" path="UI/BDP/GeneralManager/GeneralManager.min.css" isHidden="true" locale="zh_CN" title="GeneralManager.min"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/BDP/GeneralManager/GeneralManager.wcdf">
+        <ExportManifestProperty>
+            <EntityMetaData name="GeneralManager.wcdf" createdDate="2017-06-17T18:12:57.380+08:00" isFolder="false" path="UI/BDP/GeneralManager/GeneralManager.wcdf" isHidden="false" locale="zh_CN" title="GeneralManager"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -868,6 +916,270 @@
     <ExportManifestEntity path="UI/Template6/Template6.wcdf">
         <ExportManifestProperty>
             <EntityMetaData name="Template6.wcdf" createdDate="2017-06-06T23:15:25.031+08:00" isFolder="false" path="UI/Template6/Template6.wcdf" isHidden="false" locale="zh_CN" title="Template6"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/WebGIS">
+        <ExportManifestProperty>
+            <EntityMetaData name="WebGIS" createdDate="2017-06-17T11:05:24.146+08:00" isFolder="true" path="UI/WebGIS" isHidden="false" locale="zh_CN" title="WebGIS"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/WebGIS/WebDIS.cdfde">
+        <ExportManifestProperty>
+            <EntityMetaData name="WebDIS.cdfde" createdDate="2017-06-17T11:08:43.893+08:00" isFolder="false" path="UI/WebGIS/WebDIS.cdfde" isHidden="false" locale="zh_CN" title="WebDIS.cdfde"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/WebGIS/WebDIS.wcdf">
+        <ExportManifestProperty>
+            <EntityMetaData name="WebDIS.wcdf" createdDate="2017-06-17T11:08:43.838+08:00" isFolder="false" path="UI/WebGIS/WebDIS.wcdf" isHidden="false" locale="zh_CN" description="离线GIS地图" title="离线GIS地图"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/WebGIS/dist">
+        <ExportManifestProperty>
+            <EntityMetaData name="dist" createdDate="2017-06-17T11:06:54.055+08:00" isFolder="true" path="UI/WebGIS/dist" isHidden="false" locale="zh_CN" title="dist"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/WebGIS/dist/images">
+        <ExportManifestProperty>
+            <EntityMetaData name="images" createdDate="2017-06-17T11:06:54.105+08:00" isFolder="true" path="UI/WebGIS/dist/images" isHidden="false" locale="zh_CN" title="images"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/WebGIS/dist/images/layers.png">
+        <ExportManifestProperty>
+            <EntityMetaData name="layers.png" createdDate="2017-06-17T11:06:54.154+08:00" isFolder="false" path="UI/WebGIS/dist/images/layers.png" isHidden="true" locale="zh_CN" title="layers"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/WebGIS/dist/images/locate.png">
+        <ExportManifestProperty>
+            <EntityMetaData name="locate.png" createdDate="2017-06-17T11:06:54.388+08:00" isFolder="false" path="UI/WebGIS/dist/images/locate.png" isHidden="true" locale="zh_CN" title="locate"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/WebGIS/dist/images/locate.svg">
+        <ExportManifestProperty>
+            <EntityMetaData name="locate.svg" createdDate="2017-06-17T11:06:54.503+08:00" isFolder="false" path="UI/WebGIS/dist/images/locate.svg" isHidden="true" locale="zh_CN" title="locate"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/WebGIS/dist/images/locate_active.png">
+        <ExportManifestProperty>
+            <EntityMetaData name="locate_active.png" createdDate="2017-06-17T11:06:54.625+08:00" isFolder="false" path="UI/WebGIS/dist/images/locate_active.png" isHidden="true" locale="zh_CN" title="locate_active"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/WebGIS/dist/images/marker-icon.png">
+        <ExportManifestProperty>
+            <EntityMetaData name="marker-icon.png" createdDate="2017-06-17T11:06:54.735+08:00" isFolder="false" path="UI/WebGIS/dist/images/marker-icon.png" isHidden="true" locale="zh_CN" title="marker-icon"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/WebGIS/dist/images/marker-icon@2x.png">
+        <ExportManifestProperty>
+            <EntityMetaData name="marker-icon@2x.png" createdDate="2017-06-17T11:06:54.841+08:00" isFolder="false" path="UI/WebGIS/dist/images/marker-icon@2x.png" isHidden="true" locale="zh_CN" title="marker-icon@2x"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/WebGIS/dist/images/marker-shadow.png">
+        <ExportManifestProperty>
+            <EntityMetaData name="marker-shadow.png" createdDate="2017-06-17T11:06:55.172+08:00" isFolder="false" path="UI/WebGIS/dist/images/marker-shadow.png" isHidden="true" locale="zh_CN" title="marker-shadow"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/WebGIS/dist/images/spinner.gif">
+        <ExportManifestProperty>
+            <EntityMetaData name="spinner.gif" createdDate="2017-06-17T11:06:55.279+08:00" isFolder="false" path="UI/WebGIS/dist/images/spinner.gif" isHidden="true" locale="zh_CN" title="spinner"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/WebGIS/dist/leaflet-ie.css">
+        <ExportManifestProperty>
+            <EntityMetaData name="leaflet-ie.css" createdDate="2017-06-17T11:06:55.367+08:00" isFolder="false" path="UI/WebGIS/dist/leaflet-ie.css" isHidden="true" locale="zh_CN" title="leaflet-ie"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/WebGIS/dist/leaflet.css">
+        <ExportManifestProperty>
+            <EntityMetaData name="leaflet.css" createdDate="2017-06-17T11:06:55.444+08:00" isFolder="false" path="UI/WebGIS/dist/leaflet.css" isHidden="true" locale="zh_CN" title="leaflet"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/WebGIS/dist/leaflet.js">
+        <ExportManifestProperty>
+            <EntityMetaData name="leaflet.js" createdDate="2017-06-17T11:06:55.526+08:00" isFolder="false" path="UI/WebGIS/dist/leaflet.js" isHidden="true" locale="zh_CN" title="leaflet"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/WebGIS/dist/locate-ie.css">
+        <ExportManifestProperty>
+            <EntityMetaData name="locate-ie.css" createdDate="2017-06-17T11:06:55.640+08:00" isFolder="false" path="UI/WebGIS/dist/locate-ie.css" isHidden="true" locale="zh_CN" title="locate-ie"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/WebGIS/dist/locate.css">
+        <ExportManifestProperty>
+            <EntityMetaData name="locate.css" createdDate="2017-06-17T11:06:55.753+08:00" isFolder="false" path="UI/WebGIS/dist/locate.css" isHidden="true" locale="zh_CN" title="locate"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/WebGIS/dist/locate.js">
+        <ExportManifestProperty>
+            <EntityMetaData name="locate.js" createdDate="2017-06-17T11:06:55.830+08:00" isFolder="false" path="UI/WebGIS/dist/locate.js" isHidden="true" locale="zh_CN" title="locate"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/WebGIS/dist/mobile.css">
+        <ExportManifestProperty>
+            <EntityMetaData name="mobile.css" createdDate="2017-06-17T11:06:55.926+08:00" isFolder="false" path="UI/WebGIS/dist/mobile.css" isHidden="true" locale="zh_CN" title="mobile"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/WebGIS/dist/proj4js-compressed.js">
+        <ExportManifestProperty>
+            <EntityMetaData name="proj4js-compressed.js" createdDate="2017-06-17T11:06:56.026+08:00" isFolder="false" path="UI/WebGIS/dist/proj4js-compressed.js" isHidden="true" locale="zh_CN" title="proj4js-compressed"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/WebGIS/dist/proj4leaflet.js">
+        <ExportManifestProperty>
+            <EntityMetaData name="proj4leaflet.js" createdDate="2017-06-17T11:06:56.091+08:00" isFolder="false" path="UI/WebGIS/dist/proj4leaflet.js" isHidden="true" locale="zh_CN" title="proj4leaflet"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>

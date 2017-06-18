@@ -83,7 +83,7 @@
      {
       "name": "preExecution",
       "type": "JavaScript",
-      "value": "function f(){\r\n    resizeGraphical(this);\r\n    this.chartDefinition.xAxisLabel_textAngle = -0.1;\r\n    this.chartDefinition.stacked = true;\r\n    this.chartDefinition.legendShape = 'circle';\r\n    this.chartDefinition.selectable = true;\r\n    this.chartDefinition.hoverable = true;\r\n    this.chartDefinition.legendPosition =  'top';\r\n    this.chartDefinition.plotFrameVisible = false;\r\n    this.chartDefinition.orthoAxisGrid = true;\r\n    this.chartDefinition.orthoAxisTicks = false;\r\n    \r\n    //this.chartDefinition.xAxisLabel_textAngle = -1;\r\n    this.chartDefinition.xAxisLabel_textAlign = 'right';\r\n    this.chartDefinition.xAxisLabel_textBaseline = 'top';\r\n    //this.chartDefinition.orthoAxisVisible = false;\r\n    //this.chartDefinition.anchor(\"left\");//.add(pv.Label).text(y.tickFormat);\r\n    /*\r\n    this.chartDefinition.extensionPoints = {  hoverable  \r\n        xAxisTicks_strokeStyle: 'gray',\r\n        rubberBand_strokeStyle: 'rgb(0,0,240)',\r\n        rubberBand_fillStyle:   'rgba(0,0,255, 0.5)',\r\n        rubberBand_lineWidth:   2.5\r\n    }\r\n    */\r\n    //this.chartDefinition.baseAxisBandSpacing = 50;\r\n    //this.chartDefinition.orthoAxisTickUnit = 5000;\r\n    this.chartDefinition.format = {\r\n        number:  \"0.##A\",\r\n        percent: \"#.00%\"      \r\n    };\r\n   \r\n} "
+      "value": "function f(){\r\n    resizeGraphical(this);\r\n    this.chartDefinition.xAxisLabel_textAngle = -0.1;\r\n    this.chartDefinition.stacked = true;\r\n    this.chartDefinition.legendShape = 'circle';\r\n    this.chartDefinition.selectable = true;\r\n    this.chartDefinition.hoverable = true;\r\n    this.chartDefinition.legendPosition =  'top';\r\n    this.chartDefinition.plotFrameVisible = false;\r\n    this.chartDefinition.orthoAxisGrid = true;\r\n    this.chartDefinition.orthoAxisTicks = false;\r\n    \r\n    //this.chartDefinition.xAxisLabel_textAngle = -1;\r\n    this.chartDefinition.xAxisLabel_textAlign = 'right';\r\n    this.chartDefinition.xAxisLabel_textBaseline = 'top';\r\n    //this.chartDefinition.orthoAxisVisible = false;\r\n    //this.chartDefinition.anchor(\"left\");//.add(pv.Label).text(y.tickFormat);\r\n    /*\r\n    this.chartDefinition.extensionPoints = {  hoverable  \r\n        xAxisTicks_strokeStyle: 'gray',\r\n        rubberBand_strokeStyle: 'rgb(0,0,240)',\r\n        rubberBand_fillStyle:   'rgba(0,0,255, 0.5)',\r\n        rubberBand_lineWidth:   2.5\r\n    }\r\n    */\r\n    //this.chartDefinition.baseAxisBandSpacing = 50;\r\n    //this.chartDefinition.orthoAxisTickUnit = 5000;\r\n    this.chartDefinition.format = {\r\n        number:  \"0.##A\",\r\n        percent: \"#.00%\"      \r\n    };\r\n    \r\n     this.chartDefinition.extensionPoints = [\r\n        [\"xAxisRule_strokeStyle\", \"white\"],\r\n        [\"yAxisRule_strokeStyle\", \"white\"],\r\n        [\"y2AxisRule_strokeStyle\", \"white\"]\r\n    ];\r\n   \r\n} "
      },
      {
       "name": "postExecution",
@@ -2728,7 +2728,7 @@
      {
       "name": "preExecution",
       "type": "JavaScript",
-      "value": "\r\n\r\nfunction f(){\r\n    resizeGraphical(this);\r\n    this.chartDefinition.xAxisLabel_textAngle = -0.1;\r\n    this.chartDefinition.stacked = true;\r\n    this.chartDefinition.legendShape = 'circle';\r\n    this.chartDefinition.selectable = true;\r\n    this.chartDefinition.hoverable = true;\r\n    this.chartDefinition.legendPosition =  'top';\r\n    this.chartDefinition.plotFrameVisible = false;\r\n    this.chartDefinition.orthoAxisGrid = true;\r\n    this.chartDefinition.orthoAxisTicks = false;\r\n    \r\n    this.chartDefinition.xAxisLabel_textAlign = 'right';\r\n    this.chartDefinition.xAxisLabel_textBaseline = 'top';\r\n    \r\n    this.chartDefinition.format = {\r\n        number:  \"0.##A\",\r\n        percent: \"#.00%\"      \r\n    };\r\n   \r\n} "
+      "value": "\r\n\r\nfunction f(){\r\n    resizeGraphical(this);\r\n    this.chartDefinition.xAxisLabel_textAngle = -0.1;\r\n    this.chartDefinition.stacked = true;\r\n    this.chartDefinition.legendShape = 'circle';\r\n    this.chartDefinition.selectable = true;\r\n    this.chartDefinition.hoverable = true;\r\n    this.chartDefinition.legendPosition =  'top';\r\n    this.chartDefinition.plotFrameVisible = false;\r\n    this.chartDefinition.orthoAxisGrid = true;\r\n    this.chartDefinition.orthoAxisTicks = false;\r\n    \r\n    this.chartDefinition.xAxisLabel_textAlign = 'right';\r\n    this.chartDefinition.xAxisLabel_textBaseline = 'top';\r\n    \r\n    this.chartDefinition.format = {\r\n        number:  \"0.##A\",\r\n        percent: \"#.00%\"      \r\n    };\r\n    \r\n     this.chartDefinition.extensionPoints = [\r\n        [\"xAxisRule_strokeStyle\", \"white\"],\r\n        [\"yAxisRule_strokeStyle\", \"white\"],\r\n        [\"y2AxisRule_strokeStyle\", \"white\"]\r\n    ];\r\n   \r\n} "
      },
      {
       "name": "postExecution",
@@ -4058,7 +4058,7 @@
      {
       "name": "preExecution",
       "type": "JavaScript",
-      "value": "function f(){\r\n    resizeGraphical(this);\r\n    this.chartDefinition.xAxisLabel_textAngle = -0.1;\r\n    this.chartDefinition.stacked = true;\r\n    this.chartDefinition.legendShape = 'circle';\r\n    this.chartDefinition.selectable = true;\r\n    this.chartDefinition.hoverable = true;\r\n    this.chartDefinition.legendPosition =  'top';\r\n    this.chartDefinition.plotFrameVisible = false;\r\n    this.chartDefinition.orthoAxisGrid = true;\r\n    this.chartDefinition.orthoAxisTicks = false;\r\n    \r\n    this.chartDefinition.xAxisLabel_textAlign = 'right';\r\n    this.chartDefinition.xAxisLabel_textBaseline = 'top';\r\n    \r\n    this.chartDefinition.format = {\r\n        number:  \"0.##A\",\r\n        percent: \"#.00%\"      \r\n    };\r\n   \r\n} "
+      "value": "function f(){\r\n    resizeGraphical(this);\r\n    this.chartDefinition.xAxisLabel_textAngle = -0.1;\r\n    this.chartDefinition.stacked = true;\r\n    this.chartDefinition.legendShape = 'circle';\r\n    this.chartDefinition.selectable = true;\r\n    this.chartDefinition.hoverable = true;\r\n    this.chartDefinition.legendPosition =  'top';\r\n    this.chartDefinition.plotFrameVisible = false;\r\n    this.chartDefinition.orthoAxisGrid = true;\r\n    this.chartDefinition.orthoAxisTicks = false;\r\n    \r\n    this.chartDefinition.xAxisLabel_textAlign = 'right';\r\n    this.chartDefinition.xAxisLabel_textBaseline = 'top';\r\n    \r\n    this.chartDefinition.format = {\r\n        number:  \"0.##A\",\r\n        percent: \"#.00%\"      \r\n    };\r\n   \r\n    this.chartDefinition.extensionPoints = [\r\n        [\"xAxisRule_strokeStyle\", \"white\"],\r\n        [\"yAxisRule_strokeStyle\", \"white\"],\r\n        [\"y2AxisRule_strokeStyle\", \"white\"]\r\n    ];\r\n} "
      },
      {
       "name": "postExecution",
@@ -6033,7 +6033,7 @@
      {
       "name": "preExecution",
       "type": "JavaScript",
-      "value": "\r\nfunction f(){\r\n    resizeGraphical(this);\r\n    this.chartDefinition.xAxisLabel_textAngle = -0.1;\r\n    this.chartDefinition.stacked = true;\r\n    this.chartDefinition.legendShape = 'circle';\r\n    this.chartDefinition.selectable = true;\r\n    this.chartDefinition.hoverable = true;\r\n    this.chartDefinition.legendPosition =  'top';\r\n    this.chartDefinition.plotFrameVisible = false;\r\n    this.chartDefinition.orthoAxisGrid = true;\r\n    this.chartDefinition.orthoAxisTicks = false;\r\n    \r\n    this.chartDefinition.xAxisLabel_textAlign = 'right';\r\n    this.chartDefinition.xAxisLabel_textBaseline = 'top';\r\n    this.chartDefinition.orthoAxisTickFormatter = function(v){\r\n        return sprintf('%d', v*100) + '%'; \r\n    };\r\n    this.chartDefinition.format = {\r\n        number:  \"0.##A\",\r\n        percent: \"#.00%\"      \r\n    };\r\n   \r\n} "
+      "value": "\r\nfunction f(){\r\n    resizeGraphical(this);\r\n    this.chartDefinition.xAxisLabel_textAngle = -0.1;\r\n    this.chartDefinition.stacked = true;\r\n    this.chartDefinition.legendShape = 'circle';\r\n    this.chartDefinition.selectable = true;\r\n    this.chartDefinition.hoverable = true;\r\n    this.chartDefinition.legendPosition =  'top';\r\n    this.chartDefinition.plotFrameVisible = false;\r\n    this.chartDefinition.orthoAxisGrid = true;\r\n    this.chartDefinition.orthoAxisTicks = false;\r\n    \r\n    this.chartDefinition.xAxisLabel_textAlign = 'right';\r\n    this.chartDefinition.xAxisLabel_textBaseline = 'top';\r\n    this.chartDefinition.orthoAxisTickFormatter = function(v){\r\n        return sprintf('%d', v*100) + '%'; \r\n    };\r\n    this.chartDefinition.format = {\r\n        number:  \"0.##A\",\r\n        percent: \"#.00%\"      \r\n    };\r\n   \r\n    this.chartDefinition.extensionPoints = [\r\n        [\"xAxisRule_strokeStyle\", \"white\"],\r\n        [\"yAxisRule_strokeStyle\", \"white\"],\r\n        [\"y2AxisRule_strokeStyle\", \"white\"]\r\n    ];\r\n} "
      },
      {
       "name": "postExecution",
@@ -8033,7 +8033,7 @@
      {
       "name": "preExecution",
       "type": "JavaScript",
-      "value": "function f(){\r\n    resizeGraphical(this);\r\n} "
+      "value": "function f(){\r\n    resizeGraphical(this);\r\n     this.chartDefinition.extensionPoints = [\r\n        [\"xAxisRule_strokeStyle\", \"white\"],\r\n        [\"yAxisRule_strokeStyle\", \"white\"],\r\n        [\"y2AxisRule_strokeStyle\", \"white\"]\r\n    ];\r\n} "
      },
      {
       "name": "postExecution",
@@ -9262,1308 +9262,1308 @@
    },
    {
     "id": "a6532d02-c62a-c47a-9661-9704f32eb1fc",
-    "type": "ComponentscccBarChart",
-    "typeDesc": "CCC Bar Chart",
+    "meta_cdwSupport": "true",
     "parent": "CHARTS",
     "properties": [
      {
       "name": "name",
-      "value": "channelStackedBar",
-      "type": "Id"
+      "type": "Id",
+      "value": "channelStackedBar"
      },
      {
       "name": "title",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "listeners",
-      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:placeParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\",\"${p:shopParam}\",\"${p:outletParam}\"]",
-      "type": "Listeners"
+      "type": "Listeners",
+      "value": "[\"${p:startDay}\",\"${p:endDay}\",\"${p:brandParam}\",\"${p:placeParam}\",\"${p:area1Param}\",\"${p:area2Param}\",\"${p:area3Param}\",\"${p:shopParam}\",\"${p:outletParam}\"]"
      },
      {
       "name": "parameters",
-      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"placeParam\",\"placeParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"],[\"shopParam\",\"shopParam\"],[\"outletParam\",\"outletParam\"]]",
-      "type": "ValuesArray"
+      "type": "ValuesArray",
+      "value": "[[\"startDay\",\"startDay\"],[\"endDay\",\"endDay\"],[\"brandParam\",\"brandParam\"],[\"placeParam\",\"placeParam\"],[\"area1Param\",\"area1Param\"],[\"area2Param\",\"area2Param\"],[\"area3Param\",\"area3Param\"],[\"shopParam\",\"shopParam\"],[\"outletParam\",\"outletParam\"]]"
      },
      {
       "name": "dataSource",
-      "value": "channel2Query",
-      "type": "Datasource"
+      "type": "Datasource",
+      "value": "channel2Query"
      },
      {
       "name": "height",
-      "value": "350",
-      "type": "Integer"
+      "type": "Integer",
+      "value": "350"
      },
      {
       "name": "priority",
-      "value": 5,
-      "type": "Integer"
+      "type": "Integer",
+      "value": 5
      },
      {
       "name": "refreshPeriod",
-      "value": "",
-      "type": "Integer"
+      "type": "Integer",
+      "value": ""
      },
      {
       "name": "width",
-      "value": "",
-      "type": "Integer"
+      "type": "Integer",
+      "value": ""
      },
      {
       "name": "colors",
-      "value": "[]",
-      "type": "Array"
+      "type": "Array",
+      "value": "[]"
      },
      {
       "name": "htmlObject",
-      "value": "${h:channel2Dom}",
-      "type": "HtmlObject"
+      "type": "HtmlObject",
+      "value": "${h:channel2Dom}"
      },
      {
       "name": "executeAtStart",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      },
      {
       "name": "preExecution",
-      "value": "\r\nfunction f(){\r\n    resizeGraphical(this);\r\n    this.chartDefinition.xAxisLabel_textAngle = -0.55;\r\n    this.chartDefinition.stacked = true;\r\n    this.chartDefinition.legendShape = 'circle';\r\n    this.chartDefinition.selectable = true;\r\n    this.chartDefinition.hoverable = true;\r\n    this.chartDefinition.legendPosition =  'top';\r\n    this.chartDefinition.plotFrameVisible = false;\r\n    this.chartDefinition.orthoAxisGrid = true;\r\n    this.chartDefinition.orthoAxisTicks = false;\r\n    \r\n    this.chartDefinition.xAxisLabel_textAngle = -1;\r\n    this.chartDefinition.xAxisLabel_textAlign = 'right';\r\n    this.chartDefinition.xAxisLabel_textBaseline = 'top';\r\n    //this.chartDefinition.orthoAxisVisible = false;\r\n    //this.chartDefinition.anchor(\"left\");//.add(pv.Label).text(y.tickFormat);\r\n    /*\r\n    this.chartDefinition.extensionPoints = {  hoverable  \r\n        xAxisTicks_strokeStyle: 'gray',\r\n        rubberBand_strokeStyle: 'rgb(0,0,240)',\r\n        rubberBand_fillStyle:   'rgba(0,0,255, 0.5)',\r\n        rubberBand_lineWidth:   2.5\r\n    }\r\n    */\r\n    //this.chartDefinition.baseAxisBandSpacing = 50;\r\n    this.chartDefinition.orthoAxisTickFormatter = function(v){\r\n        return sprintf('%d', v/1000) + 'K'; \r\n    };\r\n    this.chartDefinition.format = {\r\n        number:  \"0.##A\",\r\n        percent: \"#.00%\"      \r\n    };\r\n} ",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": "\r\nfunction f(){\r\n    resizeGraphical(this);\r\n    this.chartDefinition.xAxisLabel_textAngle = -0.55;\r\n    this.chartDefinition.stacked = true;\r\n    this.chartDefinition.legendShape = 'circle';\r\n    this.chartDefinition.selectable = true;\r\n    this.chartDefinition.hoverable = true;\r\n    this.chartDefinition.legendPosition =  'top';\r\n    this.chartDefinition.plotFrameVisible = false;\r\n    this.chartDefinition.orthoAxisGrid = true;\r\n    this.chartDefinition.orthoAxisTicks = false;\r\n    \r\n    this.chartDefinition.xAxisLabel_textAngle = -1;\r\n    this.chartDefinition.xAxisLabel_textAlign = 'right';\r\n    this.chartDefinition.xAxisLabel_textBaseline = 'top';\r\n    //this.chartDefinition.orthoAxisVisible = false;\r\n    //this.chartDefinition.anchor(\"left\");//.add(pv.Label).text(y.tickFormat);\r\n    /*\r\n    this.chartDefinition.extensionPoints = {  hoverable  \r\n        xAxisTicks_strokeStyle: 'gray',\r\n        rubberBand_strokeStyle: 'rgb(0,0,240)',\r\n        rubberBand_fillStyle:   'rgba(0,0,255, 0.5)',\r\n        rubberBand_lineWidth:   2.5\r\n    }\r\n    */\r\n    //this.chartDefinition.baseAxisBandSpacing = 50;\r\n    this.chartDefinition.orthoAxisTickFormatter = function(v){\r\n        return sprintf('%d', v/1000) + 'K'; \r\n    };\r\n    this.chartDefinition.format = {\r\n        number:  \"0.##A\",\r\n        percent: \"#.00%\"      \r\n    };\r\n    \r\n     this.chartDefinition.extensionPoints = [\r\n        [\"xAxisRule_strokeStyle\", \"white\"],\r\n        [\"yAxisRule_strokeStyle\", \"white\"],\r\n        [\"y2AxisRule_strokeStyle\", \"white\"]\r\n    ];\r\n} "
      },
      {
       "name": "postExecution",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "postFetch",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "preChange",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "postChange",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "extensionPoints",
-      "value": "[]",
-      "type": "EditorValuesArray"
+      "type": "EditorValuesArray",
+      "value": "[]"
      },
      {
       "name": "tooltip",
-      "value": "",
-      "type": "Html"
+      "type": "Html",
+      "value": ""
      },
      {
       "name": "animate",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "barOrthoSizeMin",
-      "value": 1.5,
-      "type": "Float"
+      "type": "Float",
+      "value": 1.5
      },
      {
       "name": "barSizeMax",
-      "value": 2000,
-      "type": "Float"
+      "type": "Float",
+      "value": 2000
      },
      {
       "name": "barSizeRatio",
-      "value": 0.9,
-      "type": "Float"
+      "type": "Float",
+      "value": 0.9
      },
      {
       "name": "barStackedMargin",
-      "value": 0,
-      "type": "Float"
+      "type": "Float",
+      "value": 0
      },
      {
       "name": "baseAxisBandSize",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "baseAxisBandSizeMax",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "baseAxisBandSizeMin",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "baseAxisBandSpacing",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "baseAxisBandSpacingMax",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "baseAxisBandSpacingMin",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "baseAxisClickAction",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "baseAxisDoubleClickAction",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "baseAxisFont",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "baseAxisGrid",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "baseAxisLabelSpacingMin",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "baseAxisOffset",
-      "value": 0,
-      "type": "Float"
+      "type": "Float",
+      "value": 0
      },
      {
       "name": "baseAxisOverlappedLabelsMode",
-      "value": "hide",
-      "type": "cccBaseAxisOverlappedLabelsModeCustom"
+      "type": "cccBaseAxisOverlappedLabelsModeCustom",
+      "value": "hide"
      },
      {
       "name": "baseAxisPosition",
-      "value": "",
-      "type": "cccBaseAxisPositionCustom"
+      "type": "cccBaseAxisPositionCustom",
+      "value": ""
      },
      {
       "name": "baseAxisSize",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "baseAxisSizeMax",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "baseAxisTickFormatter",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "baseAxisTicks",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "baseAxisTitle",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "baseAxisTitleAlign",
-      "value": "",
-      "type": "cccBaseAxisTitleAlignCustom"
+      "type": "cccBaseAxisTitleAlignCustom",
+      "value": ""
      },
      {
       "name": "baseAxisTitleFont",
-      "value": "12px sans-serif",
-      "type": "String"
+      "type": "String",
+      "value": "12px sans-serif"
      },
      {
       "name": "baseAxisTitleMargins",
-      "value": "0",
-      "type": "String"
+      "type": "String",
+      "value": "0"
      },
      {
       "name": "baseAxisTitleSize",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "baseAxisTitleSizeMax",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "baseAxisTooltipAutoContent",
-      "value": "value",
-      "type": "cccBaseAxisTooltipAutoContentCustom"
+      "type": "cccBaseAxisTooltipAutoContentCustom",
+      "value": "value"
      },
      {
       "name": "baseAxisTooltipEnabled",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "baseAxisTooltipFormat",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "baseAxisVisible",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "categoryRole",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "clearSelectionMode",
-      "value": "emptySpaceClick",
-      "type": "cccClearSelectionModeCustom"
+      "type": "cccClearSelectionModeCustom",
+      "value": "emptySpaceClick"
      },
      {
       "name": "clickable",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "clickAction",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "color2AxisColors",
-      "value": "[]",
-      "type": "Array"
+      "type": "Array",
+      "value": "[]"
      },
      {
       "name": "color2AxisLegendClickMode",
-      "value": "toggleVisible",
-      "type": "cccColor2AxisLegendClickModeCustom"
+      "type": "cccColor2AxisLegendClickModeCustom",
+      "value": "toggleVisible"
      },
      {
       "name": "color2AxisLegendDrawLine",
-      "value": "",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": ""
      },
      {
       "name": "color2AxisLegendDrawMarker",
-      "value": "",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": ""
      },
      {
       "name": "color2AxisLegendShape",
-      "value": "",
-      "type": "cccColor2AxisLegendShapeCustom"
+      "type": "cccColor2AxisLegendShapeCustom",
+      "value": ""
      },
      {
       "name": "color2AxisLegendVisible",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "color2AxisTransform",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "color2AxisUnbound",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "colorRole",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "colorTransform",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "colorUnbound",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "compatVersion",
-      "value": 2,
-      "type": "Float"
+      "type": "Float",
+      "value": 2
      },
      {
       "name": "contentMargins",
-      "value": "0",
-      "type": "String"
+      "type": "String",
+      "value": "0"
      },
      {
       "name": "contentPaddings",
-      "value": "0",
-      "type": "String"
+      "type": "String",
+      "value": "0"
      },
      {
       "name": "crosstabMode",
-      "value": "false",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "false"
      },
      {
       "name": "ctrlSelectMode",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "dataCategoriesCount",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "dataIgnoreMetadataLabels",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "dataMeasuresInColumns",
-      "value": "",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": ""
      },
      {
       "name": "dataPartRole",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "dataSeparator",
-      "value": "~",
-      "type": "String"
+      "type": "String",
+      "value": "~"
      },
      {
       "name": "dataWhere",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "doubleClickAction",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "groupedLabelSep",
-      "value": " ~ ",
-      "type": "String"
+      "type": "String",
+      "value": " ~ "
      },
      {
       "name": "hoverable",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "ignoreNulls",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "interactive",
-      "value": "",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": ""
      },
      {
       "name": "isMultiValued",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "leafContentOverflow",
-      "value": "auto",
-      "type": "cccLeafContentOverflowCustom"
+      "type": "cccLeafContentOverflowCustom",
+      "value": "auto"
      },
      {
       "name": "legend",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      },
      {
       "name": "legendAlign",
-      "value": "",
-      "type": "cccLegendAlignCustom"
+      "type": "cccLegendAlignCustom",
+      "value": ""
      },
      {
       "name": "legendClickMode",
-      "value": "toggleVisible",
-      "type": "cccLegendClickModeCustom"
+      "type": "cccLegendClickModeCustom",
+      "value": "toggleVisible"
      },
      {
       "name": "legendDrawLine",
-      "value": "",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": ""
      },
      {
       "name": "legendDrawMarker",
-      "value": "",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": ""
      },
      {
       "name": "legendFont",
-      "value": "10px sans-serif",
-      "type": "String"
+      "type": "String",
+      "value": "10px sans-serif"
      },
      {
       "name": "legendItemPadding",
-      "value": "2.5",
-      "type": "String"
+      "type": "String",
+      "value": "2.5"
      },
      {
       "name": "legendItemSize",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "legendMargins",
-      "value": "0",
-      "type": "String"
+      "type": "String",
+      "value": "0"
      },
      {
       "name": "legendMarkerSize",
-      "value": 15,
-      "type": "Float"
+      "type": "Float",
+      "value": 15
      },
      {
       "name": "legendPaddings",
-      "value": "5",
-      "type": "String"
+      "type": "String",
+      "value": "5"
      },
      {
       "name": "legendPosition",
-      "value": "bottom",
-      "type": "cccLegendPositionCustom"
+      "type": "cccLegendPositionCustom",
+      "value": "bottom"
      },
      {
       "name": "legendShape",
-      "value": "",
-      "type": "cccLegendShapeCustom"
+      "type": "cccLegendShapeCustom",
+      "value": ""
      },
      {
       "name": "legendSize",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "legendSizeMax",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "legendTextMargin",
-      "value": 6,
-      "type": "Float"
+      "type": "Float",
+      "value": 6
      },
      {
       "name": "legendVisible",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "margins",
-      "value": "3",
-      "type": "String"
+      "type": "String",
+      "value": "3"
      },
      {
       "name": "measuresIndexes",
-      "value": "[]",
-      "type": "Array"
+      "type": "Array",
+      "value": "[]"
      },
      {
       "name": "multiChartColumnsMax",
-      "value": 3,
-      "type": "Float"
+      "type": "Float",
+      "value": 3
      },
      {
       "name": "multiChartIndexes",
-      "value": "[]",
-      "type": "Array"
+      "type": "Array",
+      "value": "[]"
      },
      {
       "name": "multiChartMax",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "multiChartOverflow",
-      "value": "grow",
-      "type": "cccMultiChartOverflowCustom"
+      "type": "cccMultiChartOverflowCustom",
+      "value": "grow"
      },
      {
       "name": "multiChartRole",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "multiChartSingleColFillsHeight",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "multiChartSingleRowFillsHeight",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "nullInterpolationMode",
-      "value": "none",
-      "type": "cccNullInterpolationModeCustom"
+      "type": "cccNullInterpolationModeCustom",
+      "value": "none"
      },
      {
       "name": "orientation",
-      "value": "vertical",
-      "type": "cccOrientationCustom"
+      "type": "cccOrientationCustom",
+      "value": "vertical"
      },
      {
       "name": "ortho2AxisDesiredTickCount",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "ortho2AxisDomainRoundMode",
-      "value": "tick",
-      "type": "cccOrtho2AxisDomainRoundModeCustom"
+      "type": "cccOrtho2AxisDomainRoundModeCustom",
+      "value": "tick"
      },
      {
       "name": "ortho2AxisDomainScope",
-      "value": "global",
-      "type": "cccOrtho2AxisDomainScopeCustom"
+      "type": "cccOrtho2AxisDomainScopeCustom",
+      "value": "global"
      },
      {
       "name": "ortho2AxisFixedMax",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "ortho2AxisFixedMin",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "ortho2AxisFont",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "ortho2AxisGrid",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "ortho2AxisLabelSpacingMin",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "ortho2AxisMinorTicks",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "ortho2AxisOffset",
-      "value": 0,
-      "type": "Float"
+      "type": "Float",
+      "value": 0
      },
      {
       "name": "ortho2AxisOriginIsZero",
-      "value": "",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": ""
      },
      {
       "name": "ortho2AxisOverlappedLabelsMode",
-      "value": "hide",
-      "type": "cccOrtho2AxisOverlappedLabelsModeCustom"
+      "type": "cccOrtho2AxisOverlappedLabelsModeCustom",
+      "value": "hide"
      },
      {
       "name": "ortho2AxisPosition",
-      "value": "",
-      "type": "cccOrtho2AxisPositionCustom"
+      "type": "cccOrtho2AxisPositionCustom",
+      "value": ""
      },
      {
       "name": "ortho2AxisSize",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "ortho2AxisSizeMax",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "ortho2AxisTickExponentMax",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "ortho2AxisTickExponentMin",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "ortho2AxisTickFormatter",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "ortho2AxisTicks",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "ortho2AxisTickUnit",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "ortho2AxisTickUnitMax",
-      "value": "Infinity",
-      "type": "String"
+      "type": "String",
+      "value": "Infinity"
      },
      {
       "name": "ortho2AxisTickUnitMin",
-      "value": "0",
-      "type": "String"
+      "type": "String",
+      "value": "0"
      },
      {
       "name": "ortho2AxisTitle",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "ortho2AxisTitleAlign",
-      "value": "",
-      "type": "cccOrtho2AxisTitleAlignCustom"
+      "type": "cccOrtho2AxisTitleAlignCustom",
+      "value": ""
      },
      {
       "name": "ortho2AxisTitleFont",
-      "value": "12px sans-serif",
-      "type": "String"
+      "type": "String",
+      "value": "12px sans-serif"
      },
      {
       "name": "ortho2AxisTitleMargins",
-      "value": "0",
-      "type": "String"
+      "type": "String",
+      "value": "0"
      },
      {
       "name": "ortho2AxisTitleSize",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "ortho2AxisTitleSizeMax",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "ortho2AxisVisible",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "ortho2AxisZeroLine",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "orthoAxisDesiredTickCount",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "orthoAxisDomainRoundMode",
-      "value": "tick",
-      "type": "cccOrthoAxisDomainRoundModeCustom"
+      "type": "cccOrthoAxisDomainRoundModeCustom",
+      "value": "tick"
      },
      {
       "name": "orthoAxisDomainScope",
-      "value": "global",
-      "type": "cccOrthoAxisDomainScopeCustom"
+      "type": "cccOrthoAxisDomainScopeCustom",
+      "value": "global"
      },
      {
       "name": "orthoAxisFixedMax",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "orthoAxisFixedMin",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "orthoAxisFont",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "orthoAxisGrid",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "orthoAxisLabelSpacingMin",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "orthoAxisMinorTicks",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "orthoAxisOffset",
-      "value": 0,
-      "type": "Float"
+      "type": "Float",
+      "value": 0
      },
      {
       "name": "orthoAxisOriginIsZero",
-      "value": "",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": ""
      },
      {
       "name": "orthoAxisOverlappedLabelsMode",
-      "value": "hide",
-      "type": "cccOrthoAxisOverlappedLabelsModeCustom"
+      "type": "cccOrthoAxisOverlappedLabelsModeCustom",
+      "value": "hide"
      },
      {
       "name": "orthoAxisPosition",
-      "value": "",
-      "type": "cccOrthoAxisPositionCustom"
+      "type": "cccOrthoAxisPositionCustom",
+      "value": ""
      },
      {
       "name": "orthoAxisSize",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "orthoAxisSizeMax",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "orthoAxisTickExponentMax",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "orthoAxisTickExponentMin",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "orthoAxisTickFormatter",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "orthoAxisTicks",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "orthoAxisTickUnit",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "orthoAxisTickUnitMax",
-      "value": "Infinity",
-      "type": "String"
+      "type": "String",
+      "value": "Infinity"
      },
      {
       "name": "orthoAxisTickUnitMin",
-      "value": "0",
-      "type": "String"
+      "type": "String",
+      "value": "0"
      },
      {
       "name": "orthoAxisTitle",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "orthoAxisTitleAlign",
-      "value": "",
-      "type": "cccOrthoAxisTitleAlignCustom"
+      "type": "cccOrthoAxisTitleAlignCustom",
+      "value": ""
      },
      {
       "name": "orthoAxisTitleFont",
-      "value": "12px sans-serif",
-      "type": "String"
+      "type": "String",
+      "value": "12px sans-serif"
      },
      {
       "name": "orthoAxisTitleMargins",
-      "value": "0",
-      "type": "String"
+      "type": "String",
+      "value": "0"
      },
      {
       "name": "orthoAxisTitleSize",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "orthoAxisTitleSizeMax",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "orthoAxisVisible",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "orthoAxisZeroLine",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "overflowMarkersVisible",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "paddings",
-      "value": "0",
-      "type": "String"
+      "type": "String",
+      "value": "0"
      },
      {
       "name": "panelSizeRatio",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "percentValueFormat",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "plot2",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "plot2AreasVisible",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "plot2ColorAxis",
-      "value": 2,
-      "type": "Float"
+      "type": "Float",
+      "value": 2
      },
      {
       "name": "plot2DotsVisible",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "plot2LinesVisible",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "plot2NullInterpolationMode",
-      "value": "none",
-      "type": "cccPlot2NullInterpolationModeCustom"
+      "type": "cccPlot2NullInterpolationModeCustom",
+      "value": "none"
      },
      {
       "name": "plot2OrthoAxis",
-      "value": 1,
-      "type": "Float"
+      "type": "Float",
+      "value": 1
      },
      {
       "name": "plot2Series",
-      "value": "[]",
-      "type": "Array"
+      "type": "Array",
+      "value": "[]"
      },
      {
       "name": "plot2SeriesIndexes",
-      "value": -1,
-      "type": "Array"
+      "type": "Array",
+      "value": -1
      },
      {
       "name": "plot2Stacked",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "plot2TrendLabel",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "plot2TrendType",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "plot2ValuesAnchor",
-      "value": "",
-      "type": "cccPlot2ValuesAnchorCustom"
+      "type": "cccPlot2ValuesAnchorCustom",
+      "value": ""
      },
      {
       "name": "plot2ValuesFont",
-      "value": "10px sans-serif",
-      "type": "String"
+      "type": "String",
+      "value": "10px sans-serif"
      },
      {
       "name": "plot2ValuesMask",
-      "value": "{value}",
-      "type": "String"
+      "type": "String",
+      "value": "{value}"
      },
      {
       "name": "plot2ValuesVisible",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "plotFrameVisible",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "pointingMode",
-      "value": "near",
-      "type": "cccPointingModeCustom"
+      "type": "cccPointingModeCustom",
+      "value": "near"
      },
      {
       "name": "readers",
-      "value": "[]",
-      "type": "Array"
+      "type": "Array",
+      "value": "[]"
      },
      {
       "name": "renderCallback",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "renderedCallback",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "selectable",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "selectionChangedAction",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "seriesInRows",
-      "value": "true",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": "true"
      },
      {
       "name": "seriesRole",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "smallAspectRatio",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "smallContentMargins",
-      "value": "0",
-      "type": "String"
+      "type": "String",
+      "value": "0"
      },
      {
       "name": "smallContentPaddings",
-      "value": "0",
-      "type": "String"
+      "type": "String",
+      "value": "0"
      },
      {
       "name": "smallHeight",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "smallMargins",
-      "value": "2%",
-      "type": "String"
+      "type": "String",
+      "value": "2%"
      },
      {
       "name": "smallPaddings",
-      "value": "0",
-      "type": "String"
+      "type": "String",
+      "value": "0"
      },
      {
       "name": "smallTitleAlign",
-      "value": "",
-      "type": "cccSmallTitleAlignCustom"
+      "type": "cccSmallTitleAlignCustom",
+      "value": ""
      },
      {
       "name": "smallTitleFont",
-      "value": "14px sans-serif",
-      "type": "String"
+      "type": "String",
+      "value": "14px sans-serif"
      },
      {
       "name": "smallTitleMargins",
-      "value": "0",
-      "type": "String"
+      "type": "String",
+      "value": "0"
      },
      {
       "name": "smallTitlePaddings",
-      "value": "0",
-      "type": "String"
+      "type": "String",
+      "value": "0"
      },
      {
       "name": "smallTitlePosition",
-      "value": "top",
-      "type": "cccSmallTitlePositionCustom"
+      "type": "cccSmallTitlePositionCustom",
+      "value": "top"
      },
      {
       "name": "smallTitleSize",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "smallTitleSizeMax",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "smallWidth",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "stacked",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "timeSeries",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "timeSeriesFormat",
-      "value": "%Y-%m-%d",
-      "type": "String"
+      "type": "String",
+      "value": "%Y-%m-%d"
      },
      {
       "name": "titleAlign",
-      "value": "",
-      "type": "cccTitleAlignCustom"
+      "type": "cccTitleAlignCustom",
+      "value": ""
      },
      {
       "name": "titleFont",
-      "value": "14px sans-serif",
-      "type": "String"
+      "type": "String",
+      "value": "14px sans-serif"
      },
      {
       "name": "titleMargins",
-      "value": "0",
-      "type": "String"
+      "type": "String",
+      "value": "0"
      },
      {
       "name": "titlePaddings",
-      "value": "0",
-      "type": "String"
+      "type": "String",
+      "value": "0"
      },
      {
       "name": "titlePosition",
-      "value": "top",
-      "type": "cccTitlePositionCustom"
+      "type": "cccTitlePositionCustom",
+      "value": "top"
      },
      {
       "name": "titleSize",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "titleSizeMax",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "tooltipArrowVisible",
-      "value": "",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": ""
      },
      {
       "name": "tooltipClassName",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "tooltipEnabled",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "tooltipFade",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "tooltipFollowMouse",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "tooltipFormat",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "tooltipGravity",
-      "value": "",
-      "type": "cccTooltipGravityCustom"
+      "type": "cccTooltipGravityCustom",
+      "value": ""
      },
      {
       "name": "tooltipHtml",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "tooltipOffset",
-      "value": "",
-      "type": "Float"
+      "type": "Float",
+      "value": ""
      },
      {
       "name": "tooltipOpacity",
-      "value": 0.9,
-      "type": "Float"
+      "type": "Float",
+      "value": 0.9
      },
      {
       "name": "tooltipUseCorners",
-      "value": "",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": ""
      },
      {
       "name": "trendAreasVisible",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "trendColorAxis",
-      "value": 2,
-      "type": "Float"
+      "type": "Float",
+      "value": 2
      },
      {
       "name": "trendDotsVisible",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "trendLabel",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "trendLinesVisible",
-      "value": true,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": true
      },
      {
       "name": "trendOrthoAxis",
-      "value": 1,
-      "type": "Float"
+      "type": "Float",
+      "value": 1
      },
      {
       "name": "trendStacked",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "trendType",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "trendValuesAnchor",
-      "value": "right",
-      "type": "cccTrendValuesAnchorCustom"
+      "type": "cccTrendValuesAnchorCustom",
+      "value": "right"
      },
      {
       "name": "trendValuesFont",
-      "value": "10px sans-serif",
-      "type": "String"
+      "type": "String",
+      "value": "10px sans-serif"
      },
      {
       "name": "trendValuesMask",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "trendValuesVisible",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "userSelectionAction",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "valueFormat",
-      "value": "",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "value": ""
      },
      {
       "name": "valueRole",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "valuesAnchor",
-      "value": "",
-      "type": "cccValuesAnchorCustom"
+      "type": "cccValuesAnchorCustom",
+      "value": ""
      },
      {
       "name": "valuesFont",
-      "value": "10px sans-serif",
-      "type": "String"
+      "type": "String",
+      "value": "10px sans-serif"
      },
      {
       "name": "valuesMask",
-      "value": "",
-      "type": "String"
+      "type": "String",
+      "value": ""
      },
      {
       "name": "valuesNormalized",
-      "value": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": false
      },
      {
       "name": "valuesOptimizeLegibility",
-      "value": "",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": ""
      },
      {
       "name": "valuesOverflow",
-      "value": "hide",
-      "type": "cccValuesOverflowCustom"
+      "type": "cccValuesOverflowCustom",
+      "value": "hide"
      },
      {
       "name": "valuesVisible",
-      "value": "",
-      "type": "Boolean"
+      "type": "Boolean",
+      "value": ""
      }
     ],
-    "meta_cdwSupport": "true",
-    "rowName": "CCC Bar Chart"
+    "rowName": "CCC Bar Chart",
+    "type": "ComponentscccBarChart",
+    "typeDesc": "CCC Bar Chart"
    },
    {
     "id": "529a3bd9-8b91-41b8-bfb6-0198c5ce9618",
@@ -10633,7 +10633,7 @@
      {
       "name": "preExecution",
       "type": "JavaScript",
-      "value": "function f(){\r\n    resizeGraphical(this);\r\n    this.chartDefinition.xAxisLabel_textAngle = -0.1;\r\n    this.chartDefinition.stacked = true;\r\n    this.chartDefinition.legendShape = 'circle';\r\n    this.chartDefinition.selectable = true;\r\n    this.chartDefinition.hoverable = true;\r\n    this.chartDefinition.legendPosition =  'top';\r\n    this.chartDefinition.plotFrameVisible = false;\r\n    this.chartDefinition.orthoAxisGrid = true;\r\n    this.chartDefinition.orthoAxisTicks = false;\r\n    \r\n    this.chartDefinition.xAxisLabel_textAlign = 'right';\r\n    this.chartDefinition.xAxisLabel_textBaseline = 'top';\r\n    this.chartDefinition.orthoAxisTickUnit = 50;\r\n    /*\r\n    this.chartDefinition.orthoAxisTickFormatter = function(v){\r\n        return sprintf('%d', v*100) + '%'; \r\n    };\r\n    */\r\n    this.chartDefinition.format = {\r\n        number:  \"0.##A\",\r\n        percent: \"#.00%\"      \r\n    };\r\n   \r\n} "
+      "value": "function f(){\r\n    resizeGraphical(this);\r\n    this.chartDefinition.xAxisLabel_textAngle = -0.1;\r\n    this.chartDefinition.stacked = true;\r\n    this.chartDefinition.legendShape = 'circle';\r\n    this.chartDefinition.selectable = true;\r\n    this.chartDefinition.hoverable = true;\r\n    this.chartDefinition.legendPosition =  'top';\r\n    this.chartDefinition.plotFrameVisible = false;\r\n    this.chartDefinition.orthoAxisGrid = true;\r\n    this.chartDefinition.orthoAxisTicks = false;\r\n    \r\n    this.chartDefinition.xAxisLabel_textAlign = 'right';\r\n    this.chartDefinition.xAxisLabel_textBaseline = 'top';\r\n    this.chartDefinition.orthoAxisTickUnit = 50;\r\n    /*\r\n    this.chartDefinition.orthoAxisTickFormatter = function(v){\r\n        return sprintf('%d', v*100) + '%'; \r\n    };\r\n    */\r\n    this.chartDefinition.format = {\r\n        number:  \"0.##A\",\r\n        percent: \"#.00%\"      \r\n    };\r\n    \r\n     this.chartDefinition.extensionPoints = [\r\n        [\"xAxisRule_strokeStyle\", \"white\"],\r\n        [\"yAxisRule_strokeStyle\", \"white\"],\r\n        [\"y2AxisRule_strokeStyle\", \"white\"]\r\n    ];\r\n   \r\n} "
      },
      {
       "name": "postExecution",
@@ -12633,7 +12633,7 @@
      {
       "name": "preExecution",
       "type": "JavaScript",
-      "value": "\r\nfunction f(){\r\n    resizeGraphical(this);\r\n    //this.chartDefinition.xAxisLabel_textAngle = -0.55;\r\n    this.chartDefinition.stacked = true;\r\n    this.chartDefinition.legendShape = 'circle';\r\n    this.chartDefinition.selectable = true;\r\n    this.chartDefinition.hoverable = true;\r\n    this.chartDefinition.legendPosition =  'top';\r\n    this.chartDefinition.plotFrameVisible = false;\r\n    this.chartDefinition.orthoAxisGrid = true;\r\n    this.chartDefinition.orthoAxisTicks = false;\r\n    \r\n    //this.chartDefinition.xAxisLabel_textAngle = -1;\r\n    this.chartDefinition.xAxisLabel_textAlign = 'right';\r\n    this.chartDefinition.xAxisLabel_textBaseline = 'top';\r\n    //this.chartDefinition.orthoAxisVisible = false;\r\n    //this.chartDefinition.anchor(\"left\");//.add(pv.Label).text(y.tickFormat);\r\n    /*\r\n    this.chartDefinition.extensionPoints = {  hoverable  \r\n        xAxisTicks_strokeStyle: 'gray',\r\n        rubberBand_strokeStyle: 'rgb(0,0,240)',\r\n        rubberBand_fillStyle:   'rgba(0,0,255, 0.5)',\r\n        rubberBand_lineWidth:   2.5\r\n    }\r\n    */\r\n    //this.chartDefinition.baseAxisBandSpacing = 50;\r\n    /*\r\n    this.chartDefinition.orthoAxisTickFormatter = function(v){\r\n        return sprintf('%d', v/1000) + 'K'; \r\n    };\r\n    */\r\n    this.chartDefinition.orthoAxisTickUnit = 500;\r\n    this.chartDefinition.format = {\r\n        number:  \"#,#.00\",\r\n        percent: \"#.00%\"      \r\n    };\r\n} "
+      "value": "\r\nfunction f(){\r\n    resizeGraphical(this);\r\n    //this.chartDefinition.xAxisLabel_textAngle = -0.55;\r\n    this.chartDefinition.stacked = true;\r\n    this.chartDefinition.legendShape = 'circle';\r\n    this.chartDefinition.selectable = true;\r\n    this.chartDefinition.hoverable = true;\r\n    this.chartDefinition.legendPosition =  'top';\r\n    this.chartDefinition.plotFrameVisible = false;\r\n    this.chartDefinition.orthoAxisGrid = true;\r\n    this.chartDefinition.orthoAxisTicks = false;\r\n    \r\n    //this.chartDefinition.xAxisLabel_textAngle = -1;\r\n    this.chartDefinition.xAxisLabel_textAlign = 'right';\r\n    this.chartDefinition.xAxisLabel_textBaseline = 'top';\r\n    //this.chartDefinition.orthoAxisVisible = false;\r\n    //this.chartDefinition.anchor(\"left\");//.add(pv.Label).text(y.tickFormat);\r\n    /*\r\n    this.chartDefinition.extensionPoints = {  hoverable  \r\n        xAxisTicks_strokeStyle: 'gray',\r\n        rubberBand_strokeStyle: 'rgb(0,0,240)',\r\n        rubberBand_fillStyle:   'rgba(0,0,255, 0.5)',\r\n        rubberBand_lineWidth:   2.5\r\n    }\r\n    */\r\n    //this.chartDefinition.baseAxisBandSpacing = 50;\r\n    /*\r\n    this.chartDefinition.orthoAxisTickFormatter = function(v){\r\n        return sprintf('%d', v/1000) + 'K'; \r\n    };\r\n    */\r\n    this.chartDefinition.orthoAxisTickUnit = 500;\r\n    this.chartDefinition.format = {\r\n        number:  \"#,#.00\",\r\n        percent: \"#.00%\"      \r\n    };\r\n    \r\n     this.chartDefinition.extensionPoints = [\r\n        [\"xAxisRule_strokeStyle\", \"white\"],\r\n        [\"yAxisRule_strokeStyle\", \"white\"],\r\n        [\"y2AxisRule_strokeStyle\", \"white\"]\r\n    ];\r\n} "
      },
      {
       "name": "postExecution",
