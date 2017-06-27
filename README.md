@@ -1,3 +1,6 @@
+## Pentaho Table Component组件的下钻
+![Image](https://github.com/TaoPengFei/DashboardUI/blob/master/Demo/imgs/Table_DrillDown.png)
+
 ## Pentaho Echarts添加图例分页功能
 # 改造前样式
 ![Image](https://github.com/TaoPengFei/DashboardUI/blob/master/Demo/imgs/Echarts_Legend_DefaultMode.png)
