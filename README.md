@@ -1,5 +1,5 @@
 ## Pentaho CDE查询面板
-![Image](https://github.com/TaoPengFei/DashboardUI/blob/master/Demo/imgs/FilterNew.png)
+![Image](https://github.com/TaoPengFei/DashboardUI/blob/master/Demo/imgs/Filter.png)
 
 ## Pentaho Table Component组件的下钻
 ![Image](https://github.com/TaoPengFei/DashboardUI/blob/master/Demo/imgs/Table_DrillDown.png)
