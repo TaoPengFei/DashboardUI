@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:ExportManifest xmlns:ns2="http://www.pentaho.com/schema/">
-    <ExportManifestInformation exportDate="06-07-2017 05:20:24 GMT+08:00" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
+    <ExportManifestInformation exportDate="06-07-2017 05:36:51 GMT+08:00" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
     <ExportManifestEntity path="UI">
         <ExportManifestProperty>
             <EntityMetaData name="UI" createdDate="2017-06-06T23:15:18.346+08:00" isFolder="true" path="UI" isHidden="false" locale="zh_CN" title="UI"/>
@@ -376,6 +376,30 @@
     <ExportManifestEntity path="UI/D3/PieChart">
         <ExportManifestProperty>
             <EntityMetaData name="PieChart" createdDate="2017-07-06T10:20:09.769+08:00" isFolder="true" path="UI/D3/PieChart" isHidden="false" locale="zh_CN" title="PieChart"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/D3/PieChart/Pie.min.js">
+        <ExportManifestProperty>
+            <EntityMetaData name="Pie.min.js" createdDate="2017-07-06T17:35:01.305+08:00" isFolder="false" path="UI/D3/PieChart/Pie.min.js" isHidden="true" locale="zh_CN" title="Pie.min"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/D3/PieChart/Pie1.min.css">
+        <ExportManifestProperty>
+            <EntityMetaData name="Pie1.min.css" createdDate="2017-07-06T17:34:42.423+08:00" isFolder="false" path="UI/D3/PieChart/Pie1.min.css" isHidden="true" locale="zh_CN" title="Pie1.min"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>

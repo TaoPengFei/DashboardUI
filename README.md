@@ -1,4 +1,4 @@
-## 定制图表#1
+## 基于D3的定制图表#1
 ![Image](https://github.com/TaoPengFei/DashboardUI/blob/master/Demo/imgs/Pie1.png)
 
 ## Pentaho CDE查询面板
