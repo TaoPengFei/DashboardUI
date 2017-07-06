@@ -1,0 +1,361 @@
+{
+ "components": {
+  "rows": [
+   {
+    "id": "SCRIPT",
+    "name": "Scripts",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "type": "Label",
+      "value": "Scripts"
+     }
+    ],
+    "type": "Label",
+    "typeDesc": "<i>Group</i>"
+   },
+   {
+    "id": "41d34b6a-4d07-5023-459e-e12ac7299142",
+    "parent": "SCRIPT",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "JS"
+     },
+     {
+      "name": "javaScript",
+      "type": "JavaScript",
+      "value": "(function($){\r\n    $(window).on(\"load\",function(){\r\n        initD3();\r\n        /*\r\n        $(\"#tooltip\").css(\"opacity\",\"0\")\r\n        $(\"#row6_col1_panel_body,#row9_col1_panel_body\").mCustomScrollbar({\r\n    \t\tautoHideScrollbar:true,\r\n            axis:\"yx\",\r\n            scrollButtons:{\r\n                enable:true //是否使用上下滚动按钮\r\n\t\t\t},\r\n            mouseWheelPixels:300,\r\n\t\t\ttheme:\"rounded\"\r\n            //theme:\"dark\"\r\n\t\t});\r\n        */\r\n\t});\r\n})($); "
+     }
+    ],
+    "rowName": "Function",
+    "type": "ComponentsFunction",
+    "typeDesc": "JavaScript function"
+   }
+  ]
+ },
+ "datasources": {
+  "rows": [
+   {
+    "id": "SQL",
+    "name": "SQL Queries",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "type": "Label",
+      "value": "SQL Queries"
+     }
+    ],
+    "type": "Label",
+    "typeDesc": "<i>Group</i>"
+   },
+   {
+    "id": "e8691c99-9a7b-31eb-992f-00dbe2bf18f4",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "pie1"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "SELECT\r\n    IdName,\r\n    GuestQty\r\nFROM\r\n(\r\n    SELECT \r\n\t\t\tIdName,\r\n\t\t\tIdName_en,\r\n\t\t\tGuestQty\r\n\tFROM\r\n\t\t\t(\r\n\t\t\t\tSELECT\r\n\t\t\t\t\t sum(`Fact_SumDay`.`CheckQty`) AS CheckQty,\r\n\t\t\t\t\t sum(`Fact_SumDay`.`GuestQty`) AS GuestQty\r\n\t\t\tFROM\r\n                 `fact_sumday` INNER JOIN `dim_outlet` ON `fact_sumday`.`OutletId_t` = `dim_outlet`.`OutletId_t`\r\n                 INNER JOIN `dim_bidate` ON `fact_sumday`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n                 INNER JOIN `dim_place` ON `fact_sumday`.`PlaceId` = `dim_place`.`PlaceId`\r\n                 INNER JOIN `dim_area` ON `fact_sumday`.`AreaId` = `dim_area`.`AreaId`\r\n                 INNER JOIN `dim_brand` ON `dim_outlet`.`BrandId` = `dim_brand`.`BrandId`\r\n\t\t\t)AS tbl JOIN SY_SaleName WHERE SY_SaleName.Id IN (4)\r\n) AS B\r\nUNION ALL\r\nSELECT\r\n    IdName,\r\n        CheckQty\r\nFROM\r\n(\r\n\tSELECT \r\n\t\t\tIdName,\r\n\t\t\tIdName_en,\r\n\t\t\tCheckQty\r\n\tFROM\r\n\t\t\t(\r\n\t\t\t\tSELECT\r\n\t\t\t\t\t sum(`Fact_SumDay`.`CheckQty`) AS CheckQty,\r\n\t\t\t\t\t sum(`Fact_SumDay`.`GuestQty`) AS GuestQty\r\n                FROM\r\n    \t\t\t     `fact_sumday` INNER JOIN `dim_outlet` ON `fact_sumday`.`OutletId_t` = `dim_outlet`.`OutletId_t`\r\n                     INNER JOIN `dim_bidate` ON `fact_sumday`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n                     INNER JOIN `dim_place` ON `fact_sumday`.`PlaceId` = `dim_place`.`PlaceId`\r\n                     INNER JOIN `dim_area` ON `fact_sumday`.`AreaId` = `dim_area`.`AreaId`\r\n                     INNER JOIN `dim_brand` ON `dim_outlet`.`BrandId` = `dim_brand`.`BrandId`\r\n\t\t\t)AS tbl JOIN SY_SaleName WHERE SY_SaleName.Id IN (3)\r\n) AS A"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   }
+  ]
+ },
+ "filename": "/public/UI/D3/PieChart/pie1.cdfde",
+ "layout": {
+  "rows": [
+   {
+    "id": "b547b984-10d9-9db9-0493-4513bff66d80",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "d3"
+     },
+     {
+      "name": "resourceFile",
+      "type": "ResourceFile",
+      "value": "${solution:../../js/D3.4.9.1/d3.min.js}"
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Javascript"
+     }
+    ],
+    "type": "LayoutResourceFile",
+    "typeDesc": "Resource"
+   },
+   {
+    "id": "3ec17a39-dfef-fa4b-719d-8301abd21047",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "d3Pie_min"
+     },
+     {
+      "name": "resourceFile",
+      "type": "ResourceFile",
+      "value": "${solution:../../js/D3.4.9.1/d3pie.js}"
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Javascript"
+     }
+    ],
+    "type": "LayoutResourceFile",
+    "typeDesc": "Resource"
+   },
+   {
+    "id": "aa25cca3-b81b-7ce9-f4bb-f62d9be7041a",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "CustomCSS"
+     },
+     {
+      "name": "resourceCode",
+      "type": "Resource",
+      "value": "/**\r\n * Variable power\r\n */\r\n@font-face{\r\n    font-family: TPF_Font_Thin;\r\n    src: url('/pentaho/BI/fonts/Comfortaa_Thin.ttf'),\r\n         url('/pentaho/BI/fonts/Comfortaa_Thin.eot');  /* IE9 */ \r\n}\r\n* {\r\n  -moz-box-sizing: border-box;\r\n  box-sizing: border-box;\r\n}\r\n\r\nbody {\r\n  font-size: 14px;\r\n  /*\r\n  font-family: sans-serif;\r\n  */\r\n  font-family: TPF_Font_Thin;\r\n  font-weight: 100;\r\n  background-color: #ccc;\r\n  background-image: linear-gradient(transparent 50%, rgba(255, 255, 255, 0.5) 25%);\r\n  background-size: 4px 4px;\r\n}\r\nbody ul {\r\n  list-style: none;\r\n}\r\nbody ul, body li {\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\n.chart {\r\n  min-height: 400px;\r\n  border-bottom: 1px solid #eeeeee;\r\n  padding: 1em;\r\n}\r\n\r\n.chart--headline, .chart--subHeadline {\r\n  text-align: center;\r\n}\r\n\r\n.chart--headline {\r\n  position: relative;\r\n  font-weight: 100;\r\n  font-size: 28px;\r\n}\r\n.chart--headline:before {\r\n  position: absolute;\r\n  content: '';\r\n  bottom: 133%;\r\n  left: 50%;\r\n  width: 25%;\r\n  margin: 0 0 0 -12.5%;\r\n  border-top: 1px dashed #999999;\r\n}\r\n\r\n.chart--subHeadline {\r\n  font-weight: 400;\r\n  font-size: 14px;\r\n  letter-spacing: 1px;\r\n}\r\n\r\n.charts--container {\r\n  background-color: white;\r\n  width: 100%;\r\n}\r\n@media screen and (min-width: 700px) {\r\n  .charts--container {\r\n    max-width: 700px;\r\n    left: 50%;\r\n    top: 10%;\r\n    margin: 5em auto;\r\n    box-shadow: 0 2em 2em #333333;\r\n  }\r\n}\r\n\r\n.charts--headline {\r\n  max-width: 700px;\r\n  width: 100%;\r\n  text-align: center;\r\n  color: #444;\r\n  background-color: #fff;\r\n  padding: 1em;\r\n  margin: auto;\r\n}\r\n\r\n.charts--headline span {\r\n  text-align: center;\r\n  text-decoration: underline;\r\n  color: red;\r\n  padding: none;\r\n}\r\n\r\n.lineChart--area {\r\n  fill: url(#lineChart--gradientBackgroundArea);\r\n}\r\n\r\n.lineChart--areaLine {\r\n  fill: none;\r\n  stroke: #6bb7c7;\r\n  stroke-width: 3;\r\n}\r\n\r\n.lineChart--bubble--label {\r\n  fill: none;\r\n  stroke: #6bb7c7;\r\n  font-size: 12.6px;\r\n  font-style: italic;\r\n  font-weight: 100;\r\n}\r\n\r\n.lineChart--bubble--value {\r\n  fill: #fff;\r\n  stroke: #fff;\r\n  font-size: 21px;\r\n  font-weight: 100;\r\n}\r\n\r\n.lineChart--circle {\r\n  fill: #6bb7c7;\r\n  stroke: #fff;\r\n  stroke-width: 3;\r\n}\r\n\r\n.lineChart--circle__highlighted {\r\n  fill: #fff;\r\n  stroke: #3f94a7;\r\n}\r\n\r\n.lineChart--gradientBackgroundArea--top {\r\n  stop-color: #6bb7c7;\r\n  stop-opacity: 0.1;\r\n}\r\n\r\n.lineChart--gradientBackgroundArea--bottom {\r\n  stop-color: #6bb7c7;\r\n  stop-opacity: 0.6;\r\n}\r\n\r\n.lineChart--svg {\r\n  border: 1px solid #eeeeee;\r\n}\r\n\r\n.lineChart--xAxisTicks .domain, .lineChart--xAxis .domain, .lineChart--yAxisTicks .domain {\r\n  display: none;\r\n}\r\n\r\n.lineChart--xAxis .tick line {\r\n  display: none;\r\n}\r\n\r\n.lineChart--xAxisTicks .tick line, .lineChart--yAxisTicks .tick line {\r\n  fill: none;\r\n  stroke: #b3b3b3;\r\n  stroke-width: 1;\r\n  stroke-dasharray: 2,2;\r\n}\r\n\r\n.pieChart--center--innerCircle {\r\n  fill: #fff;\r\n}\r\n\r\n.pieChart--center--text {\r\n  font-size: 28px;\r\n}\r\n\r\n.pieChart--center--outerCircle {\r\n    /*\r\n\tfill: rgba(255, 255, 255, 0.75);\r\n\t*/\r\n\tfill: #fff;\r\n}\r\n\r\n.pieChart--detail--divider {\r\n  stroke: gray;\r\n  stroke-width: 1;\r\n}\r\n\r\n.pieChart--detail--percentage {\r\n  font-size: 42px;\r\n  font-weight: 100;\r\n  fill: #333333;\r\n  stroke-width: 1px;\r\n}\r\n\r\n.pieChart--detail--textContainer {\r\n  background-color: transparent;\r\n  padding: 10px 0 0 0;\r\n  margin: 0;\r\n  color: #666666;\r\n  font-style: italic;\r\n}\r\n\r\n.pieChart--detail__left {\r\n  text-align: left;\r\n}\r\n\r\n.pieChart--detail__right {\r\n  text-align: right;\r\n}\r\n\r\n.pieChart__blue {\r\n\t/*\r\n\tfill: #6bb7c7;\r\n\t*/\r\n\tfill: #F4A20E;\r\n}\r\n\r\n.pieChart__red {\r\n\t/*\r\n\tfill: #d79d91;\r\n\t*/\r\n\tfill: #29A7E2;\r\n}\r\n\r\n/**\r\n * Helper classes\r\n */\r\n.hidden {\r\n  display: none;\r\n}\r\n "
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Css"
+     }
+    ],
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource"
+   },
+   {
+    "id": "6dbfd37e-c2b6-5f31-90c3-2b8f9592af6c",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "CustomJS"
+     },
+     {
+      "name": "resourceCode",
+      "type": "Resource",
+      "value": "let Pie1 = {};\r\n\r\n/*-------------------------------------------------------------------------*\r\n *                        Pie1 functions && settings                       *\r\n *-------------------------------------------------------------------------*/\r\nPie1.addCommas = ( nStr ) => {\r\n    nStr += '';\r\n    x = nStr.split('.');\r\n    x1 = x[0];\r\n    x2 = x.length > 1 ? '.' + x[1] : '';\r\n    let rgx = /(\\d+)(\\d{3})/;\r\n    \r\n    while (rgx.test(x1)) {\r\n        x1 = x1.replace(rgx, '$1' + ',' + '$2');\r\n    }\r\n    x2 = x2.slice(0,3);\r\n    return x1 + x2;\r\n};\r\n\r\n/*-------------------------------------------------------------------------*\r\n *                             D3 && settings                              *\r\n *-------------------------------------------------------------------------*/\r\nfunction initD3(){\r\n    let readJSONFile = function(url){\r\n        let jsonData;\r\n        $.ajax({\r\n            type : 'get',\r\n            url : url,\r\n            async : false,\r\n            dataType : 'json',\r\n            data : null,\r\n            success : function(response){\r\n                jsonData = response;\r\n            }\r\n        });\r\n        return jsonData;\r\n    };\r\n    /**\r\n     * \r\n     * 数组最小值\r\n     * \r\n    **/\r\n    Array.prototype.min = function() {\r\n        let min = this[0];\r\n        let len = this.length;\r\n        for (let i = 1; i < len; i++){\r\n            if (this[i] < min){\r\n                min = this[i];\r\n            }\r\n        }\r\n        return min;\r\n    }\r\n    /**\r\n     * \r\n     * 数组最大值\r\n     * \r\n    **/\r\n    Array.prototype.max = function() {\r\n        let max = this[0];\r\n        let len = this.length;\r\n        for (let i = 1; i < len; i++){\r\n            if (this[i] > max) {\r\n                max = this[i];\r\n            }\r\n        }\r\n        return max;\r\n    }\r\n    /**\r\n     * \r\n     * 数组求和\r\n     * \r\n    **/\r\n    Array.prototype.sum = function (){\r\n        let result = 0;\r\n        for(let i = 0; i < this.length; i++) {\r\n            result += this[i];\r\n        }\r\n        return result;\r\n    };\r\n    \r\n    let urlD3Pie1 = \"/pentaho/plugin/cda/api/doQuery?path=/public/UI/D3/PieChart/pie1.cda&dataAccessId=pie1\";\r\n        //urlD3Pie1 += '&paramstartDay=' + startDay + '&paramendDay=' + endDay + '&parambrandParam=' + brandParam + '&paramplaceParam=' + placeParam + '&paramarea1Param=' + area1Param + '&paramarea2Param=' + area2Param + '&paramarea3Param=' + area3Param + '&paramshopParam=' + shopParam + '&paramoutletParam=' + outletParam;\r\n    let getD3Pie1JSON = readJSONFile(urlD3Pie1).resultset;\r\n    let colors = ['#FF9E16', '#0055B8'];\r\n    let d3Pie = new d3pie(\"pieChart\", {\r\n        header: {\r\n            title: {\r\n                text: (function(){\r\n                    return getD3Pie1JSON.sort(function(a,b){\r\n                        return b[1]-a[1];\r\n                    })[0][0];\r\n                })(),\r\n                color: \"#0055B8\",\r\n    \t\t\tfontSize: 24,\r\n    \t\t\tfont: \"open sans\"\r\n    \t\t},\r\n    \t\tsubtitle: {\r\n                text: (function(){\r\n                    let maxJSON = getD3Pie1JSON.map((value, index, arr) => {\r\n                        let newArr = [];\r\n                            newArr.push(value[1]);\r\n                        return newArr[0];\r\n                    }).max();\r\n                    let sumJSON = getD3Pie1JSON.map((value, index, arr) => {\r\n                        let newArr = [];\r\n                            newArr.push(value[1]);\r\n                        return newArr[0];\r\n                    }).sum();\r\n                    return ((maxJSON / sumJSON) * 100).toFixed(2) + '%';\r\n                })(),\r\n    \t\t\t//color: \"#0055B8\",\r\n    \t\t\tfontSize: 42,\r\n    \t\t\tfont: \"TPF_Font_Thin\"\r\n    \t\t},\r\n    \t\ttitleSubtitlePadding: 9,\r\n            location: \"pie-center\"\r\n    \t},\r\n        /*\r\n    \tfooter: {\r\n    \t\tcolor: \"#999999\",\r\n    \t\tfontSize: 10,\r\n    \t\tfont: \"open sans\",\r\n    \t\tlocation: \"bottom-left\"\r\n    \t},\r\n        */\r\n        size: {\r\n            canvasHeight: (function(){\r\n                //console.log($(\"#pieChart\").height()); clientHeight scrollHeight\r\n                console.log($(\"#pieChart\").clientHeight);\r\n                console.log(document.getElementById(\"pieChart\").clientHeight);\r\n                console.log(document.getElementById(\"pieChart\").offsetHeight);\r\n                console.log(document.getElementById(\"pieChart\").scrollHeight);\r\n                console.log($(\"#pieChart\").width());\r\n                console.log($(\"#pieChart\"));\r\n                return 500;\r\n            })(),\r\n    \t    canvasWidth: (function(){\r\n                return $(\"#pieChart\").width();   \r\n    \t    })(),\r\n            //\"canvasWidth\": 590,\r\n        \tpieInnerRadius: \"80%\"\r\n    \t},\r\n    \tdata: {\r\n    \t\tsortOrder: \"value-desc\",\r\n            content: getD3Pie1JSON.map((value, index, arr) => {\r\n                let newArr = [];\r\n                    newArr.push({\r\n                        label: value[0],\r\n                    \tvalue: value[1],\r\n                        color: colors[index]\r\n                    });\r\n                return newArr[0];\r\n            })\r\n    \t},\r\n        tooltips: {\r\n            enabled: true,\r\n            type: \"placeholder\",\r\n            //string: \"{label}: {percentage}%\",\r\n            string: \"{label}: {value}\",\r\n            placeholderParser: function(index, data) {\r\n                //console.log(index);\r\n                //console.log(data.value.toFixed(2));\r\n                //data.label = data.label + \"!\";\r\n                //data.percentage = data.percentage.toFixed(2);\r\n                data.value = Pie1.addCommas(data.value.toFixed(2));\r\n                return data.value;\r\n                /*\r\n                data.label = data.label + \"!\";\r\n                data.percentage = data.percentage.toFixed(2);\r\n                data.value = data.value.toFixed(2);\r\n                */\r\n            },\r\n            styles: {\r\n                fadeInSpeed: 500,\r\n                //backgroundColor: \"#00cc99\",\r\n                backgroundColor: \"silver\",\r\n                backgroundOpacity: 0.8,\r\n                color: \"#ffffcc\",\r\n                borderRadius: 4,\r\n                font: \"verdana\",\r\n                fontSize: 20,\r\n                padding: 20\r\n            }\r\n        },\r\n    \tlabels: {\r\n    \t\touter: {\r\n    \t\t\tpieDistance: 32\r\n    \t\t},\r\n    \t\tinner: {\r\n    \t\t\thideWhenLessThanPercentage: 3\r\n    \t\t},\r\n    \t\tmainLabel: {\r\n    \t\t\tfontSize: 20\r\n    \t\t},\r\n    \t\tpercentage: {\r\n    \t\t\tcolor: \"#ffffff\",\r\n    \t\t\tdecimalPlaces: 0\r\n    \t\t},\r\n    \t\tvalue: {\r\n    \t\t\tcolor: \"#adadad\",\r\n    \t\t\tfontSize: 20\r\n    \t\t},\r\n    \t\tlines: {\r\n    \t\t\tenabled: true\r\n    \t\t},\r\n    \t\ttruncation: {\r\n    \t\t\tenabled: true\r\n    \t\t}\r\n    \t},\r\n        \r\n    \teffects: {\r\n    \t\tpullOutSegmentOnClick: {\r\n    \t\t\teffect: \"linear\",\r\n    \t\t\tspeed: 400,\r\n    \t\t\tsize: 8\r\n    \t\t}\r\n    \t},\r\n        callbacks: {\r\n            onClickSegment: function(a) {\r\n    \t\t\tconsole.log(a.data);\r\n    \t\t}\r\n    \t}\r\n        /*\r\n    \tmisc: {\r\n    \t\tgradient: {\r\n    \t\t\tenabled: true,\r\n    \t\t\tpercentage: 100\r\n    \t\t}\r\n    \t},*/\r\n        \r\n    });\r\n    \r\n}; "
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Javascript"
+     }
+    ],
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource"
+   },
+   {
+    "id": "cdad6782-ce85-caa0-29c9-ef9de0eb781f",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutRow",
+    "typeDesc": "Row"
+   },
+   {
+    "id": "11c6980a-b394-07c3-1ed5-18f4e60e893d",
+    "parent": "cdad6782-ce85-caa0-29c9-ef9de0eb781f",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "aaac553f-21b3-49d3-ec1a-05b9da107d3c",
+    "parent": "11c6980a-b394-07c3-1ed5-18f4e60e893d",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "<div class=\"charts--container\">\r\n\t<ul>\r\n\t\t<li class=\"chart\">\r\n\t\t\t<div id=\"pieChart\"></div>\r\n\t\t</li>\r\n\t</ul>\r\n</div> \r\n<script type='text/javascript'>\r\n\r\n</script> "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   }
+  ],
+  "title": "CDF - Sample structure"
+ }
+}

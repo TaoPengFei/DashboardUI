@@ -61,6 +61,9 @@
       <Connection id="saleAmtQuery1" type="sql.jndi">
          <Jndi>jdbc_bi</Jndi>
       </Connection>
+      <Connection id="GaugeEchartsQuery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
       <Connection id="_________________KPI_____________________" type="sql.jndi">
          <Jndi/>
       </Connection>
@@ -701,6 +704,24 @@ FROM
     AND (`Dim_Place`.`PlaceId` = ${placeParam} OR ${placeParam} = -1)
 GROUP BY
      `dim_area`.`AreaName_level1`]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="GaugeEchartsQuery" id="GaugeEchartsQuery"
+               type="sql">
+      <Name>GaugeEchartsQuery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT
+    -1,
+    case when sum(`fact_sumday`.`BudgetSaleAmt`) = 0 then 100
+         when sum(`fact_sumday`.`BudgetSaleAmt`) = null then 100
+    else format(sum(`fact_sumday`.`SaleAmt`)/sum(`fact_sumday`.`BudgetSaleAmt`)*100,2) end AS peleterate
+FROM
+     `fact_sumday` INNER JOIN `dim_outlet` ON `fact_sumday`.`OutletId_t` = `dim_outlet`.`OutletId_t`
+     INNER JOIN `dim_bidate` ON `fact_sumday`.`BIDateId` = `dim_bidate`.`BIDateId`
+     INNER JOIN `dim_place` ON `fact_sumday`.`PlaceId` = `dim_place`.`PlaceId`
+     INNER JOIN `dim_area` ON `fact_sumday`.`AreaId` = `dim_area`.`AreaId`
+     INNER JOIN `dim_brand` ON `dim_outlet`.`BrandId` = `dim_brand`.`BrandId`]]></Query>
    </DataAccess>
    <DataAccess access="public" connection="_________________KPI_____________________"
                id="_________________KPI_____________________"

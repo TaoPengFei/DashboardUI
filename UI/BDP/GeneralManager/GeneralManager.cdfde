@@ -27,7 +27,7 @@
      {
       "name": "javaScript",
       "type": "JavaScript",
-      "value": "/**\r\n * 更改滚动条样式 \r\n */\r\n(function($){\r\n    $(window).on(\"load\",function(){\r\n        //initEcahrts();\r\n        \r\n        $(\"#row6_col1_panel_body\").mCustomScrollbar({\r\n\t\t\tautoHideScrollbar:true,\r\n            axis:\"yx\",\r\n            scrollButtons:{\r\n                enable:true //是否使用上下滚动按钮\r\n\t\t\t},\r\n            mouseWheelPixels:300,\r\n\t\t\ttheme:\"rounded\"\r\n            //theme:\"dark\"\r\n\t\t});\r\n\t});\r\n    \r\n})($);\r\n\r\n\r\n/**\r\n * 解决CDE图形的自适应\r\n */\r\nfunction resizeGraphical(cdeObj){\r\n    var myself = cdeObj;\r\n    //设置初始宽度 与placeholder()匹配\r\n    myself.chartDefinition.width = myself.placeholder().width();\r\n    //仅在图表组件的第一个执行上附加调整处理程序\r\n    if( !cdeObj.resizeHandlerAttached ){\r\n        //确保渲染只在事件发生后被触发\r\n        var debouncedResize = _.debounce(function(){\r\n            //再次显示 图形\r\n            myself.placeholder().children().css('visibility','visible');\r\n            // 改变 图形 的 宽度\r\n            myself.chartDefinition.width = myself.placeholder().width();\r\n            myself.render( myself.query.lastResults() );\r\n        },200);\r\n        // 高度调整 处理\r\n        $(window).resize(function(){\r\n            //仅当容器已更改宽度时才触发调整大小\r\n            if( myself.chartDefinition.width != myself.placeholder().width() ){\r\n                //暂时隐藏图表，使溢出不会发生\r\n                myself.placeholder().children().css('visibility','hidden');\r\n                //触发与调整\r\n                debouncedResize();\r\n            }\r\n        });\r\n        cdeObj.resizeHandlerAttached = true;\r\n    }\r\n} \r\n\r\n\r\n/**\r\n *  原生的判断是否存在class\r\n */\r\nfunction hasClass( elements,cName ){ \r\n    // ( \\\\s|^ ) 判断前面是否有空格 \r\n    //（\\\\s | $ ）判断后面是否有空格 两个感叹号为转换为布尔值 以方便做判断 \r\n    return !!elements.className.match( new RegExp( \"(\\\\s|^)\" + cName + \"(\\\\s|$)\") ); \r\n}\r\n/**\r\n *  原生的移除class\r\n */\r\nfunction removeClass( elements,cName ){ \r\n    if( hasClass( elements,cName ) ){ \r\n        elements.className = elements.className.replace( new RegExp( \"(\\\\s|^)\" + cName + \"(\\\\s|$)\" ),\" \" ); \r\n    }\r\n}\r\n/**\r\n *  原生的添加class\r\n */\r\nfunction addClass( elements,cName ){ \r\n    if( !hasClass( elements,cName ) ){ \r\n        elements.className += \" \" + cName; \r\n    }\r\n}\r\nsc = {\r\n    init : function(){\r\n        var dashboardWidth = document.getElementsByTagName('body')[0].offsetWidth;\r\n        var row1_col1 = document.getElementById(\"row1_col1\"); \r\n        var row2_col1 = document.getElementById(\"row2_col1\"); \r\n        if( dashboardWidth >= 1200 ){\r\n            removeClass(row1_col1,\"row1_col1-xs\");\r\n            removeClass(row2_col1,\"row2_col1-xs\");\r\n        }else{\r\n            addClass(row1_col1,\"row1_col1-xs\");\r\n            addClass(row2_col1,\"row2_col1-xs\");\r\n        }\r\n    }\r\n};\r\nwindow.onload = function(){ \r\n    sc.init(); \r\n    $('table tr').find('td:eq(0)').hide();\r\n};\r\nwindow.onresize = function(){ sc.init(); }; \r\n\r\n\r\n//console.log(table1); "
+      "value": "/**\r\n * 更改滚动条样式 \r\n */\r\n(function($){\r\n    $(window).on(\"load\",function(){\r\n        initEcahrts();\r\n        \r\n        $(\"#row6_col1_panel_body\").mCustomScrollbar({\r\n\t\t\tautoHideScrollbar:true,\r\n            axis:\"yx\",\r\n            scrollButtons:{\r\n                enable:true //是否使用上下滚动按钮\r\n\t\t\t},\r\n            mouseWheelPixels:300,\r\n\t\t\ttheme:\"rounded\"\r\n            //theme:\"dark\"\r\n\t\t});\r\n\t});\r\n    \r\n})($);\r\n\r\n\r\n/**\r\n * 解决CDE图形的自适应\r\n */\r\nfunction resizeGraphical(cdeObj){\r\n    var myself = cdeObj;\r\n    //设置初始宽度 与placeholder()匹配\r\n    myself.chartDefinition.width = myself.placeholder().width();\r\n    //仅在图表组件的第一个执行上附加调整处理程序\r\n    if( !cdeObj.resizeHandlerAttached ){\r\n        //确保渲染只在事件发生后被触发\r\n        var debouncedResize = _.debounce(function(){\r\n            //再次显示 图形\r\n            myself.placeholder().children().css('visibility','visible');\r\n            // 改变 图形 的 宽度\r\n            myself.chartDefinition.width = myself.placeholder().width();\r\n            myself.render( myself.query.lastResults() );\r\n        },200);\r\n        // 高度调整 处理\r\n        $(window).resize(function(){\r\n            //仅当容器已更改宽度时才触发调整大小\r\n            if( myself.chartDefinition.width != myself.placeholder().width() ){\r\n                //暂时隐藏图表，使溢出不会发生\r\n                myself.placeholder().children().css('visibility','hidden');\r\n                //触发与调整\r\n                debouncedResize();\r\n            }\r\n        });\r\n        cdeObj.resizeHandlerAttached = true;\r\n    }\r\n} \r\n\r\n\r\n/**\r\n *  原生的判断是否存在class\r\n */\r\nfunction hasClass( elements,cName ){ \r\n    // ( \\\\s|^ ) 判断前面是否有空格 \r\n    //（\\\\s | $ ）判断后面是否有空格 两个感叹号为转换为布尔值 以方便做判断 \r\n    return !!elements.className.match( new RegExp( \"(\\\\s|^)\" + cName + \"(\\\\s|$)\") ); \r\n}\r\n/**\r\n *  原生的移除class\r\n */\r\nfunction removeClass( elements,cName ){ \r\n    if( hasClass( elements,cName ) ){ \r\n        elements.className = elements.className.replace( new RegExp( \"(\\\\s|^)\" + cName + \"(\\\\s|$)\" ),\" \" ); \r\n    }\r\n}\r\n/**\r\n *  原生的添加class\r\n */\r\nfunction addClass( elements,cName ){ \r\n    if( !hasClass( elements,cName ) ){ \r\n        elements.className += \" \" + cName; \r\n    }\r\n}\r\nsc = {\r\n    init : function(){\r\n        var dashboardWidth = document.getElementsByTagName('body')[0].offsetWidth;\r\n        var row1_col1 = document.getElementById(\"row1_col1\"); \r\n        var row2_col1 = document.getElementById(\"row2_col1\"); \r\n        if( dashboardWidth >= 1200 ){\r\n            removeClass(row1_col1,\"row1_col1-xs\");\r\n            removeClass(row2_col1,\"row2_col1-xs\");\r\n        }else{\r\n            addClass(row1_col1,\"row1_col1-xs\");\r\n            addClass(row2_col1,\"row2_col1-xs\");\r\n        }\r\n    }\r\n};\r\nwindow.onload = function(){ \r\n    sc.init(); \r\n    $('table tr').find('td:eq(0)').hide();\r\n};\r\nwindow.onresize = function(){ sc.init(); }; \r\n\r\n\r\n//console.log(table1); "
      }
     ],
     "rowName": "Function",
@@ -12782,6 +12782,78 @@
     "typeDesc": "sql over sqlJndi"
    },
    {
+    "id": "4ef05a0c-b339-cdc3-b552-458a201f2aef",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "value": "GaugeEchartsQuery",
+      "type": "Id"
+     },
+     {
+      "name": "access",
+      "value": "public",
+      "type": "Access"
+     },
+     {
+      "name": "jndi",
+      "value": "jdbc_bi",
+      "type": "Jndi"
+     },
+     {
+      "name": "query",
+      "value": "SELECT\r\n    -1,\r\n    case when sum(`fact_sumday`.`BudgetSaleAmt`) = 0 then 100\r\n         when sum(`fact_sumday`.`BudgetSaleAmt`) = null then 100\r\n    else format(sum(`fact_sumday`.`SaleAmt`)/sum(`fact_sumday`.`BudgetSaleAmt`)*100,2) end AS peleterate\r\nFROM\r\n     `fact_sumday` INNER JOIN `dim_outlet` ON `fact_sumday`.`OutletId_t` = `dim_outlet`.`OutletId_t`\r\n     INNER JOIN `dim_bidate` ON `fact_sumday`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n     INNER JOIN `dim_place` ON `fact_sumday`.`PlaceId` = `dim_place`.`PlaceId`\r\n     INNER JOIN `dim_area` ON `fact_sumday`.`AreaId` = `dim_area`.`AreaId`\r\n     INNER JOIN `dim_brand` ON `dim_outlet`.`BrandId` = `dim_brand`.`BrandId`\r\n",
+      "type": "SqlQuery"
+     },
+     {
+      "name": "parameters",
+      "value": "[]",
+      "type": "CdaParameters"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "value": "[]",
+      "type": "CdaCalculatedColumnsArray"
+     },
+     {
+      "name": "cdacolumns",
+      "value": "[]",
+      "type": "CdaColumnsArray"
+     },
+     {
+      "name": "output",
+      "value": "[]",
+      "type": "IndexArray"
+     },
+     {
+      "name": "outputMode",
+      "value": "include",
+      "type": "OutputMode"
+     },
+     {
+      "name": "cacheKeys",
+      "value": "[]",
+      "type": "CacheKeysValues"
+     },
+     {
+      "name": "cacheDuration",
+      "value": 3600,
+      "type": "Integer"
+     },
+     {
+      "name": "cache",
+      "value": "true",
+      "type": "Boolean"
+     }
+    ],
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "rowName": "sql over sqlJndi"
+   },
+   {
     "id": "0435d98c-9a57-d6ea-7ecd-6a591b9a9cbd",
     "meta": "CDA",
     "meta_conntype": "sql.jndi",
@@ -13435,6 +13507,29 @@
  "layout": {
   "rows": [
    {
+    "id": "e19c41f7-4c26-36ad-d368-c580aed16505",
+    "type": "LayoutResourceFile",
+    "typeDesc": "Resource",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "EchartsJS",
+      "type": "Id"
+     },
+     {
+      "name": "resourceFile",
+      "value": "${solution:../../js/Echarts3.6.0/echarts.min.js}",
+      "type": "ResourceFile"
+     },
+     {
+      "name": "resourceType",
+      "value": "Javascript",
+      "type": "Label"
+     }
+    ]
+   },
+   {
     "id": "4fb6e0a7-ad27-23a3-25dd-5ac4ad215ba7",
     "parent": "UnIqEiD",
     "properties": [
@@ -13918,7 +14013,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\n    <i class=\"fa fa-paperclip\" style=\"padding-right: 5px;\"></i> 营业额 \n</div>  \n "
+      "value": "<div class=\"panel-heading \">\n    <i class=\"fa fa-dashboard\" style=\"padding-right: 5px;\"></i> 营业额 \n</div>  \n<div class='row clearfix '>\n    <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>\n        <div id='EchartsGaugeDom' style='height: 350px'></div>\n    </div>\n    <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6 last'>\n        <div id='EchartsGaugeDom_2' style='height: 350px'></div>\n    </div>\n</div>\n\n<script type=\"text/javascript\">\n    function initEcahrts(){\n        let readJSONFile = function(url){\n            let jsonData;\n            $.ajax({\n                type : 'get',\n    \t\t\turl : url,\n    \t\t\tasync : false,\n    \t\t\tdataType : 'json',\n    \t\t\tdata : null,\n    \t\t\tsuccess : function(response){\n    \t\t\t\tjsonData = response;\n    \t\t\t\t//alert(jsonData);\n    \t\t\t}\n    \t\t})\n    \t\treturn jsonData;\n    \t};\n        /**\n         * \n         * 第一个图\n         * \n         **/\n        let url_gauge_1 = \"/pentaho/plugin/cda/api/doQuery?path=/public/UI/BDP/GeneralManager/GeneralManager.cda&dataAccessId=GaugeEchartsQuery\";\n        let getFirstGaugeJSON_1 = readJSONFile(url_gauge_1).resultset;\n        let myChart_1 = echarts.init(document.getElementById('EchartsGaugeDom'));\n        let FirstGaugeDataEncapsulation_1 = (function(){\n            let data = function(){\n                let tempArr = [];\n                for(let i = 0; i < getFirstGaugeJSON_1.length; i++){\n                    tempArr.push({\n                \t\t'name' : getFirstGaugeJSON_1[i][0],\n                        'value': getFirstGaugeJSON_1[i][1],\n                        selected : true\n        \t\t\t})\n                }\n                return tempArr;\n            };\n            return {\n                getDatas : function(){\n                    return data()\n                }\n            }\n            \n        })();\n        let ShowFirstGaugeEcharts_1 = function(){\n            // 基于准备好的dom，初始化echarts实例\n            // 指定图表的配置项和数据\n            myChart_1.setOption({\n                title: {\n                    text: '', //标题文本内容\n                },\n                toolbox: { //可视化的工具箱\n                    show: true,\n                    feature: {\n                       /* restore: { //重置\n                            show: true\n                        },\n                        saveAsImage: {//保存图片\n                            show: true\n                        }*/\n                    }\n                },\n                tooltip: { //弹窗组件\n                    formatter: \"{a} <br/>{b} : {c}%\"\n                },\n                series: [{\n                    name: '营业额完成情况',\n                    type: 'gauge',\n                    detail: {formatter: '{value}%',\n                            offsetCenter:[0,'65%'],\n                                textStyle: {       \n                                   fontSize: 20\n                                }\n                            },\n                           \n                    data:[\n                        {name:'完成率',\n                        value:FirstGaugeDataEncapsulation_1.getDatas()[0].value}\n                    ]\n                }]\n            });\n        }();\n        \n        /**\n         * \n         * 第二个图\n         * \n         **/\n        let url_gauge_2 = \"/pentaho/plugin/cda/api/doQuery?path=/public/UI/BDP/GeneralManager/GeneralManager.cda&dataAccessId=GaugeEchartsQuery\";\n        let getFirstGaugeJSON_2 = readJSONFile(url_gauge_2).resultset;\n        let myChart_2 = echarts.init(document.getElementById('EchartsGaugeDom_2'));\n        let FirstGaugeDataEncapsulation_2 = (function(){\n            let data = function(){\n                let tempArr = [];\n                for(let i = 0; i < getFirstGaugeJSON_2.length; i++){\n                    tempArr.push({\n                    \t'name' : getFirstGaugeJSON_2[i][0],\n                        'value': getFirstGaugeJSON_2[i][1],\n                        selected : true\n        \t\t\t})\n                }\n                return tempArr;\n            };\n            return {\n                getDatas : function(){\n                    return data()\n                }\n            }\n            \n        })();\n        let ShowFirstGaugeEcharts_2 = function(){\n            // 基于准备好的dom，初始化echarts实例\n            // 指定图表的配置项和数据\n            myChart_2.setOption({\n                title: {\n                    text: '', //标题文本内容\n                },\n                toolbox: { //可视化的工具箱\n                    show: true,\n                    feature: {\n                       /* restore: { //重置\n                            show: true\n                        },\n                        saveAsImage: {//保存图片\n                            show: true\n                        }*/\n                    }\n                },\n                tooltip: { //弹窗组件\n                    formatter: \"{a} <br/>{b} : {c}%\"\n                },\n                series: [{\n                    name: '营业额完成情况',\n                    type: 'gauge',\n                    detail: {formatter: '{value}%',\n                            offsetCenter:[0,'65%'],\n                                textStyle: {       \n                                   fontSize: 20\n                                }\n                            },\n                           \n                    data:[\n                        {name:'完成率',\n                        value:FirstGaugeDataEncapsulation_2.getDatas()[0].value}\n                    ]\n                }]\n            });\n        }();\n        window.addEventListener(\"resize\",function(){\n            myChart_1.resize();\n            myChart_2.resize();\n        });\n    }\n</script> "
      },
      {
       "name": "fontSize",
@@ -14777,7 +14872,7 @@
      {
       "name": "html",
       "type": "Html",
-      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-paperclip\" style=\"padding-right: 5px;\"></i> 费用金额  \r\n</div> \r\n<div class=\"row\">\r\n    <div class=\"col text-center\" style=\"font-size:40px\">\r\n        <div id=\"ATVDom_KPI\" style=\"color:#666666;font-weight:lighter;font-family:TPF_Font_Thin;\">???</div>\r\n    </div>\r\n</div> \r\n<div class=\"row\">\r\n    <div class=\"panel-heading\">\r\n        <div class=\"col text-center\">\r\n            成本金额 &nbsp\r\n            <span id=\"costAmtDom_KPI\" style=\"color:red;font-family:TPF_Font_Thin;\"></span>\r\n        </div>\r\n    </div> \r\n</div> "
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-paperclip\" style=\"padding-right: 5px;\"></i> 费用金额  \r\n</div> \r\n<div class=\"row\">\r\n    <div class=\"col text-center\" style=\"font-size:40px\">\r\n        <div id=\"ATVDom_KPI\" style=\"color:#666666;font-weight:lighter;font-family:TPF_Font_Thin;\">0.00</div>\r\n    </div>\r\n</div> \r\n<div class=\"row\">\r\n    <div class=\"panel-heading\">\r\n        <div class=\"col text-center\">\r\n            成本金额 &nbsp\r\n            <span id=\"costAmtDom_KPI\" style=\"color:red;font-family:TPF_Font_Thin;\"></span>\r\n        </div>\r\n    </div> \r\n</div> "
      },
      {
       "name": "fontSize",

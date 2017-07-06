@@ -428,13 +428,13 @@
     "typeDesc": "<i>Group</i>"
    },
    {
-    "id": "69b92684-31e4-05c6-f2c7-49fad2d57886",
+    "id": "d6ebd930-c543-60e8-1675-5da8cae0d46d",
     "parent": "OTHERCOMPONENTS",
     "properties": [
      {
       "name": "name",
       "type": "Id",
-      "value": "TableCom"
+      "value": "TableCom_new"
      },
      {
       "name": "expandContainerObject",
@@ -574,7 +574,7 @@
      {
       "name": "htmlObject",
       "type": "HtmlObject",
-      "value": "${h:TableDom}"
+      "value": "${h:TableDom111}"
      },
      {
       "name": "executeAtStart",
@@ -595,6 +595,210 @@
       "name": "postExecution",
       "type": "JavaScript",
       "value": "function() {\n\n    /**\n     * 双表头的制作\n     */\n    ($('#TableDomTable thead tr').clone()).insertBefore($('#TableDomTable thead tr'));\n    _.each($('#TableDomTable thead tr:nth-child(1) th'), function(elem, idx) {\n        //if (idx>0) {\n        if (idx>1) {    //用于控制clone的位置\n            if (((idx-1)%2)==0) {\n                $(elem).text($(elem).text().split('/')[0]).attr('colspan', 2);\n            } else {\n                $(elem).remove();\n            }    \n        } else {\n            $(elem).text('');\n        }\n    });\n    _.each($('#TableDomTable thead tr:nth-child(2) th'), function(elem) {\n        if ($(elem).text().split('/').length>1) {\n            $(elem).text($(elem).text().split('/')[1])\n        }    \n    });\n    \n    //_.each($('#TableDomTable tbody tr'), function(elem, idx) {\n        /*\n        //鼠标点击选择行时候变色\n        elem.onclick = function(){\n            //console.log('click...');\n            var oObj = window.event.srcElement;\n            console.log(this.tagName.toLowerCase());\n            console.log(oObj.tagName.toLowerCase());\n            console.log(document.all.TableDomTable.rows.length);\n            if(oObj.tagName.toLowerCase() == \"td\"){\n                var oTr = oObj.parentNode; \n                for( var i = 3; i < document.all.TableDomTable.rows.length; i++ ){\n                    document.all.TableDomTable.rows[i].style.backgroundColor   =   \"\";   \n    \t\t\t    document.all.TableDomTable.rows[i].tag = false\n                }\n                oTr.style.backgroundColor = \"#888888\";  \n                //oTr.style.color = \"#fff\";  \n    \t\t    oTr.tag = true;   \n            }\n        };\n        //鼠标点击另外一行时关闭已选行变色\n        \n        elem.onMouseOut = function(){\n            console.log('onMouseOut...');\n            //var oObj = event.srcElement;\n            var oObj = window.event.srcElement;\n            if(oObj.tagName.toLowerCase() == \"td\"){\n                var oTr = oObj.parentNode;\n                if(!oTr.tag){\n                    oTr.style.backgroundColor = \"#E1E9FD\";\n                }\n            }\n        };\n        */\n        //console.log(elem);\n        //console.log(idx);\n    //});\n    \n    /**\n     * 可实现合并单元格,上下行来比较\n     */\n    var totalCols = $(\"#TableDomTable\").find(\"tr:eq(0)\").find(\"td\").length;\n    //console.log($('#TableDomTable tbody tr').find(\"td\").length);\n\tvar totalRows = $(\"#TableDomTable\").find(\"tr\").length;\n\t//for ( var i = totalCols-1; i >= 0; i--) {\n    for ( var i = 0; i >= 0; i--) {\n\t\tfor ( var j = totalRows-1; j >= 0; j--) {\n        //for ( var j = 0; j >= 0; j--) {\n\t\t\tstartCell = $(\"#TableDomTable\").find(\"tr\").eq(j).find(\"td\").eq(i);\n\t\t\ttargetCell = $(\"#TableDomTable\").find(\"tr\").eq(j - 1).find(\"td\").eq(i);\n            if (startCell.text() == targetCell.text() && targetCell.text() !== \"\") {\n\t\t\t\ttargetCell.attr(\"rowSpan\", (startCell.attr(\"rowSpan\") === undefined)?2:(eval(startCell.attr(\"rowSpan\"))+1));\n\t\t\t\t//startCell.remove();   //注意区别\n                startCell.addClass(\"hidden-lg hidden-md hidden-sm hidden-xs\");\n                //console.log(startCell.text());\n\t\t\t}\n            \n\t\t}\n\t}\n    \n    //,td:eq(1)\n    //$('#TableDomTable').addClass(\"itemList\");\n    /**\n     * @bestValueLine    最好值刻度线  绿色\n     * @mediumValueLine  中上值刻度线  蓝色\n     * @normalValueLine  正常值刻度线  白色\n     * @badValueLine     最差值刻度线  红色\n     */\n    $.fn.TableColorGuide = function(bestValueLine, mediumValueLine, badValueLine ){\n        //var bestValueLine = 500000;\n        //var mediumValueLine = 100000;\n        //var badValueLine = 1000;\n        $('#TableDomTable tbody').find('td').each(function(index, elem){\n            if(index > 1){\n                //console.log(elem);\n                //console.log(elem.innerHTML.__proto__);\n                //console.log(elem.innerHTML.replace(\",\",\"\"));\n                //console.log(parseFloat(elem.innerHTML.replace(\",\",\"\")));\n                //if(elem.innerHTML.replace(\",\",\"\") >= '100000.00'){\n                if( parseInt(elem.innerHTML.replace(\",\",\"\")) >= bestValueLine &&\n                    parseInt(elem.innerHTML.replace(\",\",\"\")) !== 0 && bestValueLine !== 0 ){\n                    $(this).css(\"background-color\",\"#40A276\")\n                           .css('-moz-border-radius','0px')\n                           .css('-webkit-border-radius','0px')\n                           .css('color','#ffffff');\n                } else if( parseInt(elem.innerHTML.replace(\",\",\"\")) < bestValueLine && \n                            parseInt(elem.innerHTML.replace(\",\",\"\")) >= mediumValueLine && \n                            parseInt(elem.innerHTML.replace(\",\",\"\")) !== 0 && mediumValueLine !== 0 ){\n                    $(this).css(\"background-color\",\"#1979CA\")\n                           .css('-moz-border-radius','0px')\n                           .css('-webkit-border-radius','0px')\n                           .css('color','#ffffff');\n                }else if(parseInt(elem.innerHTML.replace(\",\",\"\")) < badValueLine && \n                            parseInt(elem.innerHTML.replace(\",\",\"\")) !== 0 && badValueLine !== 0 ){\n                    $(this).css(\"background-color\",\"#EE4B4B\")\n                           .css('-moz-border-radius','0px')\n                           .css('-webkit-border-radius','0px')\n                           .css('color','#ffffff');\n                }//else if(bestValueLine === 0 && mediumValueLine === 0 && badValueLine === 0 ){\n                    \n                //}\n            }\n        });\n    }\n    $(function() {\n        $.fn.TableColorGuide(//500000,100000,1000\n            /*\n            dashboard.getParameterValue(\"bestValueLineParam\"),\n            dashboard.getParameterValue(\"mediumValueLineParam\"),\n            dashboard.getParameterValue(\"badValueLineParam\")\n            */\n            \n            Dashboards.getParameterValue(\"bestValueLineParam\"),\n            Dashboards.getParameterValue(\"mediumValueLineParam\"),\n            Dashboards.getParameterValue(\"badValueLineParam\")\n            \n        );\n\t});\n    \n    $('#TableDomTable tbody tr').find(\"td:eq(0),td:eq(1)\")\n                                .css(\"background-color\", \"#F8FAFB\")\n                                .css(\"border\", \"1px solid #FFFFFF\")\n                                .css('color','#2779aa');\n   \n} "
+     },
+     {
+      "name": "postFetch",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "preChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "extraOptions",
+      "type": "ExtraOptionsArray",
+      "value": "[]"
+     },
+     {
+      "name": "tooltip",
+      "type": "Html",
+      "value": ""
+     },
+     {
+      "name": "clickAction",
+      "type": "JavaScript",
+      "value": ""
+     }
+    ],
+    "rowName": "Table Component",
+    "type": "ComponentsTable",
+    "typeDesc": "table Component"
+   },
+   {
+    "id": "69b92684-31e4-05c6-f2c7-49fad2d57886",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "TableCom"
+     },
+     {
+      "name": "expandContainerObject",
+      "type": "HtmlTarget",
+      "value": ""
+     },
+     {
+      "name": "listeners",
+      "type": "Listeners",
+      "value": "[]"
+     },
+     {
+      "name": "oLanguage",
+      "type": "JavaScript",
+      "value": "{\n    \"sEmptyTable\":     \"No data available in table\",\n    //\"sInfo\":           \"Showing _START_ to _END_ of _TOTAL_ entries\",\n    \"sInfo\":           \"当前条目 _START_ / _END_ ,共计 _TOTAL_ 条目\",\n    //\"sInfoEmpty\":      \"Showing 0 to 0 of 0 entries\",\n    \"sInfoEmpty\":      \"显示 0 / 0 ,共计 0 条目\",\n    //\"sInfoFiltered\":   \"(filtered from _MAX_ total entries)\",\n    \"sInfoFiltered\":   \"(从_MAX_个总条目过滤)\",\n    \"sInfoPostFix\":    \"\",\n    \"sInfoThousands\":  \",\",\n    //\"sLengthMenu\":     \"Show _MENU_ entries\",\n    \"sLengthMenu\":     \"显示 _MENU_ 条目\",\n    \"sLoadingRecords\": \"Loading...\",\n    \"sProcessing\":     \"Processing...\",\n    //\"sSearch\":         \"Search:\",\n    \"sSearch\":         \"模糊查询：\",\n    //\"sZeroRecords\":    \"No matching records found\",\n    \"sZeroRecords\":    \"没有找到匹配的记录\",\n    \"oPaginate\": {\n        \"sFirst\":    \"First\",\n        \"sLast\":     \"Last\",\n        \"sNext\":     \"Next\",\n        \"sPrevious\": \"Previous\"\n    },\n    \"oAria\": {\n        \"sSortAscending\":  \": activate to sort column ascending\",\n        \"sSortDescending\": \": activate to sort column descending\"\n    }\n} "
+     },
+     {
+      "name": "language",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "colFormats",
+      "type": "ColFormatsArray",
+      "value": "[]"
+     },
+     {
+      "name": "colHeaders",
+      "type": "ColHeadersArray",
+      "value": "[]"
+     },
+     {
+      "name": "colSortable",
+      "type": "ColSortableArray",
+      "value": "[]"
+     },
+     {
+      "name": "colTypes",
+      "type": "colTypesCustom",
+      "value": "[]"
+     },
+     {
+      "name": "colWidths",
+      "type": "ColWidthsArray",
+      "value": "[]"
+     },
+     {
+      "name": "expandParameters",
+      "type": "ExpandParameters",
+      "value": "[]"
+     },
+     {
+      "name": "parameters",
+      "type": "ValuesArray",
+      "value": "[]"
+     },
+     {
+      "name": "displayLength",
+      "type": "Integer",
+      "value": "10"
+     },
+     {
+      "name": "expandOnClick",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "filter",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "info",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "lengthChange",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "paginate",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "sort",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "colSearchable",
+      "type": "ColSearchableArray",
+      "value": "[]"
+     },
+     {
+      "name": "drawCallback",
+      "type": "JavaScript",
+      "value": " \r\n\r\n "
+     },
+     {
+      "name": "dataSource",
+      "type": "Datasource",
+      "value": "TableQuery"
+     },
+     {
+      "name": "sDom",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "sortBy",
+      "type": "SortByArray",
+      "value": "[]"
+     },
+     {
+      "name": "priority",
+      "type": "Integer",
+      "value": "5"
+     },
+     {
+      "name": "refreshPeriod",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "paginationType",
+      "type": "PaginationType",
+      "value": "two_button"
+     },
+     {
+      "name": "tableStyle",
+      "type": "TableStyle",
+      "value": "themeroller"
+     },
+     {
+      "name": "htmlObject",
+      "type": "HtmlObject",
+      "value": "${h:TableDom}"
+     },
+     {
+      "name": "executeAtStart",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "paginateServerside",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "preExecution",
+      "type": "JavaScript",
+      "value": "function f(){\r\n    //resizeGraphical(this);\r\n    let myself = this;\r\n    require(['amd!cdf/lib/underscore', 'cdf/dashboard/Utils'],function(_, Utils){\r\n        let numericOpts = {\r\n            color: function(st) {\r\n                console.log(st);\r\n                var values = st.tableData.map(function(e){\r\n                        return Number(_.last(e[st.colIdx].split(',')));\r\n                    });\r\n                var tblMax = _.max(values),\r\n                    tblMin = _.min(values);\r\n                var value = Number(_.last(st.value.split(','))),\r\n                    size = (value-tblMin)/(tblMax-tblMin),\r\n                    red = Math.min(255, Math.round(510 - 2 * 255 * size)),\r\n                    green = Math.min(255, Math.round(2 * 255 * size));\r\n                return \"rgb(\" + red + \",\" + green + \",0)\";\r\n            },\r\n        };\r\n        myself.setAddInOptions(\"colType\", \"numeric\", numericOpts);\r\n    })\r\n} "
+     },
+     {
+      "name": "postExecution",
+      "type": "JavaScript",
+      "value": "function() {\n\n    \n    \n    /**\n     * 可实现合并单元格,上下行来比较\n     */\n    var totalCols = $(\"#TableDomTable\").find(\"tr:eq(0)\").find(\"td\").length;\n    //console.log($('#TableDomTable tbody tr').find(\"td\").length);\n\tvar totalRows = $(\"#TableDomTable\").find(\"tr\").length;\n\t//for ( var i = totalCols-1; i >= 0; i--) {\n    for ( var i = 0; i >= 0; i--) {\n\t\tfor ( var j = totalRows-1; j >= 0; j--) {\n        //for ( var j = 0; j >= 0; j--) {\n\t\t\tstartCell = $(\"#TableDomTable\").find(\"tr\").eq(j).find(\"td\").eq(i);\n\t\t\ttargetCell = $(\"#TableDomTable\").find(\"tr\").eq(j - 1).find(\"td\").eq(i);\n            if (startCell.text() == targetCell.text() && targetCell.text() !== \"\") {\n\t\t\t\ttargetCell.attr(\"rowSpan\", (startCell.attr(\"rowSpan\") === undefined)?2:(eval(startCell.attr(\"rowSpan\"))+1));\n\t\t\t\t//startCell.remove();   //注意区别\n                startCell.addClass(\"hidden-lg hidden-md hidden-sm hidden-xs\");\n                //console.log(startCell.text());\n\t\t\t}\n            \n\t\t}\n\t}\n    \n    $('#TableDomTable tbody tr').find(\"td:eq(0),td:eq(1)\")\n                                .css(\"background-color\", \"#F8FAFB\")\n                                .css(\"border\", \"1px solid #FFFFFF\")\n                                .css('color','#2779aa');\n   \n} "
      },
      {
       "name": "postFetch",
@@ -2186,6 +2390,78 @@
     "typeDesc": "sql over sqlJndi"
    },
    {
+    "id": "353e5c48-748b-9035-1f9c-818390c5ec41",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "TableQuery_new"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "CALL P_DAILY_BUSINESS_PROFILE('2017-01-17', '2017-06-01', -1, -1, -1, -1, -1, -1, -1);\n"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
     "id": "11a1465c-ab13-ae60-37b6-411eac5fee30",
     "meta": "CDA",
     "meta_conntype": "sql.jndi",
@@ -2210,7 +2486,7 @@
      {
       "name": "query",
       "type": "SqlQuery",
-      "value": "CALL P_DAILY_BUSINESS_PROFILE('2017-01-17', '2017-06-01', -1, -1, -1, -1, -1, -1, -1);\n"
+      "value": "select \r\n     ifnull(tb1.businessdate,'合计'),\r\n     outletname,\r\n     ifnull (tb1.periodtypename,'小计'),\r\n     checkqty,\r\n     guestqty,\r\n     tableqty,\r\n     shangzuolv,\r\n     saleamt,\r\n     checkdiscountamt,\r\n     scamt,\r\n     taxamt,\r\n     roundamt,\r\n     salevalue,\r\n     payamt,\r\n     salecheck,\r\n     saleguest\r\n\r\nfrom (\r\nselect \r\n      concat(year(a.BusinessDate),'年',month(a.BusinessDate),'月',day(a.BusinessDate),'日') as businessdate,\r\n      c.OutletName as outletname,\r\n      \r\n      e.PeriodTypeName as periodtypename,\r\n      sum(a.CheckQty) as checkqty,\r\n      sum(a.GuestQty) as guestqty,\r\n\r\n      sum(c.TableQty) as tableqty,\r\n      case when sum(c.TableQty) = 0 then '0.00'\r\n               when sum(c.TableQty) = null then '0.00'\r\n    \t  else concat(round(sum(a.CheckQty)/sum(c.TableQty)* 100,1),'%') end as 'shangzuolv',\r\n\r\n      format(sum(a.SaleAmt),2) as saleamt,\r\n      format(sum(a.CheckDiscountAmt),2) as checkdiscountamt,\r\n      format(sum(a.SCAmt),2) as scamt,\r\n      format(sum(a.TaxAmt),2) as taxamt,\r\n      format(sum(a.RoundAmt),2) as roundamt,\r\n      format((sum(a.SaleAmt)+sum(a.CheckDiscountAmt)-sum(a.SCAmt)+sum(a.RoundAmt)),2) as salevalue,\r\n      format(sum(a.PayAmt),2) as payamt,\r\n      \r\n      case when sum(a.CheckQty) = 0 then '0.00'\r\n      when sum(a.CheckQty) = null then '0.00'\r\n      else format((sum(a.SaleAmt)/sum(a.CheckQty)),2) end as salecheck,    \r\n\r\n\r\n      case when sum(a.GuestQty) = 0 then '0.00'\r\n      when sum(a.GuestQty) = null then '0.00'\r\n      else format((sum(a.SaleAmt)/sum(a.GuestQty)),2) end as saleguest\r\nfrom fact_sumcheck a \r\ninner join dim_bidate b on a.BIDateId = b.BIDateId\r\ninner join dim_outlet c on a.OutletId_t = c.OutletId_t\r\n\r\ninner join dim_periodtype e on a.PeriodTypeId = e.PeriodTypeId\r\n\r\ninner join dim_brand  f on c.BrandId = f.BrandId\r\ninner join dim_area g on c.AreaId = g.AreaId\r\ninner join dim_place h on c.PlaceId = h.PlaceId\r\n\r\n\r\n\r\ngroup by businessdate,e.PeriodTypeName  with rollup ) tb1\r\n"
      },
      {
       "name": "parameters",

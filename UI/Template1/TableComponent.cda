@@ -4,6 +4,9 @@
       <Connection id="GaugeEchartsQuery" type="sql.jndi">
          <Jndi>jdbc_bi</Jndi>
       </Connection>
+      <Connection id="TableQuery_new" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
       <Connection id="TableQuery" type="sql.jndi">
          <Jndi>jdbc_bi</Jndi>
       </Connection>
@@ -29,12 +32,79 @@ FROM
      INNER JOIN `dim_area` ON `fact_sumday`.`AreaId` = `dim_area`.`AreaId`
      INNER JOIN `dim_brand` ON `dim_outlet`.`BrandId` = `dim_brand`.`BrandId`]]></Query>
    </DataAccess>
+   <DataAccess access="public" connection="TableQuery_new" id="TableQuery_new" type="sql">
+      <Name>TableQuery_new</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[CALL P_DAILY_BUSINESS_PROFILE('2017-01-17', '2017-06-01', -1, -1, -1, -1, -1, -1, -1);]]></Query>
+   </DataAccess>
    <DataAccess access="public" connection="TableQuery" id="TableQuery" type="sql">
       <Name>TableQuery</Name>
       <Cache duration="3600" enabled="true"/>
       <Columns/>
       <Parameters/>
-      <Query><![CDATA[CALL P_DAILY_BUSINESS_PROFILE('2017-01-17', '2017-06-01', -1, -1, -1, -1, -1, -1, -1);]]></Query>
+      <Query><![CDATA[select 
+     ifnull(tb1.businessdate,'合计'),
+     outletname,
+     ifnull (tb1.periodtypename,'小计'),
+     checkqty,
+     guestqty,
+     tableqty,
+     shangzuolv,
+     saleamt,
+     checkdiscountamt,
+     scamt,
+     taxamt,
+     roundamt,
+     salevalue,
+     payamt,
+     salecheck,
+     saleguest
+
+from (
+select 
+      concat(year(a.BusinessDate),'年',month(a.BusinessDate),'月',day(a.BusinessDate),'日') as businessdate,
+      c.OutletName as outletname,
+      
+      e.PeriodTypeName as periodtypename,
+      sum(a.CheckQty) as checkqty,
+      sum(a.GuestQty) as guestqty,
+
+      sum(c.TableQty) as tableqty,
+      case when sum(c.TableQty) = 0 then '0.00'
+               when sum(c.TableQty) = null then '0.00'
+    	  else concat(round(sum(a.CheckQty)/sum(c.TableQty)* 100,1),'%') end as 'shangzuolv',
+
+      format(sum(a.SaleAmt),2) as saleamt,
+      format(sum(a.CheckDiscountAmt),2) as checkdiscountamt,
+      format(sum(a.SCAmt),2) as scamt,
+      format(sum(a.TaxAmt),2) as taxamt,
+      format(sum(a.RoundAmt),2) as roundamt,
+      format((sum(a.SaleAmt)+sum(a.CheckDiscountAmt)-sum(a.SCAmt)+sum(a.RoundAmt)),2) as salevalue,
+      format(sum(a.PayAmt),2) as payamt,
+      
+      case when sum(a.CheckQty) = 0 then '0.00'
+      when sum(a.CheckQty) = null then '0.00'
+      else format((sum(a.SaleAmt)/sum(a.CheckQty)),2) end as salecheck,    
+
+
+      case when sum(a.GuestQty) = 0 then '0.00'
+      when sum(a.GuestQty) = null then '0.00'
+      else format((sum(a.SaleAmt)/sum(a.GuestQty)),2) end as saleguest
+from fact_sumcheck a 
+inner join dim_bidate b on a.BIDateId = b.BIDateId
+inner join dim_outlet c on a.OutletId_t = c.OutletId_t
+
+inner join dim_periodtype e on a.PeriodTypeId = e.PeriodTypeId
+
+inner join dim_brand  f on c.BrandId = f.BrandId
+inner join dim_area g on c.AreaId = g.AreaId
+inner join dim_place h on c.PlaceId = h.PlaceId
+
+
+
+group by businessdate,e.PeriodTypeName  with rollup ) tb1]]></Query>
    </DataAccess>
    <DataAccess access="public" connection="TableQuery_v2" id="TableQuery_v2" type="sql">
       <Name>TableQuery_v2</Name>

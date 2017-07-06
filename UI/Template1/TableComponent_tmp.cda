@@ -1,15 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CDADescriptor>
    <DataSources>
+      <Connection id="GaugeEchartsQuery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
       <Connection id="TableQuery" type="sql.jndi">
          <Jndi>jdbc_bi</Jndi>
       </Connection>
+      <Connection id="TableQuery_v2" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
    </DataSources>
+   <DataAccess access="public" connection="GaugeEchartsQuery" id="GaugeEchartsQuery"
+               type="sql">
+      <Name>GaugeEchartsQuery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT
+    -1,
+    case when sum(`fact_sumday`.`BudgetSaleAmt`) = 0 then 100
+         when sum(`fact_sumday`.`BudgetSaleAmt`) = null then 100
+    else format(sum(`fact_sumday`.`SaleAmt`)/sum(`fact_sumday`.`BudgetSaleAmt`)*100,2) end AS peleterate
+FROM
+     `fact_sumday` INNER JOIN `dim_outlet` ON `fact_sumday`.`OutletId_t` = `dim_outlet`.`OutletId_t`
+     INNER JOIN `dim_bidate` ON `fact_sumday`.`BIDateId` = `dim_bidate`.`BIDateId`
+     INNER JOIN `dim_place` ON `fact_sumday`.`PlaceId` = `dim_place`.`PlaceId`
+     INNER JOIN `dim_area` ON `fact_sumday`.`AreaId` = `dim_area`.`AreaId`
+     INNER JOIN `dim_brand` ON `dim_outlet`.`BrandId` = `dim_brand`.`BrandId`]]></Query>
+   </DataAccess>
    <DataAccess access="public" connection="TableQuery" id="TableQuery" type="sql">
       <Name>TableQuery</Name>
       <Cache duration="3600" enabled="true"/>
       <Columns/>
       <Parameters/>
       <Query><![CDATA[CALL P_DAILY_BUSINESS_PROFILE('2017-01-17', '2017-06-01', -1, -1, -1, -1, -1, -1, -1);]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="TableQuery_v2" id="TableQuery_v2" type="sql">
+      <Name>TableQuery_v2</Name>
+      <Cache duration="3600" enabled="false"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="startDay" name="startDay" type="String"/>
+         <Parameter default="endDay" name="endDay" type="String"/>
+      </Parameters>
+      <Query><![CDATA[CALL P_DAILY_DATA_TRACKING(${startDay}, ${endDay}, 1, -1, -1, -1, -1, -1, -1);]]></Query>
    </DataAccess>
 </CDADescriptor>

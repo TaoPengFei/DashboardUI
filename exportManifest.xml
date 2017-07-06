@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:ExportManifest xmlns:ns2="http://www.pentaho.com/schema/">
-    <ExportManifestInformation exportDate="18-06-2017 10:59:13 GMT+08:00" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
+    <ExportManifestInformation exportDate="06-07-2017 05:20:24 GMT+08:00" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
     <ExportManifestEntity path="UI">
         <ExportManifestProperty>
             <EntityMetaData name="UI" createdDate="2017-06-06T23:15:18.346+08:00" isFolder="true" path="UI" isHidden="false" locale="zh_CN" title="UI"/>
@@ -52,6 +52,18 @@
     <ExportManifestEntity path="UI/BDP/FinancialController/FinancialController.cdfde">
         <ExportManifestProperty>
             <EntityMetaData name="FinancialController.cdfde" createdDate="2017-06-14T13:49:35.348+08:00" isFolder="false" path="UI/BDP/FinancialController/FinancialController.cdfde" isHidden="false" locale="zh_CN" title="FinancialController"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/BDP/FinancialController/FinancialController.min.css">
+        <ExportManifestProperty>
+            <EntityMetaData name="FinancialController.min.css" createdDate="2017-06-18T14:04:26.545+08:00" isFolder="false" path="UI/BDP/FinancialController/FinancialController.min.css" isHidden="true" locale="zh_CN" title="FinancialController.min"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -169,6 +181,18 @@
             </EntityAcl>
         </ExportManifestProperty>
     </ExportManifestEntity>
+    <ExportManifestEntity path="UI/BDP/OperationsDirector/OperationsDirector.min.css">
+        <ExportManifestProperty>
+            <EntityMetaData name="OperationsDirector.min.css" createdDate="2017-06-18T14:07:12.110+08:00" isFolder="false" path="UI/BDP/OperationsDirector/OperationsDirector.min.css" isHidden="true" locale="zh_CN" title="OperationsDirector.min"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
     <ExportManifestEntity path="UI/BDP/OperationsDirector/OperationsDirector.wcdf">
         <ExportManifestProperty>
             <EntityMetaData name="OperationsDirector.wcdf" createdDate="2017-06-14T13:46:40.544+08:00" isFolder="false" path="UI/BDP/OperationsDirector/OperationsDirector.wcdf" isHidden="false" locale="zh_CN" title="OperationsDirector"/>
@@ -232,6 +256,162 @@
     <ExportManifestEntity path="UI/BDP/StoreOperation/StoreOperation.wcdf">
         <ExportManifestProperty>
             <EntityMetaData name="StoreOperation.wcdf" createdDate="2017-06-14T13:43:50.043+08:00" isFolder="false" path="UI/BDP/StoreOperation/StoreOperation.wcdf" isHidden="false" locale="zh_CN" title="StoreOperation"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/BDP/demo">
+        <ExportManifestProperty>
+            <EntityMetaData name="demo" createdDate="2017-06-18T14:40:35.477+08:00" isFolder="true" path="UI/BDP/demo" isHidden="false" locale="zh_CN" title="demo"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/BDP/demo/StoreOperation.cda">
+        <ExportManifestProperty>
+            <EntityMetaData name="StoreOperation.cda" createdDate="2017-06-18T14:40:47.827+08:00" isFolder="false" path="UI/BDP/demo/StoreOperation.cda" isHidden="false" locale="zh_CN" title="StoreOperation"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/BDP/demo/StoreOperation.cdfde">
+        <ExportManifestProperty>
+            <EntityMetaData name="StoreOperation.cdfde" createdDate="2017-06-18T14:40:47.893+08:00" isFolder="false" path="UI/BDP/demo/StoreOperation.cdfde" isHidden="false" locale="zh_CN" title="StoreOperation"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/BDP/demo/StoreOperation.min.css">
+        <ExportManifestProperty>
+            <EntityMetaData name="StoreOperation.min.css" createdDate="2017-06-18T14:40:48.216+08:00" isFolder="false" path="UI/BDP/demo/StoreOperation.min.css" isHidden="true" locale="zh_CN" title="StoreOperation.min"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/BDP/demo/StoreOperation.wcdf">
+        <ExportManifestProperty>
+            <EntityMetaData name="StoreOperation.wcdf" createdDate="2017-06-18T14:40:47.685+08:00" isFolder="false" path="UI/BDP/demo/StoreOperation.wcdf" isHidden="false" locale="zh_CN" title="StoreOperation"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/BDP/demo/jquery.mCustomScrollbar.concat.min.js">
+        <ExportManifestProperty>
+            <EntityMetaData name="jquery.mCustomScrollbar.concat.min.js" createdDate="2017-06-18T15:22:03.138+08:00" isFolder="false" path="UI/BDP/demo/jquery.mCustomScrollbar.concat.min.js" isHidden="true" locale="zh_CN" title="jquery.mCustomScrollbar.concat.min"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/D3">
+        <ExportManifestProperty>
+            <EntityMetaData name="D3" createdDate="2017-07-06T10:19:45.525+08:00" isFolder="true" path="UI/D3" isHidden="false" locale="zh_CN" title="D3"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/D3/BarChart">
+        <ExportManifestProperty>
+            <EntityMetaData name="BarChart" createdDate="2017-07-06T10:25:31.186+08:00" isFolder="true" path="UI/D3/BarChart" isHidden="false" locale="zh_CN" title="BarChart"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/D3/LineChart">
+        <ExportManifestProperty>
+            <EntityMetaData name="LineChart" createdDate="2017-07-06T10:25:18.159+08:00" isFolder="true" path="UI/D3/LineChart" isHidden="false" locale="zh_CN" title="LineChart"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/D3/PieChart">
+        <ExportManifestProperty>
+            <EntityMetaData name="PieChart" createdDate="2017-07-06T10:20:09.769+08:00" isFolder="true" path="UI/D3/PieChart" isHidden="false" locale="zh_CN" title="PieChart"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/D3/PieChart/pie1.cda">
+        <ExportManifestProperty>
+            <EntityMetaData name="pie1.cda" createdDate="2017-07-06T10:49:00.294+08:00" isFolder="false" path="UI/D3/PieChart/pie1.cda" isHidden="false" locale="zh_CN" title="pie1.cda"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/D3/PieChart/pie1.cdfde">
+        <ExportManifestProperty>
+            <EntityMetaData name="pie1.cdfde" createdDate="2017-07-06T10:22:22.658+08:00" isFolder="false" path="UI/D3/PieChart/pie1.cdfde" isHidden="false" locale="zh_CN" title="pie1.cdfde"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/D3/PieChart/pie1.wcdf">
+        <ExportManifestProperty>
+            <EntityMetaData name="pie1.wcdf" createdDate="2017-07-06T10:22:22.553+08:00" isFolder="false" path="UI/D3/PieChart/pie1.wcdf" isHidden="false" locale="zh_CN" description="饼状图样例一" title="饼状图样例一"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -460,6 +640,42 @@
     <ExportManifestEntity path="UI/Template1/TableComponent.wcdf">
         <ExportManifestProperty>
             <EntityMetaData name="TableComponent.wcdf" createdDate="2017-06-06T23:15:21.369+08:00" isFolder="false" path="UI/Template1/TableComponent.wcdf" isHidden="false" locale="zh_CN" title="TableComponent"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/Template1/TableComponent_tmp.cda">
+        <ExportManifestProperty>
+            <EntityMetaData name="TableComponent_tmp.cda" createdDate="2017-06-21T17:46:19.997+08:00" isFolder="false" path="UI/Template1/TableComponent_tmp.cda" isHidden="false" locale="zh_CN" title="TableComponent_tmp.cda"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/Template1/TableComponent_tmp.cdfde">
+        <ExportManifestProperty>
+            <EntityMetaData name="TableComponent_tmp.cdfde" createdDate="2017-06-21T17:46:19.886+08:00" isFolder="false" path="UI/Template1/TableComponent_tmp.cdfde" isHidden="false" locale="zh_CN" title="TableComponent_tmp.cdfde"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/Template1/TableComponent_tmp.wcdf">
+        <ExportManifestProperty>
+            <EntityMetaData name="TableComponent_tmp.wcdf" createdDate="2017-06-21T17:46:19.854+08:00" isFolder="false" path="UI/Template1/TableComponent_tmp.wcdf" isHidden="false" locale="zh_CN" title="TableComponent_tmp.wcdf"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -1201,6 +1417,114 @@
             </EntityAcl>
         </ExportManifestProperty>
     </ExportManifestEntity>
+    <ExportManifestEntity path="UI/css/BDP">
+        <ExportManifestProperty>
+            <EntityMetaData name="BDP" createdDate="2017-06-16T09:55:03.608+08:00" isFolder="true" path="UI/css/BDP" isHidden="false" locale="zh_CN" title="BDP"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/css/BDP/FinancialController.css">
+        <ExportManifestProperty>
+            <EntityMetaData name="FinancialController.css" createdDate="2017-06-18T14:11:11.709+08:00" isFolder="false" path="UI/css/BDP/FinancialController.css" isHidden="true" locale="zh_CN" title="FinancialController"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/css/BDP/FinancialController.min.css">
+        <ExportManifestProperty>
+            <EntityMetaData name="FinancialController.min.css" createdDate="2017-06-18T14:11:24.021+08:00" isFolder="false" path="UI/css/BDP/FinancialController.min.css" isHidden="true" locale="zh_CN" title="FinancialController.min"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/css/BDP/GeneralManager.css">
+        <ExportManifestProperty>
+            <EntityMetaData name="GeneralManager.css" createdDate="2017-06-18T14:11:32.073+08:00" isFolder="false" path="UI/css/BDP/GeneralManager.css" isHidden="true" locale="zh_CN" title="GeneralManager"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/css/BDP/GeneralManager.min.css">
+        <ExportManifestProperty>
+            <EntityMetaData name="GeneralManager.min.css" createdDate="2017-06-18T14:11:40.907+08:00" isFolder="false" path="UI/css/BDP/GeneralManager.min.css" isHidden="true" locale="zh_CN" title="GeneralManager.min"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/css/BDP/OperationsDirector.css">
+        <ExportManifestProperty>
+            <EntityMetaData name="OperationsDirector.css" createdDate="2017-06-18T14:11:51.239+08:00" isFolder="false" path="UI/css/BDP/OperationsDirector.css" isHidden="true" locale="zh_CN" title="OperationsDirector"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/css/BDP/OperationsDirector.min.css">
+        <ExportManifestProperty>
+            <EntityMetaData name="OperationsDirector.min.css" createdDate="2017-06-18T14:11:59.596+08:00" isFolder="false" path="UI/css/BDP/OperationsDirector.min.css" isHidden="true" locale="zh_CN" title="OperationsDirector.min"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/css/BDP/StoreOperation.css">
+        <ExportManifestProperty>
+            <EntityMetaData name="StoreOperation.css" createdDate="2017-06-16T09:58:06.392+08:00" isFolder="false" path="UI/css/BDP/StoreOperation.css" isHidden="true" locale="zh_CN" title="StoreOperation"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/css/BDP/StoreOperation.min.css">
+        <ExportManifestProperty>
+            <EntityMetaData name="StoreOperation.min.css" createdDate="2017-06-16T09:59:46.657+08:00" isFolder="false" path="UI/css/BDP/StoreOperation.min.css" isHidden="true" locale="zh_CN" title="StoreOperation.min"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
     <ExportManifestEntity path="UI/css/Protovis">
         <ExportManifestProperty>
             <EntityMetaData name="Protovis" createdDate="2017-06-16T09:56:04.804+08:00" isFolder="true" path="UI/css/Protovis" isHidden="false" locale="zh_CN" title="Protovis"/>
@@ -1252,42 +1576,6 @@
     <ExportManifestEntity path="UI/css/Protovis/trendArrow.css">
         <ExportManifestProperty>
             <EntityMetaData name="trendArrow.css" createdDate="2017-06-16T09:56:50.928+08:00" isFolder="false" path="UI/css/Protovis/trendArrow.css" isHidden="true" locale="zh_CN" title="trendArrow"/>
-        </ExportManifestProperty>
-        <ExportManifestProperty>
-            <EntityAcl>
-                <entriesInheriting>true</entriesInheriting>
-                <owner>admin</owner>
-                <ownerType>USER</ownerType>
-            </EntityAcl>
-        </ExportManifestProperty>
-    </ExportManifestEntity>
-    <ExportManifestEntity path="UI/css/StoreOperation">
-        <ExportManifestProperty>
-            <EntityMetaData name="StoreOperation" createdDate="2017-06-16T09:55:03.608+08:00" isFolder="true" path="UI/css/StoreOperation" isHidden="false" locale="zh_CN" title="StoreOperation"/>
-        </ExportManifestProperty>
-        <ExportManifestProperty>
-            <EntityAcl>
-                <entriesInheriting>true</entriesInheriting>
-                <owner>admin</owner>
-                <ownerType>USER</ownerType>
-            </EntityAcl>
-        </ExportManifestProperty>
-    </ExportManifestEntity>
-    <ExportManifestEntity path="UI/css/StoreOperation/StoreOperation.css">
-        <ExportManifestProperty>
-            <EntityMetaData name="StoreOperation.css" createdDate="2017-06-16T09:58:06.392+08:00" isFolder="false" path="UI/css/StoreOperation/StoreOperation.css" isHidden="true" locale="zh_CN" title="StoreOperation"/>
-        </ExportManifestProperty>
-        <ExportManifestProperty>
-            <EntityAcl>
-                <entriesInheriting>true</entriesInheriting>
-                <owner>admin</owner>
-                <ownerType>USER</ownerType>
-            </EntityAcl>
-        </ExportManifestProperty>
-    </ExportManifestEntity>
-    <ExportManifestEntity path="UI/css/StoreOperation/StoreOperation.min.css">
-        <ExportManifestProperty>
-            <EntityMetaData name="StoreOperation.min.css" createdDate="2017-06-16T09:59:46.657+08:00" isFolder="false" path="UI/css/StoreOperation/StoreOperation.min.css" isHidden="true" locale="zh_CN" title="StoreOperation.min"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
@@ -1513,6 +1801,30 @@
             </EntityAcl>
         </ExportManifestProperty>
     </ExportManifestEntity>
+    <ExportManifestEntity path="UI/js/D3.4.9.1/d3pie.js">
+        <ExportManifestProperty>
+            <EntityMetaData name="d3pie.js" createdDate="2017-07-06T10:12:08.796+08:00" isFolder="false" path="UI/js/D3.4.9.1/d3pie.js" isHidden="true" locale="zh_CN" title="d3pie"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/js/D3.4.9.1/d3pie.min.js">
+        <ExportManifestProperty>
+            <EntityMetaData name="d3pie.min.js" createdDate="2017-07-06T10:12:25.588+08:00" isFolder="false" path="UI/js/D3.4.9.1/d3pie.min.js" isHidden="true" locale="zh_CN" title="d3pie.min"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
     <ExportManifestEntity path="UI/js/Echarts3.6.0">
         <ExportManifestProperty>
             <EntityMetaData name="Echarts3.6.0" createdDate="2017-06-06T23:15:28.595+08:00" isFolder="true" path="UI/js/Echarts3.6.0" isHidden="false" locale="zh_CN" title="Echarts3.6.0"/>
@@ -1564,6 +1876,30 @@
     <ExportManifestEntity path="UI/js/Echarts3.6.0/echarts.min.js">
         <ExportManifestProperty>
             <EntityMetaData name="echarts.min.js" createdDate="2017-06-06T23:15:28.782+08:00" isFolder="false" path="UI/js/Echarts3.6.0/echarts.min.js" isHidden="true" locale="zh_CN" title="echarts.min"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/js/Echarts3.6.0/echarts_3_6_2.js">
+        <ExportManifestProperty>
+            <EntityMetaData name="echarts_3_6_2.js" createdDate="2017-07-06T10:17:14.734+08:00" isFolder="false" path="UI/js/Echarts3.6.0/echarts_3_6_2.js" isHidden="true" locale="zh_CN" title="echarts_3_6_2"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/js/Echarts3.6.0/echarts_3_6_2.min.js">
+        <ExportManifestProperty>
+            <EntityMetaData name="echarts_3_6_2.min.js" createdDate="2017-07-06T10:17:25.219+08:00" isFolder="false" path="UI/js/Echarts3.6.0/echarts_3_6_2.min.js" isHidden="true" locale="zh_CN" title="echarts_3_6_2.min"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>

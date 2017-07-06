@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="pie1" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" connection="pie1" id="pie1" type="sql">
+      <Name>pie1</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT
+    IdName,
+    GuestQty
+FROM
+(
+    SELECT 
+			IdName,
+			IdName_en,
+			GuestQty
+	FROM
+			(
+				SELECT
+					 sum(`Fact_SumDay`.`CheckQty`) AS CheckQty,
+					 sum(`Fact_SumDay`.`GuestQty`) AS GuestQty
+			FROM
+                 `fact_sumday` INNER JOIN `dim_outlet` ON `fact_sumday`.`OutletId_t` = `dim_outlet`.`OutletId_t`
+                 INNER JOIN `dim_bidate` ON `fact_sumday`.`BIDateId` = `dim_bidate`.`BIDateId`
+                 INNER JOIN `dim_place` ON `fact_sumday`.`PlaceId` = `dim_place`.`PlaceId`
+                 INNER JOIN `dim_area` ON `fact_sumday`.`AreaId` = `dim_area`.`AreaId`
+                 INNER JOIN `dim_brand` ON `dim_outlet`.`BrandId` = `dim_brand`.`BrandId`
+			)AS tbl JOIN SY_SaleName WHERE SY_SaleName.Id IN (4)
+) AS B
+UNION ALL
+SELECT
+    IdName,
+        CheckQty
+FROM
+(
+	SELECT 
+			IdName,
+			IdName_en,
+			CheckQty
+	FROM
+			(
+				SELECT
+					 sum(`Fact_SumDay`.`CheckQty`) AS CheckQty,
+					 sum(`Fact_SumDay`.`GuestQty`) AS GuestQty
+                FROM
+    			     `fact_sumday` INNER JOIN `dim_outlet` ON `fact_sumday`.`OutletId_t` = `dim_outlet`.`OutletId_t`
+                     INNER JOIN `dim_bidate` ON `fact_sumday`.`BIDateId` = `dim_bidate`.`BIDateId`
+                     INNER JOIN `dim_place` ON `fact_sumday`.`PlaceId` = `dim_place`.`PlaceId`
+                     INNER JOIN `dim_area` ON `fact_sumday`.`AreaId` = `dim_area`.`AreaId`
+                     INNER JOIN `dim_brand` ON `dim_outlet`.`BrandId` = `dim_brand`.`BrandId`
+			)AS tbl JOIN SY_SaleName WHERE SY_SaleName.Id IN (3)
+) AS A]]></Query>
+   </DataAccess>
+</CDADescriptor>

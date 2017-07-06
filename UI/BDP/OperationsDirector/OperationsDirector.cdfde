@@ -17164,18 +17164,41 @@
  "layout": {
   "rows": [
    {
+    "id": "9ca7b848-4d26-05d1-ec0f-f37e65861594",
+    "type": "LayoutResourceFile",
+    "typeDesc": "Resource",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "OperationsDirectorJS",
+      "type": "Id"
+     },
+     {
+      "name": "resourceFile",
+      "value": "${solution:OperationsDirector.min.css}",
+      "type": "ResourceFile"
+     },
+     {
+      "name": "resourceType",
+      "value": "Css",
+      "type": "Label"
+     }
+    ]
+   },
+   {
     "id": "b67d2c68-39fc-42c3-3eb6-b86c7a913abc",
     "parent": "UnIqEiD",
     "properties": [
      {
       "name": "name",
       "type": "Id",
-      "value": "css"
+      "value": "CustomCSS"
      },
      {
       "name": "resourceCode",
       "type": "Resource",
-      "value": "@font-face{\r\n    font-family: TPF_Font_Thin;\r\n    src: url('/pentaho/BI/fonts/Comfortaa_Thin.ttf'),\r\n         url('/pentaho/BI/fonts/Comfortaa_Thin.eot');  /* IE9 */ \r\n}\r\nbody{\r\n    background-color:#E7EBED;\r\n}\r\n.container {\r\n    width:100%;\r\n    height: 100%;\r\n    overflow: auto;\r\n    position: absolute; \r\n    padding-top: 10px;\r\n    padding-right: 0px;\r\n    padding-left: 10px;\r\n    padding-bottom: 10px;\r\n    margin-right: auto;\r\n    margin-left: auto;\r\n}\r\n/*   #   */\r\n.panel-default {\r\n    border: none;\r\n    border-radius: 0px;\r\n    margin-bottom: 0px;\r\n    box-shadow: none;\r\n    -webkit-box-shadow: none;\r\n}\r\n.panel-heading {\r\n    /*\r\n    padding: 10px 15px;\r\n    */\r\n    padding: 0px 0px;\r\n    border-bottom: 0px solid transparent;\r\n    border-top-left-radius: 3px;\r\n    border-top-right-radius: 3px;\r\n}\r\n.panel-default > .panel-heading {\r\n    color: #777;\r\n    background-color: #fff;\r\n    border-color: #e6e6e6;\r\n    padding: 10px 10px;\r\n}\r\n.panel-default > .panel-body {\r\n    padding: 10px;\r\n    padding-bottom: 0px;\r\n}\r\n.panel-default > .panel-body ul {\r\n    overflow: hidden;\r\n    padding: 0;\r\n    margin: 0px;\r\n    margin-top: -5px;\r\n}\r\n.panel-default > .panel-body ul li {\r\n    line-height: 27px;\r\n    list-style-type: none;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n}\r\n.panel-default > .panel-body ul li .time {\r\n    color: #a1a1a1;\r\n    float: right;\r\n    padding-right: 5px;\r\n} \r\n.single {\r\n    cursor: pointer;\r\n    border: 1px solid #eee;\r\n    border-radius: 0px;\r\n    text-align: center;\r\n    \r\n    padding: 10px;\r\n    padding-top: 10px;\r\n    padding-right: 10px;\r\n    margin-bottom: 10px;\r\n    \r\n} \r\n\r\n .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, \r\n .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, \r\n .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, \r\n .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, \r\n .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, \r\n .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, \r\n .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, \r\n .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, \r\n .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, \r\n .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, \r\n .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, \r\n .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {\r\n    position: relative;\r\n    min-height: 1px;\r\n    padding-right: 10px;\r\n    padding-left: 0px;\r\n} \r\n.row {\r\n    margin-right: 0px;\r\n    margin-left: 0px;\r\n} \r\n\r\nhr {\r\n    margin-top: 10px; \r\n    margin-bottom: 0px; \r\n    border: 0;\r\n    border-top: 0px solid #eee; \r\n} \r\n#dateRangePickerDom > input {\r\n    height: 22px;\r\n    border-radius:4px;\r\n    cursor:pointer;\r\n    border:1px solid #DBDBDB;\r\n}\r\n#row0{\r\n    padding-top:10px;\r\n}\r\n#row1_col1, #row2_col1{\r\n    margin-right:-10px;\r\n} \r\n#saleAmtDom_KPI, #ATVDom_KPI, #discountDom_KPI, \r\n#overTableVDom_KPI, #backItemDom_KPI, #rushItamDom_KPI {\r\n    color:#666666;\r\n    font-size:40px;\r\n    font-weight:lighter;\r\n    font-family:TPF_Font_Thin;\r\n} \r\n\r\n/**************************浮动**************************/\r\n.floatPanel {\r\n    cursor: pointer;\r\n    border: 1px solid #eee;\r\n    border-radius: 0px;\r\n    \r\n    /*\r\n    text-align: center;\r\n    padding: 10px;\r\n    padding-top: 10px;\r\n    padding-right: 10px;\r\n    margin-bottom: 10px;\r\n    */\r\n} \r\n.floatPanel:hover, .single.selected:hover {\r\n    -webkit-box-shadow: 0px 0px 35px -8px rgba(0,0,0,0.5);\r\n    -moz-box-shadow: 0px 0px 35px -8px rgba(0,0,0,0.5);\r\n    box-shadow: 0px 0px 35px -8px rgba(0,0,0,0.5);\r\n    \r\n    /*\r\n    border: 1px solid #49AEC0;\r\n    border: 1px solid #49AEC0;\r\n    background-color: rgba(240, 240, 240, 0.8);  rgba(0,0,0,0.5);\r\n    */\r\n}\r\n.floatPanel.selected {\r\n    background-color: rgba(240, 240, 240, 0.4);\r\n} "
+      "value": "#dateRangePickerDom > input {\r\n    height: 22px;\r\n    border-radius:4px;\r\n    cursor:pointer;\r\n    border:1px solid #DBDBDB;\r\n}\r\n#row0{\r\n    padding-top:10px;\r\n}\r\n#row1_col1, #row2_col1{\r\n    margin-right:-10px;\r\n} \r\n#saleAmtDom_KPI, #ATVDom_KPI, #discountDom_KPI, \r\n#overTableVDom_KPI, #backItemDom_KPI, #rushItamDom_KPI {\r\n    color:#666666;\r\n    font-size:40px;\r\n    font-weight:lighter;\r\n    font-family:TPF_Font_Thin;\r\n} \r\n "
      },
      {
       "name": "resourceType",
