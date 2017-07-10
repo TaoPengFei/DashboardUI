@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="bubbleQuery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" connection="bubbleQuery" id="bubbleQuery" type="sql">
+      <Name>bubbleQuery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT
+    `dim_voidresontype`.`VoidReasonName`,
+     COUNT(*)
+FROM
+    `fact_checkitemdel` INNER JOIN `dim_voidresontype` ON `fact_checkitemdel`.`VoidReasonId` = `dim_voidresontype`.`VoidReasonId`
+    INNER JOIN `dim_bidate` ON `fact_checkitemdel`.`BIDateId` = `dim_bidate`.`BIDateId`
+    INNER JOIN Dim_Outlet ON fact_checkitemdel.OutletId_t = Dim_Outlet.OutletId_t
+    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`
+    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId
+    INNER JOIN `Dim_Place` ON `Dim_Outlet`.`PlaceId` = `Dim_Place`.`PlaceId`
+GROUP BY 
+    `dim_voidresontype`.`VoidReasonName`]]></Query>
+   </DataAccess>
+</CDADescriptor>

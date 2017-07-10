@@ -1,0 +1,694 @@
+{
+ "components": {
+  "rows": []
+ },
+ "datasources": {
+  "rows": [
+   {
+    "id": "SQL",
+    "name": "SQL Queries",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "type": "Label",
+      "value": "SQL Queries"
+     }
+    ],
+    "type": "Label",
+    "typeDesc": "<i>Group</i>"
+   },
+   {
+    "id": "019cdbf5-fa30-f26e-e0f7-6bcaea0565d8",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "bubbleQuery"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "SELECT\r\n    `dim_voidresontype`.`VoidReasonName`,\r\n     COUNT(*)\r\nFROM\r\n    `fact_checkitemdel` INNER JOIN `dim_voidresontype` ON `fact_checkitemdel`.`VoidReasonId` = `dim_voidresontype`.`VoidReasonId`\r\n    INNER JOIN `dim_bidate` ON `fact_checkitemdel`.`BIDateId` = `dim_bidate`.`BIDateId`\r\n    INNER JOIN Dim_Outlet ON fact_checkitemdel.OutletId_t = Dim_Outlet.OutletId_t\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Dim_Area ON Dim_Area.AreaId = Dim_Outlet.AreaId\r\n    INNER JOIN `Dim_Place` ON `Dim_Outlet`.`PlaceId` = `Dim_Place`.`PlaceId`\r\nGROUP BY \r\n    `dim_voidresontype`.`VoidReasonName`"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   }
+  ]
+ },
+ "filename": "/public/UI/D3/BubbleChart/BubbleChart1.cdfde",
+ "layout": {
+  "rows": [
+   {
+    "id": "07f96522-73c4-7ffd-0c09-d0d1a4c23ec9",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "css"
+     },
+     {
+      "name": "resourceCode",
+      "type": "Resource",
+      "value": "/* cyrillic-ext */\r\n@font-face {\r\n  font-family: 'Source Sans Pro';\r\n  font-style: normal;\r\n  font-weight: 200;\r\n  src: local('Source Sans Pro ExtraLight'), local('SourceSansPro-ExtraLight'), url(http://fonts.gstatic.com/s/sourcesanspro/v10/toadOcfmlt9b38dHJxOBGMJ6fPWU5H7MdhTnvTFVd54.woff2) format('woff2');\r\n  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;\r\n}\r\n/* cyrillic */\r\n@font-face {\r\n  font-family: 'Source Sans Pro';\r\n  font-style: normal;\r\n  font-weight: 200;\r\n  src: local('Source Sans Pro ExtraLight'), local('SourceSansPro-ExtraLight'), url(http://fonts.gstatic.com/s/sourcesanspro/v10/toadOcfmlt9b38dHJxOBGPV7gHYckVAMlFogN5_WhpI.woff2) format('woff2');\r\n  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;\r\n}\r\n/* greek-ext */\r\n@font-face {\r\n  font-family: 'Source Sans Pro';\r\n  font-style: normal;\r\n  font-weight: 200;\r\n  src: local('Source Sans Pro ExtraLight'), local('SourceSansPro-ExtraLight'), url(http://fonts.gstatic.com/s/sourcesanspro/v10/toadOcfmlt9b38dHJxOBGL8t0EE5vbczr4Kc8p3NFJw.woff2) format('woff2');\r\n  unicode-range: U+1F00-1FFF;\r\n}\r\n/* greek */\r\n@font-face {\r\n  font-family: 'Source Sans Pro';\r\n  font-style: normal;\r\n  font-weight: 200;\r\n  src: local('Source Sans Pro ExtraLight'), local('SourceSansPro-ExtraLight'), url(http://fonts.gstatic.com/s/sourcesanspro/v10/toadOcfmlt9b38dHJxOBGEJ3bfWqB3YmW_z2mj_HbGU.woff2) format('woff2');\r\n  unicode-range: U+0370-03FF;\r\n}\r\n/* vietnamese */\r\n@font-face {\r\n  font-family: 'Source Sans Pro';\r\n  font-style: normal;\r\n  font-weight: 200;\r\n  src: local('Source Sans Pro ExtraLight'), local('SourceSansPro-ExtraLight'), url(http://fonts.gstatic.com/s/sourcesanspro/v10/toadOcfmlt9b38dHJxOBGAIasgMoEcVHo3r268QTaWo.woff2) format('woff2');\r\n  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;\r\n}\r\n/* latin-ext */\r\n@font-face {\r\n  font-family: 'Source Sans Pro';\r\n  font-style: normal;\r\n  font-weight: 200;\r\n  src: local('Source Sans Pro ExtraLight'), local('SourceSansPro-ExtraLight'), url(http://fonts.gstatic.com/s/sourcesanspro/v10/toadOcfmlt9b38dHJxOBGJCDkYQxybH_Rl7Qv7ee2N4.woff2) format('woff2');\r\n  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;\r\n}\r\n/* latin */\r\n@font-face {\r\n  font-family: 'Source Sans Pro';\r\n  font-style: normal;\r\n  font-weight: 200;\r\n  src: local('Source Sans Pro ExtraLight'), local('SourceSansPro-ExtraLight'), url(http://fonts.gstatic.com/s/sourcesanspro/v10/toadOcfmlt9b38dHJxOBGCVh0V6fR69OLaFLklYbiSk.woff2) format('woff2');\r\n  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;\r\n}\r\n/* cyrillic-ext */\r\n@font-face {\r\n  font-family: 'Source Sans Pro';\r\n  font-style: normal;\r\n  font-weight: 600;\r\n  src: local('Source Sans Pro SemiBold'), local('SourceSansPro-SemiBold'), url(http://fonts.gstatic.com/s/sourcesanspro/v10/toadOcfmlt9b38dHJxOBGAtXaCylRF0D-MaoYoCuiMM.woff2) format('woff2');\r\n  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;\r\n}\r\n/* cyrillic */\r\n@font-face {\r\n  font-family: 'Source Sans Pro';\r\n  font-style: normal;\r\n  font-weight: 600;\r\n  src: local('Source Sans Pro SemiBold'), local('SourceSansPro-SemiBold'), url(http://fonts.gstatic.com/s/sourcesanspro/v10/toadOcfmlt9b38dHJxOBGAAAU1WVAUWBSTvimZV06U4.woff2) format('woff2');\r\n  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;\r\n}\r\n/* greek-ext */\r\n@font-face {\r\n  font-family: 'Source Sans Pro';\r\n  font-style: normal;\r\n  font-weight: 600;\r\n  src: local('Source Sans Pro SemiBold'), local('SourceSansPro-SemiBold'), url(http://fonts.gstatic.com/s/sourcesanspro/v10/toadOcfmlt9b38dHJxOBGCJjduVyTEemf0kCvaihHEU.woff2) format('woff2');\r\n  unicode-range: U+1F00-1FFF;\r\n}\r\n/* greek */\r\n@font-face {\r\n  font-family: 'Source Sans Pro';\r\n  font-style: normal;\r\n  font-weight: 600;\r\n  src: local('Source Sans Pro SemiBold'), local('SourceSansPro-SemiBold'), url(http://fonts.gstatic.com/s/sourcesanspro/v10/toadOcfmlt9b38dHJxOBGFnEzh12mEKZN5amaOp7-V4.woff2) format('woff2');\r\n  unicode-range: U+0370-03FF;\r\n}\r\n/* vietnamese */\r\n@font-face {\r\n  font-family: 'Source Sans Pro';\r\n  font-style: normal;\r\n  font-weight: 600;\r\n  src: local('Source Sans Pro SemiBold'), local('SourceSansPro-SemiBold'), url(http://fonts.gstatic.com/s/sourcesanspro/v10/toadOcfmlt9b38dHJxOBGClYwVOhDRq2vbpGRTZ7bbs.woff2) format('woff2');\r\n  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;\r\n}\r\n/* latin-ext */\r\n@font-face {\r\n  font-family: 'Source Sans Pro';\r\n  font-style: normal;\r\n  font-weight: 600;\r\n  src: local('Source Sans Pro SemiBold'), local('SourceSansPro-SemiBold'), url(http://fonts.gstatic.com/s/sourcesanspro/v10/toadOcfmlt9b38dHJxOBGFKFh1TDTPrUZWzVp6FtpG8.woff2) format('woff2');\r\n  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;\r\n}\r\n/* latin */\r\n@font-face {\r\n  font-family: 'Source Sans Pro';\r\n  font-style: normal;\r\n  font-weight: 600;\r\n  src: local('Source Sans Pro SemiBold'), local('SourceSansPro-SemiBold'), url(http://fonts.gstatic.com/s/sourcesanspro/v10/toadOcfmlt9b38dHJxOBGCOFnW3Jk0f09zW_Yln67Ac.woff2) format('woff2');\r\n  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;\r\n}\r\n/* cyrillic-ext */\r\n@font-face {\r\n  font-family: 'Source Sans Pro';\r\n  font-style: italic;\r\n  font-weight: 200;\r\n  src: local('Source Sans Pro ExtraLight Italic'), local('SourceSansPro-ExtraLightItalic'), url(http://fonts.gstatic.com/s/sourcesanspro/v10/fpTVHK8qsXbIeTHTrnQH6IBvnCLabMsI_T5s64Iem4E.woff2) format('woff2');\r\n  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;\r\n}\r\n/* cyrillic */\r\n@font-face {\r\n  font-family: 'Source Sans Pro';\r\n  font-style: italic;\r\n  font-weight: 200;\r\n  src: local('Source Sans Pro ExtraLight Italic'), local('SourceSansPro-ExtraLightItalic'), url(http://fonts.gstatic.com/s/sourcesanspro/v10/fpTVHK8qsXbIeTHTrnQH6CL0T-cqKsEkGySQ312QKIo.woff2) format('woff2');\r\n  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;\r\n}\r\n/* greek-ext */\r\n@font-face {\r\n  font-family: 'Source Sans Pro';\r\n  font-style: italic;\r\n  font-weight: 200;\r\n  src: local('Source Sans Pro ExtraLight Italic'), local('SourceSansPro-ExtraLightItalic'), url(http://fonts.gstatic.com/s/sourcesanspro/v10/fpTVHK8qsXbIeTHTrnQH6Htblen0MPwECViskfOdtJs.woff2) format('woff2');\r\n  unicode-range: U+1F00-1FFF;\r\n}\r\n/* greek */\r\n@font-face {\r\n  font-family: 'Source Sans Pro';\r\n  font-style: italic;\r\n  font-weight: 200;\r\n  src: local('Source Sans Pro ExtraLight Italic'), local('SourceSansPro-ExtraLightItalic'), url(http://fonts.gstatic.com/s/sourcesanspro/v10/fpTVHK8qsXbIeTHTrnQH6MAgKYLVbwBiJChIrGybKQU.woff2) format('woff2');\r\n  unicode-range: U+0370-03FF;\r\n}\r\n/* vietnamese */\r\n@font-face {\r\n  font-family: 'Source Sans Pro';\r\n  font-style: italic;\r\n  font-weight: 200;\r\n  src: local('Source Sans Pro ExtraLight Italic'), local('SourceSansPro-ExtraLightItalic'), url(http://fonts.gstatic.com/s/sourcesanspro/v10/fpTVHK8qsXbIeTHTrnQH6Dx8cL9zsYYyxVMwatU85cQ.woff2) format('woff2');\r\n  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;\r\n}\r\n/* latin-ext */\r\n@font-face {\r\n  font-family: 'Source Sans Pro';\r\n  font-style: italic;\r\n  font-weight: 200;\r\n  src: local('Source Sans Pro ExtraLight Italic'), local('SourceSansPro-ExtraLightItalic'), url(http://fonts.gstatic.com/s/sourcesanspro/v10/fpTVHK8qsXbIeTHTrnQH6PCsapai9JN_dpv7KtlunNg.woff2) format('woff2');\r\n  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;\r\n}\r\n/* latin */\r\n@font-face {\r\n  font-family: 'Source Sans Pro';\r\n  font-style: italic;\r\n  font-weight: 200;\r\n  src: local('Source Sans Pro ExtraLight Italic'), local('SourceSansPro-ExtraLightItalic'), url(http://fonts.gstatic.com/s/sourcesanspro/v10/fpTVHK8qsXbIeTHTrnQH6GLvoADUPo08d8_TfMCzMpg.woff2) format('woff2');\r\n  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;\r\n}\r\n/* cyrillic-ext */\r\n@font-face {\r\n  font-family: 'Source Sans Pro';\r\n  font-style: italic;\r\n  font-weight: 600;\r\n  src: local('Source Sans Pro SemiBold Italic'), local('SourceSansPro-SemiBoldItalic'), url(http://fonts.gstatic.com/s/sourcesanspro/v10/fpTVHK8qsXbIeTHTrnQH6D-hdNnTbl1V6VvpazmHKgw.woff2) format('woff2');\r\n  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;\r\n}\r\n/* cyrillic */\r\n@font-face {\r\n  font-family: 'Source Sans Pro';\r\n  font-style: italic;\r\n  font-weight: 600;\r\n  src: local('Source Sans Pro SemiBold Italic'), local('SourceSansPro-SemiBoldItalic'), url(http://fonts.gstatic.com/s/sourcesanspro/v10/fpTVHK8qsXbIeTHTrnQH6F7VLtLNNCL-FCJB6DPpzG8.woff2) format('woff2');\r\n  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;\r\n}\r\n/* greek-ext */\r\n@font-face {\r\n  font-family: 'Source Sans Pro';\r\n  font-style: italic;\r\n  font-weight: 600;\r\n  src: local('Source Sans Pro SemiBold Italic'), local('SourceSansPro-SemiBoldItalic'), url(http://fonts.gstatic.com/s/sourcesanspro/v10/fpTVHK8qsXbIeTHTrnQH6FYkMfKIaNomjSsPwlnYTo8.woff2) format('woff2');\r\n  unicode-range: U+1F00-1FFF;\r\n}\r\n/* greek */\r\n@font-face {\r\n  font-family: 'Source Sans Pro';\r\n  font-style: italic;\r\n  font-weight: 600;\r\n  src: local('Source Sans Pro SemiBold Italic'), local('SourceSansPro-SemiBoldItalic'), url(http://fonts.gstatic.com/s/sourcesanspro/v10/fpTVHK8qsXbIeTHTrnQH6GiDSVa_IOwAFmatEVa_dzU.woff2) format('woff2');\r\n  unicode-range: U+0370-03FF;\r\n}\r\n/* vietnamese */\r\n@font-face {\r\n  font-family: 'Source Sans Pro';\r\n  font-style: italic;\r\n  font-weight: 600;\r\n  src: local('Source Sans Pro SemiBold Italic'), local('SourceSansPro-SemiBoldItalic'), url(http://fonts.gstatic.com/s/sourcesanspro/v10/fpTVHK8qsXbIeTHTrnQH6CzM2XYAq8cDhaXsrN8WXcA.woff2) format('woff2');\r\n  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;\r\n}\r\n/* latin-ext */\r\n@font-face {\r\n  font-family: 'Source Sans Pro';\r\n  font-style: italic;\r\n  font-weight: 600;\r\n  src: local('Source Sans Pro SemiBold Italic'), local('SourceSansPro-SemiBoldItalic'), url(http://fonts.gstatic.com/s/sourcesanspro/v10/fpTVHK8qsXbIeTHTrnQH6OXKTZYPNtG1yMB_YJSqlic.woff2) format('woff2');\r\n  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;\r\n}\r\n/* latin */\r\n@font-face {\r\n  font-family: 'Source Sans Pro';\r\n  font-style: italic;\r\n  font-weight: 600;\r\n  src: local('Source Sans Pro SemiBold Italic'), local('SourceSansPro-SemiBoldItalic'), url(http://fonts.gstatic.com/s/sourcesanspro/v10/fpTVHK8qsXbIeTHTrnQH6GQKuzMuncr0JB710wa2dPI.woff2) format('woff2');\r\n  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;\r\n} "
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Css"
+     }
+    ],
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource"
+   },
+   {
+    "id": "fec52078-f9c9-3b13-4f4f-d35d142f9458",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "CustomCSS"
+     },
+     {
+      "name": "resourceCode",
+      "type": "Resource",
+      "value": "/* ================ General ================ */\r\n@font-face{\r\n    font-family: TPF_Font_Thin;\r\n    src: url('/pentaho/BI/fonts/Comfortaa_Thin.ttf'),\r\n         url('/pentaho/BI/fonts/Comfortaa_Thin.eot');  /* IE9 */ \r\n}\r\nbody{\r\n    background-color:#E7EBED;\r\n    font-size: 10px;\r\n    font-family: 'TPF_Font_Thin';\r\n}\r\n\r\n.container {\r\n    width:100%;\r\n    height: 100%;\r\n    overflow: auto;\r\n    position: absolute; \r\n    padding-top: 10px;\r\n    padding-right: 0px;\r\n    padding-left: 10px;\r\n    padding-bottom: 10px;\r\n    margin-right: auto;\r\n    margin-left: auto;\r\n}\r\n\r\n/* ================ KPI ================ */\r\n.vertical-center{\r\n    position: absolute;\r\n    top: 50%;\r\n    left: 50%;\r\n    transform: translate(-50%, -50%);\r\n}\r\n.KPI-Header{\r\n    color:#666666;\r\n    font-weight:bolder;\r\n    font-family:TPF_Font_Thin;\r\n    font-size:10px;\r\n}\r\n.KPI-Body{\r\n    color:#666666;\r\n    font-size:50px;\r\n    font-weight:lighter;\r\n    font-family:TPF_Font_Thin;\r\n}\r\n.KPI-Footer{\r\n    /*\r\n     、、、、、、\r\n    */\r\n}\r\n.KPI-Footer-Title{\r\n    float:left;\r\n    color:#666666;\r\n}\r\n.KPI-Footer-Body{\r\n    float:left;\r\n    color:red;\r\n    font-family:TPF_Font_Thin;\r\n}\r\n/* ================ Panel ================ */\r\n.panel-default {\r\n    border: none;\r\n    border-radius: 0px;\r\n    margin-bottom: 0px;\r\n    box-shadow: none;\r\n    -webkit-box-shadow: none;\r\n}\r\n.panel-heading {\r\n    padding: 0px 0px;\r\n    border-bottom: 0px solid transparent;\r\n    border-top-left-radius: 3px;\r\n    border-top-right-radius: 3px;\r\n}\r\n.panel-default > .panel-heading {\r\n    color: #777;\r\n    background-color: #fff;\r\n    border-color: #e6e6e6;\r\n    padding: 10px 10px;\r\n}\r\n.panel-default > .panel-body {\r\n    padding: 10px;\r\n    padding-bottom: 10px;\r\n}\r\n.panel-default > .panel-body ul {\r\n    overflow: hidden;\r\n    padding: 0;\r\n    margin: 0px;\r\n    margin-top: -5px;\r\n}\r\n.panel-default > .panel-body ul li {\r\n    line-height: 27px;\r\n    list-style-type: none;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n}\r\n.panel-default > .panel-body ul li .time {\r\n    color: #a1a1a1;\r\n    float: right;\r\n    padding-right: 5px;\r\n} \r\n.panel-footer {\r\n    padding: 10px 15px;\r\n    background-color: #FFFFFF; \r\n    border-top: 0px solid #ddd; \r\n    border-bottom-right-radius: 3px;\r\n    border-bottom-left-radius: 3px;\r\n}\r\n\r\n.single {\r\n    cursor: pointer;\r\n    border: 1px solid #eee;\r\n    border-radius: 0px;\r\n    text-align: center;\r\n    padding: 10px;\r\n    padding-top: 10px;\r\n    padding-right: 10px;\r\n    margin-bottom: 10px;   \r\n} \r\n .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, \r\n .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, \r\n .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, \r\n .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, \r\n .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, \r\n .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, \r\n .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, \r\n .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, \r\n .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, \r\n .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, \r\n .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, \r\n .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {\r\n    position: relative;\r\n    min-height: 1px;\r\n    padding-right: 10px;\r\n    padding-left: 0px;\r\n} \r\n.row {\r\n    margin-right: 0px;\r\n    margin-left: 0px;\r\n} \r\nhr {\r\n    margin-top: 10px; \r\n    margin-bottom: 0px; \r\n    border: 0;\r\n    border-top: 0px solid #eee; \r\n} \r\n\r\n/*================ 浮动 ================*/\r\n.floatPanel {\r\n    cursor: pointer;\r\n    border: 1px solid #eee;\r\n    border-radius: 0px;\r\n} \r\n.floatPanel:hover, .single.selected:hover {\r\n    -webkit-box-shadow: 0px 0px 35px -8px rgba(0,0,0,0.5);\r\n    -moz-box-shadow: 0px 0px 35px -8px rgba(0,0,0,0.5);\r\n    box-shadow: 0px 0px 35px -8px rgba(0,0,0,0.5);\r\n}\r\n.floatPanel.selected {\r\n    background-color: rgba(240, 240, 240, 0.4);\r\n} \r\n\r\nsvg{\r\n    /*\r\n    width: 637;\r\n    */\r\n    height: 340;\r\n}\r\n\r\n "
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Css"
+     }
+    ],
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource"
+   },
+   {
+    "id": "e07a7881-038b-d9c5-3f5a-4fdf205f6484",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "d3_BubbleChart"
+     },
+     {
+      "name": "resourceFile",
+      "type": "ResourceFile",
+      "value": "${solution:d3.BubbleChart.min.js}"
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Javascript"
+     }
+    ],
+    "type": "LayoutResourceFile",
+    "typeDesc": "Resource"
+   },
+   {
+    "id": "a4a672f9-bc70-06f7-559d-0ce9ecfa7be8",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "d3_transform"
+     },
+     {
+      "name": "resourceCode",
+      "type": "Resource",
+      "value": "(function() {\r\n  d3.svg.transform = function(chain) {\r\n    var transforms = [];\r\n    if (chain !== undefined) { transforms.push(chain) }\r\n\r\n    function push(kind, args) {\r\n      var n = args.length;\r\n\r\n      transforms.push(function() {\r\n        return kind + '(' + (n == 1 && typeof args[0] == 'function'\r\n            ? args[0].apply(this, arr(arguments)) : args) + ')';\r\n      });\r\n    }\r\n\r\n    function arr(args) {\r\n      return Array.prototype.slice.call(args);\r\n    }\r\n\r\n    var my = function() {\r\n      var that = this,\r\n          args = arr(arguments);\r\n\r\n      return transforms.map(function(f) {\r\n        return f.apply(that, args);\r\n      }).join(' ');\r\n    };\r\n\r\n    ['translate', 'rotate', 'scale', 'matrix', 'skewX', 'skewY'].forEach(function(t) {\r\n      my[t] = function() {\r\n        push(t, arr(arguments));\r\n        return my;\r\n      };\r\n    });\r\n\r\n    return my;\r\n  };\r\n})(); "
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Javascript"
+     }
+    ],
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource"
+   },
+   {
+    "id": "4c998356-bbde-2ba7-42fe-9fb3ef94bba2",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "d3_extarray"
+     },
+     {
+      "name": "resourceCode",
+      "type": "Resource",
+      "value": "/**\r\n * Javascript Array extension\r\n * @module\r\n */\r\n$.extend(Array.prototype, {\r\n\r\n  /**\r\n   * Return min value of value array\r\n   *\r\n   * @func Array.min\r\n   * @example:\r\n   *  ```js\r\n   *  [1,2,3].min() === 1\r\n   *  ```\r\n   */\r\n  min: function () {\r\n    return this.reduce(function (x, y) {\r\n      return ( x < y ? x : y );\r\n    });\r\n  },\r\n\r\n  /**\r\n   * Return max value of value array\r\n   *\r\n   * @func Array.max\r\n   * @example:\r\n   *  ```js\r\n   *  [1,2,3].max() === 3\r\n   *  ```\r\n   */\r\n  max: function () {\r\n    return this.reduce(function (x, y) {\r\n      return ( x > y ? x : y );\r\n    });\r\n  },\r\n\r\n  /**\r\n   * Return min value of objects which have property\r\n   *\r\n   * @param {string} prop - property name\r\n   * @example:\r\n   *  ```js\r\n   *  [{name: \"phuong\", count: 1}, {name: \"huynh\", count: 2}].minBy(\"count\") === 1\r\n   *  ```\r\n   */\r\n  minBy: function(prop) {\r\n    var values = [];\r\n    $.each(this, function (i, v) {values.push(v[prop]);});\r\n    return values.min();\r\n  },\r\n\r\n  /**\r\n   * Return max value of objects which have property\r\n   *\r\n   * @param {string} prop - property name\r\n   * @example:\r\n   *  ```js\r\n   *  [{name: \"phuong\", count: 1}, {name: \"huynh\", count: 2}].maxBy(\"count\") === 2\r\n   *  ```\r\n   */\r\n  maxBy: function(prop) {\r\n    var values = [];\r\n    $.each(this, function (i, v) {values.push(v[prop]);});\r\n    return values.max();\r\n  },\r\n\r\n  /**\r\n   * Return array of values of objects which have property\r\n   *\r\n   * @param {string} prop - property name\r\n   * @example:\r\n   *  ```js\r\n   *  [{name: \"phuong\", count: 1}, {name: \"huynh\", count: 2}].toArray(\"count\") === [1,2]\r\n   *  ```\r\n   */\r\n  toArray : function (prop) {\r\n    var values = [];\r\n    $.each(this, function (i, v) {values.push(v[prop]);});\r\n    return values;\r\n  },\r\n\r\n  /**\r\n   * Random array of values using [shuffle](http://bost.ocks.org/mike/shuffle/)\r\n   *\r\n   * @param {string} prop - property name\r\n   * @example:\r\n   *  ```js\r\n   *  [{name: \"phuong\", count: 1}, {name: \"huynh\", count: 2}].shuffle()\r\n   *  ```\r\n   */\r\n  shuffle : function () {\r\n    var m = this.length, t, i;\r\n    while (m) {\r\n      i = Math.floor(Math.random() * m--);\r\n      t = this[m];\r\n      this[m] = this[i];\r\n      this[i] = t;\r\n    }\r\n    return this;\r\n  },\r\n\r\n  /*\r\n   * Return an array without any duplicated value\r\n   *\r\n   * @param {string} prop - property name\r\n   * @example:\r\n   *  ```js\r\n   *  [{name: \"phuong\", count: 1}, {name: \"huynh\", count: 2}].distinct()\r\n   *  ```\r\n   * */\r\n  distinct : function () {\r\n    var result = [];\r\n    $.each(this, function (i, v) {\r\n      if ($.inArray(v, result) == -1) result.push(v);\r\n    });\r\n    return result;\r\n  },\r\n\r\n  /**\r\n   * Return object/value which has value equal to\r\n   *\r\n   * @param {object} val - found value\r\n   * @param {string} prop - property name\r\n   * @example:\r\n   *  ```js\r\n   *  [{name: \"phuong\", count: 1}, {name: \"huynh\", count: 2}].findFirst(\"phuong\", \"name\") === {name: \"phuong\", count: 1}\r\n   *  ```\r\n   */\r\n  findFirst : function (val, prop) {\r\n    var index = undefined;\r\n    $.each(this, function (i, v) {\r\n      var value = (prop === undefined ? v : v[prop] );\r\n      if (value === val) {\r\n        index = i;\r\n        return false;\r\n      }\r\n    });\r\n    return this[index];\r\n  }\r\n}); "
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Javascript"
+     }
+    ],
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource"
+   },
+   {
+    "id": "a6a605e6-1e13-70aa-f583-5b3ae5d835e5",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "d3_misc"
+     },
+     {
+      "name": "resourceCode",
+      "type": "Resource",
+      "value": "(function () {\r\n  $.misc = {\r\n    uuid: function() {\r\n      return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {\r\n        var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\r\n        return v.toString(16);\r\n      });\r\n    }\r\n  }\r\n})(); "
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Javascript"
+     }
+    ],
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource"
+   },
+   {
+    "id": "ab0bedab-3a48-cb80-1254-220d109af1ae",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "d3_micro_observer"
+     },
+     {
+      "name": "resourceCode",
+      "type": "Resource",
+      "value": "/**\r\n * Observer Pattern javascript implementation [Observer](http://en.wikipedia.org/wiki/Observer_pattern)\r\n *\r\n * @module\r\n * @example\r\n *  ```js\r\n *  var observer = $.microObserver.get(\"test-cafej\");\r\n *\r\n *  var dog = {\r\n   *    wou: function(text) {\r\n   *      observer.send(\"wou\", text);\r\n   *    }\r\n   *  }\r\n *\r\n *  observer.on(\"wou\", function(text) {\r\n   *    $(\"#man\").text(text);\r\n   *  });\r\n *  ```\r\n */\r\n(function () {\r\n\r\n  var MicroObserver = function () {};\r\n\r\n  MicroObserver.prototype = {\r\n\r\n    /**\r\n     * Register event by notify\r\n     *\r\n     * @member on\r\n     * @param {string} notify - name of the notification\r\n     * @param {handler} handler - handler of the notification\r\n     * @param {able} able - able to receive notification\r\n     * @example\r\n     *  ```js\r\n     *  MicroObserver.on(\"Say text\", handler, able)\r\n     *  ```\r\n     */\r\n    on: function (notify, handler, able) {\r\n      var self = this;\r\n      self.notifications = this.notifications || {};\r\n      self.notifications[notify] = self.notifications[notify] || [];\r\n      self.notifications[notify].push({handler: handler, able: able});\r\n    },\r\n\r\n    /**\r\n     * Unregister event by notify\r\n     *\r\n     * @member off\r\n     * @param {string} notify - Name of the notification\r\n     * @param {handler} handler - Handler of the notification\r\n     * @example\r\n     *  ```js\r\n     *  MicroObserver.off(\"Say text\", handler)\r\n     *  ```\r\n     */\r\n    off: function (notify, handler) {\r\n      var self = this;\r\n      var n = arguments.length;\r\n      if (n === 0) return delete self.notifications;\r\n      if (n === 1) return delete self.notifications[notify];\r\n\r\n      self.notifications = self.notifications || {};\r\n      var notifies = self.notifications[notify] || [];\r\n      $.each(notifies, function (i, nf) {\r\n        if (nf.handler === handler) {\r\n          self.notifications[notify].splice(i, 1);\r\n          return false;\r\n        }\r\n      });\r\n    },\r\n\r\n    /**\r\n     * Send will send event by notify\r\n     *\r\n     * @member send\r\n     * @param {string} notify - Name of the notification\r\n     * @param {...any} arguments is passed to registered {MicroObserver~handler}\r\n     * @example\r\n     *  ```js\r\n     *  MicroObserver.send(\"Say text\", \"tell me\", \"something\", \"to someone\")\r\n     *  ```\r\n     */\r\n    send: function (/* arguments... */) {\r\n      var notify = arguments[0];\r\n      var self = this;\r\n      self.notifications = self.notifications || {};\r\n      self.notifications[notify] = self.notifications[notify] || [];\r\n      var notifies = self.notifications[notify];\r\n      var args = Array.prototype.slice.call(arguments, 1);\r\n      $.each(notifies, function (i, nf) {\r\n        var ok = nf.able === undefined || nf.able.apply(null, args);\r\n        ok && nf.handler.apply(null, args);\r\n      });\r\n    }\r\n  }\r\n\r\n  var observers = {}\r\n\r\n  $.microObserver = {\r\n    create: function (name) {\r\n      observers[name] = new MicroObserver();\r\n      return observers[name];\r\n    },\r\n    get: function (name) {\r\n      var self = this;\r\n      return observers[name] || self.create(name);\r\n    }\r\n  }\r\n})();\r\n/**\r\n * Handler of the notification\r\n *\r\n * @typedef handler\r\n * @param {...any}\r\n */\r\n/**\r\n * Able to receive notification\r\n *\r\n * @typedef able\r\n * @returns {undefined | true} handler is invoked when notification coming <br/>\r\n * @returns {false} handler is not invoked when notification coming\r\n */ "
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Javascript"
+     }
+    ],
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource"
+   },
+   {
+    "id": "e0313be6-26c3-7ef2-80f1-863fbf0d70e2",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "d3_microplugin"
+     },
+     {
+      "name": "resourceCode",
+      "type": "Resource",
+      "value": "/**\r\n * microplugin.js\r\n * Copyright (c) 2013 Brian Reavis & contributors\r\n *\r\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this\r\n * file except in compliance with the License. You may obtain a copy of the License at:\r\n * http://www.apache.org/licenses/LICENSE-2.0\r\n *\r\n * Unless required by applicable law or agreed to in writing, software distributed under\r\n * the License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF\r\n * ANY KIND, either express or implied. See the License for the specific language\r\n * governing permissions and limitations under the License.\r\n *\r\n * @author Brian Reavis <brian@thirdroute.com>\r\n */\r\n\r\n(function(root, factory) {\r\n    if (typeof define === 'function' && define.amd) {\r\n\t\tdefine(factory);\r\n\t} else if (typeof exports === 'object') {\r\n\t\tmodule.exports = factory();\r\n\t} else {\r\n\t\troot.MicroPlugin = factory();\r\n\t}\r\n}(this, function() {\r\n\tvar MicroPlugin = {};\r\n\r\n\tMicroPlugin.mixin = function(Interface) {\r\n\t\tInterface.plugins = {};\r\n\r\n\t\t/**\r\n\t\t * Initializes the listed plugins (with options).\r\n\t\t * Acceptable formats:\r\n\t\t *\r\n\t\t * List (without options):\r\n\t\t *   ['a', 'b', 'c']\r\n\t\t *\r\n\t\t * List (with options):\r\n\t\t *   [{'name': 'a', options: {}}, {'name': 'b', options: {}}]\r\n\t\t *\r\n\t\t * Hash (with options):\r\n\t\t *   {'a': { ... }, 'b': { ... }, 'c': { ... }}\r\n\t\t *\r\n\t\t * @param {mixed} plugins\r\n\t\t */\r\n\t\tInterface.prototype.initializePlugins = function(plugins) {\r\n\t\t\tvar i, n, key;\r\n\t\t\tvar self  = this;\r\n\t\t\tvar queue = [];\r\n\r\n\t\t\tself.plugins = {\r\n\t\t\t\tnames     : [],\r\n\t\t\t\tsettings  : {},\r\n\t\t\t\trequested : {},\r\n\t\t\t\tloaded    : {}\r\n\t\t\t};\r\n\r\n\t\t\tif (utils.isArray(plugins)) {\r\n\t\t\t\tfor (i = 0, n = plugins.length; i < n; i++) {\r\n\t\t\t\t\tif (typeof plugins[i] === 'string') {\r\n\t\t\t\t\t\tqueue.push(plugins[i]);\r\n\t\t\t\t\t} else {\r\n\t\t\t\t\t\tself.plugins.settings[plugins[i].name] = plugins[i].options;\r\n\t\t\t\t\t\tqueue.push(plugins[i].name);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t} else if (plugins) {\r\n\t\t\t\tfor (key in plugins) {\r\n\t\t\t\t\tif (plugins.hasOwnProperty(key)) {\r\n\t\t\t\t\t\tself.plugins.settings[key] = plugins[key];\r\n\t\t\t\t\t\tqueue.push(key);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t}\r\n\r\n\t\t\twhile (queue.length) {\r\n\t\t\t\tself.require(queue.shift());\r\n\t\t\t}\r\n\t\t};\r\n\r\n\t\tInterface.prototype.loadPlugin = function(name) {\r\n\t\t\tvar self    = this;\r\n\t\t\tvar plugins = self.plugins;\r\n\t\t\tvar plugin  = Interface.plugins[name];\r\n\r\n\t\t\tif (!Interface.plugins.hasOwnProperty(name)) {\r\n\t\t\t\tthrow new Error('Unable to find \"' +  name + '\" plugin');\r\n\t\t\t}\r\n\r\n\t\t\tplugins.requested[name] = true;\r\n\t\t\tplugins.loaded[name] = plugin.fn.apply(self, [self.plugins.settings[name] || {}]);\r\n\t\t\tplugins.names.push(name);\r\n\t\t};\r\n\r\n\t\t/**\r\n\t\t * Initializes a plugin.\r\n\t\t *\r\n\t\t * @param {string} name\r\n\t\t */\r\n\t\tInterface.prototype.require = function(name) {\r\n\t\t\tvar self = this;\r\n\t\t\tvar plugins = self.plugins;\r\n\r\n\t\t\tif (!self.plugins.loaded.hasOwnProperty(name)) {\r\n\t\t\t\tif (plugins.requested[name]) {\r\n\t\t\t\t\tthrow new Error('Plugin has circular dependency (\"' + name + '\")');\r\n\t\t\t\t}\r\n\t\t\t\tself.loadPlugin(name);\r\n\t\t\t}\r\n\r\n\t\t\treturn plugins.loaded[name];\r\n\t\t};\r\n\r\n\t\t/**\r\n\t\t * Registers a plugin.\r\n\t\t *\r\n\t\t * @param {string} name\r\n\t\t * @param {function} fn\r\n\t\t */\r\n\t\tInterface.define = function(name, fn) {\r\n\t\t\tInterface.plugins[name] = {\r\n\t\t\t\t'name' : name,\r\n\t\t\t\t'fn'   : fn\r\n\t\t\t};\r\n\t\t};\r\n\t};\r\n\r\n\tvar utils = {\r\n\t\tisArray: Array.isArray || function(vArg) {\r\n\t\t\treturn Object.prototype.toString.call(vArg) === '[object Array]';\r\n\t\t}\r\n\t};\r\n\r\n\treturn MicroPlugin;\r\n})); "
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Javascript"
+     }
+    ],
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource"
+   },
+   {
+    "id": "d35df175-1e75-a3ad-f9df-fa8be1d5c454",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "bubble_chart"
+     },
+     {
+      "name": "resourceCode",
+      "type": "Resource",
+      "value": "(function (root, factory) {\n  if (typeof define === 'function' && define.amd) {\n    define(['microplugin'], factory);\n  }\n  else if (typeof exports === 'object') {\n    module.exports = factory(require('microplugin'));\n  }\n  else {\n    root.BubbleChart = factory(root.MicroPlugin);\n  }\n}(this, function (MicroPlugin) {\n  var pi2 = Math.PI * 2;\n  /**\n   * Bubble Chart implementation using {@link d3js.org|d3js}\n   *\n   * @class BubbleChart\n   * @example\n   *  - [test-bubble-chart](../test/test-bubble-chart.html)\n   *\n   * @param {settings} settings - Settings of bubble chart\n   */\n   d3.svg.BubbleChart = function (settings) {\n    var self = this;\n    var defaultViewBoxSize = settings.size;\n    var defaultInnerRadius = settings.size / 3;\n    var defaultOuterRadius = settings.size / 2;\n    var defaultRadiusMin = settings.size / 10;\n    self.options = {};\n    $.extend(self.options, {\n      plugins: [],\n      container: \".bubbleChart\",\n      viewBoxSize: defaultViewBoxSize,\n      innerRadius: defaultInnerRadius,\n      outerRadius: defaultOuterRadius,\n      radiusMin: defaultRadiusMin,\n      intersectDelta: 0,\n      transitDuration: 1000\n    }, settings);\n\n    $.extend(self.options, {\n      radiusMax: (self.options.outerRadius - self.options.innerRadius) / 2,\n      intersectInc: self.options.intersectDelta\n    }, settings);\n\n    self.initializePlugins(self.options.plugins);\n\n    self.setup();\n    self.registerClickEvent(self.getNodes());\n    self.moveToCentral(d3.select(\".node\"));\n  };\n\n\n  $.extend(d3.svg.BubbleChart.prototype, {\n    getTransition: function() {\n      return this.transition;\n    },\n\n    getClickedNode: function () {\n      return this.clickedNode;\n    },\n\n    getCentralNode: function () {\n      return this.centralNode;\n    },\n\n    getOptions: function () {\n      return this.options;\n    },\n\n    randomCirclesPositions: function (delta) {\n      var self = this;\n      var circles = [];\n      var interval = 0;\n      var options = self.options;\n      while (circles.length < self.items.length && ++interval < self.intervalMax) {\n        var val = self.values[circles.length];\n        var rad = Math.max((val * options.radiusMax) / self.valueMax, options.radiusMin);\n        var dist = self.innerRadius + rad + Math.random() * (self.outerRadius - self.innerRadius - rad * 2);\n        var angle = Math.random() * pi2;\n        var cx = self.centralPoint + dist * Math.cos(angle);\n        var cy = self.centralPoint + dist * Math.sin(angle);\n\n        var hit = false;\n        $.each(circles, function (i, circle) {\n          var dx = circle.cx - cx;\n          var dy = circle.cy - cy;\n          var r = circle.r + rad;\n          if (dx * dx + dy * dy < Math.pow(r - delta, 2)) {\n            hit = true;\n            return false;\n          }\n        });\n        if (!hit) {\n          circles.push({cx: cx, cy: cy, r: rad, item: self.items[circles.length]});\n        }\n      }\n      if (circles.length < self.items.length) {\n        if (delta === options.radiusMin) {\n          throw {\n            message: \"Not enough space for all bubble. Please change the options.\",\n            options: options\n          };\n        }\n        return self.randomCirclesPositions(delta + options.intersectInc);\n      }\n      return circles.shuffle();\n    },\n\n    getValues: function () {\n      var values = [];\n      var self = this;\n      $.each(self.items, function (i, item) {values.push(self.options.data.eval(item));});\n      return values;\n    },\n\n    setup: function () {\n      var self = this;\n      var options = self.options;\n      var h_tpf = $('.bubbleChart').css('height').replace(/[^0-9]/ig,\"\");\n      console.log(h_tpf);\n      self.innerRadius = options.innerRadius;\n      self.outerRadius = options.outerRadius;\n      self.centralPoint = options.size / 2;\n      self.intervalMax = options.size * options.size;\n      self.items = options.data.items;\n      self.values = self.getValues();\n      self.valueMax = self.values.max();\n      self.svg = d3.select(options.container).append(\"svg\")\n      //.attr({preserveAspectRatio: \"xMidYMid\", width: options.size, height: options.size, class: \"bubbleChart\"})\n      .attr({preserveAspectRatio: \"xMidYMid\", width: options.size, height: h_tpf, class: \"bubbleChart\"})\n      .attr(\"viewBox\", function (d) {return [\"0 0\", options.viewBoxSize, options.viewBoxSize].join(\" \");});\n      self.circlePositions = self.randomCirclesPositions(options.intersectDelta);\n\n      var node = self.svg.selectAll(\".node\")\n      .data(self.circlePositions)\n      .enter().append(\"g\")\n      .attr(\"class\", function (d) {return [\"node\", options.data.classed(d.item)].join(\" \");});\n\n      var fnColor = d3.scale.category20();\n      node.append(\"circle\")\n      .attr({r: function (d) {return d.r;}, cx: function (d) {return d.cx;}, cy: function (d) {return d.cy;}})\n      .style(\"fill\", function (d) {\n        return options.data.color !== undefined ? options.data.color(d.item) : fnColor(d.item.text);\n      })\n      .attr(\"opacity\", \"0.8\");\n      node.sort(function (a, b) {return options.data.eval(b.item) - options.data.eval(a.item);});\n\n      self.transition = {};\n      self.event = $.microObserver.get($.misc.uuid());\n\n      if (options.supportResponsive) {\n        $(window).resize(function() {\n          var width = $(options.container).width();\n          self.svg.attr(\"width\", width);\n          self.svg.attr(\"height\", h_tpf);\n        });\n        $(window).resize();\n      }\n    },\n\n    getCirclePositions: function () {\n      return this.circlePositions;\n    },\n\n    moveToCentral: function (node) {\n      var self = this;\n      var toCentralPoint = d3.svg.transform()\n      .translate(function (d) {\n        var cx = node.select('circle').attr(\"cx\");\n        var dx = self.centralPoint - d.cx;\n        var dy = self.centralPoint - d.cy;\n        return [dx, dy];\n      });\n      self.centralNode = node;\n      self.transition.centralNode = node.classed({active: true})\n      .transition().duration(self.options.transitDuration);\n      self.transition.centralNode.attr('transform', toCentralPoint)\n      .select(\"circle\")\n      .attr('r', function (d) {return self.options.innerRadius;});\n    },\n\n    moveToReflection: function (node, swapped) {\n      var self = this;\n      var toReflectionPoint = d3.svg.transform()\n      .translate(function (d) {\n        var dx = 2 * (self.centralPoint - d.cx);\n        var dy = 2 * (self.centralPoint - d.cy);\n        return [dx, dy];\n      });\n\n      node.transition()\n      .duration(self.options.transitDuration)\n      .delay(function (d, i) {return i * 10;})\n      .attr('transform', swapped ? \"\" : toReflectionPoint)\n      .select(\"circle\")\n      .attr('r', function (d) {return d.r;});\n    },\n\n    reset: function (node) {\n      var self = this;\n      node.classed({active: false});\n    },\n\n    registerClickEvent: function (node) {\n      var self = this;\n      var swapped = false;\n      node.style(\"cursor\", \"pointer\").on(\"click\", function (d) {\n        self.clickedNode = d3.select(this);\n        self.event.send(\"click\", self.clickedNode);\n        self.reset(self.centralNode);\n        self.moveToCentral(self.clickedNode);\n        self.moveToReflection(self.svg.selectAll(\".node:not(.active)\"), swapped);\n        swapped = !swapped;\n      });\n    },\n\n    getNodes: function () {\n      return this.svg.selectAll(\".node\");\n    },\n\n    get: function () {\n      return this.svg;\n    }\n  });\n\nMicroPlugin.mixin(d3.svg.BubbleChart);\n\nreturn d3.svg.BubbleChart;\n}));\n/**\n * Settings of bubble chart\n *\n * @typedef {object} settings\n *\n * @param {(object[]|string[])} plugins - Array of plugin [microplugin](https://github.com/brianreavis/microplugin.js|microplugin)\n * @param {string} [container=\".bubbleChart\"] - Jquery selector which will contain the chart\n * @param {number} size - Size of the chart, in pixel\n * @param {number} [viewBoxSize=size] - Size of the viewport of the chart, in pixel [ViewBoxAttribute](http://www.w3.org/TR/SVG/coords.html#ViewBoxAttribute)\n * @param {number} [innerRadius=size/3] - Radius of the Inner Circle, in pixel\n * @param {number} [outerRadius=size/2] - Radius of the Outer Circle, in pixel\n * @param {number} [radiusMin=size/10] - Minimum radius, in pixel\n * @param {number} [radiusMax=(outerRadius  innerRadius)/2] - Maximum radius, in pixel\n * @param {number} [intersectDelta=0] - Intersection between circles, in pixel\n * @param {number} [intersectInc=intersectDelta] - Increment of settings.intersectDelta, in pixel\n * @param {number} [transitDuration=1000] - Duration of transition when do animations, in mili-seconds\n * @param {data} data - Data information\n */\n\n/**\n * Data information\n *\n * @typedef {object} data\n * @param {object[]} items - Array of items <br/> ex:\n * ```js\n * data.items = [{number: 179, label: \"something\"}, {number: 220, label: \"everything\"}]\n * ```\n * @param {function} eval - Function should return a number used to evaluate an item <br/> ex:\n * ```js\n * data.eval = function(d){\n *   return d.number;\n * }\n * ```\n * @param {function} [color=d3.scale.category20] - Function should return a string used to fill bubbles <br/>ex:\n * ```js\n * data.color = function(d){\n *   return \"white\";\n * }\n * ```\n */ "
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Javascript"
+     }
+    ],
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource"
+   },
+   {
+    "id": "f7ccf243-d4cf-4c0c-7721-e95f7409c955",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "central_click"
+     },
+     {
+      "name": "resourceCode",
+      "type": "Resource",
+      "value": "/**\n * central-click.js\n */\n d3.svg.BubbleChart.define(\"central-click\", function (options) {\n  var self = this;\n\n  self.setup = (function (node) {\n    var original = self.setup;\n    return function (node) {\n      var fn = original.apply(this, arguments);\n      self.event.on(\"click\", function(node) {\n        if (node.selectAll(\"text.central-click\")[0].length === 1 && options.centralClick && node.datum) {\n          var nodeDatum = node.datum();\n        if (nodeDatum.item) {\n          options.centralClick(nodeDatum.item);\n        }\n      }\n    });\n      return fn;\n    };\n  })();\n\n  self.reset = (function (node) {\n    var original = self.reset;\n    return function (node) {\n      var fn = original.apply(this, arguments);\n      node.select(\"text.central-click\").remove();\n      return fn;\n    };\n  })();\n\n  self.moveToCentral = (function (node) {\n    var original = self.moveToCentral;\n    return function (node) {\n      var fn = original.apply(this, arguments);\n      var transition = self.getTransition().centralNode;\n      transition.each(\"end\", function() {\n        node.append(\"text\").classed({\"central-click\": true})\n        .attr(options.attr)\n        .style(options.style)\n        .attr(\"x\", function (d) {return d.cx;})\n        .attr(\"y\", function (d) {return d.cy;})\n        .text(options.text)\n        .style(\"opacity\", 0).transition().duration(self.getOptions().transitDuration / 2).style(\"opacity\", \"0.8\");\n      });\n      return fn;\n    };\n  })();\n});\n "
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Javascript"
+     }
+    ],
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource"
+   },
+   {
+    "id": "f72c14a1-5517-b1de-98b8-9b6eee0cf569",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "lines"
+     },
+     {
+      "name": "resourceCode",
+      "type": "Resource",
+      "value": "/**\n * Text lines\n *\n * @module\n *\n * @param {object} options - setting of text lines\n * @param {object[]} options.format - n-th object is used to format n-th line\n * @param {string} options.format.textField - name of property will be used in function text()\n * @param {string} options.format.classed - classes used to apply to [text](http://www.w3.org/TR/SVG/text.html#TextElement)\n * @param {string} options.format.style - style used to apply to [text](http://www.w3.org/TR/SVG/text.html#TextElement)\n * @param {string} options.format.attr - attribute used to apply to [text](http://www.w3.org/TR/SVG/text.html#TextElement)\n * @param {object[]} options.centralFormat - like #format but used to format central-bubble\n */\nd3.svg.BubbleChart.define(\"lines\", function (options) {\n  /*\n   * @param\n   *  options = {\n   *    format: [ //n-th object is used to format n-th line\n   *      {\n   *        textField: #string, name of property will be used in function text(), @link\n   *        classed: #object, @link\n   *        style: #object, @link\n   *        attr: #object, @link\n   *      }\n   *    ],\n   *    centralFormat: [ //@see #format, but used to format central-bubble\n   *    ]\n   *  }\n   * */\n\n  var self = this;\n\n  self.setup = (function () {\n    var original = self.setup;\n    return function () {\n      var fn = original.apply(this, arguments);\n      var node = self.getNodes();\n      $.each(options.format, function (i, f) {\n        node.append(\"text\")\n          .classed(f.classed)\n          .style(f.style)\n          .attr(f.attr)\n          .text(function (d) {return d.item[f.textField];});\n      });\n      return fn;\n    };\n  })();\n\n  self.reset = (function (node) {\n    var original = self.reset;\n    return function (node) {\n      var fn = original.apply(this, arguments);\n      $.each(options.format, function (i, f) {\n        var tNode = d3.select(node.selectAll(\"text\")[0][i]);\n        tNode.classed(f.classed).text(function (d) {return d.item[f.textField];})\n          .transition().duration(self.getOptions().transitDuration)\n          .style(f.style)\n          .attr(f.attr);\n      });\n      return fn;\n    };\n  })();\n\n  self.moveToCentral = (function (node) {\n    var original = self.moveToCentral;\n    return function (node) {\n      var fn = original.apply(this, arguments);\n      $.each(options.centralFormat, function (i, f) {\n        var tNode = d3.select(node.selectAll(\"text\")[0][i]);\n        tNode.transition().duration(self.getOptions().transitDuration)\n          .style(f.style)\n          .attr(f.attr);\n        f.classed !== undefined && tNode.classed(f.classed);\n        f.textField !== undefined && tNode.text(function (d) {return d.item[f.textField];});\n      });\n      return fn;\n    };\n  })();\n}); "
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Javascript"
+     }
+    ],
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource"
+   },
+   {
+    "id": "7dc99109-6840-24a3-cefc-2a4ece2fe5d9",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "Chart"
+     },
+     {
+      "name": "resourceCode",
+      "type": "Resource",
+      "value": "$(document).ready(function () {\n    let readJSONFile = function(url){\n        let jsonData;\n        $.ajax({\n            type : 'get',\n            url : url,\n            async : false,\n            dataType : 'json',\n            data : null,\n            success : function(response){\n                jsonData = response;\n            }\n        });\n        return jsonData;\n    };\n    let urlD3Bubble1 = \"/pentaho/plugin/cda/api/doQuery?path=/public/UI/D3/BubbleChart/BubbleChart1.cda&dataAccessId=bubbleQuery\";\n    let getD3Bubble1JSON = readJSONFile(urlD3Bubble1).resultset;\n    \n  var bubbleChart = new d3.svg.BubbleChart({\n    supportResponsive: true,\n    //container: => use @default\n    size: 600,\n    //viewBoxSize: => use @default\n    innerRadius: 600 / 3.5,\n    //outerRadius: => use @default\n    radiusMin: 50,\n    //radiusMax: use @default\n    //intersectDelta: use @default\n    //intersectInc: use @default\n    //circleColor: use @default\n    circleColor: ['#2682FF','#FFB946','#87C31E'],\n    data: {\n        /*\n      items: [\n        {text: \"Java\", count: \"1236\"},\n        {text: \".Net\", count: \"382\"},\n        {text: \"Php\", count: \"170\"},\n        {text: \"Ruby\", count: \"123\"},\n        {text: \"D\", count: \"12\"},\n        {text: \"Python\", count: \"170\"},\n        {text: \"C/C++\", count: \"382\"},\n        {text: \"Pascal\", count: \"10\"},\n        {text: \"Something\", count: \"170\"},\n      ],\n      */\n      items: getD3Bubble1JSON.map((value, index, arr) => {\n            let newArr = [];\n                newArr.push({\n                    text: value[0],\n                    count: value[1]\n                });\n            return newArr[0];\n        }),\n      eval: function (item) {return item.count;},\n      classed: function (item) {return item.text.split(\" \").join(\"\");}\n    },\n    \n    plugins: [\n      {\n        name: \"central-click\",\n        options: {\n          text: \"(See more detail)\",\n          style: {\n            \"font-size\": \"10px\",\n            \"font-style\": \"italic\",\n            \"font-family\": \"Source Sans Pro, sans-serif\",\n            //\"font-family\": \"TPF_Font_Thin\", \n            //\"font-weight\": \"700\",\n            \"text-anchor\": \"middle\",\n            \"fill\": \"white\"\n          },\n          attr: {dy: \"65px\"},\n          centralClick: function(item) {\n            alert(\"Here is more details: \" + item.text + \"!!\");\n          }\n        }\n      },\n      {\n        name: \"lines\",\n        options: {\n          format: [\n            {// Line #0\n              textField: \"count\",\n              classed: {count: true},\n              style: {\n                \"font-size\": \"28px\",\n                \"font-family\": \"Source Sans Pro, sans-serif\",\n                \"text-anchor\": \"middle\",\n                fill: \"white\"\n              },\n              attr: {\n                dy: \"0px\",\n                x: function (d) {return d.cx;},\n                y: function (d) {return d.cy;}\n              }\n            },\n            {// Line #1\n              textField: \"text\",\n              classed: {text: true},\n              style: {\n                \"font-size\": \"10px\",\n                \"font-family\": \"Source Sans Pro, sans-serif\",\n                \"text-anchor\": \"middle\",\n                fill: \"white\"\n              },\n              attr: {\n                dy: \"20px\",\n                x: function (d) {return d.cx;},\n                y: function (d) {return d.cy;}\n              }\n            }\n          ],\n          centralFormat: [\n            {// Line #0\n              style: {\"font-size\": \"50px\"},\n              attr: {}\n            },\n            {// Line #1\n              style: {\"font-size\": \"30px\"},\n              attr: {dy: \"40px\"}\n            }\n          ]\n        }\n      }]\n\t \n  });\n});\n "
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Javascript"
+     }
+    ],
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource"
+   },
+   {
+    "id": "6fd2ef00-8b8c-4ed3-ad09-74f239224864",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row1"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": "500"
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutRow",
+    "typeDesc": "Row"
+   },
+   {
+    "id": "dd8d949b-8d24-a1f2-d0bc-76e74cc19a60",
+    "parent": "6fd2ef00-8b8c-4ed3-ad09-74f239224864",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row1_col1"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "f36d4b35-4138-7bcf-9703-cbfa1c2a7070",
+    "parent": "dd8d949b-8d24-a1f2-d0bc-76e74cc19a60",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "row1_col1_html"
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "<div class=\"charts--container\">\r\n    <ul>\r\n\t\t<li class=\"chart\">\r\n            <!-- \r\n\t\t\t<div id=\"bubbleChart\" class=\"bubbleChart\"></div>\r\n            -->\r\n\t\t</li>\r\n\t</ul>\r\n</div> \r\n<script type='text/javascript'>\r\n\r\n</script> "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "hidden-lg hidden-md hidden-sm hidden-xs"
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "ffa8be0e-95db-4bb3-f6f4-a0c5c535fc6f",
+    "parent": "dd8d949b-8d24-a1f2-d0bc-76e74cc19a60",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": "390"
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapPanelStyle",
+      "type": "bootstrapPanelStyleCustom",
+      "value": "panel-default"
+     }
+    ],
+    "type": "BootstrapPanel",
+    "typeDesc": "Bootstrap Panel"
+   },
+   {
+    "id": "e939f0d4-61c8-45bb-62ed-abb7ad01420b",
+    "parent": "ffa8be0e-95db-4bb3-f6f4-a0c5c535fc6f",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelHeader",
+    "typeDesc": "Panel Header"
+   },
+   {
+    "id": "dbb45365-73a9-31e6-d852-359a7f676460",
+    "parent": "e939f0d4-61c8-45bb-62ed-abb7ad01420b",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "<div class=\"panel-heading \">\r\n    <i class=\"fa fa-pie-chart\" style=\"padding-right: 5px;\"></i> 退菜理由分析\r\n</div> "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "dc5e841e-b11a-a4d2-944d-57796641bab1",
+    "parent": "ffa8be0e-95db-4bb3-f6f4-a0c5c535fc6f",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "BootstrapPanelBody",
+    "typeDesc": "Panel Body"
+   },
+   {
+    "id": "adcea0c9-f5df-0992-9b38-6903631f1c13",
+    "parent": "dc5e841e-b11a-a4d2-944d-57796641bab1",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "<div id=\"bubbleChart\" class=\"bubbleChart\" style=\"height:340px;\"></div> "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "feda4dde-b8e3-d520-3d4f-74edab505d9e",
+    "parent": "ffa8be0e-95db-4bb3-f6f4-a0c5c535fc6f",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "hidden-lg hidden-md hidden-sm hidden-xs"
+     }
+    ],
+    "type": "BootstrapPanelFooter",
+    "typeDesc": "Panel Footer"
+   }
+  ],
+  "title": "CDF - Sample structure"
+ }
+}

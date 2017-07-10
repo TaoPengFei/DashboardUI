@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:ExportManifest xmlns:ns2="http://www.pentaho.com/schema/">
-    <ExportManifestInformation exportDate="06-07-2017 05:36:51 GMT+08:00" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
+    <ExportManifestInformation exportDate="10-07-2017 06:14:36 GMT+08:00" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
     <ExportManifestEntity path="UI">
         <ExportManifestProperty>
             <EntityMetaData name="UI" createdDate="2017-06-06T23:15:18.346+08:00" isFolder="true" path="UI" isHidden="false" locale="zh_CN" title="UI"/>
@@ -352,6 +352,78 @@
     <ExportManifestEntity path="UI/D3/BarChart">
         <ExportManifestProperty>
             <EntityMetaData name="BarChart" createdDate="2017-07-06T10:25:31.186+08:00" isFolder="true" path="UI/D3/BarChart" isHidden="false" locale="zh_CN" title="BarChart"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/D3/BubbleChart">
+        <ExportManifestProperty>
+            <EntityMetaData name="BubbleChart" createdDate="2017-07-10T14:52:57.996+08:00" isFolder="true" path="UI/D3/BubbleChart" isHidden="false" locale="zh_CN" title="BubbleChart"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/D3/BubbleChart/BubbleChart1.cda">
+        <ExportManifestProperty>
+            <EntityMetaData name="BubbleChart1.cda" createdDate="2017-07-10T16:01:16.162+08:00" isFolder="false" path="UI/D3/BubbleChart/BubbleChart1.cda" isHidden="false" locale="zh_CN" title="BubbleChart1.cda"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/D3/BubbleChart/BubbleChart1.cdfde">
+        <ExportManifestProperty>
+            <EntityMetaData name="BubbleChart1.cdfde" createdDate="2017-07-10T14:56:12.399+08:00" isFolder="false" path="UI/D3/BubbleChart/BubbleChart1.cdfde" isHidden="false" locale="zh_CN" title="BubbleChart1.cdfde"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/D3/BubbleChart/BubbleChart1.wcdf">
+        <ExportManifestProperty>
+            <EntityMetaData name="BubbleChart1.wcdf" createdDate="2017-07-10T14:56:12.186+08:00" isFolder="false" path="UI/D3/BubbleChart/BubbleChart1.wcdf" isHidden="false" locale="zh_CN" description="气泡图实例1" title="气泡图实例1"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/D3/BubbleChart/d3.BubbleChart.js">
+        <ExportManifestProperty>
+            <EntityMetaData name="d3.BubbleChart.js" createdDate="2017-07-10T17:31:18.522+08:00" isFolder="false" path="UI/D3/BubbleChart/d3.BubbleChart.js" isHidden="true" locale="zh_CN" title="d3.BubbleChart"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="UI/D3/BubbleChart/d3.BubbleChart.min.js">
+        <ExportManifestProperty>
+            <EntityMetaData name="d3.BubbleChart.min.js" createdDate="2017-07-10T15:02:52.199+08:00" isFolder="false" path="UI/D3/BubbleChart/d3.BubbleChart.min.js" isHidden="true" locale="zh_CN" title="d3.BubbleChart.min"/>
         </ExportManifestProperty>
         <ExportManifestProperty>
             <EntityAcl>
