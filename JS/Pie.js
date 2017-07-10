@@ -207,7 +207,6 @@ function initD3(){
     			enabled: true
     		}
     	},
-        
     	effects: {
     		pullOutSegmentOnClick: {
     			effect: "linear",
@@ -226,8 +225,6 @@ function initD3(){
     			enabled: true,
     			percentage: 100
     		}
-    	},*/
-        
-    });
-    
+    	},*/   
+    });  
 }; 

@@ -1,3 +1,6 @@
+## 基于D3的定制图表#2
+![Image](https://github.com/TaoPengFei/DashboardUI/blob/master/Demo/imgs/Bubble1.png)
+
 ## 基于D3的定制图表#1
 ![Image](https://github.com/TaoPengFei/DashboardUI/blob/master/Demo/imgs/Pie1.png)
 
