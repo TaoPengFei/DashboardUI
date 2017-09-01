@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="brand_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="area_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="outlet_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="saleAmt_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="checkQty_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="checkPrice_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="guestQty_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="guestPrice_query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="guestPrice_query_new" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="guestPrice_query_new_new" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="guestPrice_query_new_new_new" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" connection="brand_query" id="brand_query" type="sql">
+      <Name>brand_query</Name>
+      <Cache duration="3600" enabled="false"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="todayParam" name="todayParam" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT
+     `Dim_Brand`.`BrandName_level1` AS BrandName,
+     `Dim_Brand`.`BrandId_level1` AS BrandId,
+     sum(`Fact_SumDay`.`SaleAmt`) - `Dim_Brand`.`BrandId_level1` AS SaleAmt
+FROM
+     `Dim_Brand` INNER JOIN `Fact_SumDay` ON `Dim_Brand`.`BrandId` = `Fact_SumDay`.`BrandId`
+    INNER JOIN `Dim_BIDate` ON `Fact_SumDay`.`BIDateId` = `Dim_BIDate`.`BIDateId`
+WHERE
+     `Dim_Brand`.`Status` = 0
+    AND ( Dim_BIDate.BIDate = ${todayParam} )
+GROUP BY
+     `Dim_Brand`.`BrandId_level1`,
+     `Dim_Brand`.`BrandName_level1`
+ORDER BY
+     `Dim_Brand`.`BrandId_level1` ASC]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="area_query" id="area_query" type="sql">
+      <Name>area_query</Name>
+      <Cache duration="3600" enabled="false"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="BrandId" name="BrandId" type="String"/>
+         <Parameter default="todayParam" name="todayParam" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT
+     `Dim_Area`.`AreaName_level1` AS AreaName,
+     `Dim_Area`.`AreaId_level1` AS AreaId,
+     sum(`Fact_SumDay`.`SaleAmt`)  - `Dim_Area`.`AreaId_level1` AS SaleAmt
+FROM
+     `Fact_SumDay` INNER JOIN `Dim_Area` ON `Fact_SumDay`.`AreaId` = `Dim_Area`.`AreaId`
+     INNER JOIN `Dim_Brand` ON `Fact_SumDay`.`BrandId` = `Dim_Brand`.`BrandId`
+     INNER JOIN `Dim_BIDate` ON `Fact_SumDay`.`BIDateId` = `Dim_BIDate`.`BIDateId`
+WHERE
+     `Dim_Area`.`Status` = 0
+     AND `Dim_Brand`.`Status` = 0
+    AND ( Dim_BIDate.BIDate = ${todayParam} )
+     AND (`Dim_Brand`.`BrandId_level1` = ${BrandId} OR ${BrandId} = 0)
+
+GROUP BY
+     `Dim_Area`.`AreaId_level1`,
+     `Dim_Area`.`AreaName_level1`
+ORDER BY
+     `Dim_Area`.`AreaId_level1` ASC]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="outlet_query" id="outlet_query" type="sql">
+      <Name>outlet_query</Name>
+      <Cache duration="3600" enabled="false"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="BrandId" name="BrandId" type="String"/>
+         <Parameter default="AreaId" name="AreaId" type="String"/>
+         <Parameter default="todayParam" name="todayParam" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT
+     `Dim_Area`.`AreaName_level1`,
+     `Dim_Outlet`.`OutletCode`,
+     `Dim_Outlet`.`OutletName`,
+     SUM(Fact_SumDay.SaleAmt) AS SaleAmt,
+     `Dim_Outlet`.`OutletId`
+FROM
+    `Dim_Area` INNER JOIN `Dim_Outlet` ON `Dim_Area`.`AreaId` = `Dim_Outlet`.`AreaId`
+    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`
+    INNER JOIN Fact_SumDay ON `Dim_Outlet`.`OutletId` = Fact_SumDay.OutletId
+    INNER JOIN `Dim_BIDate` ON `Fact_SumDay`.`BIDateId` = `Dim_BIDate`.`BIDateId`
+WHERE
+      ( Dim_BIDate.BIDate = ${todayParam} )
+    -- AND `Dim_Brand`.`Status` = 0
+     AND (`Dim_Brand`.`BrandId_level1` = ${BrandId} OR ${BrandId} = 0 )
+     AND (`Dim_Area`.`AreaId_level1` = ${AreaId} OR ${AreaId} = 0 )
+GROUP BY `Dim_Outlet`.`OutletCode`,
+     `Dim_Outlet`.`OutletName`,
+     `Dim_Area`.`AreaName_level1`,
+     `Dim_Outlet`.`OutletId`
+ORDER BY `Dim_Area`.`AreaName_level1`,`Dim_Outlet`.`OutletCode`]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="saleAmt_query" id="saleAmt_query" type="sql">
+      <Name>saleAmt_query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="AreaId" name="AreaId" type="String"/>
+         <Parameter default="OutLetId" name="OutLetId" type="String"/>
+         <Parameter default="BrandId" name="BrandId" type="String"/>
+         <Parameter default="todayParam" name="todayParam" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT
+    CASE WHEN sum(`Fact_SumDay`.`SaleAmt`) = 0 THEN '0.0'
+        WHEN  sum(`Fact_SumDay`.`SaleAmt`) = NULL THEN '0.0'
+    ELSE ROUND( (sum(`Fact_SumDay`.`SaleAmt`) ), 2) END
+FROM
+     `Fact_SumDay` INNER JOIN Dim_Area ON Dim_Area.AreaId = `Fact_SumDay`.`AreaId`
+        INNER JOIN Dim_Brand ON Dim_Brand.BrandId = `Fact_SumDay`.BrandId  
+        INNER JOIN Dim_Outlet ON `Dim_Outlet`.`OutletId` = `Fact_SumDay`.OutletId
+        INNER JOIN `Dim_BIDate` ON `Fact_SumDay`.`BIDateId` = `Dim_BIDate`.`BIDateId`
+WHERE 
+    -- Dim_Area.Status = 0 AND Dim_Brand.Status = 0
+     (Dim_Brand.BrandId_level1 = ${BrandId} OR ${BrandId}  = 0)
+    AND (`Dim_Area`.`AreaId_level1` = ${AreaId} OR ${AreaId} = 0)
+    AND ( `Dim_Outlet`.`OutletCode` = ${OutLetId} OR ${OutLetId} = 0 )
+    AND ( Dim_BIDate.BIDate = ${todayParam} )]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="checkQty_query" id="checkQty_query" type="sql">
+      <Name>checkQty_query</Name>
+      <Cache duration="3600" enabled="false"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="BrandId" name="BrandId" type="String"/>
+         <Parameter default="OutLetId" name="OutLetId" type="String"/>
+         <Parameter default="AreaId" name="AreaId" type="String"/>
+         <Parameter default="todayParam" name="todayParam" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT
+    CASE WHEN sum(`Fact_SumDay`.`CheckQty`) = 0 THEN '0.0'
+        WHEN  sum(`Fact_SumDay`.`CheckQty`) = NULL THEN '0.0'
+    ELSE ROUND( (sum(`Fact_SumDay`.`CheckQty`) ), 0) END
+FROM
+     `Fact_SumDay` INNER JOIN Dim_Area ON Dim_Area.AreaId = `Fact_SumDay`.`AreaId`
+        INNER JOIN Dim_Brand ON Dim_Brand.BrandId = `Fact_SumDay`.BrandId
+        INNER JOIN Dim_Outlet ON `Dim_Outlet`.`OutletId` = `Fact_SumDay`.OutletId
+        INNER JOIN `Dim_BIDate` ON `Fact_SumDay`.`BIDateId` = `Dim_BIDate`.`BIDateId`
+WHERE 
+    Dim_Area.Status = 0 AND Dim_Brand.Status = 0
+    AND (Dim_Brand.BrandId_level1 = ${BrandId} OR ${BrandId}  = 0 )
+    AND (`Dim_Area`.`AreaId_level1` = ${AreaId} OR ${AreaId} = 0 )
+    AND ( `Dim_Outlet`.`OutletCode` = ${OutLetId} OR ${OutLetId} = 0  )
+    AND ( Dim_BIDate.BIDate = ${todayParam} )]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="checkPrice_query" id="checkPrice_query" type="sql">
+      <Name>checkPrice_query</Name>
+      <Cache duration="3600" enabled="false"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="BrandId" name="BrandId" type="String"/>
+         <Parameter default="AreaId" name="AreaId" type="String"/>
+         <Parameter default="OutLetId" name="OutLetId" type="String"/>
+         <Parameter default="todayParam" name="todayParam" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT
+    CASE WHEN sum(`Fact_SumDay`.`CheckQty`) = 0 THEN '0.0'
+        WHEN  sum(`Fact_SumDay`.`CheckQty`) = NULL THEN '0.0'
+    ELSE ROUND( (sum(`Fact_SumDay`.`SaleAmt`) / sum(`Fact_SumDay`.`CheckQty`)), 2) END
+FROM
+     `Fact_SumDay` INNER JOIN Dim_Area ON Dim_Area.AreaId = `Fact_SumDay`.`AreaId`
+        INNER JOIN Dim_Brand ON Dim_Brand.BrandId = `Fact_SumDay`.BrandId  
+        INNER JOIN Dim_Outlet ON `Dim_Outlet`.`OutletId` = `Fact_SumDay`.OutletId
+        INNER JOIN `Dim_BIDate` ON `Fact_SumDay`.`BIDateId` = `Dim_BIDate`.`BIDateId`
+WHERE 
+    Dim_Area.Status = 0 AND Dim_Brand.Status = 0
+    AND (Dim_Brand.BrandId_level1 = ${BrandId} OR ${BrandId}  = 0 )
+    AND (`Dim_Area`.`AreaId_level1` = ${AreaId} OR ${AreaId} = 0 )
+    AND ( `Dim_Outlet`.`OutletCode` = ${OutLetId} OR ${OutLetId} = 0  )
+    AND ( Dim_BIDate.BIDate = ${todayParam} )]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="guestQty_query" id="guestQty_query" type="sql">
+      <Name>guestQty_query</Name>
+      <Cache duration="3600" enabled="false"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="BrandId" name="BrandId" type="String"/>
+         <Parameter default="OutLetId" name="OutLetId" type="String"/>
+         <Parameter default="AreaId" name="AreaId" type="String"/>
+         <Parameter default="todayParam" name="todayParam" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT
+    CASE WHEN sum(`Fact_SumDay`.`GuestQty`) = 0 THEN '0.0'
+        WHEN  sum(`Fact_SumDay`.`GuestQty`) = NULL THEN '0.0'
+    ELSE ROUND( (sum(`Fact_SumDay`.`GuestQty`) ), 0) END
+FROM
+     `Fact_SumDay` INNER JOIN Dim_Area ON Dim_Area.AreaId = `Fact_SumDay`.`AreaId`
+        INNER JOIN Dim_Brand ON Dim_Brand.BrandId = `Fact_SumDay`.BrandId
+        INNER JOIN Dim_Outlet ON `Dim_Outlet`.`OutletId` = `Fact_SumDay`.OutletId
+        INNER JOIN `Dim_BIDate` ON `Fact_SumDay`.`BIDateId` = `Dim_BIDate`.`BIDateId`
+WHERE 
+    Dim_Area.Status = 0 AND Dim_Brand.Status = 0
+    AND (Dim_Brand.BrandId_level1 = ${BrandId} OR ${BrandId}  = 0 )
+    AND (`Dim_Area`.`AreaId_level1` = ${AreaId} OR ${AreaId} = 0 )
+    AND ( `Dim_Outlet`.`OutletCode` = ${OutLetId} OR ${OutLetId} = 0  )
+    AND ( Dim_BIDate.BIDate = ${todayParam} )]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="guestPrice_query" id="guestPrice_query" type="sql">
+      <Name>guestPrice_query</Name>
+      <Cache duration="3600" enabled="false"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="BrandId" name="BrandId" type="String"/>
+         <Parameter default="AreaId" name="AreaId" type="String"/>
+         <Parameter default="OutLetId" name="OutLetId" type="String"/>
+         <Parameter default="todayParam" name="todayParam" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT
+    CASE WHEN sum(`Fact_SumDay`.`GuestQty`) = 0 THEN '0.0'
+        WHEN  sum(`Fact_SumDay`.`GuestQty`) = NULL THEN '0.0'
+    ELSE ROUND( (sum(`Fact_SumDay`.`SaleAmt`) / sum(`Fact_SumDay`.`GuestQty`)), 2) END
+FROM
+     `Fact_SumDay` INNER JOIN Dim_Area ON Dim_Area.AreaId = `Fact_SumDay`.`AreaId`
+        INNER JOIN Dim_Brand ON Dim_Brand.BrandId = `Fact_SumDay`.BrandId  
+        INNER JOIN Dim_Outlet ON `Dim_Outlet`.`OutletId` = `Fact_SumDay`.OutletId
+        INNER JOIN `Dim_BIDate` ON `Fact_SumDay`.`BIDateId` = `Dim_BIDate`.`BIDateId`
+WHERE 
+    Dim_Area.Status = 0 AND Dim_Brand.Status = 0
+    AND (Dim_Brand.BrandId_level1 = ${BrandId} OR ${BrandId}  = 0 )
+    AND (`Dim_Area`.`AreaId_level1` = ${AreaId} OR ${AreaId} = 0 )
+    AND ( `Dim_Outlet`.`OutletCode` = ${OutLetId} OR ${OutLetId} = 0  )
+    AND ( Dim_BIDate.BIDate = ${todayParam} )]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="guestPrice_query_new" id="guestPrice_query_new"
+               type="sql">
+      <Name>guestPrice_query_new</Name>
+      <Cache duration="3600" enabled="false"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT
+    CONCAT(LPAD(CAST(a.PayTypeClassSeq AS CHAR),10,"0"),LPAD(CAST(a.paytypeseq AS CHAR),10,"0")) AS paytypecode,
+	a.paytypeseq,
+	a.payName ,
+	a.PayAmt
+FROM
+	(
+		SELECT
+				 dim_paytype.paytypeclassseq,
+				 dim_paytype.paytypeseq,
+				 dim_paytype.PayTypeName AS payName,
+				sum(fact_checkpay.PayAmt) AS PayAmt
+		FROM
+				 fact_checkpay,
+				 dim_paytype 
+	    where fact_checkpay.PayTypeId = dim_paytype.PayTypeId
+		GROUP BY
+				 dim_paytype.paytypeclassseq,
+				 dim_paytype.paytypeseq,
+				 dim_paytype.PayTypeName
+		ORDER BY dim_paytype.paytypeclassseq,dim_paytype.paytypeseq  -- fact_checkpay.CheckId, dim_paytype.paytypeclassseq,
+	) AS a
+GROUP BY paytypecode,a.payName,a.paytypeseq,a.PayAmt
+ORDER BY paytypecode,a.payName]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="guestPrice_query_new_new"
+               id="guestPrice_query_new_new"
+               type="sql">
+      <Name>guestPrice_query_new_new</Name>
+      <Cache duration="3600" enabled="false"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT * FROM dim_paytype where status = 0 order by PayTypeClassSeq, PayTypeSeq;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="guestPrice_query_new_new_new"
+               id="guestPrice_query_new_new_new"
+               type="sql">
+      <Name>guestPrice_query_new_new_new</Name>
+      <Cache duration="3600" enabled="false"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT 
+    	a.CheckId,
+		-- b.paytypeclassseq,
+		-- b.paytypeseq,
+        b.paytypecode,
+		a.CheckNo AS checkNo,
+		a.TableNo AS tableNumber,
+		a.OriginalAmount AS receivable,
+		a.ActualAmount AS netReceipts,
+		b.PayTypeName AS payName,
+		b.PayAmt AS PayAmt,
+		a.SCAmt AS SCAmt,
+		a.Service AS service,
+		a.CheckDiscountAmt AS discountAmt,
+		a.DeliveryType AS deliveryType,
+		a.BegTime AS begTime,
+		a.EndTime AS endtime,
+		a.BIDate AS date,
+		a.CashierName AS cashierName,
+		a.CheckOpenStationId AS posNumber,
+		a.GuestQty AS GuestQty,
+		a.PerCapita AS avgprice
+FROM
+	(
+		SELECT DISTINCT
+					fact_check.CheckId, -- 账单ID
+					fact_check.OutletId,  -- 门店ID
+					fact_check.BIDateId,  -- 日期ID
+					-- fact_check.CheckNo AS CheckNo,  
+					CONCAT(fact_check.BIDateId,'-',fact_check.OutletId,'-',fact_check.CheckNo) AS CheckNo,  -- 账单编号
+					fact_check.TableNo AS TableNo,  -- 桌位号
+					fact_check.SaleAmt AS OriginalAmount,  -- 应收金额
+					fact_check.CheckDiscountAmt+fact_check.SaleAmt AS ActualAmount,  -- 实收金额
+					fact_check.SCAmt AS SCAmt,  -- 总服务费
+
+					CASE WHEN fact_check.SaleAmt = 0 THEN '0.0'
+							WHEN  fact_check.SaleAmt = NULL THEN '0.0'
+					ELSE ROUND(fact_check.SCAmt/fact_check.SaleAmt,2) END AS Service,  -- 服务费率
+
+					-- fact_check.SCAmt/fact_check.SaleAmt AS Service1,  -- 服务费率
+
+					fact_check.CheckDiscountAmt AS CheckDiscountAmt,  -- 折扣金额
+					dim_channel.DeliveryType AS DeliveryType,  -- 营业区
+					fact_check.BegTime AS BegTime,  -- 开桌时间
+					fact_check.EndTime AS EndTime,  -- 结束时间
+					dim_bidate.BIDate AS BIDate,  -- 结账日期
+					dim_user.UserName AS CashierName,  -- 收款员
+					-- fact_check.CheckOpenStationId AS CheckOpenStationId,  -- POS机号
+					dim_workstation.StationCode AS CheckOpenStationId,  -- POS机号
+					fact_check.GuestQty AS GuestQty,  -- 消费客数
+
+					-- fact_check.SaleAmt / fact_check.GuestQty AS PerCapita1,  -- 人均消费 
+
+					CASE WHEN fact_check.GuestQty = 0 THEN '0.0'
+							WHEN  fact_check.GuestQty = NULL THEN '0.0'
+					ELSE ROUND(fact_check.SaleAmt/fact_check.GuestQty,2) END AS PerCapita  -- 人均消费
+
+		FROM
+					fact_check INNER JOIN dim_channel ON dim_channel.ChannelId = fact_check.ChannelId
+						INNER JOIN dim_bidate ON dim_bidate.BIDateId = fact_check.BIDateId
+						LEFT JOIN dim_user ON dim_user.UserId = fact_check.CashierId
+						LEFT JOIN dim_outlet ON dim_outlet.OutletId_t = fact_check.OutletId_t
+						INNER JOIN dim_area ON dim_area.AreaId = dim_outlet.AreaId	
+						INNER JOIN dim_workstation ON dim_workstation.StationId = fact_check.CheckOpenStationId
+							 
+		ORDER BY
+					fact_check.CheckId ASC
+	) AS a
+  INNER JOIN
+	(
+		SELECT
+				 fact_checkpay.OutletId,
+				 fact_checkpay.BIDateId,
+				 fact_checkpay.CheckId,
+                 CONCAT(LPAD(CAST(dim_paytype.PayTypeClassSeq AS CHAR),10,"0"),LPAD(CAST(dim_paytype.paytypeseq AS CHAR),10,"0")) AS paytypecode,
+				 dim_paytype.paytypeclassseq,
+				 dim_paytype.paytypeseq,
+                 dim_paytype.PayTypeName,
+				sum(fact_checkpay.PayAmt) AS PayAmt
+		FROM
+				 fact_checkpay,
+				 dim_paytype 
+	    where fact_checkpay.PayTypeId = dim_paytype.PayTypeId
+		GROUP BY
+				 fact_checkpay.OutletId,
+				 fact_checkpay.BIDateId,
+				 fact_checkpay.CheckId,
+				 dim_paytype.PayTypeName,
+				 dim_paytype.paytypeclassseq,
+				 dim_paytype.paytypeseq
+		ORDER BY fact_checkpay.CheckId,paytypecode -- dim_paytype.paytypeclassseq,dim_paytype.paytypeseq
+	) AS b ON a.CheckId = b.CheckId
+ -- WHERE a.BIDateId = "20170111" 
+ORDER BY  b.paytypecode -- b.paytypeclassseq,b.paytypeseq -- a.CheckId,]]></Query>
+   </DataAccess>
+</CDADescriptor>

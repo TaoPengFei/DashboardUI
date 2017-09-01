@@ -1,0 +1,606 @@
+/* ====================================== */
+/* ========== STEEL WHEELS CSS ========== */
+/* ====================================== */
+
+
+/* ================ FONTS =============== */
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src:  local('Open Sans Light'), 
+        local('OpenSans-Light'),
+        /* CE */
+        url('../../../../../system/common-ui/resources/themes/crystal/opensans-light.eot') format('embedded-opentype'),
+        url('../../../../../system/common-ui/resources/themes/crystal/opensans-light.woff') format('woff'),
+        url('../../../../../system/common-ui/resources/themes/crystal/opensans-light.ttf') format('truetype'),
+        url('../../../../../system/common-ui/resources/themes/crystal/opensans-light.svg#OpenSansLight') format('svg');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src:  local('Open Sans'), 
+        local('OpenSans'),
+        /* CE */
+        url('../../../../../system/common-ui/resources/themes/crystal/opensans-regular.eot') format('embedded-opentype'),
+        url('../../../../../system/common-ui/resources/themes/crystal/opensans-regular.woff') format('woff'),
+        url('../../../../../system/common-ui/resources/themes/crystal/opensans-regular.ttf') format('truetype'),
+        url('../../../../../system/common-ui/resources/themes/crystal/opensans-regular.svg#OpenSansRegular') format('svg');
+}
+
+
+/* ================ GENERAL STYLES ================ */
+/*
+html {
+    overflow-y: scroll;
+    height: 100%;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    background: #FFFFFF;
+    position: relative;
+    min-height: 100%;
+    padding-bottom: 45px;
+    color: #343E47;
+}
+
+.container {
+    width: 1107px;
+}
+*/
+
+/* ================ HEADER ================ */
+
+/* full width div to decorate header background */
+/*.headerBackground {
+    width: 100%;
+    min-width: 1280px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    background: url('../img/header-bg.png') repeat-x left top;  
+    margin: 0;
+}
+
+.headerRow {
+    height: 80px;
+   
+}
+
+.headerRow .pentahoLogo a {
+    height: 42px;
+    margin-top: 29px;
+    width: 157px;
+    display: inline-block;
+    background: url('../img/pentaho-logo.svg') repeat-x left center;    
+}
+
+.no-svg .headerRow .pentahoLogo a {
+    background: url('../img/pentaho-logo.png') repeat-x left center; 
+
+} 
+.welcomeMsg p {
+    margin: 40px 0;
+    padding: 0;
+    line-height: 20px;
+    font-size: 25px;
+    border-left: 1px solid #C6C6C6;
+    padding-left: 20px;
+}
+
+.welcomeMsg p .username {
+    color: #005CA7;
+}
+*/
+/* ================ FOOTER ================ */
+
+/*.footer {
+    width: 100%;
+    min-width: 1280px;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    background: url('../img/footer-bg.png') repeat-x left top;
+    margin: 0;
+}
+*/
+/* ================ DASHBOARD ================ */
+
+/* dashboard title */
+.titleObj {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 25px;
+    padding-bottom: 0px;
+    line-height: 24px;
+    font-weight: 900;
+   /* border-bottom: 1px solid #E6E6E6;*/
+}
+
+/* sections sub-titles */
+.subTitle {
+    padding: 8px 0;
+    color: #666666;
+   /* border-bottom: 1px solid #E6E6E6;*/
+    line-height: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+/* kpi column */
+
+.charlegendColumn{
+    border-left:1px solid silver;
+    border-top:1px solid silver;
+    border-bottom:1px solid silver;
+    border-right:1px solid silver;
+    height:612px;
+    width:770px;
+    } 
+    
+.kpiColumn{
+    border-left:1px solid silver;
+    border-top:1px solid silver;
+    border-bottom:1px solid silver;
+    border-right:1px solid silver; 
+    width:350px;
+    height:200px;
+    margin-left:38px;
+} 
+
+.kpiContainer {
+    padding-bottom: 20px;
+}
+
+
+/*.kpiColumn {
+    border-bottom: 1px solid #E6E6E6;
+    padding-bottom: 10px;
+}
+*/
+.radioButtonObj {
+    margin-top:-45px;
+    padding: 5px 0;
+}
+
+.radioButtonObj button {
+    padding-left: 20px;
+    background: none;
+    border: none;
+    outline: 0;
+    box-shadow: none;
+    color: #666666;
+    position: relative;
+}
+
+.radioButtonObj button:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -6px;
+    width: 12px;
+    height: 12px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 1px solid #CCCCCC;
+    
+    -webkit-transition: all .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+      -msie-transition: all .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+       -moz-transition: all .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+         -o-transition: all .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+            transition: all .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+}
+
+.radioButtonObj button:after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 50%;
+    margin-top: -2px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    background: #343E47;
+    
+    -webkit-transition: all .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+      -msie-transition: all .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+       -moz-transition: all .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+         -o-transition: all .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+            transition: all .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+}
+.opacity .radioButtonObj button:after {
+    opacity: 0;
+}
+.no-opacity .radioButtonObj button:after {
+    display: none; /* ie8 fix */
+}
+
+.radioButtonObj button.active {
+    cursor: default;
+}
+
+.radioButtonObj button.active:after {
+    /* ie8 fix */
+    content: ' ';
+}
+
+.radioButtonObj button:hover:before {
+    border: 1px solid #343E47;
+}
+
+.radioButtonObj button.active:hover:before {
+    border: 1px solid #CCCCCC;
+}
+
+.opacity .radioButtonObj button.active:after {
+    opacity: 1;
+}
+.no-opacity .radioButtonObj button.active:after {
+    display: block; /* ie8 fix */
+}
+
+.kpiValueObj {
+    font-size: 16px;
+    height: 34px;
+    margin-left: 25px;
+    margin-bottom:-5px;
+    margin-top:5px;
+}
+
+.kpiChart {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.centerRow {
+    display: none;
+    margin: 50px 0;
+}
+
+
+/* ================ LEGEND ================ */
+
+.legendObj table.dataTable thead {
+    display: none;
+}
+
+.legendObj table.dataTable {
+    border: none;    
+    margin-top: 6px;
+}
+
+.legendObj table.dataTable > tbody > tr > td {
+    border: none;
+    background: none;
+    text-align: right;
+    font-size: 12px;
+    right: 20px;
+    padding: 6px 32px 6px 0;
+    height: 32px;
+    position: relative;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    cursor: pointer;
+}
+
+/*.legendObj table.dataTable > tbody > tr > td:after {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    content: '';
+    right: 0;
+    top: 50%;
+    margin-right: 8px;
+    margin-top: -10px;
+    background: url('../img/check.svg') no-repeat center center;
+}
+
+*/
+.legendObj table.dataTable > tbody > tr > td:after {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    content: '';
+    right: 0;
+    top: 50%;
+    margin-right: 8px;
+    margin-top: -10px;
+    -moz-border-radius: 20px / 10px;
+    -webkit-border-radius: 20px / 10px;
+    border-radius: 20px / 10px;
+    background: url('../img/check.svg') no-repeat center center;
+}
+
+.no-svg .legendObj table.dataTable > tbody > tr > td:after {
+    background: url('../img/check.png') no-repeat center center; /* ie8 fix - use png instead of svg */
+}
+
+.legendObj table.dataTable > tbody > tr.disabled > td:after {
+    content: ' '; /* ie8 fix */
+    background: none;
+}
+
+/* Use classes created on legendTable's "Draw Function" to style checkboxes' background color */
+
+.legendObj table.dataTable > tbody > tr.row0 > td:after {
+    background-color: #2361AC;
+}
+.legendObj table.dataTable > tbody > tr.row1 > td:after {
+    background-color: #0B7CC2;
+}
+.legendObj table.dataTable > tbody > tr.row2 > td:after {
+    background-color: #29A7E2;
+}
+.legendObj table.dataTable > tbody > tr.row3 > td:after {
+    background-color: #A3D7D5;
+}
+.legendObj table.dataTable > tbody > tr.row4 > td:after {
+    background-color: #8EC21F;
+}
+.legendObj table.dataTable > tbody > tr.row5 > td:after {
+    background-color: #AE6409;
+}
+.legendObj table.dataTable > tbody > tr.row6 > td:after {
+    background-color: #FB96C2 ;
+}
+.legendObj table.dataTable > tbody > tr.row7 > td:after {
+    background-color: #66C2A5;
+}
+.legendObj table.dataTable > tbody > tr.row8 > td:after {
+    background-color: #5C9FBC;
+}
+.legendObj table.dataTable > tbody > tr.row9 > td:after {
+    background-color: #3E83B7;
+}
+.legendObj table.dataTable > tbody > tr.row10 > td:after {
+    background-color: #005CA7;
+}
+
+/* ================ DATE RANGE ================ */
+
+.dateObj {
+    margin-top: 40px;
+    margin-right: 45%; 
+}
+
+.dateObj .chzn-container {
+    width: 100px !important;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    float: right;
+}
+
+.dateObj .chzn-container-single .chzn-single {
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding-left: 36px;
+    background: none;
+    filter: none;
+    color: #666;
+    border-radius: 0;
+    
+    -webkit-transition: all .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+      -msie-transition: all .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+       -moz-transition: all .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+         -o-transition: all .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+            transition: all .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+}
+
+.dateObj .chzn-container-single .chzn-single:before {
+    width: 23px;
+    height: 20px;
+    left: 3px;
+    top: 50%;
+    margin-top: -11px;
+    position: absolute;
+    content: '';
+    background: url('../img/calendar.svg') no-repeat center center;
+    z-index: 1;
+    
+    -webkit-transition: all .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+      -msie-transition: all .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+       -moz-transition: all .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+         -o-transition: all .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+            transition: all .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+}
+.no-svg .dateObj .chzn-container-single .chzn-single:before {
+    background: url('../img/calendar.png') no-repeat center center; /* ie8 fix - use png instead of svg */
+}
+
+.dateObj .chzn-container-single .chzn-single:hover:before,
+.dateObj .chzn-container-single .chzn-single-with-drop:before {
+    content: ' ';
+}
+
+.opacity .dateObj .chzn-container-single .chzn-single:hover:before,
+.opacity .dateObj .chzn-container-single .chzn-single-with-drop:before {
+    opacity: 0;
+}
+
+.dateObj .chzn-container-single .chzn-single:after {
+    width: 23px;
+    height: 20px;
+    left: 3px;
+    top: 50%;
+    margin-top: -11px;
+    position: absolute;
+    content: '';
+    background: url('../img/calendar-hover.svg') no-repeat center center;
+    z-index: 2;
+    
+    -webkit-transition: all .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+      -msie-transition: all .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+       -moz-transition: all .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+         -o-transition: all .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+            transition: all .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+}
+.opacity .dateObj .chzn-container-single .chzn-single:after {
+    opacity: 0;
+}
+.no-svg .dateObj .chzn-container-single .chzn-single:after {
+    background: url('../img/calendar-hover.png') no-repeat center center; /* ie8 fix - use png instead of svg */
+}
+.no-opacity .dateObj .chzn-container-single .chzn-single:after {
+    display: none; /* ie8 fix */
+}
+
+.no-opacity .dateObj .chzn-container-single .chzn-single:hover:after,
+.no-opacity .dateObj .chzn-container-single .chzn-single-with-drop:after {
+    display: block; /* ie8 fix */
+}
+
+.opacity .dateObj .chzn-container-single .chzn-single:hover:after,
+.opacity .dateObj .chzn-container-single .chzn-single-with-drop:after {
+    opacity: 1;
+}
+
+.dateObj .chzn-container-single .chzn-single:hover,
+.dateObj .chzn-container-single .chzn-single.chzn-single-with-drop {
+    background: #005CA7;
+    color: #FFF;
+}
+
+.dateObj .chzn-container-single .chzn-single span {
+    color: #666;
+    margin-right: 10px;
+    
+    -webkit-transition: all .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+      -msie-transition: all .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+       -moz-transition: all .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+         -o-transition: all .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+            transition: all .5s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+}
+
+.dateObj .chzn-container-single .chzn-single:hover span,
+.dateObj .chzn-container-single .chzn-single-with-drop span {
+    color: #FFF;
+}
+
+.dateObj .chzn-container-single .chzn-single:focus {
+    outline: 0;
+}
+
+.dateObj .chzn-container-single .chzn-drop {
+    width: 100% !important;
+    background: #FFF;
+    border: 1px solid #D1D7DA;
+    padding: 15px;
+    text-align: left;
+    border-radius: 0;
+    margin-top: 1px;
+}
+
+.dateObj .chzn-container .chzn-results {
+    padding: 0;
+    margin: 0;
+}
+
+.dateObj .chzn-container .chzn-results .highlighted {
+    background: #005CA7;
+}
+
+.dateObj .chzn-container-single .chzn-single div {
+    background: none;
+    border: none;
+    display: none;
+}
+
+.dateObj .chzn-container-single .chzn-search {
+    display: none;
+}
+
+
+/* ================ CHART TOOLTIP ================ */
+
+.tipsy-inner {
+    background: #FFFFFF;
+    font-family: 'Open Sans', Arial, sans-serif;
+    border: 1px solid #E6E6E6;
+    -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,.2);
+      -msie-box-shadow: 1px 1px 2px rgba(0,0,0,.2);
+       -moz-box-shadow: 1px 1px 2px rgba(0,0,0,.2);
+         -o-box-shadow: 1px 1px 2px rgba(0,0,0,.2);
+            box-shadow: 1px 1px 2px rgba(0,0,0,.2);
+    padding: 10px 15px 11px;
+    color: #4D4D4D;
+}
+
+.tooltipContainer .tooltipTitle {
+    color: #666666;
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1;
+    margin-bottom: 3px;
+    line-height: 16px;
+}
+
+.tooltipContainer .tooltipSubtitle {
+    color: #666666;
+    display: block;
+    text-align: center;
+    font-size: 9px;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.tooltipContainer .tooltipValue {
+    display: block;
+    text-align: center;
+    font-weight: 300;
+    line-height: 1;    
+    font-size: 24px;
+    color: #343E47;
+}
+
+.tooltipContainer .tooltipValue.涓昏彍 {
+    color: #2361AC;
+}
+.tooltipContainer .tooltipValue.娴烽矞 {
+    color: #0B7CC2;
+}
+.tooltipContainer .tooltipValue.鐏攨 {
+    color: #29A7E2;
+}
+.tooltipContainer .tooltipValue.鐢滅偣椁愭堡 {
+    color: #A3D7D5;
+}
+.tooltipContainer .tooltipValue.閰掓按楗枡 {
+    color: #8EC21F;
+}
+.tooltipContainer .tooltipValue.catgory6 {
+    color: #FFB5B5;
+}
+.tooltipContainer .tooltipValue.catgory7 {
+    color: #FF0000;
+}
+.tooltipContainer .tooltipValue.catgory8 {
+    color: #930000;
+}.tooltipContainer .tooltipValue.catgory9 {
+    color: #E6CAFF;
+}
+.tooltipContainer .tooltipValue.catgory10 {
+    color: #B15BFF;
+}
+.tooltipContainer .tooltipValue.catgory11 {
+    color: #6F00D2;
+}

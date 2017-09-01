@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="query_1_amount" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="query_1_up" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="query_1_down" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="query_1" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="query_2" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="query_3" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="query_3_single" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="query_3_per" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="firstBar" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="secondBar" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="discountTypeQuery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" connection="query_1_amount" id="query_1_amount" type="sql">
+      <Name>query_1_amount</Name>
+      <Cache duration="3600" enabled="false"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="button_event" name="button_event" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT
+    -- ROUND( ( SUM(`Fact_SumItem`.`ItemSaleAmt`) ) ,2)
+    
+    CASE WHEN SUM(`Fact_SumItem`.`ItemSaleAmt`) = 0 THEN '0.0'
+        WHEN  SUM(`Fact_SumItem`.`ItemSaleAmt`) = NULL THEN '0.0'
+    ELSE ROUND( SUM(`Fact_SumItem`.`ItemSaleAmt`) ,2) END AS t1
+FROM
+	`Fact_SumItem` INNER JOIN `Dim_Outlet` ON `Fact_SumItem`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`
+    INNER JOIN `Dim_BIDate` ON `Fact_SumItem`.`BIDateId` = `Dim_BIDate`.`BIDateId`
+WHERE
+    ( ${button_event} = 0 AND `Dim_BIDate`.`BIDate` = DATE(NOW()) )
+    OR ( ${button_event} = 1 AND `Dim_BIDate`.`BIDate` = date_sub(curdate(),interval 1 day)  )
+	OR ( ${button_event} = 7 AND `Dim_BIDate`.`BIDate` >= DATE_SUB(CURDATE(),INTERVAL WEEKDAY(CURDATE()) DAY) AND `Dim_BIDate`.`BIDate` <= DATE_SUB(CURDATE(),INTERVAL WEEKDAY(CURDATE()) - 6 DAY) )
+    OR ( ${button_event} = 30 AND `Dim_BIDate`.`BIDate` >= DATE_ADD(CURDATE(),INTERVAL -DAY(CURDATE())+1 DAY) AND `Dim_BIDate`.`BIDate` <= LAST_DAY(CURDATE()) )]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="query_1_up" id="query_1_up" type="sql">
+      <Name>query_1_up</Name>
+      <Cache duration="3600" enabled="false"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="button_event" name="button_event" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT 
+    -- ROUND( ( (t1-t2) / if(t2 = 0,1,t2) )*100, 2 ) AS tb    -- 同比
+    CASE WHEN t2 = 0 THEN '0.00'
+        WHEN  t2 = NULL THEN '0.00'
+   ELSE ROUND(((t1-t2) / t2)*100,2) END AS RATIO
+FROM
+    (
+	SELECT 
+		SUM(CASE WHEN ( ${button_event} = 0 AND `Dim_BIDate`.`BIDate` = DATE(NOW())  )
+					OR ( ${button_event} = 1 AND `Dim_BIDate`.`BIDate` = date_sub(curdate(),interval 1 day)  )
+                    OR ( ${button_event} = 7 AND `Dim_BIDate`.`BIDate` >= DATE_SUB(CURDATE(),INTERVAL WEEKDAY(CURDATE()) DAY) AND `Dim_BIDate`.`BIDate` <= DATE_SUB(CURDATE(),INTERVAL WEEKDAY(CURDATE()) - 6 DAY) )
+					OR ( ${button_event} = 30 AND  `Dim_BIDate`.`BIDate` >= DATE_ADD(CURDATE(),INTERVAL -DAY(CURDATE())+1 DAY) AND `Dim_BIDate`.`BIDate` <= LAST_DAY(CURDATE())	) 
+			THEN `Fact_SumItem`.`ItemSaleAmt` ELSE 0 END ) AS t1, -- 当期金额 
+		SUM(CASE WHEN ( ${button_event} = 0 AND `Dim_BIDate`.`BIDate` = STR_TO_DATE(DATE_FORMAT(DATE_ADD(NOW(),INTERVAL -1 YEAR),'%Y-%m-%d'),'%Y-%m-%d') )
+					OR ( ${button_event} = 1 AND `Dim_BIDate`.`BIDate` = DATE_SUB(STR_TO_DATE(DATE_FORMAT(DATE_ADD(NOW(),INTERVAL -1 YEAR),'%Y-%m-%d'),'%Y-%m-%d'),INTERVAL 1 DAY) )
+					OR ( ${button_event} = 7 AND `Dim_BIDate`.`BIDate` >= DATE_SUB(DATE_FORMAT(DATE_ADD(NOW(),INTERVAL -1 YEAR),'%Y-%m-%d'),INTERVAL WEEKDAY(DATE_FORMAT(DATE_ADD(NOW(),INTERVAL -1 YEAR),'%Y-%m-%d')) DAY) AND `Dim_BIDate`.`BIDate` <= DATE_SUB(DATE_FORMAT(DATE_ADD(NOW(),INTERVAL -1 YEAR),'%Y-%m-%d'),INTERVAL WEEKDAY(DATE_FORMAT(DATE_ADD(NOW(),INTERVAL -1 YEAR),'%Y-%m-%d')) - 6 DAY)	)
+					OR ( ${button_event} = 30 AND `Dim_BIDate`.`YearNo` = DATE_FORMAT( DATE_FORMAT(DATE_ADD(NOW(),INTERVAL -1 YEAR),'%Y-%m-%d'),'%Y' ) AND `Dim_BIDate`.`MonthNo` = MONTH(DATE_FORMAT(DATE_ADD(NOW(),INTERVAL -1 YEAR),'%Y-%m-%d')) ) 
+			THEN `Fact_SumItem`.`ItemSaleAmt` ELSE 0 END ) AS t2 -- 同期金额
+	FROM
+		`Fact_SumItem` INNER JOIN `Dim_Outlet` ON `Fact_SumItem`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`
+		INNER JOIN `Dim_BIDate` ON `Fact_SumItem`.`BIDateId` = `Dim_BIDate`.`BIDateId`
+) AS tbl;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="query_1_down" id="query_1_down" type="sql">
+      <Name>query_1_down</Name>
+      <Cache duration="3600" enabled="false"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="button_event" name="button_event" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT 
+    CASE WHEN t2 = 0 THEN '0.00'
+        WHEN  t2 = NULL THEN '0.00'
+   ELSE ROUND(((t1-t2) / t2)*100,2) END AS RATIO
+FROM
+    (
+    SELECT 
+		SUM(CASE WHEN ( ${button_event} = 0 AND `Dim_BIDate`.`BIDate` = DATE(NOW())  )
+								OR ( ${button_event} = 1 AND `Dim_BIDate`.`BIDate` = date_sub(curdate(),interval 1 day)  )
+                                OR ( ${button_event} = 7 AND `Dim_BIDate`.`BIDate` >= DATE_SUB(CURDATE(),INTERVAL WEEKDAY(CURDATE()) DAY) AND `Dim_BIDate`.`BIDate` <= DATE_SUB(CURDATE(),INTERVAL WEEKDAY(CURDATE()) - 6 DAY) )
+								OR ( ${button_event} = 30 AND  `Dim_BIDate`.`BIDate` >= DATE_ADD(CURDATE(),INTERVAL -DAY(CURDATE())+1 DAY) AND `Dim_BIDate`.`BIDate` <= LAST_DAY(CURDATE())	) 
+				THEN `Fact_SumItem`.`ItemSaleAmt` ELSE 0 END ) AS t1, -- 当期金额 
+		SUM(CASE WHEN ( ${button_event} = 0 AND Fact_SumItem.BiDateId = DATE_SUB(current_date(),INTERVAL 1 DAY) )
+								OR ( ${button_event} = 1 AND `Dim_BIDate`.`BIDate` = DATE_SUB(DATE_SUB(current_date(),INTERVAL 1 DAY),INTERVAL 1 MONTH) )
+								OR ( ${button_event} = 7 AND `Dim_BIDate`.`BIDate` >= DATE_SUB(SUBDATE(CURDATE(),WEEKDAY(CURDATE())),INTERVAL 7 DAY) AND `Dim_BIDate`.`BIDate` <= DATE_SUB(SUBDATE(CURDATE(),WEEKDAY(CURDATE())),INTERVAL 1 DAY)	)
+								OR ( ${button_event} = 30 AND  `Dim_BIDate`.`YearNo` = YEAR(DATE(NOW())) AND `Dim_BIDate`.`MonthNo` = MONTH(DATE_SUB(curdate(), INTERVAL 1 MONTH))) 
+				THEN `Fact_SumItem`.`ItemSaleAmt` ELSE 0 END ) AS t2
+		
+	FROM
+			`Fact_SumItem` INNER JOIN `Dim_Outlet` ON `Fact_SumItem`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`
+			INNER JOIN `Dim_BIDate` ON `Fact_SumItem`.`BIDateId` = `Dim_BIDate`.`BIDateId`
+) AS tbl;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="query_1" id="query_1" type="sql">
+      <Name>query_1</Name>
+      <Cache duration="3600" enabled="false"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="button_event" name="button_event" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT SY_SaleName.IdName AS IdName,
+        CASE WHEN SY_SaleName.Id = 1 THEN SaleCostAmt ELSE GrossProfitAmt END AS value
+FROM
+    (
+		SELECT
+             sum(`Fact_SumItem`.`SaleCostAmt`) AS SaleCostAmt,
+             sum(`Fact_SumItem`.`GrossProfitAmt`) AS GrossProfitAmt
+        FROM
+             `Fact_SumItem` INNER JOIN `Dim_ItemCategory` ON `Fact_SumItem`.`ItemCatId` = `Dim_ItemCategory`.`ItemCatId`
+             INNER JOIN `Dim_BIDate` ON `Fact_SumItem`.`BIDateId` = `Dim_BIDate`.`BIDateId`
+             INNER JOIN `Dim_Outlet` ON `Fact_SumItem`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`
+        WHERE
+            ( ${button_event} = 0 AND `Dim_BIDate`.`BIDate` = DATE(NOW()) )
+            OR ( ${button_event} = 1 AND `Dim_BIDate`.`BIDate` = date_sub(curdate(),interval 1 day)  )
+            OR ( ${button_event} = 7 AND `Dim_BIDate`.`BIDate` >= DATE_SUB(CURDATE(),INTERVAL WEEKDAY(CURDATE()) DAY) AND `Dim_BIDate`.`BIDate` <= DATE_SUB(CURDATE(),INTERVAL WEEKDAY(CURDATE()) - 6 DAY) )
+            OR ( ${button_event} = 30 AND `Dim_BIDate`.`BIDate` >= DATE_ADD(CURDATE(),INTERVAL -DAY(CURDATE())+1 DAY) AND `Dim_BIDate`.`BIDate` <= LAST_DAY(CURDATE()) )
+    )AS tbl JOIN SY_SaleName WHERE SY_SaleName.Id IN (1,2);]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="query_2" id="query_2" type="sql">
+      <Name>query_2</Name>
+      <Cache duration="3600" enabled="false"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="button_event" name="button_event" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT DISTINCT
+     `Dim_ItemCategory`.`ItemCatName_level1`,
+     sum(`Fact_SumItem`.`ItemSaleAmt`)
+FROM
+     `Fact_SumItem` INNER JOIN `Dim_ItemCategory` ON `Fact_SumItem`.`ItemCatId` = `Dim_ItemCategory`.`ItemCatId`
+     INNER JOIN `Dim_BIDate` ON `Fact_SumItem`.`BIDateId` = `Dim_BIDate`.`BIDateId`
+     INNER JOIN `Dim_Outlet` ON `Fact_SumItem`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`
+WHERE
+    ( ${button_event} = 0 AND `Dim_BIDate`.`BIDate` >= DATE(NOW()) AND `Dim_BIDate`.`BIDate` <= DATE(NOW()) )
+    OR ( ${button_event} = 1 AND `Dim_BIDate`.`BIDate` >= date_sub(curdate(),interval 1 day) AND `Dim_BIDate`.`BIDate` <= date_sub(curdate(),interval 1 day) )
+    OR ( ${button_event} = 7 AND `Dim_BIDate`.`BIDate` >= DATE_SUB(CURDATE(),INTERVAL WEEKDAY(CURDATE()) DAY) AND `Dim_BIDate`.`BIDate` <= DATE_SUB(CURDATE(),INTERVAL WEEKDAY(CURDATE()) - 6 DAY) )
+    OR ( ${button_event} = 30 AND `Dim_BIDate`.`BIDate` >= DATE_ADD(CURDATE(),INTERVAL -DAY(CURDATE())+1 DAY) AND `Dim_BIDate`.`BIDate` <= LAST_DAY(CURDATE()) )
+GROUP BY
+     `Dim_ItemCategory`.`ItemCatName_level1`
+ORDER BY
+     `Dim_ItemCategory`.`ItemCatName_level1` ASC]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="query_3" id="query_3" type="sql">
+      <Name>query_3</Name>
+      <Cache duration="3600" enabled="false"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="button_event" name="button_event" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT SY_SaleName.IdName AS IdName,
+        CASE WHEN SY_SaleName.Id = 3 THEN CheckQty ELSE GuestQty END AS value
+FROM
+    (
+    	SELECT
+				 sum(`Fact_SumDay`.`CheckQty`) AS CheckQty,
+				 sum(`Fact_SumDay`.`GuestQty`) AS GuestQty
+		FROM
+				 `Fact_SumDay` INNER JOIN `Dim_BIDate` ON `Fact_SumDay`.`BIDateId` = `Dim_BIDate`.`BIDateId`
+				 INNER JOIN `Dim_Outlet` ON `Fact_SumDay`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`
+		WHERE
+            ( ${button_event} = 0 AND `Dim_BIDate`.`BIDate` = DATE(NOW()) )
+            OR ( ${button_event} = 1 AND `Dim_BIDate`.`BIDate` = date_sub(curdate(),interval 1 day)  )
+			 OR ( ${button_event} = 7 AND `Dim_BIDate`.`BIDate` >= DATE_SUB(CURDATE(),INTERVAL WEEKDAY(CURDATE()) DAY) AND `Dim_BIDate`.`BIDate` <= DATE_SUB(CURDATE(),INTERVAL WEEKDAY(CURDATE()) - 6 DAY) )
+            OR ( ${button_event} = 30 AND `Dim_BIDate`.`BIDate` >= DATE_ADD(CURDATE(),INTERVAL -DAY(CURDATE())+1 DAY) AND `Dim_BIDate`.`BIDate` <= LAST_DAY(CURDATE()) )
+    )AS tbl JOIN SY_SaleName WHERE SY_SaleName.Id IN (3,4);]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="query_3_single" id="query_3_single" type="sql">
+      <Name>query_3_single</Name>
+      <Cache duration="3600" enabled="false"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="button_event" name="button_event" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT 
+    CASE WHEN SUM(Fact_SumDay.CheckQty) = 0 THEN '0.00'
+        WHEN  SUM(Fact_SumDay.CheckQty) = NULL THEN '0.00'
+   ELSE ROUND( ( SUM(Fact_SumDay.SaleAmt) / SUM(Fact_SumDay.CheckQty) ) ,2) END AS t1    -- 单笔消费
+FROM
+    `Fact_SumDay` INNER JOIN `Dim_BIDate` ON `Fact_SumDay`.`BIDateId` = `Dim_BIDate`.`BIDateId`
+	INNER JOIN `Dim_Outlet` ON `Fact_SumDay`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`
+WHERE
+    ( ${button_event} = 0 AND `Dim_BIDate`.`BIDate` = DATE(NOW()) )
+    OR ( ${button_event} = 1 AND `Dim_BIDate`.`BIDate` = date_sub(curdate(),interval 1 day)  )
+	OR ( ${button_event} = 7 AND `Dim_BIDate`.`BIDate` >= DATE_SUB(CURDATE(),INTERVAL WEEKDAY(CURDATE()) DAY) AND `Dim_BIDate`.`BIDate` <= DATE_SUB(CURDATE(),INTERVAL WEEKDAY(CURDATE()) - 6 DAY) )
+    OR ( ${button_event} = 30 AND `Dim_BIDate`.`BIDate` >= DATE_ADD(CURDATE(),INTERVAL -DAY(CURDATE())+1 DAY) AND `Dim_BIDate`.`BIDate` <= LAST_DAY(CURDATE()) )]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="query_3_per" id="query_3_per" type="sql">
+      <Name>query_3_per</Name>
+      <Cache duration="3600" enabled="false"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="button_event" name="button_event" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT 
+    CASE WHEN SUM(Fact_SumDay.GuestQty) = 0 THEN '0.00'
+        WHEN  SUM(Fact_SumDay.GuestQty) = NULL THEN '0.00'
+   ELSE ROUND( ( SUM(Fact_SumDay.SaleAmt) / SUM(Fact_SumDay.GuestQty) ) ,2) END AS t2    -- 人均消费
+FROM
+    `Fact_SumDay` INNER JOIN `Dim_BIDate` ON `Fact_SumDay`.`BIDateId` = `Dim_BIDate`.`BIDateId`
+    INNER JOIN `Dim_Outlet` ON `Fact_SumDay`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`
+WHERE
+    ( ${button_event} = 0 AND `Dim_BIDate`.`BIDate` = DATE(NOW()) )
+    OR ( ${button_event} = 1 AND `Dim_BIDate`.`BIDate` = date_sub(curdate(),interval 1 day)  )
+	OR ( ${button_event} = 7 AND `Dim_BIDate`.`BIDate` >= DATE_SUB(CURDATE(),INTERVAL WEEKDAY(CURDATE()) DAY) AND `Dim_BIDate`.`BIDate` <= DATE_SUB(CURDATE(),INTERVAL WEEKDAY(CURDATE()) - 6 DAY) )
+    OR ( ${button_event} = 30 AND `Dim_BIDate`.`BIDate` >= DATE_ADD(CURDATE(),INTERVAL -DAY(CURDATE())+1 DAY) AND `Dim_BIDate`.`BIDate` <= LAST_DAY(CURDATE()) )]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="firstBar" id="firstBar" type="sql">
+      <Name>firstBar</Name>
+      <Cache duration="3600" enabled="false"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="button_event" name="button_event" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT DISTINCT
+     `Dim_BITime`.`HourNo`,
+     sum(`Fact_SumItem`.`ItemSaleAmt`)
+FROM
+     `Fact_SumItem` INNER JOIN `Dim_BIDate` ON `Fact_SumItem`.`BIDateId` = `Dim_BIDate`.`BIDateId`
+     INNER JOIN `Dim_BITime` ON `Fact_SumItem`.`CheckOpenTimeId` = `Dim_BITime`.`BITimeId`
+WHERE
+    ( ${button_event} = 0 AND `Dim_BIDate`.`BIDate` = DATE(NOW()) )
+    OR ( ${button_event} = 1 AND `Dim_BIDate`.`BIDate` = date_sub(curdate(),interval 1 day)  )
+    OR ( ${button_event} = 7 AND `Dim_BIDate`.`BIDate` >= DATE_SUB(CURDATE(),INTERVAL WEEKDAY(CURDATE()) DAY) AND `Dim_BIDate`.`BIDate` <= DATE_SUB(CURDATE(),INTERVAL WEEKDAY(CURDATE()) - 6 DAY) )
+    OR ( ${button_event} = 30 AND `Dim_BIDate`.`BIDate` >= DATE_ADD(CURDATE(),INTERVAL -DAY(CURDATE())+1 DAY) AND `Dim_BIDate`.`BIDate` <= LAST_DAY(CURDATE()) )
+GROUP BY
+     `Dim_BITime`.`HourNo`
+ORDER BY
+     `Dim_BITime`.`HourNo` ASC]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="secondBar" id="secondBar" type="sql">
+      <Name>secondBar</Name>
+      <Cache duration="3600" enabled="false"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="button_event" name="button_event" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT 
+        X.*
+FROM
+(
+	SELECT DISTINCT
+			 #`Dim_Outlet`.`OutletId`,
+			 `Dim_Outlet`.`OutletName`,
+			 sum(`Fact_SumItem`.`ItemSaleAmt`) AS Amount
+	FROM
+			 `Fact_SumItem` INNER JOIN `Dim_BIDate` ON `Fact_SumItem`.`BIDateId` = `Dim_BIDate`.`BIDateId`
+			 INNER JOIN `Dim_Outlet` ON `Fact_SumItem`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`
+	WHERE
+			( ${button_event} = 0 AND `Dim_BIDate`.`BIDate` = DATE(NOW()) )
+            OR ( ${button_event} = 1 AND `Dim_BIDate`.`BIDate` = date_sub(curdate(),interval 1 day)  )
+			OR ( ${button_event} = 7 AND `Dim_BIDate`.`BIDate` >= DATE_SUB(CURDATE(),INTERVAL WEEKDAY(CURDATE()) DAY) AND `Dim_BIDate`.`BIDate` <= DATE_SUB(CURDATE(),INTERVAL WEEKDAY(CURDATE()) - 6 DAY) )
+			OR ( ${button_event} = 30 AND `Dim_BIDate`.`BIDate` >= DATE_ADD(CURDATE(),INTERVAL -DAY(CURDATE())+1 DAY) AND `Dim_BIDate`.`BIDate` <= LAST_DAY(CURDATE()) )
+	GROUP BY
+			 #`Dim_Outlet`.`OutletId`,
+			 `Dim_Outlet`.`OutletName`
+	ORDER BY
+			 sum(`Fact_SumItem`.`ItemSaleAmt`) DESC LIMIT 5
+) AS X
+UNION 
+SELECT 
+		Y.*
+FROM
+(
+	SELECT DISTINCT
+			 #`Dim_Outlet`.`OutletId`,
+			 `Dim_Outlet`.`OutletName`,
+			 sum(`Fact_SumItem`.`ItemSaleAmt`)	AS Amount
+	FROM
+			 `Fact_SumItem` INNER JOIN `Dim_BIDate` ON `Fact_SumItem`.`BIDateId` = `Dim_BIDate`.`BIDateId`
+			 INNER JOIN `Dim_Outlet` ON `Fact_SumItem`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`
+	WHERE
+			( ${button_event} = 0 AND `Dim_BIDate`.`BIDate` = DATE(NOW()) )
+            OR ( ${button_event} = 1 AND `Dim_BIDate`.`BIDate` = date_sub(curdate(),interval 1 day)  )
+			OR ( ${button_event} = 7 AND `Dim_BIDate`.`BIDate` >= DATE_SUB(CURDATE(),INTERVAL WEEKDAY(CURDATE()) DAY) AND `Dim_BIDate`.`BIDate` <= DATE_SUB(CURDATE(),INTERVAL WEEKDAY(CURDATE()) - 6 DAY) )
+			OR ( ${button_event} = 30 AND `Dim_BIDate`.`BIDate` >= DATE_ADD(CURDATE(),INTERVAL -DAY(CURDATE())+1 DAY) AND `Dim_BIDate`.`BIDate` <= LAST_DAY(CURDATE()) )
+	GROUP BY
+			 #`Dim_Outlet`.`OutletId`,
+			 `Dim_Outlet`.`OutletName`
+	ORDER BY
+			 sum(`Fact_SumItem`.`ItemSaleAmt`) LIMIT 5
+) AS Y	ORDER BY Amount DESC;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="discountTypeQuery" id="discountTypeQuery"
+               type="sql">
+      <Name>discountTypeQuery</Name>
+      <Cache duration="3600" enabled="false"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="button_event" name="button_event" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT DISTINCT
+     `Dim_PayType`.`PayTypeClassName`,
+     sum(`Fact_CheckPay`.`PayAmt`)
+FROM
+     `Fact_CheckPay` INNER JOIN `Dim_Outlet` ON `Fact_CheckPay`.`OutletId_t` = `Dim_Outlet`.`OutletId_t`
+     INNER JOIN `Dim_BIDate` ON `Fact_CheckPay`.`BIDateId` = `Dim_BIDate`.`BIDateId`
+     INNER JOIN `Dim_PayType` ON `Fact_CheckPay`.`PayTypeId` = `Dim_PayType`.`PayTypeId`
+WHERE
+    ( ${button_event} = 0 AND `Dim_BIDate`.`BIDate` = DATE(NOW()) )
+    OR ( ${button_event} = 1 AND `Dim_BIDate`.`BIDate` = date_sub(curdate(),interval 1 day)  )
+    OR ( ${button_event} = 7 AND `Dim_BIDate`.`BIDate` >= DATE_SUB(CURDATE(),INTERVAL WEEKDAY(CURDATE()) DAY) AND `Dim_BIDate`.`BIDate` <= DATE_SUB(CURDATE(),INTERVAL WEEKDAY(CURDATE()) - 6 DAY) )
+    OR ( ${button_event} = 30 AND `Dim_BIDate`.`BIDate` >= DATE_ADD(CURDATE(),INTERVAL -DAY(CURDATE())+1 DAY) AND `Dim_BIDate`.`BIDate` <= LAST_DAY(CURDATE()) )
+GROUP BY
+     `Dim_PayType`.`PayTypeClassId`, `Dim_PayType`.`PayTypeClassName`
+ORDER BY
+     sum(`Fact_CheckPay`.`PayAmt`) DESC]]></Query>
+   </DataAccess>
+</CDADescriptor>

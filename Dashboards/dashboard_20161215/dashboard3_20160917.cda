@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="yearSelectorQuery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="totalSalesValue" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="quantitySoldValue" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="totalSalesSunburstChart" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="quantitySoldSunburstChart" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="totalSalesChart" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="salesByTerritoryChart" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="quantitySoldChart" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="linesQuery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" connection="yearSelectorQuery" id="yearSelectorQuery"
+               type="sql">
+      <Name>yearSelectorQuery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Output indexes="0" mode="include"/>
+      <Parameters/>
+      <Query><![CDATA[select distinct Year(BusinessDate) as Years from Fact_SumItem order by Years desc;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="totalSalesValue" id="totalSalesValue" type="sql">
+      <Name>totalSalesValue</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="dateParam" name="dateParam" type="String"/>
+         <Parameter default="selectedLinesParam" name="selectedLinesParam" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select 
+  case when sum(a.ItemSaleAmt) = 0 then 0.00
+       when sum(a.ItemSaleAmt) = null then 0.00
+  else sum(a.ItemSaleAmt) end as SaleAmts
+  from Fact_SumItem a 
+        left join Dim_ItemCategory b on a.ItemCatId = b.ItemCatId
+where  (Year(a.BusinessDate) =  ${dateParam} or ${dateParam} = 0) 
+        and (instr((${selectedLinesParam}),if(b.ItemCatId_level1 =0,-9999,b.ItemCatId_level1))>0  or instr((${selectedLinesParam}),'-1')>0);]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="quantitySoldValue" id="quantitySoldValue"
+               type="sql">
+      <Name>quantitySoldValue</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="dateParam" name="dateParam" type="String"/>
+         <Parameter default="selectedLinesParam" name="selectedLinesParam" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select 
+  case when sum(a.ItemSaleQty) = 0 then 0
+       when sum(a.ItemSaleQty) = null then 0
+  else sum(a.ItemSaleQty) end as SaleQtys
+  from Fact_SumItem a 
+        left join Dim_ItemCategory b on a.ItemCatId = b.ItemCatId
+where  (Year(a.BusinessDate) =  ${dateParam} or ${dateParam} = 0) 
+        and (instr((${selectedLinesParam}),if(b.ItemCatId_level1 =0,-9999,b.ItemCatId_level1))>0  or instr((${selectedLinesParam}),'-1')>0);]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="totalSalesSunburstChart"
+               id="totalSalesSunburstChart"
+               type="sql">
+      <Name>totalSalesSunburstChart</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Output indexes="2,5,3,1" mode="include"/>
+      <Parameters>
+         <Parameter default="dateParam" name="dateParam" type="String"/>
+         <Parameter default="selectedLinesParam" name="selectedLinesParam" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select year(a.BusinessDate) as Years,quarter(a.BusinessDate) as Q,
+       case when sum(a.ItemSaleAmt) = 0 then 0.00
+            when sum(a.ItemSaleAmt) = null then 0.00
+       else sum(a.ItemSaleAmt) end as SaleAmts, 
+       b.ItemCatName_level1,b.ItemCatCode_level1,b.ItemCatName_level2
+    from Fact_SumItem a  
+       left join Dim_ItemCategory b on a.ItemCatId = b.ItemCatId 
+where (Year(a.BusinessDate) = ${dateParam} or ${dateParam} = 0) 
+      and (instr((${selectedLinesParam}),if(b.ItemCatId_level1 =0,-9999,b.ItemCatId_level1))>0  or instr((${selectedLinesParam}),'-1')>0)
+group by year(a.BusinessDate),quarter(a.BusinessDate),b.ItemCatName_level1,b.ItemCatCode_level1,b.ItemCatName_level2,b.ItemCatId_level1;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="quantitySoldSunburstChart"
+               id="quantitySoldSunburstChart"
+               type="sql">
+      <Name>quantitySoldSunburstChart</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Output indexes="2,3,5,1" mode="include"/>
+      <Parameters>
+         <Parameter default="dateParam" name="dateParam" type="String"/>
+         <Parameter default="selectedLinesParam" name="selectedLinesParam" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select year(a.BusinessDate) as Years,quarter(a.BusinessDate) as Q,
+    case when sum(a.ItemSaleQty) = 0 then 0
+         when sum(a.ItemSaleQty) = null then 0
+    else sum(a.ItemSaleQty) end as SaleQtys,
+       b.ItemCatName_level1,b.ItemCatCode_level1,b.ItemCatName_level2
+    from Fact_SumItem a 
+        left join Dim_ItemCategory b on a.ItemCatId = b.ItemCatId
+where (Year(a.BusinessDate) = ${dateParam} or ${dateParam} = 0) 
+        and (instr((${selectedLinesParam}),if(b.ItemCatId_level1 =0,-9999,b.ItemCatId_level1))>0  or instr((${selectedLinesParam}),'-1')>0)
+group by year(a.BusinessDate),quarter(a.BusinessDate),b.ItemCatName_level1,b.ItemCatCode_level1,b.ItemCatName_level2;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="totalSalesChart" id="totalSalesChart" type="sql">
+      <Name>totalSalesChart</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Output indexes="2,1,3,0" mode="include"/>
+      <Parameters>
+         <Parameter default="dateParam" name="dateParam" type="String"/>
+         <Parameter default="selectedLinesParam" name="selectedLinesParam" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select  year(a.BusinessDate) as Years,concat( concat(year(a.BusinessDate),'0000'),cast(quarter(a.BusinessDate) as char)) as Quarters,
+        case when sum(a.ItemSaleAmt) = 0 then 0.00
+             when sum(a.ItemSaleAmt) = null then 0.00
+        else sum(a.ItemSaleAmt) end as SaleAmts ,
+        b.ItemCatName_level1,b.ItemCatCode_level1
+    from Fact_SumItem a 
+        left join Dim_ItemCategory b on a.ItemCatId = b.ItemCatId  
+where (Year(a.BusinessDate) = ${dateParam} or ${dateParam} = 0) 
+        and (instr((${selectedLinesParam}),if(b.ItemCatId_level1 =0,-9999,b.ItemCatId_level1))>0  or instr((${selectedLinesParam}),'-1')>0)
+group by year(a.BusinessDate),concat( concat(year(a.BusinessDate),'0000') ,cast(QUARTER(a.BusinessDate) as char)),b.ItemCatName_level1,b.ItemCatCode_level1;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="salesByTerritoryChart" id="salesByTerritoryChart"
+               type="sql">
+      <Name>salesByTerritoryChart</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Output indexes="0,1,2,3" mode="include"/>
+      <Parameters>
+         <Parameter default="dateParam" name="dateParam" type="String"/>
+         <Parameter default="selectedLinesParam" name="selectedLinesParam" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select 
+  case when sum(a.ItemSaleAmt) = 0 then 0.00
+       when sum(a.ItemSaleAmt) = null then 0.00
+  else sum(a.ItemSaleAmt) end as SaleAmts,
+           d.AreaName_level1,year(a.BusinessDate) as Years,b.ItemCatName_level1,b.ItemCatId
+  from Fact_SumItem as a
+     left join Dim_ItemCategory b on a.ItemCatId = b.ItemCatId 
+     left join Dim_Outlet as c on a.OutletId = c.OutletId
+     left join Dim_Area as d on c.AreaId = d.AreaId 
+where (Year(a.BusinessDate) = ${dateParam} or ${dateParam} = 0) 
+        and (instr((${selectedLinesParam}),if(b.ItemCatId_level1 =0,-9999,b.ItemCatId_level1))>0  or instr((${selectedLinesParam}),'-1')>0)
+group by b.ItemCatName_level1,d.AreaName_level1,b.ItemCatId,year(a.BusinessDate);]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="quantitySoldChart" id="quantitySoldChart"
+               type="sql">
+      <Name>quantitySoldChart</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Output indexes="2,1,3,0" mode="include"/>
+      <Parameters>
+         <Parameter default="dateParam" name="dateParam" type="String"/>
+         <Parameter default="selectedLinesParam" name="selectedLinesParam" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select  year(a.BusinessDate) as Years,concat( concat(year(a.BusinessDate),'0000'),cast(quarter(a.BusinessDate) as char)) as Quarters,
+        case when sum(a.ItemSaleQty) = 0 then 0
+             when sum(a.ItemSaleQty) = null then 0
+        else sum(a.ItemSaleQty) end as SaleQtys ,
+        b.ItemCatName_level1,b.ItemCatCode_level1
+     from Fact_SumItem a 
+         left join Dim_ItemCategory b on a.ItemCatId = b.ItemCatId  
+where (Year(a.BusinessDate) =  ${dateParam} or ${dateParam} = 0) 
+        and (instr((${selectedLinesParam}),if(b.ItemCatId_level1 =0,-9999,b.ItemCatId_level1))>0  or instr((${selectedLinesParam}),'-1')>0) 
+group by year(a.BusinessDate),concat( concat(year(a.BusinessDate),'0000') ,cast(QUARTER(a.BusinessDate) as char)),b.ItemCatName_level1,b.ItemCatCode_level1;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="linesQuery" id="linesQuery" type="sql">
+      <Name>linesQuery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Output indexes="0,1" mode="include"/>
+      <Parameters/>
+      <Query><![CDATA[select DISTINCT a.ItemCatName_level1,
+   case when a.ItemCatId_level1 =0 then -9999 else a.ItemCatId_level1 end,
+   a.ItemCatCode_level1
+   from Dim_ItemCategory as a
+where exists ( select 1 from Fact_SumItem b where a.ItemCatId = b.ItemCatId )]]></Query>
+   </DataAccess>
+</CDADescriptor>

@@ -1,0 +1,3340 @@
+{
+ "components": {
+  "rows": []
+ },
+ "datasources": {
+  "rows": [
+   {
+    "id": "SQL",
+    "name": "SQL Queries",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "type": "Label",
+      "value": "SQL Queries"
+     }
+    ],
+    "type": "Label",
+    "typeDesc": "<i>Group</i>"
+   },
+   {
+    "id": "0c3a3f88-7fcd-0990-9f09-ce7fa052880b",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "BrandQuery"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "SELECT -1,\r\n        case when ${language} = 'zh-CN' then '所有' \r\n             when ${language} = 'zh' then '所有'\r\n             when ${language} = 'en' then 'All'\r\n             else 'All'\r\n        end\r\n  union all\r\nSELECT DISTINCT\r\n     `Dim_Brand`.`BrandId_level1`,\r\n     `Dim_Brand`.`BrandName_level1`\r\nFROM\r\n     `Dim_Brand`\r\nWHERE\r\n     `Dim_Brand`.`Status` = 0"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "9b87d0a1-d5f7-b387-48df-7b36c9401b65",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "PlaceQuery"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "SELECT -1,\r\n        case when ${language} = 'zh-CN' then '所有' \r\n             when ${language} = 'zh' then '所有'\r\n             when ${language} = 'en' then 'All'\r\n             else 'All'\r\n        end\r\n  union all\r\nSELECT DISTINCT\r\n     `Dim_Place`.`PlaceId`,\r\n     `Dim_Place`.`PlaceName`\r\nFROM\r\n     `Dim_Place`\r\nWHERE\r\n     `Dim_Place`.`Status` = 0\r\n"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "871a62fc-9573-c4a5-c603-1d63e9043fcd",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "AreaQuery"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "SELECT -1,case when ${language} = 'zh-CN' then '所有' \r\n             when ${language} = 'zh' then '所有'\r\n             when ${language} = 'en' then 'All'\r\n             else 'All'\r\n        end,-1,case when ${language} = 'zh-CN' then '所有' \r\n             when ${language} = 'zh' then '所有'\r\n             when ${language} = 'en' then 'All'\r\n             else 'All'\r\n        end,-1,case when ${language} = 'zh-CN' then '所有' \r\n             when ${language} = 'zh' then '所有'\r\n             when ${language} = 'en' then 'All'\r\n             else 'All'\r\n        end,-1,case when ${language} = 'zh-CN' then '所有' \r\n             when ${language} = 'zh' then '所有'\r\n             when ${language} = 'en' then 'All'\r\n             else 'All'\r\n        end\r\n  union all\r\nSELECT\r\n     `Dim_Area`.`AreaId_level1`,\r\n     `Dim_Area`.`AreaName_level1`,\r\n     `Dim_Area`.`AreaId_level2`,\r\n     `Dim_Area`.`AreaName_level2`,\r\n     `Dim_Area`.`AreaId_level3`,\r\n     `Dim_Area`.`AreaName_level3`,\r\n     `Dim_Outlet`.`OutletId`,\r\n     `Dim_Outlet`.`OutletName`\r\nFROM\r\n     `Dim_Outlet` INNER JOIN `Dim_Area` ON `Dim_Outlet`.`AreaId` = `Dim_Area`.`AreaId`\r\nWHERE\r\n     `Dim_Outlet`.`EndDate` = \"2200-01-01\"\r\n     AND `Dim_Area`.`Status` = 0\r\n     AND `Dim_Outlet`.`Status` = 0\r\n     -- AND dim_outlet.VersionNo = ( SELECT max(dim_outlet.VersionNo) FROM dim_outlet )\r\n"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "e5457e90-1b7a-2ad5-5d4b-41ad436e8e69",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "Area1Query"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "SELECT -1,case when ${language} = 'zh-CN' then '所有' \r\n             when ${language} = 'zh' then '所有'\r\n             when ${language} = 'en' then 'All'\r\n             else 'All'\r\n        end,-1,case when ${language} = 'zh-CN' then '所有' \r\n             when ${language} = 'zh' then '所有'\r\n             when ${language} = 'en' then 'All'\r\n             else 'All'\r\n        end,-1,case when ${language} = 'zh-CN' then '所有' \r\n             when ${language} = 'zh' then '所有'\r\n             when ${language} = 'en' then 'All'\r\n             else 'All'\r\n        end,-1,case when ${language} = 'zh-CN' then '所有' \r\n             when ${language} = 'zh' then '所有'\r\n             when ${language} = 'en' then 'All'\r\n             else 'All'\r\n        end,-1,case when ${language} = 'zh-CN' then '所有' \r\n             when ${language} = 'zh' then '所有'\r\n             when ${language} = 'en' then 'All'\r\n             else 'All'\r\n        end\r\n  union all\r\nSELECT\r\n     `Dim_Area`.`AreaId_level1`,\r\n     `Dim_Area`.`AreaName_level1`,\r\n     `Dim_Area`.`AreaId_level2`,\r\n     `Dim_Area`.`AreaName_level2`,\r\n     `Dim_Area`.`AreaId_level3`,\r\n     `Dim_Area`.`AreaName_level3`,\r\n     `Dim_Outlet`.`ShopId`,\r\n     `Dim_Outlet`.`ShopName`,\r\n     `Dim_Outlet`.`OutletId`,\r\n     `Dim_Outlet`.`OutletName`\r\nFROM\r\n     `Dim_Outlet` INNER JOIN `Dim_Area` ON `Dim_Outlet`.`AreaId` = `Dim_Area`.`AreaId`\r\nWHERE\r\n     `Dim_Outlet`.`EndDate` = \"2200-01-01\"\r\n     AND `Dim_Area`.`Status` = 0\r\n     AND `Dim_Outlet`.`Status` = 0\r\n     -- AND dim_outlet.VersionNo = ( SELECT max(dim_outlet.VersionNo) FROM dim_outlet )"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "74012234-0a42-7dc5-eb78-2029486608ad",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "PeriodTypeQuery"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "select -1,\r\n        case when ${language} = 'zh-CN' then '所有' \r\n             when ${language} = 'zh' then '所有'\r\n             when ${language} = 'en' then 'All'\r\n             else 'All'\r\n        end\r\n  union all\r\nSELECT  \r\n    PeriodTypeId, \r\n    PeriodTypeName \r\nFROM \r\n    Dim_PeriodType \r\nWHERE Dim_PeriodType.Status = 0;"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "4df9b246-d387-ff0d-5fc7-d7ad14aff888",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "ChannelQuery"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "select -1, \r\n        case when ${language} = 'zh-CN' then '所有' \r\n             when ${language} = 'zh' then '所有'\r\n             when ${language} = 'en' then 'All'\r\n             else 'All'\r\n        end\r\n  union all\r\nSELECT  \r\n    ChannelId, \r\n    ChannelName \r\nFROM \r\n    Dim_Channel where Dim_Channel.Status = 0;"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "a4fba7ba-1b4f-8417-1365-17bde68c5eaf",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "GuestGradeTypeQuery"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "select -1,\r\n        case when ${language} = 'zh-CN' then '所有' \r\n             when ${language} = 'zh' then '所有'\r\n             when ${language} = 'en' then 'All'\r\n             else 'All'\r\n        end\r\n  union all\r\nSELECT  \r\n    GuestGradeTypeId, \r\n    GuestGradeTypeName \r\nFROM Dim_GuestGradeType \r\nWHERE Dim_GuestGradeType.Status = 0;"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "6397548d-fdfc-218a-6b2c-1e225c182a9a",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "GuestNoTypeQuery"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "select -1,\r\n        case when ${language} = 'zh-CN' then '所有' \r\n             when ${language} = 'zh' then '所有'\r\n             when ${language} = 'en' then 'All'\r\n             else 'All'\r\n        end\r\n  union all\r\nSELECT  \r\n    GuestNoTypeId, \r\n    GuestNoTypeName \r\nFROM \r\n    Dim_GuestNoType \r\nWHERE Dim_GuestNoType.Status = 0;"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "2877fbaf-0a53-66e8-aa87-4c511fb8060f",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "CategorySumType"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "SELECT 1,\r\n        case when ${language} = 'zh-CN' then '餐品大类' \r\n             when ${language} = 'zh' then '餐品大类'\r\n             when ${language} = 'en' then 'Bigcategory'\r\n             else 'Bigcategory'\r\n        end\r\nUNION ALL \r\nSELECT 2,case when ${language} = 'zh-CN' then '餐品中类' \r\n             when ${language} = 'zh' then '餐品中类'\r\n             when ${language} = 'en' then 'Midcategory'\r\n             else 'Midcategory'\r\n        end\r\nUNION ALL \r\nSELECT 3,case when ${language} = 'zh-CN' then '餐品小类' \r\n             when ${language} = 'zh' then '餐品小类'\r\n             when ${language} = 'en' then 'Smacategory'\r\n             else 'Smacategory'\r\n        end"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "dca25403-27fd-73d3-81aa-52e979caa79b",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "ItemSumType"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "SELECT 0,case when ${language} = 'zh-CN' then '餐品部门' \r\n             when ${language} = 'zh' then '餐品部门'\r\n             when ${language} = 'en' then 'Products department'\r\n             else 'Products department'\r\n        end\r\nUNION ALL\r\nSELECT 1, case when ${language} = 'zh-CN' then '餐品大类' \r\n             when ${language} = 'zh' then '餐品大类'\r\n             when ${language} = 'en' then 'Bigcategory'\r\n             else 'Bigcategory'\r\n        end\r\nUNION ALL\r\nSELECT 2,case when ${language} = 'zh-CN' then '餐品中类' \r\n             when ${language} = 'zh' then '餐品中类'\r\n             when ${language} = 'en' then 'Midcategory'\r\n             else 'Midcategory'\r\n        end\r\nUNION ALL\r\nSELECT 3,case when ${language} = 'zh-CN' then '餐品小类' \r\n             when ${language} = 'zh' then '餐品小类'\r\n             when ${language} = 'en' then 'Smacategory'\r\n             else 'Smacategory'\r\n        end\r\nUNION ALL\r\nSELECT 4,case when ${language} = 'zh-CN' then '餐品' \r\n             when ${language} = 'zh' then '餐品'\r\n             when ${language} = 'en' then 'Products'\r\n             else 'Products'\r\n        end\r\n"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "51bf6aa4-c0f5-049c-d81e-1228f8a5f9e4",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "CheckSumType"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "SELECT 0,case when ${language} = 'zh-CN' then '市段' \r\n             when ${language} = 'zh' then '市段'\r\n             when ${language} = 'en' then 'PeriodType'\r\n             else 'PeriodType'\r\n        end\r\nUNION ALL\r\nSELECT 1,case when ${language} = 'zh-CN' then '渠道' \r\n             when ${language} = 'zh' then '渠道'\r\n             when ${language} = 'en' then 'Channel'\r\n             else 'Channel'\r\n        end\r\nUNION ALL\r\nSELECT 2,case when ${language} = 'zh-CN' then '顾客档次' \r\n             when ${language} = 'zh' then '顾客档次'\r\n             when ${language} = 'en' then 'GuestGradeType'\r\n             else 'GuestGradeType'\r\n        end\r\nUNION ALL\r\nSELECT 3,case when ${language} = 'zh-CN' then '人数档次' \r\n             when ${language} = 'zh' then '人数档次'\r\n             when ${language} = 'en' then 'GuestNoType'\r\n             else 'GuestNoType'\r\n        end;"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "b40d14de-dced-c193-9bf1-1ccf25d9a12b",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "OutletSumType"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "SELECT 0,case when ${language} = 'zh-CN' then '大区' \r\n             when ${language} = 'zh' then '大区'\r\n             when ${language} = 'en' then 'Area'\r\n             else 'Area'\r\n        end\r\nUNION ALL\r\nSELECT 1,case when ${language} = 'zh-CN' then '商圈' \r\n             when ${language} = 'zh' then '商圈'\r\n             when ${language} = 'en' then 'Place'\r\n             else 'Place'\r\n        end\r\nUNION ALL\r\nSELECT 2,case when ${language} = 'zh-CN' then '品牌' \r\n             when ${language} = 'zh' then '品牌'\r\n             when ${language} = 'en' then 'Brand'\r\n             else 'Brand'\r\n        end\r\nUNION ALL\r\nSELECT 3,case when ${language} = 'zh-CN' then '门店' \r\n             when ${language} = 'zh' then '门店'\r\n             when ${language} = 'en' then 'Outlet'\r\n             else 'Outlet'\r\n        end"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "3595edc8-e009-a3bf-3585-add40032d25b",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "Selecthour"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "select 0 as \"id\",\"0\" as \"name\"\nunion all \nselect 1,\"1\"\nunion all \nselect 2,\"2\"\nunion all \nselect 3,\"3\"\nunion all \nselect 4,\"4\"\nunion all \nselect 5,\"5\"\nunion all \nselect 6,\"6\"\nunion all \nselect 7,\"7\"\nunion all \nselect 8,\"8\"\nunion all \nselect 9,\"9\"\nunion all \nselect 10,\"10\"\nunion all \nselect 11,\"11\"\nunion all \nselect 12,\"12\"\nunion all\nselect 13,\"13\"\nunion all \nselect 14,\"14\"\nunion all \nselect 15,\"15\"\nunion all\nselect 16,\"16\"\nunion all \nselect 17,\"17\"\nunion all \nselect 18,\"18\"\nunion all \nselect 19,\"19\"\nunion all \nselect 20,\"20\"\nunion all \nselect 21,\"21\"\nunion all \nselect 22,\"22\"\nunion all \nselect 23,\"23\""
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "a3358c46-4209-e1a0-e117-d420ef57bbb1",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "CheckFigureType"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "select 1 ,case when ${language} = 'zh-CN' then '客单价' \r\n             when ${language} = 'zh' then '客单价'\r\n             when ${language} = 'en' then 'GuestUnitPrice'\r\n             else 'GuestUnitPrice'\r\n        end\r\nunion all \r\nselect 2,case when ${language} = 'zh-CN' then '人数' \r\n             when ${language} = 'zh' then '人数'\r\n             when ${language} = 'en' then 'NumberOfPeolpels'\r\n             else 'NumberOfPeolpels'\r\n        end\r\nunion all\r\nselect 3,case when ${language} = 'zh-CN' then '销售额' \r\n             when ${language} = 'zh' then '销售额'\r\n             when ${language} = 'en' then 'SalAmts'\r\n             else 'SalAmts'\r\n        end"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "348d6145-9cdc-d97d-34d6-a254f7cd1fae",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "ItemCategoryQuery"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "SELECT -1, case when ${language} = 'zh-CN' then '所有' \r\n             when ${language} = 'zh' then '所有'\r\n             when ${language} = 'en' then 'All'\r\n             else 'All'\r\n        end,-1, case when ${language} = 'zh-CN' then '所有' \r\n             when ${language} = 'zh' then '所有'\r\n             when ${language} = 'en' then 'All'\r\n             else 'All'\r\n        end,-1, case when ${language} = 'zh-CN' then '所有' \r\n             when ${language} = 'zh' then '所有'\r\n             when ${language} = 'en' then 'All'\r\n             else 'All'\r\n        end,-1, case when ${language} = 'zh-CN' then '所有' \r\n             when ${language} = 'zh' then '所有'\r\n             when ${language} = 'en' then 'All'\r\n             else 'All'\r\n        end\r\n  union all\r\nselect distinct\r\n    a.ItemCatId_level1,a.ItemCatName_level1,\r\n    a.ItemCatId_level2,a.ItemCatName_level2,\r\n    a.ItemCatId_level3,a.ItemCatName_level3,\r\n    b.ItemId,b.ItemName\r\nfrom dim_itemcategory a\r\ninner join dim_item b on a.ItemCatId = b.ItemCatId"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "ccedc4b7-dcc4-f7a7-f5eb-2c366dfaefbd",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "DataTestType"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "select 1, case when ${language} = 'zh-CN' then '日期' \r\n             when ${language} = 'zh' then '日期'\r\n             when ${language} = 'en' then 'Date'\r\n             else 'Date'\r\n        end\r\nunion all\r\nselect 2,case when ${language} = 'zh-CN' then '年份' \r\n             when ${language} = 'zh' then '年份'\r\n             when ${language} = 'en' then 'Year'\r\n             else 'Year'\r\n        end\r\nunion all\r\nselect 3,case when ${language} = 'zh-CN' then '门店' \r\n             when ${language} = 'zh' then '门店'\r\n             when ${language} = 'en' then 'Outlet'\r\n             else 'Outlet'\r\n        end\r\nunion all\r\nselect 4,case when ${language} = 'zh-CN' then '日期门店' \r\n             when ${language} = 'zh' then '日期门店'\r\n             when ${language} = 'en' then 'Date-Outlet'\r\n             else 'Date-Outlet'\r\n        end"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "77cac807-3d2b-2144-7e92-74fcbdfb72e3",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "QtySelect"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "select ItemId, \n        sum(a.ItemSaleQty ) as 'itemsaleqty' \nfrom Fact_SumItem a\n    group by ItemId\n\n"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "fea60a86-ddd7-b825-2345-19a99250cc70",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "ItemGradeSort"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "\r\n\r\nselect  1 ,case when ${language} = 'zh-CN' then '总销售额' \r\n             when ${language} = 'zh' then '总销售额'\r\n             when ${language} = 'en' then 'TotalSalAmts'\r\n             else 'TotalSalAmts'\r\n        end\r\nunion all\r\nselect  2,case when ${language} = 'zh-CN' then '总毛利额' \r\n             when ${language} = 'zh' then '总毛利额'\r\n             when ${language} = 'en' then 'TotalGrossProfit'\r\n             else 'TotalGrossProfit'\r\n        end\r\nunion all\r\nselect  3,case when ${language} = 'zh-CN' then '销售量' \r\n             when ${language} = 'zh' then '销售量'\r\n             when ${language} = 'en' then 'SalQties'\r\n             else 'SalQties'\r\n        end\r\nunion all\r\nselect  4,case when ${language} = 'zh-CN' then '平均成本' \r\n             when ${language} = 'zh' then '平均成本'\r\n             when ${language} = 'en' then 'AverageCost'\r\n             else 'AverageCost'\r\n        end\r\nunion all\r\nselect  5,case when ${language} = 'zh-CN' then '平均售价' \r\n             when ${language} = 'zh' then '平均售价'\r\n             when ${language} = 'en' then 'AveragePrice'\r\n             else 'AveragePrice'\r\n        end\r\nunion all\r\nselect  6,case when ${language} = 'zh-CN' then '平均毛利' \r\n             when ${language} = 'zh' then '平均毛利'\r\n             when ${language} = 'en' then 'AverageProfit'\r\n             else 'AverageProfit'\r\n        end\r\nunion all\r\nselect  7,case when ${language} = 'zh-CN' then '总成本' \r\n             when ${language} = 'zh' then '总成本'\r\n             when ${language} = 'en' then 'TotalCost'\r\n             else 'ToalCost'\r\n        end"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "fafcb8cc-2b0a-16bc-c1d8-104c8dccf462",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "ItemSummerySort"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "select  1 ,case when ${language} = 'zh-CN' then '销售数量' \r\n             when ${language} = 'zh' then '销售数量'\r\n             when ${language} = 'en' then 'SalQties'\r\n             else 'SalQties'\r\n        end\r\nunion all\r\nselect  2,case when ${language} = 'zh-CN' then '销售金额' \r\n             when ${language} = 'zh' then '销售金额'\r\n             when ${language} = 'en' then 'SalAmts'\r\n             else 'SalAmts'\r\n        end\r\nunion all\r\nselect  3,case when ${language} = 'zh-CN' then '原销售额' \r\n             when ${language} = 'zh' then '原销售额'\r\n             when ${language} = 'en' then 'OriginalSalAmts'\r\n             else 'OriginalSalAmts'\r\n        end\r\nunion all\r\nselect  4,case when ${language} = 'zh-CN' then '折扣额' \r\n             when ${language} = 'zh' then '折扣额'\r\n             when ${language} = 'en' then 'DiscountAmts'\r\n             else 'DiscountAmts'\r\n        end\r\nunion all\r\nselect  5,case when ${language} = 'zh-CN' then '销售成本' \r\n             when ${language} = 'zh' then '销售成本'\r\n             when ${language} = 'en' then 'SalCosts'\r\n             else 'SalCosts'\r\n        end\r\nunion all\r\nselect  6,case when ${language} = 'zh-CN' then '销售毛利' \r\n             when ${language} = 'zh' then '销售毛利'\r\n             when ${language} = 'en' then 'SalProfits'\r\n             else 'SalProfit'\r\n        end;"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "ca724aff-2b44-43da-cf93-75d4d2336454",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "OutletSummerySort"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "select 1,case when ${language} = 'zh-CN' then '销售额' \r\n             when ${language} = 'zh' then '销售额'\r\n             when ${language} = 'en' then 'SalAmts'\r\n             else 'SalAmts'\r\n        end\r\n union all\r\nselect 2,case when ${language} = 'zh-CN' then '服务费' \r\n             when ${language} = 'zh' then '服务费'\r\n             when ${language} = 'en' then 'ServiceFee'\r\n             else 'ServiceFee'\r\n        end\r\n union all\r\nselect 3,case when ${language} = 'zh-CN' then '税额' \r\n             when ${language} = 'zh' then '税额'\r\n             when ${language} = 'en' then 'TexAmts'\r\n             else 'TexAmts'\r\n        end\r\n union all\r\nselect 4,case when ${language} = 'zh-CN' then '折扣额' \r\n             when ${language} = 'zh' then '折扣额'\r\n             when ${language} = 'en' then 'DiscountAmts'\r\n             else 'DiscountAmts'\r\n        end\r\n union all\r\nselect 5,case when ${language} = 'zh-CN' then '取消金额' \r\n             when ${language} = 'zh' then '取消金额'\r\n             when ${language} = 'en' then 'VoidAmt'\r\n             else 'VoidAmt'\r\n        end\r\n union all\r\nselect 6,case when ${language} = 'zh-CN' then '退货金额' \r\n             when ${language} = 'zh' then '退货金额'\r\n             when ${language} = 'en' then 'RetnAmt'\r\n             else 'RetnAmt'\r\n        end\r\n union all\r\nselect 7,case when ${language} = 'zh-CN' then '客数' \r\n             when ${language} = 'zh' then '客数'\r\n             when ${language} = 'en' then 'CheckQty'\r\n             else 'CheckQty'\r\n        end\r\n union all\r\nselect 8,case when ${language} = 'zh-CN' then '人数' \r\n             when ${language} = 'zh' then '人数'\r\n             when ${language} = 'en' then 'GuestQty'\r\n             else 'GuestQty'\r\n        end\r\n union all\r\nselect 9,case when ${language} = 'zh-CN' then '客单价' \r\n             when ${language} = 'zh' then '客单价'\r\n             when ${language} = 'en' then 'AvgCheckAmt'\r\n             else 'AvgCheckAmt'\r\n        end\r\n union all\r\nselect 10,case when ${language} = 'zh-CN' then '人均金额'\r\n             when ${language} = 'zh' then '人均金额'\r\n             when ${language} = 'en' then 'AvgPersonAmt'\r\n             else 'AvgPersonAmt'\r\n        end\r\n union all\r\nselect 11,case when ${language} = 'zh-CN' then '餐桌'\r\n             when ${language} = 'zh' then '餐桌'\r\n             when ${language} = 'en' then 'TableQty'\r\n             else 'TableQty'\r\n        end\r\n union all\r\nselect 12,case when ${language} = 'zh-CN' then '开台率'\r\n             when ${language} = 'zh' then '开台率'\r\n             when ${language} = 'en' then 'KaiTaiLv'\r\n             else 'KaiTaiLv'\r\n        end\r\n union all\r\nselect 13,case when ${language} = 'zh-CN' then '营业成本'\r\n             when ${language} = 'zh' then '营业成本'\r\n             when ${language} = 'en' then 'SaleCostAmt'\r\n             else 'SaleCostAmt'\r\n        end\r\n union all\r\nselect 14,case when ${language} = 'zh-CN' then '毛利'\r\n             when ${language} = 'zh' then '毛利'\r\n             when ${language} = 'en' then 'GrossAmt'\r\n             else 'GrossAmt'\r\n        end\r\n union all\r\nselect 15,case when ${language} = 'zh-CN' then '毛利率'\r\n             when ${language} = 'zh' then '毛利率'\r\n             when ${language} = 'en' then 'GrossRate'\r\n             else 'GrossRate'\r\n        end;"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "840521c0-24d2-4785-2347-a62f4be6ae8c",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "CategoryStructureSort"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "select 1,case when ${language} = 'zh-CN' then '品种数' \r\n             when ${language} = 'zh' then '品种数'\r\n             when ${language} = 'en' then 'ItemCount'\r\n             else 'ItemCount'\r\n        end\r\n union all\r\nselect 2,case when ${language} = 'zh-CN' then '销售品种数' \r\n             when ${language} = 'zh' then '销售品种数'\r\n             when ${language} = 'en' then 'SaleItemCount'\r\n             else 'SaleItemCount'\r\n        end\r\n union all\r\nselect 3,case when ${language} = 'zh-CN' then '动销率'\r\n             when ${language} = 'zh' then '动销率'\r\n             when ${language} = 'en' then 'SaleItemRate'\r\n             else 'SaleItemRate'\r\n        end\r\n union all \r\nselect 4,case when ${language} = 'zh-CN' then '销售数量'\r\n             when ${language} = 'zh' then '销售数量'\r\n             when ${language} = 'en' then 'SaleQty'\r\n             else 'SaleQty'\r\n        end\r\n union all\r\nselect 5,case when ${language} = 'zh-CN' then '销售额'\r\n             when ${language} = 'zh' then '销售额'\r\n             when ${language} = 'en' then 'SaleAmt'\r\n             else 'SaleAmt'\r\n        end\r\n union all\r\nselect 6,case when ${language} = 'zh-CN' then '税额'\r\n             when ${language} = 'zh' then '税额'\r\n             when ${language} = 'en' then 'TaxAmt'\r\n             else 'TaxAmt'\r\n        end\r\n union all\r\nselect 7,case when ${language} = 'zh-CN' then '折扣额'\r\n             when ${language} = 'zh' then '折扣额'\r\n             when ${language} = 'en' then 'DisAmt'\r\n             else 'DisAmt'\r\n        end\r\n union all\r\nselect 8,case when ${language} = 'zh-CN' then '成本'\r\n             when ${language} = 'zh' then '成本'\r\n             when ${language} = 'en' then 'CostAmt'\r\n             else 'CostAmt'\r\n        end\r\n union all\r\nselect 9,case when ${language} = 'zh-CN' then '毛利'\r\n             when ${language} = 'zh' then '毛利'\r\n             when ${language} = 'en' then 'GrossAmt'\r\n             else 'GrossAmt'\r\n        end\r\n union all\r\nselect 10,case when ${language} = 'zh-CN' then '平均单价'\r\n             when ${language} = 'zh' then '平均单价'\r\n             when ${language} = 'en' then 'AvgPrice'\r\n             else 'AvgPrice'\r\n        end\r\n union all\r\nselect 11,case when ${language} = 'zh-CN' then '算术平均价'\r\n             when ${language} = 'zh' then '算术平均价'\r\n             when ${language} = 'en' then 'AvgPrice2'\r\n             else 'AvgPrice2'\r\n        end;"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "e9b94a22-53a9-0b37-1de6-fd523f9d061d",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "unsalableSort"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "\r\nselect 1,case when ${language} = 'zh-CN' then '餐品数量' \r\n             when ${language} = 'zh' then '餐品数量'\r\n             when ${language} = 'en' then 'ProductQty'\r\n             else 'ProductQty'\r\n        end\r\nunion all \r\nselect 2,case when ${language} = 'zh-CN' then '销售额' \r\n             when ${language} = 'zh' then '销售额'\r\n             when ${language} = 'en' then 'SaleAmt'\r\n             else 'SaleAmt'\r\n        end\r\nunion all \r\nselect 3,case when ${language} = 'zh-CN' then '餐品均价'\r\n             when ${language} = 'zh' then '餐品均价'\r\n             when ${language} = 'en' then 'AveragePrice'\r\n             else 'AveragePrice'\r\n        end\r\nunion all \r\nselect 4,case when ${language} = 'zh-CN' then '毛利'\r\n             when ${language} = 'zh' then '毛利'\r\n             when ${language} = 'en' then 'GrossProfit'\r\n             else 'GrossProfit'\r\n        end\r\nunion all \r\nselect 5,case when ${language} = 'zh-CN' then '毛利率'\r\n             when ${language} = 'zh' then '毛利率'\r\n             when ${language} = 'en' then 'GrossRate'\r\n             else 'GrossRate'\r\n        end"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "bd5f4072-14d1-104b-400a-7efcab1f0196",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "GuestHourSort"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "select 1,case when ${language} = 'zh-CN' then '销售额'\r\n             when ${language} = 'zh' then '销售额'\r\n             when ${language} = 'en' then 'SalAmt'\r\n             else 'SalAmt'\r\n        end\r\nunion all\r\nselect 2,case when ${language} = 'zh-CN' then '服务费'\r\n             when ${language} = 'zh' then '服务费'\r\n             when ${language} = 'en' then 'SCAmt'\r\n             else 'SCAmt'\r\n        end\r\nunion all \r\nselect 3,case when ${language} = 'zh-CN' then '销售数量'\r\n             when ${language} = 'zh' then '销售数量'\r\n             when ${language} = 'en' then 'SaleQty'\r\n             else 'SaleQty'\r\n        end\r\nunion all \r\nselect 4,case when ${language} = 'zh-CN' then '餐品均价'\r\n             when ${language} = 'zh' then '餐品均价'\r\n             when ${language} = 'en' then 'AvgItemPrice'\r\n             else 'AvgItemPrice'\r\n        end\r\nunion all \r\nselect 5,case when ${language} = 'zh-CN' then '成本'\r\n             when ${language} = 'zh' then '成本'\r\n             when ${language} = 'en' then 'SaleCost'\r\n             else 'SaleCost'\r\n        end\r\nunion all\r\nselect 6,case when ${language} = 'zh-CN' then '毛利'\r\n             when ${language} = 'zh' then '毛利'\r\n             when ${language} = 'en' then 'GrossProfits'\r\n             else 'GrossProfits'\r\n        end\r\nunion all \r\nselect 7,case when ${language} = 'zh-CN' then '毛利率'\r\n             when ${language} = 'zh' then '毛利率'\r\n             when ${language} = 'en' then 'GrossRate'\r\n             else 'GrossRate'\r\n        end\r\nunion all \r\nselect 8,case when ${language} = 'zh-CN' then '账单数量'\r\n             when ${language} = 'zh' then '账单数量'\r\n             when ${language} = 'en' then 'CheckQty'\r\n             else 'CheckQty'\r\n        end\r\nunion all \r\nselect 9,case when ${language} = 'zh-CN' then '人数'\r\n             when ${language} = 'zh' then '人数'\r\n             when ${language} = 'en' then 'GuestQty'\r\n             else 'GuestQty'\r\n        end\r\nunion all\r\nselect 10,case when ${language} = 'zh-CN' then '账单均价'\r\n             when ${language} = 'zh' then '账单均价'\r\n             when ${language} = 'en' then 'AvgCheckPrice'\r\n             else 'AvgCheckPrice'\r\n        end\r\nunion all \r\nselect 11,case when ${language} = 'zh-CN' then '人均单价'\r\n             when ${language} = 'zh' then '人均单价'\r\n             when ${language} = 'en' then 'AvgPersonAmt'\r\n             else 'AvgPersonAmt'\r\n        end"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "19a331ba-9765-4c4e-52dc-c17b9a5f88be",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "OutletSaleSummySort"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "select 1,case when ${language} = 'zh-CN' then '销售数量'\r\n             when ${language} = 'zh' then '销售数量'\r\n             when ${language} = 'en' then 'SaleQty'\r\n             else 'SaleQty'\r\n        end\r\nunion all \r\nselect 2,case when ${language} = 'zh-CN' then '销售额'\r\n             when ${language} = 'zh' then '销售额'\r\n             when ${language} = 'en' then 'SalAmt'\r\n             else 'SalAmt'\r\n        end\r\nunion all \r\nselect 3,case when ${language} = 'zh-CN' then '餐品均价'\r\n             when ${language} = 'zh' then '餐品均价'\r\n             when ${language} = 'en' then 'AvgItemPrice'\r\n             else 'AvgItemPrice'\r\n        end\r\nunion all \r\nselect 4,case when ${language} = 'zh-CN' then '成本'\r\n             when ${language} = 'zh' then '成本'\r\n             when ${language} = 'en' then 'SaleCost'\r\n             else 'SaleCost'\r\n        end\r\nunion all\r\nselect 5,case when ${language} = 'zh-CN' then '毛利'\r\n             when ${language} = 'zh' then '毛利'\r\n             when ${language} = 'en' then 'GrossProfits'\r\n             else 'GrossProfits'\r\n        end\r\nunion all \r\nselect 6,case when ${language} = 'zh-CN' then '客数'\r\n             when ${language} = 'zh' then '客数'\r\n             when ${language} = 'en' then 'CheckQty'\r\n             else 'CheckQty'\r\n        end\r\nunion all \r\nselect 7,case when ${language} = 'zh-CN' then '人数'\r\n             when ${language} = 'zh' then '人数'\r\n             when ${language} = 'en' then 'GuestQty'\r\n             else 'GuestQty'\r\n        end\r\nunion all \r\nselect 8,case when ${language} = 'zh-CN' then '客单价'\r\n             when ${language} = 'zh' then '客单价'\r\n             when ${language} = 'en' then 'AvgCheckAmt'\r\n             else 'AvgCheckAmt'\r\n        end\r\nunion all\r\nselect 9,case when ${language} = 'zh-CN' then '客均人数'\r\n             when ${language} = 'zh' then '客均人数'\r\n             when ${language} = 'en' then 'AvgCheckGuest'\r\n             else 'AvgCheckGuest'\r\n        end\r\nunion all \r\nselect 10,case when ${language} = 'zh-CN' then '人均单价'\r\n             when ${language} = 'zh' then '人均单价'\r\n             when ${language} = 'en' then 'AvgPersonAmt'\r\n             else 'AvgPersonAmt'\r\n        end"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "aefd21c6-343d-5bf9-5d15-c7d0d24d726a",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "SalePreviousSort"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "select 1,case when ${language} = 'zh-CN' then '上期销售金额'\r\n             when ${language} = 'zh' then '上期销售金额'\r\n             when ${language} = 'en' then 'LastSaleAmt'\r\n             else 'LastSaleAmt'\r\n        end\r\nunion all \r\nselect 2,case when ${language} = 'zh-CN' then '本期销售金额'\r\n             when ${language} = 'zh' then '本期销售金额'\r\n             when ${language} = 'en' then 'ThisIssueSaleAmt'\r\n             else 'ThisIssueSaleAmt'\r\n        end\r\nunion all \r\nselect 3,case when ${language} = 'zh-CN' then '上期毛利额'\r\n             when ${language} = 'zh' then '上期毛利额'\r\n             when ${language} = 'en' then 'LastGrossProfit'\r\n             else 'LastGrossProfit'\r\n        end\r\nunion all \r\nselect 4,case when ${language} = 'zh-CN' then '本期毛利额'\r\n             when ${language} = 'zh' then '本期毛利额'\r\n             when ${language} = 'en' then 'ThisIssueGrossProfit'\r\n             else 'ThisIssueGrossProfit'\r\n        end\r\nunion all\r\nselect 5,case when ${language} = 'zh-CN' then '上期客流量'\r\n             when ${language} = 'zh' then '上期客流量'\r\n             when ${language} = 'en' then 'LastTrafficQty'\r\n             else 'LastTrafficQty'\r\n        end\r\nunion all \r\nselect 6,case when ${language} = 'zh-CN' then '本期客流量'\r\n             when ${language} = 'zh' then '本期客流量'\r\n             when ${language} = 'en' then 'ThisIssueTrafficQty'\r\n             else 'ThisIssueTrafficQty'\r\n        end\r\nunion all \r\nselect 7,case when ${language} = 'zh-CN' then '上期人流量'\r\n             when ${language} = 'zh' then '上期人流量'\r\n             when ${language} = 'en' then 'LastTrafficGuest'\r\n             else 'LastTrafficGuest'\r\n        end\r\nunion all \r\nselect 8,case when ${language} = 'zh-CN' then '本期人流量'\r\n             when ${language} = 'zh' then '本期人流量'\r\n             when ${language} = 'en' then 'ThisIssueTrafficGuest'\r\n             else 'ThisIssueTrafficGuest'\r\n        end\r\nunion all\r\nselect 9,case when ${language} = 'zh-CN' then '上期客单价'\r\n             when ${language} = 'zh' then '上期客单价'\r\n             when ${language} = 'en' then 'LastCheckPrice'\r\n             else 'LastCheckPrice'\r\n        end\r\nunion all \r\nselect 10,case when ${language} = 'zh-CN' then '本期客单价'\r\n             when ${language} = 'zh' then '本期客单价'\r\n             when ${language} = 'en' then 'ThisIssueCheckPrice'\r\n             else 'ThisIssueCheckPrice'\r\n        end\r\nunion all \r\nselect 11,case when ${language} = 'zh-CN' then '上期人单价'\r\n             when ${language} = 'zh' then '上期人单价'\r\n             when ${language} = 'en' then 'LastAvgGuestAmt'\r\n             else 'LastAvgGuestAmt'\r\n        end\r\nunion all \r\nselect 12,case when ${language} = 'zh-CN' then '本期人单价'\r\n             when ${language} = 'zh' then '本期人单价'\r\n             when ${language} = 'en' then 'ThisIssueAvgGuestAmt'\r\n             else 'ThisIssueAvgGuestAmt'\r\n        end"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "3eaa95d6-a5d2-11e3-e1cc-8ad45d484cbd",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "SaleTrendAnalyzeSort"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "select 1,case when ${language} = 'zh-CN' then '日期'\r\n             when ${language} = 'zh' then '日期'\r\n             when ${language} = 'en' then 'Date'\r\n             else 'Date'\r\n        end\r\n union all\r\nselect 2,case when ${language} = 'zh-CN' then '销售额'\r\n             when ${language} = 'zh' then '销售额'\r\n             when ${language} = 'en' then 'SalAmt'\r\n             else 'SalAmt'\r\n        end\r\n union all\r\nselect 3,case when ${language} = 'zh-CN' then '税额' \r\n             when ${language} = 'zh' then '税额'\r\n             when ${language} = 'en' then 'TexAmts'\r\n             else 'TexAmts'\r\n        end\r\n union all\r\nselect 4,case when ${language} = 'zh-CN' then '服务费' \r\n             when ${language} = 'zh' then '服务费'\r\n             when ${language} = 'en' then 'ServiceFee'\r\n             else 'ServiceFee'\r\n        end\r\n union all\r\nselect 5,case when ${language} = 'zh-CN' then '单数' \r\n             when ${language} = 'zh' then '单数'\r\n             when ${language} = 'en' then 'SingularQty'\r\n             else 'SingularQty'\r\n        end\r\n union all\r\nselect 6,case when ${language} = 'zh-CN' then '人数' \r\n             when ${language} = 'zh' then '人数'\r\n             when ${language} = 'en' then 'GuestQty'\r\n             else 'GuestQty'\r\n        end\r\n union all\r\nselect 7,case when ${language} = 'zh-CN' then '客单价'\r\n             when ${language} = 'zh' then '客单价'\r\n             when ${language} = 'en' then 'AvgCheckAmt'\r\n             else 'AvgCheckAmt'\r\n        end\r\n union all\r\nselect 8,case when ${language} = 'zh-CN' then '人均单价'\r\n             when ${language} = 'zh' then '人均单价'\r\n             when ${language} = 'en' then 'AvgPersonAmt'\r\n             else 'AvgPersonAmt'\r\n        end\r\n union all\r\nselect 9,case when ${language} = 'zh-CN' then '餐品数量'\r\n             when ${language} = 'zh' then '餐品数量'\r\n             when ${language} = 'en' then 'ItemCounts'\r\n             else 'ItemCounts'\r\n        end\r\n union all\r\nselect 10,case when ${language} = 'zh-CN' then '餐品均价'\r\n             when ${language} = 'zh' then '餐品均价'\r\n             when ${language} = 'en' then 'AvgItemPrice'\r\n             else 'AvgItemPrice'\r\n        end"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "fa012eb6-891c-4422-6982-d660273c4849",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "CategoryRoleSort"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "select 1,case when ${language} = 'zh-CN' then '销售数量' \r\n             when ${language} = 'zh' then '销售数量'\r\n             when ${language} = 'en' then 'SalQties'\r\n             else 'SalQties'\r\n        end\r\n union all\r\nselect 2,case when ${language} = 'zh-CN' then '销售额'\r\n             when ${language} = 'zh' then '销售额'\r\n             when ${language} = 'en' then 'SaleAmt'\r\n             else 'SaleAmt'\r\n        end\r\n union all\r\nselect 3,case when ${language} = 'zh-CN' then '毛利'\r\n             when ${language} = 'zh' then '毛利'\r\n             when ${language} = 'en' then 'GrossAmt'\r\n             else 'GrossAmt'\r\n        end\r\n union all\r\nselect 4,case when ${language} = 'zh-CN' then 'IP值'\r\n             when ${language} = 'zh' then 'IP值'\r\n             when ${language} = 'en' then 'IP_Value'\r\n             else 'IP_Value'\r\n        end\r\n union all\r\nselect 5,case when ${language} = 'zh-CN' then 'IP排名'\r\n             when ${language} = 'zh' then 'IP排名'\r\n             when ${language} = 'en' then 'IP_Ranking'\r\n             else 'IP_Ranking'\r\n        end\r\n union all\r\nselect 6,case when ${language} = 'zh-CN' then 'IP值_高端'\r\n             when ${language} = 'zh' then 'IP值_高端'\r\n             when ${language} = 'en' then 'IP_High'\r\n             else 'IP_High'\r\n        end\r\n union all\r\nselect 7,case when ${language} = 'zh-CN' then 'IP排名_高端'\r\n             when ${language} = 'zh' then 'IP排名_高端'\r\n             when ${language} = 'en' then 'IPRanking_High'\r\n             else 'IPRanking_High'\r\n        end\r\n union all\r\nselect 8,case when ${language} = 'zh-CN' then 'IP值_中端'\r\n             when ${language} = 'zh' then 'IP值_中端'\r\n             when ${language} = 'en' then 'IP_Mid'\r\n             else 'IP_Mid'\r\n        end\r\n union all\r\nselect 9,case when ${language} = 'zh-CN' then 'IP排名_中端'\r\n             when ${language} = 'zh' then 'IP排名_中端'\r\n             when ${language} = 'en' then 'IPRanking_Mid'\r\n             else 'IPRanking_Mid'\r\n        end\r\n union all\r\nselect 10,case when ${language} = 'zh-CN' then 'IP值_低端'\r\n             when ${language} = 'zh' then 'IP值_低端'\r\n             when ${language} = 'en' then 'IP_Low'\r\n             else 'IP_Low'\r\n        end\r\n union all\r\nselect 11,case when ${language} = 'zh-CN' then 'IP排名_低端'\r\n             when ${language} = 'zh' then 'IP排名_低端'\r\n             when ${language} = 'en' then 'IPRanking_Low'\r\n             else 'IPRanking_Low'\r\n        end"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "f7749fc1-f44a-90a7-457a-c53d1362c3e8",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "FoodSalesSort"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "select 1,case when ${language} = 'zh-CN' then '单价' \r\n             when ${language} = 'zh' then '单价'\r\n             when ${language} = 'en' then 'Unit Price'\r\n             else 'Unit Price'\r\n        end\r\n union all\r\nselect 2,case when ${language} = 'zh-CN' then '销售收入'\r\n             when ${language} = 'zh' then '销售收入'\r\n             when ${language} = 'en' then 'Receivable Amount'\r\n             else 'Receivable Amount'\r\n        end\r\n union all\r\nselect 3,case when ${language} = 'zh-CN' then '销售净额'\r\n             when ${language} = 'zh' then '销售净额'\r\n             when ${language} = 'en' then 'Sales Amount'\r\n             else 'Sales Amount'\r\n        end\r\n union all\r\nselect 4,case when ${language} = 'zh-CN' then '数量'\r\n             when ${language} = 'zh' then '数量'\r\n             when ${language} = 'en' then 'Sales Volumes'\r\n             else 'Sales Volumes'\r\n        end\r\n union all\r\nselect 5,case when ${language} = 'zh-CN' then '折扣额'\r\n             when ${language} = 'zh' then '折扣额'\r\n             when ${language} = 'en' then 'Discount Amount'\r\n             else 'Discount Amount'\r\n        end\r\n union all\r\nselect 6,case when ${language} = 'zh-CN' then '日期'\r\n             when ${language} = 'zh' then '日期'\r\n             when ${language} = 'en' then 'Report Date'\r\n             else 'Report Date'\r\n        end"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "0dac0674-4800-35f2-b04d-7bbfcee7acb6",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "UserName"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "select -1,\r\n        case when ${language} = 'zh-CN' then '所有' \r\n             when ${language} = 'zh' then '所有'\r\n             when ${language} = 'en' then 'All'\r\n             else 'All'\r\n        end\r\nunion all\r\n\r\nselect distinct a.UserId,a.UserName\r\n  from dim_user a \r\ninner join fact_checkdiscount b on a.UserId = b.DiscountUserId"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "1b39963c-e5da-6ec2-ce46-f3fb78f4022f",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "DiscountTypeSort"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "select -1,\r\n        case when ${language} = 'zh-CN' then '所有' \r\n             when ${language} = 'zh' then '所有'\r\n             when ${language} = 'en' then 'All'\r\n             else 'All'\r\n        end\r\nunion all \r\nselect distinct a.DiscountTypeId,a.DiscountTypeName\r\n  from dim_discounttype a\r\n  inner join fact_checkdiscount b on a.DiscountTypeId = b.DiscountTypeId"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "bfdd9e66-5ec4-cbcc-8ec1-50ab2c28204d",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "DiscountQuerySort"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "\r\nselect 2,case when ${language} = 'zh-CN' then '折扣金额'\r\n             when ${language} = 'zh' then '折扣金额'\r\n             when ${language} = 'en' then 'DiscountAmts'\r\n             else 'DiscountAmts'\r\n        end \r\n    union all\r\nselect 3,case when ${language} = 'zh-CN' then '应收金额'\r\n             when ${language} = 'zh' then '应收金额'\r\n             when ${language} = 'en' then 'SaleAmts'\r\n             else 'SaleAmts'\r\n        end\r\n\tunion all\r\nselect 4,case when ${language} = 'zh-CN' then '实结金额'\r\n             when ${language} = 'zh' then '实结金额'\r\n             when ${language} = 'en' then 'FactSalAmts'\r\n             else 'FactSalAmts'\r\n        end\r\n\tunion all\r\nselect 5,case when ${language} = 'zh-CN' then '报表日期'\r\n             when ${language} = 'zh' then '报表日期'\r\n             when ${language} = 'en' then 'Date'\r\n             else 'Date'\r\n        end"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "3cf8fa13-d696-cdd0-17fe-a756007ce2c1",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "AreaQuery1"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "SELECT -1,case when ${language} = 'zh-CN' then '所有' \r\n             when ${language} = 'zh' then '所有'\r\n             when ${language} = 'en' then 'All'\r\n             else 'All'\r\n        end,-1,case when ${language} = 'zh-CN' then '所有' \r\n             when ${language} = 'zh' then '所有'\r\n             when ${language} = 'en' then 'All'\r\n             else 'All'\r\n        end,-1,case when ${language} = 'zh-CN' then '所有' \r\n             when ${language} = 'zh' then '所有'\r\n             when ${language} = 'en' then 'All'\r\n             else 'All'\r\n        end,-1,case when ${language} = 'zh-CN' then '所有' \r\n             when ${language} = 'zh' then '所有'\r\n             when ${language} = 'en' then 'All'\r\n             else 'All'\r\n        end,-1,case when ${language} = 'zh-CN' then '所有' \r\n             when ${language} = 'zh' then '所有'\r\n             when ${language} = 'en' then 'All'\r\n             else 'All'\r\n        end\r\n  union all\r\nSELECT\r\n     `Dim_Area`.`AreaId_level1`,\r\n     `Dim_Area`.`AreaName_level1`,\r\n     `Dim_Area`.`AreaId_level2`,\r\n     `Dim_Area`.`AreaName_level2`,\r\n     `Dim_Area`.`AreaId_level3`,\r\n     `Dim_Area`.`AreaName_level3`,\r\n     `Dim_Outlet`.`ShopId`,\r\n     `Dim_Outlet`.`ShopName`,\r\n     `Dim_Outlet`.`OutletId`,\r\n     `Dim_Outlet`.`OutletName`\r\nFROM\r\n     `Dim_Outlet` INNER JOIN `Dim_Area` ON `Dim_Outlet`.`AreaId` = `Dim_Area`.`AreaId`\r\nWHERE\r\n     `Dim_Outlet`.`EndDate` = \"2200-01-01\"\r\n     AND `Dim_Area`.`Status` = 0\r\n     AND `Dim_Outlet`.`Status` = 0"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "9c4240dd-f9dd-5a40-e1fb-9457900f27b9",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "ItemDeptment"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "select -1,case when ${language} = 'zh-CN' then '所有' \r\n             when ${language} = 'zh' then '所有'\r\n             when ${language} = 'en' then 'All'\r\n             else 'All'\r\n        end\r\n    union all\r\nselect a.ItemDeptId_level1,a.ItemDeptName_level1\r\n    from dim_itemdeptment a \r\n\r\n"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "25bf4c2b-98c8-5015-2b39-1d724844b43a",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "ItemName"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "select -1,case when ${language} = 'zh-CN' then '所有' \r\n             when ${language} = 'zh' then '所有'\r\n             when ${language} = 'en' then 'All'\r\n             else 'All'\r\n        end\r\n    union all\r\nselect a.ItemId,a.ItemName\r\n    from dim_item a \r\n\r\n"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "88a83c6c-a38f-0d25-40c9-ce3b4064eed2",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "ShopName"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "select -1,case when ${language} = 'zh-CN' then '所有' \r\n             when ${language} = 'zh' then '所有'\r\n             when ${language} = 'en' then 'All'\r\n             else 'All'\r\n        end\r\n   union all\r\nselect  distinct a.ShopId,a.ShopName from Dim_Outlet a\r\ngroup by a.ShopId,a.ShopName\r\n  \r\n;"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "f70eaf50-e6e5-afa7-5cc4-48460e7a000d",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "VoidUserName"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "select -1,case when ${language} = 'zh-CN' then '所有' \r\n             when ${language} = 'zh' then '所有'\r\n             when ${language} = 'en' then 'All'\r\n             else 'All'\r\n        end\r\n union all\r\nselect a.UserId,a.UserName\r\n    from dim_user a\r\n\r\n"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "9036e65d-70c0-f047-2c45-a5b2f79b3b33",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "VoidReasonName"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "select -1,case when ${language} = 'zh-CN' then '所有' \r\n             when ${language} = 'zh' then '所有'\r\n             when ${language} = 'en' then 'All'\r\n             else 'All'\r\n        end\r\n    union all\r\nselect a.VoidReasonId,a.VoidReasonName\r\n    from dim_voidresontype a\r\n\r\n"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "a50cd956-e5a4-0c0d-cf8f-96e003f576e4",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "CheckNo"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "select -1,case when ${language} = 'zh-CN' then '所有' \r\n             when ${language} = 'zh' then '所有'\r\n             when ${language} = 'en' then 'All'\r\n             else 'All'\r\n        end\r\n    union all\r\nselect distinct a.CheckNo,a.CheckNo\r\n    from fact_check a \r\n\r\n"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "24c3c3c7-8407-e63c-a030-6ce350e02690",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "TableNo"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "select -1, case when ${language} = 'zh-CN' then '所有' \r\n             when ${language} = 'zh' then '所有'\r\n             when ${language} = 'en' then 'All'\r\n             else 'All'\r\n        end\r\n    union all\r\nselect distinct a.TableNo,a.TableNo\r\n    from fact_check a\r\n\r\n\r\n"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "ce8c58d6-341a-4981-39f3-ded22554b8b8",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "CheckOpenStation"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "select -1, case when ${language} = 'zh-CN' then '所有' \r\n             when ${language} = 'zh' then '所有'\r\n             when ${language} = 'en' then 'All'\r\n             else 'All'\r\n        end\r\n    union all\r\nselect distinct b.StationId,b.StationName\r\n    from fact_check a\r\nleft join dim_workstation b on a.CheckOpenStationId = b.StationId"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "2636b82e-2dfb-1f3d-7609-36195bb79dfa",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "BackItemSort"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "\r\nselect 3,case when ${language} = 'zh-CN' then '数量'\r\n             when ${language} = 'zh' then '数量'\r\n             when ${language} = 'en' then 'Quties'\r\n             else 'Quties'\r\n        end\r\nunion all\r\nselect 4,case when ${language} = 'zh-CN' then '金额'\r\n             when ${language} = 'zh' then '金额'\r\n             when ${language} = 'en' then 'PayAmts'\r\n             else 'PayAmts'\r\n        end"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"language\",\"language\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "ca76294b-0645-d7fc-c545-2f999c755d8e",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "demo_new"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "select * from dim_outlet;"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "c17f18a2-4f6c-e90f-8f51-e922f13939d0",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "demo_new_new_new"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "select *  from dim_Outlet where OutletId = 4;"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "26d0f440-3dad-0ab7-be41-1e76ee849dfa",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "demo_new_new"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "select * from Dim_Outlet\r\n     "
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "e65dd625-d165-d1af-1a86-faca9e724b0c",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "demo_new"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "select distinct\r\n    \t\tOutletId,\r\n\t\t\tOutletName\r\nfrom Dim_Outlet \r\nWHERE\r\n     `Dim_Outlet`.`EndDate` = \"2200-01-01\"\r\n     AND `Dim_Outlet`.`Status` = 0\r\n\tAND (ShopId = ${m_ShopId} or ${m_ShopId} = -1)"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"m_ShopId\",\"m_ShopId\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "5272f864-f654-ad60-8a55-9c548c6bddc4",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "demo"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "SELECT \n    VoidTime,\n    OrderTime,\n    RushTime \nFROM \n    fact_checkitem \nWHERE \n    fact_checkitem.BusinessDate between \"2016-12-30\"  and  \"2016-12-30\";"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "rowName": "sql over sqlJndi",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   }
+  ]
+ },
+ "filename": "/public/report/sy_report.cdfde",
+ "layout": {
+  "rows": [],
+  "title": "CDF - Sample structure"
+ }
+}

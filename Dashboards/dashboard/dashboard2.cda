@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="pieQuery1" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="pieQuery2" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="chartQuery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" connection="pieQuery1" id="pieQuery1" type="sql">
+      <Name>pieQuery1</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="StartDateParam" name="StartDateParam" type="String"/>
+         <Parameter default="EndDateParam" name="EndDateParam" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select  
+    e.BrandName_level1,
+    e.BrandId_level1 BrandId,
+    (sum(a.ItemSaleAmt)-e.BrandId_level1+0.00) sumItemSaleAmt
+    
+    from Fact_SumItem a   
+    inner join Dim_Item  b         on a.ItemId_t = b.ItemId_t
+    inner join Dim_ItemCategory c  on b.ItemCatId = c.ItemCatId
+    inner join Dim_Outlet d        on a.OutletId_t  = d.OutletId_t    
+    inner join Dim_Brand e         on d.BrandId = e.BrandId
+    		
+    where     ( a.BusinessDate  between ${StartDateParam} and ${EndDateParam} )
+    				
+    group by e.BrandName_level1,BrandId order by sumItemSaleAmt;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="pieQuery2" id="pieQuery2" type="sql">
+      <Name>pieQuery2</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="StartDateParam" name="StartDateParam" type="String"/>
+         <Parameter default="BrandId" name="BrandId" type="String"/>
+         <Parameter default="EndDateParam" name="EndDateParam" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select 
+    c.ItemCatName_level1,
+    c.ItemCatId_level1 ItemCatId,
+    (sum(a.ItemSaleAmt)-c.ItemCatId_level1) sumItemSaleAmt
+	
+	from Fact_SumItem a
+    inner join Dim_Item  b         on a.ItemId_t = b.ItemId_t
+    inner join Dim_ItemCategory c  on b.ItemCatId = c.ItemCatId
+    inner join Dim_Outlet d        on a.OutletId_t  = d.OutletId_t    
+	inner join Dim_Brand e         on d.BrandId = e.BrandId
+			
+	where     ( a.BusinessDate  between ${StartDateParam} and ${EndDateParam} )
+					
+		and	  (e.BrandId_level1 = ${BrandId} or ${BrandId} = -1)
+								
+		group by c.ItemCatName_level1,ItemCatId order by sumItemSaleAmt desc ;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="chartQuery" id="chartQuery" type="sql">
+      <Name>chartQuery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="StartDateParam" name="StartDateParam" type="String"/>
+         <Parameter default="ItemCatId" name="ItemCatId" type="String"/>
+         <Parameter default="BrandId" name="BrandId" type="String"/>
+         <Parameter default="EndDateParam" name="EndDateParam" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select * from(
+select  
+    b.ItemName,
+    sum(a.SaleCostAmt) sumSaleCostAmt,
+    sum(a.GrossProfitAmt) sumGrossProfitAmt
+                  
+    from Fact_SumItem a
+    inner join Dim_Item  b         on a.ItemId_t = b.ItemId_t
+    inner join Dim_ItemCategory c  on b.ItemCatId = c.ItemCatId
+    inner join Dim_Outlet d        on a.OutletId_t  = d.OutletId_t    
+	inner join Dim_Brand e         on d.BrandId = e.BrandId
+        	
+    where    ( a.BusinessDate between ${StartDateParam} and ${EndDateParam} )					
+    	and	 ( e.BrandId_level1 = ${BrandId} or ${BrandId} = -1 )
+    	and  ( c.ItemCatId_level1 = ${ItemCatId} or ${ItemCatId} = -1 )
+        			
+    	group by b.ItemName order by sumGrossProfitAmt desc limit 20
+
+) f 
+    order by f.sumGrossProfitAmt;]]></Query>
+   </DataAccess>
+</CDADescriptor>

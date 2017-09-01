@@ -1,0 +1,1662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="BrandQuery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="PlaceQuery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="AreaQuery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="Area1Query" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="PeriodTypeQuery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="ChannelQuery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="GuestGradeTypeQuery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="GuestNoTypeQuery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="CategorySumType" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="ItemSumType" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="CheckSumType" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="OutletSumType" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="Selecthour" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="CheckFigureType" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="ItemCategoryQuery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="DataTestType" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="QtySelect" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="ItemGradeSort" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="ItemSummerySort" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="OutletSummerySort" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="CategoryStructureSort" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="unsalableSort" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="GuestHourSort" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="OutletSaleSummySort" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="SalePreviousSort" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="SaleTrendAnalyzeSort" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="CategoryRoleSort" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="FoodSalesSort" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="UserName" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="DiscountTypeSort" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="DiscountQuerySort" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="AreaQuery1" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="ItemDeptment" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="ItemName" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="ShopName" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="VoidUserName" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="VoidReasonName" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="CheckNo" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="TableNo" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="CheckOpenStation" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="BackItemSort" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="demo_new" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="demo_new_new_new" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="demo_new_new" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="demo_new" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="demo" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" connection="BrandQuery" id="BrandQuery" type="sql">
+      <Name>BrandQuery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT -1,
+        case when ${language} = 'zh-CN' then '所有' 
+             when ${language} = 'zh' then '所有'
+             when ${language} = 'en' then 'All'
+             else 'All'
+        end
+  union all
+SELECT DISTINCT
+     `Dim_Brand`.`BrandId_level1`,
+     `Dim_Brand`.`BrandName_level1`
+FROM
+     `Dim_Brand`
+WHERE
+     `Dim_Brand`.`Status` = 0]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="PlaceQuery" id="PlaceQuery" type="sql">
+      <Name>PlaceQuery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT -1,
+        case when ${language} = 'zh-CN' then '所有' 
+             when ${language} = 'zh' then '所有'
+             when ${language} = 'en' then 'All'
+             else 'All'
+        end
+  union all
+SELECT DISTINCT
+     `Dim_Place`.`PlaceId`,
+     `Dim_Place`.`PlaceName`
+FROM
+     `Dim_Place`
+WHERE
+     `Dim_Place`.`Status` = 0]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="AreaQuery" id="AreaQuery" type="sql">
+      <Name>AreaQuery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT -1,case when ${language} = 'zh-CN' then '所有' 
+             when ${language} = 'zh' then '所有'
+             when ${language} = 'en' then 'All'
+             else 'All'
+        end,-1,case when ${language} = 'zh-CN' then '所有' 
+             when ${language} = 'zh' then '所有'
+             when ${language} = 'en' then 'All'
+             else 'All'
+        end,-1,case when ${language} = 'zh-CN' then '所有' 
+             when ${language} = 'zh' then '所有'
+             when ${language} = 'en' then 'All'
+             else 'All'
+        end,-1,case when ${language} = 'zh-CN' then '所有' 
+             when ${language} = 'zh' then '所有'
+             when ${language} = 'en' then 'All'
+             else 'All'
+        end
+  union all
+SELECT
+     `Dim_Area`.`AreaId_level1`,
+     `Dim_Area`.`AreaName_level1`,
+     `Dim_Area`.`AreaId_level2`,
+     `Dim_Area`.`AreaName_level2`,
+     `Dim_Area`.`AreaId_level3`,
+     `Dim_Area`.`AreaName_level3`,
+     `Dim_Outlet`.`OutletId`,
+     `Dim_Outlet`.`OutletName`
+FROM
+     `Dim_Outlet` INNER JOIN `Dim_Area` ON `Dim_Outlet`.`AreaId` = `Dim_Area`.`AreaId`
+WHERE
+     `Dim_Outlet`.`EndDate` = "2200-01-01"
+     AND `Dim_Area`.`Status` = 0
+     AND `Dim_Outlet`.`Status` = 0
+     -- AND dim_outlet.VersionNo = ( SELECT max(dim_outlet.VersionNo) FROM dim_outlet )]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="Area1Query" id="Area1Query" type="sql">
+      <Name>Area1Query</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT -1,case when ${language} = 'zh-CN' then '所有' 
+             when ${language} = 'zh' then '所有'
+             when ${language} = 'en' then 'All'
+             else 'All'
+        end,-1,case when ${language} = 'zh-CN' then '所有' 
+             when ${language} = 'zh' then '所有'
+             when ${language} = 'en' then 'All'
+             else 'All'
+        end,-1,case when ${language} = 'zh-CN' then '所有' 
+             when ${language} = 'zh' then '所有'
+             when ${language} = 'en' then 'All'
+             else 'All'
+        end,-1,case when ${language} = 'zh-CN' then '所有' 
+             when ${language} = 'zh' then '所有'
+             when ${language} = 'en' then 'All'
+             else 'All'
+        end,-1,case when ${language} = 'zh-CN' then '所有' 
+             when ${language} = 'zh' then '所有'
+             when ${language} = 'en' then 'All'
+             else 'All'
+        end
+  union all
+SELECT
+     `Dim_Area`.`AreaId_level1`,
+     `Dim_Area`.`AreaName_level1`,
+     `Dim_Area`.`AreaId_level2`,
+     `Dim_Area`.`AreaName_level2`,
+     `Dim_Area`.`AreaId_level3`,
+     `Dim_Area`.`AreaName_level3`,
+     `Dim_Outlet`.`ShopId`,
+     `Dim_Outlet`.`ShopName`,
+     `Dim_Outlet`.`OutletId`,
+     `Dim_Outlet`.`OutletName`
+FROM
+     `Dim_Outlet` INNER JOIN `Dim_Area` ON `Dim_Outlet`.`AreaId` = `Dim_Area`.`AreaId`
+WHERE
+     `Dim_Outlet`.`EndDate` = "2200-01-01"
+     AND `Dim_Area`.`Status` = 0
+     AND `Dim_Outlet`.`Status` = 0
+     -- AND dim_outlet.VersionNo = ( SELECT max(dim_outlet.VersionNo) FROM dim_outlet )]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="PeriodTypeQuery" id="PeriodTypeQuery" type="sql">
+      <Name>PeriodTypeQuery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select -1,
+        case when ${language} = 'zh-CN' then '所有' 
+             when ${language} = 'zh' then '所有'
+             when ${language} = 'en' then 'All'
+             else 'All'
+        end
+  union all
+SELECT  
+    PeriodTypeId, 
+    PeriodTypeName 
+FROM 
+    Dim_PeriodType 
+WHERE Dim_PeriodType.Status = 0;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="ChannelQuery" id="ChannelQuery" type="sql">
+      <Name>ChannelQuery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select -1, 
+        case when ${language} = 'zh-CN' then '所有' 
+             when ${language} = 'zh' then '所有'
+             when ${language} = 'en' then 'All'
+             else 'All'
+        end
+  union all
+SELECT  
+    ChannelId, 
+    ChannelName 
+FROM 
+    Dim_Channel where Dim_Channel.Status = 0;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="GuestGradeTypeQuery" id="GuestGradeTypeQuery"
+               type="sql">
+      <Name>GuestGradeTypeQuery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select -1,
+        case when ${language} = 'zh-CN' then '所有' 
+             when ${language} = 'zh' then '所有'
+             when ${language} = 'en' then 'All'
+             else 'All'
+        end
+  union all
+SELECT  
+    GuestGradeTypeId, 
+    GuestGradeTypeName 
+FROM Dim_GuestGradeType 
+WHERE Dim_GuestGradeType.Status = 0;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="GuestNoTypeQuery" id="GuestNoTypeQuery" type="sql">
+      <Name>GuestNoTypeQuery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select -1,
+        case when ${language} = 'zh-CN' then '所有' 
+             when ${language} = 'zh' then '所有'
+             when ${language} = 'en' then 'All'
+             else 'All'
+        end
+  union all
+SELECT  
+    GuestNoTypeId, 
+    GuestNoTypeName 
+FROM 
+    Dim_GuestNoType 
+WHERE Dim_GuestNoType.Status = 0;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="CategorySumType" id="CategorySumType" type="sql">
+      <Name>CategorySumType</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT 1,
+        case when ${language} = 'zh-CN' then '餐品大类' 
+             when ${language} = 'zh' then '餐品大类'
+             when ${language} = 'en' then 'Bigcategory'
+             else 'Bigcategory'
+        end
+UNION ALL 
+SELECT 2,case when ${language} = 'zh-CN' then '餐品中类' 
+             when ${language} = 'zh' then '餐品中类'
+             when ${language} = 'en' then 'Midcategory'
+             else 'Midcategory'
+        end
+UNION ALL 
+SELECT 3,case when ${language} = 'zh-CN' then '餐品小类' 
+             when ${language} = 'zh' then '餐品小类'
+             when ${language} = 'en' then 'Smacategory'
+             else 'Smacategory'
+        end]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="ItemSumType" id="ItemSumType" type="sql">
+      <Name>ItemSumType</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT 0,case when ${language} = 'zh-CN' then '餐品部门' 
+             when ${language} = 'zh' then '餐品部门'
+             when ${language} = 'en' then 'Products department'
+             else 'Products department'
+        end
+UNION ALL
+SELECT 1, case when ${language} = 'zh-CN' then '餐品大类' 
+             when ${language} = 'zh' then '餐品大类'
+             when ${language} = 'en' then 'Bigcategory'
+             else 'Bigcategory'
+        end
+UNION ALL
+SELECT 2,case when ${language} = 'zh-CN' then '餐品中类' 
+             when ${language} = 'zh' then '餐品中类'
+             when ${language} = 'en' then 'Midcategory'
+             else 'Midcategory'
+        end
+UNION ALL
+SELECT 3,case when ${language} = 'zh-CN' then '餐品小类' 
+             when ${language} = 'zh' then '餐品小类'
+             when ${language} = 'en' then 'Smacategory'
+             else 'Smacategory'
+        end
+UNION ALL
+SELECT 4,case when ${language} = 'zh-CN' then '餐品' 
+             when ${language} = 'zh' then '餐品'
+             when ${language} = 'en' then 'Products'
+             else 'Products'
+        end]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="CheckSumType" id="CheckSumType" type="sql">
+      <Name>CheckSumType</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT 0,case when ${language} = 'zh-CN' then '市段' 
+             when ${language} = 'zh' then '市段'
+             when ${language} = 'en' then 'PeriodType'
+             else 'PeriodType'
+        end
+UNION ALL
+SELECT 1,case when ${language} = 'zh-CN' then '渠道' 
+             when ${language} = 'zh' then '渠道'
+             when ${language} = 'en' then 'Channel'
+             else 'Channel'
+        end
+UNION ALL
+SELECT 2,case when ${language} = 'zh-CN' then '顾客档次' 
+             when ${language} = 'zh' then '顾客档次'
+             when ${language} = 'en' then 'GuestGradeType'
+             else 'GuestGradeType'
+        end
+UNION ALL
+SELECT 3,case when ${language} = 'zh-CN' then '人数档次' 
+             when ${language} = 'zh' then '人数档次'
+             when ${language} = 'en' then 'GuestNoType'
+             else 'GuestNoType'
+        end;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="OutletSumType" id="OutletSumType" type="sql">
+      <Name>OutletSumType</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT 0,case when ${language} = 'zh-CN' then '大区' 
+             when ${language} = 'zh' then '大区'
+             when ${language} = 'en' then 'Area'
+             else 'Area'
+        end
+UNION ALL
+SELECT 1,case when ${language} = 'zh-CN' then '商圈' 
+             when ${language} = 'zh' then '商圈'
+             when ${language} = 'en' then 'Place'
+             else 'Place'
+        end
+UNION ALL
+SELECT 2,case when ${language} = 'zh-CN' then '品牌' 
+             when ${language} = 'zh' then '品牌'
+             when ${language} = 'en' then 'Brand'
+             else 'Brand'
+        end
+UNION ALL
+SELECT 3,case when ${language} = 'zh-CN' then '门店' 
+             when ${language} = 'zh' then '门店'
+             when ${language} = 'en' then 'Outlet'
+             else 'Outlet'
+        end]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="Selecthour" id="Selecthour" type="sql">
+      <Name>Selecthour</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select 0 as "id","0" as "name"
+union all 
+select 1,"1"
+union all 
+select 2,"2"
+union all 
+select 3,"3"
+union all 
+select 4,"4"
+union all 
+select 5,"5"
+union all 
+select 6,"6"
+union all 
+select 7,"7"
+union all 
+select 8,"8"
+union all 
+select 9,"9"
+union all 
+select 10,"10"
+union all 
+select 11,"11"
+union all 
+select 12,"12"
+union all
+select 13,"13"
+union all 
+select 14,"14"
+union all 
+select 15,"15"
+union all
+select 16,"16"
+union all 
+select 17,"17"
+union all 
+select 18,"18"
+union all 
+select 19,"19"
+union all 
+select 20,"20"
+union all 
+select 21,"21"
+union all 
+select 22,"22"
+union all 
+select 23,"23"]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="CheckFigureType" id="CheckFigureType" type="sql">
+      <Name>CheckFigureType</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select 1 ,case when ${language} = 'zh-CN' then '客单价' 
+             when ${language} = 'zh' then '客单价'
+             when ${language} = 'en' then 'GuestUnitPrice'
+             else 'GuestUnitPrice'
+        end
+union all 
+select 2,case when ${language} = 'zh-CN' then '人数' 
+             when ${language} = 'zh' then '人数'
+             when ${language} = 'en' then 'NumberOfPeolpels'
+             else 'NumberOfPeolpels'
+        end
+union all
+select 3,case when ${language} = 'zh-CN' then '销售额' 
+             when ${language} = 'zh' then '销售额'
+             when ${language} = 'en' then 'SalAmts'
+             else 'SalAmts'
+        end]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="ItemCategoryQuery" id="ItemCategoryQuery"
+               type="sql">
+      <Name>ItemCategoryQuery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT -1, case when ${language} = 'zh-CN' then '所有' 
+             when ${language} = 'zh' then '所有'
+             when ${language} = 'en' then 'All'
+             else 'All'
+        end,-1, case when ${language} = 'zh-CN' then '所有' 
+             when ${language} = 'zh' then '所有'
+             when ${language} = 'en' then 'All'
+             else 'All'
+        end,-1, case when ${language} = 'zh-CN' then '所有' 
+             when ${language} = 'zh' then '所有'
+             when ${language} = 'en' then 'All'
+             else 'All'
+        end,-1, case when ${language} = 'zh-CN' then '所有' 
+             when ${language} = 'zh' then '所有'
+             when ${language} = 'en' then 'All'
+             else 'All'
+        end
+  union all
+select distinct
+    a.ItemCatId_level1,a.ItemCatName_level1,
+    a.ItemCatId_level2,a.ItemCatName_level2,
+    a.ItemCatId_level3,a.ItemCatName_level3,
+    b.ItemId,b.ItemName
+from dim_itemcategory a
+inner join dim_item b on a.ItemCatId = b.ItemCatId]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="DataTestType" id="DataTestType" type="sql">
+      <Name>DataTestType</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select 1, case when ${language} = 'zh-CN' then '日期' 
+             when ${language} = 'zh' then '日期'
+             when ${language} = 'en' then 'Date'
+             else 'Date'
+        end
+union all
+select 2,case when ${language} = 'zh-CN' then '年份' 
+             when ${language} = 'zh' then '年份'
+             when ${language} = 'en' then 'Year'
+             else 'Year'
+        end
+union all
+select 3,case when ${language} = 'zh-CN' then '门店' 
+             when ${language} = 'zh' then '门店'
+             when ${language} = 'en' then 'Outlet'
+             else 'Outlet'
+        end
+union all
+select 4,case when ${language} = 'zh-CN' then '日期门店' 
+             when ${language} = 'zh' then '日期门店'
+             when ${language} = 'en' then 'Date-Outlet'
+             else 'Date-Outlet'
+        end]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="QtySelect" id="QtySelect" type="sql">
+      <Name>QtySelect</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select ItemId, 
+        sum(a.ItemSaleQty ) as 'itemsaleqty' 
+from Fact_SumItem a
+    group by ItemId]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="ItemGradeSort" id="ItemGradeSort" type="sql">
+      <Name>ItemGradeSort</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select  1 ,case when ${language} = 'zh-CN' then '总销售额' 
+             when ${language} = 'zh' then '总销售额'
+             when ${language} = 'en' then 'TotalSalAmts'
+             else 'TotalSalAmts'
+        end
+union all
+select  2,case when ${language} = 'zh-CN' then '总毛利额' 
+             when ${language} = 'zh' then '总毛利额'
+             when ${language} = 'en' then 'TotalGrossProfit'
+             else 'TotalGrossProfit'
+        end
+union all
+select  3,case when ${language} = 'zh-CN' then '销售量' 
+             when ${language} = 'zh' then '销售量'
+             when ${language} = 'en' then 'SalQties'
+             else 'SalQties'
+        end
+union all
+select  4,case when ${language} = 'zh-CN' then '平均成本' 
+             when ${language} = 'zh' then '平均成本'
+             when ${language} = 'en' then 'AverageCost'
+             else 'AverageCost'
+        end
+union all
+select  5,case when ${language} = 'zh-CN' then '平均售价' 
+             when ${language} = 'zh' then '平均售价'
+             when ${language} = 'en' then 'AveragePrice'
+             else 'AveragePrice'
+        end
+union all
+select  6,case when ${language} = 'zh-CN' then '平均毛利' 
+             when ${language} = 'zh' then '平均毛利'
+             when ${language} = 'en' then 'AverageProfit'
+             else 'AverageProfit'
+        end
+union all
+select  7,case when ${language} = 'zh-CN' then '总成本' 
+             when ${language} = 'zh' then '总成本'
+             when ${language} = 'en' then 'TotalCost'
+             else 'ToalCost'
+        end]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="ItemSummerySort" id="ItemSummerySort" type="sql">
+      <Name>ItemSummerySort</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select  1 ,case when ${language} = 'zh-CN' then '销售数量' 
+             when ${language} = 'zh' then '销售数量'
+             when ${language} = 'en' then 'SalQties'
+             else 'SalQties'
+        end
+union all
+select  2,case when ${language} = 'zh-CN' then '销售金额' 
+             when ${language} = 'zh' then '销售金额'
+             when ${language} = 'en' then 'SalAmts'
+             else 'SalAmts'
+        end
+union all
+select  3,case when ${language} = 'zh-CN' then '原销售额' 
+             when ${language} = 'zh' then '原销售额'
+             when ${language} = 'en' then 'OriginalSalAmts'
+             else 'OriginalSalAmts'
+        end
+union all
+select  4,case when ${language} = 'zh-CN' then '折扣额' 
+             when ${language} = 'zh' then '折扣额'
+             when ${language} = 'en' then 'DiscountAmts'
+             else 'DiscountAmts'
+        end
+union all
+select  5,case when ${language} = 'zh-CN' then '销售成本' 
+             when ${language} = 'zh' then '销售成本'
+             when ${language} = 'en' then 'SalCosts'
+             else 'SalCosts'
+        end
+union all
+select  6,case when ${language} = 'zh-CN' then '销售毛利' 
+             when ${language} = 'zh' then '销售毛利'
+             when ${language} = 'en' then 'SalProfits'
+             else 'SalProfit'
+        end;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="OutletSummerySort" id="OutletSummerySort"
+               type="sql">
+      <Name>OutletSummerySort</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select 1,case when ${language} = 'zh-CN' then '销售额' 
+             when ${language} = 'zh' then '销售额'
+             when ${language} = 'en' then 'SalAmts'
+             else 'SalAmts'
+        end
+ union all
+select 2,case when ${language} = 'zh-CN' then '服务费' 
+             when ${language} = 'zh' then '服务费'
+             when ${language} = 'en' then 'ServiceFee'
+             else 'ServiceFee'
+        end
+ union all
+select 3,case when ${language} = 'zh-CN' then '税额' 
+             when ${language} = 'zh' then '税额'
+             when ${language} = 'en' then 'TexAmts'
+             else 'TexAmts'
+        end
+ union all
+select 4,case when ${language} = 'zh-CN' then '折扣额' 
+             when ${language} = 'zh' then '折扣额'
+             when ${language} = 'en' then 'DiscountAmts'
+             else 'DiscountAmts'
+        end
+ union all
+select 5,case when ${language} = 'zh-CN' then '取消金额' 
+             when ${language} = 'zh' then '取消金额'
+             when ${language} = 'en' then 'VoidAmt'
+             else 'VoidAmt'
+        end
+ union all
+select 6,case when ${language} = 'zh-CN' then '退货金额' 
+             when ${language} = 'zh' then '退货金额'
+             when ${language} = 'en' then 'RetnAmt'
+             else 'RetnAmt'
+        end
+ union all
+select 7,case when ${language} = 'zh-CN' then '客数' 
+             when ${language} = 'zh' then '客数'
+             when ${language} = 'en' then 'CheckQty'
+             else 'CheckQty'
+        end
+ union all
+select 8,case when ${language} = 'zh-CN' then '人数' 
+             when ${language} = 'zh' then '人数'
+             when ${language} = 'en' then 'GuestQty'
+             else 'GuestQty'
+        end
+ union all
+select 9,case when ${language} = 'zh-CN' then '客单价' 
+             when ${language} = 'zh' then '客单价'
+             when ${language} = 'en' then 'AvgCheckAmt'
+             else 'AvgCheckAmt'
+        end
+ union all
+select 10,case when ${language} = 'zh-CN' then '人均金额'
+             when ${language} = 'zh' then '人均金额'
+             when ${language} = 'en' then 'AvgPersonAmt'
+             else 'AvgPersonAmt'
+        end
+ union all
+select 11,case when ${language} = 'zh-CN' then '餐桌'
+             when ${language} = 'zh' then '餐桌'
+             when ${language} = 'en' then 'TableQty'
+             else 'TableQty'
+        end
+ union all
+select 12,case when ${language} = 'zh-CN' then '开台率'
+             when ${language} = 'zh' then '开台率'
+             when ${language} = 'en' then 'KaiTaiLv'
+             else 'KaiTaiLv'
+        end
+ union all
+select 13,case when ${language} = 'zh-CN' then '营业成本'
+             when ${language} = 'zh' then '营业成本'
+             when ${language} = 'en' then 'SaleCostAmt'
+             else 'SaleCostAmt'
+        end
+ union all
+select 14,case when ${language} = 'zh-CN' then '毛利'
+             when ${language} = 'zh' then '毛利'
+             when ${language} = 'en' then 'GrossAmt'
+             else 'GrossAmt'
+        end
+ union all
+select 15,case when ${language} = 'zh-CN' then '毛利率'
+             when ${language} = 'zh' then '毛利率'
+             when ${language} = 'en' then 'GrossRate'
+             else 'GrossRate'
+        end;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="CategoryStructureSort" id="CategoryStructureSort"
+               type="sql">
+      <Name>CategoryStructureSort</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select 1,case when ${language} = 'zh-CN' then '品种数' 
+             when ${language} = 'zh' then '品种数'
+             when ${language} = 'en' then 'ItemCount'
+             else 'ItemCount'
+        end
+ union all
+select 2,case when ${language} = 'zh-CN' then '销售品种数' 
+             when ${language} = 'zh' then '销售品种数'
+             when ${language} = 'en' then 'SaleItemCount'
+             else 'SaleItemCount'
+        end
+ union all
+select 3,case when ${language} = 'zh-CN' then '动销率'
+             when ${language} = 'zh' then '动销率'
+             when ${language} = 'en' then 'SaleItemRate'
+             else 'SaleItemRate'
+        end
+ union all 
+select 4,case when ${language} = 'zh-CN' then '销售数量'
+             when ${language} = 'zh' then '销售数量'
+             when ${language} = 'en' then 'SaleQty'
+             else 'SaleQty'
+        end
+ union all
+select 5,case when ${language} = 'zh-CN' then '销售额'
+             when ${language} = 'zh' then '销售额'
+             when ${language} = 'en' then 'SaleAmt'
+             else 'SaleAmt'
+        end
+ union all
+select 6,case when ${language} = 'zh-CN' then '税额'
+             when ${language} = 'zh' then '税额'
+             when ${language} = 'en' then 'TaxAmt'
+             else 'TaxAmt'
+        end
+ union all
+select 7,case when ${language} = 'zh-CN' then '折扣额'
+             when ${language} = 'zh' then '折扣额'
+             when ${language} = 'en' then 'DisAmt'
+             else 'DisAmt'
+        end
+ union all
+select 8,case when ${language} = 'zh-CN' then '成本'
+             when ${language} = 'zh' then '成本'
+             when ${language} = 'en' then 'CostAmt'
+             else 'CostAmt'
+        end
+ union all
+select 9,case when ${language} = 'zh-CN' then '毛利'
+             when ${language} = 'zh' then '毛利'
+             when ${language} = 'en' then 'GrossAmt'
+             else 'GrossAmt'
+        end
+ union all
+select 10,case when ${language} = 'zh-CN' then '平均单价'
+             when ${language} = 'zh' then '平均单价'
+             when ${language} = 'en' then 'AvgPrice'
+             else 'AvgPrice'
+        end
+ union all
+select 11,case when ${language} = 'zh-CN' then '算术平均价'
+             when ${language} = 'zh' then '算术平均价'
+             when ${language} = 'en' then 'AvgPrice2'
+             else 'AvgPrice2'
+        end;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="unsalableSort" id="unsalableSort" type="sql">
+      <Name>unsalableSort</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select 1,case when ${language} = 'zh-CN' then '餐品数量' 
+             when ${language} = 'zh' then '餐品数量'
+             when ${language} = 'en' then 'ProductQty'
+             else 'ProductQty'
+        end
+union all 
+select 2,case when ${language} = 'zh-CN' then '销售额' 
+             when ${language} = 'zh' then '销售额'
+             when ${language} = 'en' then 'SaleAmt'
+             else 'SaleAmt'
+        end
+union all 
+select 3,case when ${language} = 'zh-CN' then '餐品均价'
+             when ${language} = 'zh' then '餐品均价'
+             when ${language} = 'en' then 'AveragePrice'
+             else 'AveragePrice'
+        end
+union all 
+select 4,case when ${language} = 'zh-CN' then '毛利'
+             when ${language} = 'zh' then '毛利'
+             when ${language} = 'en' then 'GrossProfit'
+             else 'GrossProfit'
+        end
+union all 
+select 5,case when ${language} = 'zh-CN' then '毛利率'
+             when ${language} = 'zh' then '毛利率'
+             when ${language} = 'en' then 'GrossRate'
+             else 'GrossRate'
+        end]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="GuestHourSort" id="GuestHourSort" type="sql">
+      <Name>GuestHourSort</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select 1,case when ${language} = 'zh-CN' then '销售额'
+             when ${language} = 'zh' then '销售额'
+             when ${language} = 'en' then 'SalAmt'
+             else 'SalAmt'
+        end
+union all
+select 2,case when ${language} = 'zh-CN' then '服务费'
+             when ${language} = 'zh' then '服务费'
+             when ${language} = 'en' then 'SCAmt'
+             else 'SCAmt'
+        end
+union all 
+select 3,case when ${language} = 'zh-CN' then '销售数量'
+             when ${language} = 'zh' then '销售数量'
+             when ${language} = 'en' then 'SaleQty'
+             else 'SaleQty'
+        end
+union all 
+select 4,case when ${language} = 'zh-CN' then '餐品均价'
+             when ${language} = 'zh' then '餐品均价'
+             when ${language} = 'en' then 'AvgItemPrice'
+             else 'AvgItemPrice'
+        end
+union all 
+select 5,case when ${language} = 'zh-CN' then '成本'
+             when ${language} = 'zh' then '成本'
+             when ${language} = 'en' then 'SaleCost'
+             else 'SaleCost'
+        end
+union all
+select 6,case when ${language} = 'zh-CN' then '毛利'
+             when ${language} = 'zh' then '毛利'
+             when ${language} = 'en' then 'GrossProfits'
+             else 'GrossProfits'
+        end
+union all 
+select 7,case when ${language} = 'zh-CN' then '毛利率'
+             when ${language} = 'zh' then '毛利率'
+             when ${language} = 'en' then 'GrossRate'
+             else 'GrossRate'
+        end
+union all 
+select 8,case when ${language} = 'zh-CN' then '账单数量'
+             when ${language} = 'zh' then '账单数量'
+             when ${language} = 'en' then 'CheckQty'
+             else 'CheckQty'
+        end
+union all 
+select 9,case when ${language} = 'zh-CN' then '人数'
+             when ${language} = 'zh' then '人数'
+             when ${language} = 'en' then 'GuestQty'
+             else 'GuestQty'
+        end
+union all
+select 10,case when ${language} = 'zh-CN' then '账单均价'
+             when ${language} = 'zh' then '账单均价'
+             when ${language} = 'en' then 'AvgCheckPrice'
+             else 'AvgCheckPrice'
+        end
+union all 
+select 11,case when ${language} = 'zh-CN' then '人均单价'
+             when ${language} = 'zh' then '人均单价'
+             when ${language} = 'en' then 'AvgPersonAmt'
+             else 'AvgPersonAmt'
+        end]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="OutletSaleSummySort" id="OutletSaleSummySort"
+               type="sql">
+      <Name>OutletSaleSummySort</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select 1,case when ${language} = 'zh-CN' then '销售数量'
+             when ${language} = 'zh' then '销售数量'
+             when ${language} = 'en' then 'SaleQty'
+             else 'SaleQty'
+        end
+union all 
+select 2,case when ${language} = 'zh-CN' then '销售额'
+             when ${language} = 'zh' then '销售额'
+             when ${language} = 'en' then 'SalAmt'
+             else 'SalAmt'
+        end
+union all 
+select 3,case when ${language} = 'zh-CN' then '餐品均价'
+             when ${language} = 'zh' then '餐品均价'
+             when ${language} = 'en' then 'AvgItemPrice'
+             else 'AvgItemPrice'
+        end
+union all 
+select 4,case when ${language} = 'zh-CN' then '成本'
+             when ${language} = 'zh' then '成本'
+             when ${language} = 'en' then 'SaleCost'
+             else 'SaleCost'
+        end
+union all
+select 5,case when ${language} = 'zh-CN' then '毛利'
+             when ${language} = 'zh' then '毛利'
+             when ${language} = 'en' then 'GrossProfits'
+             else 'GrossProfits'
+        end
+union all 
+select 6,case when ${language} = 'zh-CN' then '客数'
+             when ${language} = 'zh' then '客数'
+             when ${language} = 'en' then 'CheckQty'
+             else 'CheckQty'
+        end
+union all 
+select 7,case when ${language} = 'zh-CN' then '人数'
+             when ${language} = 'zh' then '人数'
+             when ${language} = 'en' then 'GuestQty'
+             else 'GuestQty'
+        end
+union all 
+select 8,case when ${language} = 'zh-CN' then '客单价'
+             when ${language} = 'zh' then '客单价'
+             when ${language} = 'en' then 'AvgCheckAmt'
+             else 'AvgCheckAmt'
+        end
+union all
+select 9,case when ${language} = 'zh-CN' then '客均人数'
+             when ${language} = 'zh' then '客均人数'
+             when ${language} = 'en' then 'AvgCheckGuest'
+             else 'AvgCheckGuest'
+        end
+union all 
+select 10,case when ${language} = 'zh-CN' then '人均单价'
+             when ${language} = 'zh' then '人均单价'
+             when ${language} = 'en' then 'AvgPersonAmt'
+             else 'AvgPersonAmt'
+        end]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="SalePreviousSort" id="SalePreviousSort" type="sql">
+      <Name>SalePreviousSort</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select 1,case when ${language} = 'zh-CN' then '上期销售金额'
+             when ${language} = 'zh' then '上期销售金额'
+             when ${language} = 'en' then 'LastSaleAmt'
+             else 'LastSaleAmt'
+        end
+union all 
+select 2,case when ${language} = 'zh-CN' then '本期销售金额'
+             when ${language} = 'zh' then '本期销售金额'
+             when ${language} = 'en' then 'ThisIssueSaleAmt'
+             else 'ThisIssueSaleAmt'
+        end
+union all 
+select 3,case when ${language} = 'zh-CN' then '上期毛利额'
+             when ${language} = 'zh' then '上期毛利额'
+             when ${language} = 'en' then 'LastGrossProfit'
+             else 'LastGrossProfit'
+        end
+union all 
+select 4,case when ${language} = 'zh-CN' then '本期毛利额'
+             when ${language} = 'zh' then '本期毛利额'
+             when ${language} = 'en' then 'ThisIssueGrossProfit'
+             else 'ThisIssueGrossProfit'
+        end
+union all
+select 5,case when ${language} = 'zh-CN' then '上期客流量'
+             when ${language} = 'zh' then '上期客流量'
+             when ${language} = 'en' then 'LastTrafficQty'
+             else 'LastTrafficQty'
+        end
+union all 
+select 6,case when ${language} = 'zh-CN' then '本期客流量'
+             when ${language} = 'zh' then '本期客流量'
+             when ${language} = 'en' then 'ThisIssueTrafficQty'
+             else 'ThisIssueTrafficQty'
+        end
+union all 
+select 7,case when ${language} = 'zh-CN' then '上期人流量'
+             when ${language} = 'zh' then '上期人流量'
+             when ${language} = 'en' then 'LastTrafficGuest'
+             else 'LastTrafficGuest'
+        end
+union all 
+select 8,case when ${language} = 'zh-CN' then '本期人流量'
+             when ${language} = 'zh' then '本期人流量'
+             when ${language} = 'en' then 'ThisIssueTrafficGuest'
+             else 'ThisIssueTrafficGuest'
+        end
+union all
+select 9,case when ${language} = 'zh-CN' then '上期客单价'
+             when ${language} = 'zh' then '上期客单价'
+             when ${language} = 'en' then 'LastCheckPrice'
+             else 'LastCheckPrice'
+        end
+union all 
+select 10,case when ${language} = 'zh-CN' then '本期客单价'
+             when ${language} = 'zh' then '本期客单价'
+             when ${language} = 'en' then 'ThisIssueCheckPrice'
+             else 'ThisIssueCheckPrice'
+        end
+union all 
+select 11,case when ${language} = 'zh-CN' then '上期人单价'
+             when ${language} = 'zh' then '上期人单价'
+             when ${language} = 'en' then 'LastAvgGuestAmt'
+             else 'LastAvgGuestAmt'
+        end
+union all 
+select 12,case when ${language} = 'zh-CN' then '本期人单价'
+             when ${language} = 'zh' then '本期人单价'
+             when ${language} = 'en' then 'ThisIssueAvgGuestAmt'
+             else 'ThisIssueAvgGuestAmt'
+        end]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="SaleTrendAnalyzeSort" id="SaleTrendAnalyzeSort"
+               type="sql">
+      <Name>SaleTrendAnalyzeSort</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select 1,case when ${language} = 'zh-CN' then '日期'
+             when ${language} = 'zh' then '日期'
+             when ${language} = 'en' then 'Date'
+             else 'Date'
+        end
+ union all
+select 2,case when ${language} = 'zh-CN' then '销售额'
+             when ${language} = 'zh' then '销售额'
+             when ${language} = 'en' then 'SalAmt'
+             else 'SalAmt'
+        end
+ union all
+select 3,case when ${language} = 'zh-CN' then '税额' 
+             when ${language} = 'zh' then '税额'
+             when ${language} = 'en' then 'TexAmts'
+             else 'TexAmts'
+        end
+ union all
+select 4,case when ${language} = 'zh-CN' then '服务费' 
+             when ${language} = 'zh' then '服务费'
+             when ${language} = 'en' then 'ServiceFee'
+             else 'ServiceFee'
+        end
+ union all
+select 5,case when ${language} = 'zh-CN' then '单数' 
+             when ${language} = 'zh' then '单数'
+             when ${language} = 'en' then 'SingularQty'
+             else 'SingularQty'
+        end
+ union all
+select 6,case when ${language} = 'zh-CN' then '人数' 
+             when ${language} = 'zh' then '人数'
+             when ${language} = 'en' then 'GuestQty'
+             else 'GuestQty'
+        end
+ union all
+select 7,case when ${language} = 'zh-CN' then '客单价'
+             when ${language} = 'zh' then '客单价'
+             when ${language} = 'en' then 'AvgCheckAmt'
+             else 'AvgCheckAmt'
+        end
+ union all
+select 8,case when ${language} = 'zh-CN' then '人均单价'
+             when ${language} = 'zh' then '人均单价'
+             when ${language} = 'en' then 'AvgPersonAmt'
+             else 'AvgPersonAmt'
+        end
+ union all
+select 9,case when ${language} = 'zh-CN' then '餐品数量'
+             when ${language} = 'zh' then '餐品数量'
+             when ${language} = 'en' then 'ItemCounts'
+             else 'ItemCounts'
+        end
+ union all
+select 10,case when ${language} = 'zh-CN' then '餐品均价'
+             when ${language} = 'zh' then '餐品均价'
+             when ${language} = 'en' then 'AvgItemPrice'
+             else 'AvgItemPrice'
+        end]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="CategoryRoleSort" id="CategoryRoleSort" type="sql">
+      <Name>CategoryRoleSort</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select 1,case when ${language} = 'zh-CN' then '销售数量' 
+             when ${language} = 'zh' then '销售数量'
+             when ${language} = 'en' then 'SalQties'
+             else 'SalQties'
+        end
+ union all
+select 2,case when ${language} = 'zh-CN' then '销售额'
+             when ${language} = 'zh' then '销售额'
+             when ${language} = 'en' then 'SaleAmt'
+             else 'SaleAmt'
+        end
+ union all
+select 3,case when ${language} = 'zh-CN' then '毛利'
+             when ${language} = 'zh' then '毛利'
+             when ${language} = 'en' then 'GrossAmt'
+             else 'GrossAmt'
+        end
+ union all
+select 4,case when ${language} = 'zh-CN' then 'IP值'
+             when ${language} = 'zh' then 'IP值'
+             when ${language} = 'en' then 'IP_Value'
+             else 'IP_Value'
+        end
+ union all
+select 5,case when ${language} = 'zh-CN' then 'IP排名'
+             when ${language} = 'zh' then 'IP排名'
+             when ${language} = 'en' then 'IP_Ranking'
+             else 'IP_Ranking'
+        end
+ union all
+select 6,case when ${language} = 'zh-CN' then 'IP值_高端'
+             when ${language} = 'zh' then 'IP值_高端'
+             when ${language} = 'en' then 'IP_High'
+             else 'IP_High'
+        end
+ union all
+select 7,case when ${language} = 'zh-CN' then 'IP排名_高端'
+             when ${language} = 'zh' then 'IP排名_高端'
+             when ${language} = 'en' then 'IPRanking_High'
+             else 'IPRanking_High'
+        end
+ union all
+select 8,case when ${language} = 'zh-CN' then 'IP值_中端'
+             when ${language} = 'zh' then 'IP值_中端'
+             when ${language} = 'en' then 'IP_Mid'
+             else 'IP_Mid'
+        end
+ union all
+select 9,case when ${language} = 'zh-CN' then 'IP排名_中端'
+             when ${language} = 'zh' then 'IP排名_中端'
+             when ${language} = 'en' then 'IPRanking_Mid'
+             else 'IPRanking_Mid'
+        end
+ union all
+select 10,case when ${language} = 'zh-CN' then 'IP值_低端'
+             when ${language} = 'zh' then 'IP值_低端'
+             when ${language} = 'en' then 'IP_Low'
+             else 'IP_Low'
+        end
+ union all
+select 11,case when ${language} = 'zh-CN' then 'IP排名_低端'
+             when ${language} = 'zh' then 'IP排名_低端'
+             when ${language} = 'en' then 'IPRanking_Low'
+             else 'IPRanking_Low'
+        end]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="FoodSalesSort" id="FoodSalesSort" type="sql">
+      <Name>FoodSalesSort</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select 1,case when ${language} = 'zh-CN' then '单价' 
+             when ${language} = 'zh' then '单价'
+             when ${language} = 'en' then 'Unit Price'
+             else 'Unit Price'
+        end
+ union all
+select 2,case when ${language} = 'zh-CN' then '销售收入'
+             when ${language} = 'zh' then '销售收入'
+             when ${language} = 'en' then 'Receivable Amount'
+             else 'Receivable Amount'
+        end
+ union all
+select 3,case when ${language} = 'zh-CN' then '销售净额'
+             when ${language} = 'zh' then '销售净额'
+             when ${language} = 'en' then 'Sales Amount'
+             else 'Sales Amount'
+        end
+ union all
+select 4,case when ${language} = 'zh-CN' then '数量'
+             when ${language} = 'zh' then '数量'
+             when ${language} = 'en' then 'Sales Volumes'
+             else 'Sales Volumes'
+        end
+ union all
+select 5,case when ${language} = 'zh-CN' then '折扣额'
+             when ${language} = 'zh' then '折扣额'
+             when ${language} = 'en' then 'Discount Amount'
+             else 'Discount Amount'
+        end
+ union all
+select 6,case when ${language} = 'zh-CN' then '日期'
+             when ${language} = 'zh' then '日期'
+             when ${language} = 'en' then 'Report Date'
+             else 'Report Date'
+        end]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="UserName" id="UserName" type="sql">
+      <Name>UserName</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select -1,
+        case when ${language} = 'zh-CN' then '所有' 
+             when ${language} = 'zh' then '所有'
+             when ${language} = 'en' then 'All'
+             else 'All'
+        end
+union all
+
+select distinct a.UserId,a.UserName
+  from dim_user a 
+inner join fact_checkdiscount b on a.UserId = b.DiscountUserId]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="DiscountTypeSort" id="DiscountTypeSort" type="sql">
+      <Name>DiscountTypeSort</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select -1,
+        case when ${language} = 'zh-CN' then '所有' 
+             when ${language} = 'zh' then '所有'
+             when ${language} = 'en' then 'All'
+             else 'All'
+        end
+union all 
+select distinct a.DiscountTypeId,a.DiscountTypeName
+  from dim_discounttype a
+  inner join fact_checkdiscount b on a.DiscountTypeId = b.DiscountTypeId]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="DiscountQuerySort" id="DiscountQuerySort"
+               type="sql">
+      <Name>DiscountQuerySort</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select 2,case when ${language} = 'zh-CN' then '折扣金额'
+             when ${language} = 'zh' then '折扣金额'
+             when ${language} = 'en' then 'DiscountAmts'
+             else 'DiscountAmts'
+        end 
+    union all
+select 3,case when ${language} = 'zh-CN' then '应收金额'
+             when ${language} = 'zh' then '应收金额'
+             when ${language} = 'en' then 'SaleAmts'
+             else 'SaleAmts'
+        end
+	union all
+select 4,case when ${language} = 'zh-CN' then '实结金额'
+             when ${language} = 'zh' then '实结金额'
+             when ${language} = 'en' then 'FactSalAmts'
+             else 'FactSalAmts'
+        end
+	union all
+select 5,case when ${language} = 'zh-CN' then '报表日期'
+             when ${language} = 'zh' then '报表日期'
+             when ${language} = 'en' then 'Date'
+             else 'Date'
+        end]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="AreaQuery1" id="AreaQuery1" type="sql">
+      <Name>AreaQuery1</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT -1,case when ${language} = 'zh-CN' then '所有' 
+             when ${language} = 'zh' then '所有'
+             when ${language} = 'en' then 'All'
+             else 'All'
+        end,-1,case when ${language} = 'zh-CN' then '所有' 
+             when ${language} = 'zh' then '所有'
+             when ${language} = 'en' then 'All'
+             else 'All'
+        end,-1,case when ${language} = 'zh-CN' then '所有' 
+             when ${language} = 'zh' then '所有'
+             when ${language} = 'en' then 'All'
+             else 'All'
+        end,-1,case when ${language} = 'zh-CN' then '所有' 
+             when ${language} = 'zh' then '所有'
+             when ${language} = 'en' then 'All'
+             else 'All'
+        end,-1,case when ${language} = 'zh-CN' then '所有' 
+             when ${language} = 'zh' then '所有'
+             when ${language} = 'en' then 'All'
+             else 'All'
+        end
+  union all
+SELECT
+     `Dim_Area`.`AreaId_level1`,
+     `Dim_Area`.`AreaName_level1`,
+     `Dim_Area`.`AreaId_level2`,
+     `Dim_Area`.`AreaName_level2`,
+     `Dim_Area`.`AreaId_level3`,
+     `Dim_Area`.`AreaName_level3`,
+     `Dim_Outlet`.`ShopId`,
+     `Dim_Outlet`.`ShopName`,
+     `Dim_Outlet`.`OutletId`,
+     `Dim_Outlet`.`OutletName`
+FROM
+     `Dim_Outlet` INNER JOIN `Dim_Area` ON `Dim_Outlet`.`AreaId` = `Dim_Area`.`AreaId`
+WHERE
+     `Dim_Outlet`.`EndDate` = "2200-01-01"
+     AND `Dim_Area`.`Status` = 0
+     AND `Dim_Outlet`.`Status` = 0]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="ItemDeptment" id="ItemDeptment" type="sql">
+      <Name>ItemDeptment</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select -1,case when ${language} = 'zh-CN' then '所有' 
+             when ${language} = 'zh' then '所有'
+             when ${language} = 'en' then 'All'
+             else 'All'
+        end
+    union all
+select a.ItemDeptId_level1,a.ItemDeptName_level1
+    from dim_itemdeptment a]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="ItemName" id="ItemName" type="sql">
+      <Name>ItemName</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select -1,case when ${language} = 'zh-CN' then '所有' 
+             when ${language} = 'zh' then '所有'
+             when ${language} = 'en' then 'All'
+             else 'All'
+        end
+    union all
+select a.ItemId,a.ItemName
+    from dim_item a]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="ShopName" id="ShopName" type="sql">
+      <Name>ShopName</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select -1,case when ${language} = 'zh-CN' then '所有' 
+             when ${language} = 'zh' then '所有'
+             when ${language} = 'en' then 'All'
+             else 'All'
+        end
+   union all
+select  distinct a.ShopId,a.ShopName from Dim_Outlet a
+group by a.ShopId,a.ShopName
+  
+;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="VoidUserName" id="VoidUserName" type="sql">
+      <Name>VoidUserName</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select -1,case when ${language} = 'zh-CN' then '所有' 
+             when ${language} = 'zh' then '所有'
+             when ${language} = 'en' then 'All'
+             else 'All'
+        end
+ union all
+select a.UserId,a.UserName
+    from dim_user a]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="VoidReasonName" id="VoidReasonName" type="sql">
+      <Name>VoidReasonName</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select -1,case when ${language} = 'zh-CN' then '所有' 
+             when ${language} = 'zh' then '所有'
+             when ${language} = 'en' then 'All'
+             else 'All'
+        end
+    union all
+select a.VoidReasonId,a.VoidReasonName
+    from dim_voidresontype a]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="CheckNo" id="CheckNo" type="sql">
+      <Name>CheckNo</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select -1,case when ${language} = 'zh-CN' then '所有' 
+             when ${language} = 'zh' then '所有'
+             when ${language} = 'en' then 'All'
+             else 'All'
+        end
+    union all
+select distinct a.CheckNo,a.CheckNo
+    from fact_check a]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="TableNo" id="TableNo" type="sql">
+      <Name>TableNo</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select -1, case when ${language} = 'zh-CN' then '所有' 
+             when ${language} = 'zh' then '所有'
+             when ${language} = 'en' then 'All'
+             else 'All'
+        end
+    union all
+select distinct a.TableNo,a.TableNo
+    from fact_check a]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="CheckOpenStation" id="CheckOpenStation" type="sql">
+      <Name>CheckOpenStation</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select -1, case when ${language} = 'zh-CN' then '所有' 
+             when ${language} = 'zh' then '所有'
+             when ${language} = 'en' then 'All'
+             else 'All'
+        end
+    union all
+select distinct b.StationId,b.StationName
+    from fact_check a
+left join dim_workstation b on a.CheckOpenStationId = b.StationId]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="BackItemSort" id="BackItemSort" type="sql">
+      <Name>BackItemSort</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="language" name="language" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select 3,case when ${language} = 'zh-CN' then '数量'
+             when ${language} = 'zh' then '数量'
+             when ${language} = 'en' then 'Quties'
+             else 'Quties'
+        end
+union all
+select 4,case when ${language} = 'zh-CN' then '金额'
+             when ${language} = 'zh' then '金额'
+             when ${language} = 'en' then 'PayAmts'
+             else 'PayAmts'
+        end]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="demo_new" id="demo_new" type="sql">
+      <Name>demo_new</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select * from dim_outlet;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="demo_new_new_new" id="demo_new_new_new" type="sql">
+      <Name>demo_new_new_new</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select *  from dim_Outlet where OutletId = 4;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="demo_new_new" id="demo_new_new" type="sql">
+      <Name>demo_new_new</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select * from Dim_Outlet]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="demo_new" id="demo_new" type="sql">
+      <Name>demo_new</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="m_ShopId" name="m_ShopId" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select distinct
+    		OutletId,
+			OutletName
+from Dim_Outlet 
+WHERE
+     `Dim_Outlet`.`EndDate` = "2200-01-01"
+     AND `Dim_Outlet`.`Status` = 0
+	AND (ShopId = ${m_ShopId} or ${m_ShopId} = -1)]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="demo" id="demo" type="sql">
+      <Name>demo</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT 
+    VoidTime,
+    OrderTime,
+    RushTime 
+FROM 
+    fact_checkitem 
+WHERE 
+    fact_checkitem.BusinessDate between "2016-12-30"  and  "2016-12-30";]]></Query>
+   </DataAccess>
+</CDADescriptor>

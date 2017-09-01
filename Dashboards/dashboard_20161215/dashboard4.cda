@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="saleamtquery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="laikeshuquery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="kedanjiaquery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="renjunquery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="dateselectquery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="brandquery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="outletquery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" connection="saleamtquery" id="saleamtquery" type="sql">
+      <Name>saleamtquery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Output indexes="1,2,3" mode="include"/>
+      <Parameters>
+         <Parameter default="sumtype" name="sumtype" type="String"/>
+         <Parameter default="startday" name="startday" type="String"/>
+         <Parameter default="endday" name="endday" type="String"/>
+         <Parameter default="brand" name="brand" type="String"/>
+         <Parameter default="outlet" name="outlet" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select 
+ t0,
+ t1 as '日期',
+ case when sum(at1) = 0 then 0.00
+      when sum(at1) = null then 0.00 
+ else sum(at1) end as '实际',
+ case when sum(at2) = 0 then 0.00
+      when sum(at2) = null then 0.00
+ else sum(at2) end as '预算'
+from 
+(
+
+select
+   case when ${sumtype} = '按月' then Year(b.BIDate ) * 1000 + month(b.BIDate)
+        when ${sumtype} = '按周' then Year(b.BIDate ) * 1000 + week(b.BIDate)
+        when ${sumtype} = '周几' then b.DayOfWeek 
+        when ${sumtype} = '按日' then b.BIDate 
+   end t0,
+   case when ${sumtype} = '按月' then concat(concat(year(b.BIDate),'年'),month(b.BIDate),'月') 
+        when ${sumtype} = '按周' then concat(concat(year(b.BIDate),'年'),'第',week(b.BIDate)+1,'周')
+        when ${sumtype} = '周几' then concat('星期',b.DayOfWeekName)  
+        when ${sumtype} = '按日' then b.BIDate
+   end t1,
+   b.BIDate as t2,
+   sum(
+   case when ${sumtype} = '按月' then a.SaleAmt 
+        when ${sumtype} = '按周' then a.SaleAmt
+        when ${sumtype} = '周几' then a.SaleAmt  
+        when ${sumtype} = '按日' then a.SaleAmt else 0 end 
+   )as at1 ,
+   sum(
+   case when ${sumtype} = '按月' then a.BudgetSaleAmt 
+        when ${sumtype} = '按周' then a.BudgetSaleAmt 
+        when ${sumtype} = '周几' then a.BudgetSaleAmt
+        when ${sumtype} = '按日' then a.BudgetSaleAmt else 0 end
+   )as at2
+from Fact_SumDay a
+  inner join Dim_BIDate b on a.BIDateId = b.BIDateId 
+  inner join Dim_Outlet c on a.OutletId_t = c.OutletId_t
+  inner join Dim_Brand d on c.BrandId = d.BrandId
+   where ( b.BIDate <= ${endday} and b.BIDate >= ${startday} and ${sumtype} = '按月' )
+   or ( b.BIDate <= ${endday} and b.BIDate >= ${startday} and ${sumtype} = '按周'  ) 
+   or ( b.BIDate <= ${endday} and b.BIDate >= ${startday} and ${sumtype} = '周几'  ) 
+   or ( b.BIDate <= ${endday} and b.BIDate >= ${startday} and ${sumtype} = '按日'  )
+   and (d.BrandId = ${brand} or ${brand}= -1)
+   and (c.OutletId = ${outlet} or ${outlet}= -1)
+group by
+   case when ${sumtype} = '按月' then Year(b.BIDate ) * 1000 + month(b.BIDate)
+        when ${sumtype} = '按周' then Year(b.BIDate ) * 1000+ week(b.BIDate)
+        when ${sumtype} = '周几' then b.DayOfWeek 
+        when ${sumtype} = '按日' then b.BIDate
+   end ,
+   case when ${sumtype} = '按月' then concat(concat(year(b.BIDate),'年'),month(b.BIDate),'月') 
+        when ${sumtype} = '按周' then concat(concat(year(b.BIDate),'年'),'第',week(b.BIDate)+1,'周')
+        when ${sumtype} = '周几' then concat('星期',b.DayOfWeekName)  
+        when ${sumtype} = '按日' then b.BIDate
+   end,
+   t2
+
+) as c where t2 >= ${startday} and t2 <= ${endday}
+
+GROUP BY t0,t1
+ORDER BY t0
+;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="laikeshuquery" id="laikeshuquery" type="sql">
+      <Name>laikeshuquery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Output indexes="1,2,3" mode="include"/>
+      <Parameters>
+         <Parameter default="sumtype" name="sumtype" type="String"/>
+         <Parameter default="startday" name="startday" type="String"/>
+         <Parameter default="endday" name="endday" type="String"/>
+         <Parameter default="brand" name="brand" type="String"/>
+         <Parameter default="outlet" name="outlet" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select 
+t0,
+ t1 as '日期',
+ case when sum(at1) = 0 then 0
+      when sum(at1) = null then 0
+ else sum(at1) end as '实际',
+ case when sum(at2) = 0 then 0
+      when sum(at2) = null then 0
+ else sum(at2) end as '预算'
+from 
+(
+
+select
+   case when ${sumtype} = '按月' then Year(b.BIDate ) * 1000 + month(b.BIDate)
+        when ${sumtype} = '按周' then Year(b.BIDate ) * 1000 + week(b.BIDate)
+        when ${sumtype} = '周几' then b.DayOfWeek 
+        when ${sumtype} = '按日' then b.BIDate 
+   end t0,
+   case when ${sumtype} = '按月' then concat(concat(year(b.BIDate),'年'),month(b.BIDate),'月') 
+        when ${sumtype} = '按周' then concat(concat(year(b.BIDate),'年'),'第',week(b.BIDate)+1,'周')
+        when ${sumtype} = '周几' then concat('星期',b.DayOfWeekName)  
+        when ${sumtype} = '按日' then b.BIDate
+   end t1,
+   b.BIDate as t2,
+   sum(
+   case when ${sumtype} = '按月' then a.CheckQty 
+        when ${sumtype} = '按周' then a.CheckQty
+        when ${sumtype} = '周几' then a.CheckQty  
+        when ${sumtype} = '按日' then a.CheckQty else 0 end 
+   )as at1 ,
+   sum(
+   case when ${sumtype} = '按月' then a.budgetCheckQty 
+        when ${sumtype} = '按周' then a.budgetCheckQty 
+        when ${sumtype} = '周几' then a.budgetCheckQty
+        when ${sumtype} = '按日' then a.budgetCheckQty else 0 end
+   )as at2
+from Fact_SumDay a
+  inner join Dim_BIDate b on a.BIDateId = b.BIDateId 
+  inner join Dim_Outlet c on a.OutletId_t = c.OutletId_t
+  inner join Dim_Brand d on c.BrandId = d.BrandId
+   where ( b.BIDate <= ${endday} and b.BIDate >= ${startday} and ${sumtype} = '按月' )
+   or ( b.BIDate <= ${endday} and b.BIDate >= ${startday} and ${sumtype} = '按周'  ) 
+   or ( b.BIDate <= ${endday} and b.BIDate >= ${startday} and ${sumtype} = '周几'  ) 
+   or ( b.BIDate <= ${endday} and b.BIDate >= ${startday} and ${sumtype} = '按日'  ) 
+   and (d.BrandId = ${brand} or ${brand}= -1)
+   and (c.OutletId = ${outlet} or ${outlet}= -1)
+group by
+   case when ${sumtype} = '按月' then Year(b.BIDate ) * 1000 + month(b.BIDate)
+        when ${sumtype} = '按周' then Year(b.BIDate ) * 1000+ week(b.BIDate)
+        when ${sumtype} = '周几' then b.DayOfWeek 
+        when ${sumtype} = '按日' then b.BIDate
+   end ,
+   case when ${sumtype} = '按月' then concat(concat(year(b.BIDate),'年'),month(b.BIDate),'月') 
+        when ${sumtype} = '按周' then concat(concat(year(b.BIDate),'年'),'第',week(b.BIDate)+1,'周')
+        when ${sumtype} = '周几' then concat('星期',b.DayOfWeekName)  
+        when ${sumtype} = '按日' then b.BIDate
+   end,
+   t2
+
+) as c where t2 >= ${startday} and t2 <= ${endday}
+
+GROUP BY t0,t1
+ORDER BY t0
+;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="kedanjiaquery" id="kedanjiaquery" type="sql">
+      <Name>kedanjiaquery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Output indexes="1,2,3" mode="include"/>
+      <Parameters>
+         <Parameter default="sumtype" name="sumtype" type="String"/>
+         <Parameter default="startday" name="startday" type="String"/>
+         <Parameter default="endday" name="endday" type="String"/>
+         <Parameter default="brand" name="brand" type="String"/>
+         <Parameter default="outlet" name="outlet" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select 
+ t0,
+ t1 as '日期',
+ case when sum(at6) = 0 then 0.00
+        when sum(at6) = null then 0.00
+ else sum(at1)/sum(at6) end as '实际',
+ case when sum(at5) = 0 then 0.00
+        when sum(at5) = null then 0.00
+ else sum(at2)/sum(at5) end as '预算'
+from 
+(
+select
+   case when ${sumtype} = '按月' then Year(b.BIDate ) * 1000 + month(b.BIDate)
+        when ${sumtype} = '按周' then Year(b.BIDate ) * 1000 + week(b.BIDate)
+        when ${sumtype} = '周几' then b.DayOfWeek 
+        when ${sumtype} = '按日' then b.BIDate 
+   end t0,
+   case when ${sumtype} = '按月' then concat(concat(year(b.BIDate),'年'),month(b.BIDate),'月') 
+        when ${sumtype} = '按周' then concat(concat(year(b.BIDate),'年'),'第',week(b.BIDate)+1,'周')
+        when ${sumtype} = '周几' then concat('星期',b.DayOfWeekName)  
+        when ${sumtype} = '按日' then b.BIDate
+   end t1,
+   b.BIDate as t2,
+   sum(
+   case when ${sumtype} = '按月' then a.SaleAmt 
+        when ${sumtype} = '按周' then a.SaleAmt
+        when ${sumtype} = '周几' then a.SaleAmt     
+        when ${sumtype} = '按日' then a.SaleAmt else 0 end
+   )as at1 ,
+   sum(
+   case when ${sumtype} = '按月' then a.BudgetSaleAmt 
+        when ${sumtype} = '按周' then a.BudgetSaleAmt
+        when ${sumtype} = '周几' then a.BudgetSaleAmt     
+        when ${sumtype} = '按日' then a.BudgetSaleAmt else 0 end
+   )as at2,
+   sum(
+   case when ${sumtype} = '按月' then a.CheckQty 
+        when ${sumtype} = '按周' then a.CheckQty
+        when ${sumtype} = '周几' then a.CheckQty     
+        when ${sumtype} = '按日' then a.CheckQty else 0 end 
+   )as at6,
+   sum(
+   case when ${sumtype} = '按月' then a.budgetCheckQty 
+        when ${sumtype} = '按周' then a.budgetCheckQty
+        when ${sumtype} = '周几' then a.budgetCheckQty   
+        when ${sumtype} = '按日' then a.budgetCheckQty else 0 end
+   )as at5 
+from Fact_SumDay a
+  inner join Dim_BIDate b on a.BIDateId = b.BIDateId 
+  inner join Dim_Outlet c on a.OutletId_t = c.OutletId_t
+  inner join Dim_Brand d on c.BrandId = d.BrandId
+  where ( b.BIDate <= ${endday} and b.BIDate >= ${startday} and ${sumtype} = '按月' )
+   or ( b.BIDate <= ${endday} and b.BIDate >= ${startday} and ${sumtype} = '按周'  ) 
+   or ( b.BIDate <= ${endday} and b.BIDate >= ${startday} and ${sumtype} = '周几'  ) 
+   or ( b.BIDate <= ${endday} and b.BIDate >= ${startday} and ${sumtype} = '按日'  ) 
+   and (d.BrandId = ${brand} or ${brand}= -1)
+   and (c.OutletId = ${outlet} or ${outlet}= -1)
+group by 
+   case when ${sumtype} = '按月' then Year(b.BIDate ) * 1000 + month(b.BIDate)
+        when ${sumtype} = '按周' then Year(b.BIDate ) * 1000 + week(b.BIDate)
+        when ${sumtype} = '周几' then b.DayOfWeek 
+        when ${sumtype} = '按日' then b.BIDate 
+   end,
+   case when ${sumtype} = '按月' then concat(concat(year(b.BIDate),'年'),month(b.BIDate),'月') 
+        when ${sumtype} = '按周' then concat(concat(year(b.BIDate),'年'),'第',week(b.BIDate)+1,'周')
+        when ${sumtype} = '周几' then concat('星期',b.DayOfWeekName)  
+        when ${sumtype} = '按日' then b.BIDate
+   end,
+   t2
+) as c where t2 >= ${startday} and t2 <= ${endday}
+GROUP BY t0,t1
+ORDER BY t0;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="renjunquery" id="renjunquery" type="sql">
+      <Name>renjunquery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Output indexes="1,2,3" mode="include"/>
+      <Parameters>
+         <Parameter default="sumtype" name="sumtype" type="String"/>
+         <Parameter default="startday" name="startday" type="String"/>
+         <Parameter default="endday" name="endday" type="String"/>
+         <Parameter default="brand" name="brand" type="String"/>
+         <Parameter default="outlet" name="outlet" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select 
+ t0,
+ t1 as '日期',
+ case when sum(at6) = 0 then 0.00
+        when sum(at6) = null then 0.00
+ else sum(at1)/sum(at6) end as '实际',
+ case when sum(at5) = 0 then 0.00
+        when sum(at5) = null then 0.00
+ else sum(at2)/sum(at5) end as '预算'
+from 
+(
+select
+   case when ${sumtype} = '按月' then Year(b.BIDate ) * 1000 + month(b.BIDate)
+        when ${sumtype} = '按周' then Year(b.BIDate ) * 1000 + week(b.BIDate)
+        when ${sumtype} = '周几' then b.DayOfWeek 
+        when ${sumtype} = '按日' then b.BIDate 
+   end t0,
+   case when ${sumtype} = '按月' then concat(concat(year(b.BIDate),'年'),month(b.BIDate),'月') 
+        when ${sumtype} = '按周' then concat(concat(year(b.BIDate),'年'),'第',week(b.BIDate)+1,'周')
+        when ${sumtype} = '周几' then concat('星期',b.DayOfWeekName)  
+        when ${sumtype} = '按日' then b.BIDate
+   end t1,
+   b.BIDate as t2,
+   sum(
+   case when ${sumtype} = '按月' then a.SaleAmt 
+        when ${sumtype} = '按周' then a.SaleAmt
+        when ${sumtype} = '周几' then a.SaleAmt     
+        when ${sumtype} = '按日' then a.SaleAmt else 0 end
+   )as at1 ,
+   sum(
+   case when ${sumtype} = '按月' then a.BudgetSaleAmt 
+        when ${sumtype} = '按周' then a.BudgetSaleAmt
+        when ${sumtype} = '周几' then a.BudgetSaleAmt     
+        when ${sumtype} = '按日' then a.BudgetSaleAmt else 0 end
+   )as at2,
+   sum(
+   case when ${sumtype} = '按月' then a.GuestQty 
+        when ${sumtype} = '按周' then a.GuestQty
+        when ${sumtype} = '周几' then a.GuestQty     
+        when ${sumtype} = '按日' then a.GuestQty else 0 end 
+   )as at6,
+   sum(
+   case when ${sumtype} = '按月' then a.BudgetGuestQty 
+        when ${sumtype} = '按周' then a.BudgetGuestQty
+        when ${sumtype} = '周几' then a.BudgetGuestQty   
+        when ${sumtype} = '按日' then a.BudgetGuestQty else 0 end
+   )as at5 
+from Fact_SumDay a
+  inner join Dim_BIDate b on a.BIDateId = b.BIDateId 
+  inner join Dim_Outlet c on a.OutletId_t = c.OutletId_t
+  inner join Dim_Brand d on c.BrandId = d.BrandId
+  where ( b.BIDate <= ${endday} and b.BIDate >= ${startday} and ${sumtype} = '按月' )
+   or ( b.BIDate <= ${endday} and b.BIDate >= ${startday} and ${sumtype} = '按周'  ) 
+   or ( b.BIDate <= ${endday} and b.BIDate >= ${startday} and ${sumtype} = '周几'  ) 
+   or ( b.BIDate <= ${endday} and b.BIDate >= ${startday} and ${sumtype} = '按日'  )
+   and (d.BrandId = ${brand} or ${brand}= -1)
+   and (c.OutletId = ${outlet} or ${outlet}= -1)
+group by 
+   case when ${sumtype} = '按月' then Year(b.BIDate ) * 1000 + month(b.BIDate)
+        when ${sumtype} = '按周' then Year(b.BIDate ) * 1000 + week(b.BIDate)
+        when ${sumtype} = '周几' then b.DayOfWeek 
+        when ${sumtype} = '按日' then b.BIDate 
+   end,
+   case when ${sumtype} = '按月' then concat(concat(year(b.BIDate),'年'),month(b.BIDate),'月') 
+        when ${sumtype} = '按周' then concat(concat(year(b.BIDate),'年'),'第',week(b.BIDate)+1,'周')
+        when ${sumtype} = '周几' then concat('星期',b.DayOfWeekName)  
+        when ${sumtype} = '按日' then b.BIDate
+   end,
+   t2
+) as c where t2 >= ${startday} and t2 <= ${endday}
+GROUP BY t0,t1
+ORDER BY t0;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="dateselectquery" id="dateselectquery" type="sql">
+      <Name>dateselectquery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="dates1" name="dates1" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select '按日'
+ union all
+select '按周'
+ union all
+select '按月'
+ union all
+select '周几']]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="brandquery" id="brandquery" type="sql">
+      <Name>brandquery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select -1,'所有'
+  union all
+select a.BrandId,a.BrandName_level1 from Dim_Brand a
+       inner join Dim_Outlet b on a.BrandId = b.BrandId
+  group by a.BrandId,a.BrandName_level1;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="outletquery" id="outletquery" type="sql">
+      <Name>outletquery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="brand" name="brand" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select -1,'所有'
+ union all
+select a.OutletId,a.OutletName 
+       from Dim_Outlet a 
+       inner join Dim_Brand b on a.BrandId = b.BrandId
+    where (b.BrandId = ${brand} or ${brand} = -1)
+ group by a.OutletId,a.OutletName  ;]]></Query>
+   </DataAccess>
+</CDADescriptor>

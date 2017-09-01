@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="saleamtquery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="laikeshuquery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="kedanjiaquery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="renjunquery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="yearquery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+      <Connection id="monthquery" type="sql.jndi">
+         <Jndi>jdbc_bi</Jndi>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" connection="saleamtquery" id="saleamtquery" type="sql">
+      <Name>saleamtquery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Output indexes="1,2,3,4" mode="include"/>
+      <Parameters>
+         <Parameter default="dates1" name="dates1" type="String"/>
+         <Parameter default="dates2" name="dates2" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select 
+ t0,
+ t1 as '日期',
+ sum(at1) as '本期',
+ sum(at2) as '预算',
+ sum(at3) as '前期'
+from 
+(
+
+select
+   case when ${dates2} = '所有' then  month(b.BIDate) when ${dates2} <>'所有'  then  day(b.BIDate) end t0,
+   case when ${dates2} = '所有' then  concat( month(b.BIDate),'月') when ${dates2} <> '所有'  then  concat ( day(b.BIDate),'日' ) end t1,
+   sum(case when ${dates2} = '所有' then a.SaleAmt when ${dates2} <> '所有' then case when month( b.BIDate ) = ${dates2} then a.SaleAmt else 0 end end)as at1 ,
+   sum(case when ${dates2} = '所有' then a.BudgetSaleAmt when ${dates2} <> '所有' then case when month( b.BIDate ) = ${dates2} then a.BudgetSaleAmt  else 0 end end)as at2,
+     0 as at3
+from Fact_SumDay a
+  inner join Dim_BIDate b on a.BIDateId = b.BIDateId where ( year(b.BIDate) = ${dates1} and ${dates2} = '所有' )
+    or ( year(b.BIDate) = ${dates1} and month(b.BIDate) = ${dates2}  )
+group by case when ${dates2} = '所有' then  month(b.BIDate) when ${dates2} <> '所有' then day(b.BIDate) end ,case when ${dates2} = '所有' then  concat( month(b.BIDate), '月') when ${dates2} <> '所有'  then  concat ( day(b.BIDate), '日' )end
+
+union all
+
+select 
+   case when ${dates2} = '所有' then  month(b.BIDate) when ${dates2} <>'所有'  then  day(b.BIDate) end t0,
+   case when ${dates2} = '所有' then  concat( month(b.BIDate),'月') when ${dates2} <> '所有'  then  concat ( day(b.BIDate),'日' ) end t1,
+		0 as at1,
+    0 as at2,
+   sum(case when ${dates2} = '所有' then a.SaleAmt when ${dates2} <> '所有' then case when month( b.BIDate ) = ${dates2} then a.SaleAmt else 0 end end)as at3 
+from Fact_SumDay a
+   inner join Dim_BIDate b on a.BIDateId = b.BIDateId where ( year(b.BIDate) = ${dates1} -1 and ${dates2} = '所有' ) or ( year(b.BIDate) = ${dates1} -1 and month(b.BIDate) = ${dates2}  )
+group by case when ${dates2} = '所有' then  month(b.BIDate) when ${dates2} <> '所有' then day(b.BIDate) end ,case when ${dates2} = '所有' then  concat( month(b.BIDate), '月') when ${dates2} <> '所有'  then  concat ( day(b.BIDate), '日' )end
+ 
+) as c
+
+GROUP BY t0,t1
+ORDER BY t0
+;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="laikeshuquery" id="laikeshuquery" type="sql">
+      <Name>laikeshuquery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Output indexes="1,2,3,4" mode="include"/>
+      <Parameters>
+         <Parameter default="dates1" name="dates1" type="String"/>
+         <Parameter default="dates2" name="dates2" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select 
+ t0,
+ t1 as '日期',
+ sum(at1) as '本期',
+ sum(at2) as '预算',
+ sum(at3) as '前期'
+from 
+(
+
+select
+   case when ${dates2} = '所有' then  month(b.BIDate) when ${dates2} <>'所有'  then  day(b.BIDate) end t0,
+   case when ${dates2} = '所有' then  concat( month(b.BIDate),'月') when ${dates2} <> '所有'  then  concat ( day(b.BIDate),'日' ) end t1,
+   sum(case when ${dates2} = '所有' then a.CheckQty when ${dates2} <> '所有' then case when month( b.BIDate ) = ${dates2} then a.CheckQty else 0 end end)as at1 ,
+   sum(case when ${dates2} = '所有' then a.budgetCheckQty when ${dates2} <> '所有' then case when month( b.BIDate ) = ${dates2} then a.budgetCheckQty  else 0 end end)as at2,
+     0 as at3
+from Fact_SumDay a
+  inner join Dim_BIDate b on a.BIDateId = b.BIDateId where ( year(b.BIDate) = ${dates1} and ${dates2} = '所有' ) or ( year(b.BIDate) = ${dates1} and month(b.BIDate) = ${dates2}  )
+group by case when ${dates2} = '所有' then  month(b.BIDate) when ${dates2} <> '所有' then day(b.BIDate) end ,case when ${dates2} = '所有' then  concat( month(b.BIDate), '月') when ${dates2} <> '所有'  then  concat ( day(b.BIDate), '日' )end
+
+union all
+
+select 
+   case when ${dates2} = '所有' then  month(b.BIDate) when ${dates2} <>'所有'  then  day(b.BIDate) end t0,
+   case when ${dates2} = '所有' then  concat( month(b.BIDate),'月') when ${dates2} <> '所有'  then  concat ( day(b.BIDate),'日' ) end t1,
+    	0 as at1,
+    0 as at2,
+   sum(case when ${dates2} = '所有' then a.CheckQty when ${dates2} <> '所有' then case when month( b.BIDate ) = ${dates2} then a.CheckQty else 0 end end)as at3 
+from Fact_SumDay a
+   inner join Dim_BIDate b on a.BIDateId = b.BIDateId where ( year(b.BIDate) = ${dates1} -1 and ${dates2} = '所有' ) or ( year(b.BIDate) = ${dates1} -1 and month(b.BIDate) = ${dates2}  )
+group by case when ${dates2} = '所有' then  month(b.BIDate) when ${dates2} <> '所有' then day(b.BIDate) end ,case when ${dates2} = '所有' then  concat( month(b.BIDate), '月') when ${dates2} <> '所有'  then  concat ( day(b.BIDate), '日' )end
+ 
+) as c
+
+GROUP BY t0,t1
+ORDER BY t0
+;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="kedanjiaquery" id="kedanjiaquery" type="sql">
+      <Name>kedanjiaquery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Output indexes="1,2,3,4" mode="include"/>
+      <Parameters>
+         <Parameter default="dates1" name="dates1" type="String"/>
+         <Parameter default="dates2" name="dates2" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select 
+ t0,
+ t1 as '日期',
+ case when sum(at6) = 0 then 0
+        when sum(at6) = null then 0
+ else sum(at1)/sum(at6) end as '本期',
+ case when sum(at5) = 0 then 0
+        when sum(at5) = null then 0
+ else sum(at2)/sum(at5) end as '预算',
+ case when sum(at4) = 0 then 0
+        when sum(at4) = null then 0
+ else sum(at3)/sum(at4) end as '前期'
+from 
+(
+select
+   case when ${dates2} = '所有' then  month(b.BIDate) when ${dates2} <>'所有'  then  day(b.BIDate) end t0,
+   case when ${dates2} = '所有' then  concat( month(b.BIDate),'月') when ${dates2} <> '所有'  then  concat ( day(b.BIDate),'日' ) end t1,
+   sum(case when ${dates2} = '所有' then a.SaleAmt when ${dates2} <> '所有' then case when month( b.BIDate ) = ${dates2} then a.SaleAmt else 0 end end)as at1 ,
+   sum(case when ${dates2} = '所有' then a.BudgetSaleAmt when ${dates2} <> '所有' then case when month( b.BIDate ) = ${dates2} then a.BudgetSaleAmt  else 0 end end)as at2,
+   sum(case when ${dates2} = '所有' then a.CheckQty when ${dates2} <> '所有' then case when month( b.BIDate ) = ${dates2} then a.CheckQty else 0 end end)as at6,
+   sum(case when ${dates2} = '所有' then a.budgetCheckQty when ${dates2} <> '所有' then case when month( b.BIDate ) = ${dates2} then a.budgetCheckQty else 0 end end)as at5,
+     0 as at3,
+     0 as at4  
+from Fact_SumDay a
+  inner join Dim_BIDate b on a.BIDateId = b.BIDateId where ( year(b.BIDate) = ${dates1} and ${dates2} = '所有' )
+    or ( year(b.BIDate) = ${dates1} and month(b.BIDate) = ${dates2}  )
+group by case when ${dates2} = '所有' then  month(b.BIDate) when ${dates2} <> '所有' then day(b.BIDate) end ,case when ${dates2} = '所有' then  concat( month(b.BIDate), '月') when ${dates2} <> '所有'  then  concat ( day(b.BIDate), '日' )end
+union all
+select 
+   case when ${dates2} = '所有' then  month(b.BIDate) when ${dates2} <>'所有'  then  day(b.BIDate) end t0,
+   case when ${dates2} = '所有' then  concat( month(b.BIDate),'月') when ${dates2} <> '所有'  then  concat ( day(b.BIDate),'日' ) end t1,
+    	0 as at1,
+    0 as at2,
+    0 as at6,
+    0 as at5,
+   sum(case when ${dates2} = '所有' then a.SaleAmt when ${dates2} <> '所有' then case when month( b.BIDate ) = ${dates2} then a.SaleAmt else 0 end end)as at3, 
+   sum(case when ${dates2} = '所有' then a.CheckQty when ${dates2} <> '所有' then case when month( b.BIDate ) = ${dates2} then a.CheckQty else 0 end end)as at4
+from Fact_SumDay a
+   inner join Dim_BIDate b on a.BIDateId = b.BIDateId where ( year(b.BIDate) = ${dates1} -1 and ${dates2} = '所有' ) or ( year(b.BIDate) = ${dates1} -1 and month(b.BIDate) = ${dates2}  )
+group by case when ${dates2} = '所有' then  month(b.BIDate) when ${dates2} <> '所有' then day(b.BIDate) end ,case when ${dates2} = '所有' then  concat( month(b.BIDate), '月') when ${dates2} <> '所有'  then  concat ( day(b.BIDate), '日' )end
+ 
+) as c
+GROUP BY t0,t1
+ORDER BY t0;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="renjunquery" id="renjunquery" type="sql">
+      <Name>renjunquery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Output indexes="1,2,3,4" mode="include"/>
+      <Parameters>
+         <Parameter default="dates1" name="dates1" type="String"/>
+         <Parameter default="dates2" name="dates2" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select 
+ t0,
+ t1 as '日期',
+ case when sum(at6) = 0 then 0
+        when sum(at6) = null then 0
+ else sum(at1)/sum(at6) end as '本期',
+ case when sum(at5) = 0 then 0
+        when sum(at5) = null then 0
+ else sum(at2)/sum(at5) end as '预算',
+ case when sum(at4) = 0 then 0
+        when sum(at4) = null then 0
+ else sum(at3)/sum(at4) end as '前期'
+from 
+(
+select
+   case when ${dates2} = '所有' then  month(b.BIDate) when ${dates2} <>'所有'  then  day(b.BIDate) end t0,
+   case when ${dates2} = '所有' then  concat( month(b.BIDate),'月') when ${dates2} <> '所有'  then  concat ( day(b.BIDate),'日' ) end t1,
+   sum(case when ${dates2} = '所有' then a.SaleAmt when ${dates2} <> '所有' then case when month( b.BIDate ) = ${dates2} then a.SaleAmt else 0 end end)as at1 ,
+   sum(case when ${dates2} = '所有' then a.BudgetSaleAmt when ${dates2} <> '所有' then case when month( b.BIDate ) = ${dates2} then a.BudgetSaleAmt  else 0 end end)as at2,
+   sum(case when ${dates2} = '所有' then a.GuestQty when ${dates2} <> '所有' then case when month( b.BIDate ) = ${dates2} then a.GuestQty else 0 end end)as at6,
+   sum(case when ${dates2} = '所有' then a.BudgetGuestQty when ${dates2} <> '所有' then case when month( b.BIDate ) = ${dates2} then a.BudgetGuestQty else 0 end end)as at5,
+     0 as at3,
+     0 as at4  
+from Fact_SumDay a
+  inner join Dim_BIDate b on a.BIDateId = b.BIDateId where ( year(b.BIDate) = ${dates1} and ${dates2} = '所有' )
+    or ( year(b.BIDate) = ${dates1} and month(b.BIDate) = ${dates2}  )
+group by case when ${dates2} = '所有' then  month(b.BIDate) when ${dates2} <> '所有' then day(b.BIDate) end ,case when ${dates2} = '所有' then  concat( month(b.BIDate), '月') when ${dates2} <> '所有'  then  concat ( day(b.BIDate), '日' )end
+union all
+select 
+   case when ${dates2} = '所有' then  month(b.BIDate) when ${dates2} <>'所有'  then  day(b.BIDate) end t0,
+   case when ${dates2} = '所有' then  concat( month(b.BIDate),'月') when ${dates2} <> '所有'  then  concat ( day(b.BIDate),'日' ) end t1,
+    	0 as at1,
+    0 as at2,
+    0 as at6,
+    0 as at5,
+   sum(case when ${dates2} = '所有' then a.SaleAmt when ${dates2} <> '所有' then case when month( b.BIDate ) = ${dates2} then a.SaleAmt else 0 end end)as at3, 
+   sum(case when ${dates2} = '所有' then a.GuestQty when ${dates2} <> '所有' then case when month( b.BIDate ) = ${dates2} then a.GuestQty else 0 end end)as at4
+from Fact_SumDay a
+   inner join Dim_BIDate b on a.BIDateId = b.BIDateId where ( year(b.BIDate) = ${dates1} -1 and ${dates2} = '所有' ) or ( year(b.BIDate) = ${dates1} -1 and month(b.BIDate) = ${dates2}  )
+group by case when ${dates2} = '所有' then  month(b.BIDate) when ${dates2} <> '所有' then day(b.BIDate) end ,case when ${dates2} = '所有' then  concat( month(b.BIDate), '月') when ${dates2} <> '所有'  then  concat ( day(b.BIDate), '日' )end
+ 
+) as c
+GROUP BY t0,t1
+ORDER BY t0;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="yearquery" id="yearquery" type="sql">
+      <Name>yearquery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select distinct Year(a.BIDate) as Years from  Fact_SumDay b
+  inner join Dim_BIDate a on a.BIDateId = b.BIDateId
+order by Years desc;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="monthquery" id="monthquery" type="sql">
+      <Name>monthquery</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="dates1" name="dates1" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select '所有'
+  union all
+select distinct Month(a.BIDate) as Months from Dim_BIDate a  
+   inner join Fact_SumDay b on a.BIDateId = b.BIDateId
+   where ${dates1} = year(a.BIDate)
+group by a.BIDate;]]></Query>
+   </DataAccess>
+</CDADescriptor>

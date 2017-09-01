@@ -1,0 +1,3698 @@
+{
+ "components": {
+  "rows": [
+   {
+    "id": "CHARTS",
+    "name": "Charts",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "type": "Label",
+      "value": "Charts"
+     }
+    ],
+    "type": "Label",
+    "typeDesc": "<i>Group</i>"
+   },
+   {
+    "id": "da72b468-7e58-4c64-e359-a08b112dc081",
+    "meta_cdwSupport": "true",
+    "parent": "CHARTS",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "brand_pie"
+     },
+     {
+      "name": "title",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "listeners",
+      "type": "Listeners",
+      "value": "[\"${p:todayParam}\"]"
+     },
+     {
+      "name": "parameters",
+      "type": "ValuesArray",
+      "value": "[[\"todayParam\",\"todayParam\"]]"
+     },
+     {
+      "name": "dataSource",
+      "type": "Datasource",
+      "value": "brand_query"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "priority",
+      "type": "Integer",
+      "value": 5
+     },
+     {
+      "name": "refreshPeriod",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "width",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "colors",
+      "type": "Array",
+      "value": "[\"#DD4B39\",\"#F39C12\",\"#00A65A\"]"
+     },
+     {
+      "name": "htmlObject",
+      "type": "HtmlObject",
+      "value": "${h:div1}"
+     },
+     {
+      "name": "executeAtStart",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "preExecution",
+      "type": "JavaScript",
+      "value": "function f(){\n    /*func_resize(this);*/    /*解决显示的自适应问题*/\n    myPie1.defaultPieSettings.apply(this);   /*鼠标停留在图形上面的显示样式*/\n    //resizeGraphical(this);\n    func_resize(this);\n} "
+     },
+     {
+      "name": "postExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postFetch",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "preChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "extensionPoints",
+      "type": "EditorValuesArray",
+      "value": "[]"
+     },
+     {
+      "name": "tooltip",
+      "type": "Html",
+      "value": ""
+     },
+     {
+      "name": "activeSliceRadius",
+      "type": "String",
+      "value": "5%"
+     },
+     {
+      "name": "animate",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "categoryRole",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "clearSelectionMode",
+      "type": "cccClearSelectionModeCustom",
+      "value": "emptySpaceClick"
+     },
+     {
+      "name": "clickable",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "clickAction",
+      "type": "JavaScript",
+      "value": "function f(scene) { \n    //alert(scene.datum.atoms.value.value);\n    //alert(scene.atoms.category.value.value);  series\n    //console.log(\"value = \" + scene.atoms.series.value.value);\n    Dashboards.fireChange('BrandId', scene.datum.atoms.value.value);\n    Dashboards.fireChange('AreaId', 0);\n    Dashboards.fireChange('OutLetId', 0);\n    //alert(\"123\")\n    console.log(\" 品牌Id = \" + scene.datum.atoms.value.value);  // 品牌\n    console.log(\" 区域Id = \" + AreaId);      // 区域\n    console.log(\" 门店Id = \" + OutLetId);    // 门店\n} "
+     },
+     {
+      "name": "colorRole",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "colorTransform",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "colorUnbound",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "compatVersion",
+      "type": "Float",
+      "value": 2
+     },
+     {
+      "name": "contentMargins",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "contentPaddings",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "crosstabMode",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "ctrlSelectMode",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "dataCategoriesCount",
+      "type": "Float",
+      "value": ""
+     },
+     {
+      "name": "dataIgnoreMetadataLabels",
+      "type": "Boolean",
+      "value": false
+     },
+     {
+      "name": "dataMeasuresInColumns",
+      "type": "Boolean",
+      "value": ""
+     },
+     {
+      "name": "dataPartRole",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "dataSeparator",
+      "type": "String",
+      "value": "~"
+     },
+     {
+      "name": "dataWhere",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "doubleClickAction",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "explodedSliceIndex",
+      "type": "Float",
+      "value": ""
+     },
+     {
+      "name": "explodedSliceRadius",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "groupedLabelSep",
+      "type": "String",
+      "value": " ~ "
+     },
+     {
+      "name": "hoverable",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "ignoreNulls",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "interactive",
+      "type": "Boolean",
+      "value": ""
+     },
+     {
+      "name": "isMultiValued",
+      "type": "Boolean",
+      "value": false
+     },
+     {
+      "name": "legend",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "legendAlign",
+      "type": "cccLegendAlignCustom",
+      "value": ""
+     },
+     {
+      "name": "legendClickMode",
+      "type": "cccLegendClickModeCustom",
+      "value": "toggleVisible"
+     },
+     {
+      "name": "legendDrawLine",
+      "type": "Boolean",
+      "value": ""
+     },
+     {
+      "name": "legendDrawMarker",
+      "type": "Boolean",
+      "value": ""
+     },
+     {
+      "name": "legendFont",
+      "type": "String",
+      "value": "10px sans-serif"
+     },
+     {
+      "name": "legendItemPadding",
+      "type": "String",
+      "value": "2.5"
+     },
+     {
+      "name": "legendItemSize",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "legendMargins",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "legendMarkerSize",
+      "type": "Float",
+      "value": 15
+     },
+     {
+      "name": "legendPaddings",
+      "type": "String",
+      "value": "5"
+     },
+     {
+      "name": "legendPosition",
+      "type": "cccLegendPositionCustom",
+      "value": "bottom"
+     },
+     {
+      "name": "legendShape",
+      "type": "cccLegendShapeCustom",
+      "value": ""
+     },
+     {
+      "name": "legendSize",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "legendSizeMax",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "legendTextMargin",
+      "type": "Float",
+      "value": 6
+     },
+     {
+      "name": "legendVisible",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "linkHandleWidth",
+      "type": "Float",
+      "value": 0.5
+     },
+     {
+      "name": "linkInsetRadius",
+      "type": "String",
+      "value": "5%"
+     },
+     {
+      "name": "linkLabelSize",
+      "type": "String",
+      "value": "15%"
+     },
+     {
+      "name": "linkLabelSpacingMin",
+      "type": "Float",
+      "value": 0.5
+     },
+     {
+      "name": "linkMargin",
+      "type": "String",
+      "value": "2.5%"
+     },
+     {
+      "name": "linkOutsetRadius",
+      "type": "String",
+      "value": "2.5%"
+     },
+     {
+      "name": "margins",
+      "type": "String",
+      "value": "3"
+     },
+     {
+      "name": "measuresIndexes",
+      "type": "Array",
+      "value": "[]"
+     },
+     {
+      "name": "multiChartColumnsMax",
+      "type": "Float",
+      "value": 3
+     },
+     {
+      "name": "multiChartIndexes",
+      "type": "Array",
+      "value": "[]"
+     },
+     {
+      "name": "multiChartMax",
+      "type": "Float",
+      "value": ""
+     },
+     {
+      "name": "multiChartOverflow",
+      "type": "cccMultiChartOverflowCustom",
+      "value": "grow"
+     },
+     {
+      "name": "multiChartRole",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "multiChartSingleColFillsHeight",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "multiChartSingleRowFillsHeight",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "paddings",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "percentValueFormat",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "pointingMode",
+      "type": "cccPointingModeCustom",
+      "value": "near"
+     },
+     {
+      "name": "readers",
+      "type": "Array",
+      "value": "[]"
+     },
+     {
+      "name": "renderCallback",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "renderedCallback",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "selectable",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "selectionChangedAction",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "seriesInRows",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "smallAspectRatio",
+      "type": "Float",
+      "value": ""
+     },
+     {
+      "name": "smallContentMargins",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "smallContentPaddings",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "smallHeight",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "smallMargins",
+      "type": "String",
+      "value": "2%"
+     },
+     {
+      "name": "smallPaddings",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "smallTitleAlign",
+      "type": "cccSmallTitleAlignCustom",
+      "value": ""
+     },
+     {
+      "name": "smallTitleFont",
+      "type": "String",
+      "value": "14px sans-serif"
+     },
+     {
+      "name": "smallTitleMargins",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "smallTitlePaddings",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "smallTitlePosition",
+      "type": "cccSmallTitlePositionCustom",
+      "value": "top"
+     },
+     {
+      "name": "smallTitleSize",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "smallTitleSizeMax",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "smallWidth",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "timeSeries",
+      "type": "Boolean",
+      "value": false
+     },
+     {
+      "name": "timeSeriesFormat",
+      "type": "String",
+      "value": "%Y-%m-%d"
+     },
+     {
+      "name": "titleAlign",
+      "type": "cccTitleAlignCustom",
+      "value": ""
+     },
+     {
+      "name": "titleFont",
+      "type": "String",
+      "value": "14px sans-serif"
+     },
+     {
+      "name": "titleMargins",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "titlePaddings",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "titlePosition",
+      "type": "cccTitlePositionCustom",
+      "value": "top"
+     },
+     {
+      "name": "titleSize",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "titleSizeMax",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "tooltipArrowVisible",
+      "type": "Boolean",
+      "value": ""
+     },
+     {
+      "name": "tooltipClassName",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "tooltipEnabled",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "tooltipFade",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "tooltipFollowMouse",
+      "type": "Boolean",
+      "value": false
+     },
+     {
+      "name": "tooltipFormat",
+      "type": "JavaScript",
+      "value": "function f(){\n    console.log(\"value = \" + this.getValue().toFixed(0));\n} "
+     },
+     {
+      "name": "tooltipGravity",
+      "type": "cccTooltipGravityCustom",
+      "value": ""
+     },
+     {
+      "name": "tooltipHtml",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "tooltipOffset",
+      "type": "Float",
+      "value": ""
+     },
+     {
+      "name": "tooltipOpacity",
+      "type": "Float",
+      "value": 0.9
+     },
+     {
+      "name": "tooltipUseCorners",
+      "type": "Boolean",
+      "value": ""
+     },
+     {
+      "name": "userSelectionAction",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "valueFormat",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "valueRole",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "valuesAnchor",
+      "type": "cccValuesAnchorCustom",
+      "value": "center"
+     },
+     {
+      "name": "valuesFont",
+      "type": "String",
+      "value": "55px sans-serif"
+     },
+     {
+      "name": "valuesLabelStyle",
+      "type": "cccValuesLabelStyleCustom",
+      "value": "linked"
+     },
+     {
+      "name": "valuesMask",
+      "type": "String",
+      "value": "{value.percent}"
+     },
+     {
+      "name": "valuesOptimizeLegibility",
+      "type": "Boolean",
+      "value": ""
+     },
+     {
+      "name": "valuesOverflow",
+      "type": "cccValuesOverflowCustom",
+      "value": "hide"
+     },
+     {
+      "name": "valuesVisible",
+      "type": "Boolean",
+      "value": ""
+     }
+    ],
+    "rowName": "CCC Pie Chart",
+    "type": "ComponentscccPieChart",
+    "typeDesc": "CCC Pie Chart"
+   },
+   {
+    "id": "66a165f5-9fc2-cef5-3fe6-f31350ceb6d4",
+    "meta_cdwSupport": "true",
+    "parent": "CHARTS",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "area_pie"
+     },
+     {
+      "name": "title",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "listeners",
+      "type": "Listeners",
+      "value": "[\"${p:BrandId}\",\"${p:todayParam}\"]"
+     },
+     {
+      "name": "parameters",
+      "type": "ValuesArray",
+      "value": "[[\"BrandId\",\"BrandId\"],[\"todayParam\",\"todayParam\"]]"
+     },
+     {
+      "name": "dataSource",
+      "type": "Datasource",
+      "value": "area_query"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "priority",
+      "type": "Integer",
+      "value": 5
+     },
+     {
+      "name": "refreshPeriod",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "width",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "colors",
+      "type": "Array",
+      "value": "[\"#DD4B39\",\"#F39C12\",\"#00A65A\"]"
+     },
+     {
+      "name": "htmlObject",
+      "type": "HtmlObject",
+      "value": "${h:div2}"
+     },
+     {
+      "name": "executeAtStart",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "preExecution",
+      "type": "JavaScript",
+      "value": "function f(){\r\n    /*func_resize(this);*/    /*解决显示的自适应问题*/\r\n    myPie1.defaultPieSettings.apply(this);   /*鼠标停留在图形上面的显示样式*/\r\n    //resizeGraphical(this);\r\n    func_resize(this);\r\n} "
+     },
+     {
+      "name": "postExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postFetch",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "preChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "extensionPoints",
+      "type": "EditorValuesArray",
+      "value": "[]"
+     },
+     {
+      "name": "tooltip",
+      "type": "Html",
+      "value": ""
+     },
+     {
+      "name": "activeSliceRadius",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "animate",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "categoryRole",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "clearSelectionMode",
+      "type": "cccClearSelectionModeCustom",
+      "value": "emptySpaceClick"
+     },
+     {
+      "name": "clickable",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "clickAction",
+      "type": "JavaScript",
+      "value": "function f(scene) { \r\n    //alert(scene.datum.atoms.value.value);\r\n    //alert(scene.atoms.category.value);\r\n    \r\n    Dashboards.fireChange('AreaId', scene.datum.atoms.value.value);\r\n    Dashboards.fireChange('OutLetId', 0);\r\n    console.log(\" 区域Id =\" + scene.datum.atoms.value.value)\r\n    console.log(\" 门店Id = \" + OutLetId);\r\n} "
+     },
+     {
+      "name": "colorRole",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "colorTransform",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "colorUnbound",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "compatVersion",
+      "type": "Float",
+      "value": 2
+     },
+     {
+      "name": "contentMargins",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "contentPaddings",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "crosstabMode",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "ctrlSelectMode",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "dataCategoriesCount",
+      "type": "Float",
+      "value": ""
+     },
+     {
+      "name": "dataIgnoreMetadataLabels",
+      "type": "Boolean",
+      "value": false
+     },
+     {
+      "name": "dataMeasuresInColumns",
+      "type": "Boolean",
+      "value": ""
+     },
+     {
+      "name": "dataPartRole",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "dataSeparator",
+      "type": "String",
+      "value": "~"
+     },
+     {
+      "name": "dataWhere",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "doubleClickAction",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "explodedSliceIndex",
+      "type": "Float",
+      "value": ""
+     },
+     {
+      "name": "explodedSliceRadius",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "groupedLabelSep",
+      "type": "String",
+      "value": " ~ "
+     },
+     {
+      "name": "hoverable",
+      "type": "Boolean",
+      "value": false
+     },
+     {
+      "name": "ignoreNulls",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "interactive",
+      "type": "Boolean",
+      "value": ""
+     },
+     {
+      "name": "isMultiValued",
+      "type": "Boolean",
+      "value": false
+     },
+     {
+      "name": "legend",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "legendAlign",
+      "type": "cccLegendAlignCustom",
+      "value": ""
+     },
+     {
+      "name": "legendClickMode",
+      "type": "cccLegendClickModeCustom",
+      "value": "toggleVisible"
+     },
+     {
+      "name": "legendDrawLine",
+      "type": "Boolean",
+      "value": ""
+     },
+     {
+      "name": "legendDrawMarker",
+      "type": "Boolean",
+      "value": ""
+     },
+     {
+      "name": "legendFont",
+      "type": "String",
+      "value": "10px sans-serif"
+     },
+     {
+      "name": "legendItemPadding",
+      "type": "String",
+      "value": "2.5"
+     },
+     {
+      "name": "legendItemSize",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "legendMargins",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "legendMarkerSize",
+      "type": "Float",
+      "value": 15
+     },
+     {
+      "name": "legendPaddings",
+      "type": "String",
+      "value": "5"
+     },
+     {
+      "name": "legendPosition",
+      "type": "cccLegendPositionCustom",
+      "value": "bottom"
+     },
+     {
+      "name": "legendShape",
+      "type": "cccLegendShapeCustom",
+      "value": ""
+     },
+     {
+      "name": "legendSize",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "legendSizeMax",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "legendTextMargin",
+      "type": "Float",
+      "value": 6
+     },
+     {
+      "name": "legendVisible",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "linkHandleWidth",
+      "type": "Float",
+      "value": 0.5
+     },
+     {
+      "name": "linkInsetRadius",
+      "type": "String",
+      "value": "5%"
+     },
+     {
+      "name": "linkLabelSize",
+      "type": "String",
+      "value": "15%"
+     },
+     {
+      "name": "linkLabelSpacingMin",
+      "type": "Float",
+      "value": 0.5
+     },
+     {
+      "name": "linkMargin",
+      "type": "String",
+      "value": "2.5%"
+     },
+     {
+      "name": "linkOutsetRadius",
+      "type": "String",
+      "value": "2.5%"
+     },
+     {
+      "name": "margins",
+      "type": "String",
+      "value": "3"
+     },
+     {
+      "name": "measuresIndexes",
+      "type": "Array",
+      "value": "[]"
+     },
+     {
+      "name": "multiChartColumnsMax",
+      "type": "Float",
+      "value": 3
+     },
+     {
+      "name": "multiChartIndexes",
+      "type": "Array",
+      "value": "[]"
+     },
+     {
+      "name": "multiChartMax",
+      "type": "Float",
+      "value": ""
+     },
+     {
+      "name": "multiChartOverflow",
+      "type": "cccMultiChartOverflowCustom",
+      "value": "grow"
+     },
+     {
+      "name": "multiChartRole",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "multiChartSingleColFillsHeight",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "multiChartSingleRowFillsHeight",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "paddings",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "percentValueFormat",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "pointingMode",
+      "type": "cccPointingModeCustom",
+      "value": "near"
+     },
+     {
+      "name": "readers",
+      "type": "Array",
+      "value": "[]"
+     },
+     {
+      "name": "renderCallback",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "renderedCallback",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "selectable",
+      "type": "Boolean",
+      "value": false
+     },
+     {
+      "name": "selectionChangedAction",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "seriesInRows",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "smallAspectRatio",
+      "type": "Float",
+      "value": ""
+     },
+     {
+      "name": "smallContentMargins",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "smallContentPaddings",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "smallHeight",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "smallMargins",
+      "type": "String",
+      "value": "2%"
+     },
+     {
+      "name": "smallPaddings",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "smallTitleAlign",
+      "type": "cccSmallTitleAlignCustom",
+      "value": ""
+     },
+     {
+      "name": "smallTitleFont",
+      "type": "String",
+      "value": "14px sans-serif"
+     },
+     {
+      "name": "smallTitleMargins",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "smallTitlePaddings",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "smallTitlePosition",
+      "type": "cccSmallTitlePositionCustom",
+      "value": "top"
+     },
+     {
+      "name": "smallTitleSize",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "smallTitleSizeMax",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "smallWidth",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "timeSeries",
+      "type": "Boolean",
+      "value": false
+     },
+     {
+      "name": "timeSeriesFormat",
+      "type": "String",
+      "value": "%Y-%m-%d"
+     },
+     {
+      "name": "titleAlign",
+      "type": "cccTitleAlignCustom",
+      "value": ""
+     },
+     {
+      "name": "titleFont",
+      "type": "String",
+      "value": "14px sans-serif"
+     },
+     {
+      "name": "titleMargins",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "titlePaddings",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "titlePosition",
+      "type": "cccTitlePositionCustom",
+      "value": "top"
+     },
+     {
+      "name": "titleSize",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "titleSizeMax",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "tooltipArrowVisible",
+      "type": "Boolean",
+      "value": ""
+     },
+     {
+      "name": "tooltipClassName",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "tooltipEnabled",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "tooltipFade",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "tooltipFollowMouse",
+      "type": "Boolean",
+      "value": false
+     },
+     {
+      "name": "tooltipFormat",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "tooltipGravity",
+      "type": "cccTooltipGravityCustom",
+      "value": ""
+     },
+     {
+      "name": "tooltipHtml",
+      "type": "Boolean",
+      "value": true
+     },
+     {
+      "name": "tooltipOffset",
+      "type": "Float",
+      "value": ""
+     },
+     {
+      "name": "tooltipOpacity",
+      "type": "Float",
+      "value": 0.9
+     },
+     {
+      "name": "tooltipUseCorners",
+      "type": "Boolean",
+      "value": ""
+     },
+     {
+      "name": "userSelectionAction",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "valueFormat",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "valueRole",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "valuesAnchor",
+      "type": "cccValuesAnchorCustom",
+      "value": "center"
+     },
+     {
+      "name": "valuesFont",
+      "type": "String",
+      "value": "55px sans-serif"
+     },
+     {
+      "name": "valuesLabelStyle",
+      "type": "cccValuesLabelStyleCustom",
+      "value": "linked"
+     },
+     {
+      "name": "valuesMask",
+      "type": "String",
+      "value": "{value.percent}"
+     },
+     {
+      "name": "valuesOptimizeLegibility",
+      "type": "Boolean",
+      "value": ""
+     },
+     {
+      "name": "valuesOverflow",
+      "type": "cccValuesOverflowCustom",
+      "value": "hide"
+     },
+     {
+      "name": "valuesVisible",
+      "type": "Boolean",
+      "value": ""
+     }
+    ],
+    "rowName": "CCC Pie Chart",
+    "type": "ComponentscccPieChart",
+    "typeDesc": "CCC Pie Chart"
+   },
+   {
+    "id": "OTHERCOMPONENTS",
+    "name": "Others",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "type": "Label",
+      "value": "Others"
+     }
+    ],
+    "type": "Label",
+    "typeDesc": "<i>Group</i>"
+   },
+   {
+    "id": "2154db96-0f55-85e1-88f9-5bca5ac86aea",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "outlet_table"
+     },
+     {
+      "name": "expandContainerObject",
+      "type": "HtmlTarget",
+      "value": ""
+     },
+     {
+      "name": "listeners",
+      "type": "Listeners",
+      "value": "[\"${p:BrandId}\",\"${p:AreaId}\",\"${p:todayParam}\"]"
+     },
+     {
+      "name": "oLanguage",
+      "type": "JavaScript",
+      "value": "{\r\n        \"oAria\": {\r\n            \"sSortAscending\": \": 升序排列\",\r\n            \"sSortDescending\": \": 降序排列\"\r\n        },\r\n        \"oPaginate\": {\r\n            \"sFirst\": \"首页\",\r\n            \"sLast\": \"末页\",\r\n            \"sNext\": \"下页\",\r\n            \"sPrevious\": \"上页\"\r\n        },\r\n        \"sEmptyTable\": \"没有相关记录\",\r\n        \"sInfo\": \"第 _START_ 到 _END_ 条记录，共 _TOTAL_ 条\",\r\n        \"sInfoEmpty\": \"第 0 到 0 条记录，共 0 条\",\r\n        \"sInfoFiltered\": \"(从 _MAX_ 条记录中检索)\",\r\n        \"sInfoPostFix\": \"\",\r\n        \"sDecimal\": \"\",\r\n        \"sThousands\": \",\",\r\n        \"sLengthMenu\": \"每页显示条数: _MENU_\",\r\n        \"sLoadingRecords\": \"正在载入...\",\r\n        \"sProcessing\": \"正在载入...\",\r\n        \"sSearch\": \"搜索:\",\r\n        \"sSearchPlaceholder\": \"\",\r\n        \"sUrl\": \"\",\r\n        \"sZeroRecords\": \"没有相关记录\"\r\n} "
+     },
+     {
+      "name": "language",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "colFormats",
+      "type": "ColFormatsArray",
+      "value": "[null,null,null,\"%.2f\"]"
+     },
+     {
+      "name": "colHeaders",
+      "type": "ColHeadersArray",
+      "value": "[\"区域\",\"门店编码\",\"门店名称\",\"销售额\",\"门店ID\"]"
+     },
+     {
+      "name": "colSortable",
+      "type": "ColSortableArray",
+      "value": "[]"
+     },
+     {
+      "name": "colTypes",
+      "type": "colTypesCustom",
+      "value": "[\"string\",\"string\",\"string\",\"numeric\",\"hidden\"]"
+     },
+     {
+      "name": "colWidths",
+      "type": "ColWidthsArray",
+      "value": "[\"200\",\"200\",\"200\",\"200\",\"0\"]"
+     },
+     {
+      "name": "expandParameters",
+      "type": "ExpandParameters",
+      "value": "[]"
+     },
+     {
+      "name": "parameters",
+      "type": "ValuesArray",
+      "value": "[[\"BrandId\",\"BrandId\"],[\"AreaId\",\"AreaId\"],[\"todayParam\",\"todayParam\"]]"
+     },
+     {
+      "name": "displayLength",
+      "type": "Integer",
+      "value": "7"
+     },
+     {
+      "name": "expandOnClick",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "filter",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "info",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "lengthChange",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "paginate",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "sort",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "colSearchable",
+      "type": "ColSearchableArray",
+      "value": "[]"
+     },
+     {
+      "name": "drawCallback",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "dataSource",
+      "type": "Datasource",
+      "value": "outlet_query"
+     },
+     {
+      "name": "sDom",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "sortBy",
+      "type": "SortByArray",
+      "value": "[]"
+     },
+     {
+      "name": "priority",
+      "type": "Integer",
+      "value": "5"
+     },
+     {
+      "name": "refreshPeriod",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "paginationType",
+      "type": "PaginationType",
+      "value": "simple"
+     },
+     {
+      "name": "tableStyle",
+      "type": "TableStyle",
+      "value": "classic"
+     },
+     {
+      "name": "htmlObject",
+      "type": "HtmlObject",
+      "value": "${h:div3}"
+     },
+     {
+      "name": "executeAtStart",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "paginateServerside",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "preExecution",
+      "type": "JavaScript",
+      "value": "function f() {\r\n    //myTable3.defaulTableSettings.apply(this); string numeric  hidden\r\n    this.setAddInOptions(\"colType\",\"numeric\",   \r\n    {\r\n        includeValue: true\r\n    });\r\n    //resizeGraphical(this);\r\n    func_resize(this);\r\n    \r\n    //alert(1);\r\n    //$('#div3Table tbody tr:first').addClass(\"selected\");\r\n    //var ph = $(\"#\" + this.htmlObject + \" table tbody tr\");\r\n    //console.log(ph);\r\n    //var row = $(this).find(\"td:eq(4)\").text());\r\n    console.log($(\"#\" + this.htmlObject + \" table tbody tr\"));\r\n    \r\n} \r\n "
+     },
+     {
+      "name": "postExecution",
+      "type": "JavaScript",
+      "value": "function f(){\r\n    //e.stopPropagation();\r\n        //alert(\"click\");\r\n    $('#div3Table tbody tr:first').addClass(\"selected\");\r\n    \r\n    var tableObj = $(\"#\" + this.htmlObject + \" table tbody tr\");//\r\n    //var ph = $(\" table tbody tr\");\r\n    \r\n    tableObj.bind(\"click\",function(event){\r\n        event.stopPropagation();\r\n        //alert(\"click\");\r\n        var row = $(this);\r\n        var outletId = row.find(\"td:eq(1)\").text();//\r\n        //var outletId = row.find('.hidden').text();\r\n        //var outletId = $(this).find('.hidden').text();\r\n        //alert(\"outletId = \" + outletId);\r\n        console.log(\"td:eq(0) = \" + row.find(\"td:eq(0)\").text());\r\n        console.log(\"td:eq(1) = \" + row.find(\"td:eq(1)\").text());\r\n        console.log(\"td:eq(2) = \" + row.find(\"td:eq(2)\").text());\r\n        console.log(\"td:eq(3) = \" + row.find(\"td:eq(3)\").text());\r\n        console.log(\"td:eq(4) = \" + row.find(\"td:eq(4)\").text());\r\n        \r\n        Dashboards.fireChange(\"OutLetId\",outletId);\r\n        console.log(\"OutLetId = \" + OutLetId);\r\n        \r\n// Now, remove the selected mark from other rows and mark this\r\n        row.parent().find(\"tr\").removeClass(\"selected\");\r\n        row.addClass(\"selected\");\r\n    });\r\n    \r\n    // Remove selected class from all rows and set it on the clicked row  numeric\r\n    tableObj.removeClass('selected');\r\n    tableObj.each(function(idx, elem){\r\n        var outlet = $(elem).find('.numeric').text();\r\n        console.log(\"here = \" + outlet);\r\n        if ( outlet == OutLetId ){\r\n            $(elem).addClass('selected');\r\n        }\r\n    });\r\n} "
+     },
+     {
+      "name": "postFetch",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "preChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "extraOptions",
+      "type": "ExtraOptionsArray",
+      "value": "[]"
+     },
+     {
+      "name": "tooltip",
+      "type": "Html",
+      "value": "<html>\n    <head>\n        <title>首页仪表盘</title>\n        <!-- Tell the browser to be responsive to screen width -->\n\t    <meta content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\" name=\"viewport\">\n        <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css\">\n        <!-- Ionicons -->\n\t    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css\">\n        <script type=\"text/javascript\">\n            window.onload = onload_echarts;\n        </script>\n    </head>\n    <!--  style=\"background-color:#ECF0F5\" #EBEBEB -->\n    <body class=\"hold-transition skin-blue sidebar-mini\" style=\"background-color:#FFF\">\n        <section class=\"content\">\n    \t\t<!-- 第一行 -->\n    \t\t<div class=\"row\">\n    \t\t\t<!-- 第一行的左边列 -->\n    \t\t\t<div class=\"col-md-6\">\n    \t\t\t\t<div class=\"box box-success\">\n    \t\t\t\t\t<div class=\"box-body no-padding\">\n    \t\t\t\t\t\t<div class=\"row\">\n    \t\t\t\t\t\t\t<div id=\"div1\" class=\"col-md-12 col-sm-12\" style=\"height:235px;width:98%\"></div>\n    \t\t\t\t\t\t</div>\n    \t\t\t\t\t</div>\n    \t\t\t\t</div>\n                    <div class=\"row\">\n    \t\t\t\t<div class=\"col-md-12 col-sm-12\">\n\t\t\t\t\t\t<div  class=\"box box-warning direct-chat direct-chat-warning\">\n                            <div id=\"div2\" style=\"height:310px;width:98%\"></div>    \n                        </div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n    \t\t\t</div>\n    \t\t\t<div class=\"col-md-6\">\n        \t\t\t<div class=\"box box-danger\">\n        \t\t\t\t<div class=\"row\">\n        \t\t\t\t\t<div class=\"col-md-12 col-sm-12\">\n                                <!-- \n                                <div style=\"width:98%; height:40px; margin-left: 200px; margin-top:15px;\">\n                                    <span style=\"font-size:20px; font-weight:lighter;\">门店可点击</span>\n                                </div>\n                                -->\n            \t\t\t\t    <div  class=\"visitsTable\" id=\"div3\"  style=\"height:235px;width:100%;\"></div>   \n        \t\t\t\t\t</div>\n        \t\t\t\t</div>\n        \t\t\t</div>\n    \t\t\t\t\n    \t\t\t\t<div class=\"info-box bg-yellow\">\n    \t\t\t\t\t<span class=\"info-box-icon\"><i class=\"fa fa-line-chart\"></i></span>\n    \t\t\t\t\t<div class=\"info-box-content\">\n                            <div style=\"width:60%; height:40px;\">\n                                <span id=\"saleAmtHtmlObj\" style=\"font-size:30px; font-weight:bolder;margin-left:5px;\"></span>\n                                <span style=\"font-size:20px;\">元</span>\n                            </div>\n                            <h4 style=\"margin-left:5px; font-weight:normal;\">销售额</h4>\n                            <!--\n    \t\t\t\t\t\t<span id=\"saleAmtHtmlObj\" class=\"info-box-number\"></span>\n    \t\t\t\t\t\t<div class=\"progress\">\n    \t\t\t            \t<div class=\"progress-bar\" style=\"width: 50%\"></div>\n    \t\t\t           \t</div>\n                            -->\n    \t\t\t\t\t</div>\n    \t\t\t\t</div>\n    \t\t\t\t<div class=\"info-box bg-green\">\n    \t\t\t\t\t<span class=\"info-box-icon\"><i class=\"ion ion-ios-people-outline\"></i></span>\n    \t\t\t\t\t<div class=\"info-box-content\">\n                            <div style=\"width:60%; height:40px;\">\n                                <span id=\"checkQtyHtmlObj\" style=\"font-size:30px; font-weight:bolder; margin-left:5px;\"></span>\n                                <span style=\"font-size:20px;\">客次</span>\n                            </div>\n                            <h4 style=\"margin-left:5px; font-weight:normal;\">来客数</h4>\n    \t\t\t\t\t\t\n                            <!--\n                            <span class=\"info-box-text\">来客数</span>\n        \t\t\t\t\t<span id=\"checkQtyHtmlObj\" class=\"info-box-number\"></span>\n    \t\t\t\t\t\t<div class=\"progress\">\n    \t\t\t            \t<div class=\"progress-bar\" style=\"width: 20%\"></div>\n    \t\t\t           \t</div>\n                            -->\n    \t\t\t\t\t</div>\n    \t\t\t\t</div>\n    \t\t\t\t<div class=\"info-box bg-red\">\n    \t\t\t\t\t<span class=\"info-box-icon\"><i class=\"fa  fa-paypal\"></i></span>\n    \t\t\t\t\t<div class=\"info-box-content\">\n                            <div style=\"width:60%; height:40px;\">\n                                <span id=\"checkPriceHtmlObj\" style=\"font-size:30px; font-weight:bolder;margin-left:5px;\"></span>\n                                <span style=\"font-size:20px;\">元/单</span>\n                            </div>\n                            <h4 style=\"margin-left:5px; font-weight:normal;\">客单价</h4>\n                            <!--\n                            <span class=\"info-box-text\">客单价</span>\n        \t\t\t\t\t<span id=\"checkPriceHtmlObj\" class=\"info-box-number\"></span>\n    \t\t\t\t\t\t<div class=\"progress\">\n    \t\t\t            \t<div class=\"progress-bar\" style=\"width: 20%\"></div>\n    \t\t\t           \t</div>\n                            -->\n    \t\t\t\t\t</div>\n    \t\t\t\t</div>\n    \t\t\t</div>\n    \t\t</div>\n    \t</section>\n    </body>\n</html> "
+     },
+     {
+      "name": "clickAction",
+      "type": "JavaScript",
+      "value": ""
+     }
+    ],
+    "rowName": "Table Component",
+    "type": "ComponentsTable",
+    "typeDesc": "table Component"
+   },
+   {
+    "id": "bde22634-82e0-b18e-f10b-7ee70a2c557d",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "saleAmt"
+     },
+     {
+      "name": "listeners",
+      "type": "Listeners",
+      "value": "[\"${p:BrandId}\",\"${p:AreaId}\",\"${p:OutLetId}\",\"${p:todayParam}\"]"
+     },
+     {
+      "name": "parameters",
+      "type": "ValuesArray",
+      "value": "[[\"BrandId\",\"BrandId\"],[\"AreaId\",\"AreaId\"],[\"OutLetId\",\"OutLetId\"],[\"todayParam\",\"todayParam\"]]"
+     },
+     {
+      "name": "resultvar",
+      "type": "Result",
+      "value": "my_saleAmt"
+     },
+     {
+      "name": "dataSource",
+      "type": "Datasource",
+      "value": "saleAmt_query"
+     },
+     {
+      "name": "asynchronousMode",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "priority",
+      "type": "Integer",
+      "value": 5
+     },
+     {
+      "name": "refreshPeriod",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "htmlObject",
+      "type": "HtmlObject",
+      "value": "${h:saleAmtHtmlObj}"
+     },
+     {
+      "name": "executeAtStart",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "preExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postExecution",
+      "type": "JavaScript",
+      "value": "function f(){\n    //var resultvar = my_saleAmt\n    //document.getElementById('saleAmtHtmlObj').innerHTML = my_saleAmt;\n    /*\n    var format_saleAmt = function(){\n        my_saleAmt += '';\n        x = nStr.split('.');\n        x1 = x[0];\n        x2 = x.length > 1 ? '.' + x[1] : '';\n        var rgx = /(\\d+)(\\d{3})/;\n        while (rgx.test(x1)){\n            x1 = x1.replace(rgx, '$1' + ',' + '$2');\n        }\n        x2 = x2.slice(0,3);\n        return x1 + x2;\n    };\n    */\n    //console.log(format_saleAmt.__proto__.values());\n    //console.log(format_saleAmt);\n    //var b = my_saleAmt[0][0];\n    /**\n     *  金额 类的 千分位 格式化\n     */\n    var format_saleAmt = function(nStr){\n        nStr += '';\n        x = nStr.split('.');\n        x1 = x[0];\n        x2 = x.length > 1 ? '.' + x[1] : '';\n        var rgx = /(\\d+)(\\d{3})/;\n        while (rgx.test(x1)){\n            x1 = x1.replace(rgx, '$1' + ',' + '$2');\n        }\n        x2 = x2.slice(0,3);\n        return x1 + x2;\n        /*\n        if(!temp && typeof(temp) != \"undefined\" ){\n            return 0;\n        }else{\n            return temp;\n        }\n        */\n    };\n    /**\n     *  金额 类的  为0 的 格式化\n     */\n    var change = function(num){\n        num = parseFloat(num);\n        if( isNaN(num) ){\n            return false;\n        }else{\n            var newNum = \"\";\n            num = num + \"\";\n            var temp = num.split(\"\\.\");\n            var myLength = 0;\n            if( 2 <= temp.length ){\n                myLength = temp[1].length;\n            }\n            switch( myLength ){\n                case 0 :\n                    newNum = num + \".00\";\n                    break;\n                case 1 :\n                    newNum = num + \"0\";\n                    break;\n                default :\n                    newNum = num;\n                     break;\n            }\n            return newNum;\n        }\n    };\n    /*\n    if(format_saleAmt(my_saleAmt[0][0]) ==  null){\n        format_saleAmt(my_saleAmt[0][0]) = 0;\n    }else{\n        \n    }\n    */\n    //console.log(\"format_saleAmt = \" + format_saleAmt);\n    //document.getElementById('saleAmtHtmlObj').innerHTML = my_saleAmt[0][0];\n    //document.getElementById('saleAmtHtmlObj').innerHTML = format_saleAmt(my_saleAmt[0][0]);\n    //format_saleAmt(my_saleAmt[0][0]) ===  null ? document.getElementById('saleAmtHtmlObj').innerHTML = 0 : document.getElementById('saleAmtHtmlObj').innerHTML = format_saleAmt(my_saleAmt[0][0]);\n    /*\n    document.getElementById('saleAmtHtmlObj').innerHTML = function(nStr){\n        nStr += '';\n        x = nStr.split('.');\n        x1 = x[0];\n        x2 = x.length > 1 ? '.' + x[1] : '';\n        var rgx = /(\\d+)(\\d{3})/;\n        while (rgx.test(x1)){\n            x1 = x1.replace(rgx, '$1' + ',' + '$2');\n        }\n        x2 = x2.slice(0,3);\n        return x1 + x2;     \n    }(my_saleAmt[0][0]);\n    */\n    if(my_saleAmt == \"\"){\n        my_saleAmt[0][0] = 0;\n        //document.getElementById('saleAmtHtmlObj').innerHTML = change(my_saleAmt[0][0]);\n    }else{\n        document.getElementById('saleAmtHtmlObj').innerHTML = format_saleAmt(my_saleAmt[0][0]);\n    }\n    console.log(\"my_saleAmt = \" + my_saleAmt);\n    console.log(\"my_saleAmt[0][0] = \" + my_saleAmt[0][0]);\n    console.log(\"format_saleAmt(my_saleAmt[0][0]) = \" + format_saleAmt(my_saleAmt[0][0]));\n    //console.log(my_saleAmt.__proto__.values);\n    //console.log(my_saleAmt.values);\n    //console.log(my_saleAmt.length);\n} "
+     },
+     {
+      "name": "postFetch",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "preChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "tooltip",
+      "type": "Html",
+      "value": ""
+     }
+    ],
+    "rowName": "Query Component",
+    "type": "ComponentsQuery",
+    "typeDesc": "Query Component"
+   },
+   {
+    "id": "cd296bd9-0499-a73d-0d57-ed0351b60a15",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "checkQty"
+     },
+     {
+      "name": "listeners",
+      "type": "Listeners",
+      "value": "[\"${p:BrandId}\",\"${p:AreaId}\",\"${p:OutLetId}\",\"${p:todayParam}\"]"
+     },
+     {
+      "name": "parameters",
+      "type": "ValuesArray",
+      "value": "[[\"BrandId\",\"BrandId\"],[\"AreaId\",\"AreaId\"],[\"OutLetId\",\"OutLetId\"],[\"todayParam\",\"todayParam\"]]"
+     },
+     {
+      "name": "resultvar",
+      "type": "Result",
+      "value": "my_checkQty"
+     },
+     {
+      "name": "dataSource",
+      "type": "Datasource",
+      "value": "checkQty_query"
+     },
+     {
+      "name": "asynchronousMode",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "priority",
+      "type": "Integer",
+      "value": 5
+     },
+     {
+      "name": "refreshPeriod",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "htmlObject",
+      "type": "HtmlObject",
+      "value": "${h:checkQtyHtmlObj}"
+     },
+     {
+      "name": "executeAtStart",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "preExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postExecution",
+      "type": "JavaScript",
+      "value": "function f(){\n    /**\n     *  金额 类的 千分位 格式化\n     */\n    var format_checkQty = function(nStr){\n        nStr += '';\n        x = nStr.split('.');\n        x1 = x[0];\n        x2 = x.length > 1 ? '.' + x[1] : '';\n        var rgx = /(\\d+)(\\d{3})/;\n        while (rgx.test(x1)){\n            x1 = x1.replace(rgx, '$1' + ',' + '$2');\n        }\n        x2 = x2.slice(0,3);\n        return x1 + x2;\n    };\n    /**\n     *  金额 类的  为0 的 格式化\n     */\n    var change = function(num){\n        num = parseFloat(num);\n        if( isNaN(num) ){\n            return false;\n        }else{\n            var newNum = \"\";\n            num = num + \"\";\n            var temp = num.split(\"\\.\");\n            var myLength = 0;\n            if( 2 <= temp.length ){\n                myLength = temp[1].length;\n            }\n            switch( myLength ){\n                case 0 :\n                    newNum = num + \".00\";\n                    break;\n                case 1 :\n                    newNum = num + \"0\";\n                    break;\n                default :\n                    newNum = num;\n                     break;\n            }\n            return newNum;\n        }\n    };\n    \n    if(my_checkQty == \"\"){\n        my_checkQty[0][0] = 0;\n        //document.getElementById('checkQtyHtmlObj').innerHTML = format_checkQty(my_checkQty[0][0]);\n    }else{\n        document.getElementById('checkQtyHtmlObj').innerHTML = format_checkQty(my_checkQty[0][0]);\n    }\n    //document.getElementById('checkQtyHtmlObj').innerHTML = format_checkQty(my_checkQty[0][0]); \n    console.log(\"my_checkQty = \" + my_checkQty);\n    console.log(\"my_checkQty[0][0] = \" + my_checkQty[0][0]);\n    console.log(\"format_checkQty(my_checkQty[0][0]) = \" +format_checkQty(my_checkQty[0][0]));\n} "
+     },
+     {
+      "name": "postFetch",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "preChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "tooltip",
+      "type": "Html",
+      "value": ""
+     }
+    ],
+    "rowName": "Query Component",
+    "type": "ComponentsQuery",
+    "typeDesc": "Query Component"
+   },
+   {
+    "id": "ea871afe-022f-1f60-15d7-ad876f2492de",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "checkPrice"
+     },
+     {
+      "name": "listeners",
+      "type": "Listeners",
+      "value": "[\"${p:BrandId}\",\"${p:AreaId}\",\"${p:OutLetId}\",\"${p:todayParam}\"]"
+     },
+     {
+      "name": "parameters",
+      "type": "ValuesArray",
+      "value": "[[\"BrandId\",\"BrandId\"],[\"AreaId\",\"AreaId\"],[\"OutLetId\",\"OutLetId\"],[\"todayParam\",\"todayParam\"]]"
+     },
+     {
+      "name": "resultvar",
+      "type": "Result",
+      "value": "my_checkPrice"
+     },
+     {
+      "name": "dataSource",
+      "type": "Datasource",
+      "value": "checkPrice_query"
+     },
+     {
+      "name": "asynchronousMode",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "priority",
+      "type": "Integer",
+      "value": 5
+     },
+     {
+      "name": "refreshPeriod",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "htmlObject",
+      "type": "HtmlObject",
+      "value": "${h:checkPriceHtmlObj}"
+     },
+     {
+      "name": "executeAtStart",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "preExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postExecution",
+      "type": "JavaScript",
+      "value": "function f(){\n    /**\n     *  金额 类的 千分位 格式化\n     */\n    var format_checkPrice = function(nStr){\n        nStr += '';\n        x = nStr.split('.');\n        x1 = x[0];\n        x2 = x.length > 1 ? '.' + x[1] : '';\n        var rgx = /(\\d+)(\\d{3})/;\n        while (rgx.test(x1)){\n            x1 = x1.replace(rgx, '$1' + ',' + '$2');\n        }\n        x2 = x2.slice(0,3);\n        return x1 + x2;\n    };\n    /**\n     *  金额 类的  为0 的 格式化\n     */\n    var change = function(num){\n        num = parseFloat(num);\n        if( isNaN(num) ){\n            return false;\n        }else{\n            var newNum = \"\";\n            num = num + \"\";\n            var temp = num.split(\"\\.\");\n            var myLength = 0;\n            if( 2 <= temp.length ){\n                myLength = temp[1].length;\n            }\n            switch( myLength ){\n                case 0 :\n                    newNum = num + \".00\";\n                    break;\n                case 1 :\n                    newNum = num + \"0\";\n                    break;\n                default :\n                    newNum = num;\n                     break;\n            }\n            return newNum;\n        }\n    };\n    if( my_checkPrice == \"\" ){\n        my_checkPrice[0][0] = 0;\n        //document.getElementById('checkPriceHtmlObj').innerHTML = change(my_checkPrice[0][0]);\n    }else{\n        document.getElementById('checkPriceHtmlObj').innerHTML = format_checkPrice(my_checkPrice[0][0]);\n    }\n    //document.getElementById('checkPriceHtmlObj').innerHTML = format_checkPrice(my_checkPrice[0][0]);   \n    console.log(\"my_checkPrice = \" + my_checkPrice);\n    console.log(\"my_checkPrice[0][0] = \" + my_checkPrice[0][0]);\n    console.log(\"format_checkPrice(my_checkPrice[0][0]) = \" + format_checkPrice(my_checkPrice[0][0]));\n} "
+     },
+     {
+      "name": "postFetch",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "preChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "tooltip",
+      "type": "Html",
+      "value": ""
+     }
+    ],
+    "rowName": "Query Component",
+    "type": "ComponentsQuery",
+    "typeDesc": "Query Component"
+   },
+   {
+    "id": "d4cb4c56-276c-ac12-4838-7ca6a92d44a9",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "guestQty"
+     },
+     {
+      "name": "listeners",
+      "type": "Listeners",
+      "value": "[\"${p:BrandId}\",\"${p:AreaId}\",\"${p:OutLetId}\",\"${p:todayParam}\"]"
+     },
+     {
+      "name": "parameters",
+      "type": "ValuesArray",
+      "value": "[[\"BrandId\",\"BrandId\"],[\"AreaId\",\"AreaId\"],[\"OutLetId\",\"OutLetId\"],[\"todayParam\",\"todayParam\"]]"
+     },
+     {
+      "name": "resultvar",
+      "type": "Result",
+      "value": "my_guestQty"
+     },
+     {
+      "name": "dataSource",
+      "type": "Datasource",
+      "value": "guestQty_query"
+     },
+     {
+      "name": "asynchronousMode",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "priority",
+      "type": "Integer",
+      "value": 5
+     },
+     {
+      "name": "refreshPeriod",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "htmlObject",
+      "type": "HtmlObject",
+      "value": "${h:guestQtyHtmlObj}"
+     },
+     {
+      "name": "executeAtStart",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "preExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postExecution",
+      "type": "JavaScript",
+      "value": "function f(){\n    /**\n     *  金额 类的 千分位 格式化\n     */\n    var format_guestQty = function(nStr){\n        nStr += '';\n        x = nStr.split('.');\n        x1 = x[0];\n        x2 = x.length > 1 ? '.' + x[1] : '';\n        var rgx = /(\\d+)(\\d{3})/;\n        while (rgx.test(x1)){\n            x1 = x1.replace(rgx, '$1' + ',' + '$2');\n        }\n        x2 = x2.slice(0,3);\n        return x1 + x2;\n    };\n    /**\n     *  金额 类的  为0 的 格式化\n     */\n    var change = function(num){\n        num = parseFloat(num);\n        if( isNaN(num) ){\n            return false;\n        }else{\n            var newNum = \"\";\n            num = num + \"\";\n            var temp = num.split(\"\\.\");\n            var myLength = 0;\n            if( 2 <= temp.length ){\n                myLength = temp[1].length;\n            }\n            switch( myLength ){\n                case 0 :\n                    newNum = num + \".00\";\n                    break;\n                case 1 :\n                    newNum = num + \"0\";\n                    break;\n                default :\n                    newNum = num;\n                     break;\n            }\n            return newNum;\n        }\n    };\n    \n    if(my_guestQty == \"\"){\n        my_guestQty[0][0] = 0;\n        //document.getElementById('guestQtyHtmlObj').innerHTML = format_guestQty(my_guestQty[0][0]);\n    }else{\n        document.getElementById('guestQtyHtmlObj').innerHTML = format_guestQty(my_guestQty[0][0]);\n    }\n    //document.getElementById('guestQtyHtmlObj').innerHTML = format_guestQty(my_guestQty[0][0]); \n    console.log(\"my_guestQty = \" + my_guestQty);\n    console.log(\"my_guestQty[0][0] = \" + my_guestQty[0][0]);\n    console.log(\"format_guestQty(my_guestQty[0][0]) = \" +format_guestQty(my_guestQty[0][0]));\n} "
+     },
+     {
+      "name": "postFetch",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "preChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "tooltip",
+      "type": "Html",
+      "value": ""
+     }
+    ],
+    "rowName": "Query Component",
+    "type": "ComponentsQuery",
+    "typeDesc": "Query Component"
+   },
+   {
+    "id": "7914d1c0-080e-a6dc-d82b-6e919fb7d047",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "guestPrice"
+     },
+     {
+      "name": "listeners",
+      "type": "Listeners",
+      "value": "[\"${p:BrandId}\",\"${p:AreaId}\",\"${p:OutLetId}\",\"${p:todayParam}\"]"
+     },
+     {
+      "name": "parameters",
+      "type": "ValuesArray",
+      "value": "[[\"BrandId\",\"BrandId\"],[\"AreaId\",\"AreaId\"],[\"OutLetId\",\"OutLetId\"],[\"todayParam\",\"todayParam\"]]"
+     },
+     {
+      "name": "resultvar",
+      "type": "Result",
+      "value": "my_guestPrice"
+     },
+     {
+      "name": "dataSource",
+      "type": "Datasource",
+      "value": "guestPrice_query"
+     },
+     {
+      "name": "asynchronousMode",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "priority",
+      "type": "Integer",
+      "value": 5
+     },
+     {
+      "name": "refreshPeriod",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "htmlObject",
+      "type": "HtmlObject",
+      "value": "${h:guestPriceHtmlObj}"
+     },
+     {
+      "name": "executeAtStart",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "preExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postExecution",
+      "type": "JavaScript",
+      "value": "function f(){\n    /**\n     *  金额 类的 千分位 格式化\n     */\n    var format_guestPrice = function(nStr){\n        nStr += '';\n        x = nStr.split('.');\n        x1 = x[0];\n        x2 = x.length > 1 ? '.' + x[1] : '';\n        var rgx = /(\\d+)(\\d{3})/;\n        while (rgx.test(x1)){\n            x1 = x1.replace(rgx, '$1' + ',' + '$2');\n        }\n        x2 = x2.slice(0,3);\n        return x1 + x2;\n    };\n    /**\n     *  金额 类的  为0 的 格式化\n     */\n    var change = function(num){\n        num = parseFloat(num);\n        if( isNaN(num) ){\n            return false;\n        }else{\n            var newNum = \"\";\n            num = num + \"\";\n            var temp = num.split(\"\\.\");\n            var myLength = 0;\n            if( 2 <= temp.length ){\n                myLength = temp[1].length;\n            }\n            switch( myLength ){\n                case 0 :\n                    newNum = num + \".00\";\n                    break;\n                case 1 :\n                    newNum = num + \"0\";\n                    break;\n                default :\n                    newNum = num;\n                     break;\n            }\n            return newNum;\n        }\n    };\n    if( my_guestPrice == \"\" ){\n        my_guestPrice[0][0] = 0;\n        //document.getElementById('guestPriceHtmlObj').innerHTML = change(my_guestPrice[0][0]);\n    }else{\n        document.getElementById('guestPriceHtmlObj').innerHTML = format_guestPrice(my_guestPrice[0][0]);\n    }\n    //document.getElementById('guestPriceHtmlObj').innerHTML = format_guestPrice(my_guestPrice[0][0]);   \n    console.log(\"my_guestPrice = \" + my_guestPrice);\n    console.log(\"my_guestPrice[0][0] = \" + my_guestPrice[0][0]);\n    console.log(\"format_guestPrice(my_guestPrice[0][0]) = \" + format_guestPrice(my_guestPrice[0][0]));\n} "
+     },
+     {
+      "name": "postFetch",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "preChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "tooltip",
+      "type": "Html",
+      "value": ""
+     }
+    ],
+    "rowName": "Query Component",
+    "type": "ComponentsQuery",
+    "typeDesc": "Query Component"
+   },
+   {
+    "id": "dacbef83-44b0-ba6f-bd99-e220fe9ae2df",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "outPut"
+     },
+     {
+      "name": "label",
+      "type": "String",
+      "value": "导出数据"
+     },
+     {
+      "name": "listeners",
+      "type": "Listeners",
+      "value": "[]"
+     },
+     {
+      "name": "parameters",
+      "type": "ValuesArray",
+      "value": "[]"
+     },
+     {
+      "name": "priority",
+      "type": "Integer",
+      "value": 5
+     },
+     {
+      "name": "refreshPeriod",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "componentName",
+      "type": "String",
+      "value": "导出数据"
+     },
+     {
+      "name": "outputType",
+      "type": "String",
+      "value": "xlsx"
+     },
+     {
+      "name": "htmlObject",
+      "type": "HtmlObject",
+      "value": ""
+     },
+     {
+      "name": "executeAtStart",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "preExecution",
+      "type": "JavaScript",
+      "value": "(function(){\n    console.log(1);\n}) "
+     },
+     {
+      "name": "postExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "tooltip",
+      "type": "Html",
+      "value": ""
+     }
+    ],
+    "rowName": "Export Button",
+    "type": "ComponentsexportButton",
+    "typeDesc": "Export Button Component"
+   },
+   {
+    "id": "91e30528-f5a0-f2bc-a238-606c7e49ae77",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "refreshBtn"
+     },
+     {
+      "name": "label",
+      "type": "String",
+      "value": "刷新"
+     },
+     {
+      "name": "listeners",
+      "type": "Listeners",
+      "value": "[\"${p:BrandId}\",\"${p:AreaId}\",\"${p:OutLetId}\",\"${p:todayParam}\"]"
+     },
+     {
+      "name": "actionParameters",
+      "type": "ValuesArray",
+      "value": "[]"
+     },
+     {
+      "name": "expression",
+      "type": "JavaScript",
+      "value": "function f(){\r\n    var GetDateStr = function(AddDayCount){\r\n        var dd = new Date();\r\n        dd.setDate(dd.getDate() + AddDayCount);//获取AddDayCount天后的日期\r\n        var y = dd.getFullYear(); \r\n        var m = dd.getMonth() + 1;//获取当前月份的日期 \r\n        var d = dd.getDate(); \r\n        \r\n        return y + \"-\" + m + \"-\" + d; \r\n    };\r\n    /*\r\n    document.write(\"前天：\"+GetDateStr(-2));\r\n    document.write(\"<br />昨天：\"+GetDateStr(-1));\r\n    document.write(\"<br />今天：\"+GetDateStr(0));\r\n    document.write(\"<br />明天：\"+GetDateStr(1));\r\n    document.write(\"<br />后天：\"+GetDateStr(2));\r\n    document.write(\"<br />大后天：\"+GetDateStr(3)); \r\n    */\r\n    //alert(GetDateStr(-5));\r\n    Dashboards.fireChange('BrandId',0);\r\n    Dashboards.fireChange('AreaId',0);\r\n    Dashboards.fireChange('OutLetId',0);\r\n    Dashboards.fireChange('todayParam',GetDateStr(-1));\r\n} "
+     },
+     {
+      "name": "failureCallback",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "successCallback",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "dataSource",
+      "type": "Datasource",
+      "value": ""
+     },
+     {
+      "name": "priority",
+      "type": "Integer",
+      "value": 5
+     },
+     {
+      "name": "refreshPeriod",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "buttonStyle",
+      "type": "TableStyle",
+      "value": "bootstrap"
+     },
+     {
+      "name": "htmlObject",
+      "type": "HtmlObject",
+      "value": "${h:refreshBtnObj}"
+     },
+     {
+      "name": "executeAtStart",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "preExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "tooltip",
+      "type": "Html",
+      "value": ""
+     }
+    ],
+    "rowName": "Button Component",
+    "type": "ComponentsbuttonComponent",
+    "typeDesc": "Button Component"
+   },
+   {
+    "id": "GENERIC",
+    "name": "Generic",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "type": "Label",
+      "value": "Generic"
+     }
+    ],
+    "type": "Label",
+    "typeDesc": "<i>Group</i>"
+   },
+   {
+    "id": "7a473251-1db9-aa5d-a256-2932da57189c",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "BrandId"
+     },
+     {
+      "name": "propertyValue",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "parameterViewRole",
+      "type": "parameterViewRoleCustom",
+      "value": "unused"
+     },
+     {
+      "name": "bookmarkable",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "public",
+      "type": "Boolean",
+      "value": "false"
+     }
+    ],
+    "rowName": "Simple Parameter",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter"
+   },
+   {
+    "id": "21670c5b-7b35-8896-3efe-5d44effb6784",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "AreaId"
+     },
+     {
+      "name": "propertyValue",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "parameterViewRole",
+      "type": "parameterViewRoleCustom",
+      "value": "unused"
+     },
+     {
+      "name": "bookmarkable",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "public",
+      "type": "Boolean",
+      "value": "false"
+     }
+    ],
+    "rowName": "Simple Parameter",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter"
+   },
+   {
+    "id": "d2e75a8f-144f-4fdc-6778-0bd7d209c1f3",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "OutLetId"
+     },
+     {
+      "name": "propertyValue",
+      "type": "String",
+      "value": "0"
+     },
+     {
+      "name": "parameterViewRole",
+      "type": "parameterViewRoleCustom",
+      "value": "unused"
+     },
+     {
+      "name": "bookmarkable",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "public",
+      "type": "Boolean",
+      "value": "false"
+     }
+    ],
+    "rowName": "Simple Parameter",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter"
+   },
+   {
+    "id": "4befd574-197b-3d1a-59fd-efcb42a164f1",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "todayParam"
+     },
+     {
+      "name": "propertyDateValue",
+      "type": "Date",
+      "value": "yesterday"
+     },
+     {
+      "name": "bookmarkable",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "public",
+      "type": "Boolean",
+      "value": "false"
+     }
+    ],
+    "rowName": "Date Parameter",
+    "type": "ComponentsDateParameter",
+    "typeDesc": "Date Parameter"
+   },
+   {
+    "id": "SELECTORS",
+    "name": "Selects",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "type": "Label",
+      "value": "Selects"
+     }
+    ],
+    "type": "Label",
+    "typeDesc": "<i>Group</i>"
+   },
+   {
+    "id": "d8a0cb31-3e19-6ee9-3830-f69a9ae7507c",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "dateInput"
+     },
+     {
+      "name": "parameter",
+      "type": "Parameter",
+      "value": "${p:todayParam}"
+     },
+     {
+      "name": "listeners",
+      "type": "Listeners",
+      "value": "[\"${p:todayParam}\"]"
+     },
+     {
+      "name": "dateFormat",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "endDate",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "startDate",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "priority",
+      "type": "Integer",
+      "value": 5
+     },
+     {
+      "name": "htmlObject",
+      "type": "HtmlObject",
+      "value": "${h:dateFilter}"
+     },
+     {
+      "name": "onCloseEvent",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "onOpenEvent",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "executeAtStart",
+      "type": "Boolean",
+      "value": "true"
+     },
+     {
+      "name": "preExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postExecution",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "preChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "postChange",
+      "type": "JavaScript",
+      "value": ""
+     },
+     {
+      "name": "tooltip",
+      "type": "Html",
+      "value": ""
+     }
+    ],
+    "rowName": "Date input Component",
+    "type": "ComponentsDateInput",
+    "typeDesc": "Date input Component"
+   }
+  ]
+ },
+ "datasources": {
+  "rows": [
+   {
+    "id": "SQL",
+    "name": "SQL Queries",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "type": "Label",
+      "value": "SQL Queries"
+     }
+    ],
+    "type": "Label",
+    "typeDesc": "<i>Group</i>"
+   },
+   {
+    "id": "2903dc2c-322e-a269-6698-418d157c98f3",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "brand_query"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "SELECT\n     `Dim_Brand`.`BrandName_level1` AS BrandName,\n     `Dim_Brand`.`BrandId_level1` AS BrandId,\n     sum(`Fact_SumDay`.`SaleAmt`) - `Dim_Brand`.`BrandId_level1` AS SaleAmt\nFROM\n     `Dim_Brand` INNER JOIN `Fact_SumDay` ON `Dim_Brand`.`BrandId` = `Fact_SumDay`.`BrandId`\n    INNER JOIN `Dim_BIDate` ON `Fact_SumDay`.`BIDateId` = `Dim_BIDate`.`BIDateId`\nWHERE\n     `Dim_Brand`.`Status` = 0\n    AND ( Dim_BIDate.BIDate = ${todayParam} )\nGROUP BY\n     `Dim_Brand`.`BrandId_level1`,\n     `Dim_Brand`.`BrandName_level1`\nORDER BY\n     `Dim_Brand`.`BrandId_level1` ASC\n     \n     \n    "
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"todayParam\",\"todayParam\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "false"
+     }
+    ],
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "c4a372c6-fdbd-7a2d-127c-b800d7964f49",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "area_query"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "SELECT\n     `Dim_Area`.`AreaName_level1` AS AreaName,\n     `Dim_Area`.`AreaId_level1` AS AreaId,\n     sum(`Fact_SumDay`.`SaleAmt`)  - `Dim_Area`.`AreaId_level1` AS SaleAmt\nFROM\n     `Fact_SumDay` INNER JOIN `Dim_Area` ON `Fact_SumDay`.`AreaId` = `Dim_Area`.`AreaId`\n     INNER JOIN `Dim_Brand` ON `Fact_SumDay`.`BrandId` = `Dim_Brand`.`BrandId`\n     INNER JOIN `Dim_BIDate` ON `Fact_SumDay`.`BIDateId` = `Dim_BIDate`.`BIDateId`\nWHERE\n     `Dim_Area`.`Status` = 0\n     AND `Dim_Brand`.`Status` = 0\n    AND ( Dim_BIDate.BIDate = ${todayParam} )\n     AND (`Dim_Brand`.`BrandId_level1` = ${BrandId} OR ${BrandId} = 0)\n\nGROUP BY\n     `Dim_Area`.`AreaId_level1`,\n     `Dim_Area`.`AreaName_level1`\nORDER BY\n     `Dim_Area`.`AreaId_level1` ASC"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"BrandId\",\"BrandId\",\"String\",\"\",\"\"],[\"todayParam\",\"todayParam\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "false"
+     }
+    ],
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "ad67e750-3a4b-7be5-2bdd-e4c4356004b7",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "outlet_query"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "SELECT\r\n     `Dim_Area`.`AreaName_level1`,\r\n     `Dim_Outlet`.`OutletCode`,\r\n     `Dim_Outlet`.`OutletName`,\r\n     SUM(Fact_SumDay.SaleAmt) AS SaleAmt,\r\n     `Dim_Outlet`.`OutletId`\r\nFROM\r\n    `Dim_Area` INNER JOIN `Dim_Outlet` ON `Dim_Area`.`AreaId` = `Dim_Outlet`.`AreaId`\r\n    INNER JOIN `Dim_Brand` ON `Dim_Outlet`.`BrandId` = `Dim_Brand`.`BrandId`\r\n    INNER JOIN Fact_SumDay ON `Dim_Outlet`.`OutletId` = Fact_SumDay.OutletId\r\n    INNER JOIN `Dim_BIDate` ON `Fact_SumDay`.`BIDateId` = `Dim_BIDate`.`BIDateId`\r\nWHERE\r\n      ( Dim_BIDate.BIDate = ${todayParam} )\r\n    -- AND `Dim_Brand`.`Status` = 0\r\n     AND (`Dim_Brand`.`BrandId_level1` = ${BrandId} OR ${BrandId} = 0 )\r\n     AND (`Dim_Area`.`AreaId_level1` = ${AreaId} OR ${AreaId} = 0 )\r\nGROUP BY `Dim_Outlet`.`OutletCode`,\r\n     `Dim_Outlet`.`OutletName`,\r\n     `Dim_Area`.`AreaName_level1`,\r\n     `Dim_Outlet`.`OutletId`\r\nORDER BY `Dim_Area`.`AreaName_level1`,`Dim_Outlet`.`OutletCode`"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"BrandId\",\"BrandId\",\"String\",\"\",\"\"],[\"AreaId\",\"AreaId\",\"String\",\"\",\"\"],[\"todayParam\",\"todayParam\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "false"
+     }
+    ],
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "d558688e-48d0-2945-8937-1014cf5c1d4c",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "saleAmt_query"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "SELECT\r\n    CASE WHEN sum(`Fact_SumDay`.`SaleAmt`) = 0 THEN '0.0'\r\n        WHEN  sum(`Fact_SumDay`.`SaleAmt`) = NULL THEN '0.0'\r\n    ELSE ROUND( (sum(`Fact_SumDay`.`SaleAmt`) ), 2) END\r\nFROM\r\n     `Fact_SumDay` INNER JOIN Dim_Area ON Dim_Area.AreaId = `Fact_SumDay`.`AreaId`\r\n        INNER JOIN Dim_Brand ON Dim_Brand.BrandId = `Fact_SumDay`.BrandId  \r\n        INNER JOIN Dim_Outlet ON `Dim_Outlet`.`OutletId` = `Fact_SumDay`.OutletId\r\n        INNER JOIN `Dim_BIDate` ON `Fact_SumDay`.`BIDateId` = `Dim_BIDate`.`BIDateId`\r\nWHERE \r\n    -- Dim_Area.Status = 0 AND Dim_Brand.Status = 0\r\n     (Dim_Brand.BrandId_level1 = ${BrandId} OR ${BrandId}  = 0)\r\n    AND (`Dim_Area`.`AreaId_level1` = ${AreaId} OR ${AreaId} = 0)\r\n    AND ( `Dim_Outlet`.`OutletCode` = ${OutLetId} OR ${OutLetId} = 0 )\r\n    AND ( Dim_BIDate.BIDate = ${todayParam} )"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"AreaId\",\"AreaId\",\"String\",\"\",\"\"],[\"OutLetId\",\"OutLetId\",\"String\",\"\",\"\"],[\"BrandId\",\"BrandId\",\"String\",\"\",\"\"],[\"todayParam\",\"todayParam\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": "3600"
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "3dbc343b-2163-63dd-d3e8-5a3f6a4a11ee",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "checkQty_query"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "\nSELECT\n    CASE WHEN sum(`Fact_SumDay`.`CheckQty`) = 0 THEN '0.0'\n        WHEN  sum(`Fact_SumDay`.`CheckQty`) = NULL THEN '0.0'\n    ELSE ROUND( (sum(`Fact_SumDay`.`CheckQty`) ), 0) END\nFROM\n     `Fact_SumDay` INNER JOIN Dim_Area ON Dim_Area.AreaId = `Fact_SumDay`.`AreaId`\n        INNER JOIN Dim_Brand ON Dim_Brand.BrandId = `Fact_SumDay`.BrandId\n        INNER JOIN Dim_Outlet ON `Dim_Outlet`.`OutletId` = `Fact_SumDay`.OutletId\n        INNER JOIN `Dim_BIDate` ON `Fact_SumDay`.`BIDateId` = `Dim_BIDate`.`BIDateId`\nWHERE \n    Dim_Area.Status = 0 AND Dim_Brand.Status = 0\n    AND (Dim_Brand.BrandId_level1 = ${BrandId} OR ${BrandId}  = 0 )\n    AND (`Dim_Area`.`AreaId_level1` = ${AreaId} OR ${AreaId} = 0 )\n    AND ( `Dim_Outlet`.`OutletCode` = ${OutLetId} OR ${OutLetId} = 0  )\n    AND ( Dim_BIDate.BIDate = ${todayParam} )"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"BrandId\",\"BrandId\",\"String\",\"\",\"\"],[\"OutLetId\",\"OutLetId\",\"String\",\"\",\"\"],[\"AreaId\",\"AreaId\",\"String\",\"\",\"\"],[\"todayParam\",\"todayParam\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "false"
+     }
+    ],
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "155b49f5-50e7-e62b-3d2c-da185d8e6eb5",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "checkPrice_query"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "SELECT\n    CASE WHEN sum(`Fact_SumDay`.`CheckQty`) = 0 THEN '0.0'\n        WHEN  sum(`Fact_SumDay`.`CheckQty`) = NULL THEN '0.0'\n    ELSE ROUND( (sum(`Fact_SumDay`.`SaleAmt`) / sum(`Fact_SumDay`.`CheckQty`)), 2) END\nFROM\n     `Fact_SumDay` INNER JOIN Dim_Area ON Dim_Area.AreaId = `Fact_SumDay`.`AreaId`\n        INNER JOIN Dim_Brand ON Dim_Brand.BrandId = `Fact_SumDay`.BrandId  \n        INNER JOIN Dim_Outlet ON `Dim_Outlet`.`OutletId` = `Fact_SumDay`.OutletId\n        INNER JOIN `Dim_BIDate` ON `Fact_SumDay`.`BIDateId` = `Dim_BIDate`.`BIDateId`\nWHERE \n    Dim_Area.Status = 0 AND Dim_Brand.Status = 0\n    AND (Dim_Brand.BrandId_level1 = ${BrandId} OR ${BrandId}  = 0 )\n    AND (`Dim_Area`.`AreaId_level1` = ${AreaId} OR ${AreaId} = 0 )\n    AND ( `Dim_Outlet`.`OutletCode` = ${OutLetId} OR ${OutLetId} = 0  )\n    AND ( Dim_BIDate.BIDate = ${todayParam} )"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"BrandId\",\"BrandId\",\"String\",\"\",\"\"],[\"AreaId\",\"AreaId\",\"String\",\"\",\"\"],[\"OutLetId\",\"OutLetId\",\"String\",\"\",\"\"],[\"todayParam\",\"todayParam\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "false"
+     }
+    ],
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "ba395f98-226d-a88e-151e-b9222134e986",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "guestQty_query"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "\nSELECT\n    CASE WHEN sum(`Fact_SumDay`.`GuestQty`) = 0 THEN '0.0'\n        WHEN  sum(`Fact_SumDay`.`GuestQty`) = NULL THEN '0.0'\n    ELSE ROUND( (sum(`Fact_SumDay`.`GuestQty`) ), 0) END\nFROM\n     `Fact_SumDay` INNER JOIN Dim_Area ON Dim_Area.AreaId = `Fact_SumDay`.`AreaId`\n        INNER JOIN Dim_Brand ON Dim_Brand.BrandId = `Fact_SumDay`.BrandId\n        INNER JOIN Dim_Outlet ON `Dim_Outlet`.`OutletId` = `Fact_SumDay`.OutletId\n        INNER JOIN `Dim_BIDate` ON `Fact_SumDay`.`BIDateId` = `Dim_BIDate`.`BIDateId`\nWHERE \n    Dim_Area.Status = 0 AND Dim_Brand.Status = 0\n    AND (Dim_Brand.BrandId_level1 = ${BrandId} OR ${BrandId}  = 0 )\n    AND (`Dim_Area`.`AreaId_level1` = ${AreaId} OR ${AreaId} = 0 )\n    AND ( `Dim_Outlet`.`OutletCode` = ${OutLetId} OR ${OutLetId} = 0  )\n    AND ( Dim_BIDate.BIDate = ${todayParam} )"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"BrandId\",\"BrandId\",\"String\",\"\",\"\"],[\"OutLetId\",\"OutLetId\",\"String\",\"\",\"\"],[\"AreaId\",\"AreaId\",\"String\",\"\",\"\"],[\"todayParam\",\"todayParam\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "false"
+     }
+    ],
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "978d8aff-bb1a-4f24-37ff-5d5335bf1c90",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "guestPrice_query"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "SELECT\n    CASE WHEN sum(`Fact_SumDay`.`GuestQty`) = 0 THEN '0.0'\n        WHEN  sum(`Fact_SumDay`.`GuestQty`) = NULL THEN '0.0'\n    ELSE ROUND( (sum(`Fact_SumDay`.`SaleAmt`) / sum(`Fact_SumDay`.`GuestQty`)), 2) END\nFROM\n     `Fact_SumDay` INNER JOIN Dim_Area ON Dim_Area.AreaId = `Fact_SumDay`.`AreaId`\n        INNER JOIN Dim_Brand ON Dim_Brand.BrandId = `Fact_SumDay`.BrandId  \n        INNER JOIN Dim_Outlet ON `Dim_Outlet`.`OutletId` = `Fact_SumDay`.OutletId\n        INNER JOIN `Dim_BIDate` ON `Fact_SumDay`.`BIDateId` = `Dim_BIDate`.`BIDateId`\nWHERE \n    Dim_Area.Status = 0 AND Dim_Brand.Status = 0\n    AND (Dim_Brand.BrandId_level1 = ${BrandId} OR ${BrandId}  = 0 )\n    AND (`Dim_Area`.`AreaId_level1` = ${AreaId} OR ${AreaId} = 0 )\n    AND ( `Dim_Outlet`.`OutletCode` = ${OutLetId} OR ${OutLetId} = 0  )\n    AND ( Dim_BIDate.BIDate = ${todayParam} )"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[[\"BrandId\",\"BrandId\",\"String\",\"\",\"\"],[\"AreaId\",\"AreaId\",\"String\",\"\",\"\"],[\"OutLetId\",\"OutLetId\",\"String\",\"\",\"\"],[\"todayParam\",\"todayParam\",\"String\",\"\",\"\"]]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "false"
+     }
+    ],
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "8d516a1e-9fa9-18cf-5ff1-0f612d6f8200",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "guestPrice_query_new"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "SELECT\r\n    CONCAT(LPAD(CAST(a.PayTypeClassSeq AS CHAR),10,\"0\"),LPAD(CAST(a.paytypeseq AS CHAR),10,\"0\")) AS paytypecode,\r\n\ta.paytypeseq,\r\n\ta.payName ,\r\n\ta.PayAmt\r\nFROM\r\n\t(\r\n\t\tSELECT\r\n\t\t\t\t dim_paytype.paytypeclassseq,\r\n\t\t\t\t dim_paytype.paytypeseq,\r\n\t\t\t\t dim_paytype.PayTypeName AS payName,\r\n\t\t\t\tsum(fact_checkpay.PayAmt) AS PayAmt\r\n\t\tFROM\r\n\t\t\t\t fact_checkpay,\r\n\t\t\t\t dim_paytype \r\n\t    where fact_checkpay.PayTypeId = dim_paytype.PayTypeId\r\n\t\tGROUP BY\r\n\t\t\t\t dim_paytype.paytypeclassseq,\r\n\t\t\t\t dim_paytype.paytypeseq,\r\n\t\t\t\t dim_paytype.PayTypeName\r\n\t\tORDER BY dim_paytype.paytypeclassseq,dim_paytype.paytypeseq  -- fact_checkpay.CheckId, dim_paytype.paytypeclassseq,\r\n\t) AS a\r\nGROUP BY paytypecode,a.payName,a.paytypeseq,a.PayAmt\r\nORDER BY paytypecode,a.payName"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "false"
+     }
+    ],
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "e6333317-bde5-5f28-74ad-4756101b4947",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "guestPrice_query_new_new"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "SELECT * FROM dim_paytype where status = 0 order by PayTypeClassSeq, PayTypeSeq;"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "false"
+     }
+    ],
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   },
+   {
+    "id": "e23be7ec-81e6-9f55-096d-aae8972fdecc",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "guestPrice_query_new_new_new"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "jndi",
+      "type": "Jndi",
+      "value": "jdbc_bi"
+     },
+     {
+      "name": "query",
+      "type": "SqlQuery",
+      "value": "SELECT \r\n    \ta.CheckId,\r\n\t\tb.paytypeclassseq,\r\n\t\tb.paytypeseq,\r\n\t\ta.CheckNo AS checkNo,\r\n\t\ta.TableNo AS tableNumber,\r\n\t\ta.OriginalAmount AS receivable,\r\n\t\ta.ActualAmount AS netReceipts,\r\n\t\tb.PayTypeName AS payName,\r\n\t\tb.PayAmt AS PayAmt,\r\n\t\ta.SCAmt AS SCAmt,\r\n\t\ta.Service AS service,\r\n\t\ta.CheckDiscountAmt AS discountAmt,\r\n\t\ta.DeliveryType AS deliveryType,\r\n\t\ta.BegTime AS begTime,\r\n\t\ta.EndTime AS endtime,\r\n\t\ta.BIDate AS date,\r\n\t\ta.CashierName AS cashierName,\r\n\t\ta.CheckOpenStationId AS posNumber,\r\n\t\ta.GuestQty AS GuestQty,\r\n\t\ta.PerCapita AS avgprice\r\nFROM\r\n\t(\r\n\t\tSELECT DISTINCT\r\n\t\t\t\t\tfact_check.CheckId, -- 账单ID\r\n\t\t\t\t\tfact_check.OutletId,  -- 门店ID\r\n\t\t\t\t\tfact_check.BIDateId,  -- 日期ID\r\n\t\t\t\t\t-- fact_check.CheckNo AS CheckNo,  \r\n\t\t\t\t\tCONCAT(fact_check.BIDateId,'-',fact_check.OutletId,'-',fact_check.CheckNo) AS CheckNo,  -- 账单编号\r\n\t\t\t\t\tfact_check.TableNo AS TableNo,  -- 桌位号\r\n\t\t\t\t\tfact_check.SaleAmt AS OriginalAmount,  -- 应收金额\r\n\t\t\t\t\tfact_check.CheckDiscountAmt+fact_check.SaleAmt AS ActualAmount,  -- 实收金额\r\n\t\t\t\t\tfact_check.SCAmt AS SCAmt,  -- 总服务费\r\n\r\n\t\t\t\t\tCASE WHEN fact_check.SaleAmt = 0 THEN '0.0'\r\n\t\t\t\t\t\t\tWHEN  fact_check.SaleAmt = NULL THEN '0.0'\r\n\t\t\t\t\tELSE ROUND(fact_check.SCAmt/fact_check.SaleAmt,2) END AS Service,  -- 服务费率\r\n\r\n\t\t\t\t\t-- fact_check.SCAmt/fact_check.SaleAmt AS Service1,  -- 服务费率\r\n\r\n\t\t\t\t\tfact_check.CheckDiscountAmt AS CheckDiscountAmt,  -- 折扣金额\r\n\t\t\t\t\tdim_channel.DeliveryType AS DeliveryType,  -- 营业区\r\n\t\t\t\t\tfact_check.BegTime AS BegTime,  -- 开桌时间\r\n\t\t\t\t\tfact_check.EndTime AS EndTime,  -- 结束时间\r\n\t\t\t\t\tdim_bidate.BIDate AS BIDate,  -- 结账日期\r\n\t\t\t\t\tdim_cashier.CashierName AS CashierName,  -- 收款员\r\n\t\t\t\t\t-- fact_check.CheckOpenStationId AS CheckOpenStationId,  -- POS机号\r\n\t\t\t\t\tdim_workstation.StationCode AS CheckOpenStationId,  -- POS机号\r\n\t\t\t\t\tfact_check.GuestQty AS GuestQty,  -- 消费客数\r\n\r\n\t\t\t\t\t-- fact_check.SaleAmt / fact_check.GuestQty AS PerCapita1,  -- 人均消费 \r\n\r\n\t\t\t\t\tCASE WHEN fact_check.GuestQty = 0 THEN '0.0'\r\n\t\t\t\t\t\t\tWHEN  fact_check.GuestQty = NULL THEN '0.0'\r\n\t\t\t\t\tELSE ROUND(fact_check.SaleAmt/fact_check.GuestQty,2) END AS PerCapita  -- 人均消费\r\n\r\n\t\tFROM\r\n\t\t\t\t\tfact_check INNER JOIN dim_channel ON dim_channel.ChannelId = fact_check.ChannelId\r\n\t\t\t\t\t\tINNER JOIN dim_bidate ON dim_bidate.BIDateId = fact_check.BIDateId\r\n\t\t\t\t\t\tLEFT JOIN dim_cashier ON dim_cashier.CashierId = fact_check.CashierId\r\n\t\t\t\t\t\tLEFT JOIN dim_outlet ON dim_outlet.OutletId_t = fact_check.OutletId_t\r\n\t\t\t\t\t\tINNER JOIN dim_area ON dim_area.AreaId = dim_outlet.AreaId\t\r\n\t\t\t\t\t\tINNER JOIN dim_workstation ON dim_workstation.StationId = fact_check.CheckOpenStationId\r\n\t\t-- WHERE (fact_check.BusinessDate between ${start_day}  and  ${end_day})\r\n\t\t\t\t-- AND (dim_area.AreaId_level1 = ${areaid1} or ${areaid1} = -1)\r\n\t\t\t     -- AND (dim_area.AreaId_level2 = ${areaid2} or ${areaid2} = -1)\r\n\t\t\t     -- AND (dim_area.AreaId_level3 = ${areaid3} or ${areaid3} = -1)\r\n\t\t\t     -- AND (dim_outlet.ShopId = ${shopid} or ${shopid} = -1)\r\n\t\t\t     -- AND (dim_outlet.OutletId = ${outletid} or ${outletid} = -1) \t\t\t\t\t \r\n\t\tORDER BY\r\n\t\t\t\t\tfact_check.CheckId ASC\r\n\t) AS a\r\n  INNER JOIN\r\n\t(\r\n\t\tSELECT\r\n\t\t\t\t fact_checkpay.OutletId,\r\n\t\t\t\t fact_checkpay.BIDateId,\r\n\t\t\t\t fact_checkpay.CheckId,\r\n\t\t\t\t dim_paytype.paytypeclassseq,\r\n\t\t\t\t dim_paytype.PayTypeName,\r\n\t\t\t\t dim_paytype.paytypeseq,\r\n\t\t\t\tsum(fact_checkpay.PayAmt) AS PayAmt\r\n\t\tFROM\r\n\t\t\t\t fact_checkpay,\r\n\t\t\t\t dim_paytype \r\n\t    where fact_checkpay.PayTypeId = dim_paytype.PayTypeId\r\n\t\tGROUP BY\r\n\t\t\t\t fact_checkpay.OutletId,\r\n\t\t\t\t fact_checkpay.BIDateId,\r\n\t\t\t\t fact_checkpay.CheckId,\r\n\t\t\t\t dim_paytype.PayTypeName,\r\n\t\t\t\t dim_paytype.paytypeclassseq,\r\n\t\t\t\t dim_paytype.paytypeseq\r\n\t\tORDER BY fact_checkpay.CheckId,dim_paytype.paytypeclassseq,dim_paytype.paytypeseq\r\n\t) AS b ON a.CheckId = b.CheckId\r\n WHERE a.BIDateId = \"20160829\" \r\nORDER BY  b.paytypeclassseq,b.paytypeseq -- a.CheckId,"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "false"
+     }
+    ],
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi"
+   }
+  ]
+ },
+ "filename": "/public/dashboard_20161215/dashboard0.cdfde",
+ "layout": {
+  "rows": [
+   {
+    "id": "cdc8492b-c13a-47d3-10f4-f103412bfbb0",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "bootCss"
+     },
+     {
+      "name": "resourceFile",
+      "type": "ResourceFile",
+      "value": "${solution:dashboard0Css/bootstrap.min.css}"
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Css"
+     }
+    ],
+    "type": "LayoutResourceFile",
+    "typeDesc": "Resource"
+   },
+   {
+    "id": "30678519-1828-5727-bad6-d28c4c5b961d",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "AdminLTECss"
+     },
+     {
+      "name": "resourceFile",
+      "type": "ResourceFile",
+      "value": "${solution:dashboard0Css/AdminLTE.min.css}"
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Css"
+     }
+    ],
+    "type": "LayoutResourceFile",
+    "typeDesc": "Resource"
+   },
+   {
+    "id": "df822669-473f-cfa1-c682-237a7f739c2c",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "myCss"
+     },
+     {
+      "name": "resourceCode",
+      "type": "Resource",
+      "value": "@import 'https://fonts.googleapis.com/css?family=Roboto:';\n\n/* ================  通用css设计 ================ */\nhtml {\n    /*\n    overflow-y: scroll;\n    */\n    overflow-y: hidden;\n    overflow-x: hidden;\n    height: 100%;\n}\n.container {\n    /*width: 1170px;*/\n    width : 98% !important;\n    font-family: 'robotoregular';\n    padding-bottom: 20px;\n    position: relative;\n    margin-top : 1%;\n    /*\n    height: 580px;\n    margin-top : 1%;\n    width : 98% !important;\n    height: 580px;\n    \n    \n    \n    .container {\n    width: 1120px;\n    height:500px;\n} \n\n    */\n} \n\n*:focus {\n    outline: 0;\n}\n\ninput:focus, button:focus{\n    outline: 0;\n}\n\n\na, a:hover, a:active, a:visited{\n    text-decoration: none;\n    color: #005DA6;\n    filter:none;\n}\nbody{\n    font-family:'Roboto',sans-serif;\n    /* background:linear-gradient(#ffffe0,#ffffec) */\n    background:linear-gradient(#fff,#fff)\n}\n\nheader{\n    font-size:45px;\n    padding:10px 20px;\n    text-align:center;\n    font-family:'Roboto', sans-serif;\n}\n\n/* ================ FONTS =============== */\n\n@font-face {\n  font-family: 'Open Sans';\n  font-style: normal;\n  font-weight: 300;\n  src:  local('Open Sans Light'), \n        local('OpenSans-Light'),\n        /* CE */\n        url('../../../../../system/common-ui/resources/themes/crystal/opensans-light.eot') format('embedded-opentype'),\n        url('../../../../../system/common-ui/resources/themes/crystal/opensans-light.woff') format('woff'),\n        url('../../../../../system/common-ui/resources/themes/crystal/opensans-light.ttf') format('truetype'),\n        url('../../../../../system/common-ui/resources/themes/crystal/opensans-light.svg#OpenSansLight') format('svg');\n}\n@font-face {\n  font-family: 'Open Sans';\n  font-style: normal;\n  font-weight: 400;\n  src:  local('Open Sans'), \n        local('OpenSans'),\n        /* CE */\n        url('../../../../../system/common-ui/resources/themes/crystal/opensans-regular.eot') format('embedded-opentype'),\n        url('../../../../../system/common-ui/resources/themes/crystal/opensans-regular.woff') format('woff'),\n        url('../../../../../system/common-ui/resources/themes/crystal/opensans-regular.ttf') format('truetype'),\n        url('../../../../../system/common-ui/resources/themes/crystal/opensans-regular.svg#OpenSansRegular') format('svg');\n}\n\n/* ================ BUTTON RANGE ================ */\n.filterRow{\n    height:20px;\n\t/*border:1px solid #c2c2c2;\n\tmargin:5px 5px 20px;\n    */\n}\n.filterWrapper{\n    margin:0 auto;\n\tdisplay: inline-block;\n    /*\n\tmargin:10px;\n    */\n}\n\n.filter,.filterLabel{\n\tdisplay: inline-block;\n}\n.filterLabel{\n    font-size:15px;\n    width:50px;\n    text-align:right;\n    \n}\n#buttonfilter{\n    /*\n    #F4F4F4  #368A1D\n    */\n    background-color: #F4F4F4;\n    color: black;\n}\n#yearFilter select,#monthFilter select,#dayFilter select{\n    border-radius: 0px;\n}\n\n\n/* ================ CDE CHARTS BEFORE RANGE ================ */\n.chartHeader{\n    text-align: center;\n    font-size: 20px;\n    font-family: 'Roboto',sans-serif;\n    padding: 5px;\n    margin: 5px 10px;\n}\n.pieChart1,.pieChart2,.pieChart3{\n\theight:350px;\n\t/*border:1px solid #c2c2c2;*/\n\tmargin:5px;\n}\n.barChart{\n\t/*border:1px solid #c2c2c2;*/\n\theight:710px;\n\tmargin:5px;\n} \n\n/* ================ YEAR RANGE ================ */\n\n.yearObject {\n    margin-top: 10px;\n    /*\n    margin-right: 45%;\n    */\n    margin-left: 20px;\n}\n\n.yearObject .chzn-container {\n    width: 100px !important;\n    font-size: 16px;\n    font-weight: bold;\n    display: block;\n    float: right;\n}\n\n/* ================ MONTH RANGE ================ */\n\n.monthObject {\n    margin-top: 10px;\n    /*\n    margin-right: 45%;\n    */\n    margin-left: 20px;\n}\n\n.monthObject .chzn-container {\n    width: 100px !important;\n    font-size: 16px;\n    font-weight: bold;\n    display: block;\n    float: right;\n}\n\n/* ================ DAY RANGE ================ */\n\n.dayObject {\n    margin-top: 10px;\n    /*\n    margin-right: 45%;\n    */\n    margin-left: 20px;\n}\n\n.dayObject .chzn-container {\n    width: 100px !important;\n    font-size: 16px;\n    font-weight: bold;\n    display: block;\n    float: right;\n}\n\n.refreshBtnObj{\n    margin-top : 5px;\n}\n\n\n/* ================ 饼状图css设计 ================ */\n\n.tipsy-inner {\n    background: #6F6F6F;\n    font-family: 'Open Sans', Arial, sans-serif;\n    border: none;\n    /*\n    -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,.2);      设定元素的边框为1像素宽，实线，颜色 \n      -msie-box-shadow: 1px 1px 2px rgba(0,0,0,.2);\n       -moz-box-shadow: 1px 1px 2px rgba(0,0,0,.2);\n         -o-box-shadow: 1px 1px 2px rgba(0,0,0,.2);\n            box-shadow: 1px 1px 2px rgba(0,0,0,.2);\n            */\n    padding: 8px 10px 9px;      /*提示框长宽高设置*/\n    /*color: #4d4d4d;*/\n    color: #6F6F6F;\n    max-width: none;\n    border: 1px solid #dedede;\n}\n\n.tipsy-s .tipsy-arrow {\n    display: none !important;\n}\n\n.tooltipContainer .tooltipTitle {\n    color: #FFFFFF;\n    display: block;\n    text-align: center;\n    font-size: 14px;\n    margin-bottom: 10px;\n    line-height: 1;\n}\n\n.tooltipContainer .tooltipLabel {\n    color: #4d4d4d;\n    display: block;\n    text-align: center;\n    font-size: 12px;\n    margin-bottom: 10px;\n    line-height: 1;\n}\n\n.tooltipContainer .tooltipValue {\n    display: block;\n    text-align: center;\n    font-size: 24px;\n    font-weight: 600;\n    line-height: 1;\n    color: #FFFFFF;\n}\n\n.tooltipContainer.target .tooltipValue {\n    color: #f46d43;\n}\n.tooltipContainer.sales .tooltipValue {\n    color: #01665e;\n} \n\n\n/* ================  表格的css设计 ================ */\n#div3Table:hover{\n    cursor: pointer;\n}\n/*\n\n\n\n\n\n\n "
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Css"
+     }
+    ],
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource"
+   },
+   {
+    "id": "57caaeea-d248-4fc1-048d-63387edf61e2",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "eventFunc_js"
+     },
+     {
+      "name": "resourceCode",
+      "type": "Resource",
+      "value": "/**\n * 鼠标事件\n */\n$(\".filterWrapper\").on(\"mouseenter\",function(){\n    var $this = $(this);\n    $this.find(\"span\").show();\n}).on(\"mouseleave\",function(){\n    var $this = $(this);\n    $this.find(\"span\").hide();\n})\n\n\n/**\n * CDE图形恢复初始化\n */\n/*\nfunction refreshBtn(){\n    Dashboards.fireChange(\"p_color\",\"rgb(30, 44, 148)\");\n    Dashboards.fireChange(\"p_refresh\",1);\n    //$(\"#pieChart3\").css(\"display\",\"none\");\n    //$(\"#pieChart1\").css(\"display\",\"block\");\n    //Dashboards.update(render_query1);\n    Dashboards.fireChange(\"yearParam\",2016);\n    Dashboards.fireChange(\"monthParam\",1);\n    Dashboards.fireChange(\"dayParam\",1);\n    \n    Dashboards.fireChange(\"BrandId\",0);\n    Dashboards.fireChange(\"AreaId\",0);\n    Dashboards.fireChange(\"OutLetId\",0);\n    \n    \n    \n    //Dashboards.fireChange(\"p_year\",p_year);\n    //Dashboards.update(render_p_month);\n    //Dashboards.update(render_query2);\n    //Dashboards.fireChange(\"p_sort\",v_sort);\n}\n*/\n$(function(){\n    $(\"button\").bind(\"click\",function(){\n        Dashboards.fireChange(\"p_color\",\"rgb(30, 44, 148)\");\n        Dashboards.fireChange(\"p_refresh\",1);\n        //$(\"#pieChart3\").css(\"display\",\"none\");\n        //$(\"#pieChart1\").css(\"display\",\"block\");\n        //Dashboards.update(render_query1);\n        Dashboards.fireChange(\"yearParam\",2016);\n        Dashboards.fireChange(\"monthParam\",1);\n        Dashboards.fireChange(\"dayParam\",1);\n        \n        Dashboards.fireChange(\"BrandId\",0);\n        Dashboards.fireChange(\"AreaId\",0);\n        Dashboards.fireChange(\"OutLetId\",0);\n        \n        //Dashboards.fireChange(\"p_year\",p_year);\n        //Dashboards.update(render_p_month);\n        //Dashboards.update(render_query2);\n        //Dashboards.fireChange(\"p_sort\",v_sort);           \n    });\n});\n/*\n$(function () { $(\"input[type=button][name='dd']\").bind(\"click\", function () { alert(\"ddd\"); }); }\n$(document).ready(function(){\n    $(\".last\").parent().parent().removeClass(\"container\").addClass(\"container-fluid\");\n})\n*/\n\n\n\n/**\n * \n */\n\n \n \n/**\n * 解决CDE图形的自适应\n */\n /*\nfunction resizeGraphical(cdeObj){\n    var myself = cdeObj;\n    //设置初始宽度 与placeholder()匹配\n    myself.chartDefinition.width = myself.placeholder().width();\n    //仅在图表组件的第一个执行上附加调整处理程序\n    if( !cdeObj.resizeHandlerAttached ){\n        //确保渲染只在事件发生后被触发\n        var debouncedResize = _.debounce(function(){\n            //再次显示 图形\n            myself.placeholder().children().css('visibility','visible');\n            // 改变 图形 的 宽度\n            myself.chartDefinition.width = myself.placeholder().width();\n            myself.render( myself.query.lastResults() );\n        },200);\n        // 高度调整 处理\n        $(window).resize(function(){\n            //仅当容器已更改宽度时才触发调整大小\n            if( myself.chartDefinition.width != myself.placeholder().width() ){\n                //暂时隐藏图表，使溢出不会发生\n                myself.placeholder().children().css('visibility','hidden');\n                //触发与调整\n                debouncedResize();\n            }\n        });\n        cdeObj.resizeHandlerAttached = true;\n    }\n} \n*/\nfunction func_resize(myobj)/*解决图形的自适应问题*/   /*不过这里没有起到实质的作用*/\n{\n    var myself = myobj;\n  // Set initial width to match the placeholder\n  myself.chartDefinition.width = myself.placeholder().width();\n\n  // Attach the resize handler only on the first execution of the chart component\n  if (!myobj.resizeHandlerAttached){\n\n    // Ensure render is only triggered after resize events have stopped\n    var debouncedResize = _.debounce(function(){\n\n      // Show chart again.\n      myself.placeholder().children().css('visibility','visible');\n\n      // Change chart width\n      myself.chartDefinition.width = myself.placeholder().width();\n      myself.render( myself.query.lastResults() );\n    }, 200);\n\n    // Attach resize handler\n    $(window).resize(function(){\n\n      // Only trigger resize if the container has changed width\n      if ( myself.chartDefinition.width != myself.placeholder().width()){\n\n        // Temporarily hide chart so that overflow does not happen\n        myself.placeholder().children().css('visibility','hidden');\n\n        // Trigger the resize with debounce\n        debouncedResize();\n      }    \n    });\n\n    myobj.resizeHandlerAttached = true;\n  }\n  \n  }\n "
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Javascript"
+     }
+    ],
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource"
+   },
+   {
+    "id": "9dea3039-4a7b-4a0d-f6ee-d28d06e99816",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "pie1_brand_js"
+     },
+     {
+      "name": "resourceCode",
+      "type": "Resource",
+      "value": "/**设置第一个图形的提示框显示样式*/\r\n/**鼠标停留在图形上面的显示样式*/\r\n/**\r\n * 创建一个全局变量myPie,用于定制自己的柱状图。\r\n*/\r\nvar myPie1= {}; \r\n/**\r\n *  格式一：数字添加千分位符函数\r\n*/\r\n/*\r\nmyPie1.addCommas = function (nStr){\r\n    nStr += '';\r\n    x = nStr.split('.');\r\n    x1 = x[0];\r\n    x2 = x.length > 1 ? '.' + x[1] : '';\r\n    var rgx = /(\\d+)(\\d{3})/;\r\n    while (rgx.test(x1)){\r\n        x1 = x1.replace(rgx, '$1' + ',' + '$2');\r\n    }\r\n    x2 = x2.slice(0,3);\r\n    return x1 + x2;\r\n}; \r\n*/\r\n/**\r\n *  格式二：数字添加千分位符函数\r\n*/\r\nmyPie1.addCommas =  function (num){\r\n    // 判断 是否 是 数字\r\n    /*\r\n    if(typeof num !==\"number\"){\r\n        return false;\r\n    }\r\n    */\r\n    num = num.toString();   // 字符 化\r\n    var s = num.match(/e\\+(\\d+)$/),ext=0;;\r\n    num = num.replace(/e.+$/,'');\r\n    if( s ){\r\n        ext=Number(s[1]);\r\n    }\r\n    //分割小数点两边\r\n    var tA=num.split('.');\r\n    //有小数点则分割开来处理(小数点后面可能还跟有科学记数法表示)\r\n    if( tA.length>=2&&ext ){\r\n        if( tA.length>ext ){\r\n            tA[0] += tA[1].slice(0,ext-1);\r\n            tA[1] = tA[1].slice(ext-1,tA[1].length-1);\r\n        }else{\r\n            tA[0] += (tA[1]+\"0\".repeat(ext-tA.length));\r\n            tA[1]='';\r\n        }\r\n    }\r\n    tA[0] = tA[0].split('');//拆字符\r\n    for( var i=tA[0].length;(i-=3)>0; ){\r\n        tA[0].splice(i,0,',');\r\n    }\r\n    return tA[0].join('')+(tA[1]?'.'+tA[1]:'');//连起来\r\n}\r\n/**\r\n * 定制自己的饼图\r\n*/\r\nmyPie1.defaultPieSettings = function (){\r\n    var cde = this.chartDefinition;\r\n    \r\n    //general\r\n    //cde.width = 550;\r\n    cde.height = 280;\r\n    \r\n    // Data source\r\n    cde.crosstabMode = true;\r\n    \r\n    // Panels\r\n    //cde.title = \" 品牌可点击\",\r\n    //cde.titleSize = {width: '100%'},\r\n    cde.titlePaddings = '4%',\r\n    cde.titleFont = 'lighter 20px \"Open Sans\"',\r\n    cde.title_fillStyle = '#FFFFFF',\r\n    cde.titleLabel_textStyle = '#333333',\r\n    \r\n    \r\n    // Main Plot\r\n    cde.valuesOptimizeLegibility = true;\r\n    cde.valueVisible = true;\r\n    cde.valueFont = 'lighter 5px \"Open Sans\"';\r\n    cde.explodedSliceIndex = 1;\r\n    cde.explodedSliceRadius = '2%'; //饼图部分分离\r\n    cde.slice_strokeStyle = 'white';\r\n    cde.slice_offsetRadius = function(scene) {\r\n        return scene.isSelected() ? '5%' : '5%';\r\n        //alert(scene.isSelected());\r\n    },\r\n    \r\n    //// Color axes\r\n    cde.colors = [\r\n         /*\r\n        '#F4A20E', '#8EC21F', '#E70012'\r\n        */\r\n        '#F39C12','#00A65A','#DD4B39'\r\n    ];\r\n    \r\n    //Panels\r\n    cde.legend = true;\r\n    cde.legendShape = 'circle';\r\n    //cde.legendSize = {\r\n     //   width : '100%'\r\n    //};\r\n    cde.legendArea_fillStyle = '#FFFFFF';\r\n    cde.legendFont = 'normal 12px \"Open Sans\"';\r\n    cde.valuesFont = \"lighter 12px Open Sans\";\r\n    cde.valuesAnchor = 'center';\r\n    //cde.valuesLabelStyle = 'inside';\r\n    cde.valuesLabelStyle = 'linker';\r\n    /*\r\n    cde.valuesMask = {\r\n        value.percent\r\n        {category}={value}\\x0a({value.percent})\r\n    };\r\n    */\r\n    cde.valuesOverflow = 'Show';\r\n    cde.valuesVisible = true;\r\n    \r\n    // Chart/Interaction\r\n    cde.animate = true;\r\n    cde.selectable = true;\r\n    //cde.hoverable = true;\r\n    \r\n    //tooltips\r\n    cde.tooltipDelayIn = 20;\r\n    cde.tooltipDelayOut = 20;\r\n    cde.tooltipFade = true;    // 注意 设为true 的 情况\r\n    cde.tooltipGravity = 's';\r\n    cde.tooltipOpacity = 1;\r\n    cde.tooltipFollowMouse = true;\r\n    cde.tooltipEnabled = true; //提示框是否显示\r\n    //提示框格式设置\r\n    cde.tooltipFormat = function f(){\r\n        var series = this.getSeriesLabel(),\r\n            category = this.getCategory(),\r\n            value = myPie1.addCommas(this.getValue().toFixed(2));\r\n            //value = this.getValue();\r\n        return \"<div class='tooltipContainer'>\" +\r\n            \"<div class='tooltipTitle'>\" + category + \"</div>\" +  \r\n            //\"<div class='tooltipLabel'>\" + series + \"</div>\" +  \r\n            \"<div class='tooltipValue'>￥\" + value + \"</div>\" +\r\n        \"</div>\";\r\n    };\r\n}\r\n "
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Javascript"
+     }
+    ],
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource"
+   },
+   {
+    "id": "4a53d53d-3a20-2b97-b992-3f955759e553",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "pie2_area_js"
+     },
+     {
+      "name": "resourceCode",
+      "type": "Resource",
+      "value": " /**\r\n * 创建一个全局变量myPie,用于定制自己的柱状图。\r\n*/\r\nvar myPie2 = {}; \r\n/**\r\n * \r\n*/\r\nmyPie2.addCommas = function (nStr){\r\n    nStr += '';\r\n    x = nStr.split('.');\r\n    x1 = x[0];\r\n    x2 = x.length > 1 ? '.' + x[1] : '';\r\n    var rgx = /(\\d+)(\\d{3})/;\r\n    while (rgx.test(x1)){\r\n        x1 = x1.replace(rgx, '$1' + ',' + '$2');\r\n    }\r\n    x2 = x2.slice(0,3);\r\n    return x1 + x2;\r\n}; \r\n/**\r\n * 定制自己的饼图\r\n*/\r\nmyPie2.defaultPieSettings = function (){\r\n    var cde = this.chartDefinition;\r\n    \r\n    //general\r\n    //cde.width = 550;\r\n    cde.height = 280;\r\n    \r\n    // Data source\r\n    cde.crosstabMode = true;\r\n    \r\n    // Panels\r\n    //cde.title = \"区域可点击\",\r\n    //cde.titleSize = {width: '100%'},\r\n    cde.titlePaddings = '4%',\r\n    cde.titleFont = 'lighter 20px \"Open Sans\"',\r\n    cde.title_fillStyle = '#FFFFFF',\r\n    cde.titleLabel_textStyle = '#333333',\r\n    \r\n     // Main Plot\r\n    cde.valuesOptimizeLegibility = true;\r\n    cde.valueVisible = true;\r\n    cde.valueFont = 'lighter 5px \"Open Sans\"';\r\n    //cde.explodedSliceIndex = 1;\r\n    //cde.explodedSliceRadius = '2%'; //饼图部分分离\r\n    cde.slice_strokeStyle = 'white';\r\n    cde.slice_offsetRadius = function(scene) {\r\n        return scene.isSelected() ? '5%' : '5%';\r\n    },\r\n    \r\n    \r\n    //// Color axes\r\n    cde.colors = [\r\n        /*\r\n        '#F4A20E', '#8EC21F', '#E70012'\r\n        */\r\n        '#F39C12','#00A65A','#DD4B39'\r\n    ];\r\n\r\n    //Panels\r\n    cde.legend = true;\r\n    cde.legendShape = 'circle';\r\n    //cde.legendSize = {\r\n     //   width : '100%'\r\n    //};\r\n    cde.legendArea_fillStyle = '#FFFFFF';\r\n    cde.legendFont = 'normal 11px \"Open Sans\"';\r\n    cde.valuesFont = \"lighter 12px Open Sans\";\r\n    //cde.valuesAnchor = 'center';\r\n    //cde.valuesLabelStyle = 'inside';\r\n    cde.valuesLabelStyle = 'linker';\r\n    /*\r\n    cde.valuesMask = {\r\n        value.percent\r\n    };\r\n    */\r\n    cde.valuesOverflow = 'Show';\r\n    cde.valuesVisible = true;\r\n    \r\n    // Chart/Interaction\r\n    cde.animate = true;\r\n    cde.selectable = true;\r\n    cde.hoverable = true;\r\n    \r\n    //tooltips\r\n    cde.tooltipDelayIn = 20;\r\n    cde.tooltipDelayOut = 20;\r\n    cde.tooltipFade = true;\r\n    cde.tooltipGravity = 's';\r\n    cde.tooltipOpacity = 1;\r\n    cde.tooltipFollowMouse = true;\r\n    cde.tooltipEnabled = true; //提示框是否显示\r\n    //提示框格式设置\r\n    cde.tooltipFormat = function f(){\r\n        var series = this.getSeriesLabel(),\r\n            category = this.getCategory(),\r\n            value = myPie2.addCommas(this.getValue().toFixed(2));\r\n        return \"<div class='tooltipContainer'>\" +\r\n            \"<div class='tooltipTitle'>\" + category + \"</div>\" +  \r\n            //\"<div class='tooltipLabel'>\" + series + \"</div>\" +  \r\n            \"<div class='tooltipValue'>￥\" + value + \"</div>\" + \r\n        \"</div>\";\r\n    };\r\n    \r\n} "
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Javascript"
+     }
+    ],
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource"
+   },
+   {
+    "id": "0a3c8c91-789f-6f1a-883c-ed39cf8b775f",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutRow",
+    "typeDesc": "Row"
+   },
+   {
+    "id": "40b364fe-6aeb-c050-678e-d51613ef7d18",
+    "parent": "0a3c8c91-789f-6f1a-883c-ed39cf8b775f",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": ""
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "051b69bf-7b7c-92b5-1dbf-ec623d045b6c",
+    "parent": "0a3c8c91-789f-6f1a-883c-ed39cf8b775f",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "columnSpan",
+      "type": "Integer",
+      "value": "6"
+     },
+     {
+      "name": "columnPrepend",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "columnAppend",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "columnPrependTop",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "columnAppendBottom",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "columnBorder",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "columnBigBorder",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "bbd39548-cc2b-c085-1ffe-d6c66f43b966",
+    "parent": "051b69bf-7b7c-92b5-1dbf-ec623d045b6c",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "\r\n        <div style=\"margin-left:15px;;height:30px;width:98%\">\r\n            <!-- \r\n            <header>\r\n                 Dashboard 2\r\n    \t\t</header>\r\n            class=\"container-fluid\"\r\n            col-sm-12\r\n            -->\r\n    \t\t<div class=\"row\" style=\"margin-top:5px\">\r\n    \t\t\t<div class=\"filterRow \">\r\n                    <!-- \r\n    \t\t\t\t<div class=\"filterRow\">\r\n                    -->\r\n                    <div class=\"col-md-12\">\r\n                        <div class=\"filterWrapper\" style=\"margin: 0 auto;\">\r\n        \t\t\t\t\t<div class=\"filterLabel\">日期:</div>\r\n                            \r\n    \t\t\t\t\t\t<div id=\"dateFilter\" class=\"filter\">\r\n                                <!-- \r\n        \t\t\t\t\t    <span>123</span>   \r\n                                -->\r\n    \t\t\t\t\t\t</div>\r\n                            \r\n    \t\t\t\t\t</div>\r\n                        <!-- \r\n    \t\t\t\t\t<div class=\"filterWrapper\">\r\n    \t\t\t\t\t\t<div class=\"filterLabel\">年</div>\r\n    \t\t\t\t\t\t<div id=\"yearFilter\" class=\"filter\"></div>\r\n    \t\t\t\t\t</div>\r\n    \t\t\t\t\t<div class=\"filterWrapper\">\r\n    \t\t\t\t\t\t<div class=\"filterLabel\">月</div>\r\n    \t\t\t\t\t\t<div id=\"monthFilter\" class=\"filter\"></div>\r\n    \t\t\t\t\t</div>\r\n                        <div class=\"filterWrapper\">\r\n        \t\t\t\t\t<div class=\"filterLabel\">日</div>\r\n    \t\t\t\t\t\t<div id=\"dayFilter\" class=\"filter\"></div>\r\n    \t\t\t\t\t</div>\r\n                        -->\r\n                        <!--  pull-right \r\n                            onclick=\"refreshBtn()\"\r\n                        -->\r\n                        <!-- \r\n                        <div class=\"filterWrapper\" style=\"margin-left:120px;\">\r\n                            <button id=\"buttonfilter\" class=\"btn btn-block btn-default btn-sm\">\r\n                                <i class=\"fa fa-refresh\"></i>&nbsp;&nbsp;刷新\r\n                            </button>\r\n                        </div>\r\n                         \r\n                        <div id=\"div4\" class=\"filterWrapper\" style=\"margin-left:120px;\"></div>\r\n                        -->\r\n    \t\t\t\t</div>\r\n    \t\t\t</div>\r\n    \t\t</div>\r\n            <!-- \r\n    \t\t<div class=\"row\">\r\n    \t\t\t<div class=\"col-sm-7\">\r\n    \t\t\t\t<div class=\"row\">\r\n    \t\t\t\t\t<div class=\"col-sm-12\">\r\n    \t\t\t\t\t\t<div class=\"pieChartWrap\">\r\n                                <div class=\"pieChart1\" id=\"pieChart1\"></div>   \r\n                                <div class=\"pieChart3\" id=\"pieChart3\"></div>\r\n    \t\t\t\t\t\t</div>\r\n    \t\t\t\t\t</div>\r\n    \t\t\t\t</div>\r\n    \t\t\t\t<div class=\"row\">\r\n    \t\t\t\t\t<div class=\"col-sm-12\">\r\n                            <div class=\"pieChartWrap\">\r\n                                <div class=\"chartHeader\">Sort Chart</div>\r\n                                <div class=\"pieChart2\" id=\"pieChart2\"></div>    \r\n                            </div>\r\n    \t\t\t\t\t\t\r\n    \t\t\t\t\t</div>\r\n    \t\t\t\t</div>\r\n    \t\t\t</div>\r\n    \t\t\t<div class=\"col-sm-5\">\r\n    \t\t\t\t<div class=\"row\">\r\n    \t\t\t\t\t<div class=\"col-sm-12\">\r\n                        <div class=\"barChartWrap\">\r\n                            <div class=\"chartHeader\">Top 10 Dishes</div>\r\n    \t\t\t\t\t\t<div class=\"barChart\" id=\"barChart\"></div>\r\n                             <div id=\"query1\" style=\"display:none\"></div>\r\n                              <div id=\"query2\" style=\"display:none\"></div>\r\n                        </div>\r\n    \t\t\t\t\t</div>\r\n    \t\t\t\t</div>\r\n    \t\t\t</div>\r\n    \t\t</div>\r\n            -->\r\n    \t</div>\r\n "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "be635d67-9436-245c-617a-d2c69aacf885",
+    "parent": "0a3c8c91-789f-6f1a-883c-ed39cf8b775f",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "refreshBtnObj"
+     },
+     {
+      "name": "columnSpan",
+      "type": "Integer",
+      "value": "6"
+     },
+     {
+      "name": "columnPrepend",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "columnAppend",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "columnPrependTop",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "columnAppendBottom",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "columnBorder",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "columnBigBorder",
+      "type": "Boolean",
+      "value": "false"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "refreshBtnObj"
+     }
+    ],
+    "type": "LayoutColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "1bbe36ec-4b28-a178-8b6c-f4f1cd30537b",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutRow",
+    "typeDesc": "Row"
+   },
+   {
+    "id": "35d9be78-b970-ff01-5de8-e969b9e29235",
+    "parent": "1bbe36ec-4b28-a178-8b6c-f4f1cd30537b",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "html"
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "<html>\n    <head>\n        <title>首页仪表盘</title>\n        <!-- Tell the browser to be responsive to screen width -->\n\t    <meta content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\" name=\"viewport\">\n        <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css\">\n        <!-- Ionicons -->\n\t    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css\">\n        \n    </head>\n    <!--  style=\"background-color:#ECF0F5\" #EBEBEB -->\n    <body class=\"hold-transition skin-blue sidebar-mini\" style=\"background-color:#FFF\">\n        \n        <section class=\"content\">\n    \t\t<!-- 第一行 -->\n    \t\t<div class=\"row\">\n    \t\t\t<!-- 第一行的左边列 -->\n    \t\t\t<div class=\"col-md-6\">\n    \t\t\t\t<div class=\"box box-success\">\n    \t\t\t\t\t<div class=\"box-body no-padding\">\n    \t\t\t\t\t\t<div class=\"row\">\n    \t\t\t\t\t\t\t<div id=\"div1\" class=\"col-md-12 col-sm-12\" style=\"height:250px;width:98%\"></div>\n    \t\t\t\t\t\t</div>\n    \t\t\t\t\t</div>\n    \t\t\t\t</div>\n                    <div class=\"row\">\n    \t\t\t\t<div class=\"col-md-12 col-sm-12\">\n\t\t\t\t\t\t<div  class=\"box box-warning direct-chat direct-chat-warning\">\n                            <div id=\"div2\" style=\"height:250px;width:98%\"></div>    \n                        </div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n    \t\t\t</div>\n    \t\t\t<div class=\"col-md-6\">\n                    <!-- -------------------------\n                    -             销售额         -\n                    ----------------------------->\n        \t\t\t<div class=\"box box-danger\">\n        \t\t\t\t<div class=\"row\">\n        \t\t\t\t\t<div class=\"col-md-12 col-sm-12\">\n            \t\t\t\t    <div  class=\"visitsTable\" id=\"div3\"  style=\"height:250px;width:100%;\"></div>   \n        \t\t\t\t\t</div>\n        \t\t\t\t</div>\n        \t\t\t</div>\n    \t\t\t\t\n    \t\t\t\t<div class=\"info-box bg-yellow\" style=\"height:85px\">\n    \t\t\t\t\t<span class=\"info-box-icon\"><i class=\"fa fa-line-chart\"></i></span>\n    \t\t\t\t\t<div class=\"info-box-content\">\n                            <div style=\"width:60%; height:40px;\">\n                                <span id=\"saleAmtHtmlObj\" style=\"font-size:30px; font-weight:bolder;margin-left:5px;\"></span>\n                                <span style=\"font-size:20px;\">元</span>\n                            </div>\n                            <h4 style=\"margin-left:5px; font-weight:normal;\">销售额</h4>\n    \t\t\t\t\t</div>\n    \t\t\t\t</div>\n                    <!-- -------------------------\n                    -              单数          -\n                    ----------------------------->\n    \t\t\t\t<div class=\"info-box bg-green\">\n    \t\t\t\t\t<span class=\"info-box-icon\"><i class=\"fa  fa-paypal\"></i></span>\n    \t\t\t\t\t<div class=\"info-box-content\">\n                            <div style=\"width:40%;float:left;\">\n                                <span id=\"checkQtyHtmlObj\" style=\"font-size:30px; font-weight:bolder; margin-left:5px;\"></span>\n                                <span style=\"font-size:20px;\">单</span>\n                                <h4 style=\"width:40%;margin-left:5px; font-weight:normal;\">单数</h4>  \n                            </div>\n                            <div style=\"width:60%;float:left;\">\n                                <span id=\"checkPriceHtmlObj\" style=\"font-size:30px; font-weight:bolder; margin-left:5px;\"></span>\n                                <span style=\"font-size:20px;\">元/单</span>\n                                <h4 style=\"width:40%;margin-left:5px; font-weight:normal;\">单均价</h4> \n                            </div>\n                            \n                            <!-- \n                            <div style=\"width:60%;background-color:blue;float:left;\">\n                                <div style=\"width:30%;height:100%;background-color:red;float:left;\">\n                                    <div style=\"margin-top:25%\">\n                                        <span style=\"width:100%;height:100%;font-size:25px;font-weight:border;\">单均价</span>\n                                    </div>\n                                </div>\n                                <div style=\"width:70%;height:100%;background-color:black;float:left;\">\n                                    <div style=\"margin-top:10%;float:left;\">\n                                        <span id=\"checkPriceHtmlObj\" style=\"font-size:30px; font-weight:bolder\"></span>\n                                    </div>\n                                    <div style=\"margin-top:15%;float:left;\">\n                                        <span style=\"font-size:20px;margin-top:55px;\"> 元/单</span>\n                                    </div>\n                                </div>\n                            </div>\n                            -->\n                            \n    \t\t\t\t\t</div>\n    \t\t\t\t</div>\n                    <!-- -------------------------\n                    -             人数           -\n                    ----------------------------->\n    \t\t\t\t<div class=\"info-box bg-red\">\n                        <!-- class=\"ion ion-ios-people-outline\" -->\n    \t\t\t\t\t<span class=\"info-box-icon\"><i class=\"ion ion-ios-people-outline\"></i></span>\n                        <div class=\"info-box-content\">\n                            <div style=\"width:40%;float:left;\">\n                                <span id=\"guestQtyHtmlObj\" style=\"font-size:30px; font-weight:bolder; margin-left:5px;\"></span>\n                                <span style=\"font-size:20px;\">人</span>\n                                <h4 style=\"width:40%;margin-left:5px; font-weight:normal;\">人数</h4>  \n                            </div>\n                            \n                            <div style=\"width:60%;float:left;\">\n                                <span id=\"guestPriceHtmlObj\" style=\"font-size:30px; font-weight:bolder; margin-left:5px;\"></span>\n                                <span style=\"font-size:20px;\">元/人</span>\n                                <h4 style=\"width:40%;margin-left:5px; font-weight:normal;\">人均价</h4>  \n                            </div>\n                            \n                            \n                            <!-- \n                            <div style=\"width:60%;height:80px;background-color:blue;float:left;\">\n                                <div style=\"width:30%;height:100%;background-color:red;float:left;\">\n                                    <div style=\"margin-top:25%\">\n                                        <span style=\"width:100%;height:100%;font-size:25px;font-weight:border;\">人均价</span>\n                                    </div>\n                                </div>\n                                <div style=\"width:70%;height:100%;background-color:black;float:left;\">\n                                    <div style=\"margin-top:10%;float:left;\">\n                                        <span id=\"guestPriceHtmlObj\" style=\"font-size:30px; font-weight:bolder\"></span>\n                                    </div>\n                                    <div style=\"margin-top:15%;float:left;\">\n                                        <span style=\"font-size:20px;margin-top:55px;\"> 元/人</span>\n                                    </div>\n                                </div>\n                            </div>\n                            -->\n                            \n    \t\t\t\t\t</div>\n                        \n    \t\t\t\t</div>\n    \t\t\t</div>\n    \t\t</div>\n    \t</section>\n    </body>\n</html> "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   }
+  ],
+  "title": "CDF - Sample structure"
+ }
+}
